@@ -331,13 +331,8 @@ body h1 {
     font-size: 14px;
   }
   .ctaYellow::before {
-    width: 14px;
-    height: 14px;
-    top: 50%;
-  }
-  .ctaYellow::before svg {
-    width: 100%;
-    height: 100%;
+    scale: 0.8;
+    top: calc(50% - 2px);
   }
 }
 @media screen and (max-width: 720px) {
@@ -397,13 +392,8 @@ body h1 {
     font-size: 14px;
   }
   .ctaBlack::before {
-    width: 14px;
-    height: 14px;
-    top: 50%;
-  }
-  .ctaBlack::before svg {
-    width: 100%;
-    height: 100%;
+    scale: 0.8;
+    top: calc(50% - 2px);
   }
 }
 @media screen and (max-width: 720px) {
@@ -465,13 +455,8 @@ body h1 {
     font-size: 14px;
   }
   .ctaWhite::before {
-    width: 14px;
-    height: 14px;
-    top: 50%;
-  }
-  .ctaWhite::before svg {
-    width: 100%;
-    height: 100%;
+    scale: 0.8;
+    top: calc(50% - 2px);
   }
 }
 @media screen and (max-width: 720px) {
