@@ -64,3 +64,34 @@ $(window).scroll(function (event) {
   hasScrolled();
 });
 //--------------------------- Hide Header on on scroll down-------------------------//
+
+if ($(".partnersSection").length) {
+    $(".logoSlider").slick({
+      dots: false,
+      slidesToShow: 5,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 0,
+      speed: 4000,
+      infinite: true,
+      cssEase: 'linear',
+    });
+  }
+
+  // Select the tab buttons and content sections
+const tabButtons = document.querySelectorAll(".tab-button");
+const tabContents = document.querySelectorAll(".tab-content");
+
+// Add click event listeners to each tab button
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Remove the active class from all buttons and content
+    tabButtons.forEach((btn) => btn.classList.remove("active"));
+    tabContents.forEach((content) => content.classList.remove("active"));
+
+    // Add the active class to the clicked button and the corresponding content
+    button.classList.add("active");
+    const tabId = button.getAttribute("data-tab");
+    document.getElementById(tabId).classList.add("active");
+  });
+});
