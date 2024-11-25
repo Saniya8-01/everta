@@ -1,0 +1,24 @@
+header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-in-out;
+    .nav-up{top: -100px;}
+    .headerWrapper{display: flex;align-items: center;justify-content: space-between;padding: 20px 120px;background: #FFF;
+        .headerMenu{
+            .navMenu{
+                .navLinks{
+                    .navLists{
+                        ul{display: flex;align-items:center;gap:56px;
+                            li{padding: 15px 0px;display:flex;gap:10px;
+                                a{@include verdanaregular;@include font20;line-height: 150%;color: $quaternaryColor1;}
+                            }
+                            .dropdown{
+                                a{cursor: default;pointer-events: none;}
+                            }
+                            .ctaContact{
+                                a{padding: 20px 32px;color: $primaryColor1;@include font16;@include terminamedium;letter-spacing: -0.64px;background: $quaternaryColor1;border-radius: 100px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
