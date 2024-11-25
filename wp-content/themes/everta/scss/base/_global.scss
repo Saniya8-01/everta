@@ -214,7 +214,6 @@ img {
 
 a:hover {
     text-decoration: none;
-    color: inherit;
     outline: none;
 }
 
@@ -515,7 +514,7 @@ $quaternaryColor3 : #787878;
 $quaternaryColor4 : #A5A5A5;
 $quaternaryColor5 : #D2D2D2;
 
-.ctaYellow{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 20px; letter-spacing: -0.04em; color: #000; background: $primaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;
+.ctaYellow{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 20px; letter-spacing: -0.04em; color: #000; background: $primaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;
 
     &::before{content: url(../images/black-cta-arrow.svg); position: absolute; width: 16px; top: calc(50% + 2px); transform: translateY(-50%); right: 32px; opacity: 0; transition: transform 0.3s ease-out, opacity 0.3s ease-out;}
 
@@ -529,7 +528,7 @@ $quaternaryColor5 : #D2D2D2;
     @media screen and (max-width:720px) {line-height:normal; font-size: 12px;}
 }
 
-.ctaYellowBlack{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 20px; letter-spacing: -0.04em; color: #000; background: $primaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;border:1px solid $quaternaryColor2;
+.ctaYellowBlack{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 20px; letter-spacing: -0.04em; color: #000; background: $primaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;border:1px solid $quaternaryColor2;display:inline-block;
 
     &::before{content: url(../images/black-cta-arrow.svg); position: absolute; width: 16px; top: calc(50% + 2px); transform: translateY(-50%); right: 32px; opacity: 0; transition: transform 0.3s ease-out, opacity 0.3s ease-out;}
 
@@ -543,7 +542,7 @@ $quaternaryColor5 : #D2D2D2;
     @media screen and (max-width:720px) {line-height:normal; font-size: 12px;}
 }
 
-.ctaBlack{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 20px; letter-spacing: -0.04em; color: $primaryColor1; background: $quaternaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;
+.ctaBlack{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 20px; letter-spacing: -0.04em; color: $primaryColor1; background: $quaternaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;
 
     &::before{content: url(../images/yellow-cta-arrow.svg); position: absolute; width: 16px; top: calc(50% + 2px); transform: translateY(-50%); right: 32px; opacity: 0; transition: transform 0.3s ease-out, opacity 0.3s ease-out;}
 
@@ -557,7 +556,7 @@ $quaternaryColor5 : #D2D2D2;
     @media screen and (max-width:720px) {line-height:normal; font-size: 12px;}
 }
 
-.ctaWhite{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 20px; letter-spacing: -0.04em; color: $quaternaryColor1; background: #fff; border-style: none; border: 1px solid $quaternaryColor2; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;
+.ctaWhite{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 20px; letter-spacing: -0.04em; color: $quaternaryColor1; background: #fff; border-style: none; border: 1px solid $quaternaryColor2; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;
 
     &::before{content: url(../images/black-cta-arrow.svg); position: absolute; width: 16px; top: calc(50% + 2px); transform: translateY(-50%); right: 32px; opacity: 0; transition: transform 0.3s ease-out, opacity 0.3s ease-out;}
 

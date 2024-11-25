@@ -202,6 +202,20 @@
     </div>
 </section>
 
+<section class="exploreSection">
+    <div class="exploreSectionWrapper">
+        <div class="leftContent">
+            <div class="contentWrapper">
+                <h3>EXPLORE EVERTA</h3>
+                <p>Explore our digital solutions that complements and elevates Everta users experience</p>
+                <a href="" class="ctaBlack">View Solutions</a>
+            </div>
+        </div>
+        <div class="rightContent">
+            <img src="<?php bloginfo('template_directory'); ?>/images/iphone-12-mini--green.png" alt="">
+        </div>
+    </div>
+</section>
 
 
 <?php get_footer(); ?>
