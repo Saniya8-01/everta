@@ -144,7 +144,8 @@
                         <h5>AC Charging • Ranges: 3.2kW to 22kW</h5>
                         <p>Convenient home or workplace charging solutions with robust design and easy installation.</p>
                     </div>
-                    <a href="#">Explore more<img src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""></a>
+                    <a href="#">Explore more<img
+                            src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""></a>
                 </div>
                 <div class="card">
                     <div class="card-wrapper">
@@ -153,7 +154,8 @@
                         <h5>AC Charging • Ranges: 3.2kW to 22kW</h5>
                         <p>Convenient home or workplace charging solutions with robust design and easy installation.</p>
                     </div>
-                    <a href="#">Explore more<img src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""></a>
+                    <a href="#">Explore more<img
+                            src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""></a>
                 </div>
                 <div class="card">
                     <div class="card-wrapper">
@@ -162,7 +164,8 @@
                         <h5>AC Charging • Ranges: 3.2kW to 22kW</h5>
                         <p>Convenient home or workplace charging solutions with robust design and easy installation.</p>
                     </div>
-                    <a href="#">Explore more<img src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""></a>
+                    <a href="#">Explore more<img
+                            src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -177,7 +180,8 @@
                         <h5>AC Charging • Ranges: 3.2kW to 22kW</h5>
                         <p>Convenient home or workplace charging solutions with robust design and easy installation.</p>
                     </div>
-                    <a href="#">Explore more<img src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""></a>
+                    <a href="#">Explore more<img
+                            src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""></a>
                 </div>
                 <div class="card">
                     <div class="card-wrapper">
@@ -186,7 +190,8 @@
                         <h5>AC Charging • Ranges: 3.2kW to 22kW</h5>
                         <p>Convenient home or workplace charging solutions with robust design and easy installation.</p>
                     </div>
-                    <a href="#">Explore more<img src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""></a>
+                    <a href="#">Explore more<img
+                            src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""></a>
                 </div>
                 <div class="card">
                     <div class="card-wrapper">
@@ -195,7 +200,8 @@
                         <h5>AC Charging • Ranges: 3.2kW to 22kW</h5>
                         <p>Convenient home or workplace charging solutions with robust design and easy installation.</p>
                     </div>
-                    <a href="#">Explore more <img src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""></a>
+                    <a href="#">Explore more <img
+                            src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -206,13 +212,130 @@
     <div class="exploreSectionWrapper">
         <div class="leftContent">
             <div class="contentWrapper">
-                <h3>EXPLORE EVERTA</h3>
+                <h2>EXPLORE EVERTA</h2>
                 <p>Explore our digital solutions that complements and elevates Everta users experience</p>
                 <a href="" class="ctaBlack">View Solutions</a>
             </div>
         </div>
         <div class="rightContent">
             <img src="<?php bloginfo('template_directory'); ?>/images/iphone-12-mini--green.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="mapSection">
+    <div class="mapSectionDivider">
+        <div class="map">
+            <h2>E for Everta, E for Environment</h2>
+            <div class="mapImage">
+                <img src="<?php bloginfo('template_directory'); ?>/images/map-image.png" alt="">
+            </div>
+        </div>
+        <div class="stats">
+            <div class="statCard">
+                <h3>400 +</h3>
+                <h4>EV Chargers Deployed</h4>
+                <p>Contributing to cleaner air and a healthier planet.</p>
+            </div>
+            <div class="statCard">
+                <h3>20 +</h3>
+                <h4>Partners in e-movement</h4>
+                <p>Contributing to cleaner air and a healthier planet.</p>
+            </div>
+            <div class="statCard">
+                <h3>5M +</h3>
+                <h4>kWh Energy Saved</h4>
+                <p>Contributing to cleaner air and a healthier planet.</p>
+            </div>
+            <div class="statCard">
+                <h3>500 +</h3>
+                <h4>Tn CO2 Emissions Reduced</h4>
+                <p>Contributing to cleaner air and a healthier planet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonialSection">
+    <h2>Testimonials from Gen E</h2>
+    <div class="testimonialCardWrapper">
+        <div class="testimonialCard">
+            <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="">
+            <p>Everta's charging service has significantly our fleet operations, delivering reliable, cost-effective has
+                energy solutions ,service has significantly, cost-effective has energy solutions</p>
+            <div class="testimonial">
+                <div class="testimonialImage">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/testimonial-image.png" alt="">
+                </div>
+                <div class="testimomialInfo">
+                    <h3>Jacob mathew</h3>
+                    <p>CFO - Eco tech</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonialCard">
+            <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="">
+            <p>Everta's charging service has significantly our fleet operations, delivering reliable, cost-effective has
+                energy solutions ,service has significantly, cost-effective has energy solutions</p>
+            <div class="testimonial">
+                <div class="testimonialImage">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/testimonial-image.png" alt="">
+                </div>
+                <div class="testimomialInfo">
+                    <h3>Jacob mathew</h3>
+                    <p>CFO - Eco tech</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonialCard">
+            <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="">
+            <p>Everta's charging service has significantly our fleet operations, delivering reliable, cost-effective has
+                energy solutions ,service has significantly, cost-effective has energy solutions</p>
+            <div class="testimonial">
+                <div class="testimonialImage">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/testimonial-image.png" alt="">
+                </div>
+                <div class="testimomialInfo">
+                    <h3>Jacob mathew</h3>
+                    <p>CFO - Eco tech</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonialCard">
+            <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="">
+            <p>Everta's charging service has significantly our fleet operations, delivering reliable, cost-effective has
+                energy solutions ,service has significantly, cost-effective has energy solutions</p>
+            <div class="testimonial">
+                <div class="testimonialImage">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/testimonial-image.png" alt="">
+                </div>
+                <div class="testimomialInfo">
+                    <h3>Jacob mathew</h3>
+                    <p>CFO - Eco tech</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="progresBar">
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+</section>
+
+<section class="formSection">
+    <div class="formWrapper">
+        <div class="formTitle">
+            <h2>Interested in Everta?</h2>
+            <p>Start partnering with us or purchase our solutions by filling out the form today and take the first step
+                toward a more sustainable and efficient energy future.</p>
+        </div>
+        <div class="input">
+            <label for="">Your Email</label>
+            <input type="text" placeholder="your@gmail.com">
+        </div>
+        <div class="ctaDiv">
+            <a href="" class="ctaBlack">Continue</a>
         </div>
     </div>
 </section>

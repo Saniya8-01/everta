@@ -120,6 +120,7 @@
             transition: all 0.3s ease;
             border-bottom: 1px solid #D8DBDC;
             border-top: 1px solid #D8DBDC;
+            transition: 0.3s all ease-in-out;
 
             &:hover {
                 background: $primaryColor1;
@@ -371,17 +372,252 @@
     }
 }
 
-.exploreSection{margin-bottom: 200px;
-    .exploreSectionWrapper{display: flex;
-        .leftContent{flex-basis: 50%;background:$primaryColor1;position:relative;padding:132px 120px;
-            .contentWrapper{width: 80%;
-                h3{margin-bottom: 32px;color: $quaternaryColor1;@include terminabold;@include font48;font-weight: 700;line-height: 133.333%;text-transform: uppercase;}
-                p{margin-bottom: 56px;@include verdanaregular;@include font20;font-weight: 400;line-height: 160%;color: $quaternaryColor1;}
+.exploreSection {
+    margin-bottom: 200px;
+
+    .exploreSectionWrapper {
+        display: flex;
+
+        .leftContent {
+            flex-basis: 50%;
+            background: $primaryColor1;
+            position: relative;
+            padding: 132px 120px;
+
+            .contentWrapper {
+                width: 80%;
+
+                h2 {
+                    margin-bottom: 32px;
+                    color: $quaternaryColor1;
+                    @include terminabold;
+                    @include font48;
+                    font-weight: 700;
+                    line-height: 133.333%;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    margin-bottom: 56px;
+                    @include verdanaregular;
+                    @include font20;
+                    font-weight: 400;
+                    line-height: 160%;
+                    color: $quaternaryColor1;
+                }
             }
         }
-        .rightContent{flex-basis: 50%;background:$quaternaryColor1;overflow:hidden;position:relative;
-            &:hover{img{transform: translate(-50%,0px);transition: 0.3s ease-in-out;}}
-            img{transform: translate(-50%,300px);left: 50%;position: absolute;bottom: 0;}
+
+        .rightContent {
+            flex-basis: 50%;
+            background: $quaternaryColor1;
+            overflow: hidden;
+            position: relative;
+
+            &:hover {
+                img {
+                    transform: translate(-50%, 0px);
+                    transition: 0.3s ease-in-out;
+                }
+            }
+
+            img {
+                transform: translate(-50%, 300px);
+                left: 50%;
+                position: absolute;
+                bottom: 0;
+            }
         }
+    }
+}
+
+.mapSection {
+    margin-bottom: 200px;
+
+    .mapSectionDivider {
+        display: flex;
+        align-items: stretch;
+
+        .map {
+            flex-basis: 80%;
+            border-top: 1px solid $tertiaryColor3;
+            border-bottom: 1px solid $tertiaryColor3;
+
+            h2 {
+                margin-bottom: 46px;
+                margin-top: 56px;
+                color: $quaternaryColor1;
+                @include terminabold;
+                @include font48;
+                font-weight: 700;
+                line-height: 133.333%;
+                text-transform: uppercase;
+                @include wrapper;
+            }
+        }
+
+        .stats {
+            flex-basis: 20%;
+
+            .statCard {
+                padding: 32px;
+                background: $quaternaryColor1;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgba(216, 219, 220, 0.20);
+                }
+
+                h3 {
+                    color: #fff;
+                    @include terminamedium;
+                    @include font52;
+                    letter-spacing: -1.04px;
+                    font-weight: 400;
+                    margin-bottom: 12px;
+                }
+
+                h4 {
+                    margin-bottom: 20px;
+                    color: #fff;
+                    @include terminamedium;
+                    font-weight: 500;
+                    line-height: 140%;
+                }
+
+                p {
+                    color: #fff;
+                    @include verdanaregular;
+                    @include font16;
+                    line-height: 175%;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.testimonialSection {
+    margin-bottom: 200px;
+
+    h2 {
+        margin-bottom: 56px;
+        color: $quaternaryColor1;
+        @include terminabold;
+        @include font48;
+        font-weight: 700;
+        line-height: 133.333%;
+        text-transform: uppercase;
+        @include wrapper;
+    }
+
+    .testimonialCardWrapper {
+        @include wrapper;
+        padding-right: 0px;
+        margin-bottom: 60px;
+
+        .testimonialCard {
+            border-right: 1px solid $quaternaryColor3;
+            margin-right: 52px;
+            padding: 40px 56px 40px 0px;
+            width: 100%;
+
+            img {
+                margin-bottom: 40px;
+            }
+
+            p {
+                margin-bottom: 40px;
+                color: $quaternaryColor2;
+                @include verdanaregular;
+                @include font20;
+                line-height: 160%;
+            }
+
+            .testimonial {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .testimonialImage {
+                    overflow: hidden;
+                    border-radius: 50%;
+                }
+
+                h3 {
+                    margin-bottom: 8px;
+                    color: $quaternaryColor1;
+                    @include verdanabold;
+                    @include font20;
+                    line-height: 140%;
+                    text-transform: capitalize;
+                }
+
+                p {
+                    color: #343434;
+                    @include verdanaregular;
+                    @include font20;
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+
+    .progresBar {
+        @include wrapper;
+
+        .progress-bar-container {
+            position: relative;
+            width: 250px;
+            height: 5px;
+            background: #D8DBDC;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background: #1E1E1E;
+            transition: width linear;
+        }
+    }
+}
+
+.formSection {
+    margin-bottom: 200px;
+
+    .formWrapper {
+        padding: 60px 0px;
+        @include wrapper;
+        background: $primaryColor1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .formTitle {flex-basis: 40%;margin-right:120px;flex-shrink:0;
+            h2 {
+                color: $quaternaryColor1;
+                margin-bottom: 32px;
+                @include terminabold;
+                @include font36;
+                line-height: 140%;
+                letter-spacing: -0.72px;
+                text-transform: uppercase;
+            }
+
+            p {
+                color: $quaternaryColor1;
+                @include verdanaregular;
+                @include font20;
+                line-height: 150%;
+            }
+        }
+
+        .input {flex-basis: 30%;margin-right:56px;display:flex;flex-direction:column;gap:17px;flex-shrink:0;
+            label {color: $quaternaryColor1;@include terminabold;@include font18;}
+            input {width: 100%;background: transparent;border-bottom: 1px solid rgba(62, 62, 62, 0.27);color: $quaternaryColor1;@include verdanaregular;@include font16;padding: 7px 0px 14px 0px;
+                &::placeholder{color: $quaternaryColor1;@include verdanaregular;@include font16;}
+            }
+        }
+        .ctaDiv{flex-basis: 15%;}
     }
 }
