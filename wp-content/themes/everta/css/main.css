@@ -602,6 +602,69 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a 
     font-size: 12px;
   }
 }
+@media all and (max-width: 1800px) {
+  header .headerWrapper {
+    padding: 20px 110px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
+    gap: 54px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
+    padding: 14px 0px;
+    gap: 10px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
+    padding: 18px 30px;
+    letter-spacing: -0.64px;
+  }
+}
+@media all and (max-width: 1600px) {
+  header .headerWrapper {
+    padding: 16px 90px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
+    gap: 50px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
+    padding: 12px 0px;
+    gap: 10px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
+    padding: 16px 28px;
+    letter-spacing: -0.64px;
+  }
+}
+@media all and (max-width: 1440px) {
+  header .headerWrapper {
+    padding: 14px 80px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
+    gap: 40px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
+    padding: 10px 0px;
+    gap: 10px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
+    padding: 14px 24px;
+    letter-spacing: -0.64px;
+  }
+}
+@media all and (max-width: 1280px) {
+  header .headerWrapper {
+    padding: 12px 70px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
+    gap: 36px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
+    padding: 10px 0px;
+    gap: 8px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
+    padding: 12px 22px;
+  }
+}
 
 footer .footerContainer {
   display: flex;
@@ -726,10 +789,91 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     font-size: 14px;
   }
 }
+@media all and (max-width: 1800px) {
+  footer .footerContainer .footerLeft {
+    padding: 50px 100px;
+  }
+  footer .footerContainer .footerLeft .footerSocialmedia {
+    padding-top: 28px;
+    gap: 24px;
+  }
+  footer .footerContainer .footerRight {
+    padding: 50px 100px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer {
+    gap: 70px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer .footerMenus {
+    gap: 50px 100px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerMenuWrapper p {
+    margin-bottom: 20px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer .footerRights {
+    padding-top: 33px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer .footerRights .footerBottomLinks {
+    gap: 24px;
+  }
+}
+@media all and (max-width: 1600px) {
+  footer .footerContainer .footerLeft {
+    padding: 40px 80px;
+  }
+  footer .footerContainer .footerLeft .footerSocialmedia {
+    padding-top: 24px;
+    gap: 22px;
+  }
+  footer .footerContainer .footerRight {
+    padding: 40px 80px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer {
+    gap: 60px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer .footerMenus {
+    gap: 40px 80px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerMenuWrapper p {
+    margin-bottom: 20px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer .footerRights {
+    padding-top: 30px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer .footerRights .footerBottomLinks {
+    gap: 22px;
+  }
+}
+@media all and (max-width: 1440px) {
+  footer .footerContainer .footerLeft {
+    padding: 30px 60px;
+  }
+  footer .footerContainer .footerLeft .footerSocialmedia {
+    padding-top: 22px;
+    gap: 20px;
+  }
+  footer .footerContainer .footerRight {
+    padding: 30px 60px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer {
+    gap: 40px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer .footerMenus {
+    padding: 30px 60px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerMenuWrapper p {
+    margin-bottom: 18px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer .footerRights {
+    padding-top: 30px;
+  }
+  footer .footerContainer .footerRight .footerRightContainer .footerRights .footerBottomLinks {
+    gap: 20px;
+  }
+}
 
 .bannerSection {
   position: relative;
-  margin-top: 100px;
+  margin-top: 134px;
   margin-bottom: 200px;
 }
 .bannerSection .blackOverlay {
@@ -757,7 +901,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1800px) {
   .bannerSection .bannerSectionWrapper h1 {
-    font-size: 8px;
+    font-size: 76px;
   }
 }
 @media screen and (max-width: 1600px) {
@@ -784,6 +928,72 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   margin-bottom: 72px;
   color: #fff;
   font-family: "verdanaregular";
+}
+@media all and (max-width: 1800px) {
+  .bannerSection {
+    margin-top: 128px;
+    margin-bottom: 180px;
+  }
+  .bannerSection .bannerSectionWrapper {
+    left: 100px;
+    top: 220px;
+    width: 70%;
+  }
+  .bannerSection .bannerSectionWrapper h1 {
+    margin-bottom: 18px;
+  }
+  .bannerSection .bannerSectionWrapper p {
+    margin-bottom: 70px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .bannerSection {
+    margin-top: 112px;
+    margin-bottom: 160px;
+  }
+  .bannerSection .bannerSectionWrapper {
+    left: 80px;
+    top: 180px;
+    width: 70%;
+  }
+  .bannerSection .bannerSectionWrapper h1 {
+    margin-bottom: 18px;
+  }
+  .bannerSection .bannerSectionWrapper p {
+    margin-bottom: 60px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .bannerSection {
+    margin-top: 98px;
+  }
+  .bannerSection .bannerSectionWrapper {
+    left: 80px;
+    top: 150px;
+    width: 70%;
+  }
+  .bannerSection .bannerSectionWrapper h1 {
+    margin-bottom: 16px;
+  }
+  .bannerSection .bannerSectionWrapper p {
+    margin-bottom: 50px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .bannerSection {
+    margin-top: 89px;
+    margin-bottom: 150px;
+  }
+  .bannerSection .bannerSectionWrapper {
+    left: 70px;
+    top: 100px;
+  }
+  .bannerSection .bannerSectionWrapper h1 {
+    margin-bottom: 14px;
+  }
+  .bannerSection .bannerSectionWrapper p {
+    margin-bottom: 40px;
+  }
 }
 
 .withEaseSection {
@@ -821,6 +1031,70 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .withEaseSection .divWrapper .rightContent .rightContentWrapper .imageDiv:nth-child(even) {
   margin-left: auto;
+}
+@media all and (max-width: 1800px) {
+  .withEaseSection {
+    margin-bottom: 180px;
+  }
+  .withEaseSection .divWrapper {
+    gap: 50px;
+    padding-top: 150px;
+  }
+  .withEaseSection .divWrapper .leftContent {
+    padding: 0px 120px;
+    flex-basis: 50%;
+  }
+  .withEaseSection .divWrapper .rightContent {
+    flex-basis: 50%;
+  }
+  .withEaseSection .divWrapper .rightContent .rightContentWrapper {
+    gap: 170px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .withEaseSection {
+    height: 80vh;
+    margin-bottom: 160px;
+  }
+  .withEaseSection .divWrapper {
+    gap: 45px;
+    padding-top: 130px;
+  }
+  .withEaseSection .divWrapper .leftContent {
+    padding: 0px 80px;
+    flex-basis: 45%;
+  }
+  .withEaseSection .divWrapper .rightContent .rightContentWrapper {
+    gap: 150px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .withEaseSection {
+    height: 80vh;
+  }
+  .withEaseSection .divWrapper {
+    gap: 40px;
+    padding-top: 100px;
+  }
+  .withEaseSection .divWrapper .leftContent {
+    padding: 0px 60px;
+    flex-basis: 43%;
+  }
+  .withEaseSection .divWrapper .rightContent .rightContentWrapper {
+    gap: 130px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .withEaseSection .divWrapper {
+    gap: 36px;
+    padding-top: 80px;
+  }
+  .withEaseSection .divWrapper .leftContent {
+    padding: 0px 40px;
+  }
+  .withEaseSection .divWrapper .rightContent .rightContentWrapper {
+    gap: 110px;
+  }
 }
 
 .evertaEveryoneSection {
@@ -1047,6 +1321,195 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   z-index: 1;
   height: 0;
 }
+@media all and (max-width: 1800px) {
+  .evertaEveryoneSection {
+    margin-bottom: 180px;
+  }
+  .evertaEveryoneSection h2 {
+    margin-bottom: 22px;
+  }
+  .evertaEveryoneSection p {
+    margin-bottom: 54px;
+  }
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding: 60px 0px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 1600px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 1440px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 1024px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 768px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1800px) {
+  .evertaEveryoneSection .hover-section .hover-box:hover .content h3 {
+    margin-bottom: 30px;
+  }
+  .evertaEveryoneSection .hover-section .hover-box .content p {
+    margin-bottom: 45px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .evertaEveryoneSection {
+    margin-bottom: 160px;
+  }
+  .evertaEveryoneSection h2 {
+    margin-bottom: 20px;
+  }
+  .evertaEveryoneSection p {
+    margin-bottom: 50px;
+  }
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding: 50px 0px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 1600px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 1440px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 1024px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 768px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .evertaEveryoneSection .hover-section .hover-box:hover .content h3 {
+    margin-bottom: 26px;
+  }
+  .evertaEveryoneSection .hover-section .hover-box .content p {
+    margin-bottom: 40px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .evertaEveryoneSection h2 {
+    margin-bottom: 20px;
+  }
+  .evertaEveryoneSection p {
+    margin-bottom: 40px;
+  }
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding: 40px 0px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1600px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1440px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1024px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 768px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .evertaEveryoneSection .hover-section .hover-box:hover .content h3 {
+    margin-bottom: 24px;
+  }
+  .evertaEveryoneSection .hover-section .hover-box .content p {
+    margin-bottom: 36px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .evertaEveryoneSection {
+    margin-bottom: 150px;
+  }
+  .evertaEveryoneSection h2 {
+    margin-bottom: 18px;
+  }
+  .evertaEveryoneSection p {
+    margin-bottom: 36px;
+  }
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding: 36px 0px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1600px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1440px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1024px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 768px) {
+  .evertaEveryoneSection .hover-section .hover-box {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .evertaEveryoneSection .hover-section .hover-box:hover .content h3 {
+    margin-bottom: 22px;
+  }
+  .evertaEveryoneSection .hover-section .hover-box .content p {
+    margin-bottom: 32px;
+  }
+}
 
 .partnersSection {
   margin-bottom: 200px;
@@ -1087,6 +1550,44 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .partnersSection .partnersSectionWrapper .logoSliderContainer .logoSlider .logo img {
   margin: auto;
+}
+@media all and (max-width: 1800px) {
+  .partnersSection {
+    margin-bottom: 180px;
+  }
+  .partnersSection .partnersSectionWrapper {
+    padding: 80px 0px;
+  }
+  .partnersSection .partnersSectionWrapper h3 {
+    margin-bottom: 80px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .partnersSection {
+    margin-bottom: 160px;
+  }
+  .partnersSection .partnersSectionWrapper {
+    padding: 70px 0px;
+  }
+  .partnersSection .partnersSectionWrapper h3 {
+    margin-bottom: 70px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .partnersSection .partnersSectionWrapper {
+    padding: 60px 0px;
+  }
+  .partnersSection .partnersSectionWrapper h3 {
+    margin-bottom: 60px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .partnersSection .partnersSectionWrapper {
+    padding: 50px 0px;
+  }
+  .partnersSection .partnersSectionWrapper h3 {
+    margin-bottom: 50px;
+  }
 }
 
 .chargingSection {
@@ -1201,7 +1702,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .chargingSection .tab-wrapper .tab-content .cards .card {
   border: 1px solid #D8DBDC;
   transition: all 0.3s ease-out;
-  height: 760px;
+  min-height: 760px;
 }
 .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
   padding: 70px 100px 100px;
@@ -1315,6 +1816,177 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   border-top: 20px solid #F5F75E;
   border-bottom: 20px solid transparent;
 }
+@media all and (max-width: 1800px) {
+  .chargingSection {
+    margin-bottom: 180px;
+  }
+  .chargingSection .tab-wrapper .tab-header h2 {
+    margin-bottom: 22px;
+  }
+  .chargingSection .tab-wrapper .tab-header p {
+    margin-bottom: 30px;
+    width: 65%;
+  }
+  .chargingSection .tab-wrapper .tab-header .tab-buttons {
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  .chargingSection .tab-wrapper .tab-header .tab-buttons .tab-button {
+    padding: 14px 40px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card {
+    min-height: 650px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
+    padding: 60px 90px 90px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
+    padding-bottom: 45px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+    margin-bottom: 30px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
+    margin-bottom: 30px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card:hover .card-wrapper {
+    padding: 60px 90px 50px 90px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card a {
+    padding: 70px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card a img {
+    width: 14px;
+    height: 14px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .chargingSection {
+    margin-bottom: 160px;
+  }
+  .chargingSection .tab-wrapper .tab-header h2 {
+    margin-bottom: 20px;
+  }
+  .chargingSection .tab-wrapper .tab-header p {
+    margin-bottom: 28px;
+    width: 60%;
+  }
+  .chargingSection .tab-wrapper .tab-header .tab-buttons {
+    gap: 14px;
+    margin-bottom: 26px;
+  }
+  .chargingSection .tab-wrapper .tab-header .tab-buttons .tab-button {
+    padding: 12px 36px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card {
+    min-height: 600px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
+    padding: 50px 80px 80px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
+    padding-bottom: 40px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+    margin-bottom: 24px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
+    margin-bottom: 24px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card:hover .card-wrapper {
+    padding: 50px 80px 40px 80px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card a {
+    padding: 60px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card a img {
+    width: 12px;
+    height: 12px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .chargingSection .tab-wrapper .tab-header h2 {
+    margin-bottom: 18px;
+  }
+  .chargingSection .tab-wrapper .tab-header p {
+    margin-bottom: 24px;
+  }
+  .chargingSection .tab-wrapper .tab-header .tab-buttons {
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .chargingSection .tab-wrapper .tab-header .tab-buttons .tab-button {
+    padding: 10px 32px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card {
+    min-height: 550px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
+    padding: 40px 70px 70px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
+    padding-bottom: 32px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+    margin-bottom: 20px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
+    margin-bottom: 20px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card:hover .card-wrapper {
+    padding: 40px 70px 30px 70px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card a {
+    padding: 50px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card a img {
+    width: 12px;
+    height: 12px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .chargingSection {
+    margin-bottom: 150px;
+  }
+  .chargingSection .tab-wrapper .tab-header h2 {
+    margin-bottom: 16px;
+  }
+  .chargingSection .tab-wrapper .tab-header p {
+    margin-bottom: 22px;
+  }
+  .chargingSection .tab-wrapper .tab-header .tab-buttons {
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .chargingSection .tab-wrapper .tab-header .tab-buttons .tab-button {
+    padding: 8px 26px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card {
+    min-height: 500px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
+    padding: 30px 60px 60px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
+    padding-bottom: 26px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+    margin-bottom: 18px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
+    margin-bottom: 18px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card:hover .card-wrapper {
+    padding: 30px 60px 24px 60px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card a {
+    padding: 40px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card a img {
+    width: 10px;
+    height: 10px;
+  }
+}
 
 .exploreSection {
   margin-bottom: 200px;
@@ -1398,6 +2070,56 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   left: 50%;
   position: absolute;
   bottom: 0;
+}
+@media all and (max-width: 1800px) {
+  .exploreSection {
+    margin-bottom: 180px;
+  }
+  .exploreSection .exploreSectionWrapper .leftContent {
+    padding: 120px 110px;
+  }
+  .exploreSection .exploreSectionWrapper .leftContent .contentWrapper h2 {
+    margin-bottom: 30px;
+  }
+  .exploreSection .exploreSectionWrapper .leftContent .contentWrapper p {
+    margin-bottom: 50px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .exploreSection {
+    margin-bottom: 160px;
+  }
+  .exploreSection .exploreSectionWrapper .leftContent {
+    padding: 100px 90px;
+  }
+  .exploreSection .exploreSectionWrapper .leftContent .contentWrapper h2 {
+    margin-bottom: 26px;
+  }
+  .exploreSection .exploreSectionWrapper .leftContent .contentWrapper p {
+    margin-bottom: 40px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .exploreSection .exploreSectionWrapper .leftContent {
+    padding: 80px 70px;
+  }
+  .exploreSection .exploreSectionWrapper .leftContent .contentWrapper h2 {
+    margin-bottom: 24px;
+  }
+  .exploreSection .exploreSectionWrapper .leftContent .contentWrapper p {
+    margin-bottom: 36px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .exploreSection .exploreSectionWrapper .leftContent {
+    padding: 70px 60px;
+  }
+  .exploreSection .exploreSectionWrapper .leftContent .contentWrapper h2 {
+    margin-bottom: 22px;
+  }
+  .exploreSection .exploreSectionWrapper .leftContent .contentWrapper p {
+    margin-bottom: 32px;
+  }
 }
 
 .mapSection {
@@ -1528,6 +2250,72 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 @media screen and (max-width: 720px) {
   .mapSection .mapSectionDivider .stats .statCard p {
     font-size: 12px;
+  }
+}
+@media all and (max-width: 1800px) {
+  .mapSection {
+    margin-bottom: 180px;
+  }
+  .mapSection .mapSectionDivider .map h2 {
+    margin-bottom: 42px;
+    margin-top: 52px;
+  }
+  .mapSection .mapSectionDivider .stats .statCard {
+    padding: 30px;
+  }
+  .mapSection .mapSectionDivider .stats .statCard h3 {
+    margin-bottom: 12px;
+  }
+  .mapSection .mapSectionDivider .stats .statCard h4 {
+    margin-bottom: 20px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .mapSection {
+    margin-bottom: 160px;
+  }
+  .mapSection .mapSectionDivider .map h2 {
+    margin-bottom: 38px;
+    margin-top: 48px;
+  }
+  .mapSection .mapSectionDivider .stats .statCard {
+    padding: 26px;
+  }
+  .mapSection .mapSectionDivider .stats .statCard h3 {
+    margin-bottom: 10px;
+  }
+  .mapSection .mapSectionDivider .stats .statCard h4 {
+    margin-bottom: 18px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .mapSection .mapSectionDivider .map h2 {
+    margin-bottom: 32px;
+    margin-top: 40px;
+  }
+  .mapSection .mapSectionDivider .stats .statCard {
+    padding: 22px;
+  }
+  .mapSection .mapSectionDivider .stats .statCard h3 {
+    margin-bottom: 10px;
+  }
+  .mapSection .mapSectionDivider .stats .statCard h4 {
+    margin-bottom: 18px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .mapSection .mapSectionDivider .map h2 {
+    margin-bottom: 24px;
+    margin-top: 32px;
+  }
+  .mapSection .mapSectionDivider .stats .statCard {
+    padding: 20px;
+  }
+  .mapSection .mapSectionDivider .stats .statCard h3 {
+    margin-bottom: 10px;
+  }
+  .mapSection .mapSectionDivider .stats .statCard h4 {
+    margin-bottom: 16px;
   }
 }
 
@@ -1744,6 +2532,189 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   background: #1E1E1E;
   transition: width linear;
 }
+@media all and (max-width: 1800px) {
+  .testimonialSection {
+    margin-bottom: 180px;
+  }
+  .testimonialSection h2 {
+    margin-bottom: 56px;
+  }
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-right: 0px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 1600px) {
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 1440px) {
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 1024px) {
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 768px) {
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1800px) {
+  .testimonialSection .testimonialCardWrapper .testimonialCard {
+    margin-right: 52px;
+    padding: 36px 50px 36px 0px;
+    width: 100%;
+  }
+  .testimonialSection .testimonialCardWrapper .testimonialCard img {
+    margin-bottom: 36px;
+  }
+  .testimonialSection .testimonialCardWrapper .testimonialCard p {
+    margin-bottom: 36px;
+  }
+  .testimonialSection .testimonialCardWrapper .testimonialCard .testimonial {
+    gap: 12px;
+  }
+  .testimonialSection .testimonialCardWrapper .testimonialCard .testimonial h3 {
+    margin-bottom: 8px;
+  }
+  .testimonialSection .progresBar .progress-bar-container {
+    width: 240px;
+    height: 5px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .testimonialSection {
+    margin-bottom: 160px;
+  }
+  .testimonialSection h2 {
+    margin-bottom: 50px;
+  }
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-right: 0px;
+    margin-bottom: 46px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 1600px) {
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 1440px) {
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 1024px) {
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 768px) {
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .testimonialSection .testimonialCardWrapper .testimonialCard {
+    margin-right: 48px;
+    padding: 32px 40px 32px 0px;
+  }
+  .testimonialSection .testimonialCardWrapper .testimonialCard img {
+    margin-bottom: 32px;
+  }
+  .testimonialSection .testimonialCardWrapper .testimonialCard p {
+    margin-bottom: 32px;
+  }
+  .testimonialSection .testimonialCardWrapper .testimonialCard .testimonial {
+    gap: 10px;
+  }
+  .testimonialSection .testimonialCardWrapper .testimonialCard .testimonial h3 {
+    margin-bottom: 8px;
+  }
+  .testimonialSection .progresBar .progress-bar-container {
+    width: 240px;
+    height: 5px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .testimonialSection h2 {
+    margin-bottom: 40px;
+  }
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-right: 0px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1600px) {
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1440px) {
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1024px) {
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 768px) {
+  .testimonialSection .testimonialCardWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .testimonialSection .testimonialCardWrapper .testimonialCard {
+    margin-right: 40px;
+    padding: 30px 32px 28px 0px;
+  }
+  .testimonialSection .testimonialCardWrapper .testimonialCard img {
+    margin-bottom: 30px;
+  }
+  .testimonialSection .testimonialCardWrapper .testimonialCard p {
+    margin-bottom: 30px;
+  }
+  .testimonialSection .testimonialCardWrapper .testimonialCard .testimonial {
+    gap: 10px;
+  }
+  .testimonialSection .testimonialCardWrapper .testimonialCard .testimonial h3 {
+    margin-bottom: 8px;
+  }
+  .testimonialSection .progresBar .progress-bar-container {
+    width: 200px;
+    height: 5px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .testimonialSection {
+    margin-bottom: 150px;
+  }
+}
 
 .formSection {
   margin-bottom: 200px;
@@ -1895,4 +2866,182 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .formSection .formWrapper .ctaDiv {
   flex-basis: 15%;
+}
+@media all and (max-width: 1800px) {
+  .formSection {
+    margin-bottom: 180px;
+  }
+  .formSection .formWrapper {
+    padding: 55px 0px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 1600px) {
+  .formSection .formWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 1440px) {
+  .formSection .formWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 1024px) {
+  .formSection .formWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 768px) {
+  .formSection .formWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1800px) {
+  .formSection .formWrapper .formTitle {
+    margin-right: 100px;
+  }
+  .formSection .formWrapper .formTitle h2 {
+    margin-bottom: 32px;
+  }
+  .formSection .formWrapper .input {
+    margin-right: 50px;
+    gap: 16px;
+  }
+  .formSection .formWrapper .input input {
+    padding: 7px 0px 14px 0px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .formSection {
+    margin-bottom: 160px;
+  }
+  .formSection .formWrapper {
+    padding: 50px 0px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 1600px) {
+  .formSection .formWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 1440px) {
+  .formSection .formWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 1024px) {
+  .formSection .formWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 768px) {
+  .formSection .formWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .formSection .formWrapper .formTitle {
+    margin-right: 80px;
+  }
+  .formSection .formWrapper .formTitle h2 {
+    margin-bottom: 30px;
+  }
+  .formSection .formWrapper .input {
+    margin-right: 45px;
+    gap: 14px;
+  }
+  .formSection .formWrapper .input input {
+    padding: 6px 0px 12px 0px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .formSection .formWrapper {
+    padding: 40px 0px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1600px) {
+  .formSection .formWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1440px) {
+  .formSection .formWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1024px) {
+  .formSection .formWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 768px) {
+  .formSection .formWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .formSection .formWrapper .formTitle {
+    margin-right: 70px;
+  }
+  .formSection .formWrapper .formTitle h2 {
+    margin-bottom: 26px;
+  }
+  .formSection .formWrapper .input {
+    margin-right: 40px;
+    gap: 12px;
+  }
+  .formSection .formWrapper .input input {
+    padding: 6px 0px 12px 0px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .formSection {
+    margin-bottom: 150px;
+  }
+  .formSection .formWrapper {
+    padding: 36px 0px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1600px) {
+  .formSection .formWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1440px) {
+  .formSection .formWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1024px) {
+  .formSection .formWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 768px) {
+  .formSection .formWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

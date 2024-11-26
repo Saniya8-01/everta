@@ -21,4 +21,76 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
             }
         }
     }
+    @media all and (max-width:1800px){
+    .headerWrapper{padding: 20px 110px;
+        .headerMenu{
+            .navMenu{
+                .navLinks{
+                    .navLists{
+                        ul{gap:54px;
+                            li{padding: 14px 0px;gap:10px;}
+                            .ctaContact{
+                                a{padding: 18px 30px;letter-spacing: -0.64px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+    @media all and (max-width:1600px){
+        .headerWrapper{padding: 16px 90px;
+            .headerMenu{
+                .navMenu{
+                    .navLinks{
+                        .navLists{
+                            ul{gap:50px;
+                                li{padding: 12px 0px;gap:10px;}
+                                .ctaContact{
+                                    a{padding: 16px 28px;letter-spacing: -0.64px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width:1440px){
+        .headerWrapper{padding: 14px 80px;
+            .headerMenu{
+                .navMenu{
+                    .navLinks{
+                        .navLists{
+                            ul{gap:40px;
+                                li{padding: 10px 0px;gap:10px;}
+                                .ctaContact{
+                                    a{padding: 14px 24px;letter-spacing: -0.64px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width:1280px){
+        .headerWrapper{padding: 12px 70px;
+            .headerMenu{
+                .navMenu{
+                    .navLinks{
+                        .navLists{
+                            ul{gap:36px;
+                                li{padding: 10px 0px;gap:8px;}
+                                .ctaContact{
+                                    a{padding: 12px 22px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
