@@ -1,8 +1,9 @@
 <?php get_header(); /*Template name: Homepage*/ ?>
 
 <section class="bannerSection">
-    <div class="bannerImagewrapper">
-        <img src="<?php bloginfo('template_directory'); ?>/images/banner-image.png" alt="">
+    <div class="bannerImageWrapper">
+        <img src="<?php bloginfo('template_directory'); ?>/images/banner-image.png" alt="" class="desktopImage">
+        <img src="<?php bloginfo('template_directory'); ?>/images/banner-mobile-image.png" alt="" class="mobileImage">
     </div>
     <div class="blackOverlay"></div>
     <div class="bannerSectionWrapper">

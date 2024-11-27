@@ -75,6 +75,14 @@ if ($(".partnersSection").length) {
         speed: 4000,
         infinite: true,
         cssEase: 'linear',
+        responsive: [
+            {
+                breakpoint: 820,
+                settings: {
+                    slidesToShow: 4,
+                }
+            }
+        ]
     });
 }
 
@@ -111,6 +119,14 @@ if ($(".testimonialSection").length) {
         infinite: false,
         initialSlide: 0,
         focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 1180,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
     // Function to animate the progress bar
     function startProgressBar() {
