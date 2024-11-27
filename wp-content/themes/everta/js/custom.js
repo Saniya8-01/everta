@@ -151,3 +151,29 @@ if ($(".testimonialSection").length) {
     // Start progress bar when slider is initialized
     startProgressBar();
 }
+
+function initializeSlick() {
+    if ($(window).width() <= 768) {
+        if (!$(".rightContentWrapper").hasClass('slick-initialized')) {
+            $(".rightContentWrapper").slick({
+                dots: false,
+                slidesToShow: 1.2,
+                arrows: false,
+                infinite: false,
+                initialSlide:0,
+            });
+        }
+    } else {
+        if ($(".rightContentWrapper").hasClass('slick-initialized')) {
+            $(".rightContentWrapper").slick('unslick');
+        }
+    }
+}
+
+$(document).ready(function () {
+    initializeSlick();
+    $(window).resize(function () {
+        initializeSlick();
+    });
+});
+

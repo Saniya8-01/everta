@@ -19,6 +19,13 @@
             <div>
                 <img src="<?php bloginfo('template_directory'); ?>/images/text-image.png" alt="">
             </div>
+            <div class="leftMobileTitle">
+                <p>At Everta, we ensure that your EV charging experience is seamless, reliable, and effortless. Whether
+                    at home, work, or on the road, our chargers are designed to keep you powered up whenever and
+                    wherever you need. We combine top-tier technology with user-friendly solutions, providing peace of
+                    mind for every journey. It’s more than just charging—it’s charging made simple.</p>
+                <a href="" class="ctaWhiteBlack">Explore more</a>
+            </div>
         </div>
         <div class="rightContent">
             <div class="rightContentWrapper">

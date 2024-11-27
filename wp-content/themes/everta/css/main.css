@@ -405,6 +405,69 @@ body h1 {
   }
 }
 
+.ctaWhiteBlack {
+  font-family: "termina_testregular";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.04em;
+  color: #000;
+  background: transparent;
+  border-style: none;
+  padding: 20px 32px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  border: 1px solid #4B4B4B;
+  display: inline-block;
+}
+@media screen and (max-width: 1440px) {
+  .ctaWhiteBlack {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .ctaWhiteBlack {
+    font-size: 12px;
+  }
+}
+.ctaWhiteBlack::before {
+  content: url(../images/black-cta-arrow.svg);
+  position: absolute;
+  width: 16px;
+  top: calc(50% + 2px);
+  transform: translateY(-50%);
+  right: 32px;
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.ctaWhiteBlack:hover {
+  padding-right: 66px;
+}
+.ctaWhiteBlack:hover::before {
+  opacity: 1;
+}
+@media screen and (max-width: 1024px) {
+  .ctaWhiteBlack {
+    padding: 18px 32px;
+    line-height: 15px;
+    font-size: 14px;
+  }
+  .ctaWhiteBlack::before {
+    scale: 0.8;
+    top: calc(50% - 2px);
+  }
+}
+@media screen and (max-width: 720px) {
+  .ctaWhiteBlack {
+    line-height: normal;
+    font-size: 12px;
+  }
+}
+
 .ctaBlack {
   font-family: "termina_testregular";
   font-size: 16px;
@@ -1247,6 +1310,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   padding: 0px 130px;
   flex-basis: 50%;
 }
+.withEaseSection .divWrapper .leftContent .leftMobileTitle {
+  display: none;
+}
 .withEaseSection .divWrapper .rightContent {
   overflow: hidden;
   height: 100%;
@@ -1333,7 +1399,44 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media all and (max-width: 680px) {
   .withEaseSection {
-    display: none;
+    height: auto;
+    margin-bottom: 100px;
+  }
+  .withEaseSection .divWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    padding-top: 0px;
+  }
+  .withEaseSection .divWrapper .leftContent {
+    padding: 0px 20px;
+    flex-basis: 100%;
+  }
+  .withEaseSection .divWrapper .leftContent img {
+    width: 60%;
+  }
+  .withEaseSection .divWrapper .leftContent .leftMobileTitle {
+    display: block;
+  }
+  .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
+    font-family: "verdanaregular";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
+  .withEaseSection .divWrapper .rightContent {
+    overflow: hidden;
+    flex-basis: 100%;
+    padding-left: 5px;
+  }
+  .withEaseSection .divWrapper .rightContent .rightContentWrapper {
+    gap: 0px;
+  }
+  .withEaseSection .divWrapper .rightContent .rightContentWrapper .slick-track {
+    gap: 15px;
+    display: flex;
   }
 }
 
