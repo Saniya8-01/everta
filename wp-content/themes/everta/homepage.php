@@ -241,22 +241,22 @@
         </div>
         <div class="stats">
             <div class="statCard">
-                <h3>400 +</h3>
+                <h3 data-count="400">0 +</h3>
                 <h4>EV Chargers Deployed</h4>
                 <p>Contributing to cleaner air and a healthier planet.</p>
             </div>
             <div class="statCard">
-                <h3>20 +</h3>
+                <h3 data-count="20">0 +</h3>
                 <h4>Partners in e-movement</h4>
                 <p>Contributing to cleaner air and a healthier planet.</p>
             </div>
             <div class="statCard">
-                <h3>5M +</h3>
+                <h3 data-count="5">0M +</h3>
                 <h4>kWh Energy Saved</h4>
                 <p>Contributing to cleaner air and a healthier planet.</p>
             </div>
             <div class="statCard">
-                <h3>500 +</h3>
+                <h3 data-count="500">0 +</h3>
                 <h4>Tn CO2 Emissions Reduced</h4>
                 <p>Contributing to cleaner air and a healthier planet.</p>
             </div>
@@ -358,7 +358,9 @@
             <div class="accordion active">
                 <div class="accordion-header">
                     <h4>How does Coverstack’s Lending Stack integrate with my existing lending workflow? </h4>
-                    <div class="accordion-icon"></div>
+                    <div class="accordian-icon-wrapper">
+                        <div class="accordion-icon"></div>
+                    </div>
                 </div>
                 <div class="accordion-body" style="max-height: fit-content;">
                     <p>
@@ -372,7 +374,9 @@
                 <div class="accordion-header">
                     <h4>
                         Is the Lending Stack insurer agnostic? </h4>
-                    <div class="accordion-icon"></div>
+                    <div class="accordian-icon-wrapper">
+                        <div class="accordion-icon"></div>
+                    </div>
                 </div>
                 <div class="accordion-body">
                     <p>
@@ -386,7 +390,9 @@
                 <div class="accordion-header">
                     <h4>
                         How does the platform optimize operational efficiency? </h4>
-                    <div class="accordion-icon"></div>
+                    <div class="accordian-icon-wrapper">
+                        <div class="accordion-icon"></div>
+                    </div>
                 </div>
                 <div class="accordion-body">
                     <p>
@@ -399,7 +405,9 @@
                 <div class="accordion-header">
                     <h4>
                         What kind of analytics does the Lending Stack offer? </h4>
-                    <div class="accordion-icon"></div>
+                    <div class="accordian-icon-wrapper">
+                        <div class="accordion-icon"></div>
+                    </div>
                 </div>
                 <div class="accordion-body">
                     <p>

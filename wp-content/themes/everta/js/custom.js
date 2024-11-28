@@ -218,3 +218,145 @@ if ($(".faqSection").length) {
     });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const hoverBoxes = document.querySelectorAll('.hover-box');
+  
+    function applyHoverEffect() {
+      if (window.innerWidth > 820) { // Disable on screens smaller than 820px
+        // Set the first card as active by default
+        if (hoverBoxes.length) {
+          hoverBoxes[0].classList.add('active');
+        }
+  
+        hoverBoxes.forEach((box) => {
+          box.addEventListener('mouseenter', handleMouseEnter);
+        });
+      } else {
+        // Remove 'active' class and event listeners on mobile
+        hoverBoxes.forEach((box) => {
+          box.classList.remove('active');
+          box.removeEventListener('mouseenter', handleMouseEnter);
+        });
+      }
+    }
+  
+    function handleMouseEnter(event) {
+      hoverBoxes.forEach((item) => item.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    }
+  
+    // Apply hover effect on load
+    applyHoverEffect();
+  
+    // Re-apply hover effect on window resize
+    window.addEventListener('resize', applyHoverEffect);
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.tab-content'); // Get all tab content sections
+    const hoverBoxes = document.querySelectorAll('.card'); // Get all cards (hover boxes)
+  
+    function setDefaultActiveCards() {
+      // Loop through all tabs and set the first card as active
+      tabs.forEach((tab) => {
+        const firstCard = tab.querySelector('.card'); // Get the first card in each tab
+        if (firstCard) {
+          firstCard.classList.add('active'); // Add 'active' class to the first card
+        }
+      });
+    }
+  
+    function applyHoverEffect() {
+      if (window.innerWidth > 820) {
+        // On larger screens, add hover functionality
+        hoverBoxes.forEach((box) => {
+          box.addEventListener('mouseenter', handleMouseEnter);
+        });
+      } else {
+        // On smaller screens, remove the 'active' class and event listeners
+        hoverBoxes.forEach((box) => {
+          box.classList.remove('active');
+          box.removeEventListener('mouseenter', handleMouseEnter);
+        });
+      }
+    }
+  
+    function handleMouseEnter(event) {
+      const currentTab = event.currentTarget.closest('.tab-content'); // Get the parent tab of the hovered card
+      const cardsInCurrentTab = currentTab.querySelectorAll('.card'); // Get all cards in the current tab
+  
+      // Remove 'active' class from all cards in the current tab
+      cardsInCurrentTab.forEach((item) => item.classList.remove('active'));
+  
+      // Add 'active' class to the hovered card
+      event.currentTarget.classList.add('active');
+    }
+  
+    // Set the first card as active by default on page load
+    setDefaultActiveCards();
+  
+    // Apply hover effect on load
+    applyHoverEffect();
+  
+    // Re-apply hover effect on window resize
+    window.addEventListener('resize', applyHoverEffect);
+  });
+  
+
+  $.fn.isInViewport = function () {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$(window).on('resize scroll', function () {
+    if ($('.exploreSection').length) {
+        if ($('.exploreSection').isInViewport()) {
+            setTimeout(() => {
+                $('.rightContent').addClass('image-active');
+            }, 800);
+        }
+        else {
+            setTimeout(() => {
+                $('.rightContent').removeClass('image-active');
+            }, 800);
+        }
+    }
+});
+  
+var counted = 0;
+$(window).scroll(function () {
+  var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
+  if (counted == 0 && $(window).scrollTop() > oTop) {
+    $('.statCard h3').each(function () {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
+      
+      $({
+        countNum: 0
+      }).animate(
+        {
+          countNum: countTo
+        },
+        {
+          duration: 2000,
+          easing: 'swing',
+          step: function () {
+            $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
+          },
+          complete: function () {
+            $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
+          }
+        }
+      );
+    });
+    counted = 1;
+  }
+});
+
+
+
+

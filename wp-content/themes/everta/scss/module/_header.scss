@@ -1,12 +1,12 @@
 header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-in-out;
     &.nav-up{top: -150px;}
-    .headerWrapper{display: flex;align-items: center;justify-content: space-between;padding: 20px 120px;background: #FFF;
+    .headerWrapper{display: flex;align-items: center;justify-content: space-between;padding: 18px 120px;background: #FFF;
         .headerMenu{
             .navMenu{
                 .navLinks{
                     .navLists{
                         ul{display: flex;align-items:center;gap:56px;
-                            li{padding: 15px 0px;display:flex;gap:10px;
+                            li{display:flex;gap:10px;
                                 a{@include verdanaregular;@include font20;line-height: 150%;color: $quaternaryColor1;}
                             }
                             .dropdown{
@@ -22,13 +22,13 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
         }
     }
     @media all and (max-width:1800px){
-    .headerWrapper{padding: 20px 110px;
+    .headerWrapper{padding: 18px 110px;
         .headerMenu{
             .navMenu{
                 .navLinks{
                     .navLists{
                         ul{gap:54px;
-                            li{padding: 14px 0px;gap:10px;}
+                            li{gap:10px;}
                             .ctaContact{
                                 a{padding: 18px 30px;letter-spacing: -0.64px;}
                             }
@@ -46,7 +46,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                     .navLinks{
                         .navLists{
                             ul{gap:50px;
-                                li{padding: 12px 0px;gap:10px;}
+                                li{gap:10px;}
                                 .ctaContact{
                                     a{padding: 16px 28px;letter-spacing: -0.64px;}
                                 }
@@ -64,7 +64,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                     .navLinks{
                         .navLists{
                             ul{gap:40px;
-                                li{padding: 10px 0px;gap:10px;}
+                                li{gap:10px;}
                                 .ctaContact{
                                     a{padding: 14px 24px;letter-spacing: -0.64px;}
                                 }
@@ -82,7 +82,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                     .navLinks{
                         .navLists{
                             ul{gap:36px;
-                                li{padding: 10px 0px;gap:8px;}
+                                li{gap:8px;}
                                 .ctaContact{
                                     a{padding: 12px 22px;}
                                 }
@@ -94,7 +94,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
         }
     }
     @media all and (max-width:680px){
-        .headerWrapper{padding: 40px 20px 17px 20px;
+        .headerWrapper{padding: 20px;
             .headerMenu{
                 .navMenu{display: none;
                     .navLinks{
