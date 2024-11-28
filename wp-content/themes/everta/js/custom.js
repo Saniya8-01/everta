@@ -121,9 +121,15 @@ if ($(".testimonialSection").length) {
         focusOnSelect: true,
         responsive: [
             {
-                breakpoint: 1180,
+                breakpoint: 1181,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2.1,
+                }
+            },
+            {
+                breakpoint: 821,
+                settings: {
+                    slidesToShow: 1.5,
                 }
             }
         ]
@@ -153,14 +159,22 @@ if ($(".testimonialSection").length) {
 }
 
 function initializeSlick() {
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 820) {
         if (!$(".rightContentWrapper").hasClass('slick-initialized')) {
             $(".rightContentWrapper").slick({
                 dots: false,
-                slidesToShow: 1.2,
+                slidesToShow: 1.5,
                 arrows: false,
                 infinite: false,
                 initialSlide:0,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1.2,
+                        }
+                    },
+                ]
             });
         }
     } else {
@@ -221,36 +235,63 @@ if ($(".faqSection").length) {
 document.addEventListener('DOMContentLoaded', () => {
     const hoverBoxes = document.querySelectorAll('.hover-box');
   
-    function applyHoverEffect() {
-      if (window.innerWidth > 820) { // Disable on screens smaller than 820px
-        // Set the first card as active by default
+    // Function to handle hover or click effect
+    function applyHoverOrClickEffect() {
+      const screenWidth = window.innerWidth;
+  
+      if (screenWidth > 1180) {
+        // Hover effect for screens greater than 1180px
         if (hoverBoxes.length) {
-          hoverBoxes[0].classList.add('active');
+          hoverBoxes.forEach((box) => box.classList.remove('active')); // Remove all active classes
+          hoverBoxes[0].classList.add('active'); // Set the first box as active by default
         }
   
         hoverBoxes.forEach((box) => {
-          box.addEventListener('mouseenter', handleMouseEnter);
+          box.removeEventListener('click', handleClick); // Remove click event if previously added
+          box.addEventListener('mouseenter', handleMouseEnter); // Add mouseenter event
+        });
+      } else if (screenWidth >= 1024 && screenWidth <= 1180) {
+        // Click effect for screens between 1024px and 1180px
+        if (hoverBoxes.length) {
+          hoverBoxes.forEach((box) => box.classList.remove('active')); // Remove all active classes
+          hoverBoxes[0].classList.add('active'); // Set the first box as active by default
+        }
+  
+        hoverBoxes.forEach((box) => {
+          box.removeEventListener('mouseenter', handleMouseEnter); // Remove mouseenter event
+          box.addEventListener('click', handleClick); // Add click event
         });
       } else {
-        // Remove 'active' class and event listeners on mobile
+        // Disable hover/click effects for screens <= 820px
         hoverBoxes.forEach((box) => {
-          box.classList.remove('active');
-          box.removeEventListener('mouseenter', handleMouseEnter);
+          box.classList.remove('active'); // Remove the active class
+          box.removeEventListener('mouseenter', handleMouseEnter); // Remove mouseenter event
+          box.removeEventListener('click', handleClick); // Remove click event
         });
       }
     }
   
+    // Event handler for mouse enter
     function handleMouseEnter(event) {
       hoverBoxes.forEach((item) => item.classList.remove('active'));
       event.currentTarget.classList.add('active');
     }
   
-    // Apply hover effect on load
-    applyHoverEffect();
+    // Event handler for click
+    function handleClick(event) {
+      hoverBoxes.forEach((item) => item.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    }
   
-    // Re-apply hover effect on window resize
-    window.addEventListener('resize', applyHoverEffect);
+    // Apply the hover or click effect on load
+    applyHoverOrClickEffect();
+  
+    // Re-apply the effect on window resize
+    window.addEventListener('resize', applyHoverOrClickEffect);
   });
+  
+  
+  
 
   document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tab-content'); // Get all tab content sections
