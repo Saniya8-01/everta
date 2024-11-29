@@ -65,6 +65,54 @@ $(window).scroll(function (event) {
 });
 //--------------------------- Hide Header on on scroll down-------------------------//
 
+//-------------------Header Dropdown JS----------------------//
+$(document).ready(function () {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (!isTouchDevice) {
+        // Handle mouseover and mouseleave for desktop
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('mouseover', function () {
+                dropdown.classList.add('active');
+            });
+
+            dropdown.addEventListener('mouseleave', function () {
+                dropdown.classList.remove('active');
+            });
+        });
+    } else {
+        // Handle click for touch devices
+        dropdowns.forEach(dropdown => {
+            const dropbtn = dropdown.querySelector('.mainManu');
+            dropbtn.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                // Close other dropdowns
+                dropdowns.forEach(dd => {
+                    if (dd !== dropdown) {
+                        dd.classList.remove('active');
+                    }
+                });
+
+                // Toggle the current dropdown
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.dropdown')) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+    }
+});
+
+//-------------------Header Dropdown JS----------------------//
+
 if ($(".partnersSection").length) {
     $(".logoSlider").slick({
         dots: false,

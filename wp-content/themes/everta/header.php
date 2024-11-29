@@ -44,10 +44,37 @@ $current_url = home_url(add_query_arg([], $wp->request));
 									<li class="mainNavList dropdown">
 										<a href="#!" class="mainManu">Company</a>
 										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt="">
+										<div class="dropdownMenu">
+											<ul>
+												<li>
+													<p>Company</p>
+													<a href="">About us</a>
+													<a href="">Careers</a>
+												</li>
+											</ul>
+										</div>
 									</li>
 									<li class="mainNavList dropdown">
 										<a href="#!" class="mainManu">Solutions</a>
 										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt="">
+										<div class="dropdownMenu">
+											<ul>
+												<li>
+													<p>AC Charging</p>
+													<a href="">Power tower</a>
+													<a href="">Power Box</a>
+												</li>
+												<li>
+													<p>DC Charging</p>
+													<a href="">Power Battery</a>
+												</li>
+												<li>
+													<p>Digital Solutions</p>
+													<a href="">Dashboard</a>
+													<a href="">App</a>
+												</li>
+											</ul>
+										</div>
 									</li>
 									<li class="mainNavList">
 										<a href="" class="mainManu">Resources</a>

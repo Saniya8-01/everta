@@ -619,31 +619,127 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
   display: flex;
   gap: 10px;
+  padding: 15px 0px;
+  position: relative;
 }
-header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li a {
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
   font-family: "verdanaregular";
   font-size: 20px;
   line-height: 150%;
   color: #1E1E1E;
+  transition: 0.3s all ease-in-out;
 }
 @media screen and (max-width: 1600px) {
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li a {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li a {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 720px) {
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li a {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
     font-size: 12px;
   }
 }
-header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .dropdown a {
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li img {
+  transition: 0.3s all ease-in-out;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown {
+  transition: 0.3s all ease-in-out;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: #F5F75E;
+  transition: 0.3s all ease-in-out;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown .mainManu {
   cursor: default;
   pointer-events: none;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active::before {
+  width: 100%;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active .mainManu {
+  font-family: "verdanabold";
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active img {
+  transform: rotate(180deg);
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active .dropdownMenu {
+  display: block;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: -40px;
+  padding-top: 20px;
+  display: none;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul {
+  padding: 36px 40px;
+  background: #F5F75E;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 64px;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0px;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li p {
+  font-family: "termina_testbold";
+  font-size: 20px;
+  color: #323232;
+}
+@media screen and (max-width: 1600px) {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li p {
+    font-size: 12px;
+  }
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a {
+  font-family: "verdanaregular";
+  font-size: 20px;
+  color: #323232;
+}
+@media screen and (max-width: 1600px) {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a {
+    font-size: 12px;
+  }
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact {
+  padding: 0px;
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
   padding: 20px 32px;
@@ -674,6 +770,18 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a 
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
     gap: 10px;
   }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu {
+    left: -40px;
+    padding-top: 19px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul {
+    padding: 36px 40px;
+    min-width: 320px;
+    gap: 60px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li {
+    gap: 24px;
+  }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 18px 30px;
     letter-spacing: -0.64px;
@@ -686,8 +794,17 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a 
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
     gap: 50px;
   }
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
-    gap: 10px;
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu {
+    left: -36px;
+    padding-top: 16px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul {
+    padding: 32px 36px;
+    min-width: 300px;
+    gap: 60px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li {
+    gap: 22px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 16px 28px;
@@ -701,8 +818,17 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a 
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
     gap: 40px;
   }
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
-    gap: 10px;
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu {
+    left: -32px;
+    padding-top: 14px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul {
+    padding: 28px 32px;
+    min-width: 300px;
+    gap: 50px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li {
+    gap: 20px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 14px 24px;
@@ -719,6 +845,18 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a 
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
     gap: 8px;
   }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu {
+    left: -28px;
+    padding-top: 12px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul {
+    padding: 24px 28px;
+    min-width: 280px;
+    gap: 40px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li {
+    gap: 18px;
+  }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 12px 22px;
   }
@@ -732,6 +870,22 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a 
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
     gap: 8px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown .mainManu {
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu {
+    left: -20px;
+    padding-top: 10px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul {
+    padding: 18px 20px;
+    min-width: 250px;
+    gap: 30px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li {
+    gap: 15px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 10px 20px;
