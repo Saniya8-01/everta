@@ -647,6 +647,9 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li img {
   transition: 0.3s all ease-in-out;
 }
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .accordian-icon-wrapper {
+  display: none;
+}
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown {
   transition: 0.3s all ease-in-out;
 }
@@ -759,6 +762,9 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a 
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     font-size: 12px;
   }
+}
+header .headerWrapper .headerMenu .hamburger-menu {
+  display: none;
 }
 @media all and (max-width: 1800px) {
   header .headerWrapper {
@@ -894,94 +900,186 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a 
 @media all and (max-width: 820px) {
   header .headerWrapper {
     padding: 20px;
+    z-index: 99;
+  }
+  header .headerWrapper .headerLogo img {
+    position: relative;
+    height: 20px;
+    width: 90px;
+    z-index: 99;
   }
   header .headerWrapper .headerMenu .navMenu {
-    display: none;
+    position: absolute;
+    top: 0;
+    right: -110%;
+    width: 100%;
+    transition: 0.4s all ease-in-out;
+    overflow: hidden;
+    height: 100vh;
+  }
+  header .headerWrapper .headerMenu .navMenu.open {
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks {
+    height: calc(100% - 170px);
+    overflow-y: auto;
+    margin-top: 113px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
     display: flex;
-    align-items: center;
-    gap: 56px;
+    flex-direction: column;
+    align-items: start;
+    padding: 0px 20px;
+    gap: 24px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
-    padding: 15px 0px;
+    padding: 0px;
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
   }
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li a {
-    font-family: "verdanaregular";
-    font-size: 20px;
-    line-height: 150%;
-    color: #1E1E1E;
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown {
+    transition: 0.3s all ease-in-out;
   }
-}
-@media screen and (max-width: 820px) and (max-width: 1600px) {
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li a {
-    font-size: 18px;
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown::before {
+    content: none;
   }
-}
-@media screen and (max-width: 820px) and (max-width: 1440px) {
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li a {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown .mainManu {
     font-size: 16px;
+    font-family: "termina_testbold";
   }
-}
-@media screen and (max-width: 820px) and (max-width: 720px) {
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li a {
-    font-size: 12px;
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active::before {
+    width: 100%;
   }
-}
-@media all and (max-width: 820px) {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active .mainManu {
+    font-family: "termina_testbold";
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active .accordian-icon-wrapper {
+    background: #F5F75E;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active .accordian-icon-wrapper .accordion-icon::after {
+    transform: rotate(90deg);
+    transition: 0.5s all ease-in-out;
+    width: 0px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active .dropdownMenu {
+    height: auto;
+    opacity: 1;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
+    font-size: 16px;
+    font-family: "termina_testbold";
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li img {
+    display: none;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .accordian-icon-wrapper {
+    display: block;
+    padding: 3px;
+    transition: 0.3s all ease-in-out;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .accordian-icon-wrapper .accordion-icon {
+    position: relative;
+    transition: 0.5s all ease-in-out;
+    width: 21px;
+    height: 21px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .accordian-icon-wrapper .accordion-icon::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    background: #343330;
+    height: 100%;
+    width: 2px;
+    transform: translateX(-50%);
+    transition: 0.3s all ease-in-out;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .accordian-icon-wrapper .accordion-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    background: #343330;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu {
+    position: relative;
+    width: 100%;
+    padding: 0px 20px;
+    transition: 0.3s all ease-in-out;
+    height: 0;
+    opacity: 0;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul {
+    background: transparent;
+    min-width: 100%;
+    gap: 32px;
+    padding-left: 20px;
+    border-left: 4px solid #F5F75E;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: start;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li p {
+    font-family: "termina_testregular";
+    font-size: 16px;
+    color: #909090;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a {
+    font-size: 16px;
+    line-height: 28px;
+    color: #000;
+  }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .dropdown a {
     cursor: default;
     pointer-events: none;
   }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact {
+    position: absolute;
+    bottom: 30px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact .accordian-icon-wrapper {
+    display: none;
+  }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 20px 32px;
-    color: #F5F75E;
-    font-size: 16px;
-    font-family: "termina_testmedium";
-    letter-spacing: -0.64px;
-    background: #1E1E1E;
-    border-radius: 100px;
-  }
-}
-@media screen and (max-width: 820px) and (max-width: 1600px) {
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 820px) and (max-width: 1440px) {
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
+    letter-spacing: -0.48px;
     font-size: 12px;
+    background: #F5F75E;
+    color: #1E1E1E;
+    position: relative;
+    padding-right: 66px;
   }
-}
-@media all and (max-width: 820px) {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a::before {
+    content: url(../images/black-cta-arrow.svg);
+    position: absolute;
+    width: 16px;
+    top: calc(50% + 2px);
+    transform: translateY(-50%);
+    right: 32px;
+    opacity: 1;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
   header .headerWrapper .headerMenu .hamburger-menu {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+    display: block;
+    margin-left: auto;
   }
   header .headerWrapper .headerMenu .hamburger-menu .button_toggle {
     position: relative;
     height: 10px;
-    width: 10px;
     cursor: pointer;
     z-index: 1;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.3s ease;
     right: 20px;
-  }
-  header .headerWrapper .headerMenu .hamburger-menu .button_toggle.active::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background-color: #eeebeb;
-    height: 36px;
-    width: 36px;
-    border: 1px solid #b7b5b6;
   }
   header .headerWrapper .headerMenu .hamburger-menu .button_toggle.active .spanParent {
     position: absolute;
@@ -990,7 +1088,7 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a 
     transform: translate(-50%, -50%);
   }
   header .headerWrapper .headerMenu .hamburger-menu .button_toggle.active .spanParent span {
-    width: 14.4px;
+    width: 26px;
   }
   header .headerWrapper .headerMenu .hamburger-menu .button_toggle.active .spanParent .top {
     transform: translateY(-50%) translateX(-50%) rotate(45deg);
@@ -1016,11 +1114,14 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a 
     position: absolute;
     top: -4px;
     left: 0;
-    transition: all 0.35s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
   }
   header .headerWrapper .headerMenu .hamburger-menu .button_toggle .spanParent span:nth-of-type(2) {
     top: 4px;
+    right: -20px;
+    width: 15px;
+    left: unset;
   }
   header .headerWrapper .headerMenu .hamburger-menu .button_toggle .spanParent span:nth-of-type(3) {
     top: 12px;

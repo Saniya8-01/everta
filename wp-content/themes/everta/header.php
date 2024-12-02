@@ -44,6 +44,9 @@ $current_url = home_url(add_query_arg([], $wp->request));
 									<li class="mainNavList dropdown">
 										<a href="#!" class="mainManu">Company</a>
 										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt="">
+										<div class="accordian-icon-wrapper">
+											<div class="accordion-icon"></div>
+										</div>
 										<div class="dropdownMenu">
 											<ul>
 												<li>
@@ -57,6 +60,9 @@ $current_url = home_url(add_query_arg([], $wp->request));
 									<li class="mainNavList dropdown">
 										<a href="#!" class="mainManu">Solutions</a>
 										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt="">
+										<div class="accordian-icon-wrapper">
+											<div class="accordion-icon"></div>
+										</div>
 										<div class="dropdownMenu">
 											<ul>
 												<li>
@@ -78,6 +84,9 @@ $current_url = home_url(add_query_arg([], $wp->request));
 									</li>
 									<li class="mainNavList">
 										<a href="" class="mainManu">Resources</a>
+										<div class="accordian-icon-wrapper">
+											<div class="accordion-icon"></div>
+										</div>
 									</li>
 									<li class="mainNavList ctaContact">
 										<a href="" class="mainManu">Contact us</a>

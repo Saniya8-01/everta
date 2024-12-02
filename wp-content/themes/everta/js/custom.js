@@ -40,17 +40,15 @@ $(document).ready(function () {
     if ($(window).width() <= 1024) {
         $("#toggle").click(function () {
             $(this).toggleClass("active");
-            $("#overlay").toggleClass("open");
-            if ($("#overlay").hasClass("open")) {
+            $(".navMenu").toggleClass("open");
+            if ($(".navMenu").hasClass("open")) {
                 menuOpen = true; // Menu is open
                 $('body').css("overflow", "hidden");
                 $('html').css("overflow", "hidden");
-                $('body').addClass("overlay");
             } else {
                 menuOpen = false; // Menu is closed
                 $('body').css("overflow", "visible");
                 $('html').css("overflow", "visible");
-                $('body').removeClass("overlay");
             }
         });
     }
