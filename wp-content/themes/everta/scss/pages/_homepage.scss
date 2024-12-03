@@ -206,9 +206,10 @@
             flex-basis: 50%;
             position: sticky;
             top: 174px;
+            overflow: hidden;
 
             .leftImage {
-                transition: 0.5s all ease-in-out;
+                transition: 0.8s all ease-in-out;
                 transform-origin: left bottom;
             }
 
@@ -218,22 +219,22 @@
                 }
 
                 .leftMobileTitle {
-                    opacity: 1;
-                    height: auto;
-
+                    transform: translateY(0px);
                 }
             }
+
             .leftMobileTitle {
-                opacity: 0;
-                height: 0;
-                transition: 0.5s all ease-in-out;
-                p{  
+                transform: translateY(500px);
+                transition: 0.8s all ease-in-out;
+
+                p {
                     margin-bottom: 40px;
                     margin-top: 40px;
                     @include verdanaregular;
                     @include font20;
                     line-height: 160%;
-                    color: $quaternaryColor1;}
+                    color: $quaternaryColor1;
+                }
             }
         }
 
@@ -273,6 +274,7 @@
 
             .rightContent {
                 flex-basis: 50%;
+
                 .rightContentWrapper {
                     gap: 170px;
                 }
@@ -381,8 +383,7 @@
                 }
 
                 .leftMobileTitle {
-                    opacity: 1;
-                    height: auto;
+                    transform: translateY(0px);
 
                     p {
                         @include verdanaregular;

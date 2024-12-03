@@ -1660,22 +1660,21 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   flex-basis: 50%;
   position: sticky;
   top: 174px;
+  overflow: hidden;
 }
 .withEaseSection .divWrapper .leftContent .leftImage {
-  transition: 0.5s all ease-in-out;
+  transition: 0.8s all ease-in-out;
   transform-origin: left bottom;
 }
 .withEaseSection .divWrapper .leftContent.image-state .leftImage {
   transform: scale(0.6);
 }
 .withEaseSection .divWrapper .leftContent.image-state .leftMobileTitle {
-  opacity: 1;
-  height: auto;
+  transform: translateY(0px);
 }
 .withEaseSection .divWrapper .leftContent .leftMobileTitle {
-  opacity: 0;
-  height: 0;
-  transition: 0.5s all ease-in-out;
+  transform: translateY(500px);
+  transition: 0.8s all ease-in-out;
 }
 .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
   margin-bottom: 40px;
@@ -1810,8 +1809,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     width: 60%;
   }
   .withEaseSection .divWrapper .leftContent .leftMobileTitle {
-    opacity: 1;
-    height: auto;
+    transform: translateY(0px);
   }
   .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
     font-family: "verdanaregular";
