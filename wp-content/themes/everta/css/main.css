@@ -286,7 +286,6 @@ body h1 {
   font-weight: 600;
   line-height: 20px;
   letter-spacing: -0.04em;
-  color: #000;
   background: #F5F75E;
   border-style: none;
   padding: 20px 32px;
@@ -324,6 +323,24 @@ body h1 {
 .ctaYellow:hover::before {
   opacity: 1;
 }
+@media screen and (max-width: 1600px) {
+  .ctaYellow {
+    padding: 18px 32px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ctaYellow {
+    padding: 16px 32px;
+  }
+  .ctaYellow::before {
+    transform: translateY(-50%) scale(0.9);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .ctaYellow {
+    padding: 14px 32px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .ctaYellow {
     padding: 18px 32px;
@@ -331,14 +348,17 @@ body h1 {
     font-size: 14px;
   }
   .ctaYellow::before {
-    scale: 0.8;
     top: calc(50% - 2px);
   }
 }
 @media screen and (max-width: 720px) {
   .ctaYellow {
+    padding-right: 66px;
     line-height: normal;
     font-size: 12px;
+  }
+  .ctaYellow::before {
+    opacity: 1;
   }
 }
 
@@ -387,6 +407,24 @@ body h1 {
 .ctaYellowBlack:hover::before {
   opacity: 1;
 }
+@media screen and (max-width: 1600px) {
+  .ctaYellowBlack {
+    padding: 18px 32px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ctaYellowBlack {
+    padding: 16px 32px;
+  }
+  .ctaYellowBlack::before {
+    transform: translateY(-50%) scale(0.9);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .ctaYellowBlack {
+    padding: 14px 32px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .ctaYellowBlack {
     padding: 18px 32px;
@@ -394,14 +432,17 @@ body h1 {
     font-size: 14px;
   }
   .ctaYellowBlack::before {
-    scale: 0.8;
     top: calc(50% - 2px);
   }
 }
 @media screen and (max-width: 720px) {
   .ctaYellowBlack {
+    padding-right: 66px;
     line-height: normal;
     font-size: 12px;
+  }
+  .ctaYellowBlack::before {
+    opacity: 1;
   }
 }
 
@@ -450,6 +491,24 @@ body h1 {
 .ctaWhiteBlack:hover::before {
   opacity: 1;
 }
+@media screen and (max-width: 1600px) {
+  .ctaWhiteBlack {
+    padding: 18px 32px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ctaWhiteBlack {
+    padding: 16px 32px;
+  }
+  .ctaWhiteBlack::before {
+    transform: translateY(-50%) scale(0.9);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .ctaWhiteBlack {
+    padding: 14px 32px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .ctaWhiteBlack {
     padding: 18px 32px;
@@ -457,14 +516,17 @@ body h1 {
     font-size: 14px;
   }
   .ctaWhiteBlack::before {
-    scale: 0.8;
     top: calc(50% - 2px);
   }
 }
 @media screen and (max-width: 720px) {
   .ctaWhiteBlack {
+    padding-right: 66px;
     line-height: normal;
     font-size: 12px;
+  }
+  .ctaWhiteBlack::before {
+    opacity: 1;
   }
 }
 
@@ -512,6 +574,24 @@ body h1 {
 .ctaBlack:hover::before {
   opacity: 1;
 }
+@media screen and (max-width: 1600px) {
+  .ctaBlack {
+    padding: 18px 32px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ctaBlack {
+    padding: 16px 32px;
+  }
+  .ctaBlack::before {
+    transform: translateY(-50%) scale(0.9);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .ctaBlack {
+    padding: 14px 32px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .ctaBlack {
     padding: 18px 32px;
@@ -519,14 +599,17 @@ body h1 {
     font-size: 14px;
   }
   .ctaBlack::before {
-    scale: 0.8;
     top: calc(50% - 2px);
   }
 }
 @media screen and (max-width: 720px) {
   .ctaBlack {
+    padding-right: 66px;
     line-height: normal;
     font-size: 12px;
+  }
+  .ctaBlack::before {
+    opacity: 1;
   }
 }
 
@@ -576,6 +659,24 @@ body h1 {
 .ctaWhite:hover::before {
   opacity: 1;
 }
+@media screen and (max-width: 1600px) {
+  .ctaWhite {
+    padding: 18px 32px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ctaWhite {
+    padding: 16px 32px;
+  }
+  .ctaWhite::before {
+    transform: translateY(-50%) scale(0.9);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .ctaWhite {
+    padding: 14px 32px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .ctaWhite {
     padding: 18px 32px;
@@ -583,14 +684,17 @@ body h1 {
     font-size: 14px;
   }
   .ctaWhite::before {
-    scale: 0.8;
     top: calc(50% - 2px);
   }
 }
 @media screen and (max-width: 720px) {
   .ctaWhite {
+    padding-right: 66px;
     line-height: normal;
     font-size: 12px;
+  }
+  .ctaWhite::before {
+    opacity: 1;
   }
 }
 
@@ -740,6 +844,9 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMe
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a {
     font-size: 12px;
   }
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li:hover .mainManu {
+  font-family: "verdanabold";
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact {
   padding: 0px;
@@ -970,6 +1077,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active .dropdownMenu {
     height: auto;
     opacity: 1;
+    transition: 0.5s all ease-in-out;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
     font-size: 16px;
@@ -1012,7 +1120,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
     position: relative;
     width: 100%;
     padding: 0px 20px;
-    transition: 0.3s all ease-in-out;
+    transition: 0.5s all ease-in-out;
     height: 0;
     opacity: 0;
   }
@@ -1456,6 +1564,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   position: relative;
   margin-top: 100px;
   margin-bottom: 200px;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+.bannerSection .bannerImageWrapper {
+  height: 100%;
 }
 .bannerSection .bannerImageWrapper .mobileImage {
   display: none;
@@ -1517,6 +1630,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .bannerSection {
     margin-top: 96px;
     margin-bottom: 180px;
+    height: auto;
   }
   .bannerSection .bannerSectionWrapper {
     left: 100px;
@@ -1547,9 +1661,15 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 60px;
   }
 }
+@media all and (max-width: 1536px) {
+  .bannerSection {
+    height: calc(100vh - 88px);
+  }
+}
 @media all and (max-width: 1440px) {
   .bannerSection {
     margin-top: 77px;
+    height: auto;
   }
   .bannerSection .bannerSectionWrapper {
     left: 80px;
@@ -1563,10 +1683,21 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 50px;
   }
 }
+@media all and (max-width: 1366px) {
+  .bannerSection {
+    height: calc(100vh - 77px);
+  }
+}
+@media all and (max-width: 1366px) and (min-height: 1024px) {
+  .bannerSection {
+    height: auto;
+  }
+}
 @media all and (max-width: 1280px) {
   .bannerSection {
     margin-top: 69px;
     margin-bottom: 150px;
+    height: calc(100vh - 69px);
   }
   .bannerSection .bannerSectionWrapper {
     left: 70px;
@@ -1582,6 +1713,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 @media all and (max-width: 1200px) {
   .bannerSection {
     margin-top: 66px;
+    height: auto;
   }
   .bannerSection .bannerSectionWrapper {
     left: 70px;
@@ -1659,12 +1791,15 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   padding: 0px 130px;
   flex-basis: 50%;
   position: sticky;
-  top: 0px;
+  top: 170px;
   overflow: hidden;
 }
 .withEaseSection .divWrapper .leftContent .leftImage {
   transition: 0.8s all ease-in-out;
   transform-origin: left bottom;
+}
+.withEaseSection .divWrapper .leftContent.image-state {
+  top: 0;
 }
 .withEaseSection .divWrapper .leftContent.image-state .leftImage {
   transform: scale(0.6);
@@ -1724,6 +1859,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 120px;
     flex-basis: 50%;
+    top: 150px;
   }
   .withEaseSection .divWrapper .rightContent {
     flex-basis: 50%;
@@ -1743,6 +1879,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 80px;
     flex-basis: 45%;
+    top: 130px;
   }
   .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
     margin-bottom: 36px;
@@ -1760,6 +1897,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 60px;
     flex-basis: 43%;
+    top: 100px;
   }
   .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
     margin-bottom: 32px;
@@ -1776,6 +1914,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 40px;
+    top: 80px;
   }
   .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
     margin-bottom: 28x;
@@ -2570,7 +2709,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
   padding: 70px 100px 58px 100px;
@@ -2651,8 +2790,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .chargingSection .tab-wrapper .tab-content .cards .card.active a {
   opacity: 1;
-  height: auto;
-  padding: 80px;
 }
 .chargingSection .tab-wrapper .tab-content .cards .card a {
   display: flex;
@@ -2665,10 +2802,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   text-align: center;
   font-family: "termina_testmedium";
   opacity: 0;
-  height: 0;
   width: 100%;
   z-index: 2;
-  transition: all 0.3s ease-out;
+  padding: 80px;
+  transition: all 0.4s ease-out;
 }
 .chargingSection .tab-wrapper .tab-content .cards .card a img {
   width: 14px;
@@ -2727,7 +2864,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
     margin-bottom: 30px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card.active a {
+  .chargingSection .tab-wrapper .tab-content .cards .card a {
     padding: 70px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a img {
@@ -2740,32 +2877,32 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 160px;
   }
   .chargingSection .tab-wrapper .tab-header h2 {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   .chargingSection .tab-wrapper .tab-header p {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     width: 60%;
   }
   .chargingSection .tab-wrapper .tab-header .tab-buttons {
     gap: 14px;
-    margin-bottom: 26px;
+    margin-bottom: 24px;
   }
   .chargingSection .tab-wrapper .tab-header .tab-buttons .tab-button {
     padding: 12px 36px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
-    padding: 50px 80px 40px 80px;
+    padding: 40px 70px 36px 70px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
-    padding-bottom: 40px;
+    padding-bottom: 36px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card.active a {
+  .chargingSection .tab-wrapper .tab-content .cards .card a {
     padding: 60px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a img {
@@ -2778,28 +2915,28 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 18px;
   }
   .chargingSection .tab-wrapper .tab-header p {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
   .chargingSection .tab-wrapper .tab-header .tab-buttons {
     gap: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
   .chargingSection .tab-wrapper .tab-header .tab-buttons .tab-button {
     padding: 10px 32px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
-    padding: 40px 70px 30px 70px;
+    padding: 36px 60px 28px 60px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
-    padding-bottom: 32px;
+    padding-bottom: 28px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card.active a {
+  .chargingSection .tab-wrapper .tab-content .cards .card a {
     padding: 50px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a img {
@@ -2812,31 +2949,31 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 150px;
   }
   .chargingSection .tab-wrapper .tab-header h2 {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   .chargingSection .tab-wrapper .tab-header p {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
   .chargingSection .tab-wrapper .tab-header .tab-buttons {
     gap: 12px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
   .chargingSection .tab-wrapper .tab-header .tab-buttons .tab-button {
     padding: 8px 26px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
-    padding: 30px 60px 24px 60px;
+    padding: 24px 50px 20px 50px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
-    padding-bottom: 26px;
+    padding-bottom: 22px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card.active a {
+  .chargingSection .tab-wrapper .tab-content .cards .card a {
     padding: 40px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a img {
@@ -4580,11 +4717,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 32px 80px;
   }
   .faqSection .container .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper {
-    padding: 12px;
+    padding: 10px;
   }
   .faqSection .container .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper .accordion-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
   .faqSection .container .accordions-wrapper .accordion .accordion-body {
     padding: 0px 156px;

@@ -84,9 +84,6 @@ $current_url = home_url(add_query_arg([], $wp->request));
 									</li>
 									<li class="mainNavList">
 										<a href="" class="mainManu">Resources</a>
-										<div class="accordian-icon-wrapper">
-											<div class="accordion-icon"></div>
-										</div>
 									</li>
 									<li class="mainNavList ctaContact">
 										<a href="" class="mainManu">Contact us</a>

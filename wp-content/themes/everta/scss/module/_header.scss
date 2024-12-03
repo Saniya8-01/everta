@@ -28,6 +28,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         }
                                     }
                                 }
+                                &:hover{
+                                    .mainManu{@include verdanabold;}
+                                }
                             }
                             .ctaContact{padding: 0px;
                                 a{padding: 20px 32px;color: $primaryColor1;@include font16;@include terminamedium;letter-spacing: -0.64px;background: $quaternaryColor1;border-radius: 100px;}
@@ -183,7 +186,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                                     &::after {transform: rotate(90deg);transition: 0.5s all ease-in-out;width: 0px;}
                                                 }
                                             }
-                                            .dropdownMenu{height: auto;opacity: 1;}
+                                            .dropdownMenu{height: auto;opacity: 1;transition: 0.5s all ease-in-out;}
                                         }
                                     }
                                     .mainManu{font-size: 16px;@include terminabold;}
@@ -194,7 +197,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                             &::before {content: "";position: absolute;top: 50%;background: #343330;width: 100%;height: 2px;transform: translateY(-50%) rotate(180deg);}
                                         }
                                     }
-                                    .dropdownMenu{position: relative;width: 100%;padding:0px 20px;transition: 0.3s all ease-in-out;height:0;opacity: 0;
+                                    .dropdownMenu{position: relative;width: 100%;padding:0px 20px;transition: 0.5s all ease-in-out;height:0;opacity: 0;
                                         ul{background:transparent;min-width: 100%;gap:32px;padding-left:20px;border-left:4px solid $primaryColor1;
                                             li{display: flex;flex-direction:column;gap:12px;align-items:start;
                                                 p{@include terminaregular;font-size: 16px;color: #909090;}
@@ -238,5 +241,4 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
             }
         }
     }
-
 }

@@ -65,11 +65,11 @@ $(window).scroll(function (event) {
 
 //-------------------Header Dropdown JS----------------------//
 $(document).ready(function () {
-    const dropdowns = document.querySelectorAll('.dropdown');
+    const dropdowns = document.querySelectorAll('.mainNavList.dropdown'); // Select all dropdown items
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
     if (!isTouchDevice) {
-        // Handle mouseover and mouseleave for desktop
+        // For desktop: mouseover and mouseleave functionality
         dropdowns.forEach(dropdown => {
             dropdown.addEventListener('mouseover', function () {
                 dropdown.classList.add('active');
@@ -80,27 +80,26 @@ $(document).ready(function () {
             });
         });
     } else {
-        // Handle click for touch devices
+        // For mobile: click functionality
         dropdowns.forEach(dropdown => {
-            const dropbtn = dropdown.querySelector('.mainManu');
-            dropbtn.addEventListener('click', function (event) {
+            dropdown.addEventListener('click', function (event) {
                 event.preventDefault();
 
-                // Close other dropdowns
+                // Close all other dropdowns
                 dropdowns.forEach(dd => {
                     if (dd !== dropdown) {
                         dd.classList.remove('active');
                     }
                 });
 
-                // Toggle the current dropdown
+                // Toggle the clicked dropdown
                 dropdown.classList.toggle('active');
             });
         });
 
         // Close dropdowns when clicking outside
         document.addEventListener('click', function (event) {
-            if (!event.target.closest('.dropdown')) {
+            if (!event.target.closest('.mainNavList')) {
                 dropdowns.forEach(dropdown => {
                     dropdown.classList.remove('active');
                 });
@@ -108,6 +107,7 @@ $(document).ready(function () {
         });
     }
 });
+
 
 //-------------------Header Dropdown JS----------------------//
 
@@ -387,45 +387,50 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-$.fn.isInViewport = function () {
+$.fn.isInViewport = function (threshold = 0) {
     var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
+    var elementHeight = $(this).outerHeight();
+    var elementScrollStart = elementTop + elementHeight * threshold; // Start trigger based on threshold
+    var elementScrollEnd = elementTop + elementHeight * (1 - threshold); // End trigger based on threshold
+
     var viewportTop = $(window).scrollTop();
     var viewportBottom = viewportTop + $(window).height();
-    return elementBottom > viewportTop && elementTop < viewportBottom;
+
+    // Check if the section is within the desired range
+    return viewportBottom > elementScrollStart && viewportTop < elementScrollEnd;
 };
 
 $(window).on('resize scroll', function () {
-    if ($('.exploreSection').length) {
-        if ($('.exploreSection').isInViewport()) {
-            setTimeout(() => {
-                $('.rightContent').addClass('image-active');
-            }, 800);
+    // Media query for >=1024px
+    if (window.innerWidth >= 1024) {
+        if ($('.withEaseSection').length) {
+            if ($('.withEaseSection').isInViewport(0.2)) {
+                setTimeout(() => {
+                    $('.leftContent').addClass('image-state');
+                }, 800);
+            } else {
+                setTimeout(() => {
+                    $('.leftContent').removeClass('image-state');
+                }, 800);
+            }
         }
-        else {
-            setTimeout(() => {
-                $('.rightContent').removeClass('image-active');
-            }, 800);
-        }
+    } else {
+        
+        $('.leftContent').removeClass('image-state');
     }
 });
 
 $(window).on('resize scroll', function () {
-    if (window.innerWidth >= 1024) { // Apply media query for >=1024px
-        if ($('.withEaseSection').length) {
-            if ($('.withEaseSection').isInViewport()) {
-                setTimeout(() => {
-                    $('.leftContent').addClass('image-state');
-                }, 1500);
-            } else {
-                setTimeout(() => {
-                    $('.leftContent').removeClass('image-state');
-                }, 1500);
-            }
+    if ($('.exploreSection').length) {
+        if ($('.exploreSection').isInViewport(0.5)) {
+            setTimeout(() => {
+                $('.rightContent').addClass('image-active');
+            }, 800);
+        } else {
+            setTimeout(() => {
+                $('.rightContent').removeClass('image-active');
+            }, 800);
         }
-    } else {
-        // Remove the class when the screen width is less than 1024px
-        $('.leftContent').removeClass('image-state');
     }
 });
 
