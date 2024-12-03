@@ -1672,7 +1672,12 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   opacity: 1;
   height: auto;
 }
-.withEaseSection .divWrapper .leftContent.image-state .leftMobileTitle p {
+.withEaseSection .divWrapper .leftContent .leftMobileTitle {
+  opacity: 0;
+  height: 0;
+  transition: 0.5s all ease-in-out;
+}
+.withEaseSection .divWrapper .leftContent .leftMobileTitle p {
   margin-bottom: 40px;
   margin-top: 40px;
   font-family: "verdanaregular";
@@ -1681,24 +1686,19 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   color: #1E1E1E;
 }
 @media screen and (max-width: 1600px) {
-  .withEaseSection .divWrapper .leftContent.image-state .leftMobileTitle p {
+  .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .withEaseSection .divWrapper .leftContent.image-state .leftMobileTitle p {
+  .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 720px) {
-  .withEaseSection .divWrapper .leftContent.image-state .leftMobileTitle p {
+  .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
     font-size: 12px;
   }
-}
-.withEaseSection .divWrapper .leftContent .leftMobileTitle {
-  opacity: 0;
-  height: 0;
-  transition: 0.5s all ease-in-out;
 }
 .withEaseSection .divWrapper .rightContent {
   flex-basis: 50%;
@@ -1725,6 +1725,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 120px;
     flex-basis: 50%;
+    top: 150px;
   }
   .withEaseSection .divWrapper .rightContent {
     flex-basis: 50%;
@@ -1744,6 +1745,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 80px;
     flex-basis: 45%;
+    top: 130px;
+  }
+  .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
+    margin-bottom: 36px;
+    margin-top: 36px;
   }
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
     gap: 150px;
@@ -1757,6 +1763,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 60px;
     flex-basis: 43%;
+    top: 100px;
+  }
+  .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
+    margin-bottom: 32px;
+    margin-top: 32px;
   }
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
     gap: 130px;
@@ -1769,6 +1780,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 40px;
+    top: 80px;
+  }
+  .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
+    margin-bottom: 28x;
+    margin-top: 28px;
   }
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
     gap: 110px;
