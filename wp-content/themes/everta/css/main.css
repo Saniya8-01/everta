@@ -1659,7 +1659,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   padding: 0px 130px;
   flex-basis: 50%;
   position: sticky;
-  top: 174px;
+  top: 0px;
   overflow: hidden;
 }
 .withEaseSection .divWrapper .leftContent .leftImage {
@@ -1724,7 +1724,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 120px;
     flex-basis: 50%;
-    top: 150px;
   }
   .withEaseSection .divWrapper .rightContent {
     flex-basis: 50%;
@@ -1744,7 +1743,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 80px;
     flex-basis: 45%;
-    top: 130px;
   }
   .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
     margin-bottom: 36px;
@@ -1762,7 +1760,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 60px;
     flex-basis: 43%;
-    top: 100px;
   }
   .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
     margin-bottom: 32px;
@@ -1779,7 +1776,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 40px;
-    top: 80px;
   }
   .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
     margin-bottom: 28x;
