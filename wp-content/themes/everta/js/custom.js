@@ -212,7 +212,7 @@ function initializeSlick() {
                 slidesToShow: 1.5,
                 arrows: false,
                 infinite: false,
-                initialSlide:0,
+                initialSlide: 0,
                 responsive: [
                     {
                         breakpoint: 768,
@@ -280,117 +280,114 @@ if ($(".faqSection").length) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const hoverBoxes = document.querySelectorAll('.hover-box');
-  
+
     // Function to handle hover or click effect
     function applyHoverOrClickEffect() {
-      const screenWidth = window.innerWidth;
-  
-      if (screenWidth > 1180) {
-        // Hover effect for screens greater than 1180px
-        if (hoverBoxes.length) {
-          hoverBoxes.forEach((box) => box.classList.remove('active')); // Remove all active classes
-          hoverBoxes[0].classList.add('active'); // Set the first box as active by default
+        const screenWidth = window.innerWidth;
+
+        if (screenWidth > 1180) {
+            // Hover effect for screens greater than 1180px
+            if (hoverBoxes.length) {
+                hoverBoxes.forEach((box) => box.classList.remove('active')); // Remove all active classes
+                hoverBoxes[0].classList.add('active'); // Set the first box as active by default
+            }
+
+            hoverBoxes.forEach((box) => {
+                box.removeEventListener('click', handleClick); // Remove click event if previously added
+                box.addEventListener('mouseenter', handleMouseEnter); // Add mouseenter event
+            });
+        } else if (screenWidth >= 1024 && screenWidth <= 1180) {
+            // Click effect for screens between 1024px and 1180px
+            if (hoverBoxes.length) {
+                hoverBoxes.forEach((box) => box.classList.remove('active')); // Remove all active classes
+                hoverBoxes[0].classList.add('active'); // Set the first box as active by default
+            }
+
+            hoverBoxes.forEach((box) => {
+                box.removeEventListener('mouseenter', handleMouseEnter); // Remove mouseenter event
+                box.addEventListener('click', handleClick); // Add click event
+            });
+        } else {
+            // Disable hover/click effects for screens <= 820px
+            hoverBoxes.forEach((box) => {
+                box.classList.remove('active'); // Remove the active class
+                box.removeEventListener('mouseenter', handleMouseEnter); // Remove mouseenter event
+                box.removeEventListener('click', handleClick); // Remove click event
+            });
         }
-  
-        hoverBoxes.forEach((box) => {
-          box.removeEventListener('click', handleClick); // Remove click event if previously added
-          box.addEventListener('mouseenter', handleMouseEnter); // Add mouseenter event
-        });
-      } else if (screenWidth >= 1024 && screenWidth <= 1180) {
-        // Click effect for screens between 1024px and 1180px
-        if (hoverBoxes.length) {
-          hoverBoxes.forEach((box) => box.classList.remove('active')); // Remove all active classes
-          hoverBoxes[0].classList.add('active'); // Set the first box as active by default
-        }
-  
-        hoverBoxes.forEach((box) => {
-          box.removeEventListener('mouseenter', handleMouseEnter); // Remove mouseenter event
-          box.addEventListener('click', handleClick); // Add click event
-        });
-      } else {
-        // Disable hover/click effects for screens <= 820px
-        hoverBoxes.forEach((box) => {
-          box.classList.remove('active'); // Remove the active class
-          box.removeEventListener('mouseenter', handleMouseEnter); // Remove mouseenter event
-          box.removeEventListener('click', handleClick); // Remove click event
-        });
-      }
     }
-  
+
     // Event handler for mouse enter
     function handleMouseEnter(event) {
-      hoverBoxes.forEach((item) => item.classList.remove('active'));
-      event.currentTarget.classList.add('active');
+        hoverBoxes.forEach((item) => item.classList.remove('active'));
+        event.currentTarget.classList.add('active');
     }
-  
+
     // Event handler for click
     function handleClick(event) {
-      hoverBoxes.forEach((item) => item.classList.remove('active'));
-      event.currentTarget.classList.add('active');
+        hoverBoxes.forEach((item) => item.classList.remove('active'));
+        event.currentTarget.classList.add('active');
     }
-  
+
     // Apply the hover or click effect on load
     applyHoverOrClickEffect();
-  
+
     // Re-apply the effect on window resize
     window.addEventListener('resize', applyHoverOrClickEffect);
-  });
-  
-  
-  
+});
 
-  document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tab-content'); // Get all tab content sections
     const hoverBoxes = document.querySelectorAll('.card'); // Get all cards (hover boxes)
-  
+
     function setDefaultActiveCards() {
-      // Loop through all tabs and set the first card as active
-      tabs.forEach((tab) => {
-        const firstCard = tab.querySelector('.card'); // Get the first card in each tab
-        if (firstCard) {
-          firstCard.classList.add('active'); // Add 'active' class to the first card
-        }
-      });
+        // Loop through all tabs and set the first card as active
+        tabs.forEach((tab) => {
+            const firstCard = tab.querySelector('.card'); // Get the first card in each tab
+            if (firstCard) {
+                firstCard.classList.add('active'); // Add 'active' class to the first card
+            }
+        });
     }
-  
+
     function applyHoverEffect() {
-      if (window.innerWidth > 820) {
-        // On larger screens, add hover functionality
-        hoverBoxes.forEach((box) => {
-          box.addEventListener('mouseenter', handleMouseEnter);
-        });
-      } else {
-        // On smaller screens, remove the 'active' class and event listeners
-        hoverBoxes.forEach((box) => {
-          box.classList.remove('active');
-          box.removeEventListener('mouseenter', handleMouseEnter);
-        });
-      }
+        if (window.innerWidth > 820) {
+            // On larger screens, add hover functionality
+            hoverBoxes.forEach((box) => {
+                box.addEventListener('mouseenter', handleMouseEnter);
+            });
+        } else {
+            // On smaller screens, remove the 'active' class and event listeners
+            hoverBoxes.forEach((box) => {
+                box.classList.remove('active');
+                box.removeEventListener('mouseenter', handleMouseEnter);
+            });
+        }
     }
-  
+
     function handleMouseEnter(event) {
-      const currentTab = event.currentTarget.closest('.tab-content'); // Get the parent tab of the hovered card
-      const cardsInCurrentTab = currentTab.querySelectorAll('.card'); // Get all cards in the current tab
-  
-      // Remove 'active' class from all cards in the current tab
-      cardsInCurrentTab.forEach((item) => item.classList.remove('active'));
-  
-      // Add 'active' class to the hovered card
-      event.currentTarget.classList.add('active');
+        const currentTab = event.currentTarget.closest('.tab-content'); // Get the parent tab of the hovered card
+        const cardsInCurrentTab = currentTab.querySelectorAll('.card'); // Get all cards in the current tab
+
+        // Remove 'active' class from all cards in the current tab
+        cardsInCurrentTab.forEach((item) => item.classList.remove('active'));
+
+        // Add 'active' class to the hovered card
+        event.currentTarget.classList.add('active');
     }
-  
+
     // Set the first card as active by default on page load
     setDefaultActiveCards();
-  
+
     // Apply hover effect on load
     applyHoverEffect();
-  
+
     // Re-apply hover effect on window resize
     window.addEventListener('resize', applyHoverEffect);
-  });
-  
+});
 
-  $.fn.isInViewport = function () {
+
+$.fn.isInViewport = function () {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
     var viewportTop = $(window).scrollTop();
@@ -412,36 +409,56 @@ $(window).on('resize scroll', function () {
         }
     }
 });
-  
+
+$(window).on('resize scroll', function () {
+    if (window.innerWidth >= 1024) { // Apply media query for >=1024px
+        if ($('.withEaseSection').length) {
+            if ($('.withEaseSection').isInViewport()) {
+                setTimeout(() => {
+                    $('.leftContent').addClass('image-state');
+                }, 1500);
+            } else {
+                setTimeout(() => {
+                    $('.leftContent').removeClass('image-state');
+                }, 1500);
+            }
+        }
+    } else {
+        // Remove the class when the screen width is less than 1024px
+        $('.leftContent').removeClass('image-state');
+    }
+});
+
+
 var counted = 0;
 $(window).scroll(function () {
-  var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
-  if (counted == 0 && $(window).scrollTop() > oTop) {
-    $('.statCard h3').each(function () {
-      var $this = $(this),
-        countTo = $this.attr('data-count');
-      var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
-      
-      $({
-        countNum: 0
-      }).animate(
-        {
-          countNum: countTo
-        },
-        {
-          duration: 2000,
-          easing: 'swing',
-          step: function () {
-            $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
-          },
-          complete: function () {
-            $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
-          }
-        }
-      );
-    });
-    counted = 1;
-  }
+    var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
+    if (counted == 0 && $(window).scrollTop() > oTop) {
+        $('.statCard h3').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
+
+            $({
+                countNum: 0
+            }).animate(
+                {
+                    countNum: countTo
+                },
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
+                    },
+                    complete: function () {
+                        $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
+                    }
+                }
+            );
+        });
+        counted = 1;
+    }
 });
 
 

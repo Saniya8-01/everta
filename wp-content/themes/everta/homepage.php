@@ -16,7 +16,7 @@
 <section class="withEaseSection">
     <div class="divWrapper">
         <div class="leftContent">
-            <div>
+            <div class="leftImage">
                 <img src="<?php bloginfo('template_directory'); ?>/images/text-image.png" alt="">
             </div>
             <div class="leftMobileTitle">
