@@ -1940,6 +1940,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
     gap: 110px;
   }
+  .withEaseSection .divWrapper .rightContent .rightContentWrapper .imageDiv {
+    width: 70%;
+  }
 }
 @media all and (max-width: 820px) {
   .withEaseSection {
