@@ -1,130 +1,152 @@
 <?php get_header(); /*Template name: Homepage*/ ?>
 
 <section class="bannerSection">
-    <div class="bannerImageWrapper">
-        <img src="<?php bloginfo('template_directory'); ?>/images/banner-image.png" alt="" class="desktopImage">
-        <img src="<?php bloginfo('template_directory'); ?>/images/banner-mobile-image.png" alt="" class="mobileImage">
-    </div>
-    <div class="blackOverlay"></div>
+    <?php if (have_rows('banner_section')) : ?>
+    <?php while (have_rows('banner_section')) : the_row(); ?>
     <div class="bannerSectionWrapper">
-        <h1>SEAMLESS CHARGING WITH EVERY CHARGE</h1>
-        <p>Everytime, everyday, with ease</p>
-        <a href="" class="ctaYellow">View Solutions</a>
+        <div class="bannerImageWrapper">
+            <?php
+            $desktop_image = get_sub_field('desktop_image');
+            $mobile_image = get_sub_field('mobile_image');
+        ?>
+            <?php if ( ! empty( $desktop_image ) ): ?>
+            <img src="<?php echo esc_url( $desktop_image['url'] ); ?>"
+                alt="<?php echo esc_attr( $desktop_image['alt'] ); ?>" class="desktopImage">
+            <?php endif; ?>
+
+            <?php if ( ! empty( $mobile_image ) ): ?>
+
+            <img src="<?php echo esc_url( $mobile_image['url'] ); ?>"
+                alt="<?php echo esc_attr( $mobile_image['alt'] ); ?>" class="mobileImage">
+            <?php endif; ?>
+
+        </div>
+        <div class="blackOverlay"></div>
+        <div class="bannerSectionContent">
+            <h1>
+                <?php echo get_sub_field('banner_heading'); ?>
+            </h1>
+            <p>
+                <?php echo get_sub_field('banner_subcontent'); ?>
+            </p>
+            <a href="<?php echo get_sub_field('banner_cta_link'); ?>" class="ctaYellow">
+                <?php echo get_sub_field('banner_cta_text'); ?>
+            </a>
+        </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="withEaseSection">
+    <?php if (have_rows('withease_section')) : ?>
+    <?php while (have_rows('withease_section')) : the_row(); ?>
     <div class="divWrapper">
         <div class="leftContent">
             <div class="leftImage">
-                <img src="<?php bloginfo('template_directory'); ?>/images/text-image.png" alt="">
+                <?php $easeImage = get_sub_field('left_image');
+                if (!empty($easeImage)) : ?>
+                <img src="<?php echo esc_url($easeImage['url']); ?>" loading="lazy"
+                    alt="<?php echo esc_attr($easeImage['alt']); ?>" />
+                <?php endif; ?>
             </div>
             <div class="leftMobileTitle">
-                <p>At Everta, we ensure that your EV charging experience is seamless, reliable, and effortless. Whether
-                    at home, work, or on the road, our chargers are designed to keep you powered up whenever and
-                    wherever you need. We combine top-tier technology with user-friendly solutions, providing peace of
-                    mind for every journey. It’s more than just charging—it’s charging made simple.</p>
-                <a href="" class="ctaWhiteBlack">Explore more</a>
+                <p>
+                    <?php echo get_sub_field('subcontent'); ?>
+                </p>
+                <a href="<?php echo get_sub_field('explore_link'); ?>" class="ctaWhiteBlack">
+                    <?php echo get_sub_field('explore_text'); ?>
+                </a>
             </div>
         </div>
         <div class="rightContent">
             <div class="rightContentWrapper">
+                <?php if (have_rows('right_images')) : ?>
+                <?php while (have_rows('right_images')) : the_row(); ?>
                 <div class="imageDiv">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/scrollimage-1.png" alt="">
+                    <?php $rightImage = get_sub_field('right_image');
+                    if (!empty($rightImage)) : ?>
+                    <img src="<?php echo esc_url($rightImage['url']); ?>" loading="lazy"
+                        alt="<?php echo esc_attr($rightImage['alt']); ?>" />
+                    <?php endif; ?>
                 </div>
-                <div class="imageDiv">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/scrollimage-1.png" alt="">
-                </div>
-                <div class="imageDiv">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/scrollimage-1.png" alt="">
-                </div>
+                <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="evertaEveryoneSection">
-    <h2>EVERTA FOR EVERYONE</h2>
-    <p>Explore charging solutions for every need — whether it's home charging, business operations, or public spaces.
-    </p>
-    <div class="hover-section">
-        <div class="hover-box">
-            <div class="content">
-                <h3>FOR BUSINESS</h3>
-                <p>
-                    Everta provides scalable and efficient charging solutions for businesses looking to support their EV
-                    fleets or offer charging for employees and customers. With dependable technology and flexible
-                    management options, we help your business lead in sustainability while ensuring smooth operations.
-                </p>
-                <a href="#" class="ctaYellowBlack">Explore more</a>
-            </div>
-            <div class="image">
-                <img src="<?php bloginfo('template_directory'); ?>/images/everta-everyone-image.png" alt="">
-            </div>
+    <?php if (have_rows('evertaeveryone_section')) : ?>
+    <?php while (have_rows('evertaeveryone_section')) : the_row(); ?>
+    <div class="evertaEveryoneSectionWrapper">
+        <div class="evertaEveryoneSectionHeading">
+            <h2>
+                <?php echo get_sub_field('evertaeveryone_mainheading'); ?>
+            </h2>
+            <p>
+                <?php echo get_sub_field('evertaeveryone_subheading'); ?>
+            </p>
         </div>
-        <div class="hover-box">
-            <div class="content">
-                <h3>FOR PUBLIC</h3>
-                <p>
-                    Everta provides scalable and efficient charging solutions for businesses looking to support their EV
-                    fleets or offer charging for employees and customers. With dependable technology and flexible
-                    management options, we help your business lead in sustainability while ensuring smooth operations.
-                </p>
-                <a href="#" class="ctaYellowBlack">Explore more</a>
+        <div class="hover-section">
+            <?php if (have_rows('hover_section')) : ?>
+            <?php while (have_rows('hover_section')) : the_row(); ?>
+            <div class="hover-box">
+                <div class="content">
+                    <h3>
+                        <?php echo get_sub_field('hovercard_title'); ?>
+                    </h3>
+                    <p>
+                        <?php echo get_sub_field('hovercard_para'); ?>
+                    </p>
+                    <a href="<?php echo get_sub_field('explore_link'); ?>" class="ctaYellowBlack">
+                        <?php echo get_sub_field('explore_text'); ?>
+                    </a>
+                </div>
+                <div class="image">
+                    <?php $hoverImage = get_sub_field('hover_image');
+                    if (!empty($hoverImage)) : ?>
+                    <img src="<?php echo esc_url($hoverImage['url']); ?>" loading="lazy"
+                        alt="<?php echo esc_attr($hoverImage['alt']); ?>" />
+                    <?php endif; ?>
+                </div>
             </div>
-            <div class="image">
-                <img src="<?php bloginfo('template_directory'); ?>/images/everta-everyone-image.png" alt="">
-            </div>
-        </div>
-        <div class="hover-box">
-            <div class="content">
-                <h3>FOR HOME</h3>
-                <p>
-                    Everta provides scalable and efficient charging solutions for businesses looking to support their EV
-                    fleets or offer charging for employees and customers. With dependable technology and flexible
-                    management options, we help your business lead in sustainability while ensuring smooth operations.
-                </p>
-                <a href="#" class="ctaYellowBlack">Explore more</a>
-            </div>
-            <div class="image">
-                <img src="<?php bloginfo('template_directory'); ?>/images/everta-everyone-image.png" alt="">
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="partnersSection">
+    <?php if (have_rows('partners_section')) : ?>
+    <?php while (have_rows('partners_section')) : the_row(); ?>
     <div class="partnersSectionWrapper">
-        <h3>Partners in Sustainable Charging</h3>
+        <h3>
+            <?php echo get_sub_field('heading'); ?>
+        </h3>
         <div class="logoSliderContainer">
             <div class="logoSlider">
+                <?php if (have_rows('partners_logo')) : ?>
+                <?php while (have_rows('partners_logo')) : the_row(); ?>
                 <div class="logo">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/slider-image-1.svg" alt="">
+                    <?php $partnerLogo = get_sub_field('partners_logo');
+                    if (!empty($partnerLogo)) : ?>
+                    <img src="<?php echo esc_url($partnerLogo['url']); ?>" loading="lazy"
+                        alt="<?php echo esc_attr($partnerLogo['alt']); ?>" />
+                    <?php endif; ?>
                 </div>
-                <div class="logo">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/slider-image-2.svg" alt="">
-                </div>
-                <div class="logo">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/slider-image-3.svg" alt="">
-                </div>
-                <div class="logo">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/slider-image-4.svg" alt="">
-                </div>
-                <div class="logo">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/slider-image-1.svg" alt="">
-                </div>
-                <div class="logo">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/slider-image-2.svg" alt="">
-                </div>
-                <div class="logo">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/slider-image-3.svg" alt="">
-                </div>
-                <div class="logo">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/slider-image-4.svg" alt="">
-                </div>
+                <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="chargingSection">
@@ -217,118 +239,96 @@
 </section>
 
 <section class="exploreSection">
+    <?php if (have_rows('explore_section')) : ?>
+    <?php while (have_rows('explore_section')) : the_row(); ?>
     <div class="exploreSectionWrapper">
         <div class="leftContent">
             <div class="contentWrapper">
-                <h2>EXPLORE EVERTA</h2>
-                <p>Explore our digital solutions that complements and elevates Everta users experience</p>
-                <a href="" class="ctaBlack">View Solutions</a>
+                <h2><?php echo get_sub_field('explore_heading'); ?></h2>
+                <p><?php echo get_sub_field('explore_subheading'); ?></p>
+                <a href="<?php echo get_sub_field('solutions_link'); ?>" class="ctaBlack"><?php echo get_sub_field('solutions_text'); ?></a>
             </div>
         </div>
         <div class="rightContent">
-            <img src="<?php bloginfo('template_directory'); ?>/images/iphone-12-mini--green.png" alt="">
+            <?php $mobileImage = get_sub_field('cellphone_image');
+            if (!empty($mobileImage)) : ?>
+            <img src="<?php echo esc_url($mobileImage['url']); ?>" loading="lazy"
+                alt="<?php echo esc_attr($mobileImage['alt']); ?>" />
+            <?php endif; ?>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="mapSection">
+    <?php if (have_rows('map_section')) : ?>
+    <?php while (have_rows('map_section')) : the_row(); ?>
     <div class="mapSectionDivider">
         <div class="map">
-            <h2>E for Everta, E for Environment</h2>
+            <h2><?php echo get_sub_field('heading'); ?></h2>
             <div class="mapImage">
-                <img src="<?php bloginfo('template_directory'); ?>/images/map-image.png" alt="">
+                <?php $mapImage = get_sub_field('map_image');
+                if (!empty($mapImage)) : ?>
+                <img src="<?php echo esc_url($mapImage['url']); ?>" loading="lazy"
+                    alt="<?php echo esc_attr($mapImage['alt']); ?>" />
+                <?php endif; ?>
             </div>
         </div>
         <div class="stats">
+            <?php if (have_rows('stats_cards')) : ?>
+            <?php while (have_rows('stats_cards')) : the_row(); ?>
             <div class="statCard">
-                <h3 data-count="400">0 +</h3>
-                <h4>EV Chargers Deployed</h4>
-                <p>Contributing to cleaner air and a healthier planet.</p>
+                <h3 data-count="<?php echo get_sub_field('data_count'); ?>"><?php echo get_sub_field('default_count'); ?></h3>
+                <h4><?php echo get_sub_field('stats_title'); ?></h4>
+                <p><?php echo get_sub_field('stats_para'); ?></p>
             </div>
-            <div class="statCard">
-                <h3 data-count="20">0 +</h3>
-                <h4>Partners in e-movement</h4>
-                <p>Contributing to cleaner air and a healthier planet.</p>
-            </div>
-            <div class="statCard">
-                <h3 data-count="5">0M +</h3>
-                <h4>kWh Energy Saved</h4>
-                <p>Contributing to cleaner air and a healthier planet.</p>
-            </div>
-            <div class="statCard">
-                <h3 data-count="500">0 +</h3>
-                <h4>Tn CO2 Emissions Reduced</h4>
-                <p>Contributing to cleaner air and a healthier planet.</p>
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="testimonialSection">
-    <h2>Testimonials from Gen E</h2>
-    <div class="testimonialCardWrapper">
-        <div class="testimonialCard">
-            <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="">
-            <p>Everta's charging service has significantly our fleet operations, delivering reliable, cost-effective has
-                energy solutions ,service has significantly, cost-effective has energy solutions</p>
-            <div class="testimonial">
-                <div class="testimonialImage">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/testimonial-image.png" alt="">
-                </div>
-                <div class="testimomialInfo">
-                    <h3>Jacob mathew</h3>
-                    <p>CFO - Eco tech</p>
+    <?php if (have_rows('testimonial_section')) : ?>
+    <?php while (have_rows('testimonial_section')) : the_row(); ?>
+    <div class="testimonialSectionWrapper">
+        <div class="testimonialSectionHeading">
+            <h2><?php echo get_sub_field('heading'); ?></h2>
+        </div>
+        <div class="testimonialCardWrapper">
+            <?php if (have_rows('testimonial_card')) : ?>
+            <?php while (have_rows('testimonial_card')) : the_row(); ?>
+            <div class="testimonialCard">
+                <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="" class="commaImg">
+                <p class="testimonialPara"><?php echo get_sub_field('testimonial_words'); ?></p>
+                <div class="testimonial">
+                    <div class="testimonialImage">
+                        <?php $testimonialImage = get_sub_field('testimonial_image');
+                        if (!empty($testimonialImage)) : ?>
+                        <img src="<?php echo esc_url($testimonialImage['url']); ?>" loading="lazy"
+                            alt="<?php echo esc_attr($testimonialImage['alt']); ?>" />
+                        <?php endif; ?>
+                    </div>
+                    <div class="testimomialInfo">
+                        <h3><?php echo get_sub_field('testimonial_name'); ?></h3>
+                        <p><?php echo get_sub_field('testimonial_designation'); ?></p>
+                    </div>
                 </div>
             </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
         </div>
-        <div class="testimonialCard">
-            <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="">
-            <p>Everta's charging service has significantly our fleet operations, delivering reliable, cost-effective has
-                energy solutions ,service has significantly, cost-effective has energy solutions</p>
-            <div class="testimonial">
-                <div class="testimonialImage">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/testimonial-image.png" alt="">
-                </div>
-                <div class="testimomialInfo">
-                    <h3>Jacob mathew</h3>
-                    <p>CFO - Eco tech</p>
-                </div>
-            </div>
-        </div>
-        <div class="testimonialCard">
-            <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="">
-            <p>Everta's charging service has significantly our fleet operations, delivering reliable, cost-effective has
-                energy solutions ,service has significantly, cost-effective has energy solutions</p>
-            <div class="testimonial">
-                <div class="testimonialImage">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/testimonial-image.png" alt="">
-                </div>
-                <div class="testimomialInfo">
-                    <h3>Jacob mathew</h3>
-                    <p>CFO - Eco tech</p>
-                </div>
-            </div>
-        </div>
-        <div class="testimonialCard">
-            <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="">
-            <p>Everta's charging service has significantly our fleet operations, delivering reliable, cost-effective has
-                energy solutions ,service has significantly, cost-effective has energy solutions</p>
-            <div class="testimonial">
-                <div class="testimonialImage">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/testimonial-image.png" alt="">
-                </div>
-                <div class="testimomialInfo">
-                    <h3>Jacob mathew</h3>
-                    <p>CFO - Eco tech</p>
-                </div>
+        <div class="progresBar">
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
             </div>
         </div>
     </div>
-    <div class="progresBar">
-        <div class="progress-bar-container">
-            <div class="progress-bar"></div>
-        </div>
-    </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="formSection">
@@ -349,75 +349,32 @@
 </section>
 
 <section class="faqSection" id="faqAccordion">
+    <?php if (have_rows('faq_section')) : ?>
+    <?php while (have_rows('faq_section')) : the_row(); ?>
     <div class="faq-heading">
-        <h2>
-            Frequently Asked Questions </h2>
+        <h2><?php echo get_sub_field('faq_heading'); ?></h2>
     </div>
     <div class="container">
         <div class="accordions-wrapper">
-            <div class="accordion active">
-                <div class="accordion-header">
-                    <h4>How does Coverstack’s Lending Stack integrate with my existing lending workflow? </h4>
-                    <div class="accordian-icon-wrapper">
-                        <div class="accordion-icon"></div>
-                    </div>
-                </div>
-                <div class="accordion-body" style="max-height: fit-content;">
-                    <p>
-                        Coverstack’s Lending Stack is designed for seamless integration into your existing lending
-                        processes, allowing you to quickly launch and scale insurance offerings without disrupting your
-                        current workflow. Our platform enables you to embed insurance solutions effortlessly into your
-                        lending operations </p>
-                </div>
-            </div>
+            <?php if (have_rows('faq_accordion')) : ?>
+            <?php while (have_rows('faq_accordion')) : the_row(); ?>
             <div class="accordion">
                 <div class="accordion-header">
-                    <h4>
-                        Is the Lending Stack insurer agnostic? </h4>
+                    <h4><?php echo get_sub_field('question'); ?></h4>
                     <div class="accordian-icon-wrapper">
                         <div class="accordion-icon"></div>
                     </div>
                 </div>
                 <div class="accordion-body">
-                    <p>
-                        Yes, the Lending Stack provides access to a wide range of insurance products from multiple
-                        leading insurers. This flexibility allows you to configure the best coverage options tailored
-                        specifically to your customers' needs, ensuring that you can offer the most suitable products
-                    </p>
+                    <p><?php echo get_sub_field('answer'); ?> </p>
                 </div>
             </div>
-            <div class="accordion">
-                <div class="accordion-header">
-                    <h4>
-                        How does the platform optimize operational efficiency? </h4>
-                    <div class="accordian-icon-wrapper">
-                        <div class="accordion-icon"></div>
-                    </div>
-                </div>
-                <div class="accordion-body">
-                    <p>
-                        Our platform streamlines your insurance processes through real-time automated policy issuance,
-                        reducing the need for manual intervention and minimizing errors. This enhances operational
-                        efficiency and ensures a smoother, more reliable insurance issuance process </p>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion-header">
-                    <h4>
-                        What kind of analytics does the Lending Stack offer? </h4>
-                    <div class="accordian-icon-wrapper">
-                        <div class="accordion-icon"></div>
-                    </div>
-                </div>
-                <div class="accordion-body">
-                    <p>
-                        The Lending Stack includes a deep analytics dashboard that provides advanced insights into your
-                        portfolio performance. You can leverage these insights to make data-driven decisions, optimize
-                        your insurance strategy, and mitigate risks effectively </p>
-                </div>
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 
