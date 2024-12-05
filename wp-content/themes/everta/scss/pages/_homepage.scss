@@ -400,7 +400,7 @@
                 top: 80px;
                 
                 &.image-state {
-                    top: -60px;}
+                    top: -80px;}
 
                 .leftMobileTitle {
                     p {
@@ -511,10 +511,9 @@
                 align-items: center;
                 position: relative;
                 overflow: hidden;
-                transition: all 0.3s ease;
                 border-bottom: 1px solid #D8DBDC;
                 border-top: 1px solid #D8DBDC;
-                transition: 0.3s all ease-in-out;
+                transition: 0.4s all ease-in-out;
                 height: 190px;
 
                 &.active {
@@ -2254,11 +2253,10 @@
         background: $primaryColor1;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        gap: 125px;
 
         .formTitle {
             flex-basis: 40%;
-            margin-right: 120px;
             flex-shrink: 0;
 
             h2 {
@@ -2278,40 +2276,47 @@
                 line-height: 150%;
             }
         }
-
-        .input {
-            flex-basis: 30%;
-            margin-right: 56px;
-            display: flex;
-            flex-direction: column;
-            gap: 17px;
-            flex-shrink: 0;
-
-            label {
-                color: $quaternaryColor1;
-                @include terminabold;
-                @include font18;
-            }
-
-            input {
-                width: 100%;
-                background: transparent;
-                border-bottom: 1px solid rgba(62, 62, 62, 0.27);
-                color: $quaternaryColor1;
-                @include verdanaregular;
-                @include font16;
-                padding: 7px 0px 14px 0px;
-
-                &::placeholder {
-                    color: $quaternaryColor1;
-                    @include verdanaregular;
-                    @include font16;
+        .wpcf7{
+            flex-basis: 60%;
+            form{display: flex;gap:56px;
+                .input {
+                    width: 75%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 17px;
+                    flex-shrink: 0;
+        
+                    label {
+                        color: $quaternaryColor1;
+                        @include terminabold;
+                        @include font18;
+                    }
+        
+                    input {
+                        width: 100%;
+                        background: transparent;
+                        border-bottom: 1px solid rgba(62, 62, 62, 0.27);
+                        color: $quaternaryColor1;
+                        @include verdanaregular;
+                        @include font16;
+                        padding: 7px 0px 14px 0px;
+        
+                        &::placeholder {
+                            color: $quaternaryColor1;
+                            @include verdanaregular;
+                            @include font16;
+                        }
+                    }
                 }
+                .wpcf7-not-valid-tip{@include verdanaregular;@include font14;}
+        
+                .ctaDiv {
+                    flex-shrink: 0;
+                    input{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: $primaryColor1; background: $quaternaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;}
+                    .wpcf7-spinner{display: none;}
+                }
+                .wpcf7-response-output{display: none;}
             }
-        }
-
-        .ctaDiv {
-            flex-basis: 15%;
         }
     }
 
@@ -2321,21 +2326,31 @@
         .formWrapper {
             padding: 55px 0px;
             @include wrapper;
+            gap: 100px;
 
             .formTitle {
-                margin-right: 100px;
+        
 
                 h2 {
                     margin-bottom: 32px;
                 }
             }
 
-            .input {
-                margin-right: 50px;
-                gap: 16px;
-
-                input {
-                    padding: 7px 0px 14px 0px;
+            .wpcf7{
+                form{gap: 50px;
+                    .input {
+                        
+                        gap: 16px;
+        
+                        input {
+                            padding: 7px 0px 14px 0px;
+                        }
+                    }
+                    .ctaDiv{
+                        input{
+                            padding: 18px 32px;
+                        }
+                    }
                 }
             }
         }
@@ -2347,21 +2362,25 @@
         .formWrapper {
             padding: 50px 0px;
             @include wrapper;
+            gap: 80px;
 
             .formTitle {
-                margin-right: 80px;
 
                 h2 {
                     margin-bottom: 30px;
                 }
             }
 
-            .input {
-                margin-right: 45px;
-                gap: 14px;
-
-                input {
-                    padding: 6px 0px 12px 0px;
+            .wpcf7{
+                .form{
+                    gap: 45%;
+                    .input {
+                        gap: 14px;
+        
+                        input {
+                            padding: 6px 0px 12px 0px;
+                        }
+                    }
                 }
             }
         }
@@ -2373,21 +2392,27 @@
         .formWrapper {
             padding: 40px 0px;
             @include wrapper;
+            gap: 70px;
 
             .formTitle {
-                margin-right: 70px;
 
                 h2 {
                     margin-bottom: 26px;
                 }
             }
 
-            .input {
-                margin-right: 40px;
-                gap: 12px;
-
-                input {
-                    padding: 6px 0px 12px 0px;
+            .wpcf7{
+                form{gap: 40px;
+                    .input {
+                        gap: 12px;
+        
+                        input {
+                            padding: 6px 0px 12px 0px;
+                        }
+                    }
+                    .ctaDiv{
+                        input{padding: 14px 32px;}
+                    }
                 }
             }
         }
@@ -2406,6 +2431,26 @@
         .formWrapper {
             padding: 30px 0px;
             @include wrapper;
+            .wpcf7{
+                form{
+                    .input {
+                        flex-basis: 70%;
+                    }   
+                }
+            }
+        }
+    }
+
+    @media all and (max-width:1024px) {
+
+        .formWrapper {
+            .wpcf7{
+                form{
+                    .input {
+                        flex-basis: 66%;
+                    }   
+                }
+            }
         }
     }
 
@@ -2419,6 +2464,7 @@
             display: flex;
             flex-direction: column;
             align-items: start;
+            gap: 0px;
 
             .formTitle {
                 flex-basis: 100%;
@@ -2441,39 +2487,42 @@
                 }
             }
 
-            .input {
-                flex-basis: 100%;
-                width: 100%;
-                margin-right: 0px;
-                gap: 20px;
-                margin-bottom: 32px;
-
-                label {
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 28px;
-                }
-
-                input {
-                    width: 100%;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 28px;
-                    padding: 8px 0px;
-
-                    &::placeholder {
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 28px;
+            .wpcf7{
+                form{
+                    display: block;
+                    .input {
+                        flex-basis: 100%;
+                        width: 100%;
+                        gap: 20px;
+                        margin-bottom: 32px;
+        
+                        label {
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 28px;
+                        }
+        
+                        input {
+                            width: 100%;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 28px;
+                            padding: 8px 0px;
+        
+                            &::placeholder {
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 28px;
+                            }
+                        }
+                    }
+                    .ctaDiv {
+                        input{font-size: 12px;padding: 18px 32px; }
                     }
                 }
-            }
-
-            .ctaDiv {
-                flex-basis: 100%;
             }
         }
     }

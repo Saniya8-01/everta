@@ -177,6 +177,12 @@ if ($(".testimonialSection").length) {
                 settings: {
                     slidesToShow: 1.5,
                 }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
             }
         ]
     });

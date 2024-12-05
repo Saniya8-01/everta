@@ -244,9 +244,15 @@
     <div class="exploreSectionWrapper">
         <div class="leftContent">
             <div class="contentWrapper">
-                <h2><?php echo get_sub_field('explore_heading'); ?></h2>
-                <p><?php echo get_sub_field('explore_subheading'); ?></p>
-                <a href="<?php echo get_sub_field('solutions_link'); ?>" class="ctaBlack"><?php echo get_sub_field('solutions_text'); ?></a>
+                <h2>
+                    <?php echo get_sub_field('explore_heading'); ?>
+                </h2>
+                <p>
+                    <?php echo get_sub_field('explore_subheading'); ?>
+                </p>
+                <a href="<?php echo get_sub_field('solutions_link'); ?>" class="ctaBlack">
+                    <?php echo get_sub_field('solutions_text'); ?>
+                </a>
             </div>
         </div>
         <div class="rightContent">
@@ -266,7 +272,9 @@
     <?php while (have_rows('map_section')) : the_row(); ?>
     <div class="mapSectionDivider">
         <div class="map">
-            <h2><?php echo get_sub_field('heading'); ?></h2>
+            <h2>
+                <?php echo get_sub_field('heading'); ?>
+            </h2>
             <div class="mapImage">
                 <?php $mapImage = get_sub_field('map_image');
                 if (!empty($mapImage)) : ?>
@@ -279,9 +287,15 @@
             <?php if (have_rows('stats_cards')) : ?>
             <?php while (have_rows('stats_cards')) : the_row(); ?>
             <div class="statCard">
-                <h3 data-count="<?php echo get_sub_field('data_count'); ?>"><?php echo get_sub_field('default_count'); ?></h3>
-                <h4><?php echo get_sub_field('stats_title'); ?></h4>
-                <p><?php echo get_sub_field('stats_para'); ?></p>
+                <h3 data-count="<?php echo get_sub_field('data_count'); ?>">
+                    <?php echo get_sub_field('default_count'); ?>
+                </h3>
+                <h4>
+                    <?php echo get_sub_field('stats_title'); ?>
+                </h4>
+                <p>
+                    <?php echo get_sub_field('stats_para'); ?>
+                </p>
             </div>
             <?php endwhile; ?>
             <?php endif; ?>
@@ -296,14 +310,18 @@
     <?php while (have_rows('testimonial_section')) : the_row(); ?>
     <div class="testimonialSectionWrapper">
         <div class="testimonialSectionHeading">
-            <h2><?php echo get_sub_field('heading'); ?></h2>
+            <h2>
+                <?php echo get_sub_field('heading'); ?>
+            </h2>
         </div>
         <div class="testimonialCardWrapper">
             <?php if (have_rows('testimonial_card')) : ?>
             <?php while (have_rows('testimonial_card')) : the_row(); ?>
             <div class="testimonialCard">
                 <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="" class="commaImg">
-                <p class="testimonialPara"><?php echo get_sub_field('testimonial_words'); ?></p>
+                <p class="testimonialPara">
+                    <?php echo get_sub_field('testimonial_words'); ?>
+                </p>
                 <div class="testimonial">
                     <div class="testimonialImage">
                         <?php $testimonialImage = get_sub_field('testimonial_image');
@@ -313,8 +331,12 @@
                         <?php endif; ?>
                     </div>
                     <div class="testimomialInfo">
-                        <h3><?php echo get_sub_field('testimonial_name'); ?></h3>
-                        <p><?php echo get_sub_field('testimonial_designation'); ?></p>
+                        <h3>
+                            <?php echo get_sub_field('testimonial_name'); ?>
+                        </h3>
+                        <p>
+                            <?php echo get_sub_field('testimonial_designation'); ?>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -332,27 +354,35 @@
 </section>
 
 <section class="formSection">
+    <?php if (have_rows('form_section')) : ?>
+    <?php while (have_rows('form_section')) : the_row(); ?>
     <div class="formWrapper">
         <div class="formTitle">
-            <h2>Interested in Everta?</h2>
-            <p>Start partnering with us or purchase our solutions by filling out the form today and take the first step
-                toward a more sustainable and efficient energy future.</p>
+            <h2>
+                <?php echo get_sub_field('heading'); ?>
+            </h2>
+            <p>
+                <?php echo get_sub_field('subheading'); ?>
+            </p>
         </div>
-        <div class="input">
-            <label for="">Your Email</label>
-            <input type="text" placeholder="your@gmail.com">
-        </div>
-        <div class="ctaDiv">
-            <a href="" class="ctaBlack">Continue</a>
-        </div>
+        <?php
+        $shortcode = get_sub_field('contact_form_shortcode');
+        if ($shortcode) {
+            echo do_shortcode($shortcode);
+        }
+    ?>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="faqSection" id="faqAccordion">
     <?php if (have_rows('faq_section')) : ?>
     <?php while (have_rows('faq_section')) : the_row(); ?>
     <div class="faq-heading">
-        <h2><?php echo get_sub_field('faq_heading'); ?></h2>
+        <h2>
+            <?php echo get_sub_field('faq_heading'); ?>
+        </h2>
     </div>
     <div class="container">
         <div class="accordions-wrapper">
@@ -360,13 +390,17 @@
             <?php while (have_rows('faq_accordion')) : the_row(); ?>
             <div class="accordion">
                 <div class="accordion-header">
-                    <h4><?php echo get_sub_field('question'); ?></h4>
+                    <h4>
+                        <?php echo get_sub_field('question'); ?>
+                    </h4>
                     <div class="accordian-icon-wrapper">
                         <div class="accordion-icon"></div>
                     </div>
                 </div>
                 <div class="accordion-body">
-                    <p><?php echo get_sub_field('answer'); ?> </p>
+                    <p>
+                        <?php echo get_sub_field('answer'); ?>
+                    </p>
                 </div>
             </div>
             <?php endwhile; ?>
