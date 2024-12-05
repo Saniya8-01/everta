@@ -33,7 +33,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                 }
                             }
                             .ctaContact{padding: 0px;
-                                a{padding: 20px 32px;color: $primaryColor1;@include font16;@include terminamedium;letter-spacing: -0.64px;background: $quaternaryColor1;border-radius: 100px;}
+                                a{padding: 20px 32px;color: $primaryColor1;@include font16;@include terminamedium;letter-spacing: -0.64px;background: $quaternaryColor1;border-radius: 100px;
+                                    &:hover{@include terminamedium;}
+                                }
                             }
                         }
                     }
