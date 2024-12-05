@@ -4127,6 +4127,15 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     font-size: 12px;
   }
 }
+.formSection .formWrapper .wpcf7 form .wpcf7-not-valid-tip {
+  font-family: "verdanaregular";
+  font-size: 14px;
+}
+@media screen and (max-width: 1440px) {
+  .formSection .formWrapper .wpcf7 form .wpcf7-not-valid-tip {
+    font-size: 12px;
+  }
+}
 .formSection .formWrapper .wpcf7 form .ctaDiv {
   flex-shrink: 0;
 }
@@ -4159,6 +4168,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
 }
 .formSection .formWrapper .wpcf7 form .ctaDiv .wpcf7-spinner {
+  display: none;
+}
+.formSection .formWrapper .wpcf7 form .wpcf7-response-output {
   display: none;
 }
 @media all and (max-width: 1800px) {
