@@ -1924,7 +1924,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     top: 80px;
   }
   .withEaseSection .divWrapper .leftContent.image-state {
-    top: -60px;
+    top: -80px;
   }
   .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
     margin-bottom: 24x;
@@ -4131,13 +4131,22 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   flex-shrink: 0;
 }
 .formSection .formWrapper .wpcf7 form .ctaDiv input {
-  background: transparent;
-  font-weight: 600;
   font-family: "termina_testregular";
   font-size: 16px;
+  font-weight: 600;
   line-height: 100%;
   letter-spacing: -0.64px;
   color: #F5F75E;
+  background: #1E1E1E;
+  border-style: none;
+  padding: 20px 32px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  display: inline-block;
 }
 @media screen and (max-width: 1600px) {
   .formSection .formWrapper .wpcf7 form .ctaDiv input {
@@ -4160,7 +4169,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 55px 0px;
     padding-left: 120px;
     padding-right: 120px;
-    gap: 120px;
+    gap: 100px;
   }
 }
 @media screen and (max-width: 1800px) and (max-width: 1600px) {
@@ -4188,9 +4197,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
 }
 @media all and (max-width: 1800px) {
-  .formSection .formWrapper .formTitle {
-    margin-right: 100px;
-  }
   .formSection .formWrapper .formTitle h2 {
     margin-bottom: 32px;
   }
@@ -4203,6 +4209,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .formSection .formWrapper .wpcf7 form .input input {
     padding: 7px 0px 14px 0px;
   }
+  .formSection .formWrapper .wpcf7 form .ctaDiv input {
+    padding: 18px 32px;
+  }
 }
 @media all and (max-width: 1600px) {
   .formSection {
@@ -4212,7 +4221,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 50px 0px;
     padding-left: 120px;
     padding-right: 120px;
-    gap: 110px;
+    gap: 80px;
   }
 }
 @media screen and (max-width: 1600px) and (max-width: 1600px) {
@@ -4240,9 +4249,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
 }
 @media all and (max-width: 1600px) {
-  .formSection .formWrapper .formTitle {
-    margin-right: 80px;
-  }
   .formSection .formWrapper .formTitle h2 {
     margin-bottom: 30px;
   }
@@ -4264,7 +4270,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 40px 0px;
     padding-left: 120px;
     padding-right: 120px;
-    gap: 100px;
+    gap: 70px;
   }
 }
 @media screen and (max-width: 1440px) and (max-width: 1600px) {
@@ -4292,9 +4298,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
 }
 @media all and (max-width: 1440px) {
-  .formSection .formWrapper .formTitle {
-    margin-right: 70px;
-  }
   .formSection .formWrapper .formTitle h2 {
     margin-bottom: 26px;
   }
@@ -4306,6 +4309,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .formSection .formWrapper .wpcf7 form .input input {
     padding: 6px 0px 12px 0px;
+  }
+  .formSection .formWrapper .wpcf7 form .ctaDiv input {
+    padding: 14px 32px;
   }
 }
 @media all and (max-width: 1280px) {
@@ -4368,6 +4374,16 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .formSection .formWrapper {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+@media all and (max-width: 1180px) {
+  .formSection .formWrapper .wpcf7 form .input {
+    flex-basis: 70%;
+  }
+}
+@media all and (max-width: 1024px) {
+  .formSection .formWrapper .wpcf7 form .input {
+    flex-basis: 66%;
   }
 }
 @media all and (max-width: 820px) {
@@ -4459,6 +4475,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .formSection .formWrapper .wpcf7 form .ctaDiv input {
     font-size: 12px;
+    padding: 18px 32px;
   }
 }
 
