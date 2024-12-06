@@ -48,14 +48,54 @@
                     <?php if (have_rows('footer_menu', 'option')) : ?>
                     <?php while (have_rows('footer_menu', 'option')) : the_row(); ?>
                     <div class="footerMenuWrapper">
-                        <p><?php echo get_sub_field('title', 'option'); ?></p>
-                        <ul>
-                            <?php if (have_rows('menu', 'option')) : ?>
-                            <?php while (have_rows('menu', 'option')) : the_row(); ?>
-                            <li><a href="<?php echo get_sub_field('menu_link', 'option'); ?>"><?php echo get_sub_field('menu_text', 'option'); ?></a></li>
-                            <?php endwhile; ?>
-                            <?php endif; ?>
-                        </ul>
+                        <p><?php echo get_sub_field('company', 'option'); ?></p>
+                        <?php
+                        wp_nav_menu([
+                            'menu'            => 'Company',
+                            'theme_location'  => 'Company',
+
+                        ]);
+                        ?>
+                    </div>
+                    <div class="footerMenuWrapper">
+                        <p><?php echo get_sub_field('ac_charging', 'option'); ?></p>
+                        <?php
+                        wp_nav_menu([
+                            'menu'            => 'AC Charging',
+                            'theme_location'  => 'AC Charging',
+
+                        ]);
+                        ?>
+                    </div>
+                    <div class="footerMenuWrapper">
+                        <p><?php echo get_sub_field('dc_charging', 'option'); ?></p>
+                        <?php
+                        wp_nav_menu([
+                            'menu'            => 'DC Charging',
+                            'theme_location'  => 'Company',
+
+                        ]);
+                        ?>
+                    </div>
+                    <div class="footerMenuWrapper">
+                        <p><?php echo get_sub_field('digital_products', 'option'); ?></p>
+                        <?php
+                        wp_nav_menu([
+                            'menu'            => 'Digital Products',
+                            'theme_location'  => 'Digital Products',
+
+                        ]);
+                        ?>
+                    </div>
+                    <div class="footerMenuWrapper">
+                        <p><?php echo get_sub_field('resources', 'option'); ?></p>
+                        <?php
+                        wp_nav_menu([
+                            'menu'            => 'Resources',
+                            'theme_location'  => 'Resources',
+
+                        ]);
+                        ?>
                     </div>
                     <?php endwhile; ?>
                     <?php endif; ?>
@@ -70,8 +110,8 @@
                     <div class="footerMenuWrapper">
                         <p><?php echo get_sub_field('contact_title', 'option'); ?></p>
                         <ul>
-                            <li><a href="tel:<?php echo get_sub_field('tel_number', 'option'); ?>" class="underline"><?php echo get_sub_field('telnumber', 'option'); ?></a></li>
-                            <li><a href="mailto:<?php echo get_sub_field('email_address', 'option'); ?>" class="underline"><?php echo get_sub_field('email', 'option'); ?></a></li>
+                            <li><a href="tel:<?php echo get_sub_field('tel_number', 'option'); ?>" class="underline"><?php echo get_sub_field('tel_number', 'option'); ?></a></li>
+                            <li><a href="mailto:<?php echo get_sub_field('email_address', 'option'); ?>" class="underline"><?php echo get_sub_field('email_address', 'option'); ?></a></li>
                         </ul>
                     </div>
                     <?php endwhile; ?>
