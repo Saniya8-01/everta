@@ -288,7 +288,7 @@
             <?php while (have_rows('stats_cards')) : the_row(); ?>
             <div class="statCard">
                 <h3 data-count="<?php echo get_sub_field('data_count'); ?>">
-                    <?php echo get_sub_field('default_count'); ?>
+                    <?php echo get_sub_field('default_symbol'); ?>
                 </h3>
                 <h4>
                     <?php echo get_sub_field('stats_title'); ?>

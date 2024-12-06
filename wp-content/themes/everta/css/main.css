@@ -1866,7 +1866,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     flex-basis: 50%;
   }
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
-    gap: 170px;
+    gap: 150px;
+  }
+  .withEaseSection .divWrapper .rightContent .rightContentWrapper .imageDiv {
+    width: 75%;
   }
 }
 @media all and (max-width: 1600px) {
@@ -1890,7 +1893,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-top: 32px;
   }
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
-    gap: 150px;
+    gap: 100px;
+  }
+  .withEaseSection .divWrapper .rightContent .rightContentWrapper .imageDiv {
+    width: 70%;
   }
 }
 @media all and (max-width: 1440px) {
@@ -1911,7 +1917,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-top: 28px;
   }
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
-    gap: 130px;
+    gap: 90px;
+  }
+  .withEaseSection .divWrapper .rightContent .rightContentWrapper .imageDiv {
+    width: 65%;
   }
 }
 @media all and (max-width: 1280px) {
@@ -1931,10 +1940,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-top: 24px;
   }
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
-    gap: 110px;
-  }
-  .withEaseSection .divWrapper .rightContent .rightContentWrapper .imageDiv {
-    width: 70%;
+    gap: 70px;
   }
 }
 @media all and (max-width: 820px) {
@@ -2214,7 +2220,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box {
     padding: 50px 90px;
-    height: 150px;
+    height: 130px;
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active {
     height: 370px;
@@ -2238,7 +2244,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box {
     padding: 40px 80px;
-    height: 140px;
+    height: 120px;
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active {
     height: 330px;
@@ -2267,7 +2273,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 36px 80px;
     padding-left: 120px;
     padding-right: 120px;
-    height: 120px;
+    height: 100px;
   }
 }
 @media screen and (max-width: 1280px) and (max-width: 1600px) {
