@@ -130,6 +130,8 @@
             <?php echo get_sub_field('heading'); ?>
         </h3>
         <div class="logoSliderContainer">
+            <div class="right-fade"></div>
+            <div class="left-fade"></div>
             <div class="logoSlider">
                 <?php if (have_rows('partners_logo')) : ?>
                 <?php while (have_rows('partners_logo')) : the_row(); ?>

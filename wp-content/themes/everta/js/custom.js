@@ -1,10 +1,10 @@
-//--------------------------- Hide Header on on scroll down-------------------------//
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $("header").outerHeight();
+let menuOpen = false;
 
-$(window).scroll(function (event) {
+$(window).scroll(function () {
     didScroll = true;
 });
 
@@ -14,20 +14,26 @@ setInterval(function () {
         didScroll = false;
     }
 }, 250);
-let menuOpen = false;
 
 function hasScrolled() {
     if (menuOpen) return; // Disable hasScrolled when menu is open
 
     var st = $(this).scrollTop();
+
     // Make sure they scroll more than delta
     if (Math.abs(lastScrollTop - st) <= delta) return;
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight) {
+
+    // Detect if we are scrolling within the `.evertaEveryoneSection`
+    var isWithinEvertaSection = isInSection('.evertaEveryoneSection');
+
+    if ($(window).width() <= 820 && isWithinEvertaSection) {
+        // Add nav-up class on reverse scroll within `.evertaEveryoneSection`
+        $("header").removeClass("nav-down").addClass("nav-up");
+    } else if (st > lastScrollTop && st > navbarHeight) {
+        // Scrolling down
         $("header").removeClass("nav-down").addClass("nav-up");
     } else {
-        // Scroll Up
+        // Scrolling up
         if (st + $(window).height() < $(document).height()) {
             $("header").removeClass("nav-up").addClass("nav-down");
         }
@@ -36,6 +42,22 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
+// Helper function to detect if the scroll position is within a specific section
+function isInSection(sectionClass) {
+    var section = $(sectionClass);
+    if (section.length) {
+        var sectionTop = section.offset().top;
+        var sectionBottom = sectionTop + section.outerHeight();
+        var scrollTop = $(window).scrollTop();
+        var windowHeight = $(window).height();
+
+        // Check if the current scroll position overlaps with the section
+        return scrollTop + windowHeight > sectionTop && scrollTop < sectionBottom;
+    }
+    return false;
+}
+
+// Menu toggle functionality for <= 1024px width
 $(document).ready(function () {
     if ($(window).width() <= 1024) {
         $("#toggle").click(function () {
@@ -54,6 +76,12 @@ $(document).ready(function () {
     }
 });
 
+// Reinitialize navbar height on window resize
+$(window).resize(function () {
+    navbarHeight = $("header").outerHeight();
+});
+
+
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('header').outerHeight();
@@ -71,13 +99,31 @@ $(document).ready(function () {
     if (!isTouchDevice) {
         // For desktop: mouseover and mouseleave functionality
         dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('mouseover', function () {
+            const dropdownMenu = dropdown.querySelector('.dropdownMenu'); // Dropdown menu inside the item
+
+            dropdown.addEventListener('mouseenter', function () {
                 dropdown.classList.add('active');
             });
 
-            dropdown.addEventListener('mouseleave', function () {
-                dropdown.classList.remove('active');
+            dropdown.addEventListener('mouseleave', function (event) {
+                // Check if the mouse is still over the dropdown or the dropdown menu
+                if (!event.relatedTarget || !dropdown.contains(event.relatedTarget)) {
+                    dropdown.classList.remove('active');
+                }
             });
+
+            // Prevent fluctuation by ensuring dropdownMenu keeps the parent dropdown active
+            if (dropdownMenu) {
+                dropdownMenu.addEventListener('mouseenter', function () {
+                    dropdown.classList.add('active');
+                });
+
+                dropdownMenu.addEventListener('mouseleave', function (event) {
+                    if (!event.relatedTarget || !dropdown.contains(event.relatedTarget)) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+            }
         });
     } else {
         // For mobile: click functionality
@@ -109,6 +155,7 @@ $(document).ready(function () {
 });
 
 
+
 //-------------------Header Dropdown JS----------------------//
 
 if ($(".partnersSection").length) {
@@ -126,6 +173,12 @@ if ($(".partnersSection").length) {
                 breakpoint: 820,
                 settings: {
                     slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 820,
+                settings: {
+                    slidesToShow: 3,
                 }
             }
         ]
@@ -165,6 +218,8 @@ if ($(".testimonialSection").length) {
         infinite: false,
         initialSlide: 0,
         focusOnSelect: true,
+        cssEase: "linear",
+
         responsive: [
             {
                 breakpoint: 1181,
@@ -209,6 +264,7 @@ if ($(".testimonialSection").length) {
     // Start progress bar when slider is initialized
     startProgressBar();
 }
+
 
 function initializeSlick() {
     if ($(window).width() <= 820) {
