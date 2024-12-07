@@ -8,14 +8,14 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                         ul{display: flex;align-items:center;gap:56px;
                             li{display:flex;gap:10px;padding:15px 0px;position:relative;padding-right:7px;
                                 .mainManu{@include verdanaregular;@include font20;line-height: 150%;color: $quaternaryColor1;transition: 0.3s all ease-in-out;}
-                                img{transition: 0.3s all ease-in-out;}
+                                .arrowImage{transition: 0.3s all ease-in-out;}
                                 .accordian-icon-wrapper{display: none;}
                                 &.dropdown{transition: 0.3s all ease-in-out;
                                     &::before{position: absolute;content:"";bottom: 0;left: 0;width: 0;height: 5px;background: $primaryColor1;transition: 0.3s all ease-in-out;}
                                     .mainManu{cursor: default;pointer-events: none;}
                                     &.active{
                                         &::before{width: calc(100% - 7px);}
-                                        img{transform: rotate(180deg);}
+                                        .arrowImage{transform: rotate(180deg);}
                                         .dropdownMenu{   opacity: 1;visibility: visible;}
                                     }
                                 }
@@ -24,6 +24,13 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         li{display: flex;flex-direction:column;gap:24px;padding:0px;
                                             p{@include terminabold;@include font20;color: #323232;}
                                             a{@include verdanaregular;@include font20;color: #323232;}
+                                        }
+                                    }
+                                }
+                                .languageMenu{
+                                    ul{min-width: 115px;gap: 24px;
+                                        li{
+                                            p{cursor: pointer;}
                                         }
                                     }
                                 }
@@ -53,6 +60,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         li{gap:24px;}
                                     }
                                 }
+                                .languageMenu{
+                                    ul{min-width: 110px;gap: 24px;}
+                                }
                             }
                             .ctaContact{
                                 a{padding: 18px 30px;letter-spacing: -0.64px;}
@@ -76,6 +86,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         ul{padding: 32px 36px;min-width: 300px;gap:60px;
                                             li{gap:22px;}
                                         }
+                                    }
+                                    .languageMenu{
+                                        ul{min-width: 100px;gap: 22px;}
                                     }
                                 }
                                 .ctaContact{
@@ -101,6 +114,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                             li{gap:20px;}
                                         }
                                     }
+                                    .languageMenu{
+                                        ul{min-width: 90px;gap: 20px;}
+                                    }
                                 }
                                 .ctaContact{
                                     a{padding: 14px 24px;letter-spacing: -0.64px;}
@@ -124,6 +140,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         ul{padding: 24px 28px;min-width: 280px;gap:40px;
                                             li{gap:18px;}
                                         }
+                                    }
+                                    .languageMenu{
+                                        ul{min-width: 80px;gap: 18px;}
                                     }
                                 }
                                 .ctaContact{
@@ -188,7 +207,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         }
                                     }
                                     .mainManu{font-size: 16px;@include terminabold;}
-                                    img{display: none;}
+                                    .arrowImage{display: none;}
                                     .accordian-icon-wrapper{display: block;padding: 3px;transition: 0.3s all ease-in-out;
                                         .accordion-icon {position: relative;transition: 0.5s all ease-in-out;width: 21px;height:21px;
                                             &::after {content: "";position: absolute;left: 50%;background: #343330;height: 100%;width: 2px;transform: translateX(-50%);transition: 0.3s all ease-in-out;}
@@ -207,6 +226,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                 .dropdown{
                                     a{cursor: default;pointer-events: none;}
                                 }
+                                .languageTranslator{display: none;}
                                 .ctaContact{position: fixed;bottom:30px;
                                     .accordian-icon-wrapper {display: none;}
                                     a{padding: 20px 32px;letter-spacing: -0.48px;font-size: 12px;background: $primaryColor1;color:$quaternaryColor1;position: relative;padding-right: 66px;

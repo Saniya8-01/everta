@@ -744,7 +744,7 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
     font-size: 12px;
   }
 }
-header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li img {
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .arrowImage {
   transition: 0.3s all ease-in-out;
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .accordian-icon-wrapper {
@@ -770,7 +770,7 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown .m
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active::before {
   width: calc(100% - 7px);
 }
-header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active img {
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active .arrowImage {
   transform: rotate(180deg);
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active .dropdownMenu {
@@ -841,6 +841,13 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMe
     font-size: 12px;
   }
 }
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
+  min-width: 115px;
+  gap: 24px;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
+  cursor: pointer;
+}
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact {
   padding: 0px;
 }
@@ -891,6 +898,10 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li {
     gap: 24px;
   }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
+    min-width: 110px;
+    gap: 24px;
+  }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 18px 30px;
     letter-spacing: -0.64px;
@@ -915,6 +926,10 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li {
     gap: 22px;
   }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
+    min-width: 100px;
+    gap: 22px;
+  }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 16px 28px;
     letter-spacing: -0.64px;
@@ -937,6 +952,10 @@ header .headerWrapper .headerMenu .hamburger-menu {
     gap: 50px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li {
+    gap: 20px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
+    min-width: 90px;
     gap: 20px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
@@ -964,6 +983,10 @@ header .headerWrapper .headerMenu .hamburger-menu {
     gap: 40px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li {
+    gap: 18px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
+    min-width: 80px;
     gap: 18px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
@@ -1080,7 +1103,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
     font-size: 16px;
     font-family: "termina_testbold";
   }
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li img {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .arrowImage {
     display: none;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .accordian-icon-wrapper {
@@ -1147,6 +1170,9 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .dropdown a {
     cursor: default;
     pointer-events: none;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .languageTranslator {
+    display: none;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact {
     position: fixed;

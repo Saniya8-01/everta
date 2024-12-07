@@ -43,7 +43,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 								<ul class="mainNav">
 									<li class="mainNavList dropdown">
 										<a href="#!" class="mainManu">Company</a>
-										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt="">
+										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt="" class="arrowImage">
 										<div class="accordian-icon-wrapper">
 											<div class="accordion-icon"></div>
 										</div>
@@ -59,7 +59,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 									</li>
 									<li class="mainNavList dropdown">
 										<a href="#!" class="mainManu">Solutions</a>
-										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt="">
+										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt="" class="arrowImage">
 										<div class="accordian-icon-wrapper">
 											<div class="accordion-icon"></div>
 										</div>
@@ -84,6 +84,20 @@ $current_url = home_url(add_query_arg([], $wp->request));
 									</li>
 									<li class="mainNavList">
 										<a href="" class="mainManu">Resources</a>
+									</li>
+									<li class="mainNavList dropdown languageTranslator">
+										<img src="<?php bloginfo('template_directory'); ?>/images/language-svg.svg" alt="">
+										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt="" class="arrowImage">
+										<div class="dropdownMenu languageMenu">
+											<ul>
+												<li>
+													<p>EN</p>
+												</li>
+												<li>
+													<p>PL</p>
+												</li>
+											</ul>
+										</div>
 									</li>
 									<li class="mainNavList ctaContact">
 										<a href="" class="mainManu">Contact us</a>
