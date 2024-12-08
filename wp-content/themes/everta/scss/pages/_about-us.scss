@@ -1,0 +1,60 @@
+.journeySection{margin-top: 170px; margin-bottom: 200px;
+    .journeySecWrapper{
+        .secHeading{ @include wrapper; width: 80%; margin-bottom: 40px;
+            h1{margin-bottom: 20px; color: #1e1e1e; @include terminamedium; @include font80; line-height: 120%;}
+            p{color: #1e1e1e; @include terminalight; @include font24; line-height: 166%;}
+        }
+        .imgBox{overflow: hidden;
+            @keyframes zoomeffect{
+                0%{
+                    
+                  transform:scale(1,1);
+                }
+                50%{
+                    
+                  transform:scale(1.4,1.4);
+                }
+                100%{
+                    
+                  transform:scale(1,1);
+                }
+        }
+            img{animation: zoomeffect 20s infinite;}
+        }
+    }
+}
+.missionSection{margin-bottom: 200px;
+    .missionSecWrapper{
+        .mainContainer{display: flex; align-items: normal;
+            .card{width: 50%; padding: 80px 10px 80px 120px;  transition: width 0.8s ease;
+                .hoverContent{margin-bottom: 35px; transition: all 0.4s ease;  
+                    p{color: $quaternaryColor1; @include verdanaregular;@include font24; line-height: 166%; opacity: 0; visibility: hidden; max-height: 0; transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.8s ease;  width: 65%; }
+                    img{transition: transform 0.4s ease;}
+                }
+                h2{color: $quaternaryColor1; text-shadow: 0px 6.577px 55.902px rgba(0, 0, 0, 0.10); @include terminabold; @include font48; line-height: 110%; letter-spacing: -0.96px;}
+
+                &:hover{width: 140%; 
+                    .hoverContent{justify-content: space-between; display: flex;
+                        p{opacity: 1; visibility: visible;}
+                        img{transform: scale(1.5);}
+                    }
+                }
+            }
+            .mission{background: $primaryColor1;}
+            .vision{background: $quaternaryColor1;
+                & > .hoverContent{
+                    p{color: $primaryColor1;}
+                }
+                & > h2{color: $primaryColor1;}
+            }
+        }
+    }
+}
+.weValueSection{
+    h2{margin-bottom: 56px;}
+    .hover-section{
+        .hover-box{
+            .image{width: 33%;}
+        }
+    }
+}

@@ -4826,3 +4826,205 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 0px 52px 0px 20px;
   }
 }
+
+.journeySection {
+  margin-top: 170px;
+  margin-bottom: 200px;
+}
+.journeySection .journeySecWrapper .secHeading {
+  padding-left: 120px;
+  padding-right: 120px;
+  width: 80%;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .journeySection .journeySecWrapper .secHeading {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .journeySection .journeySecWrapper .secHeading {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .journeySection .journeySecWrapper .secHeading {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .journeySection .journeySecWrapper .secHeading {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.journeySection .journeySecWrapper .secHeading h1 {
+  margin-bottom: 20px;
+  color: #1e1e1e;
+  font-family: "termina_testmedium";
+  font-size: 80px;
+  line-height: 120%;
+}
+@media screen and (max-width: 1800px) {
+  .journeySection .journeySecWrapper .secHeading h1 {
+    font-size: 72px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .journeySection .journeySecWrapper .secHeading h1 {
+    font-size: 64px;
+  }
+}
+@media screen and (max-width: 1440) {
+  .journeySection .journeySecWrapper .secHeading h1 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .journeySection .journeySecWrapper .secHeading h1 {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .journeySection .journeySecWrapper .secHeading h1 {
+    font-size: 36px;
+  }
+}
+.journeySection .journeySecWrapper .secHeading p {
+  color: #1e1e1e;
+  font-family: "termina_testlight";
+  font-size: 24px;
+  line-height: 166%;
+}
+@media screen and (max-width: 1600px) {
+  .journeySection .journeySecWrapper .secHeading p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .journeySection .journeySecWrapper .secHeading p {
+    font-size: 16px;
+  }
+}
+.journeySection .journeySecWrapper .imgBox {
+  overflow: hidden;
+}
+@keyframes zoomeffect {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.4, 1.4);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.journeySection .journeySecWrapper .imgBox img {
+  animation: zoomeffect 20s infinite;
+}
+
+.missionSection {
+  margin-bottom: 200px;
+}
+.missionSection .missionSecWrapper .mainContainer {
+  display: flex;
+  align-items: normal;
+}
+.missionSection .missionSecWrapper .mainContainer .card {
+  width: 50%;
+  padding: 80px 10px 80px 120px;
+  transition: width 0.8s ease;
+}
+.missionSection .missionSecWrapper .mainContainer .card .hoverContent {
+  margin-bottom: 35px;
+  transition: all 0.4s ease;
+}
+.missionSection .missionSecWrapper .mainContainer .card .hoverContent p {
+  color: #1E1E1E;
+  font-family: "verdanaregular";
+  font-size: 24px;
+  line-height: 166%;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.8s ease;
+  width: 65%;
+}
+@media screen and (max-width: 1600px) {
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent p {
+    font-size: 16px;
+  }
+}
+.missionSection .missionSecWrapper .mainContainer .card .hoverContent img {
+  transition: transform 0.4s ease;
+}
+.missionSection .missionSecWrapper .mainContainer .card h2 {
+  color: #1E1E1E;
+  text-shadow: 0px 6.577px 55.902px rgba(0, 0, 0, 0.1);
+  font-family: "termina_testbold";
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -0.96px;
+}
+@media screen and (max-width: 1600px) {
+  .missionSection .missionSecWrapper .mainContainer .card h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .missionSection .missionSecWrapper .mainContainer .card h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .missionSection .missionSecWrapper .mainContainer .card h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .missionSection .missionSecWrapper .mainContainer .card h2 {
+    font-size: 24px;
+  }
+}
+.missionSection .missionSecWrapper .mainContainer .card:hover {
+  width: 140%;
+}
+.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent {
+  justify-content: space-between;
+  display: flex;
+}
+.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent p {
+  opacity: 1;
+  visibility: visible;
+}
+.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent img {
+  transform: scale(1.5);
+}
+.missionSection .missionSecWrapper .mainContainer .mission {
+  background: #F5F75E;
+}
+.missionSection .missionSecWrapper .mainContainer .vision {
+  background: #1E1E1E;
+}
+.missionSection .missionSecWrapper .mainContainer .vision > .hoverContent p {
+  color: #F5F75E;
+}
+.missionSection .missionSecWrapper .mainContainer .vision > h2 {
+  color: #F5F75E;
+}
+
+.weValueSection h2 {
+  margin-bottom: 56px;
+}
+.weValueSection .hover-section .hover-box .image {
+  width: 33%;
+}/*# sourceMappingURL=main.css.map */
