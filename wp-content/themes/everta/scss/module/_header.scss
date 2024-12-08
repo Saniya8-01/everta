@@ -6,21 +6,20 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                 .navLinks{
                     .navLists{
                         ul{display: flex;align-items:center;gap:56px;
-                            li{display:flex;gap:10px;padding:15px 0px;position:relative;
+                            li{display:flex;gap:10px;padding:15px 0px;position:relative;padding-right:7px;
                                 .mainManu{@include verdanaregular;@include font20;line-height: 150%;color: $quaternaryColor1;transition: 0.3s all ease-in-out;}
-                                img{transition: 0.3s all ease-in-out;}
+                                .arrowImage{transition: 0.3s all ease-in-out;}
                                 .accordian-icon-wrapper{display: none;}
                                 &.dropdown{transition: 0.3s all ease-in-out;
                                     &::before{position: absolute;content:"";bottom: 0;left: 0;width: 0;height: 5px;background: $primaryColor1;transition: 0.3s all ease-in-out;}
                                     .mainManu{cursor: default;pointer-events: none;}
                                     &.active{
-                                        &::before{width: 100%;}
-                                        .mainManu{@include verdanabold;}
-                                        img{transform: rotate(180deg);}
-                                        .dropdownMenu{display: block;}
+                                        &::before{width: calc(100% - 7px);}
+                                        .arrowImage{transform: rotate(180deg);}
+                                        .dropdownMenu{   opacity: 1;visibility: visible;}
                                     }
                                 }
-                                .dropdownMenu{position: absolute;top:100%;left:-40px;padding-top:20px;display:none;
+                                .dropdownMenu{position: absolute;top:100%;left:-40px;padding-top:20px; opacity: 0;visibility: hidden;transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
                                     ul{padding: 36px 40px;background:$primaryColor1;min-width: 320px;display:flex;flex-direction:column;align-items: start;gap:64px;
                                         li{display: flex;flex-direction:column;gap:24px;padding:0px;
                                             p{@include terminabold;@include font20;color: #323232;}
@@ -28,12 +27,18 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         }
                                     }
                                 }
-                                &:hover{
-                                    .mainManu{@include verdanabold;}
+                                .languageMenu{
+                                    ul{min-width: 115px;gap: 24px;
+                                        li{
+                                            p{cursor: pointer;}
+                                        }
+                                    }
                                 }
                             }
                             .ctaContact{padding: 0px;
-                                a{padding: 20px 32px;color: $primaryColor1;@include font16;@include terminamedium;letter-spacing: -0.64px;background: $quaternaryColor1;border-radius: 100px;}
+                                a{padding: 20px 32px;color: $primaryColor1;@include font16;@include terminamedium;letter-spacing: -0.64px;background: $quaternaryColor1;border-radius: 100px;
+                                    &:hover{@include terminamedium;}
+                                }
                             }
                         }
                     }
@@ -54,6 +59,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                     ul{padding: 36px 40px;min-width: 320px;gap:60px;
                                         li{gap:24px;}
                                     }
+                                }
+                                .languageMenu{
+                                    ul{min-width: 110px;gap: 24px;}
                                 }
                             }
                             .ctaContact{
@@ -79,6 +87,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                             li{gap:22px;}
                                         }
                                     }
+                                    .languageMenu{
+                                        ul{min-width: 100px;gap: 22px;}
+                                    }
                                 }
                                 .ctaContact{
                                     a{padding: 16px 28px;letter-spacing: -0.64px;}
@@ -103,6 +114,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                             li{gap:20px;}
                                         }
                                     }
+                                    .languageMenu{
+                                        ul{min-width: 90px;gap: 20px;}
+                                    }
                                 }
                                 .ctaContact{
                                     a{padding: 14px 24px;letter-spacing: -0.64px;}
@@ -126,6 +140,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         ul{padding: 24px 28px;min-width: 280px;gap:40px;
                                             li{gap:18px;}
                                         }
+                                    }
+                                    .languageMenu{
+                                        ul{min-width: 80px;gap: 18px;}
                                     }
                                 }
                                 .ctaContact{
@@ -171,10 +188,10 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
             .headerMenu{
                 .navMenu{position: absolute;top: 0;right: -110%;width: 100%;transition: 0.4s all ease-in-out;overflow: hidden;height: 100vh;
                     &.open {right: 0;background: #ffffff;flex-direction: column;}
-                    .navLinks{height: calc(100% - 170px);overflow-y:auto;margin-top:113px;
+                    .navLinks{height: calc(100% - 250px);overflow-y:auto;margin-top:113px;
                         .navLists{
                             ul{display: flex;flex-direction:column;align-items:start;padding:0px 20px;gap:24px;
-                                li{padding: 0px;display:flex;justify-content:space-between;align-items:center;width: 100%;flex-wrap:wrap;gap:20px;
+                                li{padding: 0px;display:flex;justify-content:space-between;align-items:center;width: 100%;flex-wrap:wrap;gap:0px;
                                     &.dropdown{transition: 0.3s all ease-in-out;
                                         &::before{content:none;}
                                         .mainManu{font-size: 16px;@include terminabold;}
@@ -186,11 +203,11 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                                     &::after {transform: rotate(90deg);transition: 0.5s all ease-in-out;width: 0px;}
                                                 }
                                             }
-                                            .dropdownMenu{height: auto;opacity: 1;transition: 0.5s all ease-in-out;}
+                                            .dropdownMenu{height: auto;opacity: 1;transition: 0.5s all ease-in-out;margin-top: 16px;}
                                         }
                                     }
                                     .mainManu{font-size: 16px;@include terminabold;}
-                                    img{display: none;}
+                                    .arrowImage{display: none;}
                                     .accordian-icon-wrapper{display: block;padding: 3px;transition: 0.3s all ease-in-out;
                                         .accordion-icon {position: relative;transition: 0.5s all ease-in-out;width: 21px;height:21px;
                                             &::after {content: "";position: absolute;left: 50%;background: #343330;height: 100%;width: 2px;transform: translateX(-50%);transition: 0.3s all ease-in-out;}
@@ -209,7 +226,8 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                 .dropdown{
                                     a{cursor: default;pointer-events: none;}
                                 }
-                                .ctaContact{position: absolute;bottom:30px;
+                                .languageTranslator{display: none;}
+                                .ctaContact{position: fixed;bottom:30px;
                                     .accordian-icon-wrapper {display: none;}
                                     a{padding: 20px 32px;letter-spacing: -0.48px;font-size: 12px;background: $primaryColor1;color:$quaternaryColor1;position: relative;padding-right: 66px;
                                         &::before{content: url(../images/black-cta-arrow.svg); position: absolute; width: 16px; top: calc(50% + 2px); transform: translateY(-50%); right: 32px; opacity: 1; transition: transform 0.3s ease-out, opacity 0.3s ease-out;}
