@@ -529,5 +529,46 @@ $(window).scroll(function () {
 });
 
 
+/******About Us Js Start */
+
+if($(".ourStorySec").length){
+    $('.sliderBox').slick({
+        slidesToShow: 1.6,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true,
+        infinite: false,
+    });
+}
+
+if($(".poweringIdeaSec").length){
+    document.addEventListener("DOMContentLoaded", () => {
+        const section = document.querySelector('.poweringIdeaSec');
+        const poweringMainContainer = document.querySelector('.poweringMainContainer');
+
+        window.addEventListener('scroll', () => {
+            const sectionRect = section.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Add 'activeViewPort' when the section is in the viewport
+            if (sectionRect.top < windowHeight && sectionRect.bottom > 0) {
+                poweringMainContainer.classList.add('activeViewPort');
+            }
+
+            // Remove 'activeViewPort' when the section is fully out of the viewport
+            if (sectionRect.bottom <= 0 || sectionRect.top >= windowHeight) {
+                poweringMainContainer.classList.remove('activeViewPort');
+            }
+        });
+
+    })
+}
+
+
+/******About Us Js End */
+
+
 
 

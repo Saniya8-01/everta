@@ -51,10 +51,112 @@
     }
 }
 .weValueSection{
-    h2{margin-bottom: 56px;}
-    .hover-section{
-        .hover-box{
-            .image{width: 33%;}
+    .evertaEveryoneSectionWrapper{
+        .evertaEveryoneSectionHeading{
+            h2{margin-bottom: 56px;}
+        }
+        .hover-section{
+            .hover-box{
+                .image{width: 33%;}
+            }
+        }
+    }
+}
+.ourStrengthsSec{background: #1e1e1e; display: block; position: relative; margin-bottom: 200px;
+    .secWrapper{@include wrapper; position: relative; z-index: 1;
+        .innerSec{position: relative; height: 400vh; padding-top: 50vh; padding-bottom: 50vh;
+            .secHeading{position: sticky; top: 50%; transform: translateY(-50%);
+                h2{color: #fff; text-align: center; color: $primaryColor1; @include terminabold; @include font80; line-height: 120%;}
+            }
+            .cardsGroup{display: flex; flex-flow: column; gap: 100px; align-items: flex-start; position: absolute; width: 100%;
+                .card{background: #fff; z-index: 2; padding: 180px 32px 32px 32px; display: flex; flex-flow: column; gap: 50px; width: 30%; position: relative;
+                    .imgBox{}
+                    .contentBox{
+                        h5{@include verdanabold; @include font28; line-height: 140%; text-transform: capitalize; margin-bottom: 20px;}
+                        p{color: #1e1e1e; @include verdanaregular; @include font16; line-height: 175%;}
+                    }
+                    &:nth-child(2){transform: translateX(230%);}
+                    &:nth-child(3){transform: translateX(110%);}
+                    &:nth-child(4){transform: translateY(35%);}
+                    &:nth-child(2n){background: #006E50;
+                        .contentBox{
+                            h5{color: #fff;}
+                            p{color: #fff;}
+                        }
+                    
+                    }
+                }
+                
+            }
+        }
+    }
+}
+.ourStorySec{margin-bottom: 200px; background: $primaryColor1;
+    .secWrapper{@include wrapper; padding-right: 0;
+        .mainContainer{display: flex; align-items: center; gap: 180px; padding: 120px 0;
+            .card{width: 50%;}
+            .contentBox{
+                h2{color: $quaternaryColor1; @include terminabold; @include font48; line-height: 133%; text-transform: uppercase; margin-bottom: 32px;}
+                p{color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; line-height: 175%; margin-bottom: 10px;
+                    &:last-child{margin-bottom: 0;}      
+                }
+            }
+            .imgBox{
+                .sliderBox{
+                    .sliderImg{margin-right: 50px; 
+                        &:last-child{margin-right: 0;}
+                        img{transition: all 0.5s ease-in-out;}
+                    }
+                }
+            }
+        }
+    }
+}
+.foundersSec{ margin-bottom: 200px; transition: all 0.5s ease-in-out;
+    .secWrapper{@include wrapper; 
+        .secHeading{ margin-bottom: 100px; padding-top: 70px;
+            h2{color: $quaternaryColor1; text-align: center; @include terminabold; line-height: 133%; text-transform: uppercase; @include font48; margin-bottom: 24px;}
+            p{color: $quaternaryColor1; text-align: center; @include verdanaregular; @include font20; line-height: 160%;}
+        }
+        .secContent{display: flex; align-items: center; justify-content: center; padding-bottom: 150px; gap: 60px;
+            .founderDetailsbox{display: flex; align-items: center; gap: 70px; justify-content: flex-end;
+                .detailBox{
+                    p{color: $quaternaryColor1; @include verdanaregular; @include font24; line-height: 133%; margin-bottom: 10px;}
+                    h6{color: $quaternaryColor1; @include verdanabold; @include font24; line-height: 140%; text-transform: capitalize;}
+                }
+                .pictureBox{transition: all 0.5s ease-in-out; position: relative; overflow: hidden; width: 354px; height: 460px; transform-origin: left; 
+                    img{}
+                }
+
+                &:last-child{flex-flow: row-reverse;
+                    .pictureBox{transform-origin: right;}
+                }
+            }
+        }
+    }
+    &:hover{background: $primaryColor1;
+        .secWrapper{
+            .secContent{
+                .founderDetailsbox{
+                    .pictureBox{transform: scaleX(1.05);}
+                }
+            }
+        }
+    }
+}
+.poweringIdeaSec{height: 100vh; overflow: hidden; position: relative; margin-bottom: 200px; background: $primaryColor1;
+    .secWrapper{
+        .poweringMainContainer{display: flex; justify-content: flex-start;
+            .imgBox{position: absolute; width: 100%; left: 0%; z-index: 1; transition: all 0.8s ease-in-out;}
+            .contentBox{width: 35%; position: absolute; right: 160px; top: 120%; transform: translateY(-50%); transition: all 0.8s ease-in-out;
+                p:first-child{color: $quaternaryColor1; @include font16; @include verdanaregular; line-height: 250%; text-transform: uppercase; margin-bottom: 16px;}
+                h2{color: $quaternaryColor1; @include terminabold; @include font42; line-height: 142%; text-transform: uppercase; margin-bottom: 20px;}
+                p{color: $quaternaryColor1; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 40px;}
+            }
+            &.activeViewPort{
+                .imgBox{left: -50%;}
+                .contentBox{top: 50%;}
+            }
         }
     }
 }
