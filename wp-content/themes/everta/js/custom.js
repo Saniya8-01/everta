@@ -528,11 +528,63 @@ $(window).scroll(function () {
     }
 });
 
+/******About Us Js Start */
+
+if($(".ourStorySec").length){
+    $('.sliderBox').slick({
+        slidesToShow: 1.6,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true,
+        infinite: false,
+    });
+}
+
+if($(".poweringIdeaSec").length){
+    document.addEventListener("DOMContentLoaded", () => {
+        const section = document.querySelector('.poweringIdeaSec');
+        const poweringMainContainer = document.querySelector('.poweringMainContainer');
+
+        window.addEventListener('scroll', () => {
+            const sectionRect = section.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Add 'activeViewPort' when the section is in the viewport
+            if (sectionRect.top < windowHeight && sectionRect.bottom > 0) {
+                poweringMainContainer.classList.add('activeViewPort');
+            }
+
+            // Remove 'activeViewPort' when the section is fully out of the viewport
+            if (sectionRect.bottom <= 0 || sectionRect.top >= windowHeight) {
+                poweringMainContainer.classList.remove('activeViewPort');
+            }
+        });
+
+    })
+}
+
+if($(".visitUsSec").length){
+    $('.visitUsSliderBox').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        centerMode: false,
+        focusOnSelect: true,
+        infinite: false,
+    });
+}
+
+
+/******About Us Js End */
+
+
 const customSelects = document.querySelectorAll('.customSelect');
 
 customSelects.forEach((customSelect) => {
     const selectElement = customSelect.querySelector('select');
-
     selectElement.addEventListener('focus', () => {
         customSelect.classList.add('active')
         }
