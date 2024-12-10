@@ -1,0 +1,91 @@
+.careerBannerSection{margin: 172px 0px 120px;
+    .careerSectionWrapper{@include wrapper;
+        h1{color: $quaternaryColor1; @include terminamedium; @include font80; font-weight: $fontW600; line-height: 120%; margin-bottom: 20px;}
+        h6{width: 80%; margin-bottom: 36px; color: $quaternaryColor1; @include verdanaregular; @include font24; font-weight: $fontW400; line-height: 166%;}
+        a{margin-bottom: 40px!important;}
+        .careerBannerImg{
+            img{display: block; object-fit: cover;}
+        }
+    }
+}
+
+.careerTeamSection{margin-bottom: 244px;
+    .careerSectionWrapper{padding-top: 66px; padding-bottom: 66px; @include wrapper; background: #F2F3F3;
+        h2{color: $quaternaryColor1; @include terminabold; @include font48; font-weight: $fontW700; line-height: 134%; text-transform: uppercase;margin-bottom: 20px;}
+        h6{color: $quaternaryColor1; @include verdanaregular; @include font24; font-weight: $fontW400; line-height: 134%; margin-bottom: 66px;}
+        .careerFilterSection{display: flex; justify-content: space-between; align-items: center;
+            .selFilter{width: 75%;
+                .customSelect{position: relative; width: 30%;
+                    select{width: 100%; margin-right: 32px; background: transparent; color: $quaternaryColor1; @include verdanaregular; @include font16; font-weight: $fontW400; border-bottom: 1px solid $quaternaryColor3; padding: 4px 0px 12px; position: relative; -webkit-appearance: none; -moz-appearance: none; appearance: none;
+                        option{padding: 10px 15px; margin-bottom: 8px;}
+                    }
+                    &::before {content: url(../images/dropdown-icon.svg); position: absolute; top: 45%; right: 10px; transform: translateY(-55%);}
+                    &.active::before {content: url(../images/dropup-icon.svg);}
+                }
+            }
+            .filterBtnContainer{width: 25%; display: flex; justify-content: flex-end;
+                button{&:first-child{margin-right: 32px}}
+                .ctaApplyFilter{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: $primaryColor1; background: $quaternaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: center;display:inline-block;}
+                .ctaClearFilter{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: #000; background: transparent; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: center;border:1px solid $quaternaryColor2;display:inline-block;}
+            }
+        }
+    }
+    .careerSectionWrapperTwo{
+        .careerPositionBox{@include wrapper; padding-top: 40px; padding-bottom: 40px; border-bottom: 1px solid $tertiaryColor3; background: transparent; cursor: default; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease-in-out;
+            .subBoxContent{
+                h3{color: $quaternaryColor1; @include terminamedium; @include font32; font-weight: $fontW600; line-height: 113%; margin-bottom: 24px;}
+                .posSubContent{display: flex; align-items: center; gap: 32px;
+                    div{display: flex; align-items: center; gap: 8px;
+                        img{display: block; object-fit: cover;}
+                        h4{color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font24; font-weight: $fontW400;line-height: 166%;}
+                    }
+                }
+            }
+            .subBoxImg{opacity: 0; visibility: hidden; transition: all 0.3s ease-in-out;
+                img{display: block; object-fit: cover; width: 100%;}
+            }
+            &:hover{background: $primaryColor1;
+                .subBoxImg{opacity: 1; visibility: visible;}
+            }
+            &:first-child{border-top: 1px solid $tertiaryColor3;}
+        }
+    }
+}
+
+.careerOpeningModal{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);
+    &.show-modal {display: block;}
+    .modalContent {position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); width: 70%;
+        .jobHeadingDesc{background: $primaryColor1; padding: 56px 64px 34px;
+            .closeBtn{cursor: pointer; display: block; float: right;
+                img{display: block; object-fit: cover;}
+            }
+            .jobHeadingDescSub{margin-top: 78px; display: flex; align-items: center; justify-content: space-between; gap: 32px;
+                .headingDescContent{
+                    span{display: block; width: fit-content; margin-bottom: 13px; color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400; line-height: 175%; padding: 4px 8px; border-radius: 2px; background: rgba(30, 30, 30, 0.10);}
+                    .subBoxContent{
+                        h3{color: $quaternaryColor1; @include terminamedium; @include font32; font-weight: $fontW600; line-height: 113%; margin-bottom: 13px;}
+                        .posSubContent{display: flex; align-items: center; gap: 40px;
+                            div{display: flex; align-items: center; gap: 4px;
+                                img{display: block; object-fit: cover;}
+                                h4{color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 166%;}
+                            }
+                        }
+                    }
+                }
+                // a{}
+            }
+        }
+        .jobDescription{background: #fff; padding: 68px 64px 34px; height: 450px; overflow-y: scroll;
+            h6{color: $quaternaryColor2; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%;}
+            h4{margin: 32px 0px 8px; color: $quaternaryColor2; text-align: justify; @include verdanabold; @include font20; font-weight: $fontW700;line-height: 140%}
+            p{color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%;
+                &:last-of-type{margin-bottom: 8px;}
+            }
+            ul{padding-left: 20px;
+                li{list-style: disc; margin-bottom: 8px; color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%;}
+            }
+            &::-webkit-scrollbar {width: 8px;}
+            &::-webkit-scrollbar-thumb {border-radius: 200px; border: 0.2px solid rgba(0, 0, 0, 0.16); background: rgba(34, 34, 34, 0.09);}
+        }
+    }
+}
