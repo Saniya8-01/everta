@@ -566,6 +566,18 @@ if($(".poweringIdeaSec").length){
     })
 }
 
+if($(".visitUsSec").length){
+    $('.visitUsSliderBox').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        centerMode: false,
+        focusOnSelect: true,
+        infinite: false,
+    });
+}
+
 
 /******About Us Js End */
 

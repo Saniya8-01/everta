@@ -207,4 +207,37 @@
     </div>
 </section>
 
+<section class="careerAtEvertaSec">
+    <div class="secWrapper">
+        <div class="secHeading">
+            <h2>lOOKING FOR A CAREER AT EVERTA?</h2>
+            <a href="" class="ctaBlack">View Open Positions</a>
+        </div>
+    </div>
+</section>
+
+<section class="visitUsSec">
+    <div class="secWrapper">
+        <div class="visiUsMainContainer">
+            <div class="mapBox">
+                <img src="<?php bloginfo('template_directory'); ?>/images/about-us-map-img.webp" alt="">
+            </div>
+            <div class="addressContent">
+                <h2>visit us!</h2>
+                <div class="visitUsSliderBox">
+                    <div class="addressBox">
+                        <p>New Delhi, India</p>
+                        <p>IILM, 5th Floor <br> 60,61,62 DDU Marg, Rouse Avenue, <br> New Delhi-110002.</p>
+                    </div>
+                    <div class="addressBox">
+                        <p>Wroclaw, Poland</p>
+                        <p>Szczecińska <br> 17E, 54-517</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
 <?php get_footer(); ?>

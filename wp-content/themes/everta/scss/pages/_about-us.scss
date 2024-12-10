@@ -160,3 +160,38 @@
         }
     }
 }
+.careerAtEvertaSec{margin-bottom: 200px; border-top: 1px solid #BEC3C5;border-bottom: 1px solid #BEC3C5;
+    .secWrapper{@include wrapper;
+        .secHeading{display: flex; align-items: center; justify-content: center; flex-flow: column; gap: 50px; padding: 70px 0;
+            h2{color: $quaternaryColor1; text-align: center; @include terminabold; @include font48; line-height: 133%; text-transform: uppercase;}
+
+        }
+    }
+}
+.visitUsSec{margin-bottom: 200px;
+    .secWrapper{
+        .visiUsMainContainer{display: flex; align-items: center;
+            .mapBox{width: calc(70%);}
+            .addressContent{width: 30%; padding: 100px 85px; background: $quaternaryColor1;
+                h2{color: $primaryColor1; @include terminabold; @include font48; line-height: 133%; text-transform: uppercase; margin-bottom: 30px;}
+                .visitUsSliderBox{
+                    .addressBox{
+                        p{color: $tertiaryColor5; @include verdanaregular; @include font28; line-height: 142%; margin-bottom: 10px;}
+                        p:last-child{ @include font20; line-height: 160%; margin-bottom: 0;}
+                    }
+                    &.slick-dotted.slick-slider{margin-bottom: 65px;
+                        .slick-dots{bottom: -65px; display: inline-flex;
+                            li{width: 8px; height: 8px; background: rgba(245, 247, 94, 0.20); border-radius: 100%;
+                                button{width: 8px; height: 8px;}
+                                &.slick-active{background: rgba(245, 247, 94, 1);}
+                                &:only-child {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
