@@ -497,36 +497,36 @@ $(window).on('resize scroll', function () {
 });
 
 
-// var counted = 0;
-// $(window).scroll(function () {
-//     var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
-//     if (counted == 0 && $(window).scrollTop() > oTop) {
-//         $('.statCard h3').each(function () {
-//             var $this = $(this),
-//                 countTo = $this.attr('data-count');
-//             var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
+var counted = 0;
+$(window).scroll(function () {
+    var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
+    if (counted == 0 && $(window).scrollTop() > oTop) {
+        $('.statCard h3').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
 
-//             $({
-//                 countNum: 0
-//             }).animate(
-//                 {
-//                     countNum: countTo
-//                 },
-//                 {
-//                     duration: 2000,
-//                     easing: 'swing',
-//                     step: function () {
-//                         $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
-//                     },
-//                     complete: function () {
-//                         $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
-//                     }
-//                 }
-//             );
-//         });
-//         counted = 1;
-//     }
-// });
+            $({
+                countNum: 0
+            }).animate(
+                {
+                    countNum: countTo
+                },
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
+                    },
+                    complete: function () {
+                        $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
+                    }
+                }
+            );
+        });
+        counted = 1;
+    }
+});
 
 /******About Us Js Start */
 
