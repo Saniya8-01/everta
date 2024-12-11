@@ -497,73 +497,88 @@ $(window).on('resize scroll', function () {
 });
 
 
-var counted = 0;
-$(window).scroll(function () {
-    var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
-    if (counted == 0 && $(window).scrollTop() > oTop) {
-        $('.statCard h3').each(function () {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
-            var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
+// var counted = 0;
+// $(window).scroll(function () {
+//     var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
+//     if (counted == 0 && $(window).scrollTop() > oTop) {
+//         $('.statCard h3').each(function () {
+//             var $this = $(this),
+//                 countTo = $this.attr('data-count');
+//             var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
 
-            $({
-                countNum: 0
-            }).animate(
-                {
-                    countNum: countTo
-                },
-                {
-                    duration: 2000,
-                    easing: 'swing',
-                    step: function () {
-                        $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
-                    },
-                    complete: function () {
-                        $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
-                    }
-                }
-            );
-        });
-        counted = 1;
-    }
-});
+//             $({
+//                 countNum: 0
+//             }).animate(
+//                 {
+//                     countNum: countTo
+//                 },
+//                 {
+//                     duration: 2000,
+//                     easing: 'swing',
+//                     step: function () {
+//                         $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
+//                     },
+//                     complete: function () {
+//                         $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
+//                     }
+//                 }
+//             );
+//         });
+//         counted = 1;
+//     }
+// });
 
 
 /******About Us Js Start */
 
 if($(".ourStorySec").length){
     $('.sliderBox').slick({
-        slidesToShow: 1.6,
+        slidesToShow: 1.4,
         slidesToScroll: 1,
         arrows: false,
         dots: false,
         centerMode: false,
         focusOnSelect: true,
         infinite: false,
+        // autoplay: true
+        responsive: [
+            {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 1.2,
+                }
+            },
+            {
+                breakpoint: 820,
+                settings: {
+                    slidesToShow: 1.1,
+                }
+            },
+        ]
     });
 }
 
 if($(".poweringIdeaSec").length){
-    document.addEventListener("DOMContentLoaded", () => {
-        const section = document.querySelector('.poweringIdeaSec');
-        const poweringMainContainer = document.querySelector('.poweringMainContainer');
-
-        window.addEventListener('scroll', () => {
-            const sectionRect = section.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-
-            // Add 'activeViewPort' when the section is in the viewport
-            if (sectionRect.top < windowHeight && sectionRect.bottom > 0) {
-                poweringMainContainer.classList.add('activeViewPort');
-            }
-
-            // Remove 'activeViewPort' when the section is fully out of the viewport
-            if (sectionRect.bottom <= 0 || sectionRect.top >= windowHeight) {
-                poweringMainContainer.classList.remove('activeViewPort');
-            }
-        });
-
-    })
+    if(window.innerWidth > 820){
+        document.addEventListener("DOMContentLoaded", () => {
+            const section = document.querySelector('.poweringIdeaSec');
+            const poweringMainContainer = document.querySelector('.poweringMainContainer');
+    
+            window.addEventListener('scroll', () => {
+                const sectionRect = section.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                const viewportMidPoint = windowHeight / 2;
+    
+                // Add 'activeViewPort' when the section reaches 50% of the viewport
+                if (sectionRect.top < viewportMidPoint && sectionRect.bottom > viewportMidPoint) {
+                    poweringMainContainer.classList.add('activeViewPort');
+                } else {
+                    // Remove 'activeViewPort' when the section is no longer in the 50% region
+                    poweringMainContainer.classList.remove('activeViewPort');
+                }
+            });
+        })
+    }
 }
 
 if($(".visitUsSec").length){
@@ -575,9 +590,38 @@ if($(".visitUsSec").length){
         centerMode: false,
         focusOnSelect: true,
         infinite: false,
+        autoplay: true,
     });
-}
 
+    function showActiveIcon (){
+        const activeSlide = document.querySelector(".visitUsSliderBox .slick-current")
+        const INDIA = document.getElementById("INDIA");
+        const UAE = document.getElementById("UAE");
+        const POLAND = document.getElementById("POLAND");
+        if(activeSlide){
+            const companyName = activeSlide.getAttribute("data-company");
+            
+            if(companyName === "INDIA"){
+                INDIA.style.opacity = 1;
+                UAE.style.opacity = 0; 
+                POLAND.style.opacity = 0; 
+            }else if(companyName === "POLAND"){
+                POLAND.style.opacity = 1;
+                INDIA.style.opacity = 0;
+                UAE.style.opacity = 0;
+            }else{
+                UAE.style.opacity = 1;
+                POLAND.style.opacity = 0;
+                INDIA.style.opacity = 0;
+            }
+        }
+    }
+    $('.visitUsSliderBox').on('afterChange', function () {
+        showActiveIcon();
+    });
+
+    showActiveIcon()
+}
 
 /******About Us Js End */
 
