@@ -528,7 +528,6 @@ $(window).on('resize scroll', function () {
 //     }
 // });
 
-
 /******About Us Js Start */
 
 if($(".ourStorySec").length){
@@ -626,5 +625,54 @@ if($(".visitUsSec").length){
 /******About Us Js End */
 
 
+const customSelects = document.querySelectorAll('.customSelect');
 
+customSelects.forEach((customSelect) => {
+    const selectElement = customSelect.querySelector('select');
+    selectElement.addEventListener('focus', () => {
+        customSelect.classList.add('active')
+        }
+    );
 
+    selectElement.addEventListener('blur', () => {
+        if (!document.activeElement.classList.contains('customSelect')) { 
+          customSelect.classList.remove('active');
+        }
+    });
+});
+
+// career opening modal starts
+document.addEventListener("DOMContentLoaded", function() {
+    var careerBoxes = document.querySelectorAll(".careerPositionBox");
+    var closeButtons = document.querySelectorAll(".closeBtn");
+
+    careerBoxes.forEach(function(box) {
+        box.addEventListener("click", function() {
+    
+            var modalId = box.getAttribute("data-modal");
+            var modal = document.getElementById(modalId);
+    
+            if (modal) {
+                modal.classList.add("show-modal");
+            }
+        });
+    });
+
+    closeButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            var modal = button.closest(".careerOpeningModal");
+            modal.classList.remove("show-modal");
+        });
+    });
+
+    window.addEventListener("click", function(event) {
+        var openModals = document.querySelectorAll(".careerOpeningModal.show-modal");
+        openModals.forEach(function(modal) {
+            if (event.target === modal) {
+                modal.classList.remove("show-modal");
+            }
+        });
+    });
+});
+
+// career opening modal ends
