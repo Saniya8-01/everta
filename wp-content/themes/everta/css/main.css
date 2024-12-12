@@ -5757,40 +5757,50 @@ body {
   padding: 80px 10px 80px 120px;
   transition: width 0.8s ease;
   position: relative;
+  overflow: hidden;
 }
 .missionSection .missionSecWrapper .mainContainer .card .hoverContent {
   margin-bottom: 35px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 150px;
   transition: 0.4s ease-in;
+  position: relative;
 }
-.missionSection .missionSecWrapper .mainContainer .card .hoverContent p {
+.missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt {
+  width: 70%;
+  overflow: hidden;
+  height: 160px;
+}
+.missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
   color: #1E1E1E;
   font-family: "verdanaregular";
   font-size: 24px;
   line-height: 166%;
   overflow: hidden;
-  display: none;
-  min-height: 250px;
-  overflow: hidden;
-  transition: 0.4s ease-in;
-  width: 65%;
-  transition: width 0.4s ease-in;
+  transition: 0.4s all ease-in;
+  transform: translateX(-100%);
 }
 @media screen and (max-width: 1600px) {
-  .missionSection .missionSecWrapper .mainContainer .card .hoverContent p {
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .missionSection .missionSecWrapper .mainContainer .card .hoverContent p {
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
     font-size: 16px;
   }
 }
-.missionSection .missionSecWrapper .mainContainer .card .hoverContent img {
-  transition: all 0.8s ease;
+.missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon {
+  width: 180px;
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.4s all ease-in;
+}
+.missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon img {
+  transition: 0.6s all ease-in;
 }
 .missionSection .missionSecWrapper .mainContainer .card h2 {
   color: #1E1E1E;
@@ -5824,28 +5834,26 @@ body {
   width: 100%;
   transition: 0.4s ease-in;
 }
-.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent {
-  transition: 0.4s ease-in;
+.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardTxt p {
+  transform: translateX(0%);
 }
-.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent p {
-  display: block;
-  max-height: 500px;
-  transition: 0.4s ease-in;
+.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
+  left: 88%;
 }
-.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent img {
-  transition: all 0.8s ease;
+.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon img {
+  transform: scale3d(1.6, 1.6, 1.6);
 }
-.missionSection .missionSecWrapper .mainContainer .mission {
+.missionSection .missionSecWrapper .mainContainer .card.mission {
   background: #F5F75E;
   z-index: 1;
 }
-.missionSection .missionSecWrapper .mainContainer .vision {
+.missionSection .missionSecWrapper .mainContainer .card.vision {
   background: #1E1E1E;
 }
-.missionSection .missionSecWrapper .mainContainer .vision > .hoverContent p {
+.missionSection .missionSecWrapper .mainContainer .card.vision > .hoverContent .cardTxt p {
   color: #F5F75E;
 }
-.missionSection .missionSecWrapper .mainContainer .vision > h2 {
+.missionSection .missionSecWrapper .mainContainer .card.vision > h2 {
   color: #F5F75E;
 }
 @media all and (max-width: 1800px) {
