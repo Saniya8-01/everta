@@ -64,16 +64,17 @@
     .missionSecWrapper{
         .mainContainer{display: flex; align-items: normal; position: relative;
             .card{width: 50%; padding: 80px 10px 80px 120px;  transition: width 0.8s ease; position: relative;   
-                .hoverContent{margin-bottom: 35px;display: flex; align-items: center; transform: translateX(-87%); justify-content: space-between; gap: 150px;
-                    p{color: $quaternaryColor1; @include verdanaregular;@include font24; line-height: 166%; max-height: 200px; overflow: hidden; }
+                .hoverContent{margin-bottom: 35px;display: flex; align-items: center; justify-content: space-between; gap: 150px; transition:  0.4s ease-in;
+                    p{color: $quaternaryColor1; @include verdanaregular;@include font24; line-height: 166%;  overflow: hidden; display: none; min-height: 250px; overflow: hidden;  transition:  0.4s ease-in; width: 65%;   transition: width 0.4s ease-in;}
                     // opacity: 0; visibility: hidden; max-height: 0; height: auto; transition: opacity 0.4s ease, visibility 0.4s ease, max-height 0.2s ease-in-out; 
                     img{transition: all 0.8s ease;}
                 }
                 h2{color: $quaternaryColor1; text-shadow: 0px 6.577px 55.902px rgba(0, 0, 0, 0.10); @include terminabold; @include font48; line-height: 110%; letter-spacing: -0.96px;}
 
-                &:hover{width: 100%;
-                    .hoverContent{  transform: translateX(0); 
-                        p{width: 78%; opacity: 1; visibility: visible; }
+                &:hover{width: 100%; transition:  0.4s ease-in;
+                    .hoverContent{  transition:  0.4s ease-in;
+                        p{display: block; max-height: 500px; transition:  0.4s ease-in; }
+                        img{transition: all 0.8s ease;}
                     }
                 }
             }
@@ -659,15 +660,34 @@
         .visiUsMainContainer{display: flex; align-items: center;
             .mapBox{width: calc(70%);
                 .desktopSVG{
-                    svg{
-                       
-                        
+                    svg{ 
                         #INDIA{opacity: 0;};
                         #UAE{opacity: 0;};
                         #POLAND{opacity: 0;}
                      }
                 }
-                .mblSVG{display: none;}
+                .mblSVG{display: none;
+                    svg{ .cls-1 {
+                        fill: none;
+                    }
+
+                    .cls-2, .cls-3 {
+                        fill: #1e1e1e;
+                    }
+
+                    .cls-4, .cls-5 {
+                        fill: #e5e7e8;
+                    }
+
+                    .cls-5, .cls-3 {
+                        fill-rule: evenodd;
+                    }
+
+                    .cls-6 {
+                        clip-path: url(#clippath);
+                    }}
+                
+                }
                 
             
             }
@@ -744,9 +764,19 @@
     }
     @media all and (max-width: 820px){
         .secWrapper{
-            .visiUsMainContainer{flex-flow: column; gap: 24px;
-                .mapBox{width: 100%;}
-                .addressContent{width: 100%; padding: 50px 10px 30px 30px ;
+            .visiUsMainContainer{flex-flow: row; gap: 24px;
+                .mapBox{width: 50%;
+                    .desktopSVG{display: none;}
+                    .mblSVG{display: block;
+                        svg{
+                            #INDIAA{opacity: 0;};
+                            #UAEE{opacity: 0;};
+                            #POLANDD{opacity: 0;}
+                        }
+                    }
+                
+                }
+                .addressContent{width: 50%; padding: 50px 10px 30px 30px ;
                     h2{margin-bottom: 20px;}
                 }
             }
@@ -754,7 +784,7 @@
     }
     @media all and (max-width: 720px){margin-bottom: 100px;
         .secWrapper{
-            .visiUsMainContainer{
+            .visiUsMainContainer{flex-flow: column;
                 .mapBox{width: 100%;}
                 .addressContent{width: 100%; padding: 20px 10px 30px 30px ;
                     h2{margin-bottom: 16px; font-size: 24px; line-height: 133%;}

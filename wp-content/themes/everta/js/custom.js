@@ -593,26 +593,51 @@ if($(".visitUsSec").length){
     });
 
     function showActiveIcon (){
-        const activeSlide = document.querySelector(".visitUsSliderBox .slick-current")
+        const activeSlide = document.querySelector(".visitUsSliderBox .slick-current");
+        const desktopSVG = document.querySelector(".desktopSVG");
+        const mblSVG = document.querySelector(".mblSVG");
         const INDIA = document.getElementById("INDIA");
+        const INDIAA = document.getElementById("INDIAA");
+        console.log(INDIA);
+        
         const UAE = document.getElementById("UAE");
+        const UAEE = document.getElementById("UAEE");
         const POLAND = document.getElementById("POLAND");
+        const POLANDD = document.getElementById("POLANDD");
         if(activeSlide){
             const companyName = activeSlide.getAttribute("data-company");
-            
-            if(companyName === "INDIA"){
-                INDIA.style.opacity = 1;
-                UAE.style.opacity = 0; 
-                POLAND.style.opacity = 0; 
-            }else if(companyName === "POLAND"){
-                POLAND.style.opacity = 1;
-                INDIA.style.opacity = 0;
-                UAE.style.opacity = 0;
+            const companyNameMbl = activeSlide.getAttribute("data-company-mbl");
+            if(window.getComputedStyle(desktopSVG).display !== "none"){ 
+                if(companyName === "INDIA" ){
+                    INDIA.style.opacity = 1;
+                    UAE.style.opacity = 0; 
+                    POLAND.style.opacity = 0; 
+                }else if(companyName === "POLAND"){
+                    POLAND.style.opacity = 1;
+                    INDIA.style.opacity = 0;
+                    UAE.style.opacity = 0;
+                }else{
+                    UAE.style.opacity = 1;
+                    POLAND.style.opacity = 0;
+                    INDIA.style.opacity = 0;
+                }
             }else{
-                UAE.style.opacity = 1;
-                POLAND.style.opacity = 0;
-                INDIA.style.opacity = 0;
+                if(companyNameMbl === "INDIAA"  ){
+                    INDIAA.style.opacity = 1;
+                    UAEE.style.opacity = 0; 
+                    POLANDD.style.opacity = 0; 
+                }else if(companyNameMbl === "POLANDD"){
+                    POLANDD.style.opacity = 1;
+                    INDIAA.style.opacity = 0;
+                    UAEE.style.opacity = 0;
+                }else{
+                    UAEE.style.opacity = 1;
+                    POLANDD.style.opacity = 0;
+                    INDIAA.style.opacity = 0;
+                }
+                
             }
+           
         }
     }
     $('.visitUsSliderBox').on('afterChange', function () {
