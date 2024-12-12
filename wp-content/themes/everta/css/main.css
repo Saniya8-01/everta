@@ -5728,7 +5728,7 @@ body {
 }
 @media all and (max-width: 720px) {
   .journeySection {
-    margin-bottom: 50px;
+    margin-bottom: 72px;
   }
   .journeySection .journeySecWrapper .secHeading {
     margin-bottom: 50px;
@@ -6196,7 +6196,7 @@ body {
 }
 @media all and (max-width: 720px) {
   .ourStrengthsSec {
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
   .ourStrengthsSec .secWrapper .innerSec {
     height: 360vh;
@@ -6434,7 +6434,7 @@ body {
 }
 @media all and (max-width: 720px) {
   .ourStorySec {
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
   .ourStorySec .secWrapper .mainContainer {
     gap: 50px;
@@ -6735,7 +6735,7 @@ body {
 @media all and (max-width: 720px) {
   .foundersSec {
     background: #F5F75E;
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
   .foundersSec .secWrapper .secHeading {
     margin-bottom: 45px;
@@ -7007,7 +7007,7 @@ body {
 }
 @media all and (max-width: 720px) {
   .poweringIdeaSec {
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
   .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p:first-child {
     margin-bottom: 12px;
@@ -7128,6 +7128,9 @@ body {
   }
 }
 @media all and (max-width: 720px) {
+  .careerAtEvertaSec {
+    margin-bottom: 72px;
+  }
   .careerAtEvertaSec .secWrapper .secHeading {
     gap: 25px;
   }
@@ -7366,7 +7369,7 @@ body {
 }
 @media all and (max-width: 720px) {
   .visitUsSec {
-    margin-bottom: 100px;
+    margin-bottom: 72px;
   }
   .visitUsSec .secWrapper .visiUsMainContainer {
     flex-flow: column;
