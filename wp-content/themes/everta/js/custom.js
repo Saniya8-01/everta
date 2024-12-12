@@ -580,22 +580,38 @@ if($(".visitUsSec").length){
 
 /******About Us Js End */
 
+/* Careers page JS Starts */
 
-const customSelects = document.querySelectorAll('.customSelect');
+document.addEventListener("DOMContentLoaded", function() {
+    const optionMenu = document.querySelectorAll(".customSelect");
 
-customSelects.forEach((customSelect) => {
-    const selectElement = customSelect.querySelector('select');
-    selectElement.addEventListener('focus', () => {
-        customSelect.classList.add('active')
-        }
-    );
+    optionMenu.forEach((optMenu)=>{
+        const selectBtn = optMenu.querySelector(".selectBtn");
+        const options = optMenu.querySelectorAll(".option");
+        const sBtn_text = optMenu.querySelector(".sBtntext");
 
-    selectElement.addEventListener('blur', () => {
-        if (!document.activeElement.classList.contains('customSelect')) { 
-          customSelect.classList.remove('active');
-        }
-    });
-});
+        selectBtn.addEventListener("click", (e) =>{
+            e.stopPropagation();
+            optMenu.classList.toggle("active");
+        });
+
+        options.forEach((option) => {
+            option.addEventListener("click", () => {
+                let selectedOption = option.innerText;
+                sBtn_text.innerText = selectedOption;
+                optMenu.classList.remove("active");
+            });
+        });
+    })
+
+    window.addEventListener("click", function(e){
+        optionMenu.forEach((optMenu)=>{
+            if(!optMenu.contains(e.target)){
+                optMenu.classList.remove("active");
+            }
+        })
+    })
+})
 
 // career opening modal starts
 document.addEventListener("DOMContentLoaded", function() {
@@ -610,6 +626,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
             if (modal) {
                 modal.classList.add("show-modal");
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "";
             }
         });
     });
@@ -618,6 +637,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             var modal = button.closest(".careerOpeningModal");
             modal.classList.remove("show-modal");
+            document.body.style.overflow = "";
         });
     });
 
@@ -626,9 +646,11 @@ document.addEventListener("DOMContentLoaded", function() {
         openModals.forEach(function(modal) {
             if (event.target === modal) {
                 modal.classList.remove("show-modal");
+                document.body.style.overflow = "";
             }
         });
     });
 });
 
 // career opening modal ends
+/* Careers page JS Ends */
