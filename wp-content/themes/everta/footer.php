@@ -50,51 +50,51 @@
                     <div class="footerMenuWrapper">
                         <p><?php echo get_sub_field('company', 'option'); ?></p>
                         <?php
-                        wp_nav_menu([
-                            'menu'            => 'Company',
-                            'theme_location'  => 'Company',
+                            wp_nav_menu([
+                                'menu'            => 'Company',
+                                'theme_location'  => 'Company',
 
-                        ]);
+                            ]);
                         ?>
                     </div>
                     <div class="footerMenuWrapper">
                         <p><?php echo get_sub_field('ac_charging', 'option'); ?></p>
                         <?php
-                        wp_nav_menu([
-                            'menu'            => 'AC Charging',
-                            'theme_location'  => 'AC Charging',
+                            wp_nav_menu([
+                                'menu'            => 'AC Charging',
+                                'theme_location'  => 'AC Charging',
 
-                        ]);
+                            ]);
                         ?>
                     </div>
                     <div class="footerMenuWrapper">
                         <p><?php echo get_sub_field('dc_charging', 'option'); ?></p>
                         <?php
-                        wp_nav_menu([
-                            'menu'            => 'DC Charging',
-                            'theme_location'  => 'Company',
+                            wp_nav_menu([
+                                'menu'            => 'DC Charging',
+                                'theme_location'  => 'Company',
 
-                        ]);
+                            ]);
                         ?>
                     </div>
                     <div class="footerMenuWrapper">
                         <p><?php echo get_sub_field('digital_products', 'option'); ?></p>
                         <?php
-                        wp_nav_menu([
-                            'menu'            => 'Digital Products',
-                            'theme_location'  => 'Digital Products',
+                            wp_nav_menu([
+                                'menu'            => 'Digital Products',
+                                'theme_location'  => 'Digital Products',
 
-                        ]);
+                            ]);
                         ?>
                     </div>
                     <div class="footerMenuWrapper">
                         <p><?php echo get_sub_field('resources', 'option'); ?></p>
                         <?php
-                        wp_nav_menu([
-                            'menu'            => 'Resources',
-                            'theme_location'  => 'Resources',
+                            wp_nav_menu([
+                                'menu'            => 'Resources',
+                                'theme_location'  => 'Resources',
 
-                        ]);
+                            ]);
                         ?>
                     </div>
                     <?php endwhile; ?>
