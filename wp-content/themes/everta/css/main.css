@@ -5656,7 +5656,7 @@ body {
     transform: scale(1, 1);
   }
   100% {
-    transform: scale(1.4, 1.4);
+    transform: scale(1.2, 1.2);
   }
 }
 .journeySection .journeySecWrapper .imgBox img {
@@ -5686,6 +5686,7 @@ body {
 @media all and (max-width: 1440px) {
   .journeySection {
     margin-bottom: 120px;
+    margin-top: 120px;
   }
   .journeySection .journeySecWrapper .secHeading {
     margin-bottom: 30px;
@@ -5696,7 +5697,7 @@ body {
 }
 @media all and (max-width: 1280px) {
   .journeySection {
-    margin-top: 120px;
+    margin-top: 100px;
   }
   .journeySection .journeySecWrapper .secHeading {
     width: 90%;
@@ -6070,7 +6071,7 @@ body {
     margin-bottom: 180px;
   }
   .ourStrengthsSec .secWrapper .innerSec {
-    height: 400vh;
+    height: 470vh;
   }
   .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card {
     padding-top: 160px;
@@ -6081,7 +6082,7 @@ body {
     margin-bottom: 150px;
   }
   .ourStrengthsSec .secWrapper .innerSec {
-    height: 430vh;
+    height: 480vh;
   }
   .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card {
     padding-top: 150px;
@@ -6099,7 +6100,7 @@ body {
     margin-bottom: 120px;
   }
   .ourStrengthsSec .secWrapper .innerSec {
-    height: 400vh;
+    height: 430vh;
   }
   .ourStrengthsSec .secWrapper .innerSec .cardsGroup {
     gap: 80px;
@@ -6118,9 +6119,14 @@ body {
     transform: translateX(120%);
   }
 }
-@media all and (max-width: 1366px) {
+@media all and (min-width: 1366px) and (max-width: 1366px) and (min-height: 768px) and (max-height: 768px) {
   .ourStrengthsSec .secWrapper .innerSec {
-    height: 430vh;
+    height: 480vh;
+  }
+}
+@media all and (min-width: 1366px) and (max-width: 1366px) and (min-height: 1024px) and (max-height: 1024px) {
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 350vh;
   }
 }
 @media all and (max-width: 1280px) {
@@ -6135,12 +6141,17 @@ body {
     margin-bottom: 16px;
   }
 }
+@media all and (max-width: 1180px) {
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 425vh;
+  }
+}
 @media all and (max-width: 1024px) {
   .ourStrengthsSec {
     margin-bottom: 100px;
   }
   .ourStrengthsSec .secWrapper .innerSec {
-    height: 250vh;
+    height: 430vh;
   }
   .ourStrengthsSec .secWrapper .innerSec .cardsGroup {
     gap: 60px;

@@ -598,8 +598,6 @@ if($(".visitUsSec").length){
         const mblSVG = document.querySelector(".mblSVG");
         const INDIA = document.getElementById("INDIA");
         const INDIAA = document.getElementById("INDIAA");
-        console.log(INDIA);
-        
         const UAE = document.getElementById("UAE");
         const UAEE = document.getElementById("UAEE");
         const POLAND = document.getElementById("POLAND");
