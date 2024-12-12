@@ -25,7 +25,7 @@
                         <img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg" alt="everta">
                     </div>
                     <ul class="options">
-                        <li class="option">Poland</li>
+                        <li class="option">New Delhi, India</li>
                         <li class="option">India</li>
                         <li class="option">UAE</li>
                     </ul>
@@ -36,9 +36,9 @@
                         <img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg" alt="everta">
                     </div>
                     <ul class="options">
-                        <li class="option">Marketing</li>
+                        <li class="option">Data Analyst</li>
                         <li class="option">Design & Tech</li>
-                        <li class="option">Sales</li>
+                        <li class="option">Sales Manager</li>
                     </ul>
                 </div>
                 <div class="customSelect">
@@ -49,12 +49,13 @@
                     <ul class="options">
                         <li class="option">Remote</li>
                         <li class="option">In office</li>
+                        <li class="option">Full Time</li>
                     </ul>
                 </div>
             </div>
             <div class="filterBtnContainer">
-                <button class="ctaApplyFilter">Apply filters</button>
-                <button class="ctaClearFilter">Clear filters</button>
+                <button id="applyFilter" class="ctaApplyFilter">Apply filters</button>
+                <button id="clearFilter" class="ctaClearFilter">Clear filters</button>
             </div>
         </div>
     </div>
