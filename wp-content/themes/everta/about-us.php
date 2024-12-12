@@ -18,15 +18,23 @@
         <div class="mainContainer">
             <div class="card mission">
                 <div class="hoverContent">
-                    <p>Imagine a world where fueling your car is not a shame but pure joy. That's the world we're creating as part of the e-movement. It’s not just filling batteries, but empowering sustainable human exploration. Carefree, indeed.</p>
-                    <img src="<?php bloginfo('template_directory'); ?>/images/mission-icon.svg" alt="">
+                    <div class="cardTxt">
+                        <p>Imagine a world where fueling your car is not a shame but pure joy. That's the world we're creating as part of the e-movement. It's not just filling batteries, but empowering sustainable human exploration. Carefree, indeed.</p>
+                    </div>
+                    <div class="cardIcon">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/mission-icon.svg" alt="">
+                    </div>
                 </div>
                 <h2>MISSION</h2>
             </div>
             <div class="card vision">
                 <div class="hoverContent">
-                    <p>We are making the inevitable transformation painless. We empower an easier change in the way we move and the way we think. Because we just have to.</p>
-                    <img src="<?php bloginfo('template_directory'); ?>/images/vision-icon.svg" alt="">
+                    <div class="cardTxt">
+                        <p>We are making the inevitable transformation painless. We empower an easier change in the way we move and the way we think. Because we just have to.</p>
+                    </div>
+                    <div class="cardIcon">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/vision-icon.svg" alt="">
+                    </div>
                 </div>
                 <h2>VISION</h2>
             </div>
