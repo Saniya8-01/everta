@@ -497,36 +497,36 @@ $(window).on('resize scroll', function () {
 });
 
 
-var counted = 0;
-$(window).scroll(function () {
-    var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
-    if (counted == 0 && $(window).scrollTop() > oTop) {
-        $('.statCard h3').each(function () {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
-            var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
+// var counted = 0;
+// $(window).scroll(function () {
+//     var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
+//     if (counted == 0 && $(window).scrollTop() > oTop) {
+//         $('.statCard h3').each(function () {
+//             var $this = $(this),
+//                 countTo = $this.attr('data-count');
+//             var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
 
-            $({
-                countNum: 0
-            }).animate(
-                {
-                    countNum: countTo
-                },
-                {
-                    duration: 2000,
-                    easing: 'swing',
-                    step: function () {
-                        $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
-                    },
-                    complete: function () {
-                        $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
-                    }
-                }
-            );
-        });
-        counted = 1;
-    }
-});
+//             $({
+//                 countNum: 0
+//             }).animate(
+//                 {
+//                     countNum: countTo
+//                 },
+//                 {
+//                     duration: 2000,
+//                     easing: 'swing',
+//                     step: function () {
+//                         $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
+//                     },
+//                     complete: function () {
+//                         $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
+//                     }
+//                 }
+//             );
+//         });
+//         counted = 1;
+//     }
+// });
 
 /******About Us Js Start */
 
@@ -556,7 +556,55 @@ if($(".ourStorySec").length){
         ]
     });
 }
-
+if($(".mission").length){
+    document.addEventListener("DOMContentLoaded", () => {
+        const mission = document.querySelector(".mission");
+        const missionCardIcon = document.querySelector(".mission .hoverContent .cardIcon");
+        if(window.innerWidth <= 1024){
+            window.addEventListener('scroll', () => {
+                const sectionRect = mission.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                const sectionHalfHeight = sectionRect.height / 2;
+    
+                const sectionHalfVisible = 
+                    sectionRect.top + sectionHalfHeight <= windowHeight && 
+                    sectionRect.bottom - sectionHalfHeight >= 0;          
+    
+    
+                    if (sectionHalfVisible) {
+                        missionCardIcon.classList.add("iconReset");
+                    } else {
+                        missionCardIcon.classList.remove("iconReset");
+                    }
+                  
+            });
+        }
+    });
+    
+}
+if($(".vision").length){
+    document.addEventListener("DOMContentLoaded", () => {
+        const vision = document.querySelector(".vision");
+        console.log(vision);
+        const visionCardIcon = document.querySelector(".vision .hoverContent .cardIcon");
+        if(window.innerWidth <= 1024){
+            window.addEventListener('scroll', () => {
+                const sectionRect = vision.getBoundingClientRect();
+                const windowHeight = window.innerHeight;  
+                const sectionHalfHeight = sectionRect.height / 2;
+                const sectionHalfVisible = 
+                    sectionRect.top + sectionHalfHeight <= windowHeight && 
+                    sectionRect.bottom - sectionHalfHeight >= 0;          
+    
+                if (sectionHalfVisible) {
+                    visionCardIcon.classList.add("visionIconReset");
+                } else {
+                    visionCardIcon.classList.remove("visionIconReset");
+                }
+            });
+        }
+    })
+}
 if($(".poweringIdeaSec").length){
     if(window.innerWidth > 820){
         document.addEventListener("DOMContentLoaded", () => {
@@ -579,7 +627,6 @@ if($(".poweringIdeaSec").length){
         })
     }
 }
-
 if($(".visitUsSec").length){
     $('.visitUsSliderBox').slick({
         slidesToShow: 1,
@@ -595,22 +642,21 @@ if($(".visitUsSec").length){
     function showActiveIcon (){
         const activeSlide = document.querySelector(".visitUsSliderBox .slick-current");
         const desktopSVG = document.querySelector(".desktopSVG");
-        const mblSVG = document.querySelector(".mblSVG");
-        const INDIA = document.getElementById("INDIA");
-        const INDIAA = document.getElementById("INDIAA");
-        const UAE = document.getElementById("UAE");
-        const UAEE = document.getElementById("UAEE");
-        const POLAND = document.getElementById("POLAND");
-        const POLANDD = document.getElementById("POLANDD");
+        const INDIA = document.querySelector(".desktopSVG .india");
+        const mblINDIA = document.querySelector(".mblSVG .india");
+        const UAE = document.querySelector(".desktopSVG .uae");
+        const mblUAE = document.querySelector(".mblSVG .uae");
+        const POLAND = document.querySelector(".desktopSVG .poland");
+        const mblPOLAND = document.querySelector(".mblSVG .poland");
+        
         if(activeSlide){
             const companyName = activeSlide.getAttribute("data-company");
-            const companyNameMbl = activeSlide.getAttribute("data-company-mbl");
-            if(window.getComputedStyle(desktopSVG).display !== "none"){ 
-                if(companyName === "INDIA" ){
+            if(window.getComputedStyle(desktopSVG).display !== "none"){
+                if(companyName === "india" ){
                     INDIA.style.opacity = 1;
                     UAE.style.opacity = 0; 
                     POLAND.style.opacity = 0; 
-                }else if(companyName === "POLAND"){
+                }else if(companyName === "poland"){
                     POLAND.style.opacity = 1;
                     INDIA.style.opacity = 0;
                     UAE.style.opacity = 0;
@@ -620,18 +666,18 @@ if($(".visitUsSec").length){
                     INDIA.style.opacity = 0;
                 }
             }else{
-                if(companyNameMbl === "INDIAA"  ){
-                    INDIAA.style.opacity = 1;
-                    UAEE.style.opacity = 0; 
-                    POLANDD.style.opacity = 0; 
-                }else if(companyNameMbl === "POLANDD"){
-                    POLANDD.style.opacity = 1;
-                    INDIAA.style.opacity = 0;
-                    UAEE.style.opacity = 0;
+                if(companyName === "india" ){
+                    mblINDIA.style.opacity = 1;
+                    mblUAE.style.opacity = 0; 
+                    mblPOLAND.style.opacity = 0; 
+                }else if(companyName === "poland"){
+                    mblPOLAND.style.opacity = 1;
+                    mblINDIA.style.opacity = 0;
+                    mblUAE.style.opacity = 0;
                 }else{
-                    UAEE.style.opacity = 1;
-                    POLANDD.style.opacity = 0;
-                    INDIAA.style.opacity = 0;
+                    mblUAE.style.opacity = 1;
+                    mblPOLAND.style.opacity = 0;
+                    mblINDIA.style.opacity = 0;
                 }
                 
             }

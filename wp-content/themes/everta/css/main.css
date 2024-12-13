@@ -5769,7 +5769,7 @@ body {
 .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt {
   width: 70%;
   overflow: hidden;
-  height: 160px;
+  height: 180px;
 }
 .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
   color: #1E1E1E;
@@ -5830,19 +5830,6 @@ body {
     font-size: 24px;
   }
 }
-.missionSection .missionSecWrapper .mainContainer .card:hover {
-  width: 100%;
-  transition: 0.4s ease-in;
-}
-.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardTxt p {
-  transform: translateX(0%);
-}
-.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
-  left: 88%;
-}
-.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon img {
-  transform: scale3d(1.6, 1.6, 1.6);
-}
 .missionSection .missionSecWrapper .mainContainer .card.mission {
   background: #F5F75E;
   z-index: 1;
@@ -5855,6 +5842,19 @@ body {
 }
 .missionSection .missionSecWrapper .mainContainer .card.vision > h2 {
   color: #F5F75E;
+}
+.missionSection .missionSecWrapper .mainContainer .card:hover {
+  width: 100%;
+  transition: 0.4s ease-in;
+}
+.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardTxt p {
+  transform: translateX(0%);
+}
+.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
+  left: 88%;
+}
+.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon img {
+  transform: scale3d(1.6, 1.6, 1.6);
 }
 @media all and (max-width: 1800px) {
   .missionSection {
@@ -5874,8 +5874,8 @@ body {
   .missionSection .missionSecWrapper .mainContainer .card .hoverContent {
     margin-bottom: 30px;
   }
-  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent img {
-    transform: scale(1.4);
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon img {
+    transform: scale3d(1.4, 1.4, 1.4);
   }
 }
 @media all and (max-width: 1440px) {
@@ -5885,21 +5885,127 @@ body {
   .missionSection .missionSecWrapper .mainContainer .card {
     padding: 60px 10px 60px 80px;
   }
-  .missionSection .missionSecWrapper .mainContainer .card .hoverContent img {
-    width: 150px;
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt {
+    height: 160px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon {
+    width: 160px;
   }
 }
 @media all and (max-width: 1280px) {
   .missionSection .missionSecWrapper .mainContainer .card {
     padding: 50px 10px 50px 60px;
   }
-  .missionSection .missionSecWrapper .mainContainer .card .hoverContent img {
-    width: 150px;
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt {
+    height: 140px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon {
+    width: 140px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
+    left: 85%;
+  }
+}
+@media all and (max-width: 1024px) {
+  .missionSection {
+    margin-bottom: 100px;
+  }
+  .missionSection .missionSecWrapper .mainContainer {
+    flex-flow: column;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card {
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent {
+    margin-bottom: 25px;
+    flex-flow: column;
+    align-items: flex-end;
+    order: 1;
+    gap: 24px;
+    margin-bottom: 0;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt {
+    width: 100%;
+    height: auto;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
+    transform: translateX(0);
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon {
+    width: 180px;
+    position: relative;
+    transform: translateX(150%);
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon.iconReset {
+    transform: translateX(0);
+  }
+  .missionSection .missionSecWrapper .mainContainer .card h2 {
+    order: 0;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
+    left: unset;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon img {
+    transform: scale3d(1, 1, 1);
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:last-child .hoverContent {
+    align-items: flex-start;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:last-child .hoverContent .cardIcon {
+    transform: translateX(-150%);
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:last-child .hoverContent .cardIcon.visionIconReset {
+    transform: translateX(0);
+  }
+}
+@media all and (max-width: 820px) {
+  .missionSection .missionSecWrapper .mainContainer .card {
+    padding: 30px;
+    gap: 20px;
+  }
+}
+@media all and (max-width: 720px) {
+  .missionSection {
+    margin-bottom: 72px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card {
+    padding: 30px 20px;
+    gap: 16px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card h2 {
+    font-size: 24px;
+    line-height: 133%;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
+    font-size: 12px;
+    line-height: 150%;
   }
 }
 
 .weValueSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
   margin-bottom: 56px;
+}
+.weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
+  font-size: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
+    font-size: 12px;
+  }
 }
 @media all and (max-width: 1440px) {
   .weValueSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
@@ -6127,14 +6233,9 @@ body {
     transform: translateX(120%);
   }
 }
-@media all and (min-width: 1366px) and (max-width: 1366px) and (min-height: 768px) and (max-height: 768px) {
+@media all and (max-width: 1366px) {
   .ourStrengthsSec .secWrapper .innerSec {
     height: 480vh;
-  }
-}
-@media all and (min-width: 1366px) and (max-width: 1366px) and (min-height: 1024px) and (max-height: 1024px) {
-  .ourStrengthsSec .secWrapper .innerSec {
-    height: 350vh;
   }
 }
 @media all and (max-width: 1280px) {
@@ -6328,16 +6429,21 @@ body {
   color: #1E1E1E;
   text-align: justify;
   font-family: "verdanaregular";
-  font-size: 16px;
+  font-size: 20px;
   line-height: 175%;
   margin-bottom: 10px;
 }
 @media screen and (max-width: 1600px) {
   .ourStorySec .secWrapper .mainContainer .contentBox p {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
+  .ourStorySec .secWrapper .mainContainer .contentBox p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
   .ourStorySec .secWrapper .mainContainer .contentBox p {
     font-size: 12px;
   }
@@ -6355,9 +6461,39 @@ body {
   transform: scaleY(0.9);
   opacity: 0.3;
 }
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-slide figure figcaption {
+  opacity: 0;
+}
 .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-current.slick-active {
   transform: scaleY(1);
   opacity: 1;
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-current.slick-active figure figcaption {
+  opacity: 1;
+  margin-top: 24px;
+  position: relative;
+  padding-left: 10px;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  line-height: 175%;
+}
+@media screen and (max-width: 1600px) {
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-current.slick-active figure figcaption {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-current.slick-active figure figcaption {
+    font-size: 12px;
+  }
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-current.slick-active figure figcaption::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 0;
+  border-left: 1px solid #000;
 }
 @media all and (max-width: 1800px) {
   .ourStorySec {
@@ -7154,14 +7290,17 @@ body {
 .visitUsSec .secWrapper .visiUsMainContainer .mapBox {
   width: 70%;
 }
-.visitUsSec .secWrapper .visiUsMainContainer .mapBox .desktopSVG svg #INDIA {
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .desktopSVG svg .india {
   opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
-.visitUsSec .secWrapper .visiUsMainContainer .mapBox .desktopSVG svg #UAE {
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .desktopSVG svg .uae {
   opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
-.visitUsSec .secWrapper .visiUsMainContainer .mapBox .desktopSVG svg #POLAND {
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .desktopSVG svg .poland {
   opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG {
   display: none;
@@ -7172,13 +7311,16 @@ body {
 .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-2, .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-3 {
   fill: #1e1e1e;
 }
-.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-4, .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-5 {
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-4 {
+  fill: #f5f75e;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-5, .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-6 {
   fill: #e5e7e8;
 }
-.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-5, .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-3 {
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-6, .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-3 {
   fill-rule: evenodd;
 }
-.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-6 {
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-7 {
   clip-path: url(#clippath);
 }
 .visitUsSec .secWrapper .visiUsMainContainer .addressContent {
@@ -7358,14 +7500,17 @@ body {
   .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG {
     display: block;
   }
-  .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg #INDIAA {
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .india {
     opacity: 0;
+    transition: all 0.5s ease-in-out;
   }
-  .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg #UAEE {
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .uae {
     opacity: 0;
+    transition: all 0.5s ease-in-out;
   }
-  .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg #POLANDD {
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .poland {
     opacity: 0;
+    transition: all 0.5s ease-in-out;
   }
   .visitUsSec .secWrapper .visiUsMainContainer .addressContent {
     width: 50%;
