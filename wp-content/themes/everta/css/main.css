@@ -5010,7 +5010,7 @@ body {
     font-size: 36px;
   }
 }
-.careerBannerSection .careerSectionWrapper h6 {
+.careerBannerSection .careerSectionWrapper p {
   width: 80%;
   margin-bottom: 36px;
   color: #1E1E1E;
@@ -5020,12 +5020,12 @@ body {
   line-height: 166%;
 }
 @media screen and (max-width: 1600px) {
-  .careerBannerSection .careerSectionWrapper h6 {
+  .careerBannerSection .careerSectionWrapper p {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .careerBannerSection .careerSectionWrapper h6 {
+  .careerBannerSection .careerSectionWrapper p {
     font-size: 16px;
   }
 }
@@ -5071,7 +5071,10 @@ body {
     padding-right: 20px;
   }
 }
-.careerTeamSection .careerSectionWrapper h2 {
+.careerTeamSection .careerSectionWrapper .secHeading {
+  margin-bottom: 66px;
+}
+.careerTeamSection .careerSectionWrapper .secHeading h2 {
   color: #1E1E1E;
   font-family: "termina_testbold";
   font-size: 48px;
@@ -5081,40 +5084,39 @@ body {
   margin-bottom: 20px;
 }
 @media screen and (max-width: 1600px) {
-  .careerTeamSection .careerSectionWrapper h2 {
+  .careerTeamSection .careerSectionWrapper .secHeading h2 {
     font-size: 40px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .careerTeamSection .careerSectionWrapper h2 {
+  .careerTeamSection .careerSectionWrapper .secHeading h2 {
     font-size: 36px;
   }
 }
 @media screen and (max-width: 820px) {
-  .careerTeamSection .careerSectionWrapper h2 {
+  .careerTeamSection .careerSectionWrapper .secHeading h2 {
     font-size: 30px;
   }
 }
 @media screen and (max-width: 720px) {
-  .careerTeamSection .careerSectionWrapper h2 {
+  .careerTeamSection .careerSectionWrapper .secHeading h2 {
     font-size: 24px;
   }
 }
-.careerTeamSection .careerSectionWrapper h6 {
+.careerTeamSection .careerSectionWrapper .secHeading p {
   color: #1E1E1E;
   font-family: "verdanaregular";
   font-size: 24px;
   font-weight: 400;
   line-height: 134%;
-  margin-bottom: 66px;
 }
 @media screen and (max-width: 1600px) {
-  .careerTeamSection .careerSectionWrapper h6 {
+  .careerTeamSection .careerSectionWrapper .secHeading p {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .careerTeamSection .careerSectionWrapper h6 {
+  .careerTeamSection .careerSectionWrapper .secHeading p {
     font-size: 16px;
   }
 }
@@ -5125,49 +5127,107 @@ body {
 }
 .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter {
   width: 75%;
+  display: flex;
+  align-items: center;
 }
 .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect {
   position: relative;
   width: 30%;
-}
-.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect select {
-  width: 100%;
   margin-right: 32px;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn {
+  width: 100%;
   background: transparent;
+  display: flex;
+  cursor: pointer;
+  border-bottom: 1px solid #787878;
+  padding: 4px 0px 12px;
+  position: relative;
+  justify-content: space-between;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .sBtntext {
   color: #1E1E1E;
   font-family: "verdanaregular";
   font-size: 16px;
   font-weight: 400;
-  border-bottom: 1px solid #787878;
-  padding: 4px 0px 12px;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 @media screen and (max-width: 1600px) {
-  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect select {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .sBtntext {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect select {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .sBtntext {
     font-size: 12px;
   }
 }
-.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect select option {
-  padding: 10px 15px;
-  margin-bottom: 8px;
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .img {
+  display: block;
 }
-.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect::before {
-  content: url(../images/dropdown-icon.svg);
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options {
   position: absolute;
-  top: 45%;
-  right: 10px;
-  transform: translateY(-55%);
+  width: 100%;
+  overflow-y: auto;
+  max-height: 295px;
+  margin-top: 10px;
+  display: none;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation-name: fadeInDown;
+  -webkit-animation-name: fadeInDown;
+  animation-duration: 0.35s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.35s;
+  -webkit-animation-fill-mode: both;
 }
-.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect.active::before {
-  content: url(../images/dropup-icon.svg);
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options .option {
+  display: flex;
+  height: 55px;
+  cursor: pointer;
+  padding: 0 16px;
+  align-items: center;
+  background: #fff;
+  font-size: 18px;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  color: #787878;
+  border-bottom: 1px solid #CCCCCC;
+}
+@media screen and (max-width: 1600px) {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options .option {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options .option {
+    font-size: 12px;
+  }
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options .option:last-child {
+  border: none;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options::-webkit-scrollbar {
+  width: 6px;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options::-webkit-scrollbar-thumb {
+  background-color: #787878;
+  border-radius: 5px;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect.active .selectBtn img {
+  transform: rotate(-180deg);
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect.active .options {
+  display: block;
+  opacity: 0;
+  z-index: 10;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
 }
 .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer {
   width: 25%;
@@ -5330,6 +5390,8 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
+  width: 80px;
+  height: 80px;
 }
 .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg img {
   display: block;
@@ -5355,16 +5417,17 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
 }
 .careerOpeningModal.show-modal {
   display: block;
 }
 .careerOpeningModal .modalContent {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 60%;
 }
 .careerOpeningModal .modalContent .jobHeadingDesc {
   background: #F5F75E;
@@ -5566,6 +5629,446 @@ body {
   background: rgba(34, 34, 34, 0.09);
 }
 
+.careerCVSection {
+  margin-bottom: 217px;
+}
+.careerCVSection .careerSectionWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  border-block: 1px solid #BEC3C5;
+}
+@media screen and (max-width: 1600px) {
+  .careerCVSection .careerSectionWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerCVSection .careerSectionWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerCVSection .careerSectionWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .careerCVSection .careerSectionWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.careerCVSection .careerSectionWrapper h2 {
+  font-family: "termina_testbold";
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 134%;
+  text-align: center;
+  color: #1E1E1E;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .careerCVSection .careerSectionWrapper h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerCVSection .careerSectionWrapper h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .careerCVSection .careerSectionWrapper h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .careerCVSection .careerSectionWrapper h2 {
+    font-size: 24px;
+  }
+}
+.careerCVSection .careerSectionWrapper p {
+  color: #1E1E1E;
+  text-align: center;
+  font-family: "verdanaregular";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 167%;
+  margin-bottom: 52px;
+}
+@media screen and (max-width: 1600px) {
+  .careerCVSection .careerSectionWrapper p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerCVSection .careerSectionWrapper p {
+    font-size: 16px;
+  }
+}
+
+.careerHiringSection {
+  margin-bottom: 92px;
+}
+.careerHiringSection .careerSectionWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+  margin-bottom: 66px;
+}
+@media screen and (max-width: 1600px) {
+  .careerHiringSection .careerSectionWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerHiringSection .careerSectionWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerHiringSection .careerSectionWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .careerHiringSection .careerSectionWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.careerHiringSection .careerSectionWrapper .secHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.careerHiringSection .careerSectionWrapper .secHeading h2 {
+  margin-bottom: 24px;
+  color: #1E1E1E;
+  font-family: "termina_testbold";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 134%;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1600px) {
+  .careerHiringSection .careerSectionWrapper .secHeading h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerHiringSection .careerSectionWrapper .secHeading h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .careerHiringSection .careerSectionWrapper .secHeading h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .careerHiringSection .careerSectionWrapper .secHeading h2 {
+    font-size: 24px;
+  }
+}
+.careerHiringSection .careerSectionWrapper .secHeading p {
+  width: 65%;
+  color: #1E1E1E;
+  text-align: center;
+  font-family: "verdanaregular";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 167%;
+}
+@media screen and (max-width: 1600px) {
+  .careerHiringSection .careerSectionWrapper .secHeading p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerHiringSection .careerSectionWrapper .secHeading p {
+    font-size: 16px;
+  }
+}
+.careerHiringSection .hiringProcessContainer {
+  display: flex;
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox {
+  width: 33.3333333333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  padding: 102px 56px 114px;
+  cursor: default;
+  transition: all 0.3s ease-in-out;
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox .logoBox img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox .boxNumber {
+  width: 47px;
+  height: 47px;
+  line-height: 47px;
+  padding: 12px;
+  box-sizing: border-box;
+  color: #F5F75E;
+  text-align: center;
+  font-family: "termina_testbold";
+  font-size: 28px;
+  font-weight: 600;
+  border-radius: 100%;
+  background: #1E1E1E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 74px 0px 28px;
+}
+@media screen and (max-width: 1600px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox .boxNumber {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox .boxNumber {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox .boxNumber {
+    font-size: 14px;
+  }
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox h3 {
+  color: #1E1E1E;
+  font-family: "termina_testbold";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 134%;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1600px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox h3 {
+    font-size: 16px;
+  }
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox h6 {
+  font-family: "verdanaregular";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 1600px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox h6 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox h6 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox h6 {
+    font-size: 12px;
+  }
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox:hover {
+  background: #F5F75E;
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox:hover h6 {
+  visibility: visible;
+  opacity: 1;
+}
+
+.careerWallSection {
+  margin-bottom: 200px;
+}
+.careerWallSection .careerSectionWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+@media screen and (max-width: 1600px) {
+  .careerWallSection .careerSectionWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerWallSection .careerSectionWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerWallSection .careerSectionWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .careerWallSection .careerSectionWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.careerWallSection .careerSectionWrapper .secHeading {
+  margin-bottom: 64px;
+}
+.careerWallSection .careerSectionWrapper .secHeading h2 {
+  color: #1E1E1E;
+  text-align: center;
+  font-family: "termina_testbold";
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 138%;
+}
+@media screen and (max-width: 1800px) {
+  .careerWallSection .careerSectionWrapper .secHeading h2 {
+    font-size: 72px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .careerWallSection .careerSectionWrapper .secHeading h2 {
+    font-size: 64px;
+  }
+}
+@media screen and (max-width: 1440) {
+  .careerWallSection .careerSectionWrapper .secHeading h2 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerWallSection .careerSectionWrapper .secHeading h2 {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .careerWallSection .careerSectionWrapper .secHeading h2 {
+    font-size: 36px;
+  }
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0px 160px;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox {
+  padding: 16px 8px;
+  position: relative;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox .wallTapeBox {
+  position: absolute;
+  left: 0;
+  top: -6%;
+  width: 35%;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox .wallTapeBox img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:first-child {
+  margin-right: 20px;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:first-child .wallImgBox:first-child img {
+  transform: rotate(-10deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:first-child .wallImgBox:last-child {
+  border: 4px dashed #006E50;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:first-child .wallImgBox:last-child img {
+  transform: rotate(10deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:nth-child(2) {
+  margin-right: 10px;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:nth-child(2) .wallImgBox {
+  border: 6px dashed #F5F75E;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:nth-child(2) .wallImgBox img {
+  transform: rotate(10deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:last-child .wallImgBox:first-child {
+  border: 4px dashed #006E50;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:last-child .wallImgBox:first-child img {
+  transform: rotate(-10deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:last-child .wallImgBox:last-child img {
+  transform: rotate(-10deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer:hover:first-child .wallImgBox:first-child img {
+  transform: rotate(0deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer:hover:first-child .wallImgBox:last-child img {
+  transform: rotate(0deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer:hover:nth-child(2) .wallImgBox img {
+  transform: rotate(0deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer:hover:last-child .wallImgBox:first-child img {
+  transform: rotate(0deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer:hover:last-child .wallImgBox:last-child img {
+  transform: rotate(0deg);
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+}
 .journeySection {
   margin-top: 170px;
   margin-bottom: 200px;

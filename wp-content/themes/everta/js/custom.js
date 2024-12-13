@@ -693,20 +693,84 @@ if($(".visitUsSec").length){
 
 /******About Us Js End */
 
+/* Careers page JS Starts */
 
-const customSelects = document.querySelectorAll('.customSelect');
+document.addEventListener("DOMContentLoaded", function() {
+    const optionMenus = document.querySelectorAll(".customSelect");
+    const applyFilterBtn = document.getElementById("applyFilter");
+    const clearFilterBtn = document.getElementById("clearFilter");
+    const careerBoxes = document.querySelectorAll(".careerPositionBox");
 
-customSelects.forEach((customSelect) => {
-    const selectElement = customSelect.querySelector('select');
-    selectElement.addEventListener('focus', () => {
-        customSelect.classList.add('active')
-        }
-    );
+    const defaultTexts = ["Location", "Department", "Contract type"];
 
-    selectElement.addEventListener('blur', () => {
-        if (!document.activeElement.classList.contains('customSelect')) { 
-          customSelect.classList.remove('active');
-        }
+    optionMenus.forEach((optMenu, index) => {
+        const selectBtn = optMenu.querySelector(".selectBtn");
+        const options = optMenu.querySelectorAll(".option");
+        const sBtn_text = optMenu.querySelector(".sBtntext");
+
+        selectBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            optMenu.classList.toggle("active");
+        });
+
+        options.forEach((option) => {
+            option.addEventListener("click", () => {
+                const selectedOption = option.innerText;
+                sBtn_text.innerText = selectedOption;
+                optMenu.classList.remove("active");
+            });
+        });
+    });
+
+    window.addEventListener("click", function(e) {
+        optionMenus.forEach(optMenu => {
+            if (!optMenu.contains(e.target)) {
+                optMenu.classList.remove("active");
+            }
+        });
+    });
+
+    applyFilterBtn.addEventListener("click", () => {
+        const selectedFilters = Array.from(optionMenus).map(menu => menu.querySelector(".sBtntext").innerText);
+        
+        careerBoxes.forEach(box => {
+            let isVisible = true;
+
+            const locationText = box.querySelector(".posSubContent h4").innerText;
+            const departmentText = box.querySelector(".subBoxContent h3").innerText;
+            const contractTypeText = box.querySelector(".posSubContent div:nth-of-type(2) h4").innerText;
+            
+            const [locationFilter, departmentFilter, contractTypeFilter] = selectedFilters;
+
+            if (locationFilter !== "Location" && !locationText.includes(locationFilter)) {
+                isVisible = false;
+            }
+
+            if (departmentFilter !== "Department" && !departmentText.includes(departmentFilter)) {
+                isVisible = false;
+            }
+
+            if (contractTypeFilter !== "Contract type" && !contractTypeText.includes(contractTypeFilter)) {
+                isVisible = false;
+            }
+
+            if (isVisible) {
+                box.style.display = "flex";
+            } else {
+                box.style.display = "none";
+            }
+        });
+    });
+
+    clearFilterBtn.addEventListener("click", () => {
+        optionMenus.forEach((optMenu, index) => {
+            const sBtn_text = optMenu.querySelector(".sBtntext");
+            sBtn_text.innerText = defaultTexts[index];
+        });
+
+        careerBoxes.forEach(box => {
+            box.style.display = "flex";
+        });
     });
 });
 
@@ -723,6 +787,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
             if (modal) {
                 modal.classList.add("show-modal");
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "";
             }
         });
     });
@@ -731,6 +798,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             var modal = button.closest(".careerOpeningModal");
             modal.classList.remove("show-modal");
+            document.body.style.overflow = "";
         });
     });
 
@@ -739,9 +807,11 @@ document.addEventListener("DOMContentLoaded", function() {
         openModals.forEach(function(modal) {
             if (event.target === modal) {
                 modal.classList.remove("show-modal");
+                document.body.style.overflow = "";
             }
         });
     });
 });
 
 // career opening modal ends
+/* Careers page JS Ends */
