@@ -190,7 +190,7 @@
         .missionSecWrapper{
             .mainContainer{
                 .card{padding: 30px 20px; gap: 16px;
-                    h2{font-size: 24px; line-height: 133%;}
+                    h2{font-size: 24px; line-height: 116%;}
                     .hoverContent{
                         .cardTxt{
                             p{font-size: 12px; line-height: 150%;}
@@ -231,7 +231,7 @@
     @media all and (max-width: 720px){
         .evertaEveryoneSectionWrapper{
             .evertaEveryoneSectionHeading{
-                h2{margin-bottom: 32px; font-size: 24px; line-height: 133%;}
+                h2{margin-bottom: 32px; font-size: 24px; line-height: 116%; text-align: left;}
             }
         }
     }
@@ -486,7 +486,7 @@
         .secWrapper{
             .mainContainer{gap: 50px; padding: 35px 0; flex-flow: column;
                 .contentBox{width: 100%; padding-right: 20px;
-                    h2{font-size: 24px; line-height: 133%;}
+                    h2{font-size: 24px; line-height: 116%;}
                     p{font-size: 12px; line-height: 150%;}
                 }
                 .imgBox{width: 100%;
@@ -599,7 +599,7 @@
     @media all and (max-width: 720px){background: $primaryColor1; margin-bottom: 72px;
         .secWrapper{
             .secHeading{margin-bottom: 45px; padding-top: 30px;
-                h2{margin-bottom: 12px;}
+                h2{margin-bottom: 12px;  line-height: 116%; text-align: left;}
             }
             .secContent{flex-flow: column; padding-bottom: 35px; gap: 35px;
                 .founderDetailsbox{gap: 20px; width: 100%; flex-flow: column; align-items: flex-start;
@@ -742,7 +742,9 @@
     }
     @media all and (max-width: 720px){margin-bottom: 72px;
         .secWrapper{
-            .secHeading{gap: 25px;}
+            .secHeading{gap: 25px; align-items: flex-start;
+                h2{text-align: left; line-height: 116%;}
+            }
         }
     }
 
@@ -885,7 +887,7 @@
             .visiUsMainContainer{flex-flow: column;
                 .mapBox{width: 100%;}
                 .addressContent{width: 100%; padding: 20px 10px 30px 30px ;
-                    h2{margin-bottom: 16px; font-size: 24px; line-height: 133%;}
+                    h2{margin-bottom: 16px; font-size: 24px; line-height: 116%;}
                     .visitUsSliderBox{margin-bottom: 30px;
                         .addressBox{
                             p{font-size: 16px; line-height: 175%; margin-bottom: 5px;}

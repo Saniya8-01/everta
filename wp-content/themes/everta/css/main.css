@@ -6481,7 +6481,7 @@ body {
   }
   .missionSection .missionSecWrapper .mainContainer .card h2 {
     font-size: 24px;
-    line-height: 133%;
+    line-height: 116%;
   }
   .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
     font-size: 12px;
@@ -6524,7 +6524,8 @@ body {
   .weValueSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
     margin-bottom: 32px;
     font-size: 24px;
-    line-height: 133%;
+    line-height: 116%;
+    text-align: left;
   }
 }
 
@@ -7094,7 +7095,7 @@ body {
   }
   .ourStorySec .secWrapper .mainContainer .contentBox h2 {
     font-size: 24px;
-    line-height: 133%;
+    line-height: 116%;
   }
   .ourStorySec .secWrapper .mainContainer .contentBox p {
     font-size: 12px;
@@ -7390,6 +7391,8 @@ body {
   }
   .foundersSec .secWrapper .secHeading h2 {
     margin-bottom: 12px;
+    line-height: 116%;
+    text-align: left;
   }
   .foundersSec .secWrapper .secContent {
     flex-flow: column;
@@ -7780,6 +7783,11 @@ body {
   }
   .careerAtEvertaSec .secWrapper .secHeading {
     gap: 25px;
+    align-items: flex-start;
+  }
+  .careerAtEvertaSec .secWrapper .secHeading h2 {
+    text-align: left;
+    line-height: 116%;
   }
 }
 
@@ -8040,7 +8048,7 @@ body {
   .visitUsSec .secWrapper .visiUsMainContainer .addressContent h2 {
     margin-bottom: 16px;
     font-size: 24px;
-    line-height: 133%;
+    line-height: 116%;
   }
   .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox {
     margin-bottom: 30px;
