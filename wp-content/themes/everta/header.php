@@ -33,7 +33,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 			<nav class="headerWrapper">
 				<div class="headerLogo">
 					<a href="<?php echo get_site_url(); ?>">
-						<img  src="<?php bloginfo('template_directory'); ?>/images/everta-logo.svg" />
+						<img src="<?php bloginfo('template_directory'); ?>/images/everta-logo.svg" />
 					</a>
 				</div>
 				<div class="headerMenu">
@@ -43,7 +43,8 @@ $current_url = home_url(add_query_arg([], $wp->request));
 								<ul class="mainNav">
 									<li class="mainNavList dropdown">
 										<a href="#!" class="mainManu">Company</a>
-										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt="" class="arrowImage">
+										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg"
+											alt="" class="arrowImage">
 										<div class="accordian-icon-wrapper">
 											<div class="accordion-icon"></div>
 										</div>
@@ -59,7 +60,8 @@ $current_url = home_url(add_query_arg([], $wp->request));
 									</li>
 									<li class="mainNavList dropdown">
 										<a href="#!" class="mainManu">Solutions</a>
-										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt="" class="arrowImage">
+										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg"
+											alt="" class="arrowImage">
 										<div class="accordian-icon-wrapper">
 											<div class="accordion-icon"></div>
 										</div>
@@ -86,8 +88,10 @@ $current_url = home_url(add_query_arg([], $wp->request));
 										<a href="" class="mainManu">Resources</a>
 									</li>
 									<li class="mainNavList dropdown languageTranslator">
-										<img src="<?php bloginfo('template_directory'); ?>/images/language-svg.svg" alt="">
-										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt="" class="arrowImage">
+										<img src="<?php bloginfo('template_directory'); ?>/images/language-svg.svg"
+											alt="">
+										<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg"
+											alt="" class="arrowImage">
 										<div class="dropdownMenu languageMenu">
 											<ul>
 												<li>
@@ -100,7 +104,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 										</div>
 									</li>
 									<li class="mainNavList ctaContact">
-										<a href="" class="mainManu">Contact us</a>
+										<a href="javascript:void(0);" class="mainManu">Contact us</a>
 									</li>
 								</ul>
 							</div>
@@ -118,3 +122,14 @@ $current_url = home_url(add_query_arg([], $wp->request));
 				</div>
 			</nav>
 		</header>
+
+	<div class="contactForm">
+		<div class="contactFormWrapper">
+			<div class="contactHeading">
+				<h2></h2>
+				<div class="closeBtn">
+					<img src="<?php bloginfo('template_directory'); ?>/images/close-svg.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>

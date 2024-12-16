@@ -184,24 +184,25 @@ if ($(".partnersSection").length) {
         ]
     });
 }
+if ($(".chargingSection").length) {
+    // Select the tab buttons and content sections
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
 
-// Select the tab buttons and content sections
-const tabButtons = document.querySelectorAll(".tab-button");
-const tabContents = document.querySelectorAll(".tab-content");
+    // Add click event listeners to each tab button
+    tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            // Remove the active class from all buttons and content
+            tabButtons.forEach((btn) => btn.classList.remove("active"));
+            tabContents.forEach((content) => content.classList.remove("active"));
 
-// Add click event listeners to each tab button
-tabButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        // Remove the active class from all buttons and content
-        tabButtons.forEach((btn) => btn.classList.remove("active"));
-        tabContents.forEach((content) => content.classList.remove("active"));
-
-        // Add the active class to the clicked button and the corresponding content
-        button.classList.add("active");
-        const tabId = button.getAttribute("data-tab");
-        document.getElementById(tabId).classList.add("active");
+            // Add the active class to the clicked button and the corresponding content
+            button.classList.add("active");
+            const tabId = button.getAttribute("data-tab");
+            document.getElementById(tabId).classList.add("active");
+        });
     });
-});
+}
 
 if ($(".testimonialSection").length) {
     var $slider = $(".testimonialCardWrapper");
@@ -477,7 +478,7 @@ $(window).on('resize scroll', function () {
             }
         }
     } else {
-        
+
         $('.leftContent').removeClass('image-state');
     }
 });
@@ -527,6 +528,34 @@ $(window).scroll(function () {
         counted = 1;
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Check if the "custom-tabs-wrapper" exists on the page
+    const customTabsWrapper = document.querySelector(".custom-tabs-wrapper");
+    if (!customTabsWrapper) return; // Exit if the container is not found
+
+    // Select the custom tab buttons and content sections within the custom-tabs-wrapper
+    const customTabButtons = customTabsWrapper.querySelectorAll(".custom-tab-button");
+    const customTabContents = customTabsWrapper.querySelectorAll(".custom-tab-content");
+
+    // Ensure the first tab is active initially
+    customTabButtons[0].classList.add("active");
+    customTabContents[0].classList.add("active");
+
+    customTabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            // Remove the active class from all buttons and content sections
+            customTabButtons.forEach((btn) => btn.classList.remove("active"));
+            customTabContents.forEach((content) => content.classList.remove("active"));
+
+            // Add the active class to the clicked button and the corresponding content
+            button.classList.add("active");
+            const tabId = button.getAttribute("data-tab");
+            document.getElementById(tabId).classList.add("active");
+        });
+    });
+});
+
 
 
 
