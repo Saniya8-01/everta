@@ -777,12 +777,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", () => {
     // Check if the "custom-tabs-wrapper" exists on the page
-    const customTabsWrapper = document.querySelector(".custom-tabs-wrapper");
+    const customTabsWrapper = document.querySelector(".contactForm");
     if (!customTabsWrapper) return; // Exit if the container is not found
 
     // Select the custom tab buttons and content sections within the custom-tabs-wrapper
-    const customTabButtons = customTabsWrapper.querySelectorAll(".custom-tab-button");
-    const customTabContents = customTabsWrapper.querySelectorAll(".custom-tab-content");
+    const customTabButtons = customTabsWrapper.querySelectorAll(".contact-tab-btn");
+    const customTabContents = customTabsWrapper.querySelectorAll(".contact-tab-content");
 
     // Ensure the first tab is active initially
     customTabButtons[0].classList.add("active");
@@ -841,6 +841,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+function openForm() {
+    document.getElementById("contactForm").classList.add("open");
+    $('body').css("overflow-y", "hidden");
+    $('html').css("overflow-y", "hidden");
+    $('body').css("background", "hidden");
+  }
+  
+  function closeForm() {
+    document.getElementById("contactForm").classList.remove("open");
+    $('body').css("overflow-y", "visible");
+    $('html').css("overflow-y", "visible");
+  }
 
 // career opening modal ends
 /* Careers page JS Ends */
