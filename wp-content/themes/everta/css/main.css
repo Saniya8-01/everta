@@ -8065,4 +8065,8 @@ body {
   .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox.slick-dotted.slick-slider .slick-dots {
     bottom: -30px;
   }
+}
+
+.resourceBannerSec {
+  margin: 200px 0;
 }/*# sourceMappingURL=main.css.map */
