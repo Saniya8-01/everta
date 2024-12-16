@@ -1,5 +1,5 @@
 .resourceBannerSec{margin: 200px 0; 
-    .secWrapper{
+    .secWrapper{@include wrapper;
         .secHeading{
             h1{}
             p{}
