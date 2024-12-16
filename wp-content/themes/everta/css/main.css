@@ -4945,3 +4945,3128 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 body {
   overflow-x: hidden;
 }
+
+.careerBannerSection {
+  margin: 172px 0px 120px;
+}
+.careerBannerSection .careerSectionWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+@media screen and (max-width: 1600px) {
+  .careerBannerSection .careerSectionWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerBannerSection .careerSectionWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerBannerSection .careerSectionWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .careerBannerSection .careerSectionWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.careerBannerSection .careerSectionWrapper h1 {
+  color: #1E1E1E;
+  font-family: "termina_testmedium";
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1800px) {
+  .careerBannerSection .careerSectionWrapper h1 {
+    font-size: 72px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .careerBannerSection .careerSectionWrapper h1 {
+    font-size: 64px;
+  }
+}
+@media screen and (max-width: 1440) {
+  .careerBannerSection .careerSectionWrapper h1 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerBannerSection .careerSectionWrapper h1 {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .careerBannerSection .careerSectionWrapper h1 {
+    font-size: 36px;
+  }
+}
+.careerBannerSection .careerSectionWrapper p {
+  width: 80%;
+  margin-bottom: 36px;
+  color: #1E1E1E;
+  font-family: "verdanaregular";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 166%;
+}
+@media screen and (max-width: 1600px) {
+  .careerBannerSection .careerSectionWrapper p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerBannerSection .careerSectionWrapper p {
+    font-size: 16px;
+  }
+}
+.careerBannerSection .careerSectionWrapper a {
+  margin-bottom: 40px !important;
+}
+.careerBannerSection .careerSectionWrapper .careerBannerImg img {
+  display: block;
+  object-fit: cover;
+}
+
+.careerTeamSection {
+  margin-bottom: 244px;
+}
+.careerTeamSection .careerSectionWrapper {
+  padding-top: 66px;
+  padding-bottom: 66px;
+  padding-left: 120px;
+  padding-right: 120px;
+  background: #F2F3F3;
+}
+@media screen and (max-width: 1600px) {
+  .careerTeamSection .careerSectionWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerTeamSection .careerSectionWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerTeamSection .careerSectionWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .careerTeamSection .careerSectionWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.careerTeamSection .careerSectionWrapper .secHeading {
+  margin-bottom: 66px;
+}
+.careerTeamSection .careerSectionWrapper .secHeading h2 {
+  color: #1E1E1E;
+  font-family: "termina_testbold";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 134%;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .careerTeamSection .careerSectionWrapper .secHeading h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerTeamSection .careerSectionWrapper .secHeading h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .careerTeamSection .careerSectionWrapper .secHeading h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .careerTeamSection .careerSectionWrapper .secHeading h2 {
+    font-size: 24px;
+  }
+}
+.careerTeamSection .careerSectionWrapper .secHeading p {
+  color: #1E1E1E;
+  font-family: "verdanaregular";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 134%;
+}
+@media screen and (max-width: 1600px) {
+  .careerTeamSection .careerSectionWrapper .secHeading p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerTeamSection .careerSectionWrapper .secHeading p {
+    font-size: 16px;
+  }
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter {
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect {
+  position: relative;
+  width: 30%;
+  margin-right: 32px;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn {
+  width: 100%;
+  background: transparent;
+  display: flex;
+  cursor: pointer;
+  border-bottom: 1px solid #787878;
+  padding: 4px 0px 12px;
+  position: relative;
+  justify-content: space-between;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .sBtntext {
+  color: #1E1E1E;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  font-weight: 400;
+}
+@media screen and (max-width: 1600px) {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .sBtntext {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .sBtntext {
+    font-size: 12px;
+  }
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .img {
+  display: block;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options {
+  position: absolute;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 295px;
+  margin-top: 10px;
+  display: none;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation-name: fadeInDown;
+  -webkit-animation-name: fadeInDown;
+  animation-duration: 0.35s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.35s;
+  -webkit-animation-fill-mode: both;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options .option {
+  display: flex;
+  height: 55px;
+  cursor: pointer;
+  padding: 0 16px;
+  align-items: center;
+  background: #fff;
+  font-size: 18px;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  color: #787878;
+  border-bottom: 1px solid #CCCCCC;
+}
+@media screen and (max-width: 1600px) {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options .option {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options .option {
+    font-size: 12px;
+  }
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options .option:last-child {
+  border: none;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options::-webkit-scrollbar {
+  width: 6px;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options::-webkit-scrollbar-thumb {
+  background-color: #787878;
+  border-radius: 5px;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect.active .selectBtn img {
+  transform: rotate(-180deg);
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect.active .options {
+  display: block;
+  opacity: 0;
+  z-index: 10;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer button:first-child {
+  margin-right: 32px;
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer .ctaApplyFilter {
+  font-family: "termina_testregular";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -0.64px;
+  color: #F5F75E;
+  background: #1E1E1E;
+  border-style: none;
+  padding: 20px 32px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: inline-block;
+}
+@media screen and (max-width: 1600px) {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer .ctaApplyFilter {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer .ctaApplyFilter {
+    font-size: 12px;
+  }
+}
+.careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer .ctaClearFilter {
+  font-family: "termina_testregular";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -0.64px;
+  color: #000;
+  background: transparent;
+  border-style: none;
+  padding: 20px 32px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid #4B4B4B;
+  display: inline-block;
+}
+@media screen and (max-width: 1600px) {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer .ctaClearFilter {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer .ctaClearFilter {
+    font-size: 12px;
+  }
+}
+.careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #D8DBDC;
+  background: transparent;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 1600px) {
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent h3 {
+  color: #1E1E1E;
+  font-family: "termina_testmedium";
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 113%;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 1800px) {
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent h3 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent h3 {
+    font-size: 20px;
+  }
+}
+.careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent .posSubContent {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent .posSubContent div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent .posSubContent div img {
+  display: block;
+  object-fit: cover;
+}
+.careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent .posSubContent div h4 {
+  color: #1E1E1E;
+  text-align: justify;
+  font-family: "verdanaregular";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 166%;
+}
+@media screen and (max-width: 1600px) {
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent .posSubContent div h4 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent .posSubContent div h4 {
+    font-size: 16px;
+  }
+}
+.careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  width: 80px;
+  height: 80px;
+}
+.careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+.careerTeamSection .careerSectionWrapperTwo .careerPositionBox:hover {
+  background: #F5F75E;
+}
+.careerTeamSection .careerSectionWrapperTwo .careerPositionBox:hover .subBoxImg {
+  opacity: 1;
+  visibility: visible;
+}
+.careerTeamSection .careerSectionWrapperTwo .careerPositionBox:first-child {
+  border-top: 1px solid #D8DBDC;
+}
+
+.careerOpeningModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+.careerOpeningModal.show-modal {
+  display: block;
+}
+.careerOpeningModal .modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
+.careerOpeningModal .modalContent .jobHeadingDesc {
+  background: #F5F75E;
+  padding: 56px 64px 34px;
+}
+.careerOpeningModal .modalContent .jobHeadingDesc .closeBtn {
+  cursor: pointer;
+  display: block;
+  float: right;
+}
+.careerOpeningModal .modalContent .jobHeadingDesc .closeBtn img {
+  display: block;
+  object-fit: cover;
+}
+.careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub {
+  margin-top: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent span {
+  display: block;
+  width: fit-content;
+  margin-bottom: 13px;
+  color: #1E1E1E;
+  text-align: justify;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 175%;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background: rgba(30, 30, 30, 0.1);
+}
+@media screen and (max-width: 1600px) {
+  .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent span {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent span {
+    font-size: 12px;
+  }
+}
+.careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent h3 {
+  color: #1E1E1E;
+  font-family: "termina_testmedium";
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 113%;
+  margin-bottom: 13px;
+}
+@media screen and (max-width: 1800px) {
+  .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent h3 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent h3 {
+    font-size: 20px;
+  }
+}
+.careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div img {
+  display: block;
+  object-fit: cover;
+}
+.careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div h4 {
+  color: #1E1E1E;
+  text-align: justify;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 166%;
+}
+@media screen and (max-width: 1600px) {
+  .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div h4 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div h4 {
+    font-size: 12px;
+  }
+}
+.careerOpeningModal .modalContent .jobDescription {
+  background: #fff;
+  padding: 68px 64px 34px;
+  height: 450px;
+  overflow-y: scroll;
+}
+.careerOpeningModal .modalContent .jobDescription h6 {
+  color: #4B4B4B;
+  text-align: justify;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 175%;
+}
+@media screen and (max-width: 1600px) {
+  .careerOpeningModal .modalContent .jobDescription h6 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerOpeningModal .modalContent .jobDescription h6 {
+    font-size: 12px;
+  }
+}
+.careerOpeningModal .modalContent .jobDescription h4 {
+  margin: 32px 0px 8px;
+  color: #4B4B4B;
+  text-align: justify;
+  font-family: "verdanabold";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+}
+@media screen and (max-width: 1600px) {
+  .careerOpeningModal .modalContent .jobDescription h4 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerOpeningModal .modalContent .jobDescription h4 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .careerOpeningModal .modalContent .jobDescription h4 {
+    font-size: 12px;
+  }
+}
+.careerOpeningModal .modalContent .jobDescription p {
+  color: #1E1E1E;
+  text-align: justify;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 175%;
+}
+@media screen and (max-width: 1600px) {
+  .careerOpeningModal .modalContent .jobDescription p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerOpeningModal .modalContent .jobDescription p {
+    font-size: 12px;
+  }
+}
+.careerOpeningModal .modalContent .jobDescription p:last-of-type {
+  margin-bottom: 8px;
+}
+.careerOpeningModal .modalContent .jobDescription ul {
+  padding-left: 20px;
+}
+.careerOpeningModal .modalContent .jobDescription ul li {
+  list-style: disc;
+  margin-bottom: 8px;
+  color: #1E1E1E;
+  text-align: justify;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 175%;
+}
+@media screen and (max-width: 1600px) {
+  .careerOpeningModal .modalContent .jobDescription ul li {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerOpeningModal .modalContent .jobDescription ul li {
+    font-size: 12px;
+  }
+}
+.careerOpeningModal .modalContent .jobDescription::-webkit-scrollbar {
+  width: 8px;
+}
+.careerOpeningModal .modalContent .jobDescription::-webkit-scrollbar-thumb {
+  border-radius: 200px;
+  border: 0.2px solid rgba(0, 0, 0, 0.16);
+  background: rgba(34, 34, 34, 0.09);
+}
+
+.careerCVSection {
+  margin-bottom: 217px;
+}
+.careerCVSection .careerSectionWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  border-block: 1px solid #BEC3C5;
+}
+@media screen and (max-width: 1600px) {
+  .careerCVSection .careerSectionWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerCVSection .careerSectionWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerCVSection .careerSectionWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .careerCVSection .careerSectionWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.careerCVSection .careerSectionWrapper h2 {
+  font-family: "termina_testbold";
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 134%;
+  text-align: center;
+  color: #1E1E1E;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .careerCVSection .careerSectionWrapper h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerCVSection .careerSectionWrapper h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .careerCVSection .careerSectionWrapper h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .careerCVSection .careerSectionWrapper h2 {
+    font-size: 24px;
+  }
+}
+.careerCVSection .careerSectionWrapper p {
+  color: #1E1E1E;
+  text-align: center;
+  font-family: "verdanaregular";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 167%;
+  margin-bottom: 52px;
+}
+@media screen and (max-width: 1600px) {
+  .careerCVSection .careerSectionWrapper p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerCVSection .careerSectionWrapper p {
+    font-size: 16px;
+  }
+}
+
+.careerHiringSection {
+  margin-bottom: 92px;
+}
+.careerHiringSection .careerSectionWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+  margin-bottom: 66px;
+}
+@media screen and (max-width: 1600px) {
+  .careerHiringSection .careerSectionWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerHiringSection .careerSectionWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerHiringSection .careerSectionWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .careerHiringSection .careerSectionWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.careerHiringSection .careerSectionWrapper .secHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.careerHiringSection .careerSectionWrapper .secHeading h2 {
+  margin-bottom: 24px;
+  color: #1E1E1E;
+  font-family: "termina_testbold";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 134%;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1600px) {
+  .careerHiringSection .careerSectionWrapper .secHeading h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerHiringSection .careerSectionWrapper .secHeading h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .careerHiringSection .careerSectionWrapper .secHeading h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .careerHiringSection .careerSectionWrapper .secHeading h2 {
+    font-size: 24px;
+  }
+}
+.careerHiringSection .careerSectionWrapper .secHeading p {
+  width: 65%;
+  color: #1E1E1E;
+  text-align: center;
+  font-family: "verdanaregular";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 167%;
+}
+@media screen and (max-width: 1600px) {
+  .careerHiringSection .careerSectionWrapper .secHeading p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerHiringSection .careerSectionWrapper .secHeading p {
+    font-size: 16px;
+  }
+}
+.careerHiringSection .hiringProcessContainer {
+  display: flex;
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox {
+  width: 33.3333333333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  padding: 102px 56px 114px;
+  cursor: default;
+  transition: all 0.3s ease-in-out;
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox .logoBox img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox .boxNumber {
+  width: 47px;
+  height: 47px;
+  line-height: 47px;
+  padding: 12px;
+  box-sizing: border-box;
+  color: #F5F75E;
+  text-align: center;
+  font-family: "termina_testbold";
+  font-size: 28px;
+  font-weight: 600;
+  border-radius: 100%;
+  background: #1E1E1E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 74px 0px 28px;
+}
+@media screen and (max-width: 1600px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox .boxNumber {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox .boxNumber {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox .boxNumber {
+    font-size: 14px;
+  }
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox h3 {
+  color: #1E1E1E;
+  font-family: "termina_testbold";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 134%;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1600px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox h3 {
+    font-size: 16px;
+  }
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox h6 {
+  font-family: "verdanaregular";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 1600px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox h6 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox h6 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .careerHiringSection .hiringProcessContainer .hiringProcessBox h6 {
+    font-size: 12px;
+  }
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox:hover {
+  background: #F5F75E;
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox:hover h6 {
+  visibility: visible;
+  opacity: 1;
+}
+
+.careerWallSection {
+  margin-bottom: 200px;
+}
+.careerWallSection .careerSectionWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+@media screen and (max-width: 1600px) {
+  .careerWallSection .careerSectionWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerWallSection .careerSectionWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerWallSection .careerSectionWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .careerWallSection .careerSectionWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.careerWallSection .careerSectionWrapper .secHeading {
+  margin-bottom: 64px;
+}
+.careerWallSection .careerSectionWrapper .secHeading h2 {
+  color: #1E1E1E;
+  text-align: center;
+  font-family: "termina_testbold";
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 138%;
+}
+@media screen and (max-width: 1800px) {
+  .careerWallSection .careerSectionWrapper .secHeading h2 {
+    font-size: 72px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .careerWallSection .careerSectionWrapper .secHeading h2 {
+    font-size: 64px;
+  }
+}
+@media screen and (max-width: 1440) {
+  .careerWallSection .careerSectionWrapper .secHeading h2 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerWallSection .careerSectionWrapper .secHeading h2 {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .careerWallSection .careerSectionWrapper .secHeading h2 {
+    font-size: 36px;
+  }
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0px 160px;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox {
+  padding: 16px 8px;
+  position: relative;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox .wallTapeBox {
+  position: absolute;
+  left: 0;
+  top: -6%;
+  width: 35%;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox .wallTapeBox img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:first-child {
+  margin-right: 20px;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:first-child .wallImgBox:first-child img {
+  transform: rotate(-10deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:first-child .wallImgBox:last-child {
+  border: 4px dashed #006E50;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:first-child .wallImgBox:last-child img {
+  transform: rotate(10deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:nth-child(2) {
+  margin-right: 10px;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:nth-child(2) .wallImgBox {
+  border: 6px dashed #F5F75E;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:nth-child(2) .wallImgBox img {
+  transform: rotate(10deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:last-child .wallImgBox:first-child {
+  border: 4px dashed #006E50;
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:last-child .wallImgBox:first-child img {
+  transform: rotate(-10deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:last-child .wallImgBox:last-child img {
+  transform: rotate(-10deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer:hover:first-child .wallImgBox:first-child img {
+  transform: rotate(0deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer:hover:first-child .wallImgBox:last-child img {
+  transform: rotate(0deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer:hover:nth-child(2) .wallImgBox img {
+  transform: rotate(0deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer:hover:last-child .wallImgBox:first-child img {
+  transform: rotate(0deg);
+}
+.careerWallSection .careerSectionWrapper .evertaWallContainer:hover:last-child .wallImgBox:last-child img {
+  transform: rotate(0deg);
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+}
+.journeySection {
+  margin-top: 170px;
+  margin-bottom: 200px;
+}
+.journeySection .journeySecWrapper .secHeading {
+  padding-left: 120px;
+  padding-right: 120px;
+  width: 80%;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .journeySection .journeySecWrapper .secHeading {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .journeySection .journeySecWrapper .secHeading {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .journeySection .journeySecWrapper .secHeading {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .journeySection .journeySecWrapper .secHeading {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.journeySection .journeySecWrapper .secHeading h1 {
+  margin-bottom: 20px;
+  color: #1e1e1e;
+  font-family: "termina_testmedium";
+  font-size: 80px;
+  line-height: 120%;
+}
+@media screen and (max-width: 1800px) {
+  .journeySection .journeySecWrapper .secHeading h1 {
+    font-size: 72px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .journeySection .journeySecWrapper .secHeading h1 {
+    font-size: 64px;
+  }
+}
+@media screen and (max-width: 1440) {
+  .journeySection .journeySecWrapper .secHeading h1 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .journeySection .journeySecWrapper .secHeading h1 {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .journeySection .journeySecWrapper .secHeading h1 {
+    font-size: 36px;
+  }
+}
+.journeySection .journeySecWrapper .secHeading p {
+  color: #1e1e1e;
+  font-family: "termina_testlight";
+  font-size: 24px;
+  line-height: 166%;
+}
+@media screen and (max-width: 1600px) {
+  .journeySection .journeySecWrapper .secHeading p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .journeySection .journeySecWrapper .secHeading p {
+    font-size: 16px;
+  }
+}
+.journeySection .journeySecWrapper .imgBox {
+  overflow: hidden;
+}
+@keyframes zoomeffect {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.2, 1.2);
+  }
+}
+.journeySection .journeySecWrapper .imgBox img {
+  animation: zoomeffect 20s forwards;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.journeySection .journeySecWrapper .imgBox img.bannerMbl {
+  display: none;
+}
+@media all and (max-width: 1800px) {
+  .journeySection {
+    margin-top: 160px;
+    margin-bottom: 180px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .journeySection {
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+  .journeySection .journeySecWrapper .secHeading {
+    margin-bottom: 35px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .journeySection {
+    margin-bottom: 120px;
+    margin-top: 120px;
+  }
+  .journeySection .journeySecWrapper .secHeading {
+    margin-bottom: 30px;
+  }
+  .journeySection .journeySecWrapper .secHeading h1 {
+    margin-bottom: 15px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .journeySection {
+    margin-top: 100px;
+  }
+  .journeySection .journeySecWrapper .secHeading {
+    width: 90%;
+  }
+}
+@media all and (max-width: 1024px) {
+  .journeySection {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .journeySection .journeySecWrapper .secHeading {
+    width: 90%;
+  }
+}
+@media all and (max-width: 820px) {
+  .journeySection .journeySecWrapper .secHeading {
+    width: 100%;
+  }
+  .journeySection .journeySecWrapper .secHeading h1 {
+    margin-bottom: 10px;
+  }
+  .journeySection .journeySecWrapper .imgBox img.bannerDesktop {
+    display: none;
+  }
+  .journeySection .journeySecWrapper .imgBox img.bannerMbl {
+    display: block;
+  }
+}
+@media all and (max-width: 720px) {
+  .journeySection {
+    margin-bottom: 72px;
+  }
+  .journeySection .journeySecWrapper .secHeading {
+    margin-bottom: 50px;
+  }
+  .journeySection .journeySecWrapper .secHeading h1 {
+    margin-bottom: 15px;
+    font-size: 36px;
+    line-height: 133%;
+  }
+  .journeySection .journeySecWrapper .secHeading p {
+    font-size: 16px;
+    line-height: 175%;
+  }
+}
+
+.missionSection {
+  margin-bottom: 200px;
+}
+.missionSection .missionSecWrapper .mainContainer {
+  display: flex;
+  align-items: normal;
+  position: relative;
+}
+.missionSection .missionSecWrapper .mainContainer .card {
+  width: 50%;
+  padding: 80px 10px 80px 120px;
+  transition: width 0.8s ease;
+  position: relative;
+  overflow: hidden;
+}
+.missionSection .missionSecWrapper .mainContainer .card .hoverContent {
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  transition: 0.4s ease-in;
+  position: relative;
+}
+.missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt {
+  width: 70%;
+  overflow: hidden;
+  height: 180px;
+}
+.missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
+  color: #1E1E1E;
+  font-family: "verdanaregular";
+  font-size: 24px;
+  line-height: 166%;
+  overflow: hidden;
+  transition: 0.4s all ease-in;
+  transform: translateX(-100%);
+}
+@media screen and (max-width: 1600px) {
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
+    font-size: 16px;
+  }
+}
+.missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon {
+  width: 180px;
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.4s all ease-in;
+}
+.missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon img {
+  transition: 0.6s all ease-in;
+}
+.missionSection .missionSecWrapper .mainContainer .card h2 {
+  color: #1E1E1E;
+  text-shadow: 0px 6.577px 55.902px rgba(0, 0, 0, 0.1);
+  font-family: "termina_testbold";
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -0.96px;
+}
+@media screen and (max-width: 1600px) {
+  .missionSection .missionSecWrapper .mainContainer .card h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .missionSection .missionSecWrapper .mainContainer .card h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .missionSection .missionSecWrapper .mainContainer .card h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .missionSection .missionSecWrapper .mainContainer .card h2 {
+    font-size: 24px;
+  }
+}
+.missionSection .missionSecWrapper .mainContainer .card.mission {
+  background: #F5F75E;
+  z-index: 1;
+}
+.missionSection .missionSecWrapper .mainContainer .card.vision {
+  background: #1E1E1E;
+}
+.missionSection .missionSecWrapper .mainContainer .card.vision > .hoverContent .cardTxt p {
+  color: #F5F75E;
+}
+.missionSection .missionSecWrapper .mainContainer .card.vision > h2 {
+  color: #F5F75E;
+}
+.missionSection .missionSecWrapper .mainContainer .card:hover {
+  width: 100%;
+  transition: 0.4s ease-in;
+}
+.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardTxt p {
+  transform: translateX(0%);
+}
+.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
+  left: 88%;
+}
+.missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon img {
+  transform: scale3d(1.6, 1.6, 1.6);
+}
+@media all and (max-width: 1800px) {
+  .missionSection {
+    margin-bottom: 180px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card {
+    padding: 75px 10px 75px 110px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .missionSection {
+    margin-bottom: 150px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card {
+    padding: 70px 10px 70px 100px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent {
+    margin-bottom: 30px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon img {
+    transform: scale3d(1.4, 1.4, 1.4);
+  }
+}
+@media all and (max-width: 1440px) {
+  .missionSection {
+    margin-bottom: 120px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card {
+    padding: 60px 10px 60px 80px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt {
+    height: 160px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon {
+    width: 160px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .missionSection .missionSecWrapper .mainContainer .card {
+    padding: 50px 10px 50px 60px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt {
+    height: 140px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon {
+    width: 140px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
+    left: 85%;
+  }
+}
+@media all and (max-width: 1024px) {
+  .missionSection {
+    margin-bottom: 100px;
+  }
+  .missionSection .missionSecWrapper .mainContainer {
+    flex-flow: column;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card {
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent {
+    margin-bottom: 25px;
+    flex-flow: column;
+    align-items: flex-end;
+    order: 1;
+    gap: 24px;
+    margin-bottom: 0;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt {
+    width: 100%;
+    height: auto;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
+    transform: translateX(0);
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon {
+    width: 180px;
+    position: relative;
+    transform: translateX(150%);
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon.iconReset {
+    transform: translateX(0);
+  }
+  .missionSection .missionSecWrapper .mainContainer .card h2 {
+    order: 0;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
+    left: unset;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon img {
+    transform: scale3d(1, 1, 1);
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:last-child .hoverContent {
+    align-items: flex-start;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:last-child .hoverContent .cardIcon {
+    transform: translateX(-150%);
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:last-child .hoverContent .cardIcon.visionIconReset {
+    transform: translateX(0);
+  }
+}
+@media all and (max-width: 820px) {
+  .missionSection .missionSecWrapper .mainContainer .card {
+    padding: 30px;
+    gap: 20px;
+  }
+}
+@media all and (max-width: 720px) {
+  .missionSection {
+    margin-bottom: 72px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card {
+    padding: 30px 20px;
+    gap: 16px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card h2 {
+    font-size: 24px;
+    line-height: 116%;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
+    font-size: 12px;
+    line-height: 150%;
+  }
+}
+
+.weValueSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
+  margin-bottom: 56px;
+}
+.weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
+  font-size: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
+    font-size: 12px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .weValueSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
+    margin-bottom: 50px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .weValueSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
+    margin-bottom: 40px;
+  }
+}
+@media all and (max-width: 720px) {
+  .weValueSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
+    margin-bottom: 32px;
+    font-size: 24px;
+    line-height: 116%;
+    text-align: left;
+  }
+}
+
+.ourStrengthsSec {
+  background: #1e1e1e;
+  display: block;
+  position: relative;
+  margin-bottom: 200px;
+}
+.ourStrengthsSec .secWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 1600px) {
+  .ourStrengthsSec .secWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ourStrengthsSec .secWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .ourStrengthsSec .secWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ourStrengthsSec .secWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.ourStrengthsSec .secWrapper .innerSec {
+  position: relative;
+  height: 450vh;
+  padding-top: 50vh;
+  padding-bottom: 30vh;
+}
+.ourStrengthsSec .secWrapper .innerSec .secHeading {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ourStrengthsSec .secWrapper .innerSec .secHeading h2 {
+  color: #fff;
+  text-align: center;
+  color: #F5F75E;
+  font-family: "termina_testbold";
+  font-size: 80px;
+  line-height: 120%;
+}
+@media screen and (max-width: 1800px) {
+  .ourStrengthsSec .secWrapper .innerSec .secHeading h2 {
+    font-size: 72px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .ourStrengthsSec .secWrapper .innerSec .secHeading h2 {
+    font-size: 64px;
+  }
+}
+@media screen and (max-width: 1440) {
+  .ourStrengthsSec .secWrapper .innerSec .secHeading h2 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .ourStrengthsSec .secWrapper .innerSec .secHeading h2 {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .ourStrengthsSec .secWrapper .innerSec .secHeading h2 {
+    font-size: 36px;
+  }
+}
+.ourStrengthsSec .secWrapper .innerSec .cardsGroup {
+  display: flex;
+  flex-flow: column;
+  gap: 100px;
+  align-items: flex-start;
+  position: absolute;
+  width: 100%;
+  padding-top: 60vh;
+}
+.ourStrengthsSec .secWrapper .innerSec .cardsGroup .card {
+  background: #fff;
+  z-index: 2;
+  padding: 180px 32px 32px 32px;
+  display: flex;
+  flex-flow: column;
+  gap: 50px;
+  width: 30%;
+  position: relative;
+}
+.ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox h5 {
+  font-family: "verdanabold";
+  font-size: 28px;
+  line-height: 140%;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox h5 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox h5 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox h5 {
+    font-size: 14px;
+  }
+}
+.ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox p {
+  color: #1e1e1e;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  line-height: 175%;
+}
+@media screen and (max-width: 1600px) {
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox p {
+    font-size: 12px;
+  }
+}
+.ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(2) {
+  transform: translateX(230%);
+}
+.ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(3) {
+  transform: translateX(110%);
+}
+.ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(4) {
+  transform: translateY(35%);
+}
+.ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(2n) {
+  background: #006E50;
+}
+.ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(2n) .contentBox h5 {
+  color: #fff;
+}
+.ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(2n) .contentBox p {
+  color: #fff;
+}
+@media all and (max-width: 1800px) {
+  .ourStrengthsSec {
+    margin-bottom: 180px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 470vh;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card {
+    padding-top: 160px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .ourStrengthsSec {
+    margin-bottom: 150px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 480vh;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card {
+    padding-top: 150px;
+    gap: 45px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .imgBox {
+    width: 50%;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(4) {
+    transform: translateY(22%);
+  }
+}
+@media all and (max-width: 1440px) {
+  .ourStrengthsSec {
+    margin-bottom: 120px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 430vh;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup {
+    gap: 80px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card {
+    padding: 140px 30px 30px 30px;
+    gap: 40px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .imgBox {
+    width: 45%;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(4) {
+    transform: translateY(20%);
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(3) {
+    transform: translateX(120%);
+  }
+}
+@media all and (max-width: 1366px) {
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 480vh;
+  }
+}
+@media all and (max-width: 1280px) {
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card {
+    padding-top: 120px;
+    gap: 35px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .imgBox {
+    width: 45%;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox h5 {
+    margin-bottom: 16px;
+  }
+}
+@media all and (max-width: 1180px) {
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 425vh;
+  }
+}
+@media all and (max-width: 1024px) {
+  .ourStrengthsSec {
+    margin-bottom: 100px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 430vh;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup {
+    gap: 60px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card {
+    padding-top: 100px;
+    gap: 30px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox h5 {
+    margin-bottom: 14px;
+  }
+}
+@media all and (max-width: 820px) {
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 270vh;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup {
+    gap: 60px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card {
+    padding-top: 80px;
+    gap: 25px;
+    width: 40%;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox h5 {
+    margin-bottom: 14px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(2) {
+    transform: translateX(150%);
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(3) {
+    transform: translateX(50%);
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(4) {
+    transform: translateY(25%);
+  }
+}
+@media all and (max-width: 768px) {
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 300vh;
+  }
+}
+@media all and (max-width: 720px) {
+  .ourStrengthsSec {
+    margin-bottom: 72px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 360vh;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .secHeading h2 {
+    font-size: 24px;
+    line-height: 133%;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup {
+    gap: 120px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card {
+    width: 90%;
+    gap: 24px;
+    padding: 32px;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .imgBox {
+    width: 35%;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox h5 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 175%;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox p {
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(2) {
+    transform: translateX(10%);
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(3) {
+    transform: translateX(0%);
+  }
+  .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card:nth-child(4) {
+    transform: translate(10%, 0%);
+  }
+}
+@media all and (max-width: 500px) {
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 300vh;
+  }
+}
+@media all and (max-width: 400px) {
+  .ourStrengthsSec .secWrapper .innerSec {
+    height: 360vh;
+  }
+}
+
+.ourStorySec {
+  margin-bottom: 200px;
+  background: #F5F75E;
+}
+.ourStorySec .secWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-right: 0;
+}
+@media screen and (max-width: 1600px) {
+  .ourStorySec .secWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ourStorySec .secWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .ourStorySec .secWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ourStorySec .secWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.ourStorySec .secWrapper .mainContainer {
+  display: flex;
+  align-items: center;
+  gap: 180px;
+  padding: 120px 0;
+}
+.ourStorySec .secWrapper .mainContainer .card {
+  width: 50%;
+}
+.ourStorySec .secWrapper .mainContainer .contentBox h2 {
+  color: #1E1E1E;
+  font-family: "termina_testbold";
+  font-size: 48px;
+  line-height: 133%;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 1600px) {
+  .ourStorySec .secWrapper .mainContainer .contentBox h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ourStorySec .secWrapper .mainContainer .contentBox h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .ourStorySec .secWrapper .mainContainer .contentBox h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .ourStorySec .secWrapper .mainContainer .contentBox h2 {
+    font-size: 24px;
+  }
+}
+.ourStorySec .secWrapper .mainContainer .contentBox p {
+  color: #1E1E1E;
+  text-align: justify;
+  font-family: "verdanaregular";
+  font-size: 20px;
+  line-height: 175%;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1600px) {
+  .ourStorySec .secWrapper .mainContainer .contentBox p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ourStorySec .secWrapper .mainContainer .contentBox p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .ourStorySec .secWrapper .mainContainer .contentBox p {
+    font-size: 12px;
+  }
+}
+.ourStorySec .secWrapper .mainContainer .contentBox p:last-child {
+  margin-bottom: 0;
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .sliderImg {
+  margin-right: 50px;
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .sliderImg:last-child {
+  margin-right: 0;
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-slide {
+  transform: scaleY(0.9);
+  opacity: 0.3;
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-slide figure figcaption {
+  opacity: 0;
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-current.slick-active {
+  transform: scaleY(1);
+  opacity: 1;
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-current.slick-active figure figcaption {
+  opacity: 1;
+  margin-top: 24px;
+  position: relative;
+  padding-left: 10px;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  line-height: 175%;
+}
+@media screen and (max-width: 1600px) {
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-current.slick-active figure figcaption {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-current.slick-active figure figcaption {
+    font-size: 12px;
+  }
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-current.slick-active figure figcaption::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 0;
+  border-left: 1px solid #000;
+}
+@media all and (max-width: 1800px) {
+  .ourStorySec {
+    margin-bottom: 180px;
+  }
+  .ourStorySec .secWrapper .mainContainer {
+    gap: 170px;
+    padding: 110px 0;
+  }
+}
+@media all and (max-width: 1600px) {
+  .ourStorySec {
+    margin-bottom: 150px;
+  }
+  .ourStorySec .secWrapper {
+    padding-right: 0;
+  }
+  .ourStorySec .secWrapper .mainContainer {
+    gap: 150px;
+    padding: 100px 0;
+  }
+}
+@media all and (max-width: 1440px) {
+  .ourStorySec {
+    margin-bottom: 120px;
+  }
+  .ourStorySec .secWrapper {
+    padding-right: 0;
+  }
+  .ourStorySec .secWrapper .mainContainer {
+    gap: 120px;
+    padding: 100px 0;
+  }
+  .ourStorySec .secWrapper .mainContainer .contentBox h2 {
+    margin-bottom: 30px;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .sliderImg {
+    margin-right: 40px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .ourStorySec .secWrapper {
+    padding-right: 0;
+  }
+  .ourStorySec .secWrapper .mainContainer {
+    gap: 100px;
+    padding: 90px 0;
+  }
+  .ourStorySec .secWrapper .mainContainer .contentBox h2 {
+    margin-bottom: 28px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .ourStorySec {
+    margin-bottom: 100px;
+  }
+  .ourStorySec .secWrapper {
+    padding-right: 0;
+  }
+  .ourStorySec .secWrapper .mainContainer {
+    gap: 80px;
+    padding: 70px 0;
+  }
+  .ourStorySec .secWrapper .mainContainer .contentBox h2 {
+    margin-bottom: 24px;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .sliderImg {
+    margin-right: 30px;
+  }
+}
+@media all and (max-width: 820px) {
+  .ourStorySec .secWrapper {
+    padding-right: 0;
+  }
+  .ourStorySec .secWrapper .mainContainer {
+    gap: 50px;
+    padding: 50px 0;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .sliderImg {
+    margin-right: 30px;
+  }
+}
+@media all and (max-width: 720px) {
+  .ourStorySec {
+    margin-bottom: 72px;
+  }
+  .ourStorySec .secWrapper .mainContainer {
+    gap: 50px;
+    padding: 35px 0;
+    flex-flow: column;
+  }
+  .ourStorySec .secWrapper .mainContainer .contentBox {
+    width: 100%;
+    padding-right: 20px;
+  }
+  .ourStorySec .secWrapper .mainContainer .contentBox h2 {
+    font-size: 24px;
+    line-height: 116%;
+  }
+  .ourStorySec .secWrapper .mainContainer .contentBox p {
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox {
+    width: 100%;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .sliderImg {
+    margin-right: 12px;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-slide {
+    transform: scaleY(0.7);
+  }
+}
+
+.foundersSec {
+  margin-bottom: 200px;
+  transition: all 0.5s ease-in-out;
+}
+.foundersSec .secWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+@media screen and (max-width: 1600px) {
+  .foundersSec .secWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .foundersSec .secWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .foundersSec .secWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .foundersSec .secWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.foundersSec .secWrapper .secHeading {
+  margin-bottom: 100px;
+  padding-top: 70px;
+}
+.foundersSec .secWrapper .secHeading h2 {
+  color: #1E1E1E;
+  text-align: center;
+  font-family: "termina_testbold";
+  line-height: 133%;
+  text-transform: uppercase;
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 1600px) {
+  .foundersSec .secWrapper .secHeading h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .foundersSec .secWrapper .secHeading h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .foundersSec .secWrapper .secHeading h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .foundersSec .secWrapper .secHeading h2 {
+    font-size: 24px;
+  }
+}
+.foundersSec .secWrapper .secHeading p {
+  color: #1E1E1E;
+  text-align: center;
+  font-family: "verdanaregular";
+  font-size: 20px;
+  line-height: 160%;
+}
+@media screen and (max-width: 1600px) {
+  .foundersSec .secWrapper .secHeading p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .foundersSec .secWrapper .secHeading p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .foundersSec .secWrapper .secHeading p {
+    font-size: 12px;
+  }
+}
+.foundersSec .secWrapper .secContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 150px;
+  gap: 60px;
+}
+.foundersSec .secWrapper .secContent .founderDetailsbox {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  justify-content: flex-end;
+  width: calc(50% - 30px);
+}
+.foundersSec .secWrapper .secContent .founderDetailsbox .detailBox {
+  width: calc(55% - 70px);
+  text-align: end;
+}
+.foundersSec .secWrapper .secContent .founderDetailsbox .detailBox p {
+  color: #1E1E1E;
+  font-family: "verdanaregular";
+  font-size: 24px;
+  line-height: 133%;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1600px) {
+  .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox p {
+    font-size: 16px;
+  }
+}
+.foundersSec .secWrapper .secContent .founderDetailsbox .detailBox h6 {
+  color: #1E1E1E;
+  font-family: "verdanabold";
+  font-size: 24px;
+  line-height: 140%;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 1600px) {
+  .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox h6 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox h6 {
+    font-size: 16px;
+  }
+}
+.foundersSec .secWrapper .secContent .founderDetailsbox .pictureBox {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transform-origin: left;
+  width: 45%;
+}
+.foundersSec .secWrapper .secContent .founderDetailsbox:last-child {
+  flex-flow: row-reverse;
+}
+.foundersSec .secWrapper .secContent .founderDetailsbox:last-child .detailBox {
+  text-align: start;
+}
+.foundersSec .secWrapper .secContent .founderDetailsbox:last-child .pictureBox {
+  transform-origin: right;
+}
+.foundersSec:hover {
+  background: #F5F75E;
+}
+.foundersSec:hover .secWrapper .secContent .founderDetailsbox .pictureBox {
+  transform: scaleX(1.05);
+}
+@media all and (max-width: 1800px) {
+  .foundersSec {
+    margin-bottom: 180px;
+  }
+  .foundersSec .secWrapper .secHeading {
+    margin-bottom: 90px;
+    padding-top: 60px;
+  }
+  .foundersSec .secWrapper .secContent {
+    padding-bottom: 140px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .foundersSec {
+    margin-bottom: 150px;
+  }
+  .foundersSec .secWrapper .secHeading {
+    margin-bottom: 80px;
+    padding-top: 50px;
+  }
+  .foundersSec .secWrapper .secContent {
+    padding-bottom: 120px;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox {
+    gap: 60px;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox {
+    width: calc(55% - 60px);
+  }
+}
+@media all and (max-width: 1440px) {
+  .foundersSec {
+    margin-bottom: 120px;
+  }
+  .foundersSec .secWrapper .secHeading {
+    margin-bottom: 70px;
+    padding-top: 50px;
+  }
+  .foundersSec .secWrapper .secHeading h2 {
+    margin-bottom: 20px;
+  }
+  .foundersSec .secWrapper .secContent {
+    padding-bottom: 100px;
+    gap: 50px;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox {
+    gap: 50px;
+    width: calc(50% - 25px);
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox {
+    width: calc(55% - 50px);
+  }
+}
+@media all and (max-width: 1280px) {
+  .foundersSec .secWrapper .secHeading {
+    margin-bottom: 60px;
+    padding-top: 45px;
+  }
+  .foundersSec .secWrapper .secContent {
+    padding-bottom: 80px;
+    gap: 50px;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox {
+    gap: 40px;
+    width: calc(50% - 25px);
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox {
+    width: calc(55% - 40px);
+  }
+}
+@media all and (max-width: 1024px) {
+  .foundersSec {
+    margin-bottom: 100px;
+  }
+  .foundersSec .secWrapper .secHeading {
+    padding-top: 40px;
+  }
+  .foundersSec .secWrapper .secContent {
+    padding-bottom: 60px;
+    gap: 40px;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox {
+    gap: 30px;
+    width: calc(50% - 20px);
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox {
+    width: calc(55% - 30px);
+  }
+}
+@media all and (max-width: 820px) {
+  .foundersSec .secWrapper .secContent .founderDetailsbox {
+    gap: 20px;
+    width: calc(50% - 20px);
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox {
+    width: calc(50% - 20px);
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox .pictureBox {
+    width: 50%;
+  }
+  .foundersSec:hover {
+    background: #fff;
+  }
+  .foundersSec:hover .secWrapper .secContent .founderDetailsbox .pictureBox {
+    transform: unset;
+  }
+}
+@media all and (max-width: 720px) {
+  .foundersSec {
+    background: #F5F75E;
+    margin-bottom: 72px;
+  }
+  .foundersSec .secWrapper .secHeading {
+    margin-bottom: 45px;
+    padding-top: 30px;
+  }
+  .foundersSec .secWrapper .secHeading h2 {
+    margin-bottom: 12px;
+    line-height: 116%;
+    text-align: left;
+  }
+  .foundersSec .secWrapper .secContent {
+    flex-flow: column;
+    padding-bottom: 35px;
+    gap: 35px;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox {
+    gap: 20px;
+    width: 100%;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox {
+    width: 100%;
+    order: 1;
+    text-align: start;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox p {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox h6 {
+    font-size: 16px;
+    line-height: 175%;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox .pictureBox {
+    width: 50%;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox:last-child {
+    flex-flow: column;
+    align-items: flex-end;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox:last-child .detailBox {
+    text-align: end;
+  }
+  .foundersSec:hover {
+    background: #F5F75E;
+  }
+}
+
+.poweringIdeaSec {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 200px;
+  background: #F5F75E;
+}
+.poweringIdeaSec .secWrapper {
+  height: 100%;
+}
+.poweringIdeaSec .secWrapper .poweringMainContainer {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
+.poweringIdeaSec .secWrapper .poweringMainContainer .imgBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  z-index: 1;
+  transition: all 0.8s ease-in-out;
+}
+.poweringIdeaSec .secWrapper .poweringMainContainer .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.poweringIdeaSec .secWrapper .poweringMainContainer .imgBox img.bannerMbl {
+  display: none;
+}
+.poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 120%;
+  transition: all 0.8s ease-in-out;
+  padding-left: 90px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p:first-child {
+  color: #1E1E1E;
+  font-size: 16px;
+  font-family: "verdanaregular";
+  line-height: 250%;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 1600px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p:first-child {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p:first-child {
+    font-size: 12px;
+  }
+}
+.poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup h2 {
+  color: #1E1E1E;
+  font-family: "termina_testbold";
+  font-size: 42px;
+  line-height: 142%;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1800px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup h2 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup h2 {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup h2 {
+    font-size: 20px;
+  }
+}
+.poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p {
+  color: #1E1E1E;
+  font-family: "verdanaregular";
+  font-size: 20px;
+  line-height: 160%;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p {
+    font-size: 12px;
+  }
+}
+.poweringIdeaSec .secWrapper .poweringMainContainer.activeViewPort .imgBox {
+  width: 50%;
+}
+.poweringIdeaSec .secWrapper .poweringMainContainer.activeViewPort .contentBox {
+  top: 0;
+}
+@media all and (max-width: 1800px) {
+  .poweringIdeaSec {
+    margin-bottom: 180px;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
+    padding-left: 85px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .poweringIdeaSec {
+    margin-bottom: 150px;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
+    padding-left: 80px;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p {
+    margin-bottom: 38px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .poweringIdeaSec {
+    margin-bottom: 120px;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
+    padding-left: 75px;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p {
+    margin-bottom: 30px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
+    padding-left: 70px;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup h2 {
+    margin-bottom: 16px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .poweringIdeaSec {
+    margin-bottom: 100px;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
+    padding-left: 50px;
+  }
+}
+@media all and (max-width: 820px) {
+  .poweringIdeaSec {
+    height: 100%;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer {
+    flex-flow: column;
+    gap: 24px;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .imgBox {
+    position: relative;
+    width: 100%;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .imgBox img.bannerDesktop {
+    display: none;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .imgBox img.bannerMbl {
+    display: block;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 36px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1600px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1440px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1024px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 768px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 820px) {
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup {
+    width: 100%;
+  }
+}
+@media all and (max-width: 720px) {
+  .poweringIdeaSec {
+    margin-bottom: 72px;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p:first-child {
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup h2 {
+    font-size: 20px;
+    line-height: 140%;
+  }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 175%;
+  }
+}
+
+.careerAtEvertaSec {
+  margin-bottom: 200px;
+  border-top: 1px solid #BEC3C5;
+  border-bottom: 1px solid #BEC3C5;
+}
+.careerAtEvertaSec .secWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+@media screen and (max-width: 1600px) {
+  .careerAtEvertaSec .secWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerAtEvertaSec .secWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerAtEvertaSec .secWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .careerAtEvertaSec .secWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.careerAtEvertaSec .secWrapper .secHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  gap: 50px;
+  padding: 70px 0;
+}
+.careerAtEvertaSec .secWrapper .secHeading h2 {
+  color: #1E1E1E;
+  text-align: center;
+  font-family: "termina_testbold";
+  font-size: 48px;
+  line-height: 133%;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1600px) {
+  .careerAtEvertaSec .secWrapper .secHeading h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerAtEvertaSec .secWrapper .secHeading h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .careerAtEvertaSec .secWrapper .secHeading h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .careerAtEvertaSec .secWrapper .secHeading h2 {
+    font-size: 24px;
+  }
+}
+@media all and (max-width: 1800px) {
+  .careerAtEvertaSec {
+    margin-bottom: 180px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .careerAtEvertaSec {
+    margin-bottom: 150px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .careerAtEvertaSec {
+    margin-bottom: 120px;
+  }
+  .careerAtEvertaSec .secWrapper .secHeading {
+    padding: 60px 0;
+    gap: 45px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .careerAtEvertaSec .secWrapper .secHeading {
+    padding: 50px 0;
+    gap: 40px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .careerAtEvertaSec {
+    margin-bottom: 100px;
+  }
+  .careerAtEvertaSec .secWrapper .secHeading {
+    gap: 35px;
+  }
+}
+@media all and (max-width: 720px) {
+  .careerAtEvertaSec {
+    margin-bottom: 72px;
+  }
+  .careerAtEvertaSec .secWrapper .secHeading {
+    gap: 25px;
+    align-items: flex-start;
+  }
+  .careerAtEvertaSec .secWrapper .secHeading h2 {
+    text-align: left;
+    line-height: 116%;
+  }
+}
+
+.visitUsSec {
+  margin-bottom: 200px;
+}
+.visitUsSec .secWrapper .visiUsMainContainer {
+  display: flex;
+  align-items: center;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox {
+  width: 70%;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .desktopSVG svg .india {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .desktopSVG svg .uae {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .desktopSVG svg .poland {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG {
+  display: none;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-1 {
+  fill: none;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-2, .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-3 {
+  fill: #1e1e1e;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-4 {
+  fill: #f5f75e;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-5, .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-6 {
+  fill: #e5e7e8;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-6, .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-3 {
+  fill-rule: evenodd;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .cls-7 {
+  clip-path: url(#clippath);
+}
+.visitUsSec .secWrapper .visiUsMainContainer .addressContent {
+  width: 30%;
+  padding: 100px 85px;
+  background: #1E1E1E;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .addressContent h2 {
+  color: #F5F75E;
+  font-family: "termina_testbold";
+  font-size: 48px;
+  line-height: 133%;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1600px) {
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent h2 {
+    font-size: 24px;
+  }
+}
+.visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox {
+  margin-bottom: 65px;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox .addressBox p {
+  color: #FAFAFA;
+  font-family: "verdanaregular";
+  font-size: 28px;
+  line-height: 142%;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1600px) {
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox .addressBox p {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox .addressBox p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox .addressBox p {
+    font-size: 14px;
+  }
+}
+.visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox .addressBox p:last-child {
+  font-size: 20px;
+  line-height: 160%;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1600px) {
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox .addressBox p:last-child {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox .addressBox p:last-child {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox .addressBox p:last-child {
+    font-size: 12px;
+  }
+}
+.visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox.slick-dotted.slick-slider .slick-dots {
+  bottom: -65px;
+  display: inline-flex;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox.slick-dotted.slick-slider .slick-dots li {
+  width: 8px;
+  height: 8px;
+  background: rgba(245, 247, 94, 0.2);
+  border-radius: 100%;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox.slick-dotted.slick-slider .slick-dots li button {
+  width: 8px;
+  height: 8px;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox.slick-dotted.slick-slider .slick-dots li.slick-active {
+  background: rgb(245, 247, 94);
+}
+.visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox.slick-dotted.slick-slider .slick-dots li:only-child {
+  display: none;
+}
+@media all and (max-width: 1800px) {
+  .visitUsSec {
+    margin-bottom: 180px;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent {
+    padding: 90px 80px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .visitUsSec {
+    margin-bottom: 150px;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox {
+    width: 68%;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent {
+    padding: 80px 70px;
+    width: 32%;
+  }
+}
+@media all and (max-width: 1440px) {
+  .visitUsSec {
+    margin-bottom: 120px;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox {
+    width: 65%;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent {
+    padding: 70px 60px;
+    width: 35%;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent h2 {
+    margin-bottom: 25px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox {
+    width: 65%;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent {
+    padding: 45px 50px;
+    width: 35%;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox {
+    margin-bottom: 50px;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox.slick-dotted.slick-slider .slick-dots {
+    bottom: -50px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .visitUsSec {
+    margin-bottom: 100px;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox {
+    width: 60%;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent {
+    width: 40%;
+    padding: 45px 40px;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent h2 {
+    margin-bottom: 20px;
+  }
+}
+@media all and (max-width: 820px) {
+  .visitUsSec .secWrapper .visiUsMainContainer {
+    flex-flow: row;
+    gap: 24px;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox {
+    width: 50%;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox .desktopSVG {
+    display: none;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG {
+    display: block;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .india {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .uae {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox .mblSVG svg .poland {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent {
+    width: 50%;
+    padding: 50px 10px 30px 30px;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent h2 {
+    margin-bottom: 20px;
+  }
+}
+@media all and (max-width: 720px) {
+  .visitUsSec {
+    margin-bottom: 72px;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer {
+    flex-flow: column;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .mapBox {
+    width: 100%;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent {
+    width: 100%;
+    padding: 20px 10px 30px 30px;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent h2 {
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 116%;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox {
+    margin-bottom: 30px;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox .addressBox p {
+    font-size: 16px;
+    line-height: 175%;
+    margin-bottom: 5px;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox .addressBox p:last-child {
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox.slick-dotted.slick-slider .slick-dots {
+    bottom: -30px;
+  }
+}
+
+.resourceBannerSec {
+  margin: 200px 0;
+}/*# sourceMappingURL=main.css.map */

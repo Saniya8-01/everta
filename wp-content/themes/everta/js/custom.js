@@ -498,35 +498,281 @@ $(window).on('resize scroll', function () {
 });
 
 
-var counted = 0;
-$(window).scroll(function () {
-    var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
-    if (counted == 0 && $(window).scrollTop() > oTop) {
-        $('.statCard h3').each(function () {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
-            var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
+// var counted = 0;
+// $(window).scroll(function () {
+//     var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
+//     if (counted == 0 && $(window).scrollTop() > oTop) {
+//         $('.statCard h3').each(function () {
+//             var $this = $(this),
+//                 countTo = $this.attr('data-count');
+//             var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
 
-            $({
-                countNum: 0
-            }).animate(
-                {
-                    countNum: countTo
-                },
-                {
-                    duration: 2000,
-                    easing: 'swing',
-                    step: function () {
-                        $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
-                    },
-                    complete: function () {
-                        $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
-                    }
+//             $({
+//                 countNum: 0
+//             }).animate(
+//                 {
+//                     countNum: countTo
+//                 },
+//                 {
+//                     duration: 2000,
+//                     easing: 'swing',
+//                     step: function () {
+//                         $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
+//                     },
+//                     complete: function () {
+//                         $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
+//                     }
+//                 }
+//             );
+//         });
+//         counted = 1;
+//     }
+// });
+
+/******About Us Js Start */
+
+if($(".ourStorySec").length){
+    $('.sliderBox').slick({
+        slidesToShow: 1.4,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true,
+        infinite: false,
+        // autoplay: true
+        responsive: [
+            {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 1.2,
                 }
-            );
-        });
-        counted = 1;
+            },
+            {
+                breakpoint: 820,
+                settings: {
+                    slidesToShow: 1.1,
+                }
+            },
+        ]
+    });
+}
+if($(".mission").length){
+    document.addEventListener("DOMContentLoaded", () => {
+        const mission = document.querySelector(".mission");
+        const missionCardIcon = document.querySelector(".mission .hoverContent .cardIcon");
+        if(window.innerWidth <= 1024){
+            window.addEventListener('scroll', () => {
+                const sectionRect = mission.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                const sectionHalfHeight = sectionRect.height / 2;
+    
+                const sectionHalfVisible = 
+                    sectionRect.top + sectionHalfHeight <= windowHeight && 
+                    sectionRect.bottom - sectionHalfHeight >= 0;          
+    
+    
+                    if (sectionHalfVisible) {
+                        missionCardIcon.classList.add("iconReset");
+                    } else {
+                        missionCardIcon.classList.remove("iconReset");
+                    }
+                  
+            });
+        }
+    });
+    
+}
+if($(".vision").length){
+    document.addEventListener("DOMContentLoaded", () => {
+        const vision = document.querySelector(".vision");
+        console.log(vision);
+        const visionCardIcon = document.querySelector(".vision .hoverContent .cardIcon");
+        if(window.innerWidth <= 1024){
+            window.addEventListener('scroll', () => {
+                const sectionRect = vision.getBoundingClientRect();
+                const windowHeight = window.innerHeight;  
+                const sectionHalfHeight = sectionRect.height / 2;
+                const sectionHalfVisible = 
+                    sectionRect.top + sectionHalfHeight <= windowHeight && 
+                    sectionRect.bottom - sectionHalfHeight >= 0;          
+    
+                if (sectionHalfVisible) {
+                    visionCardIcon.classList.add("visionIconReset");
+                } else {
+                    visionCardIcon.classList.remove("visionIconReset");
+                }
+            });
+        }
+    })
+}
+if($(".poweringIdeaSec").length){
+    if(window.innerWidth > 820){
+        document.addEventListener("DOMContentLoaded", () => {
+            const section = document.querySelector('.poweringIdeaSec');
+            const poweringMainContainer = document.querySelector('.poweringMainContainer');
+    
+            window.addEventListener('scroll', () => {
+                const sectionRect = section.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                const viewportMidPoint = windowHeight / 2;
+    
+                // Add 'activeViewPort' when the section reaches 50% of the viewport
+                if (sectionRect.top < viewportMidPoint && sectionRect.bottom > viewportMidPoint) {
+                    poweringMainContainer.classList.add('activeViewPort');
+                } else {
+                    // Remove 'activeViewPort' when the section is no longer in the 50% region
+                    poweringMainContainer.classList.remove('activeViewPort');
+                }
+            });
+        })
     }
+}
+if($(".visitUsSec").length){
+    $('.visitUsSliderBox').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        centerMode: false,
+        focusOnSelect: true,
+        infinite: false,
+        autoplay: true,
+    });
+
+    function showActiveIcon (){
+        const activeSlide = document.querySelector(".visitUsSliderBox .slick-current");
+        const desktopSVG = document.querySelector(".desktopSVG");
+        const INDIA = document.querySelector(".desktopSVG .india");
+        const mblINDIA = document.querySelector(".mblSVG .india");
+        const UAE = document.querySelector(".desktopSVG .uae");
+        const mblUAE = document.querySelector(".mblSVG .uae");
+        const POLAND = document.querySelector(".desktopSVG .poland");
+        const mblPOLAND = document.querySelector(".mblSVG .poland");
+        
+        if(activeSlide){
+            const companyName = activeSlide.getAttribute("data-company");
+            if(window.getComputedStyle(desktopSVG).display !== "none"){
+                if(companyName === "india" ){
+                    INDIA.style.opacity = 1;
+                    UAE.style.opacity = 0; 
+                    POLAND.style.opacity = 0; 
+                }else if(companyName === "poland"){
+                    POLAND.style.opacity = 1;
+                    INDIA.style.opacity = 0;
+                    UAE.style.opacity = 0;
+                }else{
+                    UAE.style.opacity = 1;
+                    POLAND.style.opacity = 0;
+                    INDIA.style.opacity = 0;
+                }
+            }else{
+                if(companyName === "india" ){
+                    mblINDIA.style.opacity = 1;
+                    mblUAE.style.opacity = 0; 
+                    mblPOLAND.style.opacity = 0; 
+                }else if(companyName === "poland"){
+                    mblPOLAND.style.opacity = 1;
+                    mblINDIA.style.opacity = 0;
+                    mblUAE.style.opacity = 0;
+                }else{
+                    mblUAE.style.opacity = 1;
+                    mblPOLAND.style.opacity = 0;
+                    mblINDIA.style.opacity = 0;
+                }
+                
+            }
+           
+        }
+    }
+    $('.visitUsSliderBox').on('afterChange', function () {
+        showActiveIcon();
+    });
+
+    showActiveIcon()
+}
+
+/******About Us Js End */
+
+/* Careers page JS Starts */
+
+document.addEventListener("DOMContentLoaded", function() {
+    const optionMenus = document.querySelectorAll(".customSelect");
+    const applyFilterBtn = document.getElementById("applyFilter");
+    const clearFilterBtn = document.getElementById("clearFilter");
+    const careerBoxes = document.querySelectorAll(".careerPositionBox");
+
+    const defaultTexts = ["Location", "Department", "Contract type"];
+
+    optionMenus.forEach((optMenu, index) => {
+        const selectBtn = optMenu.querySelector(".selectBtn");
+        const options = optMenu.querySelectorAll(".option");
+        const sBtn_text = optMenu.querySelector(".sBtntext");
+
+        selectBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            optMenu.classList.toggle("active");
+        });
+
+        options.forEach((option) => {
+            option.addEventListener("click", () => {
+                const selectedOption = option.innerText;
+                sBtn_text.innerText = selectedOption;
+                optMenu.classList.remove("active");
+            });
+        });
+    });
+
+    window.addEventListener("click", function(e) {
+        optionMenus.forEach(optMenu => {
+            if (!optMenu.contains(e.target)) {
+                optMenu.classList.remove("active");
+            }
+        });
+    });
+
+    applyFilterBtn.addEventListener("click", () => {
+        const selectedFilters = Array.from(optionMenus).map(menu => menu.querySelector(".sBtntext").innerText);
+        
+        careerBoxes.forEach(box => {
+            let isVisible = true;
+
+            const locationText = box.querySelector(".posSubContent h4").innerText;
+            const departmentText = box.querySelector(".subBoxContent h3").innerText;
+            const contractTypeText = box.querySelector(".posSubContent div:nth-of-type(2) h4").innerText;
+            
+            const [locationFilter, departmentFilter, contractTypeFilter] = selectedFilters;
+
+            if (locationFilter !== "Location" && !locationText.includes(locationFilter)) {
+                isVisible = false;
+            }
+
+            if (departmentFilter !== "Department" && !departmentText.includes(departmentFilter)) {
+                isVisible = false;
+            }
+
+            if (contractTypeFilter !== "Contract type" && !contractTypeText.includes(contractTypeFilter)) {
+                isVisible = false;
+            }
+
+            if (isVisible) {
+                box.style.display = "flex";
+            } else {
+                box.style.display = "none";
+            }
+        });
+    });
+
+    clearFilterBtn.addEventListener("click", () => {
+        optionMenus.forEach((optMenu, index) => {
+            const sBtn_text = optMenu.querySelector(".sBtntext");
+            sBtn_text.innerText = defaultTexts[index];
+        });
+
+        careerBoxes.forEach(box => {
+            box.style.display = "flex";
+        });
+    });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -557,6 +803,44 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// career opening modal starts
+document.addEventListener("DOMContentLoaded", function() {
+    var careerBoxes = document.querySelectorAll(".careerPositionBox");
+    var closeButtons = document.querySelectorAll(".closeBtn");
 
+    careerBoxes.forEach(function(box) {
+        box.addEventListener("click", function() {
+    
+            var modalId = box.getAttribute("data-modal");
+            var modal = document.getElementById(modalId);
+    
+            if (modal) {
+                modal.classList.add("show-modal");
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "";
+            }
+        });
+    });
 
+    closeButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            var modal = button.closest(".careerOpeningModal");
+            modal.classList.remove("show-modal");
+            document.body.style.overflow = "";
+        });
+    });
 
+    window.addEventListener("click", function(event) {
+        var openModals = document.querySelectorAll(".careerOpeningModal.show-modal");
+        openModals.forEach(function(modal) {
+            if (event.target === modal) {
+                modal.classList.remove("show-modal");
+                document.body.style.overflow = "";
+            }
+        });
+    });
+});
+
+// career opening modal ends
+/* Careers page JS Ends */

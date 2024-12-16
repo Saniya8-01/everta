@@ -1,0 +1,221 @@
+.careerBannerSection{margin: 172px 0px 120px;
+    .careerSectionWrapper{@include wrapper;
+        h1{color: $quaternaryColor1; @include terminamedium; @include font80; font-weight: $fontW600; line-height: 120%; margin-bottom: 20px;}
+        p{width: 80%; margin-bottom: 36px; color: $quaternaryColor1; @include verdanaregular; @include font24; font-weight: $fontW400; line-height: 166%;}
+        a{margin-bottom: 40px!important;}
+        .careerBannerImg{
+            img{display: block; object-fit: cover;}
+        }
+    }
+}
+
+.careerTeamSection{margin-bottom: 244px;
+    .careerSectionWrapper{padding-top: 66px; padding-bottom: 66px; @include wrapper; background: #F2F3F3;
+        .secHeading{margin-bottom: 66px;
+          h2{color: $quaternaryColor1; @include terminabold; @include font48; font-weight: $fontW700; line-height: 134%; text-transform: uppercase;margin-bottom: 20px;}
+          p{color: $quaternaryColor1; @include verdanaregular; @include font24; font-weight: $fontW400; line-height: 134%;}
+        }
+        .careerFilterSection{display: flex; justify-content: space-between; align-items: center;
+            .selFilter{width: 75%; display: flex; align-items: center;
+                .customSelect{position: relative; width: 30%; margin-right: 32px;
+                  .selectBtn{width: 100%; background: transparent; display: flex; cursor: pointer; border-bottom: 1px solid $quaternaryColor3; padding: 4px 0px 12px; position: relative; justify-content: space-between;
+                    .sBtntext{color: $quaternaryColor1; @include verdanaregular; @include font16; font-weight: $fontW400;}
+                    .img{display: block;}
+                  }
+                  .options{position: absolute; width: 100%; overflow-y: auto; max-height: 295px; margin-top: 10px; display:none; background: #fff;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); animation-name: fadeInDown; -webkit-animation-name: fadeInDown; animation-duration: 0.35s;animation-fill-mode: both; -webkit-animation-duration: 0.35s; -webkit-animation-fill-mode: both;
+                    .option{display: flex; height: 55px; cursor: pointer; padding: 0 16px; align-items: center; background: #fff; font-size: 18px; @include verdanaregular; @include font16; font-weight: $fontW400; text-align: left; color: $quaternaryColor3; border-bottom: 1px solid #CCCCCC;
+                      &:last-child{border: none;}
+                    }
+                    &::-webkit-scrollbar{width: 6px;}
+                    &::-webkit-scrollbar-thumb{background-color: $quaternaryColor3; border-radius: 5px;}
+                  }
+                  &.active .selectBtn{
+                    img{transform: rotate(-180deg);}
+                  }
+                  &.active .options{display: block; opacity: 0; z-index: 10; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; animation-duration: 0.4s; animation-fill-mode: both; -webkit-animation-duration: 0.4s; -webkit-animation-fill-mode: both;}
+                }
+            }
+            .filterBtnContainer{width: 25%; display: flex; justify-content: flex-end;
+                button{&:first-child{margin-right: 32px}}
+                .ctaApplyFilter{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: $primaryColor1; background: $quaternaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: center;display:inline-block;}
+                .ctaClearFilter{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: #000; background: transparent; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: center;border:1px solid $quaternaryColor2;display:inline-block;}
+            }
+        }
+    }
+    .careerSectionWrapperTwo{
+        .careerPositionBox{@include wrapper; padding-top: 40px; padding-bottom: 40px; border-bottom: 1px solid $tertiaryColor3; background: transparent; cursor: default; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease-in-out;
+            .subBoxContent{
+                h3{color: $quaternaryColor1; @include terminamedium; @include font32; font-weight: $fontW600; line-height: 113%; margin-bottom: 24px;}
+                .posSubContent{display: flex; align-items: center; gap: 32px;
+                    div{display: flex; align-items: center; gap: 8px;
+                        img{display: block; object-fit: cover;}
+                        h4{color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font24; font-weight: $fontW400;line-height: 166%;}
+                    }
+                }
+            }
+            .subBoxImg{opacity: 0; visibility: hidden; transition: all 0.3s ease-in-out; width: 80px; height: 80px;
+                img{display: block; object-fit: cover; width: 100%;}
+            }
+            &:hover{background: $primaryColor1;
+                .subBoxImg{opacity: 1; visibility: visible;}
+            }
+            &:first-child{border-top: 1px solid $tertiaryColor3;}
+        }
+    }
+}
+
+.careerOpeningModal{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 20;
+    &.show-modal {display: block;}
+    .modalContent {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%;
+        .jobHeadingDesc{background: $primaryColor1; padding: 56px 64px 34px;
+            .closeBtn{cursor: pointer; display: block; float: right;
+                img{display: block; object-fit: cover;}
+            }
+            .jobHeadingDescSub{margin-top: 78px; display: flex; align-items: center; justify-content: space-between; gap: 32px;
+                .headingDescContent{
+                    span{display: block; width: fit-content; margin-bottom: 13px; color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400; line-height: 175%; padding: 4px 8px; border-radius: 2px; background: rgba(30, 30, 30, 0.10);}
+                    .subBoxContent{
+                        h3{color: $quaternaryColor1; @include terminamedium; @include font32; font-weight: $fontW600; line-height: 113%; margin-bottom: 13px;}
+                        .posSubContent{display: flex; align-items: center; gap: 40px;
+                            div{display: flex; align-items: center; gap: 4px;
+                                img{display: block; object-fit: cover;}
+                                h4{color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 166%;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .jobDescription{background: #fff; padding: 68px 64px 34px; height: 450px; overflow-y: scroll;
+            h6{color: $quaternaryColor2; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%;}
+            h4{margin: 32px 0px 8px; color: $quaternaryColor2; text-align: justify; @include verdanabold; @include font20; font-weight: $fontW700;line-height: 140%}
+            p{color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%;
+                &:last-of-type{margin-bottom: 8px;}
+            }
+            ul{padding-left: 20px;
+                li{list-style: disc; margin-bottom: 8px; color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%;}
+            }
+            &::-webkit-scrollbar {width: 8px;}
+            &::-webkit-scrollbar-thumb {border-radius: 200px; border: 0.2px solid rgba(0, 0, 0, 0.16); background: rgba(34, 34, 34, 0.09);}
+        }
+    }
+}
+
+.careerCVSection{margin-bottom: 217px;
+  .careerSectionWrapper{@include wrapper; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 72px; padding-bottom: 72px; border-block: 1px solid $tertiaryColor1;
+    h2{@include terminabold; text-transform: uppercase; @include font48; font-weight: $fontW700; line-height: 134%; text-align: center; color: $quaternaryColor1; margin-bottom: 20px;}
+    p{color: $quaternaryColor1; text-align: center; @include verdanaregular; @include font24; font-weight: $fontW400; line-height: 167%; margin-bottom: 52px;}
+  }
+}
+
+.careerHiringSection{margin-bottom: 92px;
+  .careerSectionWrapper{@include wrapper; margin-bottom: 66px;
+    .secHeading{display: flex; flex-direction: column; align-items: center; justify-content: center;
+      h2{margin-bottom: 24px;color: $quaternaryColor1; @include terminabold; @include font48; font-weight: $fontW700; line-height:134%; text-transform: uppercase;}
+      p{width: 65%; color: $quaternaryColor1; text-align: center; @include verdanaregular; @include font24; font-weight: $fontW400; line-height: 167%;}
+    }
+  }
+  .hiringProcessContainer{display: flex;
+    .hiringProcessBox{width: calc(100% / 3); display: flex; flex-direction: column; align-items: center; background: transparent; padding: 102px 56px 114px; cursor: default; transition: all 0.3s ease-in-out;
+      .logoBox{
+        img{width: 100%; display: block; object-fit: cover;}
+      }
+      .boxNumber{width: 47px; height: 47px; line-height: 47px; padding: 12px; box-sizing: border-box; color: $primaryColor1; text-align: center; @include terminabold; @include font28; font-weight: $fontW600; border-radius: 100%; background: $quaternaryColor1; display: flex; justify-content: center; align-items: center; margin: 74px 0px 28px;}
+      h3{color: $quaternaryColor1; @include terminabold; @include font24; font-weight: $fontW700; line-height: 134%; margin-bottom: 10px;}
+      h6{@include verdanaregular; @include font20; font-weight: $fontW400; line-height: 32px; text-align: center; visibility: hidden; opacity: 0; transition: all 0.3s ease-in-out;}
+      &:hover{background: $primaryColor1;
+        h6{visibility: visible; opacity: 1;}
+      }
+    }
+  }
+}
+
+.careerWallSection{margin-bottom: 200px;
+  .careerSectionWrapper{@include wrapper;
+    .secHeading{margin-bottom: 64px;
+      h2{color: $quaternaryColor1; text-align: center; @include terminabold; @include font80; font-weight: $fontW700; line-height: 138%; }
+    }
+    .evertaWallContainer{display: flex; align-items: center; width: 100%; padding: 0px 160px;
+      .wallImgBoxContainer{display: flex; flex-direction: column; width: 80%;
+        .wallImgBox{padding: 16px 8px; position: relative;
+          img{display: block; object-fit: cover; width: 100%; transition: all 0.5s ease-in-out;}
+          .wallTapeBox{position: absolute;left: 0; top: -6%; width: 35%;
+            img{display: block; object-fit: cover; width: 100%;}
+          }
+        }
+        &:first-child{margin-right: 20px;
+          .wallImgBox{
+            &:first-child{
+              img{transform: rotate(-10deg);}
+            }
+            &:last-child{border: 4px dashed $secondaryColor1;
+              img{transform: rotate(10deg);}
+            }
+          }
+        }
+        &:nth-child(2){margin-right: 10px;
+          .wallImgBox{border: 6px dashed $primaryColor1;
+            img{transform: rotate(10deg);}
+          }
+        }
+        &:last-child{
+          .wallImgBox{
+            &:first-child{border: 4px dashed $secondaryColor1;
+              img{transform: rotate(-10deg);}
+            }
+            &:last-child{
+              img{transform: rotate(-10deg);}
+            }
+          }
+        }
+      }
+      &:hover{
+        &:first-child{
+          .wallImgBox{
+            &:first-child{
+              img{transform: rotate(0deg);}
+            }
+            &:last-child{
+              img{transform: rotate(0deg);}
+            }
+          }
+        }
+        &:nth-child(2){
+          .wallImgBox{
+            img{transform: rotate(0deg);}
+          }
+        }
+        &:last-child{
+          .wallImgBox{
+            &:first-child{
+              img{transform: rotate(0deg);}
+            }
+            &:last-child{
+              img{transform: rotate(0deg);}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+}
