@@ -1699,6 +1699,42 @@ header .headerWrapper .headerMenu .hamburger-menu {
     font-size: 12px;
   }
 }
+.contactForm .contactFormWrapper .contactBottom .submitDiv {
+  margin-top: 32px;
+  display: flex;
+  justify-content: end;
+}
+.contactForm .contactFormWrapper .contactBottom .submitDiv input {
+  font-family: "termina_testregular";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -0.64px;
+  color: #1E1E1E;
+  background: #F5F75E;
+  border-style: none;
+  padding: 20px 32px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  display: inline-block;
+}
+@media screen and (max-width: 1600px) {
+  .contactForm .contactFormWrapper .contactBottom .submitDiv input {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contactForm .contactFormWrapper .contactBottom .submitDiv input {
+    font-size: 12px;
+  }
+}
+.contactForm .contactFormWrapper .contactBottom .submitDiv .wpcf7-spinner {
+  display: none;
+}
 
 footer .footerContainer {
   display: flex;
