@@ -62,8 +62,8 @@
 }
 .resDetailContentSec{margin-bottom: 120px;
     .secWrapper{@include wrapper; width: 70%; margin: 0 auto;
-        .contentBox{
-            .divider{margin-bottom: 64px;
+        .contentBox{ position: relative;
+            .divider{margin-bottom: 64px; 
                 h2{margin-bottom: 24px; color: #000; @include terminabold; @include font32; line-height: 150%;}
                 p{color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 30px;}
                 ol{margin-left: 20px; margin-bottom: 50px;
@@ -90,8 +90,18 @@
                     }
                 }
                 &:last-child{margin-bottom: 0;}
+                &.hideTxt{display: none; 
+                   
+                }
+                &.showTxt{display: block;}
             }
-            .readMoreBtnBox{display: flex; align-items: center; justify-content: center;}
+            &::after{content: ''; background: linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, -0.79) 100%); width: 100%; height: 200px; bottom: 70px; left: 0;position: absolute;}
+            &.removeFadeEffect{
+                &::after{display: none;}
+            }
+            .readMoreBtnBox{display: flex; align-items: center; justify-content: center;
+                &.btnHide{display: none;}
+            }
         }
     }
     @media all and (max-width: 1800px){margin-bottom: 110px;

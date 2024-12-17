@@ -33,7 +33,7 @@
                 </figure>
 
             </div>
-            <div class="divider">
+            <div class="divider hideTxt">
                 <h2>Emerging Technologies in EV Charging</h2>
                 <p>Before diving into the future, it’s important to understand the basics of EV charging. There are three primary types of EV chargers:</p>
                 <ol>
@@ -49,7 +49,7 @@
                     <li> <span>Solar-Powered Charging Stations:</span>  Combining EV charging stations with solar panels can provide a sustainable and cost-effective solution for powering EVs. These stations can generate their own electricity, reducing reliance on the grid and lowering carbon footprints.</li>
                 </ol>
             </div>
-            <div class="divider">
+            <div class="divider hideTxt">
                 <h2>The Role of Public and Private Sectors</h2>
                 <p>The expansion of EV charging infrastructure requires collaboration between the public and private sectors. Governments around the world are investing in charging infrastructure to support the growing number of EVs on the road. Incentives, grants, and partnerships with private companies are essential to building a robust and accessible network of charging stations.</p>
                 <p>Private companies are also playing a crucial role by developing innovative charging solutions and expanding their networks. Companies like Tesla, ChargePoint, and Electrify America are leading the charge in creating widespread charging availability.
@@ -58,7 +58,7 @@
                 As EV adoption continues to rise, the future of EV charging looks bright. With advancements in technology and increased investment from both public and private sectors, charging an EV will become more convenient, faster, and more sustainable. Whether you’re an EV owner or considering making the switch, staying informed about these developments will help you navigate the exciting future of electric mobility.
                 Stay tuned to our blog for more updates and insights into the world of EV charging and sustainable transportation. Together, we can drive towards a greener and more sustainable future.</p>
             </div>
-            <div class="divider">
+            <div class="divider hideTxt">
                 <div class="figCaptionBox">
                     <figure class="singleCaption">
                         <figcaption>"Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus."</figcaption>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="readMoreBtnBox">
-                <button class="ctaWhiteBlack">Read more</button>
+                <button class="ctaWhiteBlack" id="readMore">Read more</button>
             </div>           
         </div>
     </div>
