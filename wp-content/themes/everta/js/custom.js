@@ -498,36 +498,36 @@ $(window).on('resize scroll', function () {
 });
 
 
-// var counted = 0;
-// $(window).scroll(function () {
-//     var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
-//     if (counted == 0 && $(window).scrollTop() > oTop) {
-//         $('.statCard h3').each(function () {
-//             var $this = $(this),
-//                 countTo = $this.attr('data-count');
-//             var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
+var counted = 0;
+$(window).scroll(function () {
+    var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
+    if (counted == 0 && $(window).scrollTop() > oTop) {
+        $('.statCard h3').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
 
-//             $({
-//                 countNum: 0
-//             }).animate(
-//                 {
-//                     countNum: countTo
-//                 },
-//                 {
-//                     duration: 2000,
-//                     easing: 'swing',
-//                     step: function () {
-//                         $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
-//                     },
-//                     complete: function () {
-//                         $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
-//                     }
-//                 }
-//             );
-//         });
-//         counted = 1;
-//     }
-// });
+            $({
+                countNum: 0
+            }).animate(
+                {
+                    countNum: countTo
+                },
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
+                    },
+                    complete: function () {
+                        $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
+                    }
+                }
+            );
+        });
+        counted = 1;
+    }
+});
 
 /******About Us Js Start */
 
@@ -857,3 +857,31 @@ function openForm() {
 
 // career opening modal ends
 /* Careers page JS Ends */
+
+/*Resources Details Page Start*/
+if($(".resDetailContentSec").length){
+    document.addEventListener("DOMContentLoaded", () => {
+        const readMore = document.getElementById("readMore");
+        const contentBox = document.querySelector('.contentBox');
+        const readMoreBtnBox = document.querySelector('.readMoreBtnBox');
+        const hideTxt = document.querySelectorAll(".hideTxt");
+
+        function ContentShowFunc(){
+            hideTxt.forEach((textVal) => {
+                textVal.classList.add("showTxt");
+                contentBox.classList.add("removeFadeEffect");
+                readMoreBtnBox.classList.add("btnHide");
+
+            })
+        }
+
+
+        
+        readMore.addEventListener("click", ContentShowFunc);
+              
+    })
+}
+
+
+
+/*Resources Details Page End*/

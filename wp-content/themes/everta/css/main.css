@@ -1735,6 +1735,11 @@ header .headerWrapper .headerMenu .hamburger-menu {
 .contactForm .contactFormWrapper .contactBottom .submitDiv .wpcf7-spinner {
   display: none;
 }
+@media all and (max-width: 820px) {
+  .contactForm {
+    display: none;
+  }
+}
 
 footer .footerContainer {
   display: flex;
@@ -8547,3 +8552,582 @@ body {
 .resourceBannerSec {
   margin: 200px 0;
 }
+.resourceBannerSec .secWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+@media screen and (max-width: 1600px) {
+  .resourceBannerSec .secWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resourceBannerSec .secWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .resourceBannerSec .secWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .resourceBannerSec .secWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.resDetailBannerSec {
+  margin-top: 170px;
+  margin-bottom: 120px;
+}
+.resDetailBannerSec .secWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+  width: 70%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1600px) {
+  .resDetailBannerSec .secWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resDetailBannerSec .secWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .resDetailBannerSec .secWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .resDetailBannerSec .secWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.resDetailBannerSec .secWrapper .backBtn {
+  margin-bottom: 32px;
+}
+.resDetailBannerSec .secWrapper .backBtn a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4B4B4B;
+  font-family: "termina_testbold";
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 600;
+}
+@media screen and (max-width: 1600px) {
+  .resDetailBannerSec .secWrapper .backBtn a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resDetailBannerSec .secWrapper .backBtn a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .resDetailBannerSec .secWrapper .backBtn a {
+    font-size: 12px;
+  }
+}
+.resDetailBannerSec .secWrapper .secHeading h1 {
+  color: #1E1E1E;
+  text-shadow: 0px 5.12px 43.52px rgba(0, 0, 0, 0.1);
+  font-family: "termina_testbold";
+  font-size: 48px;
+  line-height: 133%;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1600px) {
+  .resDetailBannerSec .secWrapper .secHeading h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resDetailBannerSec .secWrapper .secHeading h1 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .resDetailBannerSec .secWrapper .secHeading h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .resDetailBannerSec .secWrapper .secHeading h1 {
+    font-size: 24px;
+  }
+}
+.resDetailBannerSec .secWrapper .secHeading .imgBox .mbl {
+  display: none;
+}
+@media all and (max-width: 1800px) {
+  .resDetailBannerSec {
+    margin-top: 160px;
+    margin-bottom: 110px;
+  }
+  .resDetailBannerSec .secWrapper {
+    width: 75%;
+  }
+}
+@media all and (max-width: 1600px) {
+  .resDetailBannerSec {
+    margin-top: 150px;
+  }
+  .resDetailBannerSec .secWrapper {
+    width: 80%;
+  }
+  .resDetailBannerSec .secWrapper .backBtn {
+    margin-bottom: 30px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .resDetailBannerSec {
+    margin-top: 140px;
+    margin-bottom: 100px;
+  }
+  .resDetailBannerSec .secWrapper {
+    width: 85%;
+  }
+  .resDetailBannerSec .secWrapper .backBtn {
+    margin-bottom: 25px;
+  }
+  .resDetailBannerSec .secWrapper .secHeading h1 {
+    margin-bottom: 40px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .resDetailBannerSec {
+    margin-top: 120px;
+    margin-bottom: 80px;
+  }
+  .resDetailBannerSec .secWrapper .backBtn {
+    margin-bottom: 20px;
+  }
+  .resDetailBannerSec .secWrapper .backBtn a img {
+    width: 30px;
+    height: 30px;
+  }
+  .resDetailBannerSec .secWrapper .secHeading h1 {
+    margin-bottom: 35px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .resDetailBannerSec {
+    margin-top: 100px;
+    margin-bottom: 60px;
+  }
+}
+@media all and (max-width: 820px) {
+  .resDetailBannerSec {
+    margin-top: 90px;
+  }
+  .resDetailBannerSec .secWrapper {
+    width: 90%;
+  }
+}
+@media all and (max-width: 720px) {
+  .resDetailBannerSec .secWrapper {
+    width: 100%;
+  }
+  .resDetailBannerSec .secWrapper .backBtn {
+    margin-bottom: 24px;
+  }
+  .resDetailBannerSec .secWrapper .backBtn a {
+    font-size: 12px;
+    line-height: 200%;
+    gap: 8px;
+  }
+  .resDetailBannerSec .secWrapper .backBtn a img {
+    width: 24px;
+    height: 24px;
+  }
+  .resDetailBannerSec .secWrapper .secHeading h1 {
+    margin-bottom: 50px;
+    font-size: 24px;
+    line-height: 133%;
+  }
+  .resDetailBannerSec .secWrapper .secHeading .imgBox .desktop {
+    display: none;
+  }
+  .resDetailBannerSec .secWrapper .secHeading .imgBox .mbl {
+    display: block;
+  }
+}
+
+.resDetailContentSec {
+  margin-bottom: 120px;
+}
+.resDetailContentSec .secWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+  width: 70%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1600px) {
+  .resDetailContentSec .secWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resDetailContentSec .secWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .resDetailContentSec .secWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .resDetailContentSec .secWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.resDetailContentSec .secWrapper .contentBox {
+  position: relative;
+}
+.resDetailContentSec .secWrapper .contentBox .divider {
+  margin-bottom: 64px;
+}
+.resDetailContentSec .secWrapper .contentBox .divider h2 {
+  margin-bottom: 24px;
+  color: #000;
+  font-family: "termina_testbold";
+  font-size: 32px;
+  line-height: 150%;
+}
+@media screen and (max-width: 1800px) {
+  .resDetailContentSec .secWrapper .contentBox .divider h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resDetailContentSec .secWrapper .contentBox .divider h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .resDetailContentSec .secWrapper .contentBox .divider h2 {
+    font-size: 20px;
+  }
+}
+.resDetailContentSec .secWrapper .contentBox .divider p {
+  color: #000;
+  font-family: "verdanaregular";
+  font-size: 20px;
+  line-height: 160%;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1600px) {
+  .resDetailContentSec .secWrapper .contentBox .divider p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resDetailContentSec .secWrapper .contentBox .divider p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .resDetailContentSec .secWrapper .contentBox .divider p {
+    font-size: 12px;
+  }
+}
+.resDetailContentSec .secWrapper .contentBox .divider ol {
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+.resDetailContentSec .secWrapper .contentBox .divider ol li {
+  list-style: decimal;
+  color: #000;
+  font-family: "verdanaregular";
+  font-size: 20px;
+  line-height: 160%;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1600px) {
+  .resDetailContentSec .secWrapper .contentBox .divider ol li {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resDetailContentSec .secWrapper .contentBox .divider ol li {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .resDetailContentSec .secWrapper .contentBox .divider ol li {
+    font-size: 12px;
+  }
+}
+.resDetailContentSec .secWrapper .contentBox .divider ol li span {
+  font-family: "verdanabold";
+}
+.resDetailContentSec .secWrapper .contentBox .divider ul {
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+.resDetailContentSec .secWrapper .contentBox .divider ul li {
+  list-style: decimal;
+  color: #000;
+  font-family: "verdanaregular";
+  font-size: 20px;
+  line-height: 160%;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1600px) {
+  .resDetailContentSec .secWrapper .contentBox .divider ul li {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resDetailContentSec .secWrapper .contentBox .divider ul li {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .resDetailContentSec .secWrapper .contentBox .divider ul li {
+    font-size: 12px;
+  }
+}
+.resDetailContentSec .secWrapper .contentBox .divider ul li span {
+  font-family: "verdanabold";
+}
+.resDetailContentSec .secWrapper .contentBox .divider figure {
+  margin: 0;
+}
+.resDetailContentSec .secWrapper .contentBox .divider .imgFig figcaption {
+  position: relative;
+  padding-left: 10px;
+  color: #000;
+  font-size: 16px;
+  font-family: "verdanaregular";
+  line-height: 175%;
+  margin: 16px 0;
+}
+@media screen and (max-width: 1600px) {
+  .resDetailContentSec .secWrapper .contentBox .divider .imgFig figcaption {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resDetailContentSec .secWrapper .contentBox .divider .imgFig figcaption {
+    font-size: 12px;
+  }
+}
+.resDetailContentSec .secWrapper .contentBox .divider .imgFig figcaption::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-left: 2px solid #000;
+  height: 100%;
+  left: 0;
+}
+.resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox {
+  padding: 40px 0 0 0;
+}
+.resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption {
+  background: #F5F75E;
+  padding: 36px 0 20px;
+}
+.resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption figcaption {
+  position: relative;
+  padding: 0 10px;
+  color: #000;
+  font-size: 20px;
+  font-family: "verdanaregular";
+  line-height: 140%;
+  font-style: italic;
+}
+@media screen and (max-width: 1600px) {
+  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption figcaption {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption figcaption {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption figcaption {
+    font-size: 12px;
+  }
+}
+.resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption figcaption::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-left: 2px solid #000;
+  height: 100%;
+  left: 0;
+}
+.resDetailContentSec .secWrapper .contentBox .divider:last-child {
+  margin-bottom: 0;
+}
+.resDetailContentSec .secWrapper .contentBox .divider.hideTxt {
+  display: none;
+}
+.resDetailContentSec .secWrapper .contentBox .divider.showTxt {
+  display: block;
+}
+.resDetailContentSec .secWrapper .contentBox::after {
+  content: "";
+  background: linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  height: 200px;
+  bottom: 70px;
+  left: 0;
+  position: absolute;
+}
+.resDetailContentSec .secWrapper .contentBox.removeFadeEffect::after {
+  display: none;
+}
+.resDetailContentSec .secWrapper .contentBox .readMoreBtnBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resDetailContentSec .secWrapper .contentBox .readMoreBtnBox.btnHide {
+  display: none;
+}
+@media all and (max-width: 1800px) {
+  .resDetailContentSec {
+    margin-bottom: 110px;
+  }
+  .resDetailContentSec .secWrapper {
+    width: 75%;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider {
+    margin-bottom: 60px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .resDetailContentSec .secWrapper {
+    width: 80%;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider {
+    margin-bottom: 55px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider p {
+    margin-bottom: 28px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider ol {
+    margin-bottom: 45px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider ul {
+    margin-bottom: 45px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .resDetailContentSec {
+    margin-bottom: 100px;
+  }
+  .resDetailContentSec .secWrapper {
+    width: 85%;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider {
+    margin-bottom: 50px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider h2 {
+    margin-bottom: 20px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider p {
+    margin-bottom: 26px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider ol {
+    margin-bottom: 40px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider ul {
+    margin-bottom: 40px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox {
+    padding: 35px 0 0 0;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption {
+    padding: 30px 0 16px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .resDetailContentSec {
+    margin-bottom: 80px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider {
+    margin-bottom: 45px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider p {
+    margin-bottom: 24px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider ol {
+    margin-bottom: 40px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider ul {
+    margin-bottom: 40px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox {
+    padding: 32px 0 0 0;
+  }
+}
+@media all and (max-width: 1024px) {
+  .resDetailContentSec {
+    margin-bottom: 60px;
+  }
+  .resDetailContentSec .secWrapper {
+    width: 85%;
+  }
+}
+@media all and (max-width: 820px) {
+  .resDetailContentSec .secWrapper {
+    width: 90%;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider {
+    margin-bottom: 40px;
+  }
+}
+@media all and (max-width: 720px) {
+  .resDetailContentSec .secWrapper {
+    width: 100%;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider {
+    margin-bottom: 35px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider h2 {
+    font-size: 20px;
+    line-height: 120%;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider p {
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider ol li {
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider ul li {
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider .imgFig figcaption {
+    margin: 10px 0;
+  }
+  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox {
+    padding: 30px 0 0 0;
+  }
+}/*# sourceMappingURL=main.css.map */
