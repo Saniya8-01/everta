@@ -874,13 +874,38 @@ if($(".resDetailContentSec").length){
 
             })
         }
-
-
-        
-        readMore.addEventListener("click", ContentShowFunc);
-              
+        readMore.addEventListener("click", ContentShowFunc);     
     })
 }
+
+if($(".backtopCl").length){
+    document.addEventListener("DOMContentLoaded", () => {
+        const backtop = document.getElementById("backtop")
+
+        window.addEventListener("scroll", function (){
+            if(window.scrollY > 500){
+                backtop.classList.add("show");
+            }else{
+                backtop.classList.remove("show");
+            }  
+        })
+
+        backtop.addEventListener("click", function(e){
+            e.preventDefault();
+            window.scrollTo({
+                top:0,
+                behavior: 'smooth',
+            })
+        })
+        HTMLElement.prototype.isInViewport = function () {
+            var elementTop = this.getBoundingClientRect().top;
+            var elementBottom = this.getBoundingClientRect().bottom;
+            var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+            return elementBottom > 0 && elementTop < viewportHeight;
+        };
+    })
+}
+
 
 
 
