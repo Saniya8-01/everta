@@ -1967,527 +1967,148 @@ header .headerWrapper .headerMenu .hamburger-menu {
     padding: 18px 30px;
   }
 }
-@media all and (max-width: 680px) {
+@media all and (max-width: 820px) {
   .contactForm {
-    display: none !important;
+    width: 100%;
+    height: 80vh;
+  }
+}
+@media all and (max-width: 768px) {
+  .contactForm {
     right: -150%;
-    width: 1100px;
-    height: 1045px;
+    width: 100%;
+    height: 100vh;
   }
   .contactForm .contactFormWrapper {
-    padding: 72px;
-    background: #FFFFFF;
-    border: 12px solid #F5F75E;
-    overflow-y: auto !important;
-    height: 100% !important;
-    -ms-overflow-style: none; /* IE/Edge */
-    /* Custom scrollbar for WebKit-based browsers */
-    /* For Firefox */
-    scrollbar-width: thin; /* Makes the scrollbar thinner */
-    scrollbar-color: #1E1E1E #f4f4f4; /* Thumb and track colors */
-  }
-  .contactForm .contactFormWrapper::-webkit-scrollbar {
-    width: 10px; /* Width of vertical scrollbar */
-    height: 10px; /* Height of horizontal scrollbar */
-  }
-  .contactForm .contactFormWrapper::-webkit-scrollbar-thumb {
-    background: #F5F75E; /* Color of the scrollbar thumb */
-    border-radius: 20px; /* Rounded corners */
-  }
-  .contactForm .contactFormWrapper::-webkit-scrollbar-track {
-    background: #f4f4f4; /* Color of the scrollbar track */
-    border-radius: 20px; /* Rounded corners */
+    padding: 100px 20px 48px 20px;
+    border: 4px solid #F5F75E;
+    position: relative;
   }
   .contactForm .contactFormWrapper .contactHeading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 36px;
+    margin-bottom: 48px;
   }
-  .contactForm .contactFormWrapper .contactHeading h2 {
-    font-family: "termina_testmedium";
-    font-size: 48px;
-    line-height: 160%;
-    text-transform: uppercase;
-    color: #1E1E1E;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactHeading h2 {
-    font-size: 40px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
-  .contactForm .contactFormWrapper .contactHeading h2 {
-    font-size: 36px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 820px) {
-  .contactForm .contactFormWrapper .contactHeading h2 {
-    font-size: 30px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 720px) {
   .contactForm .contactFormWrapper .contactHeading h2 {
     font-size: 24px;
+    line-height: 32px;
   }
-}
-@media all and (max-width: 680px) {
   .contactForm .contactFormWrapper .contactHeading .closeBtn {
     cursor: pointer;
+    position: absolute;
+    top: 32px;
+    right: 20px;
   }
   .contactForm .contactFormWrapper .contactTop {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 38px;
+    gap: 32px;
     margin-bottom: 48px;
   }
   .contactForm .contactFormWrapper .contactTop .formFields {
-    flex-basis: calc(50% - 19px);
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
+    flex-basis: 100%;
+    gap: 12px;
   }
   .contactForm .contactFormWrapper .contactTop .formFields:first-child {
     flex-basis: 100%;
   }
   .contactForm .contactFormWrapper .contactTop .formFields label {
-    text-transform: capitalize;
-    font-family: "termina_testregular";
-    font-size: 18px;
-    line-height: 140%;
-    font-weight: 600;
-    color: #1E1E1E;
+    font-size: 12px;
+    line-height: 14.4px;
   }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactTop .formFields label {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
-  .contactForm .contactFormWrapper .contactTop .formFields label {
-    font-size: 14px;
-  }
-}
-@media all and (max-width: 680px) {
   .contactForm .contactFormWrapper .contactTop .formFields input {
-    border-bottom: 1px solid #A5A5A5;
-    font-family: "verdanaregular";
-    font-size: 16px;
-    line-height: 175%;
-    color: #1E1E1E;
     padding: 7px 0px 14px 0px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactTop .formFields input {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
-  .contactForm .contactFormWrapper .contactTop .formFields input {
     font-size: 12px;
+    line-height: 18px;
   }
-}
-@media all and (max-width: 680px) {
-  .contactForm .contactFormWrapper .contactTop .formFields input::placeholder {
-    font-family: "verdanaregular";
-    font-size: 16px;
-    line-height: 175%;
-    color: #A5A5A5;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactTop .formFields input::placeholder {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
   .contactForm .contactFormWrapper .contactTop .formFields input::placeholder {
     font-size: 12px;
+    line-height: 18px;
   }
-}
-@media all and (max-width: 680px) {
-  .contactForm .contactFormWrapper .contactTop .formFields input::-webkit-input-placeholder {
-    font-family: "verdanaregular";
-    font-size: 16px;
-    line-height: 175%;
-    color: #A5A5A5;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactTop .formFields input::-webkit-input-placeholder {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
   .contactForm .contactFormWrapper .contactTop .formFields input::-webkit-input-placeholder {
     font-size: 12px;
+    line-height: 18px;
   }
-}
-@media all and (max-width: 680px) {
   .contactForm .contactFormWrapper .contactBottom h3 {
-    font-family: "termina_testmedium";
-    font-size: 24px;
-    line-height: 120%;
-    margin-bottom: 36px;
-    font-weight: 600;
-    color: #1E1E1E;
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 28px;
   }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactBottom h3 {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
-  .contactForm .contactFormWrapper .contactBottom h3 {
-    font-size: 16px;
-  }
-}
-@media all and (max-width: 680px) {
   .contactForm .contactFormWrapper .contactBottom .contactTab {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 48px;
+    gap: 12px;
+    margin-bottom: 40px;
   }
   .contactForm .contactFormWrapper .contactBottom .contactTab .contact-tab-btn {
-    font-family: "verdanaregular";
-    font-size: 20px;
-    line-height: 160%;
-    background: #FFFFFF;
-    border: 1px solid #A5A5A5;
-    padding: 14px 56px;
+    padding: 9px 22px;
     color: #1E1E1E;
-    border-radius: 100px;
-    cursor: pointer;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactBottom .contactTab .contact-tab-btn {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
-  .contactForm .contactFormWrapper .contactBottom .contactTab .contact-tab-btn {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 720px) {
-  .contactForm .contactFormWrapper .contactBottom .contactTab .contact-tab-btn {
     font-size: 12px;
-  }
-}
-@media all and (max-width: 680px) {
-  .contactForm .contactFormWrapper .contactBottom .contactTab .contact-tab-btn.active {
-    color: #F5F75E;
-    background: #1E1E1E;
-  }
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content {
-    display: none;
-  }
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content.active {
-    display: block;
+    line-height: 18px;
   }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     gap: 38px;
   }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields {
-    flex-basis: calc(50% - 19px);
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
-    justify-content: space-between;
+    flex-basis: 100%;
+    flex-basis: 100%;
+    gap: 12px;
   }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields:last-child {
     flex-basis: 100%;
   }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields label {
-    text-transform: capitalize;
-    font-family: "termina_testregular";
-    font-size: 18px;
-    line-height: 140%;
-    font-weight: 600;
-    color: #1E1E1E;
+    font-size: 12px;
+    line-height: 14.4px;
   }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields label {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields label {
-    font-size: 14px;
-  }
-}
-@media all and (max-width: 680px) {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input {
-    border-bottom: 1px solid #A5A5A5;
-    font-family: "verdanaregular";
-    font-size: 16px;
-    line-height: 175%;
-    color: #1E1E1E;
     padding: 7px 0px 14px 0px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input {
     font-size: 12px;
+    line-height: 18px;
   }
-}
-@media all and (max-width: 680px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input::placeholder {
-    font-family: "verdanaregular";
-    font-size: 16px;
-    line-height: 175%;
-    color: #A5A5A5;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input::placeholder {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input::placeholder {
     font-size: 12px;
+    line-height: 18px;
   }
-}
-@media all and (max-width: 680px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input::-webkit-input-placeholder {
-    font-family: "verdanaregular";
-    font-size: 16px;
-    line-height: 175%;
-    color: #A5A5A5;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input::-webkit-input-placeholder {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input::-webkit-input-placeholder {
     font-size: 12px;
+    line-height: 18px;
   }
-}
-@media all and (max-width: 680px) {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields textarea {
-    border: 1px solid #A5A5A5;
-    font-family: "verdanaregular";
-    font-size: 16px;
-    line-height: 175%;
-    color: #1E1E1E;
-    padding: 24px;
-    width: 100%;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 16px;
     height: 148px;
-    resize: none;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields textarea {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields textarea {
-    font-size: 12px;
-  }
-}
-@media all and (max-width: 680px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect {
-    position: relative;
   }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .selectBtn {
-    width: 100%;
-    background: transparent;
-    display: flex;
-    cursor: pointer;
-    border-bottom: 1px solid #A5A5A5;
     padding: 7px 0px 14px 0px;
-    position: relative;
-    justify-content: space-between;
   }
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .selectBtn .sBtntext {
-    color: #1E1E1E;
-    font-family: "verdanaregular";
-    font-size: 16px;
-    font-weight: 400;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .selectBtn .sBtntext {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .selectBtn .sBtntext {
     font-size: 12px;
-  }
-}
-@media all and (max-width: 680px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .selectBtn .img {
-    display: block;
+    line-height: 18px;
   }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .options {
-    position: absolute;
-    width: 100%;
-    overflow-y: auto;
-    max-height: 295px;
+    max-height: 250px;
     margin-top: 10px;
-    display: none;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    animation-name: fadeInDown;
-    -webkit-animation-name: fadeInDown;
-    animation-duration: 0.35s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 0.35s;
-    -webkit-animation-fill-mode: both;
   }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .options .option {
-    display: flex;
-    height: 55px;
-    cursor: pointer;
     padding: 0 16px;
-    align-items: center;
-    background: #fff;
-    font-family: "verdanaregular";
-    font-size: 16px;
-    font-weight: 400;
-    text-align: left;
-    color: #787878;
-    border-bottom: 1px solid #CCCCCC;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .options .option {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .options .option {
     font-size: 12px;
-  }
-}
-@media all and (max-width: 680px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .options .option:last-child {
-    border: none;
+    line-height: 18px;
   }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .options::-webkit-scrollbar {
     width: 6px;
   }
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .options::-webkit-scrollbar-thumb {
-    background-color: #787878;
-    border-radius: 5px;
-  }
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect.active .selectBtn img {
-    transform: rotate(-180deg);
-  }
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect.active .options {
-    display: block;
-    opacity: 0;
-    z-index: 10;
-    animation-name: fadeInUp;
-    -webkit-animation-name: fadeInUp;
-    animation-duration: 0.4s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 0.4s;
-    -webkit-animation-fill-mode: both;
-  }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges {
-    display: flex;
-    gap: 20px;
-  }
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges .chargesCount {
-    flex: 1;
-  }
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges .chargesCount label {
-    width: 100%;
-  }
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges .chargesCount label input {
-    visibility: hidden;
-    height: 0;
-    display: block;
-  }
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges .chargesCount label input:checked + span {
-    color: #FFFFFF;
-    background: #1E1E1E;
+    gap: 12px;
   }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges .chargesCount label span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: 1px solid #A5A5A5;
-    border-radius: 100px;
-    font-family: "verdanaregular";
-    font-size: 16px;
-    line-height: 175%;
-    padding: 6px;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges .chargesCount label span {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges .chargesCount label span {
+    line-height: 18px;
     font-size: 12px;
   }
-}
-@media all and (max-width: 680px) {
   .contactForm .contactFormWrapper .contactBottom .submitDiv {
-    margin-top: 32px;
-    display: flex;
-    justify-content: end;
+    margin-top: 48px;
+    justify-content: center;
   }
   .contactForm .contactFormWrapper .contactBottom .submitDiv input {
-    font-family: "termina_testregular";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 100%;
-    letter-spacing: -0.64px;
-    color: #1E1E1E;
-    background: #F5F75E;
-    border-style: none;
-    padding: 20px 32px;
-    border-radius: 100px;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-    position: relative;
-    overflow: hidden;
-    text-align: left;
-    display: inline-block;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1600px) {
-  .contactForm .contactFormWrapper .contactBottom .submitDiv input {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 680px) and (max-width: 1440px) {
-  .contactForm .contactFormWrapper .contactBottom .submitDiv input {
+    line-height: normal;
     font-size: 12px;
-  }
-}
-@media all and (max-width: 680px) {
-  .contactForm .contactFormWrapper .contactBottom .submitDiv .wpcf7-spinner {
-    display: none;
+    letter-spacing: -0.48px;
+    padding: 18px 32px;
   }
 }
 
@@ -9970,4 +9591,4 @@ body {
     width: 20px;
     height: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
