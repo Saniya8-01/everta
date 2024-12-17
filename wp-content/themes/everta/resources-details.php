@@ -73,5 +73,11 @@
 </section>
 
 
+<div class="backtopCl" id="backtop">
+    <a href="" >
+        <img src="<?php bloginfo('template_directory'); ?>/images/top-double-up-arrow.svg" alt="" class="desktop"/>
+    </a>
+</div>
 
 <?php get_footer(); ?>
+

@@ -9881,3 +9881,93 @@ body {
     padding: 30px 0 0 0;
   }
 }
+
+#backtop {
+  position: fixed;
+  right: 120px;
+  bottom: 100px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  z-index: 2;
+}
+#backtop a {
+  width: 70px;
+  height: 70px;
+  background: #F5F75E;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease-in-out;
+}
+#backtop.show {
+  opacity: 1;
+  visibility: visible;
+}
+@media all and (max-width: 1680px) {
+  #backtop {
+    right: 100px;
+  }
+  #backtop a {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media all and (max-width: 1440px) {
+  #backtop {
+    right: 80px;
+  }
+  #backtop a {
+    width: 55px;
+    height: 55px;
+  }
+  #backtop a img {
+    width: 28px;
+    height: 28px;
+  }
+}
+@media all and (max-width: 1280px) {
+  #backtop {
+    right: 70px;
+  }
+  #backtop a {
+    width: 45px;
+    height: 45px;
+  }
+  #backtop a img {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media all and (max-width: 1024px) {
+  #backtop {
+    right: 60px;
+  }
+}
+@media all and (max-width: 820px) {
+  #backtop {
+    right: 50px;
+  }
+  #backtop a {
+    width: 40px;
+    height: 40px;
+  }
+  #backtop a img {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media all and (max-width: 720px) {
+  #backtop {
+    right: 30px;
+  }
+  #backtop a {
+    width: 40px;
+    height: 40px;
+  }
+  #backtop a img {
+    width: 20px;
+    height: 20px;
+  }
+}/*# sourceMappingURL=main.css.map */
