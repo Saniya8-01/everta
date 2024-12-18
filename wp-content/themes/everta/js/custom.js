@@ -184,24 +184,25 @@ if ($(".partnersSection").length) {
         ]
     });
 }
+if ($(".chargingSection").length) {
+    // Select the tab buttons and content sections
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
 
-// Select the tab buttons and content sections
-const tabButtons = document.querySelectorAll(".tab-button");
-const tabContents = document.querySelectorAll(".tab-content");
+    // Add click event listeners to each tab button
+    tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            // Remove the active class from all buttons and content
+            tabButtons.forEach((btn) => btn.classList.remove("active"));
+            tabContents.forEach((content) => content.classList.remove("active"));
 
-// Add click event listeners to each tab button
-tabButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        // Remove the active class from all buttons and content
-        tabButtons.forEach((btn) => btn.classList.remove("active"));
-        tabContents.forEach((content) => content.classList.remove("active"));
-
-        // Add the active class to the clicked button and the corresponding content
-        button.classList.add("active");
-        const tabId = button.getAttribute("data-tab");
-        document.getElementById(tabId).classList.add("active");
+            // Add the active class to the clicked button and the corresponding content
+            button.classList.add("active");
+            const tabId = button.getAttribute("data-tab");
+            document.getElementById(tabId).classList.add("active");
+        });
     });
-});
+}
 
 if ($(".testimonialSection").length) {
     var $slider = $(".testimonialCardWrapper");
@@ -477,7 +478,7 @@ $(window).on('resize scroll', function () {
             }
         }
     } else {
-        
+
         $('.leftContent').removeClass('image-state');
     }
 });
@@ -497,36 +498,36 @@ $(window).on('resize scroll', function () {
 });
 
 
-// var counted = 0;
-// $(window).scroll(function () {
-//     var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
-//     if (counted == 0 && $(window).scrollTop() > oTop) {
-//         $('.statCard h3').each(function () {
-//             var $this = $(this),
-//                 countTo = $this.attr('data-count');
-//             var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
+var counted = 0;
+$(window).scroll(function () {
+    var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
+    if (counted == 0 && $(window).scrollTop() > oTop) {
+        $('.statCard h3').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
 
-//             $({
-//                 countNum: 0
-//             }).animate(
-//                 {
-//                     countNum: countTo
-//                 },
-//                 {
-//                     duration: 2000,
-//                     easing: 'swing',
-//                     step: function () {
-//                         $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
-//                     },
-//                     complete: function () {
-//                         $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
-//                     }
-//                 }
-//             );
-//         });
-//         counted = 1;
-//     }
-// });
+            $({
+                countNum: 0
+            }).animate(
+                {
+                    countNum: countTo
+                },
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
+                    },
+                    complete: function () {
+                        $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
+                    }
+                }
+            );
+        });
+        counted = 1;
+    }
+});
 
 /******About Us Js Start */
 
@@ -774,6 +775,34 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    // Check if the "custom-tabs-wrapper" exists on the page
+    const customTabsWrapper = document.querySelector(".contactForm");
+    if (!customTabsWrapper) return; // Exit if the container is not found
+
+    // Select the custom tab buttons and content sections within the custom-tabs-wrapper
+    const customTabButtons = customTabsWrapper.querySelectorAll(".contact-tab-btn");
+    const customTabContents = customTabsWrapper.querySelectorAll(".contact-tab-content");
+
+    // Ensure the first tab is active initially
+    customTabButtons[0].classList.add("active");
+    customTabContents[0].classList.add("active");
+
+    customTabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            // Remove the active class from all buttons and content sections
+            customTabButtons.forEach((btn) => btn.classList.remove("active"));
+            customTabContents.forEach((content) => content.classList.remove("active"));
+
+            // Add the active class to the clicked button and the corresponding content
+            button.classList.add("active");
+            const tabId = button.getAttribute("data-tab");
+            document.getElementById(tabId).classList.add("active");
+        });
+    });
+});
+
+
 // career opening modal starts
 document.addEventListener("DOMContentLoaded", function() {
     var careerBoxes = document.querySelectorAll(".careerPositionBox");
@@ -813,5 +842,71 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function openForm() {
+    document.getElementById("contactForm").classList.add("open");
+    $('body').css("overflow-y", "hidden");
+    $('html').css("overflow-y", "hidden");
+    $('body').css("background", "hidden");
+  }
+  
+  function closeForm() {
+    document.getElementById("contactForm").classList.remove("open");
+    $('body').css("overflow-y", "visible");
+    $('html').css("overflow-y", "visible");
+  }
+
 // career opening modal ends
 /* Careers page JS Ends */
+
+/*Resources Details Page Start*/
+if($(".resDetailContentSec").length){
+    document.addEventListener("DOMContentLoaded", () => {
+        const readMore = document.getElementById("readMore");
+        const contentBox = document.querySelector('.contentBox');
+        const readMoreBtnBox = document.querySelector('.readMoreBtnBox');
+        const hideTxt = document.querySelectorAll(".hideTxt");
+
+        function ContentShowFunc(){
+            hideTxt.forEach((textVal) => {
+                textVal.classList.add("showTxt");
+                contentBox.classList.add("removeFadeEffect");
+                readMoreBtnBox.classList.add("btnHide");
+
+            })
+        }
+        readMore.addEventListener("click", ContentShowFunc);     
+    })
+}
+
+if($(".backtopCl").length){
+    document.addEventListener("DOMContentLoaded", () => {
+        const backtop = document.getElementById("backtop")
+
+        window.addEventListener("scroll", function (){
+            if(window.scrollY > 500){
+                backtop.classList.add("show");
+            }else{
+                backtop.classList.remove("show");
+            }  
+        })
+
+        backtop.addEventListener("click", function(e){
+            e.preventDefault();
+            window.scrollTo({
+                top:0,
+                behavior: 'smooth',
+            })
+        })
+        HTMLElement.prototype.isInViewport = function () {
+            var elementTop = this.getBoundingClientRect().top;
+            var elementBottom = this.getBoundingClientRect().bottom;
+            var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+            return elementBottom > 0 && elementTop < viewportHeight;
+        };
+    })
+}
+
+
+
+
+/*Resources Details Page End*/
