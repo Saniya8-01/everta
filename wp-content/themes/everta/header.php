@@ -237,6 +237,9 @@ $current_url = home_url(add_query_arg([], $wp->request));
 							</div>
 						</div>
 					</div>
+					<div class="submitDiv">
+						<input type="submit" value="Send Contact Request">
+					</div>
 				</div>
 			</div>
 		</div>
