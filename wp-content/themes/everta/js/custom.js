@@ -731,14 +731,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     applyFilterBtn.addEventListener("click", () => {
-        const selectedFilters = Array.from(optionMenus).map(menu => menu.querySelector(".sBtntext").innerText);
+        const selectedFilters = Array.from(optionMenus).map(menu => menu.querySelector(".sBtntext").innerText.trim().toLowerCase());
         
         careerBoxes.forEach(box => {
             let isVisible = true;
 
-            const locationText = box.querySelector(".posSubContent h4").innerText;
-            const departmentText = box.querySelector(".subBoxContent h3").innerText;
-            const contractTypeText = box.querySelector(".posSubContent div:nth-of-type(2) h4").innerText;
+            const locationText = box.querySelector(".posSubContent h4")?.innerText.trim().toLowerCase();
+            const departmentText = box.querySelector(".subBoxContent h3")?.innerText.trim().toLowerCase();
+            const contractTypeText = box.querySelector(".posSubContent div:nth-of-type(2) h4")?.innerText.trim().toLowerCase();
             
             const [locationFilter, departmentFilter, contractTypeFilter] = selectedFilters;
 
