@@ -29,7 +29,7 @@
             <div class="divider">
                 <figure class="imgFig">
                     <figcaption>Image caption goes here</figcaption>
-                    <img src="<?php bloginfo('template_directory'); ?>/images/res-detail-inner-img.webp" alt="" class="blogdesktop">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/res-detail-inner-img.webp" alt="">
                 </figure>
 
             </div>
@@ -71,10 +71,49 @@
         </div>
     </div>
 </section>
+<section class="relatedPostSec">
+    <div class="secWrapper">
+        <div class="secHeading">
+            <h2>Other related posts</h2>
+        </div>
+        <div class="cardContainer">
+            <div class="blogCard">
+                <a href="">
+                    <div class="imgBox">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/res-news-img1.webp" alt="">
+                    </div>
+                    <div class="contentBox">
+                        <span>News</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <ul>
+                            <li>11 Jan 2022</li>
+                            <li>5 min read</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+            <div class="blogCard">
+                <a href="">
+                    <div class="imgBox">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/res-news-img1.webp" alt="">
+                    </div>
+                    <div class="contentBox">
+                        <span>News</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <ul>
+                            <li>11 Jan 2022</li>
+                            <li>5 min read</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <div class="backtopCl" id="backtop">
-    <a href="" >
+    <a href="">
         <img src="<?php bloginfo('template_directory'); ?>/images/top-double-up-arrow.svg" alt="" class="desktop"/>
     </a>
 </div>

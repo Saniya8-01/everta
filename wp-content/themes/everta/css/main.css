@@ -9066,6 +9066,9 @@ body {
   }
 }
 @media all and (max-width: 720px) {
+  .resDetailContentSec {
+    margin-bottom: 72px;
+  }
   .resDetailContentSec .secWrapper {
     width: 100%;
   }
@@ -9093,6 +9096,294 @@ body {
   }
   .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox {
     padding: 30px 0 0 0;
+  }
+}
+
+.relatedPostSec {
+  margin-bottom: 200px;
+}
+.relatedPostSec .secWrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+  width: 70%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1600px) {
+  .relatedPostSec .secWrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .relatedPostSec .secWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .relatedPostSec .secWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .relatedPostSec .secWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.relatedPostSec .secWrapper .secHeading {
+  margin-bottom: 64px;
+}
+.relatedPostSec .secWrapper .secHeading h2 {
+  font-family: "termina_testmedium";
+  font-size: 48px;
+  line-height: 133%;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (max-width: 1600px) {
+  .relatedPostSec .secWrapper .secHeading h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .relatedPostSec .secWrapper .secHeading h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .relatedPostSec .secWrapper .secHeading h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .relatedPostSec .secWrapper .secHeading h2 {
+    font-size: 24px;
+  }
+}
+.relatedPostSec .secWrapper .cardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+  gap: 30px;
+}
+.relatedPostSec .secWrapper .cardContainer .blogCard {
+  width: calc(50% - 15px);
+  border: 1px solid #D2D2D2;
+}
+.relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
+  margin-bottom: 30px;
+}
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
+  margin: 0 24px 55px;
+}
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox span {
+  padding: 4px 8px;
+  background: #F5F75E;
+  border-radius: 4px;
+  color: #000;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  line-height: 175%;
+}
+@media screen and (max-width: 1600px) {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox span {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox span {
+    font-size: 12px;
+  }
+}
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox p {
+  margin: 24px 0 14px 0;
+  color: #1E1E1E;
+  font-family: "verdanaregular";
+  font-size: 24px;
+  line-height: 166%;
+}
+@media screen and (max-width: 1600px) {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox p {
+    font-size: 16px;
+  }
+}
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox ul li {
+  color: #000;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  line-height: 175%;
+  position: relative;
+}
+@media screen and (max-width: 1600px) {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox ul li {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox ul li {
+    font-size: 12px;
+  }
+}
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox ul li:last-child {
+  padding-left: 15px;
+}
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox ul li:last-child::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #000;
+  top: 12px;
+  left: 0;
+  border-radius: 100%;
+}
+@media all and (max-width: 1800px) {
+  .relatedPostSec {
+    margin-bottom: 180px;
+  }
+  .relatedPostSec .secWrapper {
+    width: 75%;
+  }
+  .relatedPostSec .secWrapper .secHeading {
+    margin-bottom: 60px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox p {
+    margin: 22px 0 12px 0;
+  }
+}
+@media all and (max-width: 1600px) {
+  .relatedPostSec {
+    margin-bottom: 150px;
+  }
+  .relatedPostSec .secWrapper {
+    width: 80%;
+  }
+  .relatedPostSec .secWrapper .secHeading {
+    margin-bottom: 55px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
+    margin: 0 22px 50px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox ul li:last-child::before {
+    top: 9px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .relatedPostSec {
+    margin-bottom: 120px;
+  }
+  .relatedPostSec .secWrapper {
+    width: 85%;
+  }
+  .relatedPostSec .secWrapper .secHeading {
+    margin-bottom: 50px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
+    margin-bottom: 25px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
+    margin: 0 20px 45px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox p {
+    margin: 20px 0 10px 0;
+  }
+}
+@media all and (max-width: 1280px) {
+  .relatedPostSec .secWrapper .secHeading {
+    margin-bottom: 45px;
+  }
+  .relatedPostSec .secWrapper .cardContainer {
+    gap: 25px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard {
+    width: calc(50% - 13px);
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
+    margin-bottom: 20px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
+    margin: 0 18px 40px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox p {
+    margin: 18px 0 10px 0;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox ul li:last-child::before {
+    top: 8px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .relatedPostSec {
+    margin-bottom: 100px;
+  }
+  .relatedPostSec .secWrapper .secHeading {
+    margin-bottom: 40px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
+    margin-bottom: 20px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
+    margin: 0 18px 35px;
+  }
+}
+@media all and (max-width: 820px) {
+  .relatedPostSec .secWrapper {
+    width: 90%;
+  }
+}
+@media all and (max-width: 720px) {
+  .relatedPostSec .secWrapper {
+    width: 100%;
+  }
+  .relatedPostSec .secWrapper .secHeading {
+    margin-bottom: 32px;
+  }
+  .relatedPostSec .secWrapper .secHeading h2 {
+    text-align: left;
+  }
+  .relatedPostSec .secWrapper .cardContainer {
+    gap: 24px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard {
+    width: 100%;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
+    margin-bottom: 24px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
+    margin: 0 16px 24px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox span {
+    line-height: 150%;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox p {
+    margin: 16px 0 14px 0;
+    font-size: 16px;
+    line-height: 175%;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox ul {
+    gap: 8px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox ul li {
+    line-height: 150%;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox ul li:last-child {
+    padding-left: 13px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox ul li:last-child::before {
+    top: 6px;
   }
 }
 
