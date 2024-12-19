@@ -1,4 +1,4 @@
-.journeySection{margin-top: 170px; margin-bottom: 200px;
+.journeySection{margin: 170px 0 200px;
     .journeySecWrapper{
         .secHeading{ @include wrapper; width: 80%; margin-bottom: 40px;
             h1{margin-bottom: 20px; color: #1e1e1e; @include terminamedium; @include font80; line-height: 120%;}
@@ -14,13 +14,13 @@
             }
         }
     }
-    @media all and (max-width: 1800px){margin-top: 160px; margin-bottom: 180px;}
-    @media all and (max-width: 1600px){margin-top: 150px; margin-bottom: 150px;
+    @media all and (max-width: 1800px){margin:160px 0 180px;}
+    @media all and (max-width: 1600px){margin:150px 0;
         .journeySecWrapper{
             .secHeading{margin-bottom: 35px;}
         }
     }
-    @media all and (max-width: 1440px){margin-bottom: 120px; margin-top: 120px;
+    @media all and (max-width: 1440px){margin:120px 0; 
         .journeySecWrapper{
             .secHeading{margin-bottom: 30px;
                 h1{margin-bottom:15px;}
@@ -32,7 +32,7 @@
             .secHeading{width: 90%;}
         }
     }
-    @media all and (max-width: 1024px){margin-top: 100px; margin-bottom: 100px;
+    @media all and (max-width: 1024px){margin: 100px 0;
         .journeySecWrapper{
             .secHeading{width: 90%;}
         }

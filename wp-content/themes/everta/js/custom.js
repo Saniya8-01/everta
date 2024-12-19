@@ -864,15 +864,11 @@ if($(".resDetailContentSec").length){
         const readMore = document.getElementById("readMore");
         const contentBox = document.querySelector('.contentBox');
         const readMoreBtnBox = document.querySelector('.readMoreBtnBox');
-        const hideTxt = document.querySelectorAll(".hideTxt");
-
+        
         function ContentShowFunc(){
-            hideTxt.forEach((textVal) => {
-                textVal.classList.add("showTxt");
-                contentBox.classList.add("removeFadeEffect");
-                readMoreBtnBox.classList.add("btnHide");
-
-            })
+            contentBox.classList.add("removeFadeEffect");
+            contentBox.classList.remove("hideTxt");
+            readMoreBtnBox.classList.add("btnHide");
         }
         readMore.addEventListener("click", ContentShowFunc);     
     })

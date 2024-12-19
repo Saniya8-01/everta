@@ -2,11 +2,15 @@
 
 <section class="careerBannerSection">
     <div class="careerSectionWrapper">
-        <h1>Innovate, grow & make an impact</h1>
-        <p>Join a team driven by innovation, sustainability, and passion. Explore career opportunities and help power the future of electric mobility.</p>
-        <a href="#evertaTeam" class="ctaYellow">See job openings</a>
+        <div class="secHeading">
+            <h1>Innovate, grow & make an impact</h1>
+            <p>Join a team driven by innovation, sustainability, and passion. Explore career opportunities and help power the future of electric mobility.</p>
+            <a href="#evertaTeam" class="ctaYellow">See job openings</a>
+            
+        </div>
         <div class="careerBannerImg">
-            <img src="<?php bloginfo('template_directory'); ?>/images/career-banner.webp" alt="everta">
+            <img src="<?php bloginfo('template_directory'); ?>/images/career-banner.webp" alt="everta" class="desktopBanner">
+            <img src="<?php bloginfo('template_directory'); ?>/images/career-banner-mbl.webp" alt="everta" class="mblBanner">
         </div>
     </div>
 </section>
@@ -54,8 +58,8 @@
                 </div>
             </div>
             <div class="filterBtnContainer">
-                <button id="applyFilter" class="ctaApplyFilter">Apply filters</button>
-                <button id="clearFilter" class="ctaClearFilter">Clear filters</button>
+                <button id="applyFilter" class="ctaBlack">Apply filters</button>
+                <button id="clearFilter" class="ctaWhite">Clear filters</button>
             </div>
         </div>
     </div>
@@ -134,7 +138,7 @@
         </div>
     </div>
 </section>
-
+<!--
 <section class="careerCVSection">
     <div class="careerSectionWrapper">
         <h2>DidN’t Find what you’re looking for?</h2>
@@ -379,5 +383,5 @@
         </div>
     </div>
 </div>
-
+-->
 <?php get_footer(); ?>

@@ -63,89 +63,82 @@
 .resDetailContentSec{margin-bottom: 120px;
     .secWrapper{@include wrapper; width: 70%; margin: 0 auto;
         .contentBox{ position: relative;
-            .divider{margin-bottom: 64px; 
-                h2{margin-bottom: 24px; color: #000; @include terminabold; @include font32; line-height: 150%;}
-                p{color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 30px;}
-                ol{margin-left: 20px; margin-bottom: 50px;
-                    li{list-style: decimal; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
-                        span{@include verdanabold;}
-                    }
+            &.hideTxt{ height: 750px; overflow: hidden;}
+            h2{margin-bottom: 24px; color: #000; @include terminabold; @include font32; line-height: 150%;}
+            p{color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 30px;}
+            ol{margin-left: 20px; margin-bottom: 50px;
+                li{list-style: decimal; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
+                    span{@include verdanabold;}
                 }
-                ul{margin-left: 20px; margin-bottom: 50px;
-                    li{list-style: decimal; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
-                        span{@include verdanabold;}
-                    }
+            }
+            ul{margin-left: 20px; margin-bottom: 50px;
+                li{list-style: decimal; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
+                    span{@include verdanabold;}
                 }
-                figure{margin: 0;}
-                .imgFig{
-                    figcaption{position: relative; padding-left: 10px; color: #000; @include font16; @include verdanaregular; line-height: 175%; margin: 16px 0;
+            }
+            figure{margin-bottom: 30px;}
+            .imgFig{
+                figcaption{position: relative; padding-left: 10px; color: #000; @include font16; @include verdanaregular; line-height: 175%; margin: 16px 0;
+                    &::before{content:''; position: absolute; top: 0; border-left: 2px solid #000; height: 100%; left: 0; }
+                }
+            }
+            .figCaptionBox{padding: 40px 0 0 0;
+                .singleCaption{background: #F5F75E; padding: 36px 0 20px;  margin-bottom: 0;
+                    figcaption{position: relative; padding: 0 10px; color: #000; @include font20; @include verdanaregular; line-height: 140%; font-style: italic; 
                         &::before{content:''; position: absolute; top: 0; border-left: 2px solid #000; height: 100%; left: 0; }
                     }
                 }
-                .figCaptionBox{padding: 40px 0 0 0;
-                    .singleCaption{background: #F5F75E; padding: 36px 0 20px; 
-                        figcaption{position: relative; padding: 0 10px; color: #000; @include font20; @include verdanaregular; line-height: 140%; font-style: italic;
-                            &::before{content:''; position: absolute; top: 0; border-left: 2px solid #000; height: 100%; left: 0; }
-                        }
-                    }
-                }
-                &:last-child{margin-bottom: 0;}
-                &.hideTxt{display: none; 
-                   
-                }
-                &.showTxt{display: block;}
             }
-            &::after{content: ''; background: linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, -0.79) 100%); width: 100%; height: 200px; bottom: 70px; left: 0;position: absolute;}
+            .bottomspace{margin-bottom: 34px; overflow: auto;}
+            &:last-child{margin-bottom: 0;}
+            
+            &::after{content: ''; background: linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, -0.79) 100%); width: 100%; height: 200px; bottom: 0px; left: 0;position: absolute;}
             &.removeFadeEffect{
                 &::after{display: none;}
             }
-            .readMoreBtnBox{display: flex; align-items: center; justify-content: center;
-                &.btnHide{display: none;}
-            }
+        }
+        .readMoreBtnBox{display: flex; align-items: center; justify-content: center; margin-top: 40px;
+            &.btnHide{display: none;}
         }
     }
     @media all and (max-width: 1800px){margin-bottom: 110px;
         .secWrapper{width: 75%;
             .contentBox{
-                .divider{margin-bottom: 60px;}
+                .bottomspace{margin-bottom: 30px;}
             }
         }
     }
     @media all and (max-width: 1600px){
         .secWrapper{width: 80%;
-            .contentBox{
-                .divider{margin-bottom: 55px;
-                    p{margin-bottom: 28px;}
-                    ol{margin-bottom: 45px;}
-                    ul{margin-bottom: 45px;}
-                }
+            .contentBox{               
+                .bottomspace{margin-bottom: 25px;}
+                p{margin-bottom: 28px;}
+                ol{margin-bottom: 45px;}
+                ul{margin-bottom: 45px;}
             }
         }
     }
     @media all and (max-width: 1440px){margin-bottom: 100px;
         .secWrapper{width: 85%;
             .contentBox{
-                .divider{margin-bottom: 50px;
-                    h2{margin-bottom: 20px;}
-                    p{margin-bottom: 26px;}
-                    ol{margin-bottom: 40px;}
-                    ul{margin-bottom: 40px;}
-                    .figCaptionBox{padding: 35px 0 0 0;
-                        .singleCaption{padding: 30px 0 16px;}
-                    }
+                h2{margin-bottom: 20px;}
+                p{margin-bottom: 26px;}
+                ol{margin-bottom: 40px;}
+                ul{margin-bottom: 40px;}
+                .figCaptionBox{padding: 35px 0 0 0;
+                    .singleCaption{padding: 30px 0 16px;}
                 }
+                .bottomspace{margin-bottom: 20px;}
             }
         }
     }
     @media all and (max-width: 1280px){margin-bottom: 80px;
         .secWrapper{
             .contentBox{
-                .divider{margin-bottom: 45px;
-                    p{margin-bottom: 24px;}
-                    ol{margin-bottom: 40px;}
-                    ul{margin-bottom: 40px;}
-                    .figCaptionBox{padding: 32px 0 0 0;}
-                }
+                p{margin-bottom: 24px;}
+                ol{margin-bottom: 40px;}
+                ul{margin-bottom: 40px;}
+                .figCaptionBox{padding: 32px 0 0 0;}
             }
         }
     }
@@ -154,28 +147,23 @@
     }
     @media all and (max-width: 820px){
         .secWrapper{width: 90%;
-            .contentBox{
-                .divider{margin-bottom: 40px;}
-            }
         }
     }
     @media all and (max-width: 720px){margin-bottom: 72px;
         .secWrapper{width: 100%;
             .contentBox{
-                .divider{margin-bottom: 35px;
-                    h2{font-size: 20px; line-height: 120%;}
-                    p{font-size: 12px; line-height: 150%;}
-                    ol{
-                        li{font-size: 12px; line-height: 150%;}
-                    }
-                    ul{
-                        li{font-size: 12px; line-height: 150%;}
-                    }
-                    .imgFig{
-                        figcaption{margin: 10px 0;}
-                    }
-                    .figCaptionBox{padding: 30px 0 0 0;}
+                h2{font-size: 20px; line-height: 120%;}
+                p{font-size: 12px; line-height: 150%;}
+                ol{
+                    li{font-size: 12px; line-height: 150%;}
                 }
+                ul{
+                    li{font-size: 12px; line-height: 150%;}
+                }
+                .imgFig{
+                    figcaption{margin: 10px 0;}
+                }
+                .figCaptionBox{padding: 30px 0 0 0;}
             }
         }
     }

@@ -5800,7 +5800,7 @@ body {
 }
 
 .careerBannerSection {
-  margin: 172px 0px 120px;
+  margin: 170px 0px 120px;
 }
 .careerBannerSection .careerSectionWrapper {
   padding-left: 120px;
@@ -5830,42 +5830,44 @@ body {
     padding-right: 20px;
   }
 }
-.careerBannerSection .careerSectionWrapper h1 {
+.careerBannerSection .careerSectionWrapper .secHeading {
+  margin-bottom: 60px;
+}
+.careerBannerSection .careerSectionWrapper .secHeading h1 {
   color: #1E1E1E;
   font-family: "termina_testmedium";
   font-size: 80px;
   font-weight: 600;
   line-height: 120%;
-  margin-bottom: 20px;
 }
 @media screen and (max-width: 1800px) {
-  .careerBannerSection .careerSectionWrapper h1 {
+  .careerBannerSection .careerSectionWrapper .secHeading h1 {
     font-size: 72px;
   }
 }
 @media screen and (max-width: 1600px) {
-  .careerBannerSection .careerSectionWrapper h1 {
+  .careerBannerSection .careerSectionWrapper .secHeading h1 {
     font-size: 64px;
   }
 }
 @media screen and (max-width: 1440) {
-  .careerBannerSection .careerSectionWrapper h1 {
+  .careerBannerSection .careerSectionWrapper .secHeading h1 {
     font-size: 48px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .careerBannerSection .careerSectionWrapper h1 {
+  .careerBannerSection .careerSectionWrapper .secHeading h1 {
     font-size: 38px;
   }
 }
 @media screen and (max-width: 720px) {
-  .careerBannerSection .careerSectionWrapper h1 {
+  .careerBannerSection .careerSectionWrapper .secHeading h1 {
     font-size: 36px;
   }
 }
-.careerBannerSection .careerSectionWrapper p {
+.careerBannerSection .careerSectionWrapper .secHeading p {
   width: 80%;
-  margin-bottom: 36px;
+  margin: 20px 0 36px;
   color: #1E1E1E;
   font-family: "verdanaregular";
   font-size: 24px;
@@ -5873,21 +5875,96 @@ body {
   line-height: 166%;
 }
 @media screen and (max-width: 1600px) {
-  .careerBannerSection .careerSectionWrapper p {
+  .careerBannerSection .careerSectionWrapper .secHeading p {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .careerBannerSection .careerSectionWrapper p {
+  .careerBannerSection .careerSectionWrapper .secHeading p {
     font-size: 16px;
   }
-}
-.careerBannerSection .careerSectionWrapper a {
-  margin-bottom: 40px !important;
 }
 .careerBannerSection .careerSectionWrapper .careerBannerImg img {
   display: block;
   object-fit: cover;
+}
+.careerBannerSection .careerSectionWrapper .careerBannerImg img.mblBanner {
+  display: none;
+}
+@media all and (max-width: 1800px) {
+  .careerBannerSection {
+    margin-top: 160px;
+  }
+  .careerBannerSection .careerSectionWrapper .secHeading {
+    margin-bottom: 55px;
+  }
+  .careerBannerSection .careerSectionWrapper .secHeading p {
+    margin: 20px 0 34px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .careerBannerSection {
+    margin: 150px 0 110px;
+  }
+  .careerBannerSection .careerSectionWrapper .secHeading {
+    margin-bottom: 50px;
+  }
+  .careerBannerSection .careerSectionWrapper .secHeading p {
+    margin: 18px 0 32px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .careerBannerSection {
+    margin: 120px 0 100px;
+  }
+  .careerBannerSection .careerSectionWrapper .secHeading {
+    margin-bottom: 45px;
+  }
+  .careerBannerSection .careerSectionWrapper .secHeading p {
+    margin: 16px 0 30px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .careerBannerSection {
+    margin: 100px 0;
+  }
+  .careerBannerSection .careerSectionWrapper .secHeading {
+    margin-bottom: 40px;
+  }
+  .careerBannerSection .careerSectionWrapper .secHeading p {
+    margin: 14px 0 25px;
+  }
+}
+@media all and (max-width: 820px) {
+  .careerBannerSection {
+    margin-bottom: 72px;
+  }
+  .careerBannerSection .careerSectionWrapper .secHeading {
+    margin-bottom: 36px;
+  }
+  .careerBannerSection .careerSectionWrapper .secHeading p {
+    margin: 16px 0 24px;
+  }
+  .careerBannerSection .careerSectionWrapper .careerBannerImg img {
+    width: 100%;
+  }
+  .careerBannerSection .careerSectionWrapper .careerBannerImg img.desktopBanner {
+    display: none;
+  }
+  .careerBannerSection .careerSectionWrapper .careerBannerImg img.mblBanner {
+    display: block;
+  }
+}
+@media all and (max-width: 720px) {
+  .careerBannerSection .careerSectionWrapper .secHeading h1 {
+    font-size: 36px;
+    line-height: 133%;
+  }
+  .careerBannerSection .careerSectionWrapper .secHeading p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 175%;
+  }
 }
 
 .careerTeamSection {
@@ -5977,16 +6054,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter {
-  width: 75%;
+  width: calc(75% - 30px);
   display: flex;
   align-items: center;
+  gap: 30px;
 }
 .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect {
   position: relative;
-  width: 30%;
-  margin-right: 32px;
+  width: calc(33.33% - 15px);
 }
 .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn {
   width: 100%;
@@ -5994,7 +6072,7 @@ body {
   display: flex;
   cursor: pointer;
   border-bottom: 1px solid #787878;
-  padding: 4px 0px 12px;
+  padding: 14px 0px;
   position: relative;
   justify-content: space-between;
 }
@@ -6086,66 +6164,7 @@ body {
   width: 25%;
   display: flex;
   justify-content: flex-end;
-}
-.careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer button:first-child {
-  margin-right: 32px;
-}
-.careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer .ctaApplyFilter {
-  font-family: "termina_testregular";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 100%;
-  letter-spacing: -0.64px;
-  color: #F5F75E;
-  background: #1E1E1E;
-  border-style: none;
-  padding: 20px 32px;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  display: inline-block;
-}
-@media screen and (max-width: 1600px) {
-  .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer .ctaApplyFilter {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer .ctaApplyFilter {
-    font-size: 12px;
-  }
-}
-.careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer .ctaClearFilter {
-  font-family: "termina_testregular";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 100%;
-  letter-spacing: -0.64px;
-  color: #000;
-  background: transparent;
-  border-style: none;
-  padding: 20px 32px;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  border: 1px solid #4B4B4B;
-  display: inline-block;
-}
-@media screen and (max-width: 1600px) {
-  .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer .ctaClearFilter {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer .ctaClearFilter {
-    font-size: 12px;
-  }
+  gap: 30px;
 }
 .careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
   padding-left: 120px;
@@ -6260,6 +6279,102 @@ body {
 }
 .careerTeamSection .careerSectionWrapperTwo .careerPositionBox:first-child {
   border-top: 1px solid #D8DBDC;
+}
+@media all and (max-width: 1800px) {
+  .careerTeamSection .careerSectionWrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .careerTeamSection .careerSectionWrapper .secHeading {
+    margin-bottom: 60px;
+  }
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .careerTeamSection .careerSectionWrapper {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  .careerTeamSection .careerSectionWrapper .secHeading {
+    margin-bottom: 55px;
+  }
+  .careerTeamSection .careerSectionWrapper .careerFilterSection {
+    gap: 25px;
+  }
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter {
+    width: calc(73% - 25px);
+  }
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer {
+    width: 27%;
+  }
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg {
+    width: 75px;
+    height: 75px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .careerTeamSection .careerSectionWrapper {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  .careerTeamSection .careerSectionWrapper .secHeading {
+    margin-bottom: 55px;
+  }
+  .careerTeamSection .careerSectionWrapper .careerFilterSection {
+    gap: 25px;
+  }
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter {
+    width: calc(73% - 25px);
+  }
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer {
+    width: 27%;
+  }
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .careerTeamSection .careerSectionWrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .careerTeamSection .careerSectionWrapper .secHeading {
+    margin-bottom: 45px;
+  }
+  .careerTeamSection .careerSectionWrapper .careerFilterSection {
+    gap: 25px;
+  }
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter {
+    width: calc(73% - 25px);
+    gap: 20px;
+  }
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect {
+    width: calc(33.33% - 13px);
+  }
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer {
+    width: 27%;
+    gap: 20px;
+  }
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 .careerOpeningModal {
@@ -6494,7 +6609,7 @@ body {
   justify-content: center;
   padding-top: 72px;
   padding-bottom: 72px;
-  border-block: 1px solid #BEC3C5;
+  border: 1px solid #BEC3C5;
 }
 @media screen and (max-width: 1600px) {
   .careerCVSection .careerSectionWrapper {
@@ -6660,7 +6775,7 @@ body {
   display: flex;
 }
 .careerHiringSection .hiringProcessContainer .hiringProcessBox {
-  width: 33.3333333333%;
+  width: 33.33%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6668,6 +6783,15 @@ body {
   padding: 102px 56px 114px;
   cursor: default;
   transition: all 0.3s ease-in-out;
+}
+.careerHiringSection .hiringProcessContainer .hiringProcessBox .logoBox {
+  border: 1px solid #1E1E1E;
+  border-radius: 100%;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .careerHiringSection .hiringProcessContainer .hiringProcessBox .logoBox img {
   width: 100%;
@@ -6923,8 +7047,7 @@ body {
   }
 }
 .journeySection {
-  margin-top: 170px;
-  margin-bottom: 200px;
+  margin: 170px 0 200px;
 }
 .journeySection .journeySecWrapper .secHeading {
   padding-left: 120px;
@@ -7026,14 +7149,12 @@ body {
 }
 @media all and (max-width: 1800px) {
   .journeySection {
-    margin-top: 160px;
-    margin-bottom: 180px;
+    margin: 160px 0 180px;
   }
 }
 @media all and (max-width: 1600px) {
   .journeySection {
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin: 150px 0;
   }
   .journeySection .journeySecWrapper .secHeading {
     margin-bottom: 35px;
@@ -7041,8 +7162,7 @@ body {
 }
 @media all and (max-width: 1440px) {
   .journeySection {
-    margin-bottom: 120px;
-    margin-top: 120px;
+    margin: 120px 0;
   }
   .journeySection .journeySecWrapper .secHeading {
     margin-bottom: 30px;
@@ -7061,8 +7181,7 @@ body {
 }
 @media all and (max-width: 1024px) {
   .journeySection {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px 0;
   }
   .journeySection .journeySecWrapper .secHeading {
     width: 90%;
@@ -9174,10 +9293,11 @@ body {
 .resDetailContentSec .secWrapper .contentBox {
   position: relative;
 }
-.resDetailContentSec .secWrapper .contentBox .divider {
-  margin-bottom: 64px;
+.resDetailContentSec .secWrapper .contentBox.hideTxt {
+  height: 750px;
+  overflow: hidden;
 }
-.resDetailContentSec .secWrapper .contentBox .divider h2 {
+.resDetailContentSec .secWrapper .contentBox h2 {
   margin-bottom: 24px;
   color: #000;
   font-family: "termina_testbold";
@@ -9185,21 +9305,21 @@ body {
   line-height: 150%;
 }
 @media screen and (max-width: 1800px) {
-  .resDetailContentSec .secWrapper .contentBox .divider h2 {
+  .resDetailContentSec .secWrapper .contentBox h2 {
     font-size: 30px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .resDetailContentSec .secWrapper .contentBox .divider h2 {
+  .resDetailContentSec .secWrapper .contentBox h2 {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .resDetailContentSec .secWrapper .contentBox .divider h2 {
+  .resDetailContentSec .secWrapper .contentBox h2 {
     font-size: 20px;
   }
 }
-.resDetailContentSec .secWrapper .contentBox .divider p {
+.resDetailContentSec .secWrapper .contentBox p {
   color: #000;
   font-family: "verdanaregular";
   font-size: 20px;
@@ -9207,25 +9327,25 @@ body {
   margin-bottom: 30px;
 }
 @media screen and (max-width: 1600px) {
-  .resDetailContentSec .secWrapper .contentBox .divider p {
+  .resDetailContentSec .secWrapper .contentBox p {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .resDetailContentSec .secWrapper .contentBox .divider p {
+  .resDetailContentSec .secWrapper .contentBox p {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 720px) {
-  .resDetailContentSec .secWrapper .contentBox .divider p {
+  .resDetailContentSec .secWrapper .contentBox p {
     font-size: 12px;
   }
 }
-.resDetailContentSec .secWrapper .contentBox .divider ol {
+.resDetailContentSec .secWrapper .contentBox ol {
   margin-left: 20px;
   margin-bottom: 50px;
 }
-.resDetailContentSec .secWrapper .contentBox .divider ol li {
+.resDetailContentSec .secWrapper .contentBox ol li {
   list-style: decimal;
   color: #000;
   font-family: "verdanaregular";
@@ -9234,28 +9354,28 @@ body {
   margin-bottom: 10px;
 }
 @media screen and (max-width: 1600px) {
-  .resDetailContentSec .secWrapper .contentBox .divider ol li {
+  .resDetailContentSec .secWrapper .contentBox ol li {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .resDetailContentSec .secWrapper .contentBox .divider ol li {
+  .resDetailContentSec .secWrapper .contentBox ol li {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 720px) {
-  .resDetailContentSec .secWrapper .contentBox .divider ol li {
+  .resDetailContentSec .secWrapper .contentBox ol li {
     font-size: 12px;
   }
 }
-.resDetailContentSec .secWrapper .contentBox .divider ol li span {
+.resDetailContentSec .secWrapper .contentBox ol li span {
   font-family: "verdanabold";
 }
-.resDetailContentSec .secWrapper .contentBox .divider ul {
+.resDetailContentSec .secWrapper .contentBox ul {
   margin-left: 20px;
   margin-bottom: 50px;
 }
-.resDetailContentSec .secWrapper .contentBox .divider ul li {
+.resDetailContentSec .secWrapper .contentBox ul li {
   list-style: decimal;
   color: #000;
   font-family: "verdanaregular";
@@ -9264,27 +9384,27 @@ body {
   margin-bottom: 10px;
 }
 @media screen and (max-width: 1600px) {
-  .resDetailContentSec .secWrapper .contentBox .divider ul li {
+  .resDetailContentSec .secWrapper .contentBox ul li {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .resDetailContentSec .secWrapper .contentBox .divider ul li {
+  .resDetailContentSec .secWrapper .contentBox ul li {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 720px) {
-  .resDetailContentSec .secWrapper .contentBox .divider ul li {
+  .resDetailContentSec .secWrapper .contentBox ul li {
     font-size: 12px;
   }
 }
-.resDetailContentSec .secWrapper .contentBox .divider ul li span {
+.resDetailContentSec .secWrapper .contentBox ul li span {
   font-family: "verdanabold";
 }
-.resDetailContentSec .secWrapper .contentBox .divider figure {
-  margin: 0;
+.resDetailContentSec .secWrapper .contentBox figure {
+  margin-bottom: 30px;
 }
-.resDetailContentSec .secWrapper .contentBox .divider .imgFig figcaption {
+.resDetailContentSec .secWrapper .contentBox .imgFig figcaption {
   position: relative;
   padding-left: 10px;
   color: #000;
@@ -9294,16 +9414,16 @@ body {
   margin: 16px 0;
 }
 @media screen and (max-width: 1600px) {
-  .resDetailContentSec .secWrapper .contentBox .divider .imgFig figcaption {
+  .resDetailContentSec .secWrapper .contentBox .imgFig figcaption {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .resDetailContentSec .secWrapper .contentBox .divider .imgFig figcaption {
+  .resDetailContentSec .secWrapper .contentBox .imgFig figcaption {
     font-size: 12px;
   }
 }
-.resDetailContentSec .secWrapper .contentBox .divider .imgFig figcaption::before {
+.resDetailContentSec .secWrapper .contentBox .imgFig figcaption::before {
   content: "";
   position: absolute;
   top: 0;
@@ -9311,14 +9431,15 @@ body {
   height: 100%;
   left: 0;
 }
-.resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox {
+.resDetailContentSec .secWrapper .contentBox .figCaptionBox {
   padding: 40px 0 0 0;
 }
-.resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption {
+.resDetailContentSec .secWrapper .contentBox .figCaptionBox .singleCaption {
   background: #F5F75E;
   padding: 36px 0 20px;
+  margin-bottom: 0;
 }
-.resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption figcaption {
+.resDetailContentSec .secWrapper .contentBox .figCaptionBox .singleCaption figcaption {
   position: relative;
   padding: 0 10px;
   color: #000;
@@ -9328,21 +9449,21 @@ body {
   font-style: italic;
 }
 @media screen and (max-width: 1600px) {
-  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption figcaption {
+  .resDetailContentSec .secWrapper .contentBox .figCaptionBox .singleCaption figcaption {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption figcaption {
+  .resDetailContentSec .secWrapper .contentBox .figCaptionBox .singleCaption figcaption {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 720px) {
-  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption figcaption {
+  .resDetailContentSec .secWrapper .contentBox .figCaptionBox .singleCaption figcaption {
     font-size: 12px;
   }
 }
-.resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption figcaption::before {
+.resDetailContentSec .secWrapper .contentBox .figCaptionBox .singleCaption figcaption::before {
   content: "";
   position: absolute;
   top: 0;
@@ -9350,33 +9471,32 @@ body {
   height: 100%;
   left: 0;
 }
-.resDetailContentSec .secWrapper .contentBox .divider:last-child {
+.resDetailContentSec .secWrapper .contentBox .bottomspace {
+  margin-bottom: 34px;
+  overflow: auto;
+}
+.resDetailContentSec .secWrapper .contentBox:last-child {
   margin-bottom: 0;
-}
-.resDetailContentSec .secWrapper .contentBox .divider.hideTxt {
-  display: none;
-}
-.resDetailContentSec .secWrapper .contentBox .divider.showTxt {
-  display: block;
 }
 .resDetailContentSec .secWrapper .contentBox::after {
   content: "";
   background: linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 0) 100%);
   width: 100%;
   height: 200px;
-  bottom: 70px;
+  bottom: 0px;
   left: 0;
   position: absolute;
 }
 .resDetailContentSec .secWrapper .contentBox.removeFadeEffect::after {
   display: none;
 }
-.resDetailContentSec .secWrapper .contentBox .readMoreBtnBox {
+.resDetailContentSec .secWrapper .readMoreBtnBox {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
 }
-.resDetailContentSec .secWrapper .contentBox .readMoreBtnBox.btnHide {
+.resDetailContentSec .secWrapper .readMoreBtnBox.btnHide {
   display: none;
 }
 @media all and (max-width: 1800px) {
@@ -9386,24 +9506,24 @@ body {
   .resDetailContentSec .secWrapper {
     width: 75%;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider {
-    margin-bottom: 60px;
+  .resDetailContentSec .secWrapper .contentBox .bottomspace {
+    margin-bottom: 30px;
   }
 }
 @media all and (max-width: 1600px) {
   .resDetailContentSec .secWrapper {
     width: 80%;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider {
-    margin-bottom: 55px;
+  .resDetailContentSec .secWrapper .contentBox .bottomspace {
+    margin-bottom: 25px;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider p {
+  .resDetailContentSec .secWrapper .contentBox p {
     margin-bottom: 28px;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider ol {
+  .resDetailContentSec .secWrapper .contentBox ol {
     margin-bottom: 45px;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider ul {
+  .resDetailContentSec .secWrapper .contentBox ul {
     margin-bottom: 45px;
   }
 }
@@ -9414,45 +9534,42 @@ body {
   .resDetailContentSec .secWrapper {
     width: 85%;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider {
-    margin-bottom: 50px;
-  }
-  .resDetailContentSec .secWrapper .contentBox .divider h2 {
+  .resDetailContentSec .secWrapper .contentBox h2 {
     margin-bottom: 20px;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider p {
+  .resDetailContentSec .secWrapper .contentBox p {
     margin-bottom: 26px;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider ol {
+  .resDetailContentSec .secWrapper .contentBox ol {
     margin-bottom: 40px;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider ul {
+  .resDetailContentSec .secWrapper .contentBox ul {
     margin-bottom: 40px;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox {
+  .resDetailContentSec .secWrapper .contentBox .figCaptionBox {
     padding: 35px 0 0 0;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox .singleCaption {
+  .resDetailContentSec .secWrapper .contentBox .figCaptionBox .singleCaption {
     padding: 30px 0 16px;
+  }
+  .resDetailContentSec .secWrapper .contentBox .bottomspace {
+    margin-bottom: 20px;
   }
 }
 @media all and (max-width: 1280px) {
   .resDetailContentSec {
     margin-bottom: 80px;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider {
-    margin-bottom: 45px;
-  }
-  .resDetailContentSec .secWrapper .contentBox .divider p {
+  .resDetailContentSec .secWrapper .contentBox p {
     margin-bottom: 24px;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider ol {
+  .resDetailContentSec .secWrapper .contentBox ol {
     margin-bottom: 40px;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider ul {
+  .resDetailContentSec .secWrapper .contentBox ul {
     margin-bottom: 40px;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox {
+  .resDetailContentSec .secWrapper .contentBox .figCaptionBox {
     padding: 32px 0 0 0;
   }
 }
@@ -9468,9 +9585,6 @@ body {
   .resDetailContentSec .secWrapper {
     width: 90%;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider {
-    margin-bottom: 40px;
-  }
 }
 @media all and (max-width: 720px) {
   .resDetailContentSec {
@@ -9479,29 +9593,26 @@ body {
   .resDetailContentSec .secWrapper {
     width: 100%;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider {
-    margin-bottom: 35px;
-  }
-  .resDetailContentSec .secWrapper .contentBox .divider h2 {
+  .resDetailContentSec .secWrapper .contentBox h2 {
     font-size: 20px;
     line-height: 120%;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider p {
+  .resDetailContentSec .secWrapper .contentBox p {
     font-size: 12px;
     line-height: 150%;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider ol li {
+  .resDetailContentSec .secWrapper .contentBox ol li {
     font-size: 12px;
     line-height: 150%;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider ul li {
+  .resDetailContentSec .secWrapper .contentBox ul li {
     font-size: 12px;
     line-height: 150%;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider .imgFig figcaption {
+  .resDetailContentSec .secWrapper .contentBox .imgFig figcaption {
     margin: 10px 0;
   }
-  .resDetailContentSec .secWrapper .contentBox .divider .figCaptionBox {
+  .resDetailContentSec .secWrapper .contentBox .figCaptionBox {
     padding: 30px 0 0 0;
   }
 }
