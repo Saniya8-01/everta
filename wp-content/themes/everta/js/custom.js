@@ -902,6 +902,49 @@ if($(".backtopCl").length){
     })
 }
 
+if ($(".resourcesfaqSection").length) {
+    document.addEventListener("DOMContentLoaded", function () {
+        const accordionWrapper = document.querySelector(".accordions-wrapper");
+        const faqItems = accordionWrapper.querySelectorAll(".accordion");
+        const toggleButton = document.getElementById("toggleFaqButton");
+
+        const maxVisible = 3;
+
+        // Hide extra FAQ items
+        if (faqItems.length > maxVisible) {
+            toggleButton.style.display = "block"; // Show button
+            faqItems.forEach((item, index) => {
+                if (index >= maxVisible) {
+                    item.style.display = "none"; // Hide extra items
+                }
+            });
+        }
+
+        // Toggle visibility on button click
+        toggleButton.addEventListener("click", function () {
+            const isExpanded = toggleButton.getAttribute("data-expanded") === "true";
+
+            if (isExpanded) {
+                // Hide extra items
+                faqItems.forEach((item, index) => {
+                    if (index >= maxVisible) {
+                        item.style.display = "none";
+                    }
+                });
+                toggleButton.textContent = "Show More";
+                toggleButton.setAttribute("data-expanded", "false");
+            } else {
+                // Show all items
+                faqItems.forEach((item) => {
+                    item.style.display = "block";
+                });
+                toggleButton.textContent = "Show Less";
+                toggleButton.setAttribute("data-expanded", "true");
+            }
+        });
+    });
+}
+
 
 
 
