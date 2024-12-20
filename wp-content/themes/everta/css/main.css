@@ -10308,11 +10308,552 @@ body {
     margin-bottom: 42px;
   }
 }
-@media all and (max-width: 1024px) {
+@media all and (max-width: 680px) {
   .resourcesfaqSection .faq-heading h2 {
     margin-bottom: 32px;
     font-size: 20px;
     font-weight: 600;
     line-height: 28px;
+  }
+}
+
+.manualBrochureSection .faq-heading h2 {
+  margin-bottom: 64px;
+  color: #1E1E1E;
+  font-family: "termina_testmedium";
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 133.333%;
+  text-transform: uppercase;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+@media screen and (max-width: 1600px) {
+  .manualBrochureSection .faq-heading h2 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .manualBrochureSection .faq-heading h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .manualBrochureSection .faq-heading h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .manualBrochureSection .faq-heading h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .manualBrochureSection .faq-heading h2 {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .manualBrochureSection .faq-heading h2 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .manualBrochureSection .faq-heading h2 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .manualBrochureSection .faq-heading h2 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.manualBrochureSection .container .accordions-wrapper .accordion {
+  border: none;
+}
+.manualBrochureSection .container .accordions-wrapper .accordion.active {
+  padding-bottom: 50px;
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-header h4 {
+  font-family: "termina_testmedium";
+  font-weight: 600;
+  line-height: 112.5%;
+  font-size: 32px;
+  color: #1E1E1E;
+}
+@media screen and (max-width: 1800px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header h4 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header h4 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header h4 {
+    font-size: 20px;
+  }
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+  padding-left: 120px;
+  padding-right: 120px;
+  width: 100%;
+}
+@media screen and (max-width: 1600px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv {
+  display: flex;
+  padding-left: 24px;
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement:not(:last-child) {
+  padding-right: 180px;
+  border-right: 2px solid #E5E7E8;
+  margin-right: 70px;
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement:nth-child(1) .pdfWrapper {
+  background: rgba(245, 247, 94, 0.6);
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement:nth-child(2) .pdfWrapper {
+  background: rgba(0, 110, 80, 0.4);
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement:nth-child(3) .pdfWrapper {
+  background: #F2F3F3;
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType {
+  font-family: "verdanaregular";
+  font-size: 24px;
+  line-height: 166.667%;
+  margin-bottom: 10px;
+  position: relative;
+}
+@media screen and (max-width: 1600px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType {
+    font-size: 16px;
+  }
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -24px;
+  background: #1E1E1E;
+  border-radius: 50%;
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper {
+  display: flex;
+  align-items: center;
+  padding: 8px 22px 8px 8px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper:not(:last-child) {
+  margin-bottom: 16px;
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper img {
+  margin-right: 12px;
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .pdfName {
+  flex-shrink: 0;
+  margin-right: 66px;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  line-height: 175%;
+}
+@media screen and (max-width: 1600px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .pdfName {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .pdfName {
+    font-size: 12px;
+  }
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .downloadLogo {
+  margin-right: 0;
+}
+@media all and (max-width: 1800px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 1600px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 1440px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 1024px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1800px) and (max-width: 768px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1800px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv {
+    padding-left: 24px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement:not(:last-child) {
+    padding-right: 160px;
+    margin-right: 60px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType::before {
+    width: 10px;
+    height: 10px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper {
+    padding: 8px 22px 8px 8px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper img {
+    margin-right: 12px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .pdfName {
+    margin-right: 66px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .manualBrochureSection .faq-heading h2 {
+    margin-bottom: 60px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion.active {
+    padding-bottom: 40px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 1600px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 1440px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 1024px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-width: 768px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement:not(:last-child) {
+    padding-right: 140px;
+    margin-right: 60px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType::before {
+    width: 10px;
+    height: 10px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper {
+    padding: 8px 20px 8px 8px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper img {
+    margin-right: 12px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .pdfName {
+    margin-right: 60px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .manualBrochureSection .faq-heading h2 {
+    margin-bottom: 56px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion.active {
+    padding-bottom: 36px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1600px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1440px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1024px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 768px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement:not(:last-child) {
+    padding-right: 120px;
+    margin-right: 50px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType::before {
+    width: 8px;
+    height: 8px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper {
+    padding: 8px 16px 8px 8px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper:not(:last-child) {
+    margin-bottom: 14px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper img {
+    margin-right: 10px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .pdfName {
+    margin-right: 50px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .manualBrochureSection .faq-heading h2 {
+    margin-bottom: 50px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion.active {
+    padding-bottom: 32px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1600px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1440px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1024px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 768px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement:not(:last-child) {
+    padding-right: 80px;
+    margin-right: 40px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType::before {
+    width: 8px;
+    height: 8px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper {
+    padding: 8px 16px 8px 8px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper:not(:last-child) {
+    margin-bottom: 14px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper img {
+    margin-right: 10px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .pdfName {
+    margin-right: 40px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion.active {
+    padding-bottom: 30px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding: 0px 60px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv {
+    padding-left: 0px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement {
+    border-right: 0px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement:not(:last-child) {
+    padding-right: 0px;
+    border-right: 0px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType::before {
+    content: none;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper {
+    padding: 8px 12px 8px 8px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper img {
+    margin-right: 10px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .pdfName {
+    margin-right: 30px;
+  }
+}
+@media all and (max-width: 680px) {
+  .manualBrochureSection .faq-heading h2 {
+    margin-bottom: 32px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion {
+    border: none;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion.active {
+    padding-bottom: 25px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header h4 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 680px) and (max-width: 1600px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 680px) and (max-width: 1440px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 680px) and (max-width: 1024px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 680px) and (max-width: 768px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 680px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv {
+    display: flex;
+    padding-left: 0px;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement:not(:last-child) {
+    padding-right: 0px;
+    border-right: none;
+    margin-right: 0px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType::before {
+    content: none;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper {
+    padding: 6px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper img {
+    margin-right: 12px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .pdfName {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .downloadLogo {
+    margin-left: auto;
   }
 }
