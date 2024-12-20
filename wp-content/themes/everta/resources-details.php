@@ -4,10 +4,8 @@
     <div class="secWrapper">
         <div class="backBtn">
             <a href="" >
-            <img src="<?php bloginfo('template_directory'); ?>/images/left-arrow-gray.svg" alt=" " />Back 
+                <img src="<?php bloginfo('template_directory'); ?>/images/left-arrow-gray.svg" alt=" " />Back 
             </a>
-            
-            <p></p>
         </div>
         <div class="secHeading">
             <h1>Seamless charging with every charge. Everta chargers 101.</h1>
@@ -76,12 +74,18 @@
                         <img src="<?php bloginfo('template_directory'); ?>/images/res-news-img1.webp" alt="">
                     </div>
                     <div class="contentBox">
-                        <span>News</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <ul>
-                            <li>11 Jan 2022</li>
-                            <li>5 min read</li>
-                        </ul>
+                        <div class="content">
+                            <span>News</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <ul>
+                                <li>11 Jan 2022</li>
+                                <li>5 min read</li>
+                            </ul>    
+                        </div>
+                        <div class="arrowBox">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/black-cta-arrow.svg" alt="">
+                        </div>
+                        
                     </div>
                 </a>
             </div>
@@ -91,12 +95,17 @@
                         <img src="<?php bloginfo('template_directory'); ?>/images/res-news-img1.webp" alt="">
                     </div>
                     <div class="contentBox">
-                        <span>News</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <ul>
-                            <li>11 Jan 2022</li>
-                            <li>5 min read</li>
-                        </ul>
+                        <div class="content">
+                            <span>News</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <ul>
+                                <li>11 Jan 2022</li>
+                                <li>5 min read</li>
+                            </ul>    
+                        </div>
+                        <div class="arrowBox">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/black-cta-arrow.svg" alt="">
+                        </div>
                     </div>
                 </a>
             </div>

@@ -58,8 +58,8 @@
                 </div>
             </div>
             <div class="filterBtnContainer">
-                <button id="applyFilter" class="ctaBlack">Apply filters</button>
-                <button id="clearFilter" class="ctaWhite">Clear filters</button>
+                <button id="applyFilter" class="ctaApplyFilter">Apply filters</button>
+                <button id="clearFilter" class="ctaClearFilter">Clear filters</button>
             </div>
         </div>
     </div>
@@ -138,7 +138,7 @@
         </div>
     </div>
 </section>
-<!--
+
 <section class="careerCVSection">
     <div class="careerSectionWrapper">
         <h2>DidN’t Find what you’re looking for?</h2>
@@ -153,33 +153,47 @@
             <h2>hiring process</h2>            
             <p>Here’s how we hire new team members, with detailed steps to ensure we find the best fit for our company.</p>
         </div>
-    </div>
-    <div class="hiringProcessContainer">
+        <div class="hiringProcessContainer">
         <div class="hiringProcessBox">
             <div class="logoBox">
                 <img src="<?php bloginfo('template_directory'); ?>/images/application-logo.svg" alt="everta">
             </div>
-            <div class="boxNumber">1</div>
-            <h3>PLUG IN YOUR APPLICATION</h3>
-            <h6>Submit your CV and apply for a position that suits your skills.</h6>
+            <div class="contentBox">
+                <div class="boxNumber">1</div>
+                <div class="subHeadings">
+                    <h3>PLUG IN YOUR APPLICATION</h3>
+                    <h6>Submit your CV and apply for a position that suits your skills.</h6>
+                </div>
+            </div>
+           
         </div>
         <div class="hiringProcessBox">
             <div class="logoBox">
                 <img src="<?php bloginfo('template_directory'); ?>/images/interviews-logo.svg" alt="everta">
             </div>
-            <div class="boxNumber">2</div>
-            <h3>CHARGE UP FOR INTERVIEWS</h3>
-            <h6>We conduct interviews to get to know you & assess your fit with our team & values.</h6>
+            <div class="contentBox">
+                <div class="boxNumber">2</div>
+                <div class="subHeadings">
+                    <h3>CHARGE UP FOR INTERVIEWS</h3>
+                    <h6>We conduct interviews to get to know you & assess your fit with our team & values.</h6>
+                </div>
+            </div>
         </div>
         <div class="hiringProcessBox">
             <div class="logoBox">
                 <img src="<?php bloginfo('template_directory'); ?>/images/ready-to-go-logo.svg" alt="everta">
             </div>
-            <div class="boxNumber">3</div>
-            <h3>READY TO GO!</h3>
-            <h6>After evaluating all candidates, we choose the best fit & provide feedback to everyone.</h6>
+            <div class="contentBox">
+                <div class="boxNumber">3</div>
+                <div class="subHeadings">
+                    <h3>READY TO GO!</h3>
+                    <h6>After evaluating all candidates, we choose the best fit & provide feedback to everyone.</h6>
+                </div>
+            </div>
         </div>
     </div>
+    </div>
+   
 </section>
 
 <section class="careerWallSection">
@@ -188,7 +202,7 @@
             <h2>EVERTA WALL</h2>
         </div>
         <div class="evertaWallContainer">
-            <div class="wallImgBoxContainer">
+            <div class="wallImgBoxContainer ">
                 <div class="wallImgBox">
                     <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-1.webp" alt="everta">
                 </div>
@@ -198,7 +212,8 @@
             </div>
             <div class="wallImgBoxContainer">
                 <div class="wallImgBox">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-3.webp" alt="everta">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-3.webp" alt="everta" class="desktopWall">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/everta-wall-mbl.webp" alt="everta" class="mblWall">
                     <div class="wallTapeBox">
                         <img src="<?php bloginfo('template_directory'); ?>/images/wall-tape.webp" alt="everta">
                     </div>
@@ -206,7 +221,8 @@
             </div>
             <div class="wallImgBoxContainer">
                 <div class="wallImgBox">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-4.webp" alt="everta">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-4.webp" alt="everta" class="desktopWall">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/everta-wall-mbl1.webp" alt="everta" class="mblWall">
                 </div>
                 <div class="wallImgBox">
                     <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-5.webp" alt="everta">
@@ -215,7 +231,7 @@
         </div>
     </div>
 </section>
-
+<!--
 <div class="careerOpeningModal" id="careerOpeningModal1">
     <div class="modalContent">
         <div class="jobHeadingDesc">

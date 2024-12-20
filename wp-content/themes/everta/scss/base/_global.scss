@@ -331,6 +331,26 @@ body h1{
     }
 }
 
+@mixin bottomSpace{
+    margin-bottom: 200px;
+
+    @media screen and (max-width:1800px) {
+        margin-bottom: 180px;
+    }
+    @media screen and (max-width:1600px) {
+        margin-bottom: 150px;
+    }
+    @media screen and (max-width:1440px) {
+        margin-bottom: 120px;
+    }
+    @media screen and (max-width:1024px) {
+        margin-bottom: 100px;
+    }
+    @media screen and (max-width:768px) {
+        margin-bottom: 72px;
+    }
+}
+
 @mixin font80{
     font-size: 80px;
     @media screen and (max-width:1800px) {

@@ -802,7 +802,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
 // career opening modal starts
 document.addEventListener("DOMContentLoaded", function() {
     var careerBoxes = document.querySelectorAll(".careerPositionBox");
@@ -847,15 +846,42 @@ function openForm() {
     $('body').css("overflow-y", "hidden");
     $('html').css("overflow-y", "hidden");
     $('body').css("background", "hidden");
-  }
+}
   
-  function closeForm() {
+function closeForm() {
     document.getElementById("contactForm").classList.remove("open");
     $('body').css("overflow-y", "visible");
     $('html').css("overflow-y", "visible");
-  }
+}
 
-// career opening modal ends
+if($('.careerWallSection').length){
+    document.addEventListener("DOMContentLoaded", () => {
+        const careerWallSection = document.querySelector('.careerWallSection');
+        const evertaWallContainer = document.querySelector(".evertaWallContainer");
+        console.log(evertaWallContainer);
+        
+        const options = {
+        root: null, 
+        threshold: 0.5 
+        };
+
+        const observerCallback = (entries, observer) => {          
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    evertaWallContainer.classList.add("resetImage");
+                } else {
+                evertaWallContainer.classList.remove("resetImage");
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, options);
+
+        observer.observe(careerWallSection);
+
+    })
+}
+
 /* Careers page JS Ends */
 
 /*Resources Details Page Start*/
@@ -901,8 +927,5 @@ if($(".backtopCl").length){
         };
     })
 }
-
-
-
 
 /*Resources Details Page End*/

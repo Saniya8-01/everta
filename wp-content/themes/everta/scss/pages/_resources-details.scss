@@ -63,7 +63,7 @@
 .resDetailContentSec{margin-bottom: 120px;
     .secWrapper{@include wrapper; width: 70%; margin: 0 auto;
         .contentBox{ position: relative;
-            &.hideTxt{ height: 750px; overflow: hidden;}
+            &.hideTxt{ height: 1000px; overflow: hidden;}
             h2{margin-bottom: 24px; color: #000; @include terminabold; @include font32; line-height: 150%;}
             p{color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 30px;}
             ol{margin-left: 20px; margin-bottom: 50px;
@@ -174,17 +174,30 @@
             h2{@include terminamedium; @include font48; line-height: 133%; text-transform: uppercase; text-align: center;}
         }
         .cardContainer{display: flex; align-items: center; justify-content: center;flex-flow: wrap; gap: 30px;
-            .blogCard{width: calc(50% - 15px); border: 1px solid $quaternaryColor5;
+            .blogCard{width: calc(50% - 15px); border: 1px solid $quaternaryColor5;transition: 0.3s all ease-in-out;
                 .imgBox{margin-bottom: 30px;}
-                .contentBox{margin: 0 24px 55px;
-                    span{padding: 4px 8px; background: $primaryColor1; border-radius: 4px; color: #000; @include verdanaregular; @include font16; line-height: 175%;}
-                    p{margin: 24px 0 14px 0; color: $quaternaryColor1; @include verdanaregular; @include font24; line-height: 166%;}
-                    ul{display: flex; align-items: center; gap: 10px;
-                        li{color: #000; @include verdanaregular; @include font16; line-height: 175%; position: relative;
-                            &:last-child{padding-left: 15px;
-                                &::before{content: ''; position: absolute; width: 5px; height: 5px; background: #000; top: 12px;left: 0; border-radius: 100%;}
+                .contentBox{padding: 0 24px 55px; display: flex; align-items: center; justify-content: space-between;
+                    .content{width: calc(100% - 100px);
+                        span{padding: 4px 8px; background: $primaryColor1; border-radius: 4px; color: #000; @include verdanaregular; @include font16; line-height: 175%; transition: 0.3s all ease-in-out;}
+                        p{margin: 24px 0 14px 0; color: $quaternaryColor1; @include verdanaregular; @include font24; line-height: 166%;}
+                        ul{display: flex; align-items: center; gap: 10px;
+                            li{color: #000; @include verdanaregular; @include font16; line-height: 175%; position: relative;
+                                &:last-child{padding-left: 15px;
+                                    &::before{content: ''; position: absolute; width: 5px; height: 5px; background: #000; top: 12px;left: 0; border-radius: 100%;}
+                                }
                             }
                         }
+                    }
+                    .arrowBox{border: 1px solid #000; border-radius: 100%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;opacity: 0; visibility: hidden; transition: 0.3s all ease-in-out;
+                        img{width: 20px; transform: rotate(-45deg);}
+                    }
+                }
+                &:hover{background: $primaryColor1;
+                    .contentBox{
+                        .content{
+                            span{background: #fff;}
+                        }
+                        .arrowBox{opacity: 1; visibility: visible;}
                     }
                 }
             }
@@ -196,7 +209,9 @@
             .cardContainer{
                 .blogCard{
                     .contentBox{
-                        p{margin: 22px 0 12px 0;}
+                        .content{
+                            p{margin: 22px 0 12px 0;}
+                        }
                     }
                 }
             }
@@ -207,10 +222,12 @@
             .secHeading{margin-bottom: 55px;}
             .cardContainer{
                 .blogCard{
-                    .contentBox{margin: 0 22px 50px;
-                        ul{
-                            li:last-child{
-                                &::before{top: 9px;}
+                    .contentBox{padding: 0 22px 50px;
+                        .content{
+                            ul{
+                                li:last-child{
+                                    &::before{top: 9px;}
+                                }
                             }
                         }
                     }
@@ -224,8 +241,11 @@
             .cardContainer{
                 .blogCard{
                     .imgBox{margin-bottom: 25px;}
-                    .contentBox{margin: 0 20px 45px;
-                        p{margin: 20px 0 10px 0;}
+                    .contentBox{padding: 0 20px 45px;
+                        .content{width: calc(100% - 80px);
+                            p{margin: 20px 0 10px 0;}
+                        }
+                        .arrowBox{width: 60px; height: 60px;}
                     }
                 }
             }
@@ -237,13 +257,16 @@
             .cardContainer{gap: 25px;
                 .blogCard{width: calc(50% - 13px);
                     .imgBox{margin-bottom: 20px;}
-                    .contentBox{margin: 0 18px 40px;
-                        p{margin: 18px 0 10px 0;}
-                        ul{
-                            li:last-child{
-                                &::before{top: 8px;}
+                    .contentBox{padding: 0 18px 40px;
+                        .content{width: calc(100% - 70px);
+                            p{margin: 18px 0 10px 0;}
+                            ul{
+                                li:last-child{
+                                    &::before{top: 8px;}
+                                }
                             }
                         }
+                        .arrowBox{width: 50px; height: 50px;}
                     }
                 }
             }
@@ -255,7 +278,20 @@
             .cardContainer{
                 .blogCard{
                     .imgBox{margin-bottom: 20px;}
-                    .contentBox{margin: 0 18px 35px;}
+                    .contentBox{padding: 0 18px 35px;align-items: end;
+                        .content{width: calc(100% - 50px);}
+                        .arrowBox{opacity: 1; visibility: visible; width: 40px; height: 40px;
+                            img{width: 15px;}
+                        }
+                    }
+                    &:hover{background: #fff;
+                        .contentBox{
+                            .content{
+                                span{background: $primaryColor1;}
+                            }
+                            .arrowBox{opacity: 1; visibility: visible;}
+                        }
+                    }
                 }
             }
         }
@@ -271,13 +307,15 @@
             .cardContainer{gap: 24px;
                 .blogCard{width: 100%;
                     .imgBox{margin-bottom: 24px;}
-                    .contentBox{margin: 0 16px 24px;
-                        span{line-height: 150%;}
-                        p{margin: 16px 0 14px 0; font-size: 16px; line-height: 175%;}
-                        ul{gap: 8px;
-                            li{line-height: 150%;}
-                            li:last-child{padding-left: 13px;
-                                &::before{top: 6px;}
+                    .contentBox{padding: 0 16px 24px;
+                        .content{
+                            span{line-height: 150%;}
+                            p{margin: 16px 0 14px 0; font-size: 16px; line-height: 175%;}
+                            ul{gap: 8px;
+                                li{line-height: 150%;}
+                                li:last-child{padding-left: 13px;
+                                    &::before{top: 6px;}
+                                }
                             }
                         }
                     }
