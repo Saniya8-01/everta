@@ -1,0 +1,196 @@
+.manualBrochureSection{
+    .faq-heading {
+        h2 {
+            margin-bottom: 64px;
+            color: $quaternaryColor1;
+            @include terminamedium;
+            @include font36;
+            font-weight: 600;
+            line-height: 133.333%;
+            text-transform: uppercase;
+            @include wrapper;
+        }
+    }
+    .container{
+        .accordions-wrapper{
+            .accordion{border: none;
+                &.active{padding-bottom:50px;}
+                .accordion-header{
+                    h4{@include terminamedium;font-weight: 600;line-height: 112.5%;@include font32;color: #1E1E1E;}
+                }
+                .accordion-body{@include wrapper;width: 100%;
+                    .brochureDiv{display: flex;padding-left:24px;
+                        .brochureElement{&:not(:last-child){padding-right: 180px;border-right: 2px solid #E5E7E8;margin-right: 70px;}
+                            &:nth-child(1){.pdfWrapper{background: rgba(245, 247, 94, 0.60);}}
+                            &:nth-child(2){.pdfWrapper{background: rgba(0, 110, 80, 0.40);}}
+                            &:nth-child(3){.pdfWrapper{background: #F2F3F3;}}
+                            .fileType{@include verdanaregular;@include font24;line-height: 166.667%;margin-bottom: 10px;position: relative;
+                                &::before{content: "";position: absolute;width: 10px;height: 10px;top: 50%;transform: translateY(-50%);left: -24px;background: #1E1E1E;border-radius: 50%;}
+                            }
+                            .pdfWrapper{display: flex;align-items:center;padding:8px 22px 8px 8px;&:not(:last-child){margin-bottom: 16px;}box-sizing: border-box;width: 100%; 
+                                img{margin-right: 12px;}
+                                .pdfName{flex-shrink: 0;margin-right: 66px;@include verdanaregular;@include font16;line-height: 175%;}
+                                .downloadLogo{margin-right: 0;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width:1800px){
+        .container{
+            .accordions-wrapper{
+                .accordion{
+                    .accordion-body{@include wrapper;
+                        .brochureDiv{padding-left:24px;
+                            .brochureElement{&:not(:last-child){padding-right: 160px;margin-right: 60px;}
+                                .fileType{
+                                    &::before{width: 10px;height: 10px;}
+                                }
+                                .pdfWrapper{padding:8px 22px 8px 8px;&:not(:last-child){margin-bottom: 16px;}
+                                    img{margin-right: 12px;}
+                                    .pdfName{margin-right: 66px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width:1600px){
+        .faq-heading {
+            h2 {
+                margin-bottom: 60px;
+            }
+        }
+        .container{
+            .accordions-wrapper{
+                .accordion{
+                    &.active{padding-bottom:40px;}
+                    .accordion-body{@include wrapper;
+                        .brochureDiv{
+                            .brochureElement{&:not(:last-child){padding-right: 140px;margin-right: 60px;}
+                                .fileType{
+                                    &::before{width: 10px;height: 10px;}
+                                }
+                                .pdfWrapper{padding:8px 20px 8px 8px;&:not(:last-child){margin-bottom: 15px;}
+                                    img{margin-right: 12px;}
+                                    .pdfName{margin-right: 60px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width:1440px){
+        .faq-heading {
+            h2 {
+                margin-bottom: 56px;
+            }
+        }
+        .container{
+            .accordions-wrapper{
+                .accordion{
+                    &.active{padding-bottom:36px;}
+                    .accordion-body{@include wrapper;
+                        .brochureDiv{
+                            .brochureElement{&:not(:last-child){padding-right: 120px;margin-right: 50px;}
+                                .fileType{
+                                    &::before{width: 8px;height: 8px;}
+                                }
+                                .pdfWrapper{padding:8px 16px 8px 8px;&:not(:last-child){margin-bottom: 14px;}
+                                    img{margin-right: 10px;}
+                                    .pdfName{margin-right: 50px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width:1280px){
+        .faq-heading {
+            h2 {
+                margin-bottom: 50px;
+            }
+        }
+        .container{
+            .accordions-wrapper{
+                .accordion{
+                    &.active{padding-bottom:32px;}
+                    .accordion-body{@include wrapper;
+                        .brochureDiv{
+                            .brochureElement{&:not(:last-child){padding-right: 80px;margin-right: 40px;}
+                                .fileType{
+                                    &::before{width: 8px;height: 8px;}
+                                }
+                                .pdfWrapper{padding:8px 16px 8px 8px;&:not(:last-child){margin-bottom: 14px;}
+                                    img{margin-right: 10px;}
+                                    .pdfName{margin-right: 40px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width:1024px){
+        .container{
+            .accordions-wrapper{
+                .accordion{
+                    &.active{padding-bottom:30px;}
+                    .accordion-body{padding: 0px 60px;
+                        .brochureDiv{padding-left:0px;flex-wrap:wrap;gap:30px;
+                            .brochureElement{&:not(:last-child){padding-right: 0px;border-right: 0px;}border-right: 0px;
+                                .fileType{
+                                    &::before{content: none;}
+                                }
+                                .pdfWrapper{padding:8px 12px 8px 8px;&:not(:last-child){margin-bottom: 12px;}
+                                    img{margin-right: 10px;}
+                                    .pdfName{margin-right: 30px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width:680px){
+        .faq-heading {
+            h2 {
+                margin-bottom: 32px;font-size: 20px;font-weight: 600;line-height: 28px;
+            }
+        }
+        .container{
+            .accordions-wrapper{
+                .accordion{border: none;
+                    &.active{padding-bottom:25px;}
+                    .accordion-header{
+                        h4{font-size: 20px;line-height: 24px;}
+                    }
+                    .accordion-body{@include wrapper;
+                        .brochureDiv{display: flex;padding-left:0px;flex-direction:column;gap:32px;
+                            .brochureElement{&:not(:last-child){padding-right: 0px;border-right: none;margin-right: 0px;}
+                                .fileType{font-size: 16px;font-weight: 400;line-height: 24px;margin-bottom:12px;
+                                    &::before{content: none;}
+                                }
+                                .pdfWrapper{padding:6px;&:not(:last-child){margin-bottom: 16px;}
+                                    img{margin-right: 12px;}
+                                    .pdfName{font-size: 12px;font-weight: 400;line-height: 18px;}
+                                    .downloadLogo{margin-left: auto;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
