@@ -974,5 +974,116 @@ if ($(".resourcesfaqSection").length) {
 }
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const cardGrid = document.getElementById('cardGrid');
+    const pagination = document.getElementById('pagination');
+    const searchInput = document.querySelector('.searchWrapper input[type="search"]');
+
+    // Select all `.cards` inside `.cardGrid`
+    const cards = Array.from(cardGrid.querySelectorAll('.cards'));
+
+    // Pagination variables
+    const cardsPerPage = 6; // Number of cards to display per page
+    let currentPage = 1; // Start at page 1
+
+    // Function to render cards for the current page
+    function renderCards(page, filteredCards = cards) {
+        console.log(`Rendering cards for page: ${page}`); // Debug log
+
+        // Clear the current content in the card grid
+        cardGrid.innerHTML = '';
+
+        // Calculate the start and end index for cards to display
+        const startIndex = (page - 1) * cardsPerPage;
+        const endIndex = startIndex + cardsPerPage;
+
+        // Get the cards for the current page
+        const visibleCards = filteredCards.slice(startIndex, endIndex);
+
+        if (visibleCards.length === 0) {
+            console.log('No cards to display'); // Handle empty pages
+        } else {
+            // Append the visible cards to the card grid
+            visibleCards.forEach((card) => {
+                cardGrid.appendChild(card);
+            });
+        }
+
+        // Render the pagination buttons
+        renderPagination(filteredCards);
+    }
+
+    // Function to render pagination buttons
+    function renderPagination(filteredCards) {
+        pagination.innerHTML = ''; // Clear existing pagination
+
+        const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+        console.log(`Total pages: ${totalPages}`); // Debug log
+
+        if (totalPages > 1) {
+            // Add "Previous" button with image and extra class
+            const prevButton = document.createElement('button');
+            const prevImage = document.createElement('img');
+            prevImage.src = `${theme_vars.template_dir}/images/prev-arrow.svg`;
+            prevImage.alt = 'Previous';
+            prevButton.appendChild(prevImage);
+            prevButton.classList.add('pagination-prev'); // Extra class for styling
+            prevButton.disabled = currentPage === 1; // Disable if on the first page
+            prevButton.addEventListener('click', () => {
+                currentPage--;
+                renderCards(currentPage, filteredCards);
+            });
+            pagination.appendChild(prevButton);
+
+            // Add page number buttons
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.classList.toggle('active', i === currentPage); // Highlight the active page
+                pageButton.addEventListener('click', () => {
+                    currentPage = i;
+                    renderCards(currentPage, filteredCards);
+                });
+                pagination.appendChild(pageButton);
+            }
+
+            // Add "Next" button with image and extra class
+            const nextButton = document.createElement('button');
+            const nextImage = document.createElement('img');
+            nextImage.src = `${theme_vars.template_dir}/images/black-cta-arrow.svg`;
+            nextImage.alt = 'Next';
+            nextButton.appendChild(nextImage);
+            nextButton.classList.add('pagination-next'); // Extra class for styling
+            nextButton.disabled = currentPage === totalPages; // Disable if on the last page
+            nextButton.addEventListener('click', () => {
+                currentPage++;
+                renderCards(currentPage, filteredCards);
+            });
+            pagination.appendChild(nextButton);
+        }
+    }
+
+    // Function to filter cards based on search input
+    function filterCards(query) {
+        const filteredCards = cards.filter((card) => {
+            const title = card.querySelector('.cardContent h3').textContent.toLowerCase();
+            const description = card.querySelector('.cardContent p').textContent.toLowerCase();
+            return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase());
+        });
+        renderCards(currentPage, filteredCards);
+    }
+
+    // Listen for input changes in the search field
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.trim(); // Get the search query
+        filterCards(query); // Filter cards based on the query
+    });
+
+    // Initial render of the first page with all cards
+    renderCards(currentPage);
+});
+
+
+
 
 

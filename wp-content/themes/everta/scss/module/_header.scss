@@ -279,10 +279,8 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
         background: #f4f4f4; /* Color of the scrollbar track */
         border-radius: 20px; /* Rounded corners */
     }
-
-    /* For Firefox */
-    scrollbar-width: thin; /* Makes the scrollbar thinner */
-    scrollbar-color: $quaternaryColor1 #f4f4f4; /* Thumb and track colors */
+    scrollbar-width: thin;
+    scrollbar-color: $quaternaryColor1 #f4f4f4;
         .contactHeading{display: flex;align-items:center;justify-content:space-between;margin-bottom:36px;
             h2{@include terminamedium;@include font48;line-height: 160%;text-transform: uppercase;color: #1E1E1E;}
             .closeBtn{cursor: pointer;}

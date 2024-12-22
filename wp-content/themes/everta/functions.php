@@ -197,4 +197,15 @@ if( function_exists('acf_add_options_page') ) {
     ));
 }
 
+function enqueue_custom_scripts() {
+    // Enqueue the custom.js file
+    wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom.js', array(), null, true);
+    
+    // Localize the script to pass PHP variables to JavaScript
+    wp_localize_script('custom-js', 'theme_vars', array(
+        'template_dir' => get_template_directory_uri() // Pass the template directory URL to JS
+    ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
 
