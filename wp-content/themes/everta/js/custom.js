@@ -531,7 +531,7 @@ $(window).scroll(function () {
 
 /******About Us Js Start */
 
-if($(".ourStorySec").length){
+if ($(".ourStorySec").length) {
     $('.sliderBox').slick({
         slidesToShow: 1.4,
         slidesToScroll: 1,
@@ -557,46 +557,46 @@ if($(".ourStorySec").length){
         ]
     });
 }
-if($(".mission").length){
+if ($(".mission").length) {
     document.addEventListener("DOMContentLoaded", () => {
         const mission = document.querySelector(".mission");
         const missionCardIcon = document.querySelector(".mission .hoverContent .cardIcon");
-        if(window.innerWidth <= 1024){
+        if (window.innerWidth <= 1024) {
             window.addEventListener('scroll', () => {
                 const sectionRect = mission.getBoundingClientRect();
                 const windowHeight = window.innerHeight;
                 const sectionHalfHeight = sectionRect.height / 2;
-    
-                const sectionHalfVisible = 
-                    sectionRect.top + sectionHalfHeight <= windowHeight && 
-                    sectionRect.bottom - sectionHalfHeight >= 0;          
-    
-    
-                    if (sectionHalfVisible) {
-                        missionCardIcon.classList.add("iconReset");
-                    } else {
-                        missionCardIcon.classList.remove("iconReset");
-                    }
-                  
+
+                const sectionHalfVisible =
+                    sectionRect.top + sectionHalfHeight <= windowHeight &&
+                    sectionRect.bottom - sectionHalfHeight >= 0;
+
+
+                if (sectionHalfVisible) {
+                    missionCardIcon.classList.add("iconReset");
+                } else {
+                    missionCardIcon.classList.remove("iconReset");
+                }
+
             });
         }
     });
-    
+
 }
-if($(".vision").length){
+if ($(".vision").length) {
     document.addEventListener("DOMContentLoaded", () => {
         const vision = document.querySelector(".vision");
         console.log(vision);
         const visionCardIcon = document.querySelector(".vision .hoverContent .cardIcon");
-        if(window.innerWidth <= 1024){
+        if (window.innerWidth <= 1024) {
             window.addEventListener('scroll', () => {
                 const sectionRect = vision.getBoundingClientRect();
-                const windowHeight = window.innerHeight;  
+                const windowHeight = window.innerHeight;
                 const sectionHalfHeight = sectionRect.height / 2;
-                const sectionHalfVisible = 
-                    sectionRect.top + sectionHalfHeight <= windowHeight && 
-                    sectionRect.bottom - sectionHalfHeight >= 0;          
-    
+                const sectionHalfVisible =
+                    sectionRect.top + sectionHalfHeight <= windowHeight &&
+                    sectionRect.bottom - sectionHalfHeight >= 0;
+
                 if (sectionHalfVisible) {
                     visionCardIcon.classList.add("visionIconReset");
                 } else {
@@ -606,17 +606,17 @@ if($(".vision").length){
         }
     })
 }
-if($(".poweringIdeaSec").length){
-    if(window.innerWidth > 820){
+if ($(".poweringIdeaSec").length) {
+    if (window.innerWidth > 820) {
         document.addEventListener("DOMContentLoaded", () => {
             const section = document.querySelector('.poweringIdeaSec');
             const poweringMainContainer = document.querySelector('.poweringMainContainer');
-    
+
             window.addEventListener('scroll', () => {
                 const sectionRect = section.getBoundingClientRect();
                 const windowHeight = window.innerHeight;
                 const viewportMidPoint = windowHeight / 2;
-    
+
                 // Add 'activeViewPort' when the section reaches 50% of the viewport
                 if (sectionRect.top < viewportMidPoint && sectionRect.bottom > viewportMidPoint) {
                     poweringMainContainer.classList.add('activeViewPort');
@@ -628,7 +628,7 @@ if($(".poweringIdeaSec").length){
         })
     }
 }
-if($(".visitUsSec").length){
+if ($(".visitUsSec").length) {
     $('.visitUsSliderBox').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -640,7 +640,7 @@ if($(".visitUsSec").length){
         autoplay: true,
     });
 
-    function showActiveIcon (){
+    function showActiveIcon() {
         const activeSlide = document.querySelector(".visitUsSliderBox .slick-current");
         const desktopSVG = document.querySelector(".desktopSVG");
         const INDIA = document.querySelector(".desktopSVG .india");
@@ -649,40 +649,40 @@ if($(".visitUsSec").length){
         const mblUAE = document.querySelector(".mblSVG .uae");
         const POLAND = document.querySelector(".desktopSVG .poland");
         const mblPOLAND = document.querySelector(".mblSVG .poland");
-        
-        if(activeSlide){
+
+        if (activeSlide) {
             const companyName = activeSlide.getAttribute("data-company");
-            if(window.getComputedStyle(desktopSVG).display !== "none"){
-                if(companyName === "india" ){
+            if (window.getComputedStyle(desktopSVG).display !== "none") {
+                if (companyName === "india") {
                     INDIA.style.opacity = 1;
-                    UAE.style.opacity = 0; 
-                    POLAND.style.opacity = 0; 
-                }else if(companyName === "poland"){
+                    UAE.style.opacity = 0;
+                    POLAND.style.opacity = 0;
+                } else if (companyName === "poland") {
                     POLAND.style.opacity = 1;
                     INDIA.style.opacity = 0;
                     UAE.style.opacity = 0;
-                }else{
+                } else {
                     UAE.style.opacity = 1;
                     POLAND.style.opacity = 0;
                     INDIA.style.opacity = 0;
                 }
-            }else{
-                if(companyName === "india" ){
+            } else {
+                if (companyName === "india") {
                     mblINDIA.style.opacity = 1;
-                    mblUAE.style.opacity = 0; 
-                    mblPOLAND.style.opacity = 0; 
-                }else if(companyName === "poland"){
+                    mblUAE.style.opacity = 0;
+                    mblPOLAND.style.opacity = 0;
+                } else if (companyName === "poland") {
                     mblPOLAND.style.opacity = 1;
                     mblINDIA.style.opacity = 0;
                     mblUAE.style.opacity = 0;
-                }else{
+                } else {
                     mblUAE.style.opacity = 1;
                     mblPOLAND.style.opacity = 0;
                     mblINDIA.style.opacity = 0;
                 }
-                
+
             }
-           
+
         }
     }
     $('.visitUsSliderBox').on('afterChange', function () {
@@ -696,7 +696,7 @@ if($(".visitUsSec").length){
 
 /* Careers page JS Starts */
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const optionMenus = document.querySelectorAll(".customSelect");
     const applyFilterBtn = document.getElementById("applyFilter");
     const clearFilterBtn = document.getElementById("clearFilter");
@@ -723,7 +723,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    window.addEventListener("click", function(e) {
+    window.addEventListener("click", function (e) {
         optionMenus.forEach(optMenu => {
             if (!optMenu.contains(e.target)) {
                 optMenu.classList.remove("active");
@@ -733,14 +733,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     applyFilterBtn.addEventListener("click", () => {
         const selectedFilters = Array.from(optionMenus).map(menu => menu.querySelector(".sBtntext").innerText.trim().toLowerCase());
-        
+
         careerBoxes.forEach(box => {
             let isVisible = true;
 
             const locationText = box.querySelector(".posSubContent h4")?.innerText.trim().toLowerCase();
             const departmentText = box.querySelector(".subBoxContent h3")?.innerText.trim().toLowerCase();
             const contractTypeText = box.querySelector(".posSubContent div:nth-of-type(2) h4")?.innerText.trim().toLowerCase();
-            
+
             const [locationFilter, departmentFilter, contractTypeFilter] = selectedFilters;
 
             if (locationFilter !== "Location" && !locationText.includes(locationFilter)) {
@@ -803,16 +803,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // career opening modal starts
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     var careerBoxes = document.querySelectorAll(".careerPositionBox");
     var closeButtons = document.querySelectorAll(".closeBtn");
 
-    careerBoxes.forEach(function(box) {
-        box.addEventListener("click", function() {
-    
+    careerBoxes.forEach(function (box) {
+        box.addEventListener("click", function () {
+
             var modalId = box.getAttribute("data-modal");
             var modal = document.getElementById(modalId);
-    
+
             if (modal) {
                 modal.classList.add("show-modal");
                 document.body.style.overflow = "hidden";
@@ -822,17 +822,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    closeButtons.forEach(function(button) {
-        button.addEventListener("click", function() {
+    closeButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
             var modal = button.closest(".careerOpeningModal");
             modal.classList.remove("show-modal");
             document.body.style.overflow = "";
         });
     });
 
-    window.addEventListener("click", function(event) {
+    window.addEventListener("click", function (event) {
         var openModals = document.querySelectorAll(".careerOpeningModal.show-modal");
-        openModals.forEach(function(modal) {
+        openModals.forEach(function (modal) {
             if (event.target === modal) {
                 modal.classList.remove("show-modal");
                 document.body.style.overflow = "";
@@ -847,30 +847,30 @@ function openForm() {
     $('html').css("overflow-y", "hidden");
     $('body').css("background", "hidden");
 }
-  
+
 function closeForm() {
     document.getElementById("contactForm").classList.remove("open");
     $('body').css("overflow-y", "visible");
     $('html').css("overflow-y", "visible");
 }
 
-if($('.careerWallSection').length){
+if ($('.careerWallSection').length) {
     document.addEventListener("DOMContentLoaded", () => {
         const careerWallSection = document.querySelector('.careerWallSection');
         const evertaWallContainer = document.querySelector(".evertaWallContainer");
         console.log(evertaWallContainer);
-        
+
         const options = {
-        root: null, 
-        threshold: 0.5 
+            root: null,
+            threshold: 0.5
         };
 
-        const observerCallback = (entries, observer) => {          
+        const observerCallback = (entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     evertaWallContainer.classList.add("resetImage");
                 } else {
-                evertaWallContainer.classList.remove("resetImage");
+                    evertaWallContainer.classList.remove("resetImage");
                 }
             });
         };
@@ -885,37 +885,37 @@ if($('.careerWallSection').length){
 /* Careers page JS Ends */
 
 /*Resources Details Page Start*/
-if($(".resDetailContentSec").length){
+if ($(".resDetailContentSec").length) {
     document.addEventListener("DOMContentLoaded", () => {
         const readMore = document.getElementById("readMore");
         const contentBox = document.querySelector('.contentBox');
         const readMoreBtnBox = document.querySelector('.readMoreBtnBox');
-        
-        function ContentShowFunc(){
+
+        function ContentShowFunc() {
             contentBox.classList.add("removeFadeEffect");
             contentBox.classList.remove("hideTxt");
             readMoreBtnBox.classList.add("btnHide");
         }
-        readMore.addEventListener("click", ContentShowFunc);     
+        readMore.addEventListener("click", ContentShowFunc);
     })
 }
 
-if($(".backtopCl").length){
+if ($(".backtopCl").length) {
     document.addEventListener("DOMContentLoaded", () => {
         const backtop = document.getElementById("backtop")
 
-        window.addEventListener("scroll", function (){
-            if(window.scrollY > 500){
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 500) {
                 backtop.classList.add("show");
-            }else{
+            } else {
                 backtop.classList.remove("show");
-            }  
+            }
         })
 
-        backtop.addEventListener("click", function(e){
+        backtop.addEventListener("click", function (e) {
             e.preventDefault();
             window.scrollTo({
-                top:0,
+                top: 0,
                 behavior: 'smooth',
             })
         })
@@ -982,8 +982,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Select all `.cards` inside `.cardGrid`
     const cards = Array.from(cardGrid.querySelectorAll('.cards'));
 
-    // Pagination variables
-    const cardsPerPage = 6; // Number of cards to display per page
+    // Function to get the number of cards per page based on screen width
+    function getCardsPerPage() {
+        if (window.innerWidth < 680) {
+            return 4; // 4 cards per page for mobile
+        } else {
+            return 6; // 6 cards per page for desktop/iPad
+        }
+    }
+
+    // Initial cards per page based on screen size
+    let cardsPerPage = getCardsPerPage();
     let currentPage = 1; // Start at page 1
 
     // Function to render cards for the current page
@@ -1016,10 +1025,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to render pagination buttons
     function renderPagination(filteredCards) {
         pagination.innerHTML = ''; // Clear existing pagination
-
+    
         const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
         console.log(`Total pages: ${totalPages}`); // Debug log
-
+    
         if (totalPages > 1) {
             // Add "Previous" button with image and extra class
             const prevButton = document.createElement('button');
@@ -1034,19 +1043,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderCards(currentPage, filteredCards);
             });
             pagination.appendChild(prevButton);
-
-            // Add page number buttons
-            for (let i = 1; i <= totalPages; i++) {
-                const pageButton = document.createElement('button');
-                pageButton.textContent = i;
-                pageButton.classList.toggle('active', i === currentPage); // Highlight the active page
-                pageButton.addEventListener('click', () => {
-                    currentPage = i;
-                    renderCards(currentPage, filteredCards);
-                });
-                pagination.appendChild(pageButton);
+    
+            // Pagination logic with ellipsis for mobile
+            const maxVisiblePages = window.innerWidth <= 680 ? 3 : 6; // 3 pages for mobile, 6 for desktop/tablet
+            let pageButtons = [];
+    
+            // Show the first and last page buttons, and a few neighboring ones
+            if (totalPages <= maxVisiblePages) {
+                // If total pages are less than or equal to maxVisiblePages, show all page numbers
+                for (let i = 1; i <= totalPages; i++) {
+                    pageButtons.push(i);
+                }
+            } else {
+                // Show first page, current page, and last page with ellipsis
+                if (currentPage <= 2) {
+                    // Show first 3 pages (1, 2, 3 and ... if needed)
+                    pageButtons = [1, 2, 3, '...', totalPages];
+                } else if (currentPage >= totalPages - 1) {
+                    // Show last 3 pages (..., second last, last page)
+                    pageButtons = [1, '...', totalPages - 2, totalPages - 1, totalPages];
+                } else {
+                    // Show 1 page before and after the current page with ellipsis
+                    pageButtons = [1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages];
+                }
             }
-
+    
+            // Add the page number buttons to pagination
+            pageButtons.forEach((button) => {
+                const pageButton = document.createElement('button');
+                if (button === '...') {
+                    pageButton.textContent = '...';
+                    pageButton.disabled = true; // Disable the ellipsis button
+                } else {
+                    pageButton.textContent = button;
+                    pageButton.classList.toggle('active', button === currentPage); // Highlight the active page
+                    pageButton.addEventListener('click', () => {
+                        currentPage = button;
+                        renderCards(currentPage, filteredCards);
+                    });
+                }
+                pagination.appendChild(pageButton);
+            });
+    
             // Add "Next" button with image and extra class
             const nextButton = document.createElement('button');
             const nextImage = document.createElement('img');
@@ -1062,16 +1100,23 @@ document.addEventListener('DOMContentLoaded', () => {
             pagination.appendChild(nextButton);
         }
     }
+    
+    
 
+    // Function to filter cards based on search input
     // Function to filter cards based on search input
     function filterCards(query) {
         const filteredCards = cards.filter((card) => {
             const title = card.querySelector('.cardContent h3').textContent.toLowerCase();
             const description = card.querySelector('.cardContent p').textContent.toLowerCase();
-            return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase());
+            const tag = card.querySelector('.cardContent .tag').textContent.toLowerCase();
+
+            // Check if any of the three elements contains the search query
+            return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
         });
         renderCards(currentPage, filteredCards);
     }
+
 
     // Listen for input changes in the search field
     searchInput.addEventListener('input', (e) => {
@@ -1079,9 +1124,17 @@ document.addEventListener('DOMContentLoaded', () => {
         filterCards(query); // Filter cards based on the query
     });
 
+    // Listen for window resize events to update cards per page
+    window.addEventListener('resize', () => {
+        // Update the cards per page when the window is resized
+        cardsPerPage = getCardsPerPage();
+        renderCards(currentPage); // Re-render cards based on the new screen size
+    });
+
     // Initial render of the first page with all cards
     renderCards(currentPage);
 });
+
 
 
 
