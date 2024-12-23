@@ -936,38 +936,50 @@ if ($(".resourcesfaqSection").length) {
         const faqItems = accordionWrapper.querySelectorAll(".accordion");
         const toggleButton = document.getElementById("toggleFaqButton");
 
-        const maxVisible = 3;
+        const increment = 6; // Number of items to show at a time
+        let currentlyVisible = increment;
 
-        // Hide extra FAQ items
-        if (faqItems.length > maxVisible) {
-            toggleButton.style.display = "block"; // Show button
+        // Hide all FAQ items initially except the first set
+        if (faqItems.length > increment) {
+            toggleButton.style.display = "block"; // Show the button
             faqItems.forEach((item, index) => {
-                if (index >= maxVisible) {
+                if (index >= increment) {
                     item.style.display = "none"; // Hide extra items
                 }
             });
+        } else {
+            toggleButton.style.display = "none"; // Hide the button if items are less than or equal to increment
         }
 
-        // Toggle visibility on button click
+        // Handle button click
         toggleButton.addEventListener("click", function () {
             const isExpanded = toggleButton.getAttribute("data-expanded") === "true";
 
             if (isExpanded) {
-                // Hide extra items
+                // Show less: Reset to initial state showing only the first set
+                currentlyVisible = increment;
                 faqItems.forEach((item, index) => {
-                    if (index >= maxVisible) {
-                        item.style.display = "none";
-                    }
+                    item.style.display = index < increment ? "block" : "none";
                 });
                 toggleButton.textContent = "Show More";
                 toggleButton.setAttribute("data-expanded", "false");
             } else {
-                // Show all items
-                faqItems.forEach((item) => {
-                    item.style.display = "block";
+                // Show more: Reveal the next set of items
+                const nextVisible = currentlyVisible + increment;
+                faqItems.forEach((item, index) => {
+                    if (index < nextVisible) {
+                        item.style.display = "block";
+                    }
                 });
-                toggleButton.textContent = "Show Less";
-                toggleButton.setAttribute("data-expanded", "true");
+
+                // Update the currently visible count
+                currentlyVisible = nextVisible;
+
+                // Check if all items are now visible
+                if (currentlyVisible >= faqItems.length) {
+                    toggleButton.textContent = "Show Less";
+                    toggleButton.setAttribute("data-expanded", "true");
+                }
             }
         });
     });
