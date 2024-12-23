@@ -625,3 +625,5 @@ $quaternaryColor5 : #D2D2D2;
     @media screen and (max-width:1024px) {padding: 18px 32px; line-height: 15px; font-size: 14px;}
     @media screen and (max-width:720px) {padding-right: 66px;line-height:normal; font-size: 12px;letter-spacing:-0.48px;&::before{opacity: 1;}}
 }
+
+.hideScrollbarhtml, .hideScrollbar{overflow: hidden !important;}

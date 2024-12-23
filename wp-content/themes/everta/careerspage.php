@@ -64,7 +64,7 @@
         </div>
     </div>
     <div class="careerSectionWrapperTwo">
-        <div class="careerPositionBox" data-modal="careerOpeningModal1">
+        <div class="careerPositionBox" id="careerPositionBox">
             <div class="subBoxContent">
                 <h3>Sales Manager</h3>
                 <div class="posSubContent">
@@ -82,17 +82,17 @@
                 <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="everta">
             </div>
         </div>
-        <div class="careerPositionBox" data-modal="careerOpeningModal2">
+        <div class="careerPositionBox" id="careerPositionBox">
             <div class="subBoxContent">
                 <h3>Sr. Customer Success Manager</h3>
                 <div class="posSubContent">
                     <div>
                         <img src="<?php bloginfo('template_directory'); ?>/images/map-logo.svg" alt="everta">
-                        <h4>New Delhi, India</h4>
+                        <h4>UAE</h4>
                     </div>
                     <div>
                         <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg" alt="everta">
-                        <h4>Full Time</h4>
+                        <h4>In office</h4>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                 <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="everta">
             </div>
         </div>
-        <div class="careerPositionBox" data-modal="careerOpeningModal3">
+        <div class="careerPositionBox" id="careerPositionBox">
             <div class="subBoxContent">
                 <h3>Data Analyst</h3>
                 <div class="posSubContent">
@@ -118,7 +118,7 @@
                 <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="everta">
             </div>
         </div>
-        <div class="careerPositionBox" data-modal="careerOpeningModal4">
+        <div class="careerPositionBox" id="careerPositionBox">
             <div class="subBoxContent">
                 <h3>Sr. Customer Success Manager</h3>
                 <div class="posSubContent">
@@ -137,6 +137,10 @@
             </div>
         </div>
     </div>
+    <div class="dnfContainer"> 
+        <h4>Data Not Found</h4>
+    </div>
+
 </section>
 
 <section class="careerCVSection">
@@ -231,8 +235,8 @@
         </div>
     </div>
 </section>
-<!--
-<div class="careerOpeningModal" id="careerOpeningModal1">
+
+<div class="careerOpeningModal" id="careerOpeningModal">
     <div class="modalContent">
         <div class="jobHeadingDesc">
             <div class="closeBtn">
@@ -259,145 +263,25 @@
             </div>
         </div>
         <div class="jobDescription">
-            <h6>The Sales Manager will be responsible for leading and managing the sales team to achieve sales targets and drive revenue growth. This role involves developing strategic sales plans, building and maintaining customer relationships, and ensuring the sales team operates efficiently and effectively.</h6>
-            <h4>Your Role</h4>
-            <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process, ensuring that our products and services consistently reflect our commitment to excellence. At Everta, quality isn’t just a standard—it’s who we are.</p>
-            <h4>Responsibilities</h4>
-            <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</p>
-            <ul>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-            </ul>
+            <div class="jobDetail">
+                <p>The Sales Manager will be responsible for leading and managing the sales team to achieve sales targets and drive revenue growth. This role involves developing strategic sales plans, building and maintaining customer relationships, and ensuring the sales team operates efficiently and effectively.</p>
+            </div>
+            <div class="jobRole">
+                <h4>Your Role</h4>
+                <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process, ensuring that our products and services consistently reflect our commitment to excellence. At Everta, quality isn’t just a standard—it’s who we are.</p>
+            </div>
+            <div class="jobResponsiblity">
+                <h4>Responsibilities</h4>
+                <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</p>
+                <ul>
+                    <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
+                    <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
+                    <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
+                    <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
+                </ul>
+            </div>            
         </div>
     </div>
 </div>
 
-<div class="careerOpeningModal" id="careerOpeningModal2">
-    <div class="modalContent">
-        <div class="jobHeadingDesc">
-            <div class="closeBtn">
-                <img src="<?php bloginfo('template_directory'); ?>/images/close-icon.svg" alt="everta">
-            </div>
-            <div class="jobHeadingDescSub">
-                <div class="headingDescContent">
-                    <span>Finance</span>
-                    <div class="subBoxContent">
-                        <h3>Sr. Customer Success Manager</h3>
-                        <div class="posSubContent">
-                            <div>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/map-logo.svg" alt="everta">
-                                <h4>New Delhi, India</h4>
-                            </div>
-                            <div>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg" alt="everta">
-                                <h4>Full Time</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="" class="ctaBlack">Apply now</a>
-            </div>
-        </div>
-        <div class="jobDescription">
-            <h6>The Sales Manager will be responsible for leading and managing the sales team to achieve sales targets and drive revenue growth. This role involves developing strategic sales plans, building and maintaining customer relationships, and ensuring the sales team operates efficiently and effectively.</h6>
-            <h4>Your Role</h4>
-            <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process, ensuring that our products and services consistently reflect our commitment to excellence. At Everta, quality isn’t just a standard—it’s who we are.</p>
-            <h4>Responsibilities</h4>
-            <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</p>
-            <ul>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="careerOpeningModal" id="careerOpeningModal3">
-    <div class="modalContent">
-        <div class="jobHeadingDesc">
-            <div class="closeBtn">
-                <img src="<?php bloginfo('template_directory'); ?>/images/close-icon.svg" alt="everta">
-            </div>
-            <div class="jobHeadingDescSub">
-                <div class="headingDescContent">
-                    <span>Finance</span>
-                    <div class="subBoxContent">
-                        <h3>Data Analyst</h3>
-                        <div class="posSubContent">
-                            <div>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/map-logo.svg" alt="everta">
-                                <h4>New Delhi, India</h4>
-                            </div>
-                            <div>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg" alt="everta">
-                                <h4>Full Time</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="" class="ctaBlack">Apply now</a>
-            </div>
-        </div>
-        <div class="jobDescription">
-            <h6>The Sales Manager will be responsible for leading and managing the sales team to achieve sales targets and drive revenue growth. This role involves developing strategic sales plans, building and maintaining customer relationships, and ensuring the sales team operates efficiently and effectively.</h6>
-            <h4>Your Role</h4>
-            <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process, ensuring that our products and services consistently reflect our commitment to excellence. At Everta, quality isn’t just a standard—it’s who we are.</p>
-            <h4>Responsibilities</h4>
-            <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</p>
-            <ul>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="careerOpeningModal" id="careerOpeningModal4">
-    <div class="modalContent">
-        <div class="jobHeadingDesc">
-            <div class="closeBtn">
-                <img src="<?php bloginfo('template_directory'); ?>/images/close-icon.svg" alt="everta">
-            </div>
-            <div class="jobHeadingDescSub">
-                <div class="headingDescContent">
-                    <span>Finance</span>
-                    <div class="subBoxContent">
-                        <h3>Sr. Customer Success Manager</h3>
-                        <div class="posSubContent">
-                            <div>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/map-logo.svg" alt="everta">
-                                <h4>New Delhi, India</h4>
-                            </div>
-                            <div>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg" alt="everta">
-                                <h4>Full Time</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="" class="ctaBlack">Apply now</a>
-            </div>
-        </div>
-        <div class="jobDescription">
-            <h6>The Sales Manager will be responsible for leading and managing the sales team to achieve sales targets and drive revenue growth. This role involves developing strategic sales plans, building and maintaining customer relationships, and ensuring the sales team operates efficiently and effectively.</h6>
-            <h4>Your Role</h4>
-            <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process, ensuring that our products and services consistently reflect our commitment to excellence. At Everta, quality isn’t just a standard—it’s who we are.</p>
-            <h4>Responsibilities</h4>
-            <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</p>
-            <ul>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-            </ul>
-        </div>
-    </div>
-</div>
--->
 <?php get_footer(); ?>

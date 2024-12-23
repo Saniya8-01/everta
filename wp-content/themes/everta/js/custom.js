@@ -696,84 +696,92 @@ if ($(".visitUsSec").length) {
 
 /* Careers page JS Starts */
 
-document.addEventListener("DOMContentLoaded", function () {
-    const optionMenus = document.querySelectorAll(".customSelect");
-    const applyFilterBtn = document.getElementById("applyFilter");
-    const clearFilterBtn = document.getElementById("clearFilter");
-    const careerBoxes = document.querySelectorAll(".careerPositionBox");
+if($(".careerTeamSection").length){
+    document.addEventListener("DOMContentLoaded", function() {
+        const optionMenus = document.querySelectorAll(".selFilter .customSelect");
+        const applyFilterBtn = document.getElementById("applyFilter");
+        const clearFilterBtn = document.getElementById("clearFilter");
+        const careerBoxes = document.querySelectorAll(".careerPositionBox");
+        const dnfState = document.querySelector(".dnfContainer");
+        
 
-    const defaultTexts = ["Location", "Department", "Contract type"];
+        const defaultTexts = ["Location", "Department", "Contract type"];
 
-    optionMenus.forEach((optMenu, index) => {
-        const selectBtn = optMenu.querySelector(".selectBtn");
-        const options = optMenu.querySelectorAll(".option");
-        const sBtn_text = optMenu.querySelector(".sBtntext");
+        optionMenus.forEach((optMenu, index) => {
+            const selectBtn = optMenu.querySelector(".selectBtn");
+            const options = optMenu.querySelectorAll(".option");
+            const sBtn_text = optMenu.querySelector(".sBtntext");
 
-        selectBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            optMenu.classList.toggle("active");
+            selectBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                optMenu.classList.toggle("active");
+            });
+
+            options.forEach((option) => {
+                option.addEventListener("click", () => {
+                    console.log(option.innerText);
+                    
+                    const selectedOption = option.innerText;
+                    sBtn_text.innerText = selectedOption;
+                    optMenu.classList.remove("active");
+                });
+            });
         });
 
-        options.forEach((option) => {
-            option.addEventListener("click", () => {
-                const selectedOption = option.innerText;
-                sBtn_text.innerText = selectedOption;
-                optMenu.classList.remove("active");
+        window.addEventListener("click", function(e) {
+            optionMenus.forEach(optMenu => {
+                if (!optMenu.contains(e.target)) {
+                    optMenu.classList.remove("active");
+                }
+            });
+        });
+
+        applyFilterBtn.addEventListener("click", () => {
+            const selectedFilters = Array.from(optionMenus).map(menu =>
+                menu.querySelector(".sBtntext").innerText.trim().toLowerCase()
+            );
+        
+            const [locationFilter, departmentFilter, contractTypeFilter] = selectedFilters;
+            let visibleCount = 0;
+        
+            careerBoxes.forEach(box => {
+                const locationText = box.querySelector(".posSubContent h4")?.innerText.trim().toLowerCase() || "";
+                const departmentText = box.querySelector(".subBoxContent h3")?.innerText.trim().toLowerCase() || "";
+                const contractTypeText = box.querySelector(".posSubContent div:nth-of-type(2) h4")?.innerText.trim().toLowerCase() || "";
+        
+                const isVisible = 
+                    (locationFilter === "location" || locationText.includes(locationFilter)) &&
+                    (departmentFilter === "department" || departmentText.includes(departmentFilter)) &&
+                    (contractTypeFilter === "contract type" || contractTypeText.includes(contractTypeFilter));
+        
+                
+                box.style.display = isVisible ? "flex" : "none";
+                
+                if(isVisible){
+                    visibleCount++;
+                }
+            });
+
+            if(visibleCount === 0){
+                dnfState.style.display = "flex"
+            }else{
+                dnfState.style.display = "none"
+            }
+        });
+
+        clearFilterBtn.addEventListener("click", () => {
+            optionMenus.forEach((optMenu, index) => {
+                const sBtn_text = optMenu.querySelector(".sBtntext");
+                sBtn_text.innerText = defaultTexts[index];
+                dnfState.style.display = "none"
+            });
+
+            careerBoxes.forEach(box => {
+                box.style.display = "flex";
             });
         });
     });
-
-    window.addEventListener("click", function (e) {
-        optionMenus.forEach(optMenu => {
-            if (!optMenu.contains(e.target)) {
-                optMenu.classList.remove("active");
-            }
-        });
-    });
-
-    applyFilterBtn.addEventListener("click", () => {
-        const selectedFilters = Array.from(optionMenus).map(menu => menu.querySelector(".sBtntext").innerText.trim().toLowerCase());
-
-        careerBoxes.forEach(box => {
-            let isVisible = true;
-
-            const locationText = box.querySelector(".posSubContent h4")?.innerText.trim().toLowerCase();
-            const departmentText = box.querySelector(".subBoxContent h3")?.innerText.trim().toLowerCase();
-            const contractTypeText = box.querySelector(".posSubContent div:nth-of-type(2) h4")?.innerText.trim().toLowerCase();
-
-            const [locationFilter, departmentFilter, contractTypeFilter] = selectedFilters;
-
-            if (locationFilter !== "Location" && !locationText.includes(locationFilter)) {
-                isVisible = false;
-            }
-
-            if (departmentFilter !== "Department" && !departmentText.includes(departmentFilter)) {
-                isVisible = false;
-            }
-
-            if (contractTypeFilter !== "Contract type" && !contractTypeText.includes(contractTypeFilter)) {
-                isVisible = false;
-            }
-
-            if (isVisible) {
-                box.style.display = "flex";
-            } else {
-                box.style.display = "none";
-            }
-        });
-    });
-
-    clearFilterBtn.addEventListener("click", () => {
-        optionMenus.forEach((optMenu, index) => {
-            const sBtn_text = optMenu.querySelector(".sBtntext");
-            sBtn_text.innerText = defaultTexts[index];
-        });
-
-        careerBoxes.forEach(box => {
-            box.style.display = "flex";
-        });
-    });
-});
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     // Check if the "custom-tabs-wrapper" exists on the page
@@ -802,44 +810,56 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// career opening modal starts
-document.addEventListener("DOMContentLoaded", function () {
-    var careerBoxes = document.querySelectorAll(".careerPositionBox");
-    var closeButtons = document.querySelectorAll(".closeBtn");
+// career opening Job Popup
 
-    careerBoxes.forEach(function (box) {
-        box.addEventListener("click", function () {
+if($(".careerTeamSection").length){
+    document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".careerPositionBox");  
+        const closeButtons = document.querySelectorAll(".closeBtn"); 
+        const body = document.querySelector('body');
+        const html = document.querySelector("html");
 
-            var modalId = box.getAttribute("data-modal");
-            var modal = document.getElementById(modalId);
-
-            if (modal) {
-                modal.classList.add("show-modal");
-                document.body.style.overflow = "hidden";
-            } else {
-                document.body.style.overflow = "";
-            }
+        
+        elements.forEach((element) => {
+            element.addEventListener("click", function () {
+               
+                const panelId = this.id.replace("careerPositionBox", "careerOpeningModal");
+                console.log(panelId, "1024");
+                
+                const modal = document.getElementById(panelId);
+                console.log(modal, "1025");
+                
+                
+                modal.style.display = "block";
+                body.classList.add('hideScrollbar');
+                html.classList.add('hideScrollbarhtml');
+            });
+        });
+       
+        closeButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                
+                const modal = this.closest('.careerOpeningModal');
+                modal.style.display = "none";
+                
+                body.classList.remove('hideScrollbar');
+                html.classList.remove('hideScrollbarhtml');
+            });
+        });
+        
+        window.addEventListener("click", function (event) {
+            elements.forEach((element) => {
+                const panelId = element.id.replace("careerPositionBox", "careerOpeningModal");
+                const modal = document.getElementById(panelId);
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    body.classList.remove('hideScrollbar');
+                    html.classList.remove('hideScrollbarhtml');
+                }
+            });
         });
     });
-
-    closeButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            var modal = button.closest(".careerOpeningModal");
-            modal.classList.remove("show-modal");
-            document.body.style.overflow = "";
-        });
-    });
-
-    window.addEventListener("click", function (event) {
-        var openModals = document.querySelectorAll(".careerOpeningModal.show-modal");
-        openModals.forEach(function (modal) {
-            if (event.target === modal) {
-                modal.classList.remove("show-modal");
-                document.body.style.overflow = "";
-            }
-        });
-    });
-});
+}
 
 function openForm() {
     document.getElementById("contactForm").classList.add("open");
@@ -857,9 +877,8 @@ function closeForm() {
 if ($('.careerWallSection').length) {
     document.addEventListener("DOMContentLoaded", () => {
         const careerWallSection = document.querySelector('.careerWallSection');
-        const evertaWallContainer = document.querySelector(".evertaWallContainer");
-        console.log(evertaWallContainer);
-
+        const evertaWallContainer = document.querySelector(".evertaWallContainer"); 
+        
         const options = {
             root: null,
             threshold: 0.5
@@ -1146,6 +1165,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render of the first page with all cards
     renderCards(currentPage);
 });
+
+
+
 
 
 
