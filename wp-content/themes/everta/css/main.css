@@ -11984,9 +11984,6 @@ body {
     padding-right: 20px;
   }
 }
-.manualBrochureSection .container .accordions-wrapper .accordion {
-  border: none;
-}
 .manualBrochureSection .container .accordions-wrapper .accordion.active {
   padding-bottom: 50px;
 }

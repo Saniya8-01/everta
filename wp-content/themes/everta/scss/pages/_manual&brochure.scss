@@ -13,7 +13,7 @@
     }
     .container{
         .accordions-wrapper{
-            .accordion{border: none;
+            .accordion{
                 &.active{padding-bottom:50px;}
                 .accordion-header{
                     h4{@include terminamedium;font-weight: 600;line-height: 112.5%;@include font32;color: #1E1E1E;}

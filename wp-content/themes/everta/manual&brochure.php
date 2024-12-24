@@ -1,9 +1,11 @@
-<?php get_header(); /*Template name: Manual-Brochure*/ ?>
+<?php get_header(); /*Template name: Manual Brochure*/ ?>
 
 <Section class="resourcesBanner">
+    <?php if (have_rows('resources_banner')) : ?>
+    <?php while (have_rows('resources_banner')) : the_row(); ?>
     <div class="resorucesBannerWrapper">
-        <h1>EV knowledge hub</h1>
-        <p>Your go-to source for insights, tools, and the latest in e-mobility</p>
+        <h1><?php echo get_sub_field('banner_heading'); ?></h1>
+        <p><?php echo get_sub_field('banner_subheading'); ?></p>
         <div class="resourcesTabs">
             <div class="resourcesTabWrapper">
                 <a href="">News</a>
@@ -13,190 +15,60 @@
             </div>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </Section>
 
 <section class="faqSection manualBrochureSection" id="faqAccordion">
+    <?php if (have_rows('document_section')) : ?>
+    <?php while (have_rows('document_section')) : the_row(); ?>
     <div class="faq-heading">
         <h2>
-            MANUALS and BROCHURES</h2>
+            <?php echo get_sub_field('section_heading'); ?></h2>
     </div>
     <div class="container">
         <div class="accordions-wrapper">
-            <div class="accordion active">
-                <div class="accordion-header">
-                    <h4>Power Tower</h4>
-                    <div class="accordian-icon-wrapper">
-                        <div class="accordion-icon"></div>
-                    </div>
-                </div>
-                <div class="accordion-body" style="max-height: fit-content;">
-                    <div class="brochureDiv">
-                        <div class="brochureElement">
-                            <p class="fileType">Documents</p>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Brochure - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Brochure - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                        </div>
-                        <div class="brochureElement">
-                            <p class="fileType">Product Sheet</p>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Product Sheet - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Product Sheet - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                        </div>
-                        <div class="brochureElement">
-                            <p class="fileType">Utility</p>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Utility - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Utility - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php if (have_rows('document_accordion')) : ?>
+            <?php while (have_rows('document_accordion')) : the_row(); ?>
             <div class="accordion">
                 <div class="accordion-header">
-                    <h4>
-                        Power Box </h4>
+                    <h4><?php echo get_sub_field('accordion_title'); ?></h4>
                     <div class="accordian-icon-wrapper">
                         <div class="accordion-icon"></div>
                     </div>
                 </div>
                 <div class="accordion-body">
                     <div class="brochureDiv">
+                        <?php if (have_rows('document_files')) : ?>
+                        <?php while (have_rows('document_files')) : the_row(); ?>
                         <div class="brochureElement">
-                            <p class="fileType">Documents</p>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Brochure - Polish</p>
+                            <p class="fileType"><?php echo get_sub_field('document_heading'); ?></p>
+                            <?php if (have_rows('document')) : ?>
+                            <?php while (have_rows('document')) : the_row(); ?>
+                            <a href="<?php echo get_sub_field('document_link'); ?>" class="pdfWrapper" download>
+                                <?php $fileImage = get_sub_field('document_logo');
+                                if (!empty($fileImage)) : ?>
+                                <img src="<?php echo esc_url($fileImage['url']); ?>" loading="lazy"
+                                    alt="<?php echo esc_attr($fileImage['alt']); ?>" />
+                                <?php endif; ?>
+                                <p class="pdfName"><?php echo get_sub_field('document_name'); ?></p>
                                 <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
                                     class="downloadLogo" alt="">
                             </a>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Brochure - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
+                            <?php endwhile; ?>
+                            <?php endif; ?>
                         </div>
-                        <div class="brochureElement">
-                            <p class="fileType">Product Sheet</p>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Product Sheet - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Product Sheet - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                        </div>
-                        <div class="brochureElement">
-                            <p class="fileType">Utility</p>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Utility - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Utility - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                        </div>
+                        <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
-            <div class="accordion">
-                <div class="accordion-header">
-                    <h4>
-                        Power Battery </h4>
-                    <div class="accordian-icon-wrapper">
-                        <div class="accordion-icon"></div>
-                    </div>
-                </div>
-                <div class="accordion-body">
-                    <div class="brochureDiv">
-                        <div class="brochureElement">
-                            <p class="fileType">Documents</p>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Brochure - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Brochure - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                        </div>
-                        <div class="brochureElement">
-                            <p class="fileType">Product Sheet</p>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Product Sheet - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Product Sheet - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                        </div>
-                        <div class="brochureElement">
-                            <p class="fileType">Utility</p>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Utility - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                            <a href="" download="" class="pdfWrapper">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/pdf-logo.svg" alt="">
-                                <p class="pdfName">Utility - Polish</p>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/download-logo.svg"
-                                    class="downloadLogo" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <?php get_footer(); ?>
