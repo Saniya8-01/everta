@@ -160,10 +160,10 @@ $current_url = home_url(add_query_arg([], $wp->request));
 							</div>
 							<div class="formFields">
 								<label for="">Your Target Market</label>
-								<div class="customSelect active">
+								<div class="customSelect">
 									<div class="selectBtn">
 										<span class="sBtntext">Select Country</span>
-										<img src="http://localhost/everta/wp-content/themes/everta/images/dropdown-icon.svg"
+										<img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg"
 											alt="everta">
 									</div>
 									<ul class="options">
@@ -183,10 +183,10 @@ $current_url = home_url(add_query_arg([], $wp->request));
 						<div class="contact-tab-wrapper">
 							<div class="formFields">
 								<label for="">Location</label>
-								<div class="customSelect active">
+								<div class="customSelect">
 									<div class="selectBtn">
 										<span class="sBtntext">Select Country</span>
-										<img src="http://localhost/everta/wp-content/themes/everta/images/dropdown-icon.svg"
+										<img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg"
 											alt="everta">
 									</div>
 									<ul class="options">

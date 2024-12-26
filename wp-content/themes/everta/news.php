@@ -24,17 +24,17 @@
         <div class="heading">
             <h2>News</h2>
         </div>
-        <div class="customSelect">
-            <div class="selectBtn">
+        <div class="customSelect" id="customSelect">
+            <div class="selectBtn" id="selectBtn">
                 <span class="sBtntext">Latest first</span>
                 <img src="http://localhost/everta/wp-content/themes/everta/images/dropdown-icon.svg"
                     alt="everta">
             </div>
-            <ul class="options">
-                <li class="option">Latest first</li>
-                <li class="option">Oldest first</li>
-                <li class="option">A-Z</li>
-                <li class="option">Z-A</li>
+            <ul class="options" id="options">
+                <li class="option" id="option">Latest first</li>
+                <li class="option" id="option">Oldest first</li>
+                <li class="option" id="option">A-Z</li>
+                <li class="option" id="option">Z-A</li>
             </ul>
         </div>
         <div class="cardGrid" id="cardGrid">
@@ -224,4 +224,5 @@
 </section>
 
 <?php get_footer(); ?>
+
 
