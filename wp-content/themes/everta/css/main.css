@@ -1270,7 +1270,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   transition: 0.3s all ease-in-out;
   z-index: 99;
   width: 1100px;
-  height: 1045px;
+  height: 1105px;
 }
 .contactForm.open {
   right: 0;
@@ -1760,7 +1760,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
 @media all and (max-width: 1600px) {
   .contactForm {
     width: 1100px;
-    height: 1040px;
   }
   .contactForm .contactFormWrapper {
     padding: 60px;
@@ -1827,12 +1826,12 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 @media all and (max-width: 1536px) {
   .contactForm {
-    height: 800px;
+    height: 950px;
   }
 }
 @media all and (max-width: 1440px) {
   .contactForm {
-    width: 1000px;
+    width: 1100px;
   }
   .contactForm .contactFormWrapper {
     padding: 50px;
@@ -1905,7 +1904,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
 @media all and (max-width: 1280px) {
   .contactForm {
     width: 1000px;
-    height: 720px;
+    height: 780px;
   }
   .contactForm .contactFormWrapper {
     padding: 42px;
@@ -11387,6 +11386,20 @@ body {
 .cardSection .cardSectionWrapper .customSelect {
   position: relative;
 }
+.cardSection .cardSectionWrapper .customSelect.active .selectBtn img {
+  transform: rotate(-180deg);
+}
+.cardSection .cardSectionWrapper .customSelect.active .options {
+  display: block;
+  opacity: 0;
+  z-index: 10;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+}
 .cardSection .cardSectionWrapper .customSelect .selectBtn {
   width: 15%;
   background: transparent;
@@ -11465,20 +11478,6 @@ body {
 .cardSection .cardSectionWrapper .customSelect .options::-webkit-scrollbar-thumb {
   background-color: #787878;
   border-radius: 5px;
-}
-.cardSection .cardSectionWrapper .customSelect.active .selectBtn img {
-  transform: rotate(-180deg);
-}
-.cardSection .cardSectionWrapper .customSelect.active .options {
-  display: block;
-  opacity: 0;
-  z-index: 10;
-  animation-name: fadeInUp;
-  -webkit-animation-name: fadeInUp;
-  animation-duration: 0.4s;
-  animation-fill-mode: both;
-  -webkit-animation-duration: 0.4s;
-  -webkit-animation-fill-mode: both;
 }
 .cardSection .cardSectionWrapper .cardGrid {
   display: grid;
@@ -12465,4 +12464,4 @@ body {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .downloadLogo {
     margin-left: auto;
   }
-}/*# sourceMappingURL=main.css.map */
+}

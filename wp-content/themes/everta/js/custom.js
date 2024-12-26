@@ -2,7 +2,7 @@ var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $("header").outerHeight();
-let menuOpen = false;
+var menuOpen = false;
 
 $(window).scroll(function () {
     didScroll = true;
@@ -18,13 +18,13 @@ setInterval(function () {
 function hasScrolled() {
     if (menuOpen) return; // Disable hasScrolled when menu is open
 
-    var st = $(this).scrollTop();
+    const st = $(this).scrollTop();
 
     // Make sure they scroll more than delta
     if (Math.abs(lastScrollTop - st) <= delta) return;
 
     // Detect if we are scrolling within the `.evertaEveryoneSection`
-    var isWithinEvertaSection = isInSection('.evertaEveryoneSection');
+    const isWithinEvertaSection = isInSection('.evertaEveryoneSection');
 
     if ($(window).width() <= 820 && isWithinEvertaSection) {
         // Add nav-up class on reverse scroll within `.evertaEveryoneSection`
@@ -44,12 +44,12 @@ function hasScrolled() {
 
 // Helper function to detect if the scroll position is within a specific section
 function isInSection(sectionClass) {
-    var section = $(sectionClass);
+    const section = $(sectionClass);
     if (section.length) {
-        var sectionTop = section.offset().top;
-        var sectionBottom = sectionTop + section.outerHeight();
-        var scrollTop = $(window).scrollTop();
-        var windowHeight = $(window).height();
+        const sectionTop = section.offset().top;
+        const sectionBottom = sectionTop + section.outerHeight();
+        const scrollTop = $(window).scrollTop();
+        const windowHeight = $(window).height();
 
         // Check if the current scroll position overlaps with the section
         return scrollTop + windowHeight > sectionTop && scrollTop < sectionBottom;
@@ -81,14 +81,6 @@ $(window).resize(function () {
     navbarHeight = $("header").outerHeight();
 });
 
-
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('header').outerHeight();
-
-$(window).scroll(function (event) {
-    hasScrolled();
-});
 //--------------------------- Hide Header on on scroll down-------------------------//
 
 //-------------------Header Dropdown JS----------------------//
@@ -586,7 +578,7 @@ if ($(".mission").length) {
 if ($(".vision").length) {
     document.addEventListener("DOMContentLoaded", () => {
         const vision = document.querySelector(".vision");
-        console.log(vision);
+
         const visionCardIcon = document.querySelector(".vision .hoverContent .cardIcon");
         if (window.innerWidth <= 1024) {
             window.addEventListener('scroll', () => {
@@ -719,7 +711,6 @@ if($(".careerTeamSection").length){
 
             options.forEach((option) => {
                 option.addEventListener("click", () => {
-                    console.log(option.innerText);
                     
                     const selectedOption = option.innerText;
                     sBtn_text.innerText = selectedOption;
@@ -783,6 +774,7 @@ if($(".careerTeamSection").length){
     });
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
     // Check if the "custom-tabs-wrapper" exists on the page
     const customTabsWrapper = document.querySelector(".contactForm");
@@ -824,10 +816,8 @@ if($(".careerTeamSection").length){
             element.addEventListener("click", function () {
                
                 const panelId = this.id.replace("careerPositionBox", "careerOpeningModal");
-                console.log(panelId, "1024");
                 
                 const modal = document.getElementById(panelId);
-                console.log(modal, "1025");
                 
                 
                 modal.style.display = "block";
@@ -1028,7 +1018,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to render cards for the current page
     function renderCards(page, filteredCards = cards) {
-        console.log(`Rendering cards for page: ${page}`); // Debug log
 
         // Clear the current content in the card grid
         cardGrid.innerHTML = '';
@@ -1041,7 +1030,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const visibleCards = filteredCards.slice(startIndex, endIndex);
 
         if (visibleCards.length === 0) {
-            console.log('No cards to display'); // Handle empty pages
         } else {
             // Append the visible cards to the card grid
             visibleCards.forEach((card) => {
@@ -1058,7 +1046,6 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination.innerHTML = ''; // Clear existing pagination
     
         const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
-        console.log(`Total pages: ${totalPages}`); // Debug log
     
         if (totalPages > 1) {
             // Add "Previous" button with image and extra class
@@ -1165,6 +1152,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render of the first page with all cards
     renderCards(currentPage);
 });
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

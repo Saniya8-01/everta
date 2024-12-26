@@ -4,6 +4,12 @@
             h2 {margin-bottom: 24px;color: $quaternaryColor1;@include terminamedium;@include font36;font-weight: 600;line-height: 133.333%;text-transform: uppercase;}
         }
         .customSelect{position: relative;
+            &.active{
+                .selectBtn{
+                    img{transform: rotate(-180deg);}
+                }
+                .options{display: block; opacity: 0; z-index: 10; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; animation-duration: 0.4s; animation-fill-mode: both; -webkit-animation-duration: 0.4s; -webkit-animation-fill-mode: both;}
+            }
             .selectBtn{width: 15%; background: transparent; display: flex; cursor: pointer; border-bottom: 1px solid #A5A5A5;padding:7px 0px 14px 0px;position: relative; justify-content: space-between;
               .sBtntext{color: $quaternaryColor1; @include verdanaregular; @include font16; font-weight: $fontW400;}
               .img{display: block;}
@@ -15,10 +21,6 @@
               &::-webkit-scrollbar{width: 6px;}
               &::-webkit-scrollbar-thumb{background-color: $quaternaryColor3; border-radius: 5px;}
             }
-            &.active .selectBtn{
-              img{transform: rotate(-180deg);}
-            }
-            &.active .options{display: block; opacity: 0; z-index: 10; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; animation-duration: 0.4s; animation-fill-mode: both; -webkit-animation-duration: 0.4s; -webkit-animation-fill-mode: both;}
         }
         .cardGrid{display: grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:120px;margin-top:72px;
             .cards{border: 1px solid #D2D2D2;

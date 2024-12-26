@@ -24,17 +24,17 @@
         <div class="heading">
             <h2>News</h2>
         </div>
-        <div class="customSelect">
-            <div class="selectBtn">
+        <div class="customSelect" id="customSelect">
+            <div class="selectBtn" id="selectBtn">
                 <span class="sBtntext">Latest first</span>
                 <img src="http://localhost/everta/wp-content/themes/everta/images/dropdown-icon.svg"
                     alt="everta">
             </div>
-            <ul class="options">
-                <li class="option">Latest first</li>
-                <li class="option">Oldest first</li>
-                <li class="option">A-Z</li>
-                <li class="option">Z-A</li>
+            <ul class="options" id="options">
+                <li class="option" id="option">Latest first</li>
+                <li class="option" id="option">Oldest first</li>
+                <li class="option" id="option">A-Z</li>
+                <li class="option" id="option">Z-A</li>
             </ul>
         </div>
         <div class="cardGrid" id="cardGrid">
@@ -224,4 +224,33 @@
 </section>
 
 <?php get_footer(); ?>
+
+<script>
+    const optionMenu = document.querySelector("#customSelect"),
+      selectBtn = optionMenu.querySelector("#selectBtn"),
+      options = optionMenu.querySelectorAll(".option"),
+      sBtn_text = optionMenu.querySelector(".sBtntext");
+  
+    // Toggle the dropdown when clicking the select button
+    selectBtn.addEventListener("click", function (e) {
+      e.stopPropagation(); // Prevent click event from bubbling to the document
+      optionMenu.classList.toggle("active");
+    });
+  
+    // Set selected text and close dropdown when an option is clicked
+    options.forEach(function (option) {
+      option.addEventListener("click", function () {
+        const selectedText = this.textContent.trim();
+        sBtn_text.textContent = selectedText; // Set button text
+        optionMenu.classList.remove("active"); // Close dropdown
+      });
+    });
+  
+    // Close the dropdown when clicking outside of it
+    document.addEventListener("click", function (e) {
+      if (!optionMenu.contains(e.target)) {
+        optionMenu.classList.remove("active");
+      }
+    });
+</script>
 
