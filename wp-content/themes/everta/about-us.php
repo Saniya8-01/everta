@@ -98,48 +98,40 @@
             </div>
             <div class="cardsGroup">
                 <div class="card">
-                    
-                        <div class="imgBox">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/our-strength-icon1.webp" alt="">
-                        </div>
-                        <div class="contentBox">
-                            <h5>Dependable charging solutions</h5>
-                            <p>Reliable, turnkey solutions that ensure seamless, worry-free charging,</p>
-                        </div>
-                    
+                    <div class="imgBox">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/our-strength-icon1.webp" alt="">
+                    </div>
+                    <div class="contentBox">
+                        <h5>Dependable charging solutions</h5>
+                        <p>Reliable, turnkey solutions that ensure seamless, worry-free charging,</p>
+                    </div>
                 </div>
                 <div class="card">
-                    
-                        <div class="imgBox">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/our-strength-icon2.webp" alt="">
-                        </div>
-                        <div class="contentBox">
-                            <h5>Dependable charging solutions</h5>
-                            <p>Reliable, turnkey solutions that ensure seamless, worry-free charging,</p>
-                        </div>
-                    
+                    <div class="imgBox">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/our-strength-icon2.webp" alt="">
+                    </div>
+                    <div class="contentBox">
+                        <h5>Actionable Sustainability</h5>
+                        <p>We focus on real actions that drive greener mobility, working toward a cleaner future through tangible initiatives and impactful choices.</p>
+                    </div>
                 </div>
                 <div class="card">
-                    
-                        <div class="imgBox">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/our-strength-icon3.webp" alt="">
-                        </div>
-                        <div class="contentBox">
-                            <h5>Dependable charging solutions</h5>
-                            <p>Reliable, turnkey solutions that ensure seamless, worry-free charging,</p>
-                        </div>
-                    
+                    <div class="imgBox">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/our-strength-icon3.webp" alt="">
+                    </div>
+                    <div class="contentBox">
+                        <h5>Built on trust</h5>
+                        <p>Our chargers are designed for efficiency and easy maintenance, ensuring reliability and peace of mind.</p>
+                    </div>
                 </div>
                 <div class="card">
-                    
-                        <div class="imgBox">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/our-strength-icon4.webp" alt="">
-                        </div>
-                        <div class="contentBox">
-                            <h5>Dependable charging solutions</h5>
-                            <p>Reliable, turnkey solutions that ensure seamless, worry-free charging,</p>
-                        </div>
-                    
+                    <div class="imgBox">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/our-strength-icon4.webp" alt="">
+                    </div>
+                    <div class="contentBox">
+                        <h5>Dedicated Customer Support</h5>
+                        <p>We focus on understanding your needs and solving challenges others might miss. </p>
+                    </div>
                 </div>
             </div>
         </div>
