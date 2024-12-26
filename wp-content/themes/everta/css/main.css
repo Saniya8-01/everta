@@ -11383,6 +11383,35 @@ body {
     font-size: 20px;
   }
 }
+.cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper a {
+  color: #1E1E1E;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 400;
+  border-radius: 100px;
+  border: 1px solid var(--Black-40, #A5A5A5);
+  padding: 16px 32px;
+}
+@media screen and (max-width: 1600px) {
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper a {
+    font-size: 12px;
+  }
+}
+.cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper a.active {
+  color: #F5F75E;
+  background: #1E1E1E;
+}
 .cardSection .cardSectionWrapper .customSelect {
   position: relative;
 }
@@ -11488,11 +11517,22 @@ body {
 }
 .cardSection .cardSectionWrapper .cardGrid .cards {
   border: 1px solid #D2D2D2;
+  transition: 0.3s all ease-in-out;
+}
+.cardSection .cardSectionWrapper .cardGrid .cards:hover {
+  background: #F5F75E;
+}
+.cardSection .cardSectionWrapper .cardGrid .cards:hover .cardContent .tag {
+  background: #ffffff;
+}
+.cardSection .cardSectionWrapper .cardGrid .cards:hover .cardContent .cardInfo .redirectArrow {
+  opacity: 1;
 }
 .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
   padding: 32px 24px;
 }
 .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
+  display: inline-block;
   border-radius: 4px;
   background: var(--Yellow-100, #F5F75E);
   padding: 4px 9px;
@@ -11501,6 +11541,8 @@ body {
   line-height: 175%;
   font-weight: 400;
   color: #1E1E1E;
+  transition: 0.3s all ease-in-out;
+  margin-bottom: 24px;
 }
 @media screen and (max-width: 1600px) {
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
@@ -11512,9 +11554,12 @@ body {
     font-size: 12px;
   }
 }
-.cardSection .cardSectionWrapper .cardGrid .cards .cardContent h3 {
+.cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo {
+  display: flex;
+  gap: 14px;
+}
+.cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo h3 {
   margin-bottom: 14px;
-  margin-top: 24px;
   font-family: "verdanaregular";
   font-size: 24px;
   line-height: 166.667%;
@@ -11522,16 +11567,16 @@ body {
   color: #1E1E1E;
 }
 @media screen and (max-width: 1600px) {
-  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent h3 {
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo h3 {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent h3 {
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo h3 {
     font-size: 16px;
   }
 }
-.cardSection .cardSectionWrapper .cardGrid .cards .cardContent p {
+.cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo p {
   font-family: "verdanaregular";
   font-size: 16px;
   line-height: 175%;
@@ -11539,14 +11584,21 @@ body {
   color: #1E1E1E;
 }
 @media screen and (max-width: 1600px) {
-  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent p {
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo p {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent p {
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo p {
     font-size: 12px;
   }
+}
+.cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .redirectArrow {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
 }
 .cardSection .cardSectionWrapper .pagination {
   display: flex;
@@ -11614,9 +11666,21 @@ body {
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
     padding: 4px 9px;
   }
-  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent h3 {
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo {
+    gap: 14px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo h3 {
     margin-bottom: 14px;
-    margin-top: 24px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .redirectArrow {
+    width: 60px;
+    height: 60px;
+  }
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper {
+    gap: 16px;
+  }
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper a {
+    padding: 16px 32px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 24px;
@@ -11641,6 +11705,12 @@ body {
   .cardSection .cardSectionWrapper .heading h2 {
     margin-bottom: 22px;
   }
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper {
+    gap: 15px;
+  }
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper a {
+    padding: 15px 30px;
+  }
   .cardSection .cardSectionWrapper .customSelect .selectBtn {
     padding: 7px 0px 14px 0px;
   }
@@ -11662,10 +11732,17 @@ body {
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
     padding: 4px 8px;
+    margin-bottom: 22px;
   }
-  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent h3 {
-    margin-bottom: 12px;
-    margin-top: 22px;
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo {
+    gap: 14px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo h3 {
+    margin-bottom: 14px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .redirectArrow {
+    width: 50px;
+    height: 50px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 22px;
@@ -11690,6 +11767,9 @@ body {
   .cardSection .cardSectionWrapper .heading h2 {
     margin-bottom: 20px;
   }
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper a {
+    padding: 15px 30px;
+  }
   .cardSection .cardSectionWrapper .customSelect .selectBtn {
     padding: 6px 0px 12px 0px;
   }
@@ -11711,10 +11791,17 @@ body {
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
     padding: 4px 8px;
+    margin-bottom: 20px;
   }
-  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent h3 {
-    margin-bottom: 10px;
-    margin-top: 20px;
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo {
+    gap: 12px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo h3 {
+    margin-bottom: 12px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .redirectArrow {
+    width: 40px;
+    height: 40px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 20px;
@@ -11735,6 +11822,12 @@ body {
   .cardSection .cardSectionWrapper {
     margin-top: 40px;
     margin-bottom: 70px;
+  }
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper {
+    gap: 12px;
+  }
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper a {
+    padding: 12px 28px;
   }
   .cardSection .cardSectionWrapper .customSelect .selectBtn {
     padding: 6px 0px 12px 0px;
@@ -11759,10 +11852,17 @@ body {
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
     padding: 3px 7px;
+    margin-bottom: 18px;
   }
-  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent h3 {
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo {
+    gap: 12px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo h3 {
     margin-bottom: 10px;
-    margin-top: 18px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .redirectArrow {
+    width: 36px;
+    height: 36px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 16px;
@@ -11779,13 +11879,33 @@ body {
     margin-left: 20px;
   }
 }
+@media all and (max-width: 1024px) {
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper {
+    gap: 12px;
+  }
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper a {
+    padding: 12px 24px;
+  }
+}
 @media all and (max-width: 820px) {
   .cardSection .cardSectionWrapper .cardGrid {
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
   }
+  .cardSection .cardSectionWrapper .cardGrid .cards:hover {
+    background: transparent;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards:hover .cardContent .tag {
+    background: #F5F75E;
+  }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
     padding: 22px 14px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo {
+    align-items: end;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .redirectArrow {
+    opacity: 1;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 14px;
@@ -11841,6 +11961,21 @@ body {
     font-weight: 600;
     line-height: 24px;
   }
+  .cardSection .cardSectionWrapper .blogsTabs {
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper {
+    display: inline-flex;
+    gap: 12px;
+  }
+  .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper a {
+    padding: 9px 16px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+  }
   .cardSection .cardSectionWrapper .customSelect .selectBtn {
     padding: 7px 0px 14px 0px;
     width: 100%;
@@ -11876,10 +12011,10 @@ body {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
+    margin-bottom: 16px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent h3 {
     margin-bottom: 14px;
-    margin-top: 16px;
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
