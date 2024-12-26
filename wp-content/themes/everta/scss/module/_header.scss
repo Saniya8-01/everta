@@ -24,6 +24,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                 .dropdownMenu{position: absolute;top:100%;left:-40px;padding-top:20px; opacity: 0;visibility: hidden;transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
                                     ul{background:#ffffff;min-width: 320px;display:flex;flex-direction:column;align-items: start;gap:40px;border:1px solid #1E1E1E;padding:24px 0px;
                                         li{display: flex;flex-direction:column;gap:0;width: 100%;padding:0px;
+                                            &::before{content: none}
                                             p{@include terminabold;@include font20;color: #323232;padding: 12px 40px;}
                                             a{@include verdanaregular;@include font20;color: #323232;padding: 12px 40px;
                                                 &:hover{background: $primaryColor1;}
@@ -32,9 +33,11 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                     }
                                 }
                                 .languageMenu{
-                                    ul{min-width: 115px;gap: 24px;
+                                    ul{min-width: 115px;gap:0 !important;
                                         li{
-                                            p{cursor: pointer;}
+                                            p{cursor: pointer;padding: 12px 40px;
+                                                &:hover{background: $primaryColor1;}
+                                            }
                                         }
                                     }
                                 }
@@ -64,7 +67,11 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                     ul{min-width: 320px;gap:36px;}
                                 }
                                 .languageMenu{
-                                    ul{min-width: 110px;gap: 24px;}
+                                    ul{min-width: 110px;
+                                        li{
+                                            p{padding: 10px 36px;}
+                                        }
+                                    }
                                 }
                             }
                             .ctaContact{
@@ -94,7 +101,10 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         }
                                     }
                                     .languageMenu{
-                                        ul{min-width: 100px;gap: 22px;}
+                                        ul{min-width: 100px;
+                                            li{
+                                                p{padding: 9px 32px;}
+                                            }}
                                     }
                                 }
                                 .ctaContact{
@@ -124,7 +134,11 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         }
                                     }
                                     .languageMenu{
-                                        ul{min-width: 90px;gap: 20px;}
+                                        ul{min-width: 90px;
+                                            li{
+                                                p{padding: 8px 28px;}
+                                            }
+                                        }
                                     }
                                 }
                                 .ctaContact{
@@ -154,7 +168,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         }
                                     }
                                     .languageMenu{
-                                        ul{min-width: 80px;gap: 18px;}
+                                        ul{min-width: 80px;}
                                     }
                                 }
                                 .ctaContact{
@@ -185,6 +199,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                                 a{padding: 7px 20px;}
                                             }
                                         }
+                                    }
+                                    .languageMenu{
+                                        ul{min-width: 80px;}
                                     }
                                 }
                                 .ctaContact{

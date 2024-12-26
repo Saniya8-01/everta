@@ -89,12 +89,11 @@ $(document).ready(function () {
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
     if (isTouchDevice) {
-        // For mobile devices
         dropdowns.forEach(dropdown => {
             const toggleDropdown = (event) => {
-                event.preventDefault(); // Prevent default anchor tag behavior (on the first click)
-                
-                // Close other dropdowns
+                event.preventDefault();
+
+                // Close all other dropdowns
                 dropdowns.forEach(dd => {
                     if (dd !== dropdown) {
                         dd.classList.remove('active');
@@ -111,19 +110,13 @@ $(document).ready(function () {
                 dropdownMenu.style.opacity = isActive ? '0' : '1';
             };
 
-            // Add click event to toggle dropdown
-            dropdown.querySelector('.mainManu').addEventListener('click', toggleDropdown);
-
-            // Ensure anchor tags inside dropdownMenu are clickable and do not close the dropdown
-            dropdown.querySelectorAll('.dropdownMenu a').forEach(anchor => {
-                anchor.addEventListener('click', (event) => {
-                    event.stopPropagation(); // Prevent propagation to parent dropdown
-                    // Allow the default behavior (navigation)
-                });
-            });
+            // Ensure event listener is added for all dropdowns (including .languageTranslator)
+            const menuTrigger = dropdown.querySelector('.mainManu') || dropdown.querySelector('img');
+            if (menuTrigger) {
+                menuTrigger.addEventListener('click', toggleDropdown);
+            }
         });
 
-        // Close all dropdowns when clicking outside
         document.addEventListener('click', (event) => {
             if (!event.target.closest('.mainNavList')) {
                 dropdowns.forEach(dropdown => {
@@ -135,7 +128,6 @@ $(document).ready(function () {
             }
         });
     } else {
-        // For desktop: mouseover and mouseleave functionality
         dropdowns.forEach(dropdown => {
             const dropdownMenu = dropdown.querySelector('.dropdownMenu');
 
@@ -153,6 +145,7 @@ $(document).ready(function () {
         });
     }
 });
+
 
 
 

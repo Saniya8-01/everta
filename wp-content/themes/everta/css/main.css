@@ -820,6 +820,9 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMe
   width: 100%;
   padding: 0px;
 }
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li::before {
+  content: none;
+}
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li p {
   font-family: "termina_testbold";
   font-size: 20px;
@@ -867,10 +870,14 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMe
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
   min-width: 115px;
-  gap: 24px;
+  gap: 0 !important;
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
   cursor: pointer;
+  padding: 12px 40px;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p:hover {
+  background: #F5F75E;
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact {
   padding: 0px;
@@ -925,7 +932,9 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
     min-width: 110px;
-    gap: 24px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
+    padding: 10px 36px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 18px 30px;
@@ -956,7 +965,9 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
     min-width: 100px;
-    gap: 22px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
+    padding: 9px 32px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 16px 28px;
@@ -985,7 +996,9 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
     min-width: 90px;
-    gap: 20px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
+    padding: 8px 28px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 14px 24px;
@@ -1019,7 +1032,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
     min-width: 80px;
-    gap: 18px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 12px 22px;
@@ -1053,6 +1065,9 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a {
     padding: 7px 20px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
+    min-width: 80px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
     padding: 10px 20px;
