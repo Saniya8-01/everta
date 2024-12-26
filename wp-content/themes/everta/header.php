@@ -69,8 +69,8 @@ $current_url = home_url(add_query_arg([], $wp->request));
 											<ul>
 												<li>
 													<p>AC Charging</p>
-													<a href="">Power tower</a>
-													<a href="">Power Box</a>
+													<a href="#">Power tower</a>
+													<a href="#">Power Box</a>
 												</li>
 												<li>
 													<p>DC Charging</p>
@@ -160,7 +160,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 							</div>
 							<div class="formFields">
 								<label for="">Your Target Market</label>
-								<div class="customSelect">
+								<div class="customSelect" id="popupSelect">
 									<div class="selectBtn">
 										<span class="sBtntext">Select Country</span>
 										<img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg"
@@ -183,7 +183,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 						<div class="contact-tab-wrapper">
 							<div class="formFields">
 								<label for="">Location</label>
-								<div class="customSelect">
+								<div class="customSelect" id="popupSelect">
 									<div class="selectBtn">
 										<span class="sBtntext">Select Country</span>
 										<img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg"

@@ -85,66 +85,75 @@ $(window).resize(function () {
 
 //-------------------Header Dropdown JS----------------------//
 $(document).ready(function () {
-    const dropdowns = document.querySelectorAll('.mainNavList.dropdown'); // Select all dropdown items
+    const dropdowns = document.querySelectorAll('.mainNavList.dropdown'); // Select all dropdowns
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-    if (!isTouchDevice) {
-        // For desktop: mouseover and mouseleave functionality
+    if (isTouchDevice) {
+        // For mobile devices
         dropdowns.forEach(dropdown => {
-            const dropdownMenu = dropdown.querySelector('.dropdownMenu'); // Dropdown menu inside the item
-
-            dropdown.addEventListener('mouseenter', function () {
-                dropdown.classList.add('active');
-            });
-
-            dropdown.addEventListener('mouseleave', function (event) {
-                // Check if the mouse is still over the dropdown or the dropdown menu
-                if (!event.relatedTarget || !dropdown.contains(event.relatedTarget)) {
-                    dropdown.classList.remove('active');
-                }
-            });
-
-            // Prevent fluctuation by ensuring dropdownMenu keeps the parent dropdown active
-            if (dropdownMenu) {
-                dropdownMenu.addEventListener('mouseenter', function () {
-                    dropdown.classList.add('active');
-                });
-
-                dropdownMenu.addEventListener('mouseleave', function (event) {
-                    if (!event.relatedTarget || !dropdown.contains(event.relatedTarget)) {
-                        dropdown.classList.remove('active');
-                    }
-                });
-            }
-        });
-    } else {
-        // For mobile: click functionality
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function (event) {
-                event.preventDefault();
-
-                // Close all other dropdowns
+            const toggleDropdown = (event) => {
+                event.preventDefault(); // Prevent default anchor tag behavior (on the first click)
+                
+                // Close other dropdowns
                 dropdowns.forEach(dd => {
                     if (dd !== dropdown) {
                         dd.classList.remove('active');
+                        dd.querySelector('.dropdownMenu').style.height = '0';
+                        dd.querySelector('.dropdownMenu').style.opacity = '0';
                     }
                 });
 
                 // Toggle the clicked dropdown
+                const dropdownMenu = dropdown.querySelector('.dropdownMenu');
+                const isActive = dropdown.classList.contains('active');
                 dropdown.classList.toggle('active');
+                dropdownMenu.style.height = isActive ? '0' : dropdownMenu.scrollHeight + 'px';
+                dropdownMenu.style.opacity = isActive ? '0' : '1';
+            };
+
+            // Add click event to toggle dropdown
+            dropdown.querySelector('.mainManu').addEventListener('click', toggleDropdown);
+
+            // Ensure anchor tags inside dropdownMenu are clickable and do not close the dropdown
+            dropdown.querySelectorAll('.dropdownMenu a').forEach(anchor => {
+                anchor.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Prevent propagation to parent dropdown
+                    // Allow the default behavior (navigation)
+                });
             });
         });
 
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', function (event) {
+        // Close all dropdowns when clicking outside
+        document.addEventListener('click', (event) => {
             if (!event.target.closest('.mainNavList')) {
                 dropdowns.forEach(dropdown => {
                     dropdown.classList.remove('active');
+                    const dropdownMenu = dropdown.querySelector('.dropdownMenu');
+                    dropdownMenu.style.height = '0';
+                    dropdownMenu.style.opacity = '0';
                 });
             }
         });
+    } else {
+        // For desktop: mouseover and mouseleave functionality
+        dropdowns.forEach(dropdown => {
+            const dropdownMenu = dropdown.querySelector('.dropdownMenu');
+
+            dropdown.addEventListener('mouseenter', () => {
+                dropdown.classList.add('active');
+                dropdownMenu.style.height = dropdownMenu.scrollHeight + 'px';
+                dropdownMenu.style.opacity = '1';
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                dropdown.classList.remove('active');
+                dropdownMenu.style.height = '0';
+                dropdownMenu.style.opacity = '0';
+            });
+        });
     }
 });
+
 
 
 
@@ -940,6 +949,37 @@ $(window).scroll(function () {
         counted = 1;
     }
 });
+
+    let customSelects = document.querySelectorAll("#popupSelect");
+
+    customSelects.forEach((customSelect) => {
+        const selectBtn = customSelect.querySelector(".selectBtn");
+        const options = customSelect.querySelectorAll(".option");
+        const sBtn_text = customSelect.querySelector(".sBtntext");
+
+        // Toggle dropdown menu for this customSelect
+        selectBtn.addEventListener("click", (e) => {
+            e.stopPropagation(); // Prevent event bubbling
+            customSelect.classList.toggle("active");
+        });
+
+        // Handle option selection for this customSelect
+        options.forEach((option) => {
+            option.addEventListener("click", () => {
+                const selectedText = option.textContent.trim();
+                sBtn_text.textContent = selectedText; // Update button text
+                customSelect.classList.remove("active"); // Close dropdown
+            });
+        });
+    });
+
+    // Close all dropdowns if clicking outside any customSelect
+    document.addEventListener("click", () => {
+        customSelects.forEach((customSelect) => {
+            customSelect.classList.remove("active");
+        });
+    });
+
 
 
 

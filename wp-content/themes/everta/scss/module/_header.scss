@@ -7,6 +7,8 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                     .navLists{
                         ul{display: flex;align-items:center;gap:56px;
                             li{display:flex;gap:10px;padding:15px 0px;position:relative;padding-right:7px;
+                                &:hover{&::before{width: 100%;}}
+                                &::before{position: absolute;content:"";bottom: 0;left: 0;width: 0;height: 5px;background: $primaryColor1;transition: 0.3s all ease-in-out;}
                                 .mainManu{@include verdanaregular;@include font20;line-height: 150%;color: $quaternaryColor1;transition: 0.3s all ease-in-out;}
                                 .arrowImage{transition: 0.3s all ease-in-out;}
                                 .accordian-icon-wrapper{display: none;}
@@ -20,10 +22,12 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                     }
                                 }
                                 .dropdownMenu{position: absolute;top:100%;left:-40px;padding-top:20px; opacity: 0;visibility: hidden;transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-                                    ul{padding: 36px 40px;background:$primaryColor1;min-width: 320px;display:flex;flex-direction:column;align-items: start;gap:64px;
-                                        li{display: flex;flex-direction:column;gap:24px;padding:0px;
-                                            p{@include terminabold;@include font20;color: #323232;}
-                                            a{@include verdanaregular;@include font20;color: #323232;}
+                                    ul{background:#ffffff;min-width: 320px;display:flex;flex-direction:column;align-items: start;gap:40px;border:1px solid #1E1E1E;padding:24px 0px;
+                                        li{display: flex;flex-direction:column;gap:0;width: 100%;padding:0px;
+                                            p{@include terminabold;@include font20;color: #323232;padding: 12px 40px;}
+                                            a{@include verdanaregular;@include font20;color: #323232;padding: 12px 40px;
+                                                &:hover{background: $primaryColor1;}
+                                            }
                                         }
                                     }
                                 }
@@ -35,9 +39,10 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                     }
                                 }
                             }
-                            .ctaContact{padding: 0px;
-                                a{padding: 20px 32px;color: $primaryColor1;@include font16;@include terminamedium;letter-spacing: -0.64px;background: $quaternaryColor1;border-radius: 100px;
-                                    &:hover{@include terminamedium;}
+                            .ctaContact{padding: 0px; 
+                                &::before{content: none;}
+                                a{padding: 20px 32px;color: $primaryColor1;@include font16;@include terminamedium;letter-spacing: -0.64px;background: $quaternaryColor1;border-radius: 100px;transition:0.3s all ease-in-out;
+                                    &:hover{color: #1E1E1E;background: $primaryColor1;}
                                 }
                             }
                         }
@@ -56,9 +61,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                         ul{gap:54px;
                             li{gap:10px;
                                 .dropdownMenu{left:-40px;padding-top:19px;
-                                    ul{padding: 36px 40px;min-width: 320px;gap:60px;
-                                        li{gap:24px;}
-                                    }
+                                    ul{min-width: 320px;gap:36px;}
                                 }
                                 .languageMenu{
                                     ul{min-width: 110px;gap: 24px;}
@@ -83,8 +86,11 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                             ul{gap:50px;
                                 li{
                                     .dropdownMenu{left:-36px;padding-top:16px;
-                                        ul{padding: 32px 36px;min-width: 300px;gap:60px;
-                                            li{gap:22px;}
+                                        ul{gap:32px;padding:20px 0px;min-width: 300px;
+                                            li{
+                                                p{padding: 10px 36px;}
+                                                a{padding: 10px 36px;}
+                                            }
                                         }
                                     }
                                     .languageMenu{
@@ -109,9 +115,12 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                         .navLists{
                             ul{gap:40px;
                                 li{
-                                    .dropdownMenu{left:-32px;padding-top:14px;
-                                        ul{padding: 28px 32px;min-width: 300px;gap:50px;
-                                            li{gap:20px;}
+                                    .dropdownMenu{left:-32px;
+                                        ul{gap:28px;padding:18px 0px;
+                                            li{
+                                                p{padding: 9px 32px;}
+                                                a{padding: 9px 32px;}
+                                            }
                                         }
                                     }
                                     .languageMenu{
@@ -137,8 +146,11 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                             ul{gap:36px;
                                 li{gap:8px;
                                     .dropdownMenu{left:-28px;padding-top:12px;
-                                        ul{padding: 24px 28px;min-width: 280px;gap:40px;
-                                            li{gap:18px;}
+                                        ul{gap:20px;padding:16px 0px;min-width: 280px;
+                                            li{
+                                                p{padding: 8px 28px;}
+                                                a{padding: 8px 28px;}
+                                            }
                                         }
                                     }
                                     .languageMenu{
@@ -167,8 +179,11 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         .mainManu{cursor: pointer;pointer-events: auto;}
                                     }
                                     .dropdownMenu{left:-20px;padding-top:10px;
-                                        ul{padding: 18px 20px;min-width: 250px;gap:30px;
-                                            li{gap:15px;}
+                                        ul{gap:14px;padding:14px 0px;min-width: 250px;
+                                            li{
+                                                p{padding: 7px 20px;}
+                                                a{padding: 7px 20px;}
+                                            }
                                         }
                                     }
                                 }
@@ -215,10 +230,12 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                         }
                                     }
                                     .dropdownMenu{position: relative;width: 100%;padding:0px 20px;transition: 0.5s all ease-in-out;height:0;opacity: 0;
-                                        ul{background:transparent;min-width: 100%;gap:32px;padding-left:20px;border-left:4px solid $primaryColor1;
+                                        ul{background:transparent;min-width: 100%;gap:32px;padding-left:20px;border:none;border-left:4px solid $primaryColor1 !important;
                                             li{display: flex;flex-direction:column;gap:12px;align-items:start;
-                                                p{@include terminaregular;font-size: 16px;color: #909090;}
-                                                a{font-size: 16px;line-height: 28px;color: #000;}
+                                                p{@include terminaregular;font-size: 16px;color: #909090;padding: 0px;}
+                                                a{font-size: 16px;line-height: 28px;color: #000;padding: 0px;pointer-events: unset;
+                                                    &:hover{background: unset;}
+                                                }
                                             }
                                         }
                                     }
@@ -261,7 +278,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
     }
 }
 
-.contactForm{position: fixed;top:0;right:-110%;transition:0.3s all ease-in-out;z-index: 99;width: 1100px;height:1105px;
+.contactForm{position: fixed;top:0;right:-110%;transition:0.3s all ease-in-out;z-index: 99;width: 1100px;height:1000px;
     &.open{right: 0;}
     .contactFormWrapper{padding: 72px;background:#FFFFFF;border:12px solid $primaryColor1;overflow-y:auto !important;height:100% !important;  -ms-overflow-style: none; /* IE/Edge */
     /* Custom scrollbar for WebKit-based browsers */
@@ -390,7 +407,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
         }
     }
     }
-    @media all and (max-width:1536px){height: 950px;}
+    @media all and (max-width:1536px){height: 700px;}
     @media all and (max-width: 1440px){width: 1100px;
         .contactFormWrapper{padding: 50px;
             .contactHeading{margin-bottom:32px;}
@@ -432,8 +449,8 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
             }
         }
     }
-    @media all and (max-width:1366px){height: 750px;}
-    @media all and (max-width: 1280px){width: 1000px;height:780px;
+    @media all and (max-width:1366px){height: 650px;}
+    @media all and (max-width: 1280px){width: 1000px;
         .contactFormWrapper{padding: 42px;
             .contactHeading{margin-bottom:26px;}
             .contactTop{gap:32px;margin-bottom:36px;
