@@ -2354,6 +2354,7 @@
                 .wpcf7-response-output{display: none;}
             }
         }
+        .productCtas{margin-left: auto;display: flex;gap: 32px;}
     }
 
     @media all and (max-width:1800px) {
@@ -2391,6 +2392,7 @@
                     }
                 }
             }
+            .productCtas{gap: 30px;}
         }
     }
 
@@ -2423,6 +2425,7 @@
                     }
                 }
             }
+            .productCtas{gap: 28px;}
         }
     }
 
@@ -2457,6 +2460,8 @@
                     }
                 }
             }
+
+            .productCtas{gap: 24px;}
         }
     }
 
@@ -2480,6 +2485,7 @@
                     }   
                 }
             }
+            .productCtas{gap: 20px;}
         }
     }
 
@@ -2568,6 +2574,7 @@
                     }
                 }
             }
+            .productCtas{gap: 16px;flex-direction: column;margin-left: unset;align-items: flex-start;}
         }
     }
 }
