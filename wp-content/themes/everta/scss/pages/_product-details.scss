@@ -227,8 +227,8 @@
 }
 
 .technicalDetailsSection{margin-bottom:200px;@include wrapper;
-    .technicalDetailsWrapper{display: flex;justify-content:space-between;
-        .accordionContainer{width:60%;
+    .technicalDetailsWrapper{display: flex;justify-content:space-between;gap:140px;
+        .accordionContainer{width:55%;
             .accordionHeading{
                 h2{margin-bottom: 48px;@include terminabold;@include font48;font-weight: 700;line-height: 133.333%;text-transform: uppercase;}
             }
@@ -254,7 +254,7 @@
                     }
                     .accordion-body {transition: 0.5s all ease-in-out;max-height: 0;overflow: hidden;width: 90%;padding: 0px;
                         ul{padding-left: 22px;
-                            li{position: relative;@include verdanaregular;@include font28;font-weight: 400;line-height: 168%;color:#696969;
+                            li{position: relative;@include verdanaregular;@include font20;font-weight: 400;line-height: 168%;color:#696969;
                                 &::before{position: absolute;content: "";width: 10px;height: 10px;border-radius: 50%;background: #696969;left: -22px;top: 50%;transform: translateY(-50%);}
                             }
                         }
@@ -267,7 +267,7 @@
                 }
             }
         }
-        .image{width: 30%;}
+        .image{width: 40%;img{width: 100%;}}
     }
 }
 
