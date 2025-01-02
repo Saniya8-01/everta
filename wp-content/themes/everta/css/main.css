@@ -14070,8 +14070,8 @@ body {
 .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul li::before {
   position: absolute;
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: #696969;
   left: -22px;
