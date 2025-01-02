@@ -85,66 +85,68 @@ $(window).resize(function () {
 
 //-------------------Header Dropdown JS----------------------//
 $(document).ready(function () {
-    const dropdowns = document.querySelectorAll('.mainNavList.dropdown'); // Select all dropdown items
+    const dropdowns = document.querySelectorAll('.mainNavList.dropdown'); // Select all dropdowns
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-    if (!isTouchDevice) {
-        // For desktop: mouseover and mouseleave functionality
+    if (isTouchDevice) {
         dropdowns.forEach(dropdown => {
-            const dropdownMenu = dropdown.querySelector('.dropdownMenu'); // Dropdown menu inside the item
-
-            dropdown.addEventListener('mouseenter', function () {
-                dropdown.classList.add('active');
-            });
-
-            dropdown.addEventListener('mouseleave', function (event) {
-                // Check if the mouse is still over the dropdown or the dropdown menu
-                if (!event.relatedTarget || !dropdown.contains(event.relatedTarget)) {
-                    dropdown.classList.remove('active');
-                }
-            });
-
-            // Prevent fluctuation by ensuring dropdownMenu keeps the parent dropdown active
-            if (dropdownMenu) {
-                dropdownMenu.addEventListener('mouseenter', function () {
-                    dropdown.classList.add('active');
-                });
-
-                dropdownMenu.addEventListener('mouseleave', function (event) {
-                    if (!event.relatedTarget || !dropdown.contains(event.relatedTarget)) {
-                        dropdown.classList.remove('active');
-                    }
-                });
-            }
-        });
-    } else {
-        // For mobile: click functionality
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function (event) {
+            const toggleDropdown = (event) => {
                 event.preventDefault();
 
                 // Close all other dropdowns
                 dropdowns.forEach(dd => {
                     if (dd !== dropdown) {
                         dd.classList.remove('active');
+                        dd.querySelector('.dropdownMenu').style.height = '0';
+                        dd.querySelector('.dropdownMenu').style.opacity = '0';
                     }
                 });
 
                 // Toggle the clicked dropdown
+                const dropdownMenu = dropdown.querySelector('.dropdownMenu');
+                const isActive = dropdown.classList.contains('active');
                 dropdown.classList.toggle('active');
-            });
+                dropdownMenu.style.height = isActive ? '0' : dropdownMenu.scrollHeight + 'px';
+                dropdownMenu.style.opacity = isActive ? '0' : '1';
+            };
+
+            // Ensure event listener is added for all dropdowns (including .languageTranslator)
+            const menuTrigger = dropdown.querySelector('.mainManu') || dropdown.querySelector('img');
+            if (menuTrigger) {
+                menuTrigger.addEventListener('click', toggleDropdown);
+            }
         });
 
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', function (event) {
+        document.addEventListener('click', (event) => {
             if (!event.target.closest('.mainNavList')) {
                 dropdowns.forEach(dropdown => {
                     dropdown.classList.remove('active');
+                    const dropdownMenu = dropdown.querySelector('.dropdownMenu');
+                    dropdownMenu.style.height = '0';
+                    dropdownMenu.style.opacity = '0';
                 });
             }
         });
+    } else {
+        dropdowns.forEach(dropdown => {
+            const dropdownMenu = dropdown.querySelector('.dropdownMenu');
+
+            dropdown.addEventListener('mouseenter', () => {
+                dropdown.classList.add('active');
+                dropdownMenu.style.height = dropdownMenu.scrollHeight + 'px';
+                dropdownMenu.style.opacity = '1';
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                dropdown.classList.remove('active');
+                dropdownMenu.style.height = '0';
+                dropdownMenu.style.opacity = '0';
+            });
+        });
     }
 });
+
+
 
 
 
@@ -292,7 +294,7 @@ $(document).ready(function () {
     });
 });
 
-if ($(".faqSection").length) {
+if ($("#faqAccordion").length) {
     jQuery(document).ready(function () {
         const accordionHeaders = document.querySelectorAll(".accordion-header");
         ActivatingFirstAccordion();
@@ -490,36 +492,6 @@ $(window).on('resize scroll', function () {
 });
 
 
-var counted = 0;
-$(window).scroll(function () {
-    var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
-    if (counted == 0 && $(window).scrollTop() > oTop) {
-        $('.statCard h3').each(function () {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
-            var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
-
-            $({
-                countNum: 0
-            }).animate(
-                {
-                    countNum: countTo
-                },
-                {
-                    duration: 2000,
-                    easing: 'swing',
-                    step: function () {
-                        $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
-                    },
-                    complete: function () {
-                        $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
-                    }
-                }
-            );
-        });
-        counted = 1;
-    }
-});
 
 /******About Us Js Start */
 
@@ -939,219 +911,68 @@ if ($(".backtopCl").length) {
 
 /*Resources Details Page End*/
 
-if ($(".resourcesfaqSection").length) {
-    document.addEventListener("DOMContentLoaded", function () {
-        const accordionWrapper = document.querySelector(".accordions-wrapper");
-        const faqItems = accordionWrapper.querySelectorAll(".accordion");
-        const toggleButton = document.getElementById("toggleFaqButton");
 
-        const increment = 6; // Number of items to show at a time
-        let currentlyVisible = increment;
+var counted = 0;
+$(window).scroll(function () {
+    var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
+    if (counted == 0 && $(window).scrollTop() > oTop) {
+        $('.statCard h3').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            var symbol = $this.text().replace(/[0-9]/g, ''); // Extract the non-numeric characters (e.g., "+" or "M")
 
-        // Hide all FAQ items initially except the first set
-        if (faqItems.length > increment) {
-            toggleButton.style.display = "block"; // Show the button
-            faqItems.forEach((item, index) => {
-                if (index >= increment) {
-                    item.style.display = "none"; // Hide extra items
-                }
-            });
-        } else {
-            toggleButton.style.display = "none"; // Hide the button if items are less than or equal to increment
-        }
-
-        // Handle button click
-        toggleButton.addEventListener("click", function () {
-            const isExpanded = toggleButton.getAttribute("data-expanded") === "true";
-
-            if (isExpanded) {
-                // Show less: Reset to initial state showing only the first set
-                currentlyVisible = increment;
-                faqItems.forEach((item, index) => {
-                    item.style.display = index < increment ? "block" : "none";
-                });
-                toggleButton.textContent = "Show More";
-                toggleButton.setAttribute("data-expanded", "false");
-            } else {
-                // Show more: Reveal the next set of items
-                const nextVisible = currentlyVisible + increment;
-                faqItems.forEach((item, index) => {
-                    if (index < nextVisible) {
-                        item.style.display = "block";
+            $({
+                countNum: 0
+            }).animate(
+                {
+                    countNum: countTo
+                },
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum) + symbol); // Add the symbol during the animation
+                    },
+                    complete: function () {
+                        $this.text(this.countNum + symbol); // Ensure the symbol is added after the animation
                     }
-                });
-
-                // Update the currently visible count
-                currentlyVisible = nextVisible;
-
-                // Check if all items are now visible
-                if (currentlyVisible >= faqItems.length) {
-                    toggleButton.textContent = "Show Less";
-                    toggleButton.setAttribute("data-expanded", "true");
                 }
-            }
+            );
         });
-    });
-}
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const cardGrid = document.getElementById('cardGrid');
-    const pagination = document.getElementById('pagination');
-    const searchInput = document.querySelector('.searchWrapper input[type="search"]');
-
-    // Select all `.cards` inside `.cardGrid`
-    const cards = Array.from(cardGrid.querySelectorAll('.cards'));
-
-    // Function to get the number of cards per page based on screen width
-    function getCardsPerPage() {
-        if (window.innerWidth < 680) {
-            return 4; // 4 cards per page for mobile
-        } else {
-            return 6; // 6 cards per page for desktop/iPad
-        }
+        counted = 1;
     }
-
-    // Initial cards per page based on screen size
-    let cardsPerPage = getCardsPerPage();
-    let currentPage = 1; // Start at page 1
-
-    // Function to render cards for the current page
-    function renderCards(page, filteredCards = cards) {
-
-        // Clear the current content in the card grid
-        cardGrid.innerHTML = '';
-
-        // Calculate the start and end index for cards to display
-        const startIndex = (page - 1) * cardsPerPage;
-        const endIndex = startIndex + cardsPerPage;
-
-        // Get the cards for the current page
-        const visibleCards = filteredCards.slice(startIndex, endIndex);
-
-        if (visibleCards.length === 0) {
-        } else {
-            // Append the visible cards to the card grid
-            visibleCards.forEach((card) => {
-                cardGrid.appendChild(card);
-            });
-        }
-
-        // Render the pagination buttons
-        renderPagination(filteredCards);
-    }
-
-    // Function to render pagination buttons
-    function renderPagination(filteredCards) {
-        pagination.innerHTML = ''; // Clear existing pagination
-    
-        const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
-    
-        if (totalPages > 1) {
-            // Add "Previous" button with image and extra class
-            const prevButton = document.createElement('button');
-            const prevImage = document.createElement('img');
-            prevImage.src = `${theme_vars.template_dir}/images/prev-arrow.svg`;
-            prevImage.alt = 'Previous';
-            prevButton.appendChild(prevImage);
-            prevButton.classList.add('pagination-prev'); // Extra class for styling
-            prevButton.disabled = currentPage === 1; // Disable if on the first page
-            prevButton.addEventListener('click', () => {
-                currentPage--;
-                renderCards(currentPage, filteredCards);
-            });
-            pagination.appendChild(prevButton);
-    
-            // Pagination logic with ellipsis for mobile
-            const maxVisiblePages = window.innerWidth <= 680 ? 3 : 6; // 3 pages for mobile, 6 for desktop/tablet
-            let pageButtons = [];
-    
-            // Show the first and last page buttons, and a few neighboring ones
-            if (totalPages <= maxVisiblePages) {
-                // If total pages are less than or equal to maxVisiblePages, show all page numbers
-                for (let i = 1; i <= totalPages; i++) {
-                    pageButtons.push(i);
-                }
-            } else {
-                // Show first page, current page, and last page with ellipsis
-                if (currentPage <= 2) {
-                    // Show first 3 pages (1, 2, 3 and ... if needed)
-                    pageButtons = [1, 2, 3, '...', totalPages];
-                } else if (currentPage >= totalPages - 1) {
-                    // Show last 3 pages (..., second last, last page)
-                    pageButtons = [1, '...', totalPages - 2, totalPages - 1, totalPages];
-                } else {
-                    // Show 1 page before and after the current page with ellipsis
-                    pageButtons = [1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages];
-                }
-            }
-    
-            // Add the page number buttons to pagination
-            pageButtons.forEach((button) => {
-                const pageButton = document.createElement('button');
-                if (button === '...') {
-                    pageButton.textContent = '...';
-                    pageButton.disabled = true; // Disable the ellipsis button
-                } else {
-                    pageButton.textContent = button;
-                    pageButton.classList.toggle('active', button === currentPage); // Highlight the active page
-                    pageButton.addEventListener('click', () => {
-                        currentPage = button;
-                        renderCards(currentPage, filteredCards);
-                    });
-                }
-                pagination.appendChild(pageButton);
-            });
-    
-            // Add "Next" button with image and extra class
-            const nextButton = document.createElement('button');
-            const nextImage = document.createElement('img');
-            nextImage.src = `${theme_vars.template_dir}/images/black-cta-arrow.svg`;
-            nextImage.alt = 'Next';
-            nextButton.appendChild(nextImage);
-            nextButton.classList.add('pagination-next'); // Extra class for styling
-            nextButton.disabled = currentPage === totalPages; // Disable if on the last page
-            nextButton.addEventListener('click', () => {
-                currentPage++;
-                renderCards(currentPage, filteredCards);
-            });
-            pagination.appendChild(nextButton);
-        }
-    }
-    
-    
-
-    // Function to filter cards based on search input
-    // Function to filter cards based on search input
-    function filterCards(query) {
-        const filteredCards = cards.filter((card) => {
-            const title = card.querySelector('.cardContent h3').textContent.toLowerCase();
-            const description = card.querySelector('.cardContent p').textContent.toLowerCase();
-            const tag = card.querySelector('.cardContent .tag').textContent.toLowerCase();
-
-            // Check if any of the three elements contains the search query
-            return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
-        });
-        renderCards(currentPage, filteredCards);
-    }
-
-
-    // Listen for input changes in the search field
-    searchInput.addEventListener('input', (e) => {
-        const query = e.target.value.trim(); // Get the search query
-        filterCards(query); // Filter cards based on the query
-    });
-
-    // Listen for window resize events to update cards per page
-    window.addEventListener('resize', () => {
-        // Update the cards per page when the window is resized
-        cardsPerPage = getCardsPerPage();
-        renderCards(currentPage); // Re-render cards based on the new screen size
-    });
-
-    // Initial render of the first page with all cards
-    renderCards(currentPage);
 });
+
+    let customSelects = document.querySelectorAll("#popupSelect");
+
+    customSelects.forEach((customSelect) => {
+        const selectBtn = customSelect.querySelector(".selectBtn");
+        const options = customSelect.querySelectorAll(".option");
+        const sBtn_text = customSelect.querySelector(".sBtntext");
+
+        // Toggle dropdown menu for this customSelect
+        selectBtn.addEventListener("click", (e) => {
+            e.stopPropagation(); // Prevent event bubbling
+            customSelect.classList.toggle("active");
+        });
+
+        // Handle option selection for this customSelect
+        options.forEach((option) => {
+            option.addEventListener("click", () => {
+                const selectedText = option.textContent.trim();
+                sBtn_text.textContent = selectedText; // Update button text
+                customSelect.classList.remove("active"); // Close dropdown
+            });
+        });
+    });
+
+    // Close all dropdowns if clicking outside any customSelect
+    document.addEventListener("click", () => {
+        customSelects.forEach((customSelect) => {
+            customSelect.classList.remove("active");
+        });
+    });
+
 
 
 
