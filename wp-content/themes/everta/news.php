@@ -1,6 +1,6 @@
 <?php get_header(); /*Template name: News*/ ?>
 
-<Section class="resourcesBanner">
+<Section class="resourcesBanner" id="newspage">
     <div class="resorucesBannerWrapper">
         <h1>EV knowledge hub</h1>
         <p>Your go-to source for insights, tools, and the latest in e-mobility</p>

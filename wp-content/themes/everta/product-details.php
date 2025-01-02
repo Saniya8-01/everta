@@ -1,6 +1,6 @@
 <?php get_header(); /*Template name: Product Details*/ ?>
 
-<section class="productBanner">
+<section class="productBanner" >
     <div class="productBannerWrapper">
         <div class="bannerHeading">
             <h1>POWER box</h1>

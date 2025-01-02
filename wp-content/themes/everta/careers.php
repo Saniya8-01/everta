@@ -1,4 +1,4 @@
-<?php get_header(); /*Template name: Careerspage*/ ?>
+<?php get_header(); /*Template name: Careers*/ ?>
 
 <section class="careerBannerSection">
     <div class="careerSectionWrapper">
