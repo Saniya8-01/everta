@@ -370,6 +370,22 @@ body h1{
     }
 }
 
+@mixin font64 {
+    font-size: 64px;
+    @media screen and (max-width:1800px) {
+        font-size: 60px;
+    }     
+    @media screen and (max-width:1440px) {
+        font-size: 52px;
+    }
+    @media screen and (max-width:820px) {
+        font-size: 40px;
+    }
+    @media screen and (max-width:720px) {
+        font-size: 30px;
+    }
+}
+
 @mixin font52 {
     font-size: 52px;
     @media screen and (max-width:1800px) {
