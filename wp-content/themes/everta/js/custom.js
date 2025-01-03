@@ -146,10 +146,6 @@ $(document).ready(function () {
     }
 });
 
-
-
-
-
 //-------------------Header Dropdown JS----------------------//
 
 if ($(".partnersSection").length) {
@@ -443,7 +439,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', applyHoverEffect);
 });
 
-
 $.fn.isInViewport = function (threshold = 0) {
     var elementTop = $(this).offset().top;
     var elementHeight = $(this).outerHeight();
@@ -490,8 +485,6 @@ $(window).on('resize scroll', function () {
         }
     }
 });
-
-
 
 /******About Us Js Start */
 

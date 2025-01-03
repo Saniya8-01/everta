@@ -71,6 +71,14 @@
                         <span class="animate">CCS2 standard</span>
                         <span class="animate">RFID supported</span>
                         <span class="animate">Other Standard</span>
+                        <span class="animate">OCPP Compliancy</span>
+                        <span class="animate">CCS2 standard</span>
+                        <span class="animate">RFID supported</span>
+                        <span class="animate">Other Standard</span>
+                        <span class="animate">OCPP Compliancy</span>
+                        <span class="animate">CCS2 standard</span>
+                        <span class="animate">RFID supported</span>
+                        <span class="animate">Other Standard</span>
                     </div>
                 </div>
             </div>
@@ -211,7 +219,8 @@
             </div>
         </div>
         <div class="image">
-            <img src="<?php bloginfo('template_directory'); ?>/images/accordion-image.png" alt="">
+            <img src="<?php bloginfo('template_directory'); ?>/images/accordion-image.png" alt="" class="desktopImage">
+            <img src="<?php bloginfo('template_directory'); ?>/images/accordion-mobile-image.png" alt="" class="mobileImage">
         </div>
     </div>
 </section>
@@ -460,32 +469,36 @@
     });
 
     if ($(".industryStandardSection").length) {
-        $(".animationWrapper").slick({
-            vertical: true,
-            dots: false,
-            slidesToShow: 3,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            infinite: true,
-        });
-        // Custom opacity handling for seamless loop
-        $(".animationWrapper").on("afterChange", function (event, slick, currentSlide) {
-            // Reset opacity for all slides
-            $(".slick-slide").css("opacity", "0.2");
+    $(".animationWrapper").slick({
+        vertical: true,
+        dots: false,
+        slidesToShow: 3,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        infinite: true,
+    });
 
-            // Get the indexes of the visible slides
-            const totalSlides = slick.$slides.length;
-            const firstIndex = currentSlide;
-            const secondIndex = (currentSlide + 1) % totalSlides;
-            const thirdIndex = (currentSlide + 2) % totalSlides;
+    // Custom opacity handling for seamless loop
+    $(".animationWrapper").on("afterChange", function (event, slick, currentSlide) {
+        const $slider = $(this); // Restrict to current slider
 
-            // Set opacity for the visible slides
-            $(`.slick-slide[data-slick-index="${firstIndex}"]`).css("opacity", "1"); // First slide (active)
-            $(`.slick-slide[data-slick-index="${secondIndex}"]`).css("opacity", "0.5"); // Second slide
-            $(`.slick-slide[data-slick-index="${thirdIndex}"]`).css("opacity", "0.2"); // Third slide
-        });
-    }
+        // Reset opacity for all slides within this slider
+        $slider.find(".slick-slide").css("opacity", "0.2");
+
+        // Get the indexes of the visible slides
+        const totalSlides = slick.$slides.length;
+        const firstIndex = currentSlide;
+        const secondIndex = (currentSlide + 1) % totalSlides;
+        const thirdIndex = (currentSlide + 2) % totalSlides;
+
+        // Set opacity for the visible slides within this slider
+        $slider.find(`.slick-slide[data-slick-index="${firstIndex}"]`).css("opacity", "1"); // First slide (active)
+        $slider.find(`.slick-slide[data-slick-index="${secondIndex}"]`).css("opacity", "0.5"); // Second slide
+        $slider.find(`.slick-slide[data-slick-index="${thirdIndex}"]`).css("opacity", "0.2"); // Third slide
+    });
+}
+
 
     if ($(".technicalDetailsSection").length) {
     jQuery(document).ready(function () {
