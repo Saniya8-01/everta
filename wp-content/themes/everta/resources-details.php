@@ -3,7 +3,7 @@
 <section class="resDetailBannerSec">
     <div class="secWrapper">
         <div class="backBtn">
-            <a href="" >
+            <a href="new#newspage" >
                 <img src="<?php bloginfo('template_directory'); ?>/images/left-arrow-gray.svg" alt=" " />Back 
             </a>
         </div>
