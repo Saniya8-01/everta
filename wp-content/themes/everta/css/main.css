@@ -13626,6 +13626,8 @@ body {
 }
 .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .image {
   flex-shrink: 0;
+  width: 64px;
+  height: 64px;
 }
 .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation {
   height: 190px;
@@ -13637,6 +13639,7 @@ body {
 }
 .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate {
   padding-bottom: 29px;
+  transition: 0.3s all ease-in-out;
 }
 .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-slide {
   font-family: "verdanaregular";
@@ -13644,6 +13647,7 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 166.66%;
+  transition: 0.3s all ease-in-out;
 }
 @media screen and (max-width: 1600px) {
   .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-slide {
@@ -13662,6 +13666,7 @@ body {
   font-weight: 700;
   font-size: 32px;
   line-height: 137.5%;
+  transition: 0.3s all ease-in-out;
 }
 @media screen and (max-width: 1800px) {
   .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-current {
@@ -13676,6 +13681,212 @@ body {
 @media screen and (max-width: 1024px) {
   .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-current {
     font-size: 20px;
+  }
+}
+@media all and (max-width: 1800px) {
+  .industryStandardSection {
+    margin-bottom: 250px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo {
+    margin-top: 70px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo h3 {
+    width: 50%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller {
+    gap: 30px;
+    width: 30%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation {
+    height: 190px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper {
+    height: 190px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate {
+    padding-bottom: 28px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-current {
+    padding-top: 10px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .industryStandardSection {
+    margin-bottom: 220px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo {
+    margin-top: 60px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo h3 {
+    width: 50%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller {
+    gap: 28px;
+    width: 30%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .image {
+    width: 58px;
+    height: 58px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation {
+    height: 180px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper {
+    height: 180px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate {
+    padding-bottom: 26px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .industryStandardSection {
+    margin-bottom: 200px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo {
+    margin-top: 56px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo h3 {
+    width: 50%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller {
+    gap: 24px;
+    width: 30%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .image {
+    width: 54px;
+    height: 54px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation {
+    height: 160px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper {
+    height: 160px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate {
+    padding-bottom: 20px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-current {
+    padding-top: 9px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .industryStandardSection {
+    margin-bottom: 150px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo {
+    margin-top: 50px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo h3 {
+    width: 50%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller {
+    gap: 20px;
+    width: 32%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .image {
+    width: 50px;
+    height: 50px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation {
+    height: 150px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper {
+    height: 150px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate {
+    padding-bottom: 16px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .industryStandardSection .sectionWrapper .bottomInfo h3 {
+    width: 50%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller {
+    gap: 16px;
+    width: 35%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation {
+    height: 150px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper {
+    height: 150px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate {
+    padding-bottom: 16px;
+  }
+}
+@media all and (max-width: 820px) {
+  .industryStandardSection .sectionWrapper .bottomInfo {
+    margin-top: 45px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo h3 {
+    width: 50%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller {
+    gap: 20px;
+    width: 40%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .image {
+    width: 45px;
+    height: 45px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation {
+    height: 120px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper {
+    height: 120px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate {
+    padding-bottom: 12px;
+  }
+}
+@media all and (max-width: 680px) {
+  .industryStandardSection {
+    margin-bottom: 72px;
+  }
+  .industryStandardSection .sectionWrapper .scaleImage .desktopImage {
+    display: none;
+  }
+  .industryStandardSection .sectionWrapper .scaleImage .mobileImage {
+    display: block;
+    width: 100%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo {
+    margin-top: 36px;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo h3 {
+    width: 100%;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .image {
+    width: 60px;
+    height: 60px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation {
+    height: 90px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper {
+    height: 90px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate {
+    padding-bottom: 13px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-slide {
+    font-size: 11.57px;
+    line-height: 19.28px;
+  }
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-current {
+    padding-top: 0px;
+    font-size: 15.43px;
+    line-height: 21.21px;
   }
 }
 
@@ -13964,7 +14175,7 @@ body {
   padding-bottom: 26px;
 }
 .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active .accordion-header {
-  padding-bottom: 24px;
+  padding-bottom: 16px;
   transition: 0.5s all ease-in-out;
 }
 .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active .accordion-header .accordian-icon-wrapper {
@@ -14084,8 +14295,290 @@ body {
 .technicalDetailsSection .technicalDetailsWrapper .image {
   width: 40%;
 }
-.technicalDetailsSection .technicalDetailsWrapper .image img {
+.technicalDetailsSection .technicalDetailsWrapper .image .desktopImage {
   width: 100%;
+}
+.technicalDetailsSection .technicalDetailsWrapper .image .mobileImage {
+  display: none;
+}
+@media all and (max-width: 1800px) {
+  .technicalDetailsSection {
+    margin-bottom: 180px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper {
+    gap: 120px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer {
+    width: 55%;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordionHeading h2 {
+    margin-bottom: 45px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active {
+    padding-bottom: 24px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active .accordion-header {
+    padding-bottom: 14px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header {
+    gap: 22px;
+    padding: 22px 0px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header h4 {
+    width: 100%;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body {
+    width: 90%;
+    padding: 0px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul {
+    padding-left: 22px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul li::before {
+    width: 9px;
+    height: 9px;
+    left: -22px;
+  }
+}
+@media all and (max-width: 1600px) {
+  .technicalDetailsSection {
+    margin-bottom: 150px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper {
+    gap: 100px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer {
+    width: 55%;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordionHeading h2 {
+    margin-bottom: 40px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active {
+    padding-bottom: 22px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active .accordion-header {
+    padding-bottom: 12px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header {
+    gap: 20px;
+    padding: 20px 0px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper {
+    padding: 14px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper .accordion-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper .accordion-icon::after {
+    width: 3px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper .accordion-icon::before {
+    height: 3px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body {
+    width: 90%;
+    padding: 0px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul {
+    padding-left: 22px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul li::before {
+    width: 8px;
+    height: 8px;
+    left: -22px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .technicalDetailsSection {
+    margin-bottom: 120px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper {
+    gap: 80px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer {
+    width: 54%;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordionHeading h2 {
+    margin-bottom: 40px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active {
+    padding-bottom: 20px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active .accordion-header {
+    padding-bottom: 10px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header {
+    gap: 18px;
+    padding: 18px 0px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper {
+    padding: 12px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper .accordion-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul {
+    padding-left: 20px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul li::before {
+    width: 7px;
+    height: 7px;
+    left: -20px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .image {
+    width: 40%;
+  }
+}
+@media all and (max-width: 1280px) {
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer {
+    width: 52%;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordionHeading h2 {
+    margin-bottom: 36px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active {
+    padding-bottom: 18px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active .accordion-header {
+    padding-bottom: 8px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header {
+    gap: 16px;
+    padding: 16px 0px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper {
+    padding: 12px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper .accordion-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper .accordion-icon::after {
+    width: 2px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper .accordion-icon::before {
+    height: 2px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul li::before {
+    width: 6px;
+    height: 6px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .image {
+    width: 42%;
+  }
+}
+@media all and (max-width: 1180px) {
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer {
+    width: 52%;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordionHeading h2 {
+    margin-bottom: 36px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active {
+    padding-bottom: 15px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active .accordion-header {
+    padding-bottom: 8px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header {
+    gap: 16px;
+    padding: 14px 0px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul li::before {
+    width: 6px;
+    height: 6px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .image {
+    width: 44%;
+  }
+}
+@media all and (max-width: 820px) {
+  .technicalDetailsSection {
+    margin-bottom: 72px;
+    padding: 0px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper {
+    flex-direction: column;
+    gap: 42px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1600px) {
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1440px) {
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1024px) {
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 768px) {
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 820px) {
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordionHeading h2 {
+    margin-bottom: 36px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active {
+    padding-bottom: 20px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion.active .accordion-header {
+    padding-bottom: 12px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header {
+    gap: 16px;
+    padding: 16px 0px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header h4 {
+    width: 100%;
+    font-size: 12px;
+    line-height: 32px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper {
+    padding: 9px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper .accordion-icon {
+    width: 13px;
+    height: 13px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul {
+    padding-left: 16px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul li::before {
+    width: 5px;
+    height: 5px;
+    left: -16px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .image {
+    width: 100%;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .image .desktopImage {
+    display: none;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .image .mobileImage {
+    display: block;
+    width: 100%;
+  }
 }
 
 .productSection {
