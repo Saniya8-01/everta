@@ -138,7 +138,7 @@
         </div>
     </div>
     <div class="dnfContainer"> 
-        <h4>Data Not Found</h4>
+        <p>No job listings available at the moment. Stay tuned for future openings.</p>
     </div>
 
 </section>
@@ -263,23 +263,25 @@
             </div>
         </div>
         <div class="jobDescription">
-            <div class="jobDetail">
-                <p>The Sales Manager will be responsible for leading and managing the sales team to achieve sales targets and drive revenue growth. This role involves developing strategic sales plans, building and maintaining customer relationships, and ensuring the sales team operates efficiently and effectively.</p>
+            <div class="detailWrapper">
+                <div class="jobDetail">
+                    <p>The Sales Manager will be responsible for leading and managing the sales team to achieve sales targets and drive revenue growth. This role involves developing strategic sales plans, building and maintaining customer relationships, and ensuring the sales team operates efficiently and effectively.</p>
+                </div>
+                <div class="jobRole">
+                    <h4>Your Role</h4>
+                    <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process, ensuring that our products and services consistently reflect our commitment to excellence. At Everta, quality isn’t just a standard—it’s who we are.</p>
+                </div>
+                <div class="jobResponsiblity">
+                    <h4>Responsibilities</h4>
+                    <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</p>
+                    <ul>
+                        <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
+                        <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
+                        <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
+                        <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
+                    </ul>
+                </div>            
             </div>
-            <div class="jobRole">
-                <h4>Your Role</h4>
-                <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process, ensuring that our products and services consistently reflect our commitment to excellence. At Everta, quality isn’t just a standard—it’s who we are.</p>
-            </div>
-            <div class="jobResponsiblity">
-                <h4>Responsibilities</h4>
-                <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</p>
-                <ul>
-                    <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                    <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                    <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                    <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                </ul>
-            </div>            
         </div>
     </div>
 </div>
