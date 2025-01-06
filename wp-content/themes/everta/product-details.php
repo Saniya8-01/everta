@@ -110,66 +110,51 @@
 </section>
 
 <section class="productInfoSection">
+    <?php if (have_rows('product_info')) : ?>
+    <?php while (have_rows('product_info')) : the_row(); ?>
     <div class="productInfoWrapper">
         <div class="headingWrapper">
-            <h2>PRODUCT FEATURES</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-                tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum.</p>
+            <h2><?php echo get_sub_field('section_heading'); ?></h2>
+            <p><?php echo get_sub_field('section_subheading'); ?></p>
         </div>
         <div class="productDetails">
+            <?php if (have_rows('feature_points')) : ?>
+            <?php while (have_rows('feature_points')) : the_row(); ?>
             <div class="feature">
+                <?php if (have_rows('product_feature')) : ?>
+                <?php while (have_rows('product_feature')) : the_row(); ?>
                 <div class="information">
-                    <h4>Best for overnight charging</h4>
-                    <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
-                        overnight charging at home or during work hours in a business setting.</p>
+                    <h4><?php echo get_sub_field('desktop_title'); ?></h4>
+                    <p><?php echo get_sub_field('desktop_description'); ?></p>
                 </div>
-                <div class="information">
-                    <h4>Best for overnight charging</h4>
-                    <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
-                        overnight charging at home or during work hours in a business setting.</p>
-                </div>
+                <?php endwhile; ?>
+                <?php endif; ?>
             </div>
-            <div class="feature">
-                <div class="information">
-                    <h4>Best for overnight charging</h4>
-                    <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
-                        overnight charging at home or during work hours in a business setting.</p>
-                </div>
-                <div class="information">
-                    <h4>Best for overnight charging</h4>
-                    <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
-                        overnight charging at home or during work hours in a business setting.</p>
-                </div>
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
             <div class="middle">
-                <img src="<?php bloginfo('template_directory'); ?>/images/dc-120kw-image.png" alt="">
+                <?php $featureImage = get_sub_field('feature_image');
+                if (!empty($featureImage)) : ?>
+                <img src="<?php echo esc_url($featureImage['url']); ?>" loading="lazy"
+                    alt="<?php echo esc_attr($featureImage['alt']); ?>" />
+                <?php endif; ?>
             </div>
             <div class="mobileUi">
                 <div class="mobileSliderContainer">
+                    <?php if (have_rows('product_feature_mobile')) : ?>
+                    <?php while (have_rows('product_feature_mobile')) : the_row(); ?>
                     <div class="sliderContent">
-                        <h4>Best for overnight charging</h4>
-                        <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
-                            overnight charging at home or during work hours in a business setting.</p>
+                        <h4><?php echo get_sub_field('mobile_title'); ?></h4>
+                        <p><?php echo get_sub_field('mobile_description'); ?></p>
                     </div>
-                    <div class="sliderContent">
-                        <h4>Best for overnight charging</h4>
-                        <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
-                            overnight charging at home or during work hours in a business setting.</p>
-                    </div>
-                    <div class="sliderContent">
-                        <h4>Best for overnight charging</h4>
-                        <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
-                            overnight charging at home or during work hours in a business setting.</p>
-                    </div>
-                    <div class="sliderContent">
-                        <h4>Best for overnight charging</h4>
-                        <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
-                            overnight charging at home or during work hours in a business setting.</p>
-                    </div>
+                    <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="technicalDetailsSection">
