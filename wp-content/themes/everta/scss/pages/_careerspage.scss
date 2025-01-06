@@ -365,12 +365,42 @@
       }
     }
   }
+  @media (width: 1366px) and (height: 1024px){
+    .careerSectionWrapper{
+      .hiringProcessContainer{
+        .hiringProcessBox{
+          &:nth-child(odd){background: $primaryColor1;}
+          &:nth-child(even){background: #fff;}
+          .contentBox{
+            .subHeadings{
+              h6{opacity: 1; visibility: visible;}
+            }
+          }
+        }
+      }
+    }
+  }
   @media all and (max-width: 1280px){
     .careerSectionWrapper{
       .hiringProcessContainer{
         .hiringProcessBox{padding: 50px 40px 70px;
           .contentBox{
             .boxNumber{margin: 60px 0 25px; width: 40px; height: 40px;}
+          }
+        }
+      }
+    }
+  }
+  @media all and (max-width: 1180px){
+    .careerSectionWrapper{
+      .hiringProcessContainer{
+        .hiringProcessBox{
+          &:nth-child(odd){background: $primaryColor1;}
+          &:nth-child(even){background: #fff;}
+          .contentBox{
+            .subHeadings{
+              h6{opacity: 1; visibility: visible;}
+            }
           }
         }
       }
@@ -383,17 +413,9 @@
           .logoBox{width: 180px; height: 180px;}
           .contentBox{
             .boxNumber{margin: 50px 0 20px; width: 40px; height: 40px;}
-            .subHeadings{
-              h6{opacity: 1; visibility: visible;}
-            }
+            
           }
-          &:hover{background: unset;
-            .contentBox{
-              .subHeadings{
-                h6{visibility: visible; opacity: 1;}
-              }
-            }
-          }
+          
         }
       }
     }

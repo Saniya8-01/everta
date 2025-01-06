@@ -864,13 +864,19 @@ if ($(".resDetailContentSec").length) {
         const readMore = document.getElementById("readMore");
         const contentBox = document.querySelector('.contentBox');
         const readMoreBtnBox = document.querySelector('.readMoreBtnBox');
-
-        function ContentShowFunc() {
-            contentBox.classList.add("removeFadeEffect");
-            contentBox.classList.remove("hideTxt");
-            readMoreBtnBox.classList.add("btnHide");
-        }
-        readMore.addEventListener("click", ContentShowFunc);
+        readMore.addEventListener("click", function () {
+            if (contentBox.classList.contains("hideTxt")) {
+              contentBox.style.maxHeight = `${contentBox.scrollHeight}px`; // Set current height
+              contentBox.classList.remove("hideTxt");
+              contentBox.classList.add("removeFadeEffect");
+              readMoreBtnBox.classList.add("btnHide");
+            } else {
+              // Expand content
+              contentBox.style.maxHeight = `${contentBox.scrollHeight}px`; // Set dynamic max-height
+              contentBox.classList.add("hideTxt");
+            
+            }
+          });
     })
 }
 

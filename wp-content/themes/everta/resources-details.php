@@ -97,7 +97,7 @@
                     <div class="contentBox">
                         <div class="content">
                             <span>News</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                             <ul>
                                 <li>11 Jan 2022</li>
                                 <li>5 min read</li>

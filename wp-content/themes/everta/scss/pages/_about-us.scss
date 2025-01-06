@@ -51,7 +51,7 @@
             }
         }
     }
-    @media all and (max-width: 720px){margin-bottom: 72px;
+    @media all and (max-width: 720px){
         .journeySecWrapper{
             .secHeading{margin-bottom: 48px;
                 h1{margin-bottom:15px; font-size: 36px; line-height: 133%;}
@@ -89,7 +89,7 @@
                         .cardTxt{
                             p{transform: translateX(0%);}
                         }
-                        .cardIcon{left: 88%;
+                        .cardIcon{left: 85%;
                             img{transform: scale3d(1.6, 1.6, 1.6);}
                         }
                     }
@@ -204,7 +204,7 @@
             }
         }
     }
-    @media all and (max-width: 720px){margin-bottom: 72px;
+    @media all and (max-width: 720px){
         .missionSecWrapper{
             .mainContainer{
                 .card{padding: 30px 20px; gap: 16px;
@@ -386,7 +386,7 @@
             .innerSec{height: 300vh;}
         }
     }
-    @media all and (max-width: 720px){margin-bottom: 72px;
+    @media all and (max-width: 720px){
         .secWrapper{
             .innerSec{height: 360vh;
                 .secHeading{
@@ -510,7 +510,7 @@
             }
         }
     }
-    @media all and (max-width: 720px){margin-bottom: 72px;
+    @media all and (max-width: 720px){
         .secWrapper{
             .mainContainer{gap: 50px; padding: 35px 0; 
                 .contentBox{padding-right: 20px;
@@ -624,7 +624,7 @@
             }
         }
     }
-    @media all and (max-width: 720px){background: $primaryColor1; margin-bottom: 72px;
+    @media all and (max-width: 720px){background: $primaryColor1;
         .secWrapper{
             .secHeading{margin-bottom: 45px; padding-top: 30px;
                 h2{margin-bottom: 12px;  line-height: 116%; text-align: left;}
@@ -729,7 +729,7 @@
             }
         }
     }
-    @media all and (max-width: 720px){margin-bottom: 72px;
+    @media all and (max-width: 720px){
         .secWrapper{
             .poweringMainContainer{
                 .contentBox{
@@ -768,7 +768,7 @@
             .secHeading{gap: 35px;}
         }
     }
-    @media all and (max-width: 720px){margin-bottom: 72px;
+    @media all and (max-width: 720px){
         .secWrapper{
             .secHeading{gap: 25px; align-items: flex-start;
                 h2{text-align: left; line-height: 116%;}
@@ -910,7 +910,7 @@
             }
         }
     }
-    @media all and (max-width: 720px){margin-bottom: 72px;
+    @media all and (max-width: 720px){
         .secWrapper{
             .visiUsMainContainer{flex-flow: column;
                 .mapBox{width: 100%;}

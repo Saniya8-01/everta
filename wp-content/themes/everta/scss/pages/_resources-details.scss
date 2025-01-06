@@ -62,8 +62,8 @@
 }
 .resDetailContentSec{margin-bottom: 120px;
     .secWrapper{@include wrapper; width: 70%; margin: 0 auto;
-        .contentBox{ position: relative; transition: 0.5s all ease-in; overflow: visible; height: auto;
-            &.hideTxt{ height: 1000px; overflow: hidden; transition: 0.5s all ease-in;}
+        .contentBox{ position: relative; transition: 0.4s all ease-in-out; overflow: visible; 
+            &.hideTxt{ max-height: 1068px; overflow: hidden; transition: 0.4s all ease-in;}
             h2{margin-bottom: 24px; color: #000; @include terminabold; @include font32; line-height: 150%;}
             p{color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 30px;}
             ol{margin-left: 20px; margin-bottom: 50px;
@@ -101,16 +101,25 @@
             &.btnHide{display: none;}
         }
     }
+    @media all and (max-width: 1920px){
+        .secWrapper{
+            .contentBox{
+                &.hideTxt{height: 1000px;}
+            }
+        }
+    }
     @media all and (max-width: 1800px){margin-bottom: 110px;
         .secWrapper{width: 75%;
             .contentBox{
+                &.hideTxt{height: 900px;}
                 .bottomspace{margin-bottom: 30px;}
             }
         }
     }
     @media all and (max-width: 1600px){
         .secWrapper{width: 80%;
-            .contentBox{               
+            .contentBox{
+                &.hideTxt{height: 850px;}               
                 .bottomspace{margin-bottom: 25px;}
                 p{margin-bottom: 28px;}
                 ol{margin-bottom: 45px;}
@@ -121,6 +130,7 @@
     @media all and (max-width: 1440px){margin-bottom: 100px;
         .secWrapper{width: 85%;
             .contentBox{
+                &.hideTxt{height: 800px;}
                 h2{margin-bottom: 20px;}
                 p{margin-bottom: 26px;}
                 ol{margin-bottom: 40px;}
@@ -132,9 +142,10 @@
             }
         }
     }
-    @media all and (max-width: 1280px){margin-bottom: 80px;
+    @media all and (max-width: 1280px){
         .secWrapper{
             .contentBox{
+                &.hideTxt{height: 730px;}
                 p{margin-bottom: 24px;}
                 ol{margin-bottom: 40px;}
                 ul{margin-bottom: 40px;}
@@ -142,7 +153,7 @@
             }
         }
     }
-    @media all and (max-width: 1024px){margin-bottom: 60px;
+    @media all and (max-width: 1024px){
         .secWrapper{width: 85%;
             .contentBox{
                 &.hideTxt{ height: 650px;}
@@ -153,7 +164,7 @@
         .secWrapper{width: 90%;
         }
     }
-    @media all and (max-width: 720px){margin-bottom: 72px;
+    @media all and (max-width: 720px){
         .secWrapper{width: 100%;
             .contentBox{
                 &.hideTxt{ height: 550px;}
