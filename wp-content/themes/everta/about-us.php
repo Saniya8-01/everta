@@ -84,10 +84,8 @@
                     <img src="<?php bloginfo('template_directory'); ?>/images/everta-we-value3.webp" alt="">
                 </div>
             </div>
-           
         </div>
     </div>
-    
 </section>
 
 <section class="ourStrengthsSec">

@@ -117,7 +117,19 @@
                 tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum.</p>
         </div>
         <div class="productDetails">
-            <div class="left">
+            <div class="feature">
+                <div class="information">
+                    <h4>Best for overnight charging</h4>
+                    <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
+                        overnight charging at home or during work hours in a business setting.</p>
+                </div>
+                <div class="information">
+                    <h4>Best for overnight charging</h4>
+                    <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
+                        overnight charging at home or during work hours in a business setting.</p>
+                </div>
+            </div>
+            <div class="feature">
                 <div class="information">
                     <h4>Best for overnight charging</h4>
                     <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
@@ -131,18 +143,6 @@
             </div>
             <div class="middle">
                 <img src="<?php bloginfo('template_directory'); ?>/images/dc-120kw-image.png" alt="">
-            </div>
-            <div class="right">
-                <div class="information">
-                    <h4>Best for overnight charging</h4>
-                    <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
-                        overnight charging at home or during work hours in a business setting.</p>
-                </div>
-                <div class="information">
-                    <h4>Best for overnight charging</h4>
-                    <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
-                        overnight charging at home or during work hours in a business setting.</p>
-                </div>
             </div>
             <div class="mobileUi">
                 <div class="mobileSliderContainer">
