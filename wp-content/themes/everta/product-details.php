@@ -2,88 +2,111 @@
 
 
 <section class="productBanner">
+    <?php if (have_rows('banner_section')) : ?>
+    <?php while (have_rows('banner_section')) : the_row(); ?>
     <div class="productBannerWrapper">
         <div class="bannerHeading">
-            <h1>POWER box</h1>
+            <h1><?php echo get_sub_field('banner_heading'); ?></h1>
         </div>
         <div class="productDetails">
-            <p><span>99%</span> Uptime</p>
-            <p><span>Smart chargers</span> with utilisation tracking</p>
-            <p><span>OCCP</span> Compliancy</p>
+            <?php if (have_rows('features_list')) : ?>
+            <?php while (have_rows('features_list')) : the_row(); ?>
+            <p><?php echo get_sub_field('feature_info'); ?></p>
+            <?php endwhile; ?>
+            <?php endif; ?>
         </div>
         <div class="bannerImages">
-            <img src="<?php bloginfo('template_directory'); ?>/images/product-banner.png" alt="" class="productImage">
-            <img src="<?php bloginfo('template_directory'); ?>/images/product-bg-image.png" alt="" class="bannerBg">
+            <?php
+            $bgImage = get_sub_field('bg_image');
+            $productImage = get_sub_field('product_image');
+        ?>
+            <?php if ( !empty( $bgImage ) ): ?>
+            <img src="<?php echo esc_url( $bgImage['url'] ); ?>"
+                alt="<?php echo esc_attr( $bgImage['alt'] ); ?>" class="bannerBg">
+            <?php endif; ?>
+
+            <?php if ( !empty( $productImage ) ): ?>
+
+            <img src="<?php echo esc_url( $productImage['url'] ); ?>"
+                alt="<?php echo esc_attr( $productImage['alt'] ); ?>" class="productImage">
+            <?php endif; ?>
         </div>
         <div class="ctaDiv">
-            <a href="" class="ctaYellow">Buy Everta Charger</a>
-            <a href="" class="ctaWhiteBlack" download>Download Brochure</a>
+            <a href="<?php echo get_sub_field('buy_link'); ?>" class="ctaYellow"><?php echo get_sub_field('buy_text'); ?></a>
+            <a href="<?php echo get_sub_field('download_link'); ?>" class="ctaWhiteBlack" download><?php echo get_sub_field('download_text'); ?></a>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="secondFold">
+    <?php if (have_rows('second_fold')) : ?>
+    <?php while (have_rows('second_fold')) : the_row(); ?>
     <div class="secondFoldWrapper">
+        <?php if (have_rows('vehicles_card')) : ?>
+        <?php while (have_rows('vehicles_card')) : the_row(); ?>
         <div class="industryCard">
             <div class="imageDiv">
-                <img src="<?php bloginfo('template_directory'); ?>/images/productcard-1.svg" alt="">
+                <?php $vehicleiconImage = get_sub_field('icon_image');
+                if (!empty($vehicleiconImage)) : ?>
+                <img src="<?php echo esc_url($vehicleiconImage['url']); ?>" loading="lazy"
+                    alt="<?php echo esc_attr($vehicleiconImage['alt']); ?>" />
+                <?php endif; ?>
             </div>
-            <h3>For efficient fleets</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-                tristique.</p>
+            <h3><?php echo get_sub_field('title'); ?></h3>
+            <p><?php echo get_sub_field('description'); ?></p>
         </div>
-        <div class="industryCard">
-            <div class="imageDiv">
-                <img src="<?php bloginfo('template_directory'); ?>/images/productcard-2.svg" alt="">
-            </div>
-            <h3>For heavy duty vehicles</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-                tristique.</p>
-        </div>
-        <div class="industryCard">
-            <div class="imageDiv">
-                <img src="<?php bloginfo('template_directory'); ?>/images/productcard-3.svg" alt="">
-            </div>
-            <h3>For public parking</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-                tristique.</p>
-        </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="industryStandardSection">
+    <?php if (have_rows('industry_standard_section')) : ?>
+    <?php while (have_rows('industry_standard_section')) : the_row(); ?>
     <div class="sectionWrapper">
         <div class="scaleImage">
-            <img src="<?php bloginfo('template_directory'); ?>/images/product-second-fold.png" alt=""
-                class="desktopImage">
-            <img src="<?php bloginfo('template_directory'); ?>/images/product-second-fold-mobile.png" alt=""
-                class="mobileImage">
+            <?php
+            $industryDesktopImage = get_sub_field('desktop_image');
+            $industryMobileImage = get_sub_field('mobile_image');
+        ?>
+            <?php if ( !empty( $industryDesktopImage ) ): ?>
+            <img src="<?php echo esc_url( $industryDesktopImage['url'] ); ?>"
+                alt="<?php echo esc_attr( $industryDesktopImage['alt'] ); ?>" class="desktopImage">
+            <?php endif; ?>
+
+            <?php if ( !empty( $industryMobileImage ) ): ?>
+            <img src="<?php echo esc_url( $industryMobileImage['url'] ); ?>"
+                alt="<?php echo esc_attr( $industryMobileImage['alt'] ); ?>" class="mobileImage">
+            <?php endif; ?>
         </div>
         <div class="bottomInfo">
-            <h3>Industry standards of our products for the popular industries</h3>
+            <h3><?php echo get_sub_field('industry_title'); ?></h3>
             <div class="autoScroller">
                 <div class="image">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/autoscrollerslider-image.svg" alt="">
+                    <?php $iconImage = get_sub_field('icon_image');
+                    if (!empty($iconImage)) : ?>
+                    <img src="<?php echo esc_url($iconImage['url']); ?>" loading="lazy"
+                        alt="<?php echo esc_attr($iconImage['alt']); ?>" />
+                    <?php endif; ?>
                 </div>
                 <div class="scrollAnimation">
                     <div class="animationWrapper">
-                        <span class="animate">OCPP Compliancy</span>
-                        <span class="animate">CCS2 standard</span>
-                        <span class="animate">RFID supported</span>
-                        <span class="animate">Other Standard</span>
-                        <span class="animate">OCPP Compliancy</span>
-                        <span class="animate">CCS2 standard</span>
-                        <span class="animate">RFID supported</span>
-                        <span class="animate">Other Standard</span>
-                        <span class="animate">OCPP Compliancy</span>
-                        <span class="animate">CCS2 standard</span>
-                        <span class="animate">RFID supported</span>
-                        <span class="animate">Other Standard</span>
+                        <?php if (have_rows('vertical_slider')) : ?>
+                        <?php while (have_rows('vertical_slider')) : the_row(); ?>
+                        <span class="animate"><?php echo get_sub_field('slider_content'); ?></span>
+                        <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="productInfoSection">
@@ -121,167 +144,136 @@
                         overnight charging at home or during work hours in a business setting.</p>
                 </div>
             </div>
+            <div class="mobileUi">
+                <div class="mobileSliderContainer">
+                    <div class="sliderContent">
+                        <h4>Best for overnight charging</h4>
+                        <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
+                            overnight charging at home or during work hours in a business setting.</p>
+                    </div>
+                    <div class="sliderContent">
+                        <h4>Best for overnight charging</h4>
+                        <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
+                            overnight charging at home or during work hours in a business setting.</p>
+                    </div>
+                    <div class="sliderContent">
+                        <h4>Best for overnight charging</h4>
+                        <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
+                            overnight charging at home or during work hours in a business setting.</p>
+                    </div>
+                    <div class="sliderContent">
+                        <h4>Best for overnight charging</h4>
+                        <p>AC chargers are ideal for scenarios where vehicles are parked for extended periods, such as
+                            overnight charging at home or during work hours in a business setting.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <section class="technicalDetailsSection">
+    <?php if (have_rows('technical_details')) : ?>
+    <?php while (have_rows('technical_details')) : the_row(); ?>
     <div class="technicalDetailsWrapper">
         <div class="accordionContainer">
             <div class="accordionHeading">
-                <h2>technical details</h2>
+                <h2><?php echo get_sub_field('section_heading'); ?></h2>
             </div>
             <div class="accordions-wrapper">
+                <?php if (have_rows('accordion')) : ?>
+                <?php while (have_rows('accordion')) : the_row(); ?>
                 <div class="accordion">
                     <div class="accordion-header">
-                        <h4>General</h4>
+                        <h4><?php echo get_sub_field('accordion_heading'); ?></h4>
                         <div class="accordian-icon-wrapper">
                             <div class="accordion-icon"></div>
                         </div>
                     </div>
                     <div class="accordion-body">
-                        <ul>
-                            <li>Type of charging current AC 3-phase</li>
-                            <li>Number of charging points 1</li>
-                            <li>Point charging power 22kW</li>
-                            <li>Point charging current 3 x 32A</li>
-                        </ul>
+                        <?php echo get_sub_field('list'); ?>
                     </div>
                 </div>
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <h4>
-                            Connectivity and integrations </h4>
-                        <div class="accordian-icon-wrapper">
-                            <div class="accordion-icon"></div>
-                        </div>
-                    </div>
-                    <div class="accordion-body">
-                        <ul>
-                            <li>Type of charging current AC 3-phase</li>
-                            <li>Number of charging points 1</li>
-                            <li>Point charging power 22kW</li>
-                            <li>Point charging current 3 x 32A</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <h4>
-                            Electrical </h4>
-                        <div class="accordian-icon-wrapper">
-                            <div class="accordion-icon"></div>
-                        </div>
-                    </div>
-                    <div class="accordion-body">
-                        <ul>
-                            <li>Type of charging current AC 3-phase</li>
-                            <li>Number of charging points 1</li>
-                            <li>Point charging power 22kW</li>
-                            <li>Point charging current 3 x 32A</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <h4>
-                            Safety </h4>
-                        <div class="accordian-icon-wrapper">
-                            <div class="accordion-icon"></div>
-                        </div>
-                    </div>
-                    <div class="accordion-body">
-                        <ul>
-                            <li>Type of charging current AC 3-phase</li>
-                            <li>Number of charging points 1</li>
-                            <li>Point charging power 22kW</li>
-                            <li>Point charging current 3 x 32A</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <h4>
-                            Disclaimer </h4>
-                        <div class="accordian-icon-wrapper">
-                            <div class="accordion-icon"></div>
-                        </div>
-                    </div>
-                    <div class="accordion-body">
-                        <ul>
-                            <li>Type of charging current AC 3-phase</li>
-                            <li>Number of charging points 1</li>
-                            <li>Point charging power 22kW</li>
-                            <li>Point charging current 3 x 32A</li>
-                        </ul>
-                    </div>
-                </div>
+                <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
         <div class="image">
-            <img src="<?php bloginfo('template_directory'); ?>/images/accordion-image.png" alt="" class="desktopImage">
-            <img src="<?php bloginfo('template_directory'); ?>/images/accordion-mobile-image.png" alt="" class="mobileImage">
+            <?php
+            $desktopImage = get_sub_field('desktop_image');
+            $mobileImage = get_sub_field('mobile_image');
+        ?>
+            <?php if ( !empty( $desktopImage ) ): ?>
+            <img src="<?php echo esc_url( $desktopImage['url'] ); ?>"
+                alt="<?php echo esc_attr( $desktopImage['alt'] ); ?>" class="desktopImage">
+            <?php endif; ?>
+
+            <?php if ( !empty( $mobileImage ) ): ?>
+            <img src="<?php echo esc_url( $mobileImage['url'] ); ?>"
+                alt="<?php echo esc_attr( $mobileImage['alt'] ); ?>" class="mobileImage">
+            <?php endif; ?>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="exploreSection">
+    <?php if (have_rows('explore_section')) : ?>
+    <?php while (have_rows('explore_section')) : the_row(); ?>
     <div class="exploreSectionWrapper">
         <div class="leftContent">
             <div class="contentWrapper">
-                <h2>EXPLORE EVERTA</h2>
-                <p>Explore our digital solutions that complements and elevates Everta users experience</p>
-                <a href="" class="ctaBlack">View Solutions</a>
+                <h2>
+                    <?php echo get_sub_field('explore_heading'); ?>
+                </h2>
+                <p>
+                    <?php echo get_sub_field('explore_subheading'); ?>
+                </p>
+                <a href="<?php echo get_sub_field('solutions_link'); ?>" class="ctaBlack">
+                    <?php echo get_sub_field('solutions_text'); ?>
+                </a>
             </div>
         </div>
         <div class="rightContent">
-            <img src="<?php bloginfo('template_directory'); ?>/images/iphone-12-mini--green.png" alt="">
+            <?php $mobileImage = get_sub_field('cellphone_image');
+            if (!empty($mobileImage)) : ?>
+            <img src="<?php echo esc_url($mobileImage['url']); ?>" loading="lazy"
+                alt="<?php echo esc_attr($mobileImage['alt']); ?>" />
+            <?php endif; ?>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="testimonialSection">
+    <?php if (have_rows('testimonial_section')) : ?>
+    <?php while (have_rows('testimonial_section')) : the_row(); ?>
     <div class="testimonialSectionWrapper">
         <div class="testimonialSectionHeading">
-            <h2>Testimonials from Gen E</h2>
+            <h2>
+                <?php echo get_sub_field('heading'); ?>
+            </h2>
         </div>
         <div class="testimonialCardWrapper">
+            <?php if (have_rows('testimonial_card')) : ?>
+            <?php while (have_rows('testimonial_card')) : the_row(); ?>
             <div class="testimonialCard">
                 <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="" class="commaImg">
-                <p class="testimonialPara">Everta's charging service has significantly our fleet operations, delivering
-                    reliable, cost-effective has
-                    energy solutions ,service has significantly, cost-effective has energy solutions</p>
+                <p class="testimonialPara">
+                    <?php echo get_sub_field('testimonial_words'); ?>
+                </p>
                 <div class="clientImages">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/bosch-image.png" alt="">
+                    <?php $clientImage = get_sub_field('client_image');
+                    if (!empty($clientImage)) : ?>
+                    <img src="<?php echo esc_url($clientImage['url']); ?>" loading="lazy"
+                        alt="<?php echo esc_attr($clientImage['alt']); ?>" />
+                    <?php endif; ?>
                 </div>
             </div>
-            <div class="testimonialCard">
-                <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="" class="commaImg">
-                <p class="testimonialPara">Everta's charging service has significantly our fleet operations, delivering
-                    reliable, cost-effective has
-                    energy solutions ,service has significantly, cost-effective has energy solutions</p>
-                <div class="clientImages">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/harley-davidson-image.png" alt="">
-                </div>
-            </div>
-            <div class="testimonialCard">
-                <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="" class="commaImg">
-                <p class="testimonialPara">Everta's charging service has significantly our fleet operations, delivering
-                    reliable, cost-effective has
-                    energy solutions ,service has significantly, cost-effective has energy solutions</p>
-                <div class="clientImages">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/bmw-image.png" alt="">
-                </div>
-            </div>
-            <div class="testimonialCard">
-                <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="" class="commaImg">
-                <p class="testimonialPara">Everta's charging service has significantly our fleet operations, delivering
-                    reliable, cost-effective has
-                    energy solutions ,service has significantly, cost-effective has energy solutions</p>
-                <div class="clientImages">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/bosch-image.png" alt="">
-                </div>
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
         </div>
         <div class="progresBar">
             <div class="progress-bar-container">
@@ -289,20 +281,29 @@
             </div>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="formSection">
+    <?php if (have_rows('form_section')) : ?>
+    <?php while (have_rows('form_section')) : the_row(); ?>
     <div class="formWrapper">
         <div class="formTitle">
-            <h2>Interested in Everta?</h2>
-            <p>Start partnering with us or purchase our solutions by filling out the form today and take the first step
-                toward a more sustainable and efficient energy future.</p>
+            <h2>
+                <?php echo get_sub_field('heading'); ?>
+            </h2>
+            <p>
+                <?php echo get_sub_field('subheading'); ?>
+            </p>
         </div>
         <div class="productCtas">
-            <a href="" class="ctaBlack">Reach out to us</a>
-            <a href="" class="ctaYellow">Go to Knowledge Hub</a>
+            <a href="<?php echo get_sub_field('cta_link_first'); ?>" class="ctaBlack"><?php echo get_sub_field('cta_text_first'); ?></a>
+            <a href="<?php echo get_sub_field('cta_link_second'); ?>" class="ctaYellow"><?php echo get_sub_field('cta_text_second'); ?></a>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="productSection">
@@ -468,15 +469,12 @@
         });
     });
 
-    if ($(".industryStandardSection").length) {
-    $(".animationWrapper").slick({
-        vertical: true,
+    if ($(".productInfoSection").length) {
+    $(".mobileSliderContainer").slick({
         dots: false,
-        slidesToShow: 3,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        infinite: true,
+        slidesToShow: 1,
+        arrows: true,
+        infinite: false,
     });
 
     // Custom opacity handling for seamless loop
@@ -498,6 +496,19 @@
         $slider.find(`.slick-slide[data-slick-index="${thirdIndex}"]`).css("opacity", "0.2"); // Third slide
     });
 }
+
+if ($(".industryStandardSection").length) {
+    $(".animationWrapper").slick({
+        vertical: true,
+        dots: false,
+        slidesToShow: 3,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        infinite: true,
+    });
+}
+
 
 
     if ($(".technicalDetailsSection").length) {
