@@ -7140,6 +7140,18 @@ body {
     height: 40px;
   }
 }
+@media (width: 1366px) and (height: 1024px) {
+  .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox:nth-child(odd) {
+    background: #F5F75E;
+  }
+  .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox:nth-child(even) {
+    background: #fff;
+  }
+  .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox .contentBox .subHeadings h6 {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 @media all and (max-width: 1280px) {
   .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox {
     padding: 50px 40px 70px;
@@ -7148,6 +7160,18 @@ body {
     margin: 60px 0 25px;
     width: 40px;
     height: 40px;
+  }
+}
+@media all and (max-width: 1180px) {
+  .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox:nth-child(odd) {
+    background: #F5F75E;
+  }
+  .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox:nth-child(even) {
+    background: #fff;
+  }
+  .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox .contentBox .subHeadings h6 {
+    opacity: 1;
+    visibility: visible;
   }
 }
 @media all and (max-width: 1024px) {
@@ -7162,17 +7186,6 @@ body {
     margin: 50px 0 20px;
     width: 40px;
     height: 40px;
-  }
-  .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox .contentBox .subHeadings h6 {
-    opacity: 1;
-    visibility: visible;
-  }
-  .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox:hover {
-    background: unset;
-  }
-  .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox:hover .contentBox .subHeadings h6 {
-    visibility: visible;
-    opacity: 1;
   }
 }
 @media all and (max-width: 820px) {
@@ -8104,9 +8117,6 @@ body {
   }
 }
 @media all and (max-width: 720px) {
-  .journeySection {
-    margin-bottom: 72px;
-  }
   .journeySection .journeySecWrapper .secHeading {
     margin-bottom: 48px;
   }
@@ -8228,7 +8238,7 @@ body {
   transform: translateX(0%);
 }
 .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
-  left: 88%;
+  left: 85%;
 }
 .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon img {
   transform: scale3d(1.6, 1.6, 1.6);
@@ -8360,9 +8370,6 @@ body {
   }
 }
 @media all and (max-width: 720px) {
-  .missionSection {
-    margin-bottom: 72px;
-  }
   .missionSection .missionSecWrapper .mainContainer .card {
     padding: 30px 20px;
     gap: 16px;
@@ -8702,9 +8709,6 @@ body {
   }
 }
 @media all and (max-width: 720px) {
-  .ourStrengthsSec {
-    margin-bottom: 72px;
-  }
   .ourStrengthsSec .secWrapper .innerSec {
     height: 360vh;
   }
@@ -8983,9 +8987,6 @@ body {
   }
 }
 @media all and (max-width: 720px) {
-  .ourStorySec {
-    margin-bottom: 72px;
-  }
   .ourStorySec .secWrapper .mainContainer {
     gap: 50px;
     padding: 35px 0;
@@ -9280,7 +9281,6 @@ body {
 @media all and (max-width: 720px) {
   .foundersSec {
     background: #F5F75E;
-    margin-bottom: 72px;
   }
   .foundersSec .secWrapper .secHeading {
     margin-bottom: 45px;
@@ -9554,9 +9554,6 @@ body {
   }
 }
 @media all and (max-width: 720px) {
-  .poweringIdeaSec {
-    margin-bottom: 72px;
-  }
   .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p:first-child {
     margin-bottom: 12px;
     font-size: 12px;
@@ -9676,9 +9673,6 @@ body {
   }
 }
 @media all and (max-width: 720px) {
-  .careerAtEvertaSec {
-    margin-bottom: 72px;
-  }
   .careerAtEvertaSec .secWrapper .secHeading {
     gap: 25px;
     align-items: flex-start;
@@ -9930,9 +9924,6 @@ body {
   }
 }
 @media all and (max-width: 720px) {
-  .visitUsSec {
-    margin-bottom: 72px;
-  }
   .visitUsSec .secWrapper .visiUsMainContainer {
     flex-flow: column;
   }
@@ -10191,14 +10182,13 @@ body {
 }
 .resDetailContentSec .secWrapper .contentBox {
   position: relative;
-  transition: 0.5s all ease-in;
+  transition: 0.4s all ease-in-out;
   overflow: visible;
-  height: auto;
 }
 .resDetailContentSec .secWrapper .contentBox.hideTxt {
-  height: 1000px;
+  max-height: 1068px;
   overflow: hidden;
-  transition: 0.5s all ease-in;
+  transition: 0.4s all ease-in;
 }
 .resDetailContentSec .secWrapper .contentBox h2 {
   margin-bottom: 24px;
@@ -10402,12 +10392,20 @@ body {
 .resDetailContentSec .secWrapper .readMoreBtnBox.btnHide {
   display: none;
 }
+@media all and (max-width: 1920px) {
+  .resDetailContentSec .secWrapper .contentBox.hideTxt {
+    height: 1000px;
+  }
+}
 @media all and (max-width: 1800px) {
   .resDetailContentSec {
     margin-bottom: 110px;
   }
   .resDetailContentSec .secWrapper {
     width: 75%;
+  }
+  .resDetailContentSec .secWrapper .contentBox.hideTxt {
+    height: 900px;
   }
   .resDetailContentSec .secWrapper .contentBox .bottomspace {
     margin-bottom: 30px;
@@ -10416,6 +10414,9 @@ body {
 @media all and (max-width: 1600px) {
   .resDetailContentSec .secWrapper {
     width: 80%;
+  }
+  .resDetailContentSec .secWrapper .contentBox.hideTxt {
+    height: 850px;
   }
   .resDetailContentSec .secWrapper .contentBox .bottomspace {
     margin-bottom: 25px;
@@ -10436,6 +10437,9 @@ body {
   }
   .resDetailContentSec .secWrapper {
     width: 85%;
+  }
+  .resDetailContentSec .secWrapper .contentBox.hideTxt {
+    height: 800px;
   }
   .resDetailContentSec .secWrapper .contentBox h2 {
     margin-bottom: 20px;
@@ -10460,8 +10464,8 @@ body {
   }
 }
 @media all and (max-width: 1280px) {
-  .resDetailContentSec {
-    margin-bottom: 80px;
+  .resDetailContentSec .secWrapper .contentBox.hideTxt {
+    height: 730px;
   }
   .resDetailContentSec .secWrapper .contentBox p {
     margin-bottom: 24px;
@@ -10477,9 +10481,6 @@ body {
   }
 }
 @media all and (max-width: 1024px) {
-  .resDetailContentSec {
-    margin-bottom: 60px;
-  }
   .resDetailContentSec .secWrapper {
     width: 85%;
   }
@@ -10493,9 +10494,6 @@ body {
   }
 }
 @media all and (max-width: 720px) {
-  .resDetailContentSec {
-    margin-bottom: 72px;
-  }
   .resDetailContentSec .secWrapper {
     width: 100%;
   }
