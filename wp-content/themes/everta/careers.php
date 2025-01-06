@@ -6,7 +6,6 @@
             <h1>Innovate, grow & make an impact</h1>
             <p>Join a team driven by innovation, sustainability, and passion. Explore career opportunities and help power the future of electric mobility.</p>
             <a href="#evertaTeam" class="ctaYellow">See job openings</a>
-            
         </div>
         <div class="careerBannerImg">
             <img src="<?php bloginfo('template_directory'); ?>/images/career-banner.webp" alt="everta" class="desktopBanner">
