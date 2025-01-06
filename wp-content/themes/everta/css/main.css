@@ -14044,16 +14044,29 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.productInfoSection .productInfoWrapper .productDetails .left {
+.productInfoSection .productInfoWrapper .productDetails .feature {
   width: 30%;
+  order: 1;
 }
-.productInfoSection .productInfoWrapper .productDetails .left .information {
+.productInfoSection .productInfoWrapper .productDetails .feature:nth-child(even) {
+  order: 3;
+}
+.productInfoSection .productInfoWrapper .productDetails .feature:nth-child(even) .information::before {
+  left: 0;
+}
+.productInfoSection .productInfoWrapper .productDetails .feature:nth-child(even) .information h4 {
+  padding-left: 13px;
+}
+.productInfoSection .productInfoWrapper .productDetails .feature:nth-child(even) .information p {
+  padding-left: 13px;
+}
+.productInfoSection .productInfoWrapper .productDetails .feature .information {
   padding-top: 32px;
   border-top: 1px solid #1E1E1E;
   margin-bottom: 80px;
   position: relative;
 }
-.productInfoSection .productInfoWrapper .productDetails .left .information::before {
+.productInfoSection .productInfoWrapper .productDetails .feature .information::before {
   content: "";
   position: absolute;
   top: -7px;
@@ -14063,7 +14076,7 @@ body {
   border-radius: 50%;
   background: #1E1E1E;
 }
-.productInfoSection .productInfoWrapper .productDetails .left .information h4 {
+.productInfoSection .productInfoWrapper .productDetails .feature .information h4 {
   font-family: "termina_testmedium";
   font-size: 24px;
   font-weight: 700;
@@ -14073,16 +14086,16 @@ body {
   padding-right: 13px;
 }
 @media screen and (max-width: 1600px) {
-  .productInfoSection .productInfoWrapper .productDetails .left .information h4 {
+  .productInfoSection .productInfoWrapper .productDetails .feature .information h4 {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .productInfoSection .productInfoWrapper .productDetails .left .information h4 {
+  .productInfoSection .productInfoWrapper .productDetails .feature .information h4 {
     font-size: 16px;
   }
 }
-.productInfoSection .productInfoWrapper .productDetails .left .information p {
+.productInfoSection .productInfoWrapper .productDetails .feature .information p {
   font-family: "verdanaregular";
   font-size: 16px;
   line-height: 175%;
@@ -14090,71 +14103,255 @@ body {
   padding-right: 13px;
 }
 @media screen and (max-width: 1600px) {
-  .productInfoSection .productInfoWrapper .productDetails .left .information p {
+  .productInfoSection .productInfoWrapper .productDetails .feature .information p {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .productInfoSection .productInfoWrapper .productDetails .left .information p {
+  .productInfoSection .productInfoWrapper .productDetails .feature .information p {
     font-size: 12px;
   }
 }
 .productInfoSection .productInfoWrapper .productDetails .middle {
   width: 20%;
+  order: 2;
 }
-.productInfoSection .productInfoWrapper .productDetails .right {
-  width: 30%;
+.productInfoSection .productInfoWrapper .productDetails .mobileUi {
+  display: none;
 }
-.productInfoSection .productInfoWrapper .productDetails .right .information {
-  padding-top: 32px;
-  border-top: 1px solid #1E1E1E;
-  margin-bottom: 80px;
-  position: relative;
-}
-.productInfoSection .productInfoWrapper .productDetails .right .information::before {
-  content: "";
-  position: absolute;
-  top: -7px;
-  left: 0;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: #1E1E1E;
-}
-.productInfoSection .productInfoWrapper .productDetails .right .information h4 {
-  font-family: "termina_testmedium";
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 133.333%;
-  margin-bottom: 20px;
-  color: #1E1E1E;
-  padding-left: 13px;
-}
-@media screen and (max-width: 1600px) {
-  .productInfoSection .productInfoWrapper .productDetails .right .information h4 {
-    font-size: 20px;
+@media all and (max-width: 1800px) {
+  .productInfoSection {
+    margin-bottom: 180px;
+  }
+  .productInfoSection .productInfoWrapper {
+    padding: 100px 0px 32px 0px;
+  }
+  .productInfoSection .productInfoWrapper .headingWrapper {
+    margin-bottom: 60px;
+  }
+  .productInfoSection .productInfoWrapper .headingWrapper h2 {
+    margin-bottom: 22px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails {
+    gap: 90px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information {
+    padding-top: 30px;
+    margin-bottom: 75px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information::before {
+    top: -7px;
+    right: 0;
+    width: 13px;
+    height: 13px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information h4 {
+    margin-bottom: 20px;
+    padding-right: 13px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information p {
+    padding-right: 13px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature:nth-child(even) .information h4 {
+    padding-left: 13px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature:nth-child(even) .information p {
+    padding-left: 13px;
   }
 }
-@media screen and (max-width: 1440px) {
-  .productInfoSection .productInfoWrapper .productDetails .right .information h4 {
-    font-size: 16px;
+@media all and (max-width: 1600px) {
+  .productInfoSection {
+    margin-bottom: 150px;
+  }
+  .productInfoSection .productInfoWrapper {
+    padding: 90px 0px 30px 0px;
+  }
+  .productInfoSection .productInfoWrapper .headingWrapper {
+    margin-bottom: 60px;
+  }
+  .productInfoSection .productInfoWrapper .headingWrapper h2 {
+    margin-bottom: 20px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails {
+    gap: 80px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information {
+    padding-top: 24px;
+    margin-bottom: 60px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information::before {
+    top: -6px;
+    width: 11px;
+    height: 11px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information h4 {
+    margin-bottom: 18px;
+    padding-right: 11px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information p {
+    padding-right: 11px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature:nth-child(even) .information h4 {
+    padding-left: 11px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature:nth-child(even) .information p {
+    padding-left: 11px;
   }
 }
-.productInfoSection .productInfoWrapper .productDetails .right .information p {
-  font-family: "verdanaregular";
-  font-size: 16px;
-  line-height: 175%;
-  font-weight: 400;
-  padding-left: 13px;
-}
-@media screen and (max-width: 1600px) {
-  .productInfoSection .productInfoWrapper .productDetails .right .information p {
-    font-size: 14px;
+@media all and (max-width: 1440px) {
+  .productInfoSection {
+    margin-bottom: 120px;
+  }
+  .productInfoSection .productInfoWrapper {
+    padding: 80px 0px 26px 0px;
+  }
+  .productInfoSection .productInfoWrapper .headingWrapper {
+    margin-bottom: 50px;
+  }
+  .productInfoSection .productInfoWrapper .headingWrapper h2 {
+    margin-bottom: 20px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails {
+    gap: 80px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information {
+    padding-top: 22px;
+    margin-bottom: 50px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information::before {
+    top: -6px;
+    width: 10px;
+    height: 10px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information h4 {
+    margin-bottom: 15px;
+    padding-right: 10px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information p {
+    padding-right: 10px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature:nth-child(even) .information h4 {
+    padding-left: 10px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature:nth-child(even) .information p {
+    padding-left: 10px;
   }
 }
-@media screen and (max-width: 1440px) {
-  .productInfoSection .productInfoWrapper .productDetails .right .information p {
+@media all and (max-width: 1280px) {
+  .productInfoSection {
+    margin-bottom: 120px;
+  }
+  .productInfoSection .productInfoWrapper {
+    padding: 70px 0px 22px 0px;
+  }
+  .productInfoSection .productInfoWrapper .headingWrapper {
+    margin-bottom: 50px;
+  }
+  .productInfoSection .productInfoWrapper .headingWrapper h2 {
+    margin-bottom: 16px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails {
+    gap: 70px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information {
+    padding-top: 20px;
+    margin-bottom: 45px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature .information h4 {
+    margin-bottom: 15px;
+  }
+}
+@media all and (max-width: 820px) {
+  .productInfoSection {
+    margin-bottom: 72px;
+  }
+  .productInfoSection .productInfoWrapper {
+    padding: 48px 0px 125px 0px;
+  }
+  .productInfoSection .productInfoWrapper .headingWrapper {
+    margin-bottom: 48px;
+    display: block;
+  }
+  .productInfoSection .productInfoWrapper .headingWrapper h2 {
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .productInfoSection .productInfoWrapper .headingWrapper p {
+    width: 100%;
+    text-align: left;
     font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+  }
+  .productInfoSection .productInfoWrapper .productDetails {
+    gap: 32px;
+    flex-direction: column;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .feature, .productInfoSection .productInfoWrapper .productDetails .right {
+    display: none;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .middle {
+    width: 175px;
+    order: 1;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi {
+    display: block;
+    width: 100%;
+    order: 2;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer {
+    position: relative;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .sliderContent h4 {
+    font-family: "termina_testmedium";
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .sliderContent p {
+    font-family: "verdanaregular";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .slick-prev,
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .slick-next {
+    padding: 12px;
+    position: absolute;
+    top: 150%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    border: 1px solid #1E1E1E;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .slick-prev::before,
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .slick-next::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .slick-prev.slick-next,
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .slick-next.slick-next {
+    left: 52px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .slick-prev.slick-next::before,
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .slick-next.slick-next::before {
+    content: url(../images/next-button.svg);
+  }
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .slick-prev.slick-prev,
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .slick-next.slick-prev {
+    left: 0px;
+  }
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .slick-prev.slick-prev::before,
+  .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .slick-next.slick-prev::before {
+    content: url(../images/prev-button.svg);
   }
 }
 
@@ -15105,11 +15302,11 @@ body {
   }
   .productSection .productWrapper .tabContent .cards .slick-prev.slick-next,
   .productSection .productWrapper .tabContent .cards .slick-next.slick-next {
-    left: 72px;
+    left: 92px;
   }
   .productSection .productWrapper .tabContent .cards .slick-prev.slick-prev,
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
-    left: 20px;
+    left: 30px;
   }
 }
 @media all and (max-width: 680px) {
@@ -15119,4 +15316,12 @@ body {
   .productSection .productWrapper .tabContent .cards {
     border: none;
   }
-}/*# sourceMappingURL=main.css.map */
+  .productSection .productWrapper .tabContent .cards .slick-prev.slick-next,
+  .productSection .productWrapper .tabContent .cards .slick-next.slick-next {
+    left: 72px;
+  }
+  .productSection .productWrapper .tabContent .cards .slick-prev.slick-prev,
+  .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
+    left: 20px;
+  }
+}

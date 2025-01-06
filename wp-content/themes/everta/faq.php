@@ -60,7 +60,7 @@
 <?php get_footer(); ?>
 
 <script>
-    if ($("#faqAccordion").length) {
+    if ($(".resourcesfaqSection").length) {
     jQuery(document).ready(function () {
         const accordionHeaders = document.querySelectorAll(".accordion-header");
         ActivatingFirstAccordion();
