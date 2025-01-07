@@ -7460,9 +7460,9 @@
                 <div class="visitUsSliderBox">
                     <?php if (have_rows('address_section')) : ?>
                     <?php while (have_rows('address_section')) : the_row(); ?>
-                    <div class="addressBox " data-company="<?php echo get_sub_field('city'); ?>">
+                    <div class="addressBox " data-company="<?php echo get_sub_field('country'); ?>">
                         <p><?php echo get_sub_field('location'); ?></p>
-                        <p><?php echo get_sub_field('full_address'); ?></p>
+                        <p><?php echo get_sub_field('address'); ?></p>
                     </div>
                     <?php endwhile; ?>
                     <?php endif; ?>

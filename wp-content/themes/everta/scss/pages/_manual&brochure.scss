@@ -140,6 +140,27 @@
             }
         }
     }
+    @media all and (max-width:1180px){
+        .container{
+            .accordions-wrapper{
+                .accordion{
+                    .accordion-body{@include wrapper;
+                        .brochureDiv{
+                            .brochureElement{&:not(:last-child){padding-right: 60px;margin-right: 30px;}
+                                .fileType{
+                                    &::before{width: 8px;height: 8px;}
+                                }
+                                .pdfWrapper{padding:8px 16px 8px 8px;&:not(:last-child){margin-bottom: 14px;}
+                                    img{margin-right: 10px;}
+                                    .pdfName{margin-right: 30px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     @media all and (max-width:1024px){
         .container{
             .accordions-wrapper{

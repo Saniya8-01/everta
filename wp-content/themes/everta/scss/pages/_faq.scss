@@ -1,6 +1,6 @@
 .resourcesBanner{margin-top: 206px;margin-bottom: 120px;display: flex;justify-content:center;
     .resorucesBannerWrapper{width: 50%;
-        h1{color: #1E1E1E;@include terminamedium;@include font80;margin-bottom: 20px;text-align: center;}
+        h1{color: #1E1E1E;@include terminamedium;@include font80;margin-bottom: 20px;text-align: center;line-height: 120%;}
         p{color: #4B4B4B;@include verdanaregular;@include font24;font-weight: $fontW400;line-height: 133.333%;margin-bottom: 72px;text-align: center;}
         .resourcesTabs{
             .resourcesTabWrapper{display: flex;align-items:center;gap:16px;justify-content:center;
@@ -11,9 +11,9 @@
         }
     }
     .searchWrapper{position: relative;display:flex;align-items:center;gap:24px;border-bottom: 1px solid #A5A5A5;margin-top:64px;
-        input{@include verdanaregular;@include font28;color: #1E1E1E;padding:12px 0px;width: 100%;font-weight:400;
-            &::placeholder{@include verdanaregular;@include font28;color: #1E1E1E;}
-            &::-webkit-input-placeholder{@include verdanaregular;@include font28;color: #1E1E1E;}
+        input{@include verdanaregular;@include font20;color: #1E1E1E;padding:12px 0px;width: 100%;font-weight:400;
+            &::placeholder{@include verdanaregular;@include font20;color: #1E1E1E;}
+            &::-webkit-input-placeholder{@include verdanaregular;@include font20;color: #1E1E1E;}
         }
     }
     @media all and (max-width:1800px){
@@ -95,7 +95,10 @@
     .resorucesBannerWrapper{width: 100%;@include wrapper;
         h1{font-size: 32px;line-height: 36px;margin-bottom: 16px;text-align: left;}
         p{font-size: 16px;font-weight: 400;font-weight: 400;line-height: 28px; margin-bottom: 32px;text-align: left;}
-        .resourcesTabs{overflow-x:scroll; white-space: nowrap;-webkit-overflow-scrolling: touch;
+        .resourcesTabs{overflow-x:scroll; white-space: nowrap;-webkit-overflow-scrolling: touch;scrollbar-width: none; -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                display: none; 
+            }
             .resourcesTabWrapper{display: inline-flex;gap:12px;
                 a{padding: 9px 16px;font-size: 12px;line-height: 18px;font-weight: 400;}
             }
@@ -113,7 +116,6 @@
 
 .resourcesfaqSection {
     margin-bottom: 200px;
-
     .faq-heading {
         h2 {
             margin-bottom: 64px;
@@ -160,13 +162,14 @@
         .faq-heading {
             h2 {
                 margin-bottom: 42px;
+                padding: 0px 60px;
             }
         }
     }
     @media all and (max-width:680px){
         .faq-heading {
             h2 {
-                margin-bottom: 32px;font-size: 20px;font-weight: 600;line-height: 28px;
+                margin-bottom: 32px;font-size: 20px;font-weight: 600;line-height: 28px;padding: 0px 20px;
             }
         }
     }

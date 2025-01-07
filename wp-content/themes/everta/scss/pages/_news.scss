@@ -53,7 +53,12 @@
         }
         .pagination {display: flex;justify-content: center;align-items: center;
             button{display: flex;align-items: center;justify-content: center;padding: 24px;background: #ffffff;color: $quaternaryColor1;border-radius: 50%;@include verdanaregular;@include font24;line-height: 166.667%;font-weight: 400;cursor: pointer;transition: background-color 0.3s ease;width: 68px;height: 68px;&:not(:last-child){margin-right:36px;}
-                &.active{border: 1px solid #9F9F9F;}
+                &.active{border: 1px solid #9F9F9F;font-weight: 600;}
+            }
+            button{
+                &:disabled{pointer-events: none;
+                    img{opacity: 0.6;}
+                }
             }
             .pagination-prev,.pagination-next{background: #F5F75E;}
             .pagination-prev{margin-right: 72px !important;}
@@ -170,8 +175,8 @@
                 }
             }
             .customSelect{
-                .selectBtn{padding:6px 0px 12px 0px;width: 20%;}
-                .options{max-height: 250px; margin-top: 9px;width: 20%;
+                .selectBtn{padding:6px 0px 12px 0px;width: 25%;}
+                .options{max-height: 250px; margin-top: 9px;width: 25%;
                   .option{height: 40px; padding: 0 12px;}
                 }
             }
@@ -201,6 +206,10 @@
                 .blogsTabWrapper{gap:12px;
                     a{padding: 12px 24px;}
                 }
+            }
+            .customSelect{
+                .selectBtn{width: 30%;}
+                .options{width: 30%;}
             }
         }
     }
