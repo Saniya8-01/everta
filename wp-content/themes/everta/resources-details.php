@@ -67,7 +67,7 @@
         <div class="secHeading">
             <h2>Other related posts</h2>
         </div>
-        <div class="cardContainer">
+        <div class="cardContainer postCardSlider">
             <div class="blogCard">
                 <a href="">
                     <div class="imgBox">

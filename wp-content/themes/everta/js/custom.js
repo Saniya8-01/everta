@@ -567,7 +567,9 @@ if ($(".visitUsSec").length) {
         const mblPOLAND = document.querySelector(".mblSVG .poland");
 
         if (activeSlide) {
-            const companyName = activeSlide.getAttribute("data-company");
+            const companyName = activeSlide.getAttribute("data-company").toLowerCase();
+            console.log(companyName);
+            
             if (window.getComputedStyle(desktopSVG).display !== "none") {
                 if (companyName === "india") {
                     INDIA.style.opacity = 1;
@@ -697,7 +699,6 @@ if($(".careerTeamSection").length){
         });
     });
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
     // Check if the "custom-tabs-wrapper" exists on the page
@@ -865,6 +866,29 @@ if ($(".backtopCl").length) {
             return elementBottom > 0 && elementTop < viewportHeight;
         };
     })
+}
+if ($(".relatedPostSec").length) {
+    $(".postCardSlider").slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 821,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
 }
 
 /*Resources Details Page End*/
