@@ -61,7 +61,7 @@
             <?php endif; ?>
         </div>
         <div class="toggleCta">
-            <button class="ctaWhiteBlack" id="toggleFaqButton" style="display: none;">Show More</button>
+            <button class="ctaWhiteBlack" id="toggleFaqButton" style="display: none;">Load More</button>
         </div>
     </div>
     <?php endwhile; ?>
@@ -121,6 +121,33 @@ if ($(".resourcesfaqSection").length) {
         const increment = 6; // Number of items to show at a time
         let currentlyVisible = increment;
 
+        // Function for smooth slide effect
+        function slideDown(element) {
+            element.style.display = "block";
+            element.style.height = "0px";
+            element.style.overflow = "hidden";
+            let height = element.scrollHeight;
+            element.style.transition = "height 0.5s ease-out";
+            element.style.height = height + "px";
+            setTimeout(() => {
+                element.style.height = "";
+                element.style.overflow = "";
+            }, 500);
+        }
+
+        function slideUp(element) {
+            element.style.transition = "height 0.5s ease-out";
+            element.style.height = element.scrollHeight + "px";
+            setTimeout(() => {
+                element.style.height = "0px";
+                element.style.overflow = "hidden";
+            }, 10);
+            setTimeout(() => {
+                element.style.display = "none";
+                element.style.height = "";
+            }, 500);
+        }
+
         // Hide all FAQ items initially except the first set
         if (faqItems.length > increment) {
             toggleButton.style.display = "block"; // Show the button
@@ -138,32 +165,30 @@ if ($(".resourcesfaqSection").length) {
             const isExpanded = toggleButton.getAttribute("data-expanded") === "true";
 
             if (isExpanded) {
-                // Show less: Reset to initial state showing only the first set
                 currentlyVisible = increment;
                 faqItems.forEach((item, index) => {
-                    item.style.display = index < increment ? "block" : "none";
-                });
-                toggleButton.textContent = "Show More";
-                toggleButton.setAttribute("data-expanded", "false");
-            } else {
-                // Show more: Reveal the next set of items
-                const nextVisible = currentlyVisible + increment;
-                faqItems.forEach((item, index) => {
-                    if (index < nextVisible) {
-                        item.style.display = "block";
+                    if (index >= increment) {
+                        slideUp(item);
                     }
                 });
-
-                // Update the currently visible count
+                toggleButton.textContent = "Load More";
+                toggleButton.setAttribute("data-expanded", "false");
+            } else {
+                const nextVisible = currentlyVisible + increment;
+                faqItems.forEach((item, index) => {
+                    if (index < nextVisible && item.style.display === "none") {
+                        slideDown(item);
+                    }
+                });
                 currentlyVisible = nextVisible;
 
-                // Check if all items are now visible
                 if (currentlyVisible >= faqItems.length) {
-                    toggleButton.textContent = "Show Less";
+                    toggleButton.textContent = "Load Less";
                     toggleButton.setAttribute("data-expanded", "true");
                 }
             }
         });
     });
 }
+
 </script>
