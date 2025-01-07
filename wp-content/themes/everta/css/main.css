@@ -10683,8 +10683,8 @@ body {
 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
   border: 1px solid #000;
   border-radius: 100%;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10692,9 +10692,14 @@ body {
   visibility: hidden;
   transition: 0.3s all ease-in-out;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox img {
-  width: 20px;
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
+  font-size: 24px;
   transform: rotate(-45deg);
+  font-weight: 400;
+  font-family: "verdanaregular";
+}
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow::before {
+  margin: 0;
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard:hover {
   background: #F5F75E;
@@ -10808,8 +10813,11 @@ body {
     margin: 20px 0 10px 0;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
+    font-size: 20px;
   }
   .relatedPostSec .secWrapper .cardContainer .slick-prev,
   .relatedPostSec .secWrapper .cardContainer .slick-next {
@@ -10856,8 +10864,11 @@ body {
     top: 8px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
+    font-size: 18px;
   }
 }
 @media all and (max-width: 1024px) {
@@ -10882,9 +10893,6 @@ body {
     visibility: visible;
     width: 40px;
     height: 40px;
-  }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox img {
-    width: 15px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard:hover {
     background: #fff;

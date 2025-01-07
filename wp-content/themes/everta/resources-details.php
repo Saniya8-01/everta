@@ -83,7 +83,7 @@
                             </ul>    
                         </div>
                         <div class="arrowBox">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/black-cta-arrow.svg" alt="">
+                            <i class="icon-icon-right  rotateRightArrow"></i>
                         </div>
                         
                     </div>
@@ -104,7 +104,7 @@
                             </ul>    
                         </div>
                         <div class="arrowBox">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/black-cta-arrow.svg" alt="">
+                            <i class="icon-icon-right  rotateRightArrow"></i>
                         </div>
                     </div>
                 </a>
