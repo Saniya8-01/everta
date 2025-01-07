@@ -286,7 +286,6 @@
     <?php endif; ?>
 </section>
 
-
 <div class="careerOpeningModal" id="careerOpeningModal">
     <div class="modalContent">
         <div class="jobHeadingDesc">
