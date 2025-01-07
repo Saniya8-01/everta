@@ -9568,6 +9568,11 @@ body {
     font-size: 16px;
     line-height: 175%;
   }
+  .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup a {
+    border: none;
+    padding-left: 0;
+    font-size: 16px;
+  }
 }
 
 .careerAtEvertaSec {
@@ -10588,16 +10593,13 @@ body {
   }
 }
 .relatedPostSec .secWrapper .cardContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: wrap;
-  gap: 30px;
+  display: block;
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard {
   width: calc(50% - 15px);
   border: 1px solid #D2D2D2;
   transition: 0.3s all ease-in-out;
+  margin: 0 15px;
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
   margin-bottom: 30px;
@@ -10709,6 +10711,41 @@ body {
   opacity: 1;
   visibility: visible;
 }
+.relatedPostSec .secWrapper .cardContainer .slick-prev,
+.relatedPostSec .secWrapper .cardContainer .slick-next {
+  padding: 12px;
+  position: absolute;
+  top: 110%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  border: 1px solid #1E1E1E;
+}
+.relatedPostSec .secWrapper .cardContainer .slick-prev::before,
+.relatedPostSec .secWrapper .cardContainer .slick-next::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+.relatedPostSec .secWrapper .cardContainer .slick-prev.slick-next,
+.relatedPostSec .secWrapper .cardContainer .slick-next.slick-next {
+  right: calc(50% - 60px);
+}
+.relatedPostSec .secWrapper .cardContainer .slick-prev.slick-next::before,
+.relatedPostSec .secWrapper .cardContainer .slick-next.slick-next::before {
+  content: url(../images/next-button.svg);
+}
+.relatedPostSec .secWrapper .cardContainer .slick-prev.slick-prev,
+.relatedPostSec .secWrapper .cardContainer .slick-next.slick-prev {
+  left: calc(50% - 60px);
+}
+.relatedPostSec .secWrapper .cardContainer .slick-prev.slick-prev::before,
+.relatedPostSec .secWrapper .cardContainer .slick-next.slick-prev::before {
+  content: url(../images/prev-button.svg);
+}
 @media all and (max-width: 1800px) {
   .relatedPostSec {
     margin-bottom: 180px;
@@ -10739,6 +10776,19 @@ body {
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li:last-child::before, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li:last-child::before {
     top: 9px;
   }
+  .relatedPostSec .secWrapper .cardContainer .slick-prev,
+  .relatedPostSec .secWrapper .cardContainer .slick-next {
+    width: 40px;
+    height: 40px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-next,
+  .relatedPostSec .secWrapper .cardContainer .slick-next.slick-next {
+    right: calc(50% - 50px);
+  }
+  .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-prev,
+  .relatedPostSec .secWrapper .cardContainer .slick-next.slick-prev {
+    left: calc(50% - 50px);
+  }
 }
 @media all and (max-width: 1440px) {
   .relatedPostSec {
@@ -10766,6 +10816,23 @@ body {
     width: 60px;
     height: 60px;
   }
+  .relatedPostSec .secWrapper .cardContainer .slick-prev,
+  .relatedPostSec .secWrapper .cardContainer .slick-next {
+    width: 36px;
+    height: 36px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .slick-prev::before,
+  .relatedPostSec .secWrapper .cardContainer .slick-next::before {
+    transform: translate(-50%, -60%);
+  }
+  .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-next,
+  .relatedPostSec .secWrapper .cardContainer .slick-next.slick-next {
+    right: calc(50% - 50px);
+  }
+  .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-prev,
+  .relatedPostSec .secWrapper .cardContainer .slick-next.slick-prev {
+    left: calc(50% - 50px);
+  }
 }
 @media all and (max-width: 1280px) {
   .relatedPostSec .secWrapper .secHeading {
@@ -10776,6 +10843,7 @@ body {
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard {
     width: calc(50% - 13px);
+    margin: 0 10px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
     margin-bottom: 20px;
@@ -10838,6 +10906,14 @@ body {
   .relatedPostSec .secWrapper {
     width: 90%;
   }
+  .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-next,
+  .relatedPostSec .secWrapper .cardContainer .slick-next.slick-next {
+    left: 92px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-prev,
+  .relatedPostSec .secWrapper .cardContainer .slick-next.slick-prev {
+    left: 30px;
+  }
 }
 @media all and (max-width: 720px) {
   .relatedPostSec .secWrapper {
@@ -10854,6 +10930,7 @@ body {
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard {
     width: 100%;
+    margin: 0 5px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
     margin-bottom: 24px;
@@ -10880,6 +10957,14 @@ body {
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li:last-child::before, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li:last-child::before {
     top: 6px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-next,
+  .relatedPostSec .secWrapper .cardContainer .slick-next.slick-next {
+    left: 72px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-prev,
+  .relatedPostSec .secWrapper .cardContainer .slick-next.slick-prev {
+    left: 20px;
   }
 }
 
@@ -15324,4 +15409,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
