@@ -85,7 +85,6 @@
                         <div class="arrowBox">
                             <i class="icon-icon-right  rotateRightArrow"></i>
                         </div>
-                        
                     </div>
                 </a>
             </div>
