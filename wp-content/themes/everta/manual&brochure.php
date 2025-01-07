@@ -12,12 +12,10 @@
                     <?php 
                     $count = 0;
                     while (have_rows('resources_tabs')) : the_row(); 
-                        $tab_link = get_sub_field('tab_link');
-                        $tab_text = get_sub_field('tab_text');
                     ?>
-                    <a href="<?php echo esc_url($tab_link); ?>" 
+                    <a href="<?php echo get_sub_field('tab_link'); ?>" 
                        class="<?php echo ($count == 1) ? 'active' : ''; ?>">
-                        <?php echo esc_html($tab_text); ?>
+                        <?php echo get_sub_field('tab_text'); ?>
                     </a>
                     <?php 
                     $count++;
