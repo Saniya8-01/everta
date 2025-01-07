@@ -187,8 +187,12 @@
     <?php while (have_rows('hiring_section')) : the_row(); ?>
     <div class="careerSectionWrapper">
         <div class="secHeading">
-            <h2><?php echo get_sub_field('heading'); ?></h2>
-            <p><?php echo get_sub_field('subheading'); ?></p>
+            <h2>
+                <?php echo get_sub_field('heading'); ?>
+            </h2>
+            <p>
+                <?php echo get_sub_field('subheading'); ?>
+            </p>
         </div>
         <div class="hiringProcessContainer">
             <?php if (have_rows('hiring_steps')) : ?>
@@ -198,15 +202,21 @@
                     <?php 
                     $iconImage = get_sub_field('icon_image');
                     if (!empty($iconImage)) : ?>
-                <img src="<?php echo esc_url($iconImage['url']); ?>"
-                    alt="<?php echo esc_attr($iconImage['alt']); ?>">
-                <?php endif; ?>
+                    <img src="<?php echo esc_url($iconImage['url']); ?>"
+                        alt="<?php echo esc_attr($iconImage['alt']); ?>">
+                    <?php endif; ?>
                 </div>
                 <div class="contentBox">
-                    <div class="boxNumber"><?php echo get_sub_field('step_number'); ?></div>
+                    <div class="boxNumber">
+                        <?php echo get_sub_field('step_number'); ?>
+                    </div>
                     <div class="subHeadings">
-                        <h3><?php echo get_sub_field('title'); ?></h3>
-                        <h6><?php echo get_sub_field('description'); ?></h6>
+                        <h3>
+                            <?php echo get_sub_field('title'); ?>
+                        </h3>
+                        <h6>
+                            <?php echo get_sub_field('description'); ?>
+                        </h6>
                     </div>
                 </div>
             </div>
@@ -223,44 +233,59 @@
     <?php while (have_rows('careerwall_section')) : the_row(); ?>
     <div class="careerSectionWrapper">
         <div class="secHeading">
-            <h2><?php echo get_sub_field('heading'); ?></h2>
+            <h2>
+                <?php echo get_sub_field('heading'); ?>
+            </h2>
         </div>
+
         <div class="evertaWallContainer">
-            <div class="wallImgBoxContainer ">
-                <div class="wallImgBox">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-1.webp" alt="everta">
-                </div>
-                <div class="wallImgBox">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-2.webp" alt="everta">
-                </div>
-            </div>
+            <?php 
+                    $container_index = 0;
+                    if (have_rows('box_container')) : 
+                        while (have_rows('box_container')) : the_row(); 
+                            $container_index++;
+                    ?>
             <div class="wallImgBoxContainer">
+                <?php if (have_rows('wall_img_box')) : ?>
+                <?php while (have_rows('wall_img_box')) : the_row(); 
+                                    $image = get_sub_field('image');
+                                    $mobile_image = get_sub_field('mobile_image'); 
+                                ?>
                 <div class="wallImgBox">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-3.webp" alt="everta"
+                    <?php if (!empty($image)) : ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
                         class="desktopWall">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/everta-wall-mbl.webp" alt="everta"
-                        class="mblWall">
-                    <div class="wallTapeBox">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/wall-tape.webp" alt="everta">
-                    </div>
+                    <?php endif; ?>
+
+                    <?php if (!empty($mobile_image)) : ?>
+                    <img src="<?php echo esc_url($mobile_image['url']); ?>"
+                        alt="<?php echo esc_attr($mobile_image['alt']); ?>" class="mblWall">
+                    <?php endif; ?>
                 </div>
+                <?php endwhile; ?>
+                <?php endif; ?>
+
+                <!-- Show wallTapeBox only for the second wallImgBoxContainer -->
+                <?php if ($container_index == 2) : ?>
+                <div class="wallTapeBox">
+                    <?php 
+                                    $tape_image = get_sub_field('tape_image');
+                                    if (!empty($tape_image)) : ?>
+                    <img src="<?php echo esc_url($tape_image['url']); ?>"
+                        alt="<?php echo esc_attr($tape_image['alt']); ?>">
+                    <?php endif; ?>
+                </div>
+                <?php endif; ?>
+
             </div>
-            <div class="wallImgBoxContainer">
-                <div class="wallImgBox">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-4.webp" alt="everta"
-                        class="desktopWall">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/everta-wall-mbl1.webp" alt="everta"
-                        class="mblWall">
-                </div>
-                <div class="wallImgBox">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-5.webp" alt="everta">
-                </div>
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
 </section>
+
 
 <div class="careerOpeningModal" id="careerOpeningModal">
     <div class="modalContent">
