@@ -209,4 +209,40 @@ function enqueue_custom_scripts() {
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 
+register_post_type( 'news-post', array('labels' => array(
+    'name' => __( 'News Post' ),
+    'singular_name' => __( 'news-post' )),
+    'public' => true,
+    'has_archive' => true,
+    'menu_icon' => 'dashicons-format-image',
+    'type' => 'select',
+    'supports'=> array( 'title', 'thumbnail', 'page-attributes', 'editor'),
+));
 
+$labels = array(
+    'name'              => __( 'News Categories'),
+    'singular_name'     => __( 'NewsPost'),
+    'search_items'      => __( 'Search NewsCategories'),
+    'all_items'         => __( 'All News Categories'),
+    'parent_item'       => __( 'Parent News Categories'),
+    'edit_item'         => __( 'Edit News Categories'),
+    'update_item'       => __( 'Update News Categories'),
+    'add_new_item'      => __( 'Add New News Categories'),
+    'new_item_name'     => __( 'New News Categories Name'),
+    'menu_name'         => __( 'News Categories'),
+);
+register_taxonomy('news_categories',array('news-post'), array(
+    'hierarchical'  => true,
+    'show_admin_column' => true,
+    'labels'        => $labels,
+    'show_ui'       => true,
+    'query_var'     => true,
+    'rewrite'       => array( 'slug' => 'news_categories' ),
+));
+
+function estimate_reading_time($post_id) {
+    $word_count = str_word_count(strip_tags(get_post_field('post_content', $post_id)));
+    $reading_speed = 200; // Average words per minute
+    $reading_time = ceil($word_count / $reading_speed);
+    return $reading_time;
+}

@@ -2,15 +2,28 @@
 
 
 <Section class="resourcesBanner">
+    <?php if (have_rows('resources_banner')) : ?>
+    <?php while (have_rows('resources_banner')) : the_row(); ?>
     <div class="resorucesBannerWrapper">
-        <h1>EV knowledge hub</h1>
-        <p>Your go-to source for insights, tools, and the latest in e-mobility</p>
+        <h1><?php echo get_sub_field('banner_heading'); ?></h1>
+        <p><?php echo get_sub_field('banner_subheading'); ?></p>
         <div class="resourcesTabs">
             <div class="resourcesTabWrapper">
-                <a href="">News</a>
-                <a href="">Manuals & Brochure</a>
-                <a href=""  class="active">Blogs</a>
-                <a href="">FAQs</a>
+                <?php if (have_rows('resources_tabs')) : ?>
+                    <?php 
+                    $count = 0;
+                    while (have_rows('resources_tabs')) : the_row(); 
+                        $tab_link = get_sub_field('tab_link');
+                        $tab_text = get_sub_field('tab_text');
+                    ?>
+                    <a href="<?php echo get_sub_field('tab_link'); ?>" 
+                       class="<?php echo ($count == 2) ? 'active' : ''; ?>">
+                        <?php echo get_sub_field('tab_text'); ?>
+                    </a>
+                    <?php 
+                    $count++;
+                    endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
         <div class="searchWrapper">
@@ -18,32 +31,68 @@
             <input type="search" placeholder="Search here">
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </Section>
 
 <section class="cardSection">
     <div class="cardSectionWrapper">
         <div class="heading">
-            <h2>News</h2>
+            <h2>Blogs</h2>
         </div>
         <div class="blogsTabs">
             <div class="blogsTabWrapper">
                 <a href="#" class="active" data-filter="all">All</a>
-                <a href="#" data-filter="Tips & tricks">Tips & tricks</a>
-                <a href="#" data-filter="Case studies">Case studies</a>
-                <a href="#" data-filter="Tutorials">Tutorials</a>
+                <?php
+                        $args = array('post_type' => 'post', 'posts_per_page' => -1, 'order' => 'DESC');
+                        $the_query = new WP_Query($args);
+                        while ($the_query->have_posts()) : $the_query->the_post();
+                            $terms = get_the_terms($post->ID, 'category');
+                            if ($terms && ! is_wp_error($terms)) :
+                                $links = array();
+                                foreach ($terms as $term) {
+                                    $links[] = $term->name;
+                                }
+                                $tax_links = join(" ", str_replace('-', ' ', $links));
+                                $tax = strtolower($tax_links);
+                            else :
+                                $tax = '';
+                            endif;
+                        ?>
+                <a href="#" data-filter="<?php echo $tax; ?>"><?php echo $tax; ?></a>
+                <?php endwhile; wp_reset_postdata(); ?>
             </div>
         </div>
         <div class="cardGrid" id="cardGrid">
-            <a href="" class="cards" data-category="Tips & tricks">
+            <?php
+                        $args = array('post_type' => 'post', 'posts_per_page' => -1, 'order' => 'DESC');
+                        $the_query = new WP_Query($args);
+                        while ($the_query->have_posts()) : $the_query->the_post();
+                            $terms = get_the_terms($post->ID, 'category');
+                            if ($terms && ! is_wp_error($terms)) :
+                                $links = array();
+                                foreach ($terms as $term) {
+                                    $links[] = $term->name;
+                                }
+                                $tax_links = join(" ", str_replace('-', ' ', $links));
+                                $tax = strtolower($tax_links);
+                            else :
+                                $tax = '';
+                            endif;
+                        ?>
+            <a href="<?php the_permalink(); ?>" class="cards" data-category="<?php echo $tax; ?>">
                 <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
+                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>" alt="" title="" />
                 </div>
                 <div class="cardContent">
-                    <span class="tag">Tips & tricks</span>
+                    <span class="tag"> <?php echo $tax; ?></span>
                     <div class="cardInfo">
                         <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
+                            <h3><?php 
+                                $title = get_the_title(); 
+                                echo (strlen($title) > 50) ? substr($title, 0, 50) . '...' : $title; 
+                            ?></h3>
+                            <p><?php echo get_the_date('d M Y'); ?> • <?php echo estimate_reading_time(get_the_ID()); ?> mins read</p>
                         </div>
                         <div class="redirectArrow">
                             <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
@@ -51,193 +100,7 @@
                     </div>
                 </div>
             </a>
-            <a href="" class="cards" data-category="Case studies">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">Case studies</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards" data-category="Tutorials">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">Tutorials</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards" data-category="Tips & tricks">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">Tips & tricks</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards" data-category="Case studies">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">Case studies</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards" data-category="Tutorials">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">Tutorials</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards" data-category="Tips & tricks">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">Tips & tricks</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards" data-category="Case studies">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">Case studies</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards" data-category="Tutorials">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">Tutorials</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards" data-category="Tips & tricks">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">Tips & tricks</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards" data-category="Case studies">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">Case studies</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards" data-category="Tutorials">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">Tutorials</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
+            <?php endwhile; wp_reset_postdata(); ?>
         </div>
         <div id="pagination" class="pagination"></div>
     </div>
