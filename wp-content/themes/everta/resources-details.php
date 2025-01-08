@@ -76,16 +76,15 @@
                     <div class="contentBox">
                         <div class="content">
                             <span>News</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="cardHeading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <ul>
                                 <li>11 Jan 2022</li>
                                 <li>5 min read</li>
                             </ul>    
                         </div>
                         <div class="arrowBox">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/black-cta-arrow.svg" alt="">
+                            <i class="icon-icon-right  rotateRightArrow"></i>
                         </div>
-                        
                     </div>
                 </a>
             </div>
@@ -97,14 +96,14 @@
                     <div class="contentBox">
                         <div class="content">
                             <span>News</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            <p class="cardHeading">Lorem ipsum dolor sit amet, consectetur adipiscing elitttttttttttttttttttttttttttt.</p>
                             <ul>
                                 <li>11 Jan 2022</li>
                                 <li>5 min read</li>
                             </ul>    
                         </div>
                         <div class="arrowBox">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/black-cta-arrow.svg" alt="">
+                            <i class="icon-icon-right  rotateRightArrow"></i>
                         </div>
                     </div>
                 </a>

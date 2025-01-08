@@ -205,8 +205,10 @@
                             }
                         }
                     }
-                    .arrowBox{border: 1px solid #000; border-radius: 100%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;opacity: 0; visibility: hidden; transition: 0.3s all ease-in-out;
-                        img{width: 20px; transform: rotate(-45deg);}
+                    .arrowBox{border: 1px solid #000; border-radius: 100%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;opacity: 0; visibility: hidden; transition: 0.3s all ease-in-out;
+                        .rotateRightArrow{font-size: 24px; transform: rotate(-45deg); font-weight: $fontW400; @include verdanaregular;
+                            &::before{margin: 0;}
+                        }
                     }
                 }
                 &:hover{background: $primaryColor1;
@@ -281,7 +283,9 @@
                         .content{width: calc(100% - 80px);
                             p{margin: 20px 0 10px 0;}
                         }
-                        .arrowBox{width: 60px; height: 60px;}
+                        .arrowBox{width: 50px; height: 50px;
+                            .rotateRightArrow{font-size: 20px;}
+                        }
                     }
                 }
                 .slick-prev,
@@ -308,7 +312,9 @@
                                 }
                             }
                         }
-                        .arrowBox{width: 50px; height: 50px;}
+                        .arrowBox{width: 45px; height: 45px;
+                            .rotateRightArrow{font-size: 18px;}
+                        }
                     }
                 }
 
@@ -323,9 +329,7 @@
                     .imgBox{margin-bottom: 20px;}
                     .contentBox{padding: 0 18px 35px;align-items: end;
                         .content{width: calc(100% - 50px);}
-                        .arrowBox{opacity: 1; visibility: visible; width: 40px; height: 40px;
-                            img{width: 15px;}
-                        }
+                        .arrowBox{opacity: 1; visibility: visible; width: 40px; height: 40px;}
                     }
                     &:hover{background: #fff;
                         .contentBox{

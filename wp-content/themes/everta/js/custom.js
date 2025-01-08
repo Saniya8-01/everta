@@ -890,6 +890,20 @@ if ($(".relatedPostSec").length) {
         ]
     });
 }
+if($(".relatedPostSec").length){
+    document.addEventListener("DOMContentLoaded", () => {
+        let contentBox = document.querySelectorAll(".contentBox .cardHeading");
+        function truncateTextElement(maxLength) {
+            contentBox.forEach((boxHead) => {
+                let headTxt = boxHead.textContent.trim(); 
+                if (headTxt.length > maxLength) {
+                    boxHead.textContent = headTxt.substring(0, maxLength).trim() + "..."; 
+                }
+            });
+        }
+        truncateTextElement(56);
+    });
+}
 
 /*Resources Details Page End*/
 
