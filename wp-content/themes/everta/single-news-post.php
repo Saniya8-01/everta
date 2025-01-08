@@ -5,7 +5,7 @@
 	<div class="secWrapper">
 		<div class="backBtn">
 			<a href="<?php echo esc_url(get_post_type_archive_link('post')); ?>">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/left-arrow-gray.svg" alt="Back" />Back
+				<i class="icon-icon-left backArrow"></i>Back
 			</a>
 		</div>
 		<div class="secHeading">
@@ -80,7 +80,7 @@
 							</ul>
 						</div>
 						<div class="arrowBox">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/black-cta-arrow.svg" alt="">
+							<i class="icon-icon-right rotateRightArrow"></i>
 						</div>
 					</div>
 				</a>
@@ -94,8 +94,7 @@
 
 <div class="backtopCl" id="backtop">
 	<a href="#">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/top-double-up-arrow.svg" alt="Back to top"
-			class="desktop" />
+		<i class="icon-caretdoubleup fontellowdobuleUpIcon"></i>
 	</a>
 </div>
 

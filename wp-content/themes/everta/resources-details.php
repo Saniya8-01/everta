@@ -4,7 +4,7 @@
     <div class="secWrapper">
         <div class="backBtn">
             <a href="new#newspage" >
-                <img src="<?php bloginfo('template_directory'); ?>/images/left-arrow-gray.svg" alt=" " />Back 
+                <i class="icon-icon-left backArrow"></i>Back 
             </a>
         </div>
         <div class="secHeading">
@@ -113,7 +113,8 @@
 </section>
 <div class="backtopCl" id="backtop">
     <a href="">
-        <img src="<?php bloginfo('template_directory'); ?>/images/top-double-up-arrow.svg" alt="" class="desktop"/>
+        <i class="icon-caretdoubleup fontellowdobuleUpIcon"></i>
+        <!-- <img src="<?php bloginfo('template_directory'); ?>/images/top-double-up-arrow.svg" alt="" class="desktop"/> -->
     </a>
 </div>
 

@@ -239,6 +239,7 @@ button {
     font-style: normal;
 }
 
+
 @font-face {
     font-family: 'termina_testblack';
     src: url('fonts/termina/terminatest-black-webfont.woff2') format('woff2'),
@@ -320,7 +321,7 @@ button {
 
 /************************************************ Common CSS **************************************************/
 body h1{
-    @include verdanabold;
+    @include terminaregular;
     position: relative;
     font-size: 96px;
     font-weight: 700;
