@@ -211,12 +211,13 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 register_post_type( 'news-post', array('labels' => array(
     'name' => __( 'News Post' ),
-    'singular_name' => __( 'news-post' )),
+    'singular_name' => __( 'News Post' )),
     'public' => true,
     'has_archive' => true,
     'menu_icon' => 'dashicons-format-image',
     'type' => 'select',
     'supports'=> array( 'title', 'thumbnail', 'page-attributes', 'editor'),
+	'rewrite' => array( 'slug' => 'news-post' ),
 ));
 
 $labels = array(

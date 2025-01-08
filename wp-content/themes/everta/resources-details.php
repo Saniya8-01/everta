@@ -112,8 +112,6 @@
         </div>
     </div>
 </section>
-
-
 <div class="backtopCl" id="backtop">
     <a href="">
         <img src="<?php bloginfo('template_directory'); ?>/images/top-double-up-arrow.svg" alt="" class="desktop"/>

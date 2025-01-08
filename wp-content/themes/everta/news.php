@@ -59,7 +59,7 @@
                 $terms = get_the_terms($post->ID, 'news_categories');
                 $tax = ($terms && !is_wp_error($terms)) ? strtolower(join(", ", wp_list_pluck($terms, 'name'))) : '';
             ?>
-                <a href="<?php the_permalink(); ?>" class="cards" data-title="<?php echo esc_attr(get_the_title()); ?>" data-date="<?php echo get_the_date('Y-m-d'); ?>">
+                <a href="<?php the_permalink(); ?>" class="cards">
                     <div class="cardImg">
                         <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title_attribute(); ?>">
                     </div>
