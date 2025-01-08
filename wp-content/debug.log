@@ -438,3 +438,6 @@ Stack trace:
 #2 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
 #3 {main}
   thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php on line 9
+[08-Jan-2025 17:55:06 UTC] PHP Warning:  Undefined variable $post_id in C:\xampp\htdocs\everta\wp-content\themes\everta\homepage.php on line 232
+[08-Jan-2025 18:15:46 UTC] PHP Warning:  Undefined variable $post_id in C:\xampp\htdocs\everta\wp-content\themes\everta\homepage.php on line 232
+[08-Jan-2025 18:15:46 UTC] PHP Warning:  Undefined variable $post_id in C:\xampp\htdocs\everta\wp-content\themes\everta\homepage.php on line 232
