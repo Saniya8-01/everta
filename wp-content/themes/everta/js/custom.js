@@ -901,7 +901,7 @@ if($(".relatedPostSec").length){
                 }
             });
         }
-        truncateTextElement(56);
+        truncateTextElement(50);
     });
 }
 

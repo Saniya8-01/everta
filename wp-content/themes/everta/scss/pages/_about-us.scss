@@ -783,7 +783,7 @@
 }
 .visitUsSec{margin-bottom: 200px;
     .secWrapper{
-        .visiUsMainContainer{display: flex; align-items: center;
+        .visiUsMainContainer{display: flex; align-items: stretch; border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6;
             .mapBox{width: calc(70%);
                 .desktopSVG{
                     svg{ 
@@ -886,8 +886,12 @@
     }
     @media all and (max-width: 1024px){margin-bottom: 100px;
         .secWrapper{
-            .visiUsMainContainer{
-                .mapBox{width: 60%;}
+            .visiUsMainContainer{align-items: center;
+                .mapBox{width: 60%;
+                    .desktopSVG{
+                        svg{height: 260px;}
+                    }
+                }
                 .addressContent{width: 40%; padding: 45px 40px;
                     h2{margin-bottom: 20px;}
                 }

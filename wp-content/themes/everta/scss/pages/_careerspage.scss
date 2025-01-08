@@ -461,7 +461,9 @@
     .evertaWallContainer{display: flex; align-items: center; width: 100%; padding: 0px 160px; gap: 20px;
       .wallImgBoxContainer{display: flex; flex-direction: column; width: calc(33.33% - 13px);
         .wallImgBox{padding: 16px 8px; position: relative;
-          img{display: block; object-fit: cover; width: 100%; transition: all 0.5s ease-in-out;}
+          img{display: block; object-fit: cover; width: 100%; transition: all 0.5s ease-in-out;
+            &.mblWall{display: none;}
+          }
           .wallTapeBox{position: absolute;left: 0; top: -6%; width: 35%;
             img{display: block; object-fit: cover; width: 100%;}
           }
@@ -564,7 +566,10 @@
     .careerSectionWrapper{
       .evertaWallContainer{padding: 0px; flex-flow: column;
         .wallImgBoxContainer{width: 100%; flex-flow: wrap;
-          .wallImgBox{padding:5px;}
+          .wallImgBox{padding:5px;
+            &.desktopWall{display: none;}
+            &.mblWall{display: block;}
+          }
           &:nth-child(1){
             .wallImgBox{
               &:first-child{width: 50%;}
@@ -579,7 +584,7 @@
               }
             }
           }
-          &:nth-child(3){
+          &:nth-child(3){align-items: center;
             .wallImgBox{
               &:first-child{border: 2px dashed $secondaryColor1; width: 50%;
                 img{

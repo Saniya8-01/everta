@@ -224,54 +224,6 @@ button {
 /************************************************ Fonts **************************************************/
 
 @font-face {
-    font-family: 'termina_testthin';
-    src: url('fonts/termina/terminatest-thin-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-thin-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'termina_testregular';
-    src: url('fonts/termina/terminatest-regular-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'termina_testlight';
-    src: url('fonts/termina/terminatest-light-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'termina_testmedium';
-    src: url('fonts/termina/terminatest-medium-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'termina_testbold';
-    src: url('fonts/termina/terminatest-bold-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'termina_testblack';
-    src: url('fonts/termina/terminatest-black-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
- 
-@font-face {
     font-family: 'verdanaregular';
     src: url('fonts/verdana/verdana-webfont.woff2') format('woff2'),
          url('fonts/verdana/verdana-webfont.woff') format('woff');
@@ -287,8 +239,75 @@ button {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'termina_testblack';
+    src: url('fonts/termina/terminatest-black-webfont.woff2') format('woff2'),
+         url('fonts/termina/terminatest-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'termina_testbold';
+    src: url('fonts/termina/terminatest-bold-webfont.woff2') format('woff2'),
+         url('fonts/termina/terminatest-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'termina_testdemi';
+    src: url('fonts/termina/terminatest-demi-webfont.woff2') format('woff2'),
+         url('fonts/termina/terminatest-demi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'termina_testextra_light';
+    src: url('fonts/termina/terminatest-extralight-webfont.woff2') format('woff2'),
+         url('fonts/termina/terminatest-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'termina_testheavy';
+    src: url('fonts/termina/terminatest-heavy-webfont.woff2') format('woff2'),
+         url('fonts/termina/terminatest-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'termina_testlight';
+    src: url('fonts/termina/terminatest-light-webfont.woff2') format('woff2'),
+         url('fonts/termina/terminatest-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'termina_testmedium';
+    src: url('fonts/termina/terminatest-medium-webfont.woff2') format('woff2'),
+         url('fonts/termina/terminatest-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'termina_testregular';
+    src: url('fonts/termina/terminatest-regular-webfont.woff2') format('woff2'),
+         url('fonts/termina/terminatest-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
 // font family :- termina
-@mixin terminathin{font-family: 'termina_testthin';}
+// @mixin terminathin{font-family: 'termina_testthin';}
 @mixin terminaregular{font-family: 'termina_testregular';}
 @mixin terminalight{font-family: 'termina_testlight';}
 @mixin terminamedium{font-family: 'termina_testmedium';}
@@ -595,7 +614,7 @@ $quaternaryColor5 : #D2D2D2;
     @media screen and (max-width:1280px){padding: 12px 32px;}
 
     @media screen and (max-width:1024px) {padding: 18px 32px; line-height: 15px; font-size: 14px;}
-    @media screen and (max-width:720px) {padding-right: 66px;line-height:normal; font-size: 12px;&::before{opacity: 1;}}
+    @media screen and (max-width:720px) {padding-right: 62px;line-height:normal; font-size: 12px;&::before{opacity: 1;}}
 }
 
 .ctaWhiteBlack{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: #000; background: transparent; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;border:1px solid $quaternaryColor2;display:inline-block;
@@ -609,7 +628,7 @@ $quaternaryColor5 : #D2D2D2;
     @media screen and (max-width:1440px){padding: 14px 32px;&::before{transform: translateY(-50%) scale(0.9);transform-origin:bottom;}}
     @media screen and (max-width:1280px){padding: 12px 32px;}
     @media screen and (max-width:1024px) {padding: 18px 32px; line-height: 15px; font-size: 14px;}
-    @media screen and (max-width:720px) {padding-right: 66px;line-height:normal; font-size: 12px;&::before{opacity: 1;}}
+    @media screen and (max-width:720px) {padding-right: 62px;line-height:normal; font-size: 12px;&::before{opacity: 1;}}
 }
 
 .ctaBlack{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: $primaryColor1; background: $quaternaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;
@@ -624,7 +643,7 @@ $quaternaryColor5 : #D2D2D2;
     @media screen and (max-width:1280px){padding: 12px 32px;}
 
     @media screen and (max-width:1024px) {padding: 18px 32px; line-height: 15px; font-size: 14px;}
-    @media screen and (max-width:720px) {padding-right: 66px;line-height:normal; font-size: 12px;&::before{opacity: 1;}}
+    @media screen and (max-width:720px) {padding-right: 62px;line-height:normal; font-size: 12px;&::before{opacity: 1;}}
 }
 
 .ctaWhite{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: $quaternaryColor1; background: #fff; border-style: none; border: 1px solid $quaternaryColor2; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;
@@ -639,7 +658,7 @@ $quaternaryColor5 : #D2D2D2;
     @media screen and (max-width:1440px){padding: 14px 32px;&::before{transform: translateY(-50%) scale(0.9);transform-origin:bottom;}}
     @media screen and (max-width:1280px){padding: 12px 32px;}
     @media screen and (max-width:1024px) {padding: 18px 32px; line-height: 15px; font-size: 14px;}
-    @media screen and (max-width:720px) {padding-right: 66px;line-height:normal; font-size: 12px;&::before{opacity: 1;}}
+    @media screen and (max-width:720px) {padding-right: 62px;line-height:normal; font-size: 12px;&::before{opacity: 1;}}
 }
 
 .hideScrollbarhtml, .hideScrollbar{overflow: hidden !important;}
