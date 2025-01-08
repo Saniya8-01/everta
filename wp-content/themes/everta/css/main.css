@@ -284,7 +284,7 @@ button {
 }
 /************************************************ Common CSS **************************************************/
 body h1 {
-  font-family: "verdanabold";
+  font-family: "termina_testregular";
   position: relative;
   font-size: 96px;
   font-weight: 700;
@@ -10060,10 +10060,19 @@ body {
     font-size: 12px;
   }
 }
+.resDetailBannerSec .secWrapper .backBtn a .backArrow {
+  color: #4B4B4B;
+  font-family: "termina_testbold";
+}
+.resDetailBannerSec .secWrapper .backBtn a .backArrow::before {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
+}
 .resDetailBannerSec .secWrapper .secHeading h1 {
   color: #1E1E1E;
   text-shadow: 0px 5.12px 43.52px rgba(0, 0, 0, 0.1);
-  font-family: "termina_testbold";
+  font-family: "termina_testmedium";
   font-size: 48px;
   line-height: 133%;
   margin-bottom: 50px;
@@ -10122,6 +10131,9 @@ body {
   .resDetailBannerSec .secWrapper .backBtn {
     margin-bottom: 25px;
   }
+  .resDetailBannerSec .secWrapper .backBtn a .backArrow::before {
+    font-size: 20px;
+  }
   .resDetailBannerSec .secWrapper .secHeading h1 {
     margin-bottom: 40px;
   }
@@ -10171,9 +10183,8 @@ body {
     line-height: 200%;
     gap: 8px;
   }
-  .resDetailBannerSec .secWrapper .backBtn a img {
-    width: 15px;
-    height: 15px;
+  .resDetailBannerSec .secWrapper .backBtn a .backArrow::before {
+    font-size: 18px;
   }
   .resDetailBannerSec .secWrapper .secHeading h1 {
     margin-bottom: 50px;
@@ -11031,6 +11042,14 @@ body {
   justify-content: center;
   transition: all 0.1s ease-in-out;
 }
+#backtop a .fontellowdobuleUpIcon {
+  color: #343330;
+}
+#backtop a .fontellowdobuleUpIcon::before {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 500;
+}
 #backtop.show {
   opacity: 1;
   visibility: visible;
@@ -11052,9 +11071,8 @@ body {
     width: 55px;
     height: 55px;
   }
-  #backtop a img {
-    width: 28px;
-    height: 28px;
+  #backtop a .fontellowdobuleUpIcon::before {
+    font-size: 20px;
   }
 }
 @media all and (max-width: 1280px) {
@@ -11065,9 +11083,8 @@ body {
     width: 45px;
     height: 45px;
   }
-  #backtop a img {
-    width: 20px;
-    height: 20px;
+  #backtop a .fontellowdobuleUpIcon::before {
+    font-size: 18px;
   }
 }
 @media all and (max-width: 1024px) {
@@ -11083,10 +11100,6 @@ body {
     width: 40px;
     height: 40px;
   }
-  #backtop a img {
-    width: 18px;
-    height: 18px;
-  }
 }
 @media all and (max-width: 720px) {
   #backtop {
@@ -11096,9 +11109,8 @@ body {
     width: 40px;
     height: 40px;
   }
-  #backtop a img {
-    width: 20px;
-    height: 20px;
+  #backtop a .fontellowdobuleUpIcon::before {
+    font-size: 16px;
   }
 }
 
@@ -15526,4 +15538,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
