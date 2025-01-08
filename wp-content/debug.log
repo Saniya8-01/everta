@@ -415,3 +415,26 @@ Stack trace:
 [08-Jan-2025 08:10:07 UTC]   Automatic theme updates starting...
 [08-Jan-2025 08:10:07 UTC]   Automatic theme updates complete.
 [08-Jan-2025 08:10:07 UTC] Automatic updates complete.
+[08-Jan-2025 11:14:46 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php on line 22
+[08-Jan-2025 11:14:46 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php on line 23
+[08-Jan-2025 11:18:11 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php:9
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php on line 9
+[08-Jan-2025 11:18:15 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php:9
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php on line 9
+[08-Jan-2025 11:20:21 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php:9
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php on line 9
