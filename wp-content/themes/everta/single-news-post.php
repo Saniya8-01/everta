@@ -1,14 +1,5 @@
-<?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Everta
- */
+<?php get_header(); ?>
 
-get_header();
-?>
 
 <section class="resDetailBannerSec">
 	<div class="secWrapper">
@@ -21,8 +12,8 @@ get_header();
 			<h1>
 				<?php the_title(); ?>
 			</h1>
-			<div class="imgBox">
-				<?php if (have_rows('banner_section')) : ?>
+            <div class="imgBox">
+                <?php if (have_rows('banner_section')) : ?>
                 <?php while (have_rows('banner_section')) : the_row(); ?>
                 <?php
                 $desktop_image = get_sub_field('desktop_image');
@@ -40,7 +31,7 @@ get_header();
                 <?php endif; ?>
                 <?php endwhile; ?>
                 <?php endif; ?>
-			</div>
+            </div>
 		</div>
 	</div>
 </section>

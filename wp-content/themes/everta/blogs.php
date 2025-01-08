@@ -1,6 +1,5 @@
 <?php get_header(); /*Template name: Blogs*/ ?>
 
-
 <Section class="resourcesBanner">
     <?php if (have_rows('resources_banner')) : ?>
     <?php while (have_rows('resources_banner')) : the_row(); ?>

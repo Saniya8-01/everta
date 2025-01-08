@@ -407,59 +407,34 @@ Stack trace:
 #2 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
 #3 {main}
   thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\news.php on line 84
-[08-Jan-2025 04:27:54 UTC] Automatic updates starting...
-[08-Jan-2025 04:27:58 UTC]   Automatic theme updates starting...
-[08-Jan-2025 04:27:58 UTC]   Automatic theme updates complete.
-[08-Jan-2025 04:27:58 UTC] Automatic updates complete.
-[08-Jan-2025 08:07:16 UTC] Automatic updates starting...
-[08-Jan-2025 08:07:18 UTC]   Automatic theme updates starting...
-[08-Jan-2025 08:07:18 UTC]   Automatic theme updates complete.
-[08-Jan-2025 08:07:18 UTC] Automatic updates complete.
-[08-Jan-2025 10:57:18 UTC] PHP Warning:  Array to string conversion in D:\SACHIN\www\everta\wp-content\themes\everta\about-us.php on line 232
-[08-Jan-2025 10:57:18 UTC] PHP Stack trace:
-[08-Jan-2025 10:57:18 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
-[08-Jan-2025 10:57:18 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
-[08-Jan-2025 10:57:18 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
-[08-Jan-2025 10:57:18 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
-[08-Jan-2025 10:57:48 UTC] PHP Warning:  Array to string conversion in D:\SACHIN\www\everta\wp-content\themes\everta\about-us.php on line 232
-[08-Jan-2025 10:57:48 UTC] PHP Stack trace:
-[08-Jan-2025 10:57:48 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
-[08-Jan-2025 10:57:48 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
-[08-Jan-2025 10:57:48 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
-[08-Jan-2025 10:57:48 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
-[08-Jan-2025 11:02:22 UTC] PHP Warning:  Array to string conversion in D:\SACHIN\www\everta\wp-content\themes\everta\about-us.php on line 232
-[08-Jan-2025 11:02:22 UTC] PHP Stack trace:
-[08-Jan-2025 11:02:22 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
-[08-Jan-2025 11:02:22 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
-[08-Jan-2025 11:02:22 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
-[08-Jan-2025 11:02:22 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
-[08-Jan-2025 11:02:44 UTC] PHP Warning:  Array to string conversion in D:\SACHIN\www\everta\wp-content\themes\everta\about-us.php on line 232
-[08-Jan-2025 11:02:44 UTC] PHP Stack trace:
-[08-Jan-2025 11:02:44 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
-[08-Jan-2025 11:02:44 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
-[08-Jan-2025 11:02:44 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
-[08-Jan-2025 11:02:44 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
-[08-Jan-2025 11:10:37 UTC] PHP Warning:  Array to string conversion in D:\SACHIN\www\everta\wp-content\themes\everta\about-us.php on line 232
-[08-Jan-2025 11:10:37 UTC] PHP Stack trace:
-[08-Jan-2025 11:10:37 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
-[08-Jan-2025 11:10:37 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
-[08-Jan-2025 11:10:37 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
-[08-Jan-2025 11:10:37 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
-[08-Jan-2025 11:32:40 UTC] PHP Warning:  Array to string conversion in D:\SACHIN\www\everta\wp-content\themes\everta\about-us.php on line 232
-[08-Jan-2025 11:32:40 UTC] PHP Stack trace:
-[08-Jan-2025 11:32:40 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
-[08-Jan-2025 11:32:40 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
-[08-Jan-2025 11:32:40 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
-[08-Jan-2025 11:32:40 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
-[08-Jan-2025 11:44:54 UTC] PHP Warning:  Array to string conversion in D:\SACHIN\www\everta\wp-content\themes\everta\about-us.php on line 232
-[08-Jan-2025 11:44:54 UTC] PHP Stack trace:
-[08-Jan-2025 11:44:54 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
-[08-Jan-2025 11:44:54 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
-[08-Jan-2025 11:44:54 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
-[08-Jan-2025 11:44:54 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
-[08-Jan-2025 11:49:22 UTC] PHP Warning:  Array to string conversion in D:\SACHIN\www\everta\wp-content\themes\everta\about-us.php on line 232
-[08-Jan-2025 11:49:22 UTC] PHP Stack trace:
-[08-Jan-2025 11:49:22 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
-[08-Jan-2025 11:49:22 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
-[08-Jan-2025 11:49:22 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
-[08-Jan-2025 11:49:22 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[08-Jan-2025 06:43:14 UTC] Automatic updates starting...
+[08-Jan-2025 06:43:16 UTC]   Automatic theme updates starting...
+[08-Jan-2025 06:43:16 UTC]   Automatic theme updates complete.
+[08-Jan-2025 06:43:16 UTC] Automatic updates complete.
+[08-Jan-2025 08:10:07 UTC] Automatic updates starting...
+[08-Jan-2025 08:10:07 UTC]   Automatic theme updates starting...
+[08-Jan-2025 08:10:07 UTC]   Automatic theme updates complete.
+[08-Jan-2025 08:10:07 UTC] Automatic updates complete.
+[08-Jan-2025 11:14:46 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php on line 22
+[08-Jan-2025 11:14:46 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php on line 23
+[08-Jan-2025 11:18:11 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php:9
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php on line 9
+[08-Jan-2025 11:18:15 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php:9
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php on line 9
+[08-Jan-2025 11:20:21 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php:9
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\single-news-post.php on line 9
