@@ -516,9 +516,9 @@
                 align-items: center;
                 position: relative;
                 overflow: hidden;
+                max-height: 190px;
                 border-bottom: 1px solid #D8DBDC;
                 transition: 0.4s all ease-in-out;
-                height: 190px;
                 margin-bottom: -2px;
                 z-index: 1;
                 &:first-child{
@@ -527,7 +527,7 @@
 
                 &.active {
                     background: $primaryColor1;
-                    height: 440px;
+                    max-height: 1000px;
                     border: none;
                     z-index: 2;
 
@@ -789,6 +789,7 @@
                     position: sticky;
                     top: 0;
                     margin-top: 0px;
+                    max-height: 1000px;
 
                     &:nth-child(odd) {
                         background: $primaryColor1;

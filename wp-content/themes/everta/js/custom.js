@@ -739,12 +739,8 @@ if($(".careerTeamSection").length){
         
         elements.forEach((element) => {
             element.addEventListener("click", function () {
-               
                 const panelId = this.id.replace("careerPositionBox", "careerOpeningModal");
-                
                 const modal = document.getElementById(panelId);
-                
-                
                 modal.style.display = "block";
                 body.classList.add('hideScrollbar');
                 html.classList.add('hideScrollbarhtml');
