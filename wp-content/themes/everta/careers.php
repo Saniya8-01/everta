@@ -305,7 +305,6 @@
     <?php endif; ?>
 </section>
 
-
 <?php
             $args = array('post_type' => 'career', 'posts_per_page' => -1, 'order' => 'DESC');
             $the_query = new WP_Query($args);

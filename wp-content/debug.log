@@ -453,3 +453,90 @@ Stack trace:
 [09-Jan-2025 10:08:51 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\everta\wp-content\themes\everta\careers.php on line 427
 [09-Jan-2025 10:09:56 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\everta\wp-content\themes\everta\careers.php on line 425
 [09-Jan-2025 10:09:58 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\everta\wp-content\themes\everta\careers.php on line 425
+[09-Jan-2025 11:34:02 UTC] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php:63
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-content\themes\everta\header.php(63): implode(' ', '')
+#1 C:\xampp\htdocs\everta\wp-includes\class-wp-walker.php(150): Custom_Walker_Nav_Menu->start_el('', Object(WP_Post), 0, Array, 10)
+#2 C:\xampp\htdocs\everta\wp-includes\class-wp-walker.php(252): Walker->display_element(Object(WP_Post), Array, 0, 0, Array, '')
+#3 C:\xampp\htdocs\everta\wp-includes\post-template.php(1571): Walker->walk(Array, 0, Array, 10)
+#4 C:\xampp\htdocs\everta\wp-includes\post-template.php(1354): walk_page_tree(Array, 0, 10, Array)
+#5 C:\xampp\htdocs\everta\wp-includes\post-template.php(1486): wp_list_pages(Array)
+#6 C:\xampp\htdocs\everta\wp-includes\nav-menu-template.php(164): wp_page_menu(Array)
+#7 C:\xampp\htdocs\everta\wp-content\themes\everta\header.php(45): wp_nav_menu(Object(stdClass))
+#8 C:\xampp\htdocs\everta\wp-includes\template.php(810): require_once('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\everta\wp-includes\template.php(745): load_template('C:\\xampp\\htdocs...', true, Array)
+#10 C:\xampp\htdocs\everta\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#11 C:\xampp\htdocs\everta\wp-content\themes\everta\homepage.php(1): get_header()
+#12 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#15 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 63
+[09-Jan-2025 11:35:03 UTC] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\xampp\htdocs\everta\wp-content\themes\everta\functions.php:330
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-content\themes\everta\functions.php(330): implode(' ', '')
+#1 C:\xampp\htdocs\everta\wp-includes\class-wp-walker.php(150): Custom_Walker_Nav_Menu->start_el('', Object(WP_Post), 0, Array, 10)
+#2 C:\xampp\htdocs\everta\wp-includes\class-wp-walker.php(252): Walker->display_element(Object(WP_Post), Array, 0, 0, Array, '')
+#3 C:\xampp\htdocs\everta\wp-includes\post-template.php(1571): Walker->walk(Array, 0, Array, 10)
+#4 C:\xampp\htdocs\everta\wp-includes\post-template.php(1354): walk_page_tree(Array, 0, 10, Array)
+#5 C:\xampp\htdocs\everta\wp-includes\post-template.php(1486): wp_list_pages(Array)
+#6 C:\xampp\htdocs\everta\wp-includes\nav-menu-template.php(164): wp_page_menu(Array)
+#7 C:\xampp\htdocs\everta\wp-content\themes\everta\header.php(45): wp_nav_menu(Object(stdClass))
+#8 C:\xampp\htdocs\everta\wp-includes\template.php(810): require_once('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\everta\wp-includes\template.php(745): load_template('C:\\xampp\\htdocs...', true, Array)
+#10 C:\xampp\htdocs\everta\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#11 C:\xampp\htdocs\everta\wp-content\themes\everta\homepage.php(1): get_header()
+#12 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#15 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\functions.php on line 330
+[09-Jan-2025 11:37:12 UTC] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\xampp\htdocs\everta\wp-content\themes\everta\functions.php:330
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-content\themes\everta\functions.php(330): implode(' ', '')
+#1 C:\xampp\htdocs\everta\wp-includes\class-wp-walker.php(150): Custom_Walker_Nav_Menu->start_el('', Object(WP_Post), 0, Array, 10)
+#2 C:\xampp\htdocs\everta\wp-includes\class-wp-walker.php(252): Walker->display_element(Object(WP_Post), Array, 0, 0, Array, '')
+#3 C:\xampp\htdocs\everta\wp-includes\post-template.php(1571): Walker->walk(Array, 0, Array, 10)
+#4 C:\xampp\htdocs\everta\wp-includes\post-template.php(1354): walk_page_tree(Array, 0, 10, Array)
+#5 C:\xampp\htdocs\everta\wp-includes\post-template.php(1486): wp_list_pages(Array)
+#6 C:\xampp\htdocs\everta\wp-includes\nav-menu-template.php(164): wp_page_menu(Array)
+#7 C:\xampp\htdocs\everta\wp-content\themes\everta\header.php(45): wp_nav_menu(Object(stdClass))
+#8 C:\xampp\htdocs\everta\wp-includes\template.php(810): require_once('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\everta\wp-includes\template.php(745): load_template('C:\\xampp\\htdocs...', true, Array)
+#10 C:\xampp\htdocs\everta\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#11 C:\xampp\htdocs\everta\wp-content\themes\everta\homepage.php(1): get_header()
+#12 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#15 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\functions.php on line 330
+[09-Jan-2025 11:42:00 UTC] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\xampp\htdocs\everta\wp-content\themes\everta\custom-walker-nav-menu.php:12
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-content\themes\everta\custom-walker-nav-menu.php(12): implode(' ', '')
+#1 C:\xampp\htdocs\everta\wp-includes\class-wp-walker.php(150): Custom_Walker_Nav_Menu->start_el('', Object(WP_Post), 0, Array, 10)
+#2 C:\xampp\htdocs\everta\wp-includes\class-wp-walker.php(252): Walker->display_element(Object(WP_Post), Array, 0, 0, Array, '')
+#3 C:\xampp\htdocs\everta\wp-includes\post-template.php(1571): Walker->walk(Array, 0, Array, 10)
+#4 C:\xampp\htdocs\everta\wp-includes\post-template.php(1354): walk_page_tree(Array, 0, 10, Array)
+#5 C:\xampp\htdocs\everta\wp-includes\post-template.php(1486): wp_list_pages(Array)
+#6 C:\xampp\htdocs\everta\wp-includes\nav-menu-template.php(164): wp_page_menu(Array)
+#7 C:\xampp\htdocs\everta\wp-content\themes\everta\header.php(47): wp_nav_menu(Object(stdClass))
+#8 C:\xampp\htdocs\everta\wp-includes\template.php(810): require_once('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\everta\wp-includes\template.php(745): load_template('C:\\xampp\\htdocs...', true, Array)
+#10 C:\xampp\htdocs\everta\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#11 C:\xampp\htdocs\everta\wp-content\themes\everta\homepage.php(1): get_header()
+#12 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#15 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\custom-walker-nav-menu.php on line 12
+[09-Jan-2025 14:04:02 UTC] PHP Fatal error:  Uncaught Error: Class "Custom_Walker_Nav_Menu" not found in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php:52
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-includes\template.php(810): require_once()
+#1 C:\xampp\htdocs\everta\wp-includes\template.php(745): load_template('C:\\xampp\\htdocs...', true, Array)
+#2 C:\xampp\htdocs\everta\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\xampp\htdocs\everta\wp-content\themes\everta\homepage.php(1): get_header()
+#4 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 52

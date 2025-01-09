@@ -314,3 +314,4 @@ function estimate_reading_time($post_id) {
     $reading_time = ceil($word_count / $reading_speed);
     return $reading_time;
 }
+
