@@ -8,10 +8,19 @@
         <p><?php echo get_sub_field('banner_subheading'); ?></p>
         <div class="resourcesTabs">
             <div class="resourcesTabWrapper">
-                <a href="">News</a>
-                <a href="" class="active">Manuals & Brochure</a>
-                <a href="">Blogs</a>
-                <a href="">FAQs</a>
+                <?php if (have_rows('resources_tabs')) : ?>
+                    <?php 
+                    $count = 0;
+                    while (have_rows('resources_tabs')) : the_row(); 
+                    ?>
+                    <a href="<?php echo get_sub_field('tab_link'); ?>" 
+                       class="<?php echo ($count == 1) ? 'active' : ''; ?>">
+                        <?php echo get_sub_field('tab_text'); ?>
+                    </a>
+                    <?php 
+                    $count++;
+                    endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>

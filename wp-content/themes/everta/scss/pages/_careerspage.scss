@@ -1,4 +1,4 @@
-.careerBannerSection{margin: 170px 0px 120px;
+.careerBannerSection{margin: 172px 0px 120px;
     .careerSectionWrapper{@include wrapper;
       .secHeading{margin-bottom: 60px;
         h1{color: $quaternaryColor1; @include terminamedium; @include font80; font-weight: $fontW600; line-height: 120%; }
@@ -10,7 +10,7 @@
         }
       }
     }
-    @media all and (max-width: 1800px){margin-top: 160px;
+    @media all and (max-width: 1800px){margin-top: 165px;
       .careerSectionWrapper{
         .secHeading{margin-bottom: 55px;
           p{margin: 20px 0 34px;}
@@ -97,7 +97,7 @@
       }
   }
   .careerSectionWrapperTwo{
-      .careerPositionBox{@include wrapper; padding-top: 40px; padding-bottom: 40px; border-bottom: 1px solid $tertiaryColor3; background: transparent; cursor: default; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease-in-out;
+      .careerPositionBox{@include wrapper; padding-top: 40px; padding-bottom: 40px; border-bottom: 1px solid $tertiaryColor3; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease-in-out;
           .subBoxContent{
               h3{color: $quaternaryColor1; @include terminamedium; @include font32; font-weight: $fontW600; line-height: 113%; margin-bottom: 24px;}
               .posSubContent{display: flex; align-items: center; gap: 32px;
@@ -116,8 +116,8 @@
           &:first-child{border-top: 1px solid $tertiaryColor3;}
       }
   }
-  .dnfContainer{display: none; align-items: center; justify-content: center; margin: 180px 0;
-    h4{color: $quaternaryColor1; @include terminabold; @include font28; font-weight: $fontW700; line-height: 134%; text-transform: uppercase;}
+  .dnfContainer{display: none; align-items: center; justify-content: center; margin: 180px auto; width: 35%;
+    p{color: #8e8e8e;@include verdanaregular; @include font28; font-weight: $fontW400; line-height: 134%; text-align: center;}
   }
 
   @media all and (max-width: 1800px){
@@ -132,6 +132,7 @@
     .careerSectionWrapperTwo{
       .careerPositionBox{padding-top: 38px; padding-bottom: 38px;}
     }
+    .dnfContainer{width: 45%;}
   }
   @media all and (max-width: 1600px){
     .careerSectionWrapper{padding-top: 55px; padding-bottom: 55px;
@@ -148,7 +149,7 @@
         .subBoxImg{width: 75px; height: 75px;}
       }
     }
-    .dnfContainer{margin: 160px 0;}
+    .dnfContainer{margin: 160px auto;}
   }
   @media all and (max-width: 1440px){
     .careerSectionWrapper{padding-top: 50px; padding-bottom: 50px;
@@ -163,7 +164,7 @@
         }
       }
     }
-    .dnfContainer{margin: 140px 0;}
+    .dnfContainer{margin: 140px auto; width: 35%;}
   }
   @media all and (max-width: 1280px){
     .careerSectionWrapper{padding-top: 40px; padding-bottom: 40px;
@@ -185,7 +186,7 @@
         }
       }
     }
-    .dnfContainer{margin: 120px 0;}
+    .dnfContainer{margin: 120px auto;}
   }
   @media all and (max-width: 1180px){
     .careerSectionWrapper{padding-top: 30px; padding-bottom: 30px;
@@ -199,7 +200,7 @@
         }
       }
     }
-    .dnfContainer{margin: 100px 0;}
+    .dnfContainer{margin: 100px auto; width: 50%;}
   }
   @media all and (max-width: 820px){
     .careerSectionWrapper{padding-top: 30px; padding-bottom: 30px;
@@ -251,14 +252,16 @@
           }
           }
         }
-        &:nth-child(2n){background: $primaryColor1;}
-        &:hover{background: unset;
+        &:nth-child(even){background: $primaryColor1;}
+        &:hover{
+          &:nth-child(even){background: $primaryColor1;}
+          &:nth-child(odd){background: #fff;}
           .subBoxImg{opacity: 1; visibility: visible;}
         }
         .subBoxImg{display: none;}
       }
     }
-    .dnfContainer{margin: 50px 0;}
+    .dnfContainer{margin: 80px auto; width: 90%;}
   }
 }
 .careerCVSection{@include bottomSpace;
@@ -362,12 +365,42 @@
       }
     }
   }
+  @media (width: 1366px) and (height: 1024px){
+    .careerSectionWrapper{
+      .hiringProcessContainer{
+        .hiringProcessBox{
+          &:nth-child(odd){background: $primaryColor1;}
+          &:nth-child(even){background: #fff;}
+          .contentBox{
+            .subHeadings{
+              h6{opacity: 1; visibility: visible;}
+            }
+          }
+        }
+      }
+    }
+  }
   @media all and (max-width: 1280px){
     .careerSectionWrapper{
       .hiringProcessContainer{
         .hiringProcessBox{padding: 50px 40px 70px;
           .contentBox{
             .boxNumber{margin: 60px 0 25px; width: 40px; height: 40px;}
+          }
+        }
+      }
+    }
+  }
+  @media all and (max-width: 1180px){
+    .careerSectionWrapper{
+      .hiringProcessContainer{
+        .hiringProcessBox{
+          &:nth-child(odd){background: $primaryColor1;}
+          &:nth-child(even){background: #fff;}
+          .contentBox{
+            .subHeadings{
+              h6{opacity: 1; visibility: visible;}
+            }
           }
         }
       }
@@ -380,17 +413,9 @@
           .logoBox{width: 180px; height: 180px;}
           .contentBox{
             .boxNumber{margin: 50px 0 20px; width: 40px; height: 40px;}
-            .subHeadings{
-              h6{opacity: 1; visibility: visible;}
-            }
+            
           }
-          &:hover{background: unset;
-            .contentBox{
-              .subHeadings{
-                h6{visibility: visible; opacity: 1;}
-              }
-            }
-          }
+          
         }
       }
     }
@@ -412,7 +437,7 @@
         p{font-size: 12px; line-height: 150%; text-align: left; width: 100%;}
       }
       .hiringProcessContainer{flex-flow: column;
-        .hiringProcessBox{padding: 48px 36px; width: 100%; gap: 20px; align-items: flex-start;
+        .hiringProcessBox{padding: 48px 36px; width: 100%; gap: 20px; align-items: flex-start; position: sticky; top: 0;
           .logoBox{width: 120px; height: 120px;}
           .contentBox{flex-flow: row; gap: 15px; width: 100%; align-items: flex-start;
             .boxNumber{margin: 0; width: 30px; height: 30px; }
@@ -422,6 +447,7 @@
             }
           }
           &:nth-child(odd){background: $primaryColor1;}
+          &:nth-child(even){background: #fff;}
         }
       }
     }
@@ -435,7 +461,9 @@
     .evertaWallContainer{display: flex; align-items: center; width: 100%; padding: 0px 160px; gap: 20px;
       .wallImgBoxContainer{display: flex; flex-direction: column; width: calc(33.33% - 13px);
         .wallImgBox{padding: 16px 8px; position: relative;
-          img{display: block; object-fit: cover; width: 100%; transition: all 0.5s ease-in-out;}
+          img{display: block; object-fit: cover; width: 100%; transition: all 0.5s ease-in-out;
+            &.mblWall{display: none;}
+          }
           .wallTapeBox{position: absolute;left: 0; top: -6%; width: 35%;
             img{display: block; object-fit: cover; width: 100%;}
           }
@@ -538,7 +566,10 @@
     .careerSectionWrapper{
       .evertaWallContainer{padding: 0px; flex-flow: column;
         .wallImgBoxContainer{width: 100%; flex-flow: wrap;
-          .wallImgBox{padding:5px;}
+          .wallImgBox{padding:5px;
+            &.desktopWall{display: none;}
+            &.mblWall{display: block;}
+          }
           &:nth-child(1){
             .wallImgBox{
               &:first-child{width: 50%;}
@@ -553,7 +584,7 @@
               }
             }
           }
-          &:nth-child(3){
+          &:nth-child(3){align-items: center;
             .wallImgBox{
               &:first-child{border: 2px dashed $secondaryColor1; width: 50%;
                 img{
@@ -570,16 +601,15 @@
   }
   
 }
-
 .careerOpeningModal{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 20;
   .modalContent {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%;
       .jobHeadingDesc{background: $primaryColor1; padding: 56px 64px 34px;
           .closeBtn{cursor: pointer; display: block; float: right;
               img{display: block; object-fit: cover;}
           }
-          .jobHeadingDescSub{margin-top: 78px; display: flex; align-items: center; justify-content: space-between; gap: 32px;
+          .jobHeadingDescSub{margin-top: 60px; display: flex; align-items: center; justify-content: space-between; gap: 32px;
               .headingDescContent{
-                  span{display: block; width: fit-content; margin-bottom: 13px; color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400; line-height: 175%; padding: 4px 8px; border-radius: 2px; background: rgba(30, 30, 30, 0.10);}
+                  span{display: block; width: fit-content; margin-bottom: 13px; color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400; line-height: 175%; padding: 4px 8px; border-radius: 2px; background: rgba(30, 30, 30, 0.10); opacity: 0.7;}
                   .subBoxContent{
                       h3{color: $quaternaryColor1; @include terminamedium; @include font32; font-weight: $fontW600; line-height: 113%; margin-bottom: 13px;}
                       .posSubContent{display: flex; align-items: center; gap: 40px;
@@ -592,49 +622,71 @@
               }
           }
       }
-      .jobDescription{background: #fff; padding: 68px 64px 34px; max-height: 450px; overflow-y: auto;
-          h4{color: $quaternaryColor2; text-align: justify; @include verdanabold; @include font20; font-weight: $fontW700;line-height: 140%; margin-bottom: 8px;}
-          p{color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%; margin-bottom: 8px;}
-          ul{padding-left: 20px;
-            li{list-style: disc; margin-bottom: 8px; color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%; margin-bottom: 8px;
-              &:last-child{margin-bottom: 0;}
-            
+      .jobDescription{background: #fff; padding: 68px 5px 34px 64px; 
+        .detailWrapper{max-height: 450px; overflow-y: auto; padding-right: 64px;
+            h4{color: $quaternaryColor2; text-align: justify; @include verdanabold; @include font20; font-weight: $fontW700;line-height: 140%; margin-bottom: 8px;}
+            p{color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%; margin-bottom: 8px;}
+            ul{padding-left: 20px;
+              li{list-style: disc; margin-bottom: 8px; color: $quaternaryColor1; text-align: justify; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%; margin-bottom: 8px;
+                &:last-child{margin-bottom: 0;}
+              
+              }
             }
-          }
           .jobDetail{margin-bottom: 32px;}
           .jobRole{margin-bottom: 36px;}
-          &::-webkit-scrollbar {width: 8px;}
-          &::-webkit-scrollbar-thumb {border-radius: 200px; border: 0.2px solid rgba(0, 0, 0, 0.16); background: rgba(34, 34, 34, 0.09);}
+          &::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            background: transparent !important;
+          }
+          &::-webkit-scrollbar{
+              width: 8px;
+              background: transparent !important;
+          }
+          &::-webkit-scrollbar-thumb{
+              border-radius: 10px;
+              -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+              background-color: $primaryColor1;
+          }
+        }
       }
   }
   @media all and (max-width: 1800px){
     .modalContent{
       .jobHeadingDesc{padding: 54px 62px 32px;}
-      .jobDescription{padding: 64px 62px 32px;}
+      .jobDescription{padding: 64px 5px 32px 62px;
+        .detailWrapper{padding-right: 62px;}
+      }
     }
   }
   @media all and (max-width: 1600px){
     .modalContent{
       .jobHeadingDesc{padding: 50px 60px 30px;
-        .jobHeadingDescSub{margin-top: 75px;}
+        .jobHeadingDescSub{margin-top: 60px;}
       }
-      .jobDescription{padding: 60px 60px 30px;}
+      .jobDescription{padding: 60px 5px 30px 60px; 
+        .detailWrapper{padding-right: 60px; max-height: 350px;}
+      }
     }
   }
   @media all and (max-width: 1440px){
     .modalContent{
       .jobHeadingDesc{padding: 45px 55px 30px;
-        .jobHeadingDescSub{margin-top: 70px;}
+        .jobHeadingDescSub{margin-top: 50px;}
       }
-      .jobDescription{padding: 55px 55px 30px;
-        .jobDetail{margin-bottom: 30px;}
-        .jobRole{margin-bottom: 32px;}
+      .jobDescription{padding: 55px 5px 30px 55px;
+        .detailWrapper{padding-right: 55px;
+          .jobDetail{margin-bottom: 30px;}
+          .jobRole{margin-bottom: 32px;}
+        }
       }
     }
   }
   @media all and (max-width: 1366px){
     .modalContent{
-      .jobDescription{max-height: 400px;}
+      .jobDescription{
+        .detailWrapper{max-height: 300px;}
+      }
     }
   }
   @media all and (max-width: 1280px){
@@ -643,7 +695,7 @@
         .closeBtn{
           img{width: 30px; height: 30px;}
         }
-        .jobHeadingDescSub{margin-top: 50px;
+        .jobHeadingDescSub{margin-top: 40px;
           .headingDescContent{
             .subBoxContent{
               .posSubContent{gap: 35px;}
@@ -651,22 +703,26 @@
           }
         }
       }
-      .jobDescription{padding: 50px 50px 25px;
-        .jobDetail{margin-bottom: 28px;}
-        .jobRole{margin-bottom: 30px;}
+      .jobDescription{padding: 50px 5px 25px 50px;
+        .detailWrapper{padding-right: 50px;
+          .jobDetail{margin-bottom: 28px;}
+          .jobRole{margin-bottom: 30px;}
+        }
       }
     }
   }
   @media all and (max-width: 1024px){
     .modalContent{width: 70%;
       .jobHeadingDesc{padding: 36px 40px 25px;}
-      .jobDescription{padding: 40px 40px 20px; max-height: 450px;}
+      .jobDescription{padding: 40px 5px 20px 40px;
+        .detailWrapper{max-height: 450px; padding-right: 40px;}
+      }
     }
   }
   @media all and (max-width: 820px){
-    .modalContent{width: 70%;
+    .modalContent{width: 85%;
       .jobHeadingDesc{padding: 35px 30px 25px;
-        .jobHeadingDescSub{margin-top: 40px;
+        .jobHeadingDescSub{margin-top: 35px;
           .headingDescContent{
             .subBoxContent{
               .posSubContent{gap: 30px;}
@@ -674,9 +730,11 @@
           }
         }
       }
-      .jobDescription{padding: 36px 30px 25px;
-        .jobDetail{margin-bottom: 24px;}
-        .jobRole{margin-bottom: 25px;}
+      .jobDescription{padding: 36px 5px 25px 30px;
+        .detailWrapper{padding-right: 30px;
+          .jobDetail{margin-bottom: 24px;}
+          .jobRole{margin-bottom: 25px;}
+        }
       }
     }
   }
@@ -686,7 +744,7 @@
         .closeBtn{
           img{width: 24px; height: 24px;}
         }
-        .jobHeadingDescSub{margin-top: 40px; flex-flow: column; align-items: flex-start; gap: 24px;
+        .jobHeadingDescSub{margin-top: 30px; flex-flow: column; align-items: flex-start; gap: 24px;
           .headingDescContent{
             span{margin-bottom: 16px; padding: 5px 10px; font-size: 12px; line-height: 150%;}
             .subBoxContent{
@@ -700,14 +758,16 @@
           }
         }
       }
-      .jobDescription{padding: 32px 20px 24px; max-height: none;
-        h4{font-size: 16px; line-height: 175%;}
-        p{font-size: 12px; line-height: 150%;}
-        ul{
-          li{font-size: 12px; line-height: 150%;}
+      .jobDescription{padding: 32px 5px 24px 20px; 
+        .detailWrapper{max-height: none; padding-right: 20px;
+          h4{font-size: 16px; line-height: 175%;}
+          p{font-size: 12px; line-height: 150%;}
+          ul{
+            li{font-size: 12px; line-height: 150%;}
+          }
+          .jobDetail{margin-bottom: 24px;}
+          .jobRole{margin-bottom: 24px;}
         }
-        .jobDetail{margin-bottom: 24px;}
-        .jobRole{margin-bottom: 24px;}
       }
     }
   }

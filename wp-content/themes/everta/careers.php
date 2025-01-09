@@ -1,18 +1,39 @@
-<?php get_header(); /*Template name: Careerspage*/ ?>
+<?php get_header(); /*Template name: Careers*/ ?>
 
 <section class="careerBannerSection">
+    <?php if (have_rows('banner_section')) : ?>
+    <?php while (have_rows('banner_section')) : the_row(); ?>
     <div class="careerSectionWrapper">
         <div class="secHeading">
-            <h1>Innovate, grow & make an impact</h1>
-            <p>Join a team driven by innovation, sustainability, and passion. Explore career opportunities and help power the future of electric mobility.</p>
-            <a href="#evertaTeam" class="ctaYellow">See job openingss</a>
-            
+            <h1>
+                <?php echo get_sub_field('heading'); ?>
+            </h1>
+            <p>
+                <?php echo get_sub_field('subheading'); ?>
+            </p>
+            <a href="#evertaTeam" class="ctaYellow">
+                <?php echo get_sub_field('cta_text'); ?>
+            </a>
         </div>
         <div class="careerBannerImg">
-            <img src="<?php bloginfo('template_directory'); ?>/images/career-banner.webp" alt="everta" class="desktopBanner">
-            <img src="<?php bloginfo('template_directory'); ?>/images/career-banner-mbl.webp" alt="everta" class="mblBanner">
+            <?php
+            $desktopImage = get_sub_field('desktop_image');
+            $mobileImage = get_sub_field('mobile_image');
+        ?>
+            <?php if ( !empty( $desktopImage ) ): ?>
+            <img src="<?php echo esc_url( $desktopImage['url'] ); ?>"
+                alt="<?php echo esc_attr( $desktopImage['alt'] ); ?>" class="desktopBanner">
+            <?php endif; ?>
+
+            <?php if ( !empty( $mobileImage ) ): ?>
+
+            <img src="<?php echo esc_url( $mobileImage['url'] ); ?>"
+                alt="<?php echo esc_attr( $mobileImage['alt'] ); ?>" class="mblBanner">
+            <?php endif; ?>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section id="evertaTeam" class="careerTeamSection">
@@ -137,103 +158,132 @@
             </div>
         </div>
     </div>
-    <div class="dnfContainer"> 
-        <h4>Data Not Found</h4>
+    <div class="dnfContainer">
+        <p>No job listings available at the moment. Stay tuned for future openings.</p>
     </div>
 
 </section>
 
 <section class="careerCVSection">
+    <?php if (have_rows('cv_section')) : ?>
+    <?php while (have_rows('cv_section')) : the_row(); ?>
     <div class="careerSectionWrapper">
-        <h2>DidN’t Find what you’re looking for?</h2>
-        <p>Send us your resume, and we'll get back to you.</p>
-        <a href="javascript:void(0);" class="ctaBlack">Share your CV with us</a>
+        <h2>
+            <?php echo get_sub_field('heading'); ?>
+        </h2>
+        <p>
+            <?php echo get_sub_field('subheading'); ?>
+        </p>
+        <a href="javascript:void(0);" class="ctaBlack">
+            <?php echo get_sub_field('cta_text'); ?>
+        </a>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="careerHiringSection">
+    <?php if (have_rows('hiring_section')) : ?>
+    <?php while (have_rows('hiring_section')) : the_row(); ?>
     <div class="careerSectionWrapper">
         <div class="secHeading">
-            <h2>hiring process</h2>            
-            <p>Here’s how we hire new team members, with detailed steps to ensure we find the best fit for our company.</p>
+            <h2>
+                <?php echo get_sub_field('heading'); ?>
+            </h2>
+            <p>
+                <?php echo get_sub_field('subheading'); ?>
+            </p>
         </div>
         <div class="hiringProcessContainer">
-        <div class="hiringProcessBox">
-            <div class="logoBox">
-                <img src="<?php bloginfo('template_directory'); ?>/images/application-logo.svg" alt="everta">
-            </div>
-            <div class="contentBox">
-                <div class="boxNumber">1</div>
-                <div class="subHeadings">
-                    <h3>PLUG IN YOUR APPLICATION</h3>
-                    <h6>Submit your CV and apply for a position that suits your skills.</h6>
+            <?php if (have_rows('hiring_steps')) : ?>
+            <?php while (have_rows('hiring_steps')) : the_row(); ?>
+            <div class="hiringProcessBox">
+                <div class="logoBox">
+                    <?php 
+                    $iconImage = get_sub_field('icon_image');
+                    if (!empty($iconImage)) : ?>
+                    <img src="<?php echo esc_url($iconImage['url']); ?>"
+                        alt="<?php echo esc_attr($iconImage['alt']); ?>">
+                    <?php endif; ?>
                 </div>
-            </div>
-           
-        </div>
-        <div class="hiringProcessBox">
-            <div class="logoBox">
-                <img src="<?php bloginfo('template_directory'); ?>/images/interviews-logo.svg" alt="everta">
-            </div>
-            <div class="contentBox">
-                <div class="boxNumber">2</div>
-                <div class="subHeadings">
-                    <h3>CHARGE UP FOR INTERVIEWS</h3>
-                    <h6>We conduct interviews to get to know you & assess your fit with our team & values.</h6>
-                </div>
-            </div>
-        </div>
-        <div class="hiringProcessBox">
-            <div class="logoBox">
-                <img src="<?php bloginfo('template_directory'); ?>/images/ready-to-go-logo.svg" alt="everta">
-            </div>
-            <div class="contentBox">
-                <div class="boxNumber">3</div>
-                <div class="subHeadings">
-                    <h3>READY TO GO!</h3>
-                    <h6>After evaluating all candidates, we choose the best fit & provide feedback to everyone.</h6>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-   
-</section>
-
-<section class="careerWallSection">
-    <div class="careerSectionWrapper">
-        <div class="secHeading">
-            <h2>EVERTA WALL</h2>
-        </div>
-        <div class="evertaWallContainer">
-            <div class="wallImgBoxContainer ">
-                <div class="wallImgBox">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-1.webp" alt="everta">
-                </div>
-                <div class="wallImgBox">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-2.webp" alt="everta">
-                </div>
-            </div>
-            <div class="wallImgBoxContainer">
-                <div class="wallImgBox">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-3.webp" alt="everta" class="desktopWall">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/everta-wall-mbl.webp" alt="everta" class="mblWall">
-                    <div class="wallTapeBox">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/wall-tape.webp" alt="everta">
+                <div class="contentBox">
+                    <div class="boxNumber">
+                        <?php echo get_sub_field('step_number'); ?>
+                    </div>
+                    <div class="subHeadings">
+                        <h3>
+                            <?php echo get_sub_field('title'); ?>
+                        </h3>
+                        <h6>
+                            <?php echo get_sub_field('description'); ?>
+                        </h6>
                     </div>
                 </div>
             </div>
-            <div class="wallImgBoxContainer">
-                <div class="wallImgBox">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-4.webp" alt="everta" class="desktopWall">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/everta-wall-mbl1.webp" alt="everta" class="mblWall">
-                </div>
-                <div class="wallImgBox">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/wall-image-5.webp" alt="everta">
-                </div>
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
+</section>
+
+<section class="careerWallSection">
+    <?php if (have_rows('careerwall_section')) : ?>
+    <?php while (have_rows('careerwall_section')) : the_row(); ?>
+    <div class="careerSectionWrapper">
+        <div class="secHeading">
+            <h2>
+                <?php echo get_sub_field('heading'); ?>
+            </h2>
+        </div>
+
+        <div class="evertaWallContainer">
+            <?php 
+                    $container_index = 0;
+                    if (have_rows('box_container')) : 
+                        while (have_rows('box_container')) : the_row(); 
+                            $container_index++;
+                    ?>
+            <div class="wallImgBoxContainer">
+                <?php if (have_rows('wall_img_box')) : ?>
+                <?php while (have_rows('wall_img_box')) : the_row(); 
+                                    $image = get_sub_field('image');
+                                    $mobile_image = get_sub_field('mobile_image'); 
+                                ?>
+                <div class="wallImgBox">
+                    <?php if (!empty($image)) : ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                        class="desktopWall">
+                    <?php endif; ?>
+
+                    <?php if (!empty($mobile_image)) : ?>
+                    <img src="<?php echo esc_url($mobile_image['url']); ?>"
+                        alt="<?php echo esc_attr($mobile_image['alt']); ?>" class="mblWall">
+                    <?php endif; ?>
+                </div>
+                <?php endwhile; ?>
+                <?php endif; ?>
+
+                <!-- Show wallTapeBox only for the second wallImgBoxContainer -->
+                <?php if ($container_index == 2) : ?>
+                <div class="wallTapeBox">
+                    <?php 
+                                    $tape_image = get_sub_field('tape_image');
+                                    if (!empty($tape_image)) : ?>
+                    <img src="<?php echo esc_url($tape_image['url']); ?>"
+                        alt="<?php echo esc_attr($tape_image['alt']); ?>">
+                    <?php endif; ?>
+                </div>
+                <?php endif; ?>
+
+            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+    </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <div class="careerOpeningModal" id="careerOpeningModal">
@@ -253,7 +303,8 @@
                                 <h4>New Delhi, India</h4>
                             </div>
                             <div>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg" alt="everta">
+                                <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg"
+                                    alt="everta">
                                 <h4>Full Time</h4>
                             </div>
                         </div>
@@ -263,23 +314,35 @@
             </div>
         </div>
         <div class="jobDescription">
-            <div class="jobDetail">
-                <p>The Sales Manager will be responsible for leading and managing the sales team to achieve sales targets and drive revenue growth. This role involves developing strategic sales plans, building and maintaining customer relationships, and ensuring the sales team operates efficiently and effectively.</p>
+            <div class="detailWrapper">
+                <div class="jobDetail">
+                    <p>The Sales Manager will be responsible for leading and managing the sales team to achieve sales
+                        targets and drive revenue growth. This role involves developing strategic sales plans, building
+                        and maintaining customer relationships, and ensuring the sales team operates efficiently and
+                        effectively.</p>
+                </div>
+                <div class="jobRole">
+                    <h4>Your Role</h4>
+                    <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in
+                        every detail and process, ensuring that our products and services consistently reflect our
+                        commitment to excellence. At Everta, quality isn’t just a standard—it’s who we are.</p>
+                </div>
+                <div class="jobResponsiblity">
+                    <h4>Responsibilities</h4>
+                    <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in
+                        every detail and process.</p>
+                    <ul>
+                        <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond
+                            expectations in every detail and process.</li>
+                        <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond
+                            expectations in every detail and process.</li>
+                        <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond
+                            expectations in every detail and process.</li>
+                        <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond
+                            expectations in every detail and process.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="jobRole">
-                <h4>Your Role</h4>
-                <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process, ensuring that our products and services consistently reflect our commitment to excellence. At Everta, quality isn’t just a standard—it’s who we are.</p>
-            </div>
-            <div class="jobResponsiblity">
-                <h4>Responsibilities</h4>
-                <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</p>
-                <ul>
-                    <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                    <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                    <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                    <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in every detail and process.</li>
-                </ul>
-            </div>            
         </div>
     </div>
 </div>

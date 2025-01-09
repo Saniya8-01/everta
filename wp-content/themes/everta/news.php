@@ -1,15 +1,26 @@
 <?php get_header(); /*Template name: News*/ ?>
 
 <Section class="resourcesBanner">
+    <?php if (have_rows('resources_banner')) : ?>
+    <?php while (have_rows('resources_banner')) : the_row(); ?>
     <div class="resorucesBannerWrapper">
-        <h1>EV knowledge hub</h1>
-        <p>Your go-to source for insights, tools, and the latest in e-mobility</p>
+        <h1><?php echo get_sub_field('banner_heading'); ?></h1>
+        <p><?php echo get_sub_field('banner_subheading'); ?></p>
         <div class="resourcesTabs">
             <div class="resourcesTabWrapper">
-                <a href="" class="active">News</a>
-                <a href="">Manuals & Brochure</a>
-                <a href="">Blogs</a>
-                <a href="">FAQs</a>
+                <?php if (have_rows('resources_tabs')) : ?>
+                    <?php 
+                    $count = 0;
+                    while (have_rows('resources_tabs')) : the_row(); 
+                    ?>
+                    <a href="<?php echo get_sub_field('tab_link'); ?>" 
+                       class="<?php echo ($count == 0) ? 'active' : ''; ?>">
+                        <?php echo get_sub_field('tab_text'); ?>
+                    </a>
+                    <?php 
+                    $count++;
+                    endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
         <div class="searchWrapper">
@@ -17,6 +28,8 @@
             <input type="search" placeholder="Search here">
         </div>
     </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
 </Section>
 
 <section class="cardSection">
@@ -24,258 +37,99 @@
         <div class="heading">
             <h2>News</h2>
         </div>
+        <!-- Custom Select Dropdown -->
         <div class="customSelect" id="customSelect">
             <div class="selectBtn" id="selectBtn">
                 <span class="sBtntext">Latest first</span>
-                <img src="http://localhost/everta/wp-content/themes/everta/images/dropdown-icon.svg"
-                    alt="everta">
+                <img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg" alt="Dropdown Icon">
             </div>
             <ul class="options" id="options">
-                <li class="option" id="option">Latest first</li>
-                <li class="option" id="option">Oldest first</li>
-                <li class="option" id="option">A-Z</li>
-                <li class="option" id="option">Z-A</li>
+                <li class="option" data-sort="latest">Latest first</li>
+                <li class="option" data-sort="oldest">Oldest first</li>
+                <li class="option" data-sort="az">A-Z</li>
+                <li class="option" data-sort="za">Z-A</li>
             </ul>
         </div>
+        
         <div class="cardGrid" id="cardGrid">
-            <a href="" class="cards">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">News</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
+            <?php
+            $args = array('post_type' => 'news-post', 'posts_per_page' => -1, 'order' => 'DESC');
+            $the_query = new WP_Query($args);
+            while ($the_query->have_posts()) : $the_query->the_post();
+                $terms = get_the_terms($post->ID, 'news_categories');
+                $tax = ($terms && !is_wp_error($terms)) ? strtolower(join(", ", wp_list_pluck($terms, 'name'))) : '';
+            ?>
+                <a href="<?php the_permalink(); ?>" class="cards">
+                    <div class="cardImg">
+                        <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title_attribute(); ?>">
+                    </div>
+                    <div class="cardContent">
+                        <span class="tag"><?php echo esc_html($tax); ?></span>
+                        <div class="cardInfo">
+                            <div class="cardTypo">
+                                <h3><?php echo esc_html(wp_trim_words(get_the_title(), 10, '...')); ?></h3>
+                                <p><?php echo get_the_date('d M Y'); ?> • <?php echo estimate_reading_time(get_the_ID()); ?> mins read</p>
+                            </div>
+                            <div class="redirectArrow">
+                                <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="Right Arrow">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </a>
-            <a href="" class="cards">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">News</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">News</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">News</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">News</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">News</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">News</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">News</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">News</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">News</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">News</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="cards">
-                <div class="cardImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/news-1.png" alt="">
-                </div>
-                <div class="cardContent">
-                    <span class="tag">News</span>
-                    <div class="cardInfo">
-                        <div class="cardTypo">
-                            <h3>Batman Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>11 Jan 2022 • 5 min read</p>
-                        </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </a>
+                </a>
+            <?php endwhile; wp_reset_postdata(); ?>
         </div>
-        <div id="pagination" class="pagination"></div>
     </div>
 </section>
 
 <?php get_footer(); ?>
 
 <script>
-    const optionMenu = document.querySelector("#customSelect"),
-      selectBtn = optionMenu.querySelector("#selectBtn"),
-      options = optionMenu.querySelectorAll(".option"),
-      sBtn_text = optionMenu.querySelector(".sBtntext");
-  
-    // Toggle the dropdown when clicking the select button
-    selectBtn.addEventListener("click", function (e) {
-      e.stopPropagation(); // Prevent click event from bubbling to the document
-      optionMenu.classList.toggle("active");
+   document.addEventListener('DOMContentLoaded', () => {
+    const optionMenu = document.querySelector("#customSelect");
+    const selectBtn = optionMenu.querySelector("#selectBtn");
+    const options = optionMenu.querySelectorAll(".option");
+    const sBtn_text = optionMenu.querySelector(".sBtntext");
+    const cardGrid = document.getElementById('cardGrid');
+    const cards = Array.from(cardGrid.querySelectorAll('.cards'));
+
+    // Toggle Dropdown
+    selectBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        optionMenu.classList.toggle("active");
     });
-  
-    // Set selected text and close dropdown when an option is clicked
-    options.forEach(function (option) {
-      option.addEventListener("click", function () {
-        const selectedText = this.textContent.trim();
-        sBtn_text.textContent = selectedText; // Set button text
-        optionMenu.classList.remove("active"); // Close dropdown
-      });
+
+    document.addEventListener("click", (e) => {
+        if (!optionMenu.contains(e.target)) {
+            optionMenu.classList.remove("active");
+        }
     });
-  
-    // Close the dropdown when clicking outside of it
-    document.addEventListener("click", function (e) {
-      if (!optionMenu.contains(e.target)) {
-        optionMenu.classList.remove("active");
-      }
+
+    // Sorting Logic
+    options.forEach(option => {
+        option.addEventListener("click", function () {
+            const sortType = this.getAttribute('data-sort');
+            sBtn_text.textContent = this.textContent;
+            optionMenu.classList.remove("active");
+
+            let sortedCards = [...cards];
+
+            if (sortType === "latest") {
+                sortedCards.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+            } else if (sortType === "oldest") {
+                sortedCards.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+            } else if (sortType === "az") {
+                sortedCards.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
+            } else if (sortType === "za") {
+                sortedCards.sort((a, b) => b.dataset.title.localeCompare(a.dataset.title));
+            }
+
+            // Clear existing cards and re-append sorted ones
+            cardGrid.innerHTML = "";
+            sortedCards.forEach(card => cardGrid.appendChild(card));
+        });
     });
+});
+
 
     document.addEventListener('DOMContentLoaded', () => {
     const cardGrid = document.getElementById('cardGrid');

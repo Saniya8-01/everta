@@ -146,10 +146,6 @@ $(document).ready(function () {
     }
 });
 
-
-
-
-
 //-------------------Header Dropdown JS----------------------//
 
 if ($(".partnersSection").length) {
@@ -294,47 +290,6 @@ $(document).ready(function () {
     });
 });
 
-if ($("#faqAccordion").length) {
-    jQuery(document).ready(function () {
-        const accordionHeaders = document.querySelectorAll(".accordion-header");
-        ActivatingFirstAccordion();
-        function ActivatingFirstAccordion() {
-            accordionHeaders[0].parentElement.classList.add("active");
-            accordionHeaders[0].nextElementSibling.style.maxHeight = "fit-content";
-        }
-        function toggleActiveAccordion(e, header) {
-            const activeAccordion = document.querySelector(".accordion.active");
-            const clickedAccordion = header.parentElement;
-            const accordionBody = header.nextElementSibling;
-            if (activeAccordion && activeAccordion != clickedAccordion) {
-                activeAccordion.querySelector(".accordion-body").style.maxHeight = 0;
-                activeAccordion.classList.remove("active");
-            }
-            clickedAccordion.classList.toggle("active");
-            if (clickedAccordion.classList.contains("active")) {
-                accordionBody.style.maxHeight = "fit-content";
-            } else {
-                accordionBody.style.maxHeight = 0;
-            }
-        }
-        accordionHeaders.forEach(function (header) {
-            header.addEventListener("click", function (event) {
-                toggleActiveAccordion(event, header);
-            });
-        });
-        function resizeActiveAccordionBody() {
-            const activeAccordionBody = document.querySelector(
-                ".accordion.active .accordion-body"
-            );
-            if (activeAccordionBody)
-                activeAccordionBody.style.maxHeight = "fit-content";
-        }
-        window.addEventListener("resize", function () {
-            resizeActiveAccordionBody();
-        });
-    });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const hoverBoxes = document.querySelectorAll('.hover-box');
 
@@ -443,7 +398,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', applyHoverEffect);
 });
 
-
 $.fn.isInViewport = function (threshold = 0) {
     var elementTop = $(this).offset().top;
     var elementHeight = $(this).outerHeight();
@@ -490,8 +444,6 @@ $(window).on('resize scroll', function () {
         }
     }
 });
-
-
 
 /******About Us Js Start */
 
@@ -615,7 +567,9 @@ if ($(".visitUsSec").length) {
         const mblPOLAND = document.querySelector(".mblSVG .poland");
 
         if (activeSlide) {
-            const companyName = activeSlide.getAttribute("data-company");
+            const companyName = activeSlide.getAttribute("data-company").toLowerCase();
+            console.log(companyName);
+            
             if (window.getComputedStyle(desktopSVG).display !== "none") {
                 if (companyName === "india") {
                     INDIA.style.opacity = 1;
@@ -746,7 +700,6 @@ if($(".careerTeamSection").length){
     });
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
     // Check if the "custom-tabs-wrapper" exists on the page
     const customTabsWrapper = document.querySelector(".contactForm");
@@ -871,13 +824,19 @@ if ($(".resDetailContentSec").length) {
         const readMore = document.getElementById("readMore");
         const contentBox = document.querySelector('.contentBox');
         const readMoreBtnBox = document.querySelector('.readMoreBtnBox');
-
-        function ContentShowFunc() {
-            contentBox.classList.add("removeFadeEffect");
-            contentBox.classList.remove("hideTxt");
-            readMoreBtnBox.classList.add("btnHide");
-        }
-        readMore.addEventListener("click", ContentShowFunc);
+        readMore.addEventListener("click", function () {
+            if (contentBox.classList.contains("hideTxt")) {
+              contentBox.style.maxHeight = `${contentBox.scrollHeight}px`; // Set current height
+              contentBox.classList.remove("hideTxt");
+              contentBox.classList.add("removeFadeEffect");
+              readMoreBtnBox.classList.add("btnHide");
+            } else {
+              // Expand content
+              contentBox.style.maxHeight = `${contentBox.scrollHeight}px`; // Set dynamic max-height
+              contentBox.classList.add("hideTxt");
+            
+            }
+          });
     })
 }
 
@@ -907,6 +866,43 @@ if ($(".backtopCl").length) {
             return elementBottom > 0 && elementTop < viewportHeight;
         };
     })
+}
+if ($(".relatedPostSec").length) {
+    $(".postCardSlider").slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 821,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+}
+if($(".relatedPostSec").length){
+    document.addEventListener("DOMContentLoaded", () => {
+        let contentBox = document.querySelectorAll(".contentBox .cardHeading");
+        function truncateTextElement(maxLength) {
+            contentBox.forEach((boxHead) => {
+                let headTxt = boxHead.textContent.trim(); 
+                if (headTxt.length > maxLength) {
+                    boxHead.textContent = headTxt.substring(0, maxLength).trim() + "..."; 
+                }
+            });
+        }
+        truncateTextElement(50);
+    });
 }
 
 /*Resources Details Page End*/

@@ -3,8 +3,8 @@
 <section class="resDetailBannerSec">
     <div class="secWrapper">
         <div class="backBtn">
-            <a href="" >
-                <img src="<?php bloginfo('template_directory'); ?>/images/left-arrow-gray.svg" alt=" " />Back 
+            <a href="new#newspage" >
+                <i class="icon-icon-left backArrow"></i>Back 
             </a>
         </div>
         <div class="secHeading">
@@ -67,7 +67,7 @@
         <div class="secHeading">
             <h2>Other related posts</h2>
         </div>
-        <div class="cardContainer">
+        <div class="cardContainer postCardSlider">
             <div class="blogCard">
                 <a href="">
                     <div class="imgBox">
@@ -76,16 +76,15 @@
                     <div class="contentBox">
                         <div class="content">
                             <span>News</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="cardHeading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <ul>
                                 <li>11 Jan 2022</li>
                                 <li>5 min read</li>
                             </ul>    
                         </div>
                         <div class="arrowBox">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/black-cta-arrow.svg" alt="">
+                            <i class="icon-icon-right  rotateRightArrow"></i>
                         </div>
-                        
                     </div>
                 </a>
             </div>
@@ -97,14 +96,14 @@
                     <div class="contentBox">
                         <div class="content">
                             <span>News</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="cardHeading">Lorem ipsum dolor sit amet, consectetur adipiscing elitttttttttttttttttttttttttttt.</p>
                             <ul>
                                 <li>11 Jan 2022</li>
                                 <li>5 min read</li>
                             </ul>    
                         </div>
                         <div class="arrowBox">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/black-cta-arrow.svg" alt="">
+                            <i class="icon-icon-right  rotateRightArrow"></i>
                         </div>
                     </div>
                 </a>
@@ -112,11 +111,10 @@
         </div>
     </div>
 </section>
-
-
 <div class="backtopCl" id="backtop">
     <a href="">
-        <img src="<?php bloginfo('template_directory'); ?>/images/top-double-up-arrow.svg" alt="" class="desktop"/>
+        <i class="icon-caretdoubleup fontellowdobuleUpIcon"></i>
+        <!-- <img src="<?php bloginfo('template_directory'); ?>/images/top-double-up-arrow.svg" alt="" class="desktop"/> -->
     </a>
 </div>
 

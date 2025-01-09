@@ -208,4 +208,109 @@ function enqueue_custom_scripts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
+//News Post
+register_post_type( 'news-post', array('labels' => array(
+    'name' => __( 'News Post' ),
+    'singular_name' => __( 'news-post' )),
+    'public' => true,
+    'has_archive' => true,
+    'menu_icon' => 'dashicons-format-image',
+    'type' => 'select',
+    'supports'=> array( 'title', 'thumbnail', 'page-attributes', 'editor'),
+	'rewrite' => array( 'slug' => 'news-post' ),
+));
 
+$labels = array(
+    'name'              => __( 'News Categories'),
+    'singular_name'     => __( 'NewsPost'),
+    'search_items'      => __( 'Search NewsCategories'),
+    'all_items'         => __( 'All News Categories'),
+    'parent_item'       => __( 'Parent News Categories'),
+    'edit_item'         => __( 'Edit News Categories'),
+    'update_item'       => __( 'Update News Categories'),
+    'add_new_item'      => __( 'Add New News Categories'),
+    'new_item_name'     => __( 'New News Categories Name'),
+    'menu_name'         => __( 'News Categories'),
+);
+register_taxonomy('news_categories',array('news-post'), array(
+    'hierarchical'  => true,
+    'show_admin_column' => true,
+    'labels'        => $labels,
+    'show_ui'       => true,
+    'query_var'     => true,
+    'rewrite'       => array( 'slug' => 'news_categories' ),
+));
+
+//Product Post
+
+register_post_type( 'products', array('labels' => array(
+    'name' => __( 'Products' ),
+    'singular_name' => __( 'products' )),
+    'public' => true,
+    'has_archive' => true,
+    'menu_icon' => 'dashicons-format-image',
+    'type' => 'select',
+    'supports'=> array( 'title', 'thumbnail', 'page-attributes', 'editor'),
+	'rewrite' => array( 'slug' => 'products' ),
+));
+
+$labels = array(
+    'name'              => __( 'Products Categories'),
+    'singular_name'     => __( 'Products'),
+    'search_items'      => __( 'Search ProductsCategories'),
+    'all_items'         => __( 'All Products Categories'),
+    'parent_item'       => __( 'Parent Products Categories'),
+    'edit_item'         => __( 'Edit Products Categories'),
+    'update_item'       => __( 'Update Products Categories'),
+    'add_new_item'      => __( 'Add New Products Categories'),
+    'new_item_name'     => __( 'New Products Categories Name'),
+    'menu_name'         => __( 'Products Categories'),
+);
+register_taxonomy('products_categories',array('products'), array(
+    'hierarchical'  => true,
+    'show_admin_column' => true,
+    'labels'        => $labels,
+    'show_ui'       => true,
+    'query_var'     => true,
+    'rewrite'       => array( 'slug' => 'products_categories' ),
+));
+
+//Career Post
+
+register_post_type( 'career', array('labels' => array(
+    'name' => __( 'Career' ),
+    'singular_name' => __( 'career' )),
+    'public' => true,
+    'has_archive' => true,
+    'menu_icon' => 'dashicons-format-image',
+    'type' => 'select',
+    'supports'=> array( 'title', 'thumbnail', 'page-attributes', 'editor'),
+));
+$labels = array(
+    'name'              => __( 'Career Categories'),
+    'singular_name'     => __( 'careerPost'),
+    'search_items'      => __( 'Search careerCategories'),
+    'all_items'         => __( 'All career Categories'),
+    'parent_item'       => __( 'Parent career Categories'),
+    'edit_item'         => __( 'Edit career Categories'),
+    'update_item'       => __( 'Update career Categories'),
+    'add_new_item'      => __( 'Add New career Categories'),
+    'new_item_name'     => __( 'New career Categories Name'),
+    'menu_name'         => __( 'career Categories'),
+);
+register_taxonomy('career_categories',array('career'), array(
+    'hierarchical'  => true,
+    'show_admin_column' => true,
+    'labels'        => $labels,
+    'show_ui'       => true,
+    'query_var'     => true,
+    'rewrite'       => array( 'slug' => 'career_categories' ),
+));
+
+
+function estimate_reading_time($post_id) {
+    $word_count = str_word_count(strip_tags(get_post_field('post_content', $post_id)));
+    $reading_speed = 200; // Average words per minute
+    $reading_time = ceil($word_count / $reading_speed);
+    return $reading_time;
+}
