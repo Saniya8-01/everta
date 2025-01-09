@@ -10,7 +10,7 @@
     <p class="backText">
       Back</p>
   </div>
-  <div class="secHeading">Privacy and cookies policy</div>
+  <h1 class="secHeading">Privacy and cookies policy</h1>
   <div class="sec1Content">
     <!-- <div class="title1">Lorem ipsum title 1</div> -->
     <p class="content1">Your privacy is important to us. EVERTA takes the privacy of your information seriously. By
@@ -26,40 +26,40 @@
       their privacy statements.</p>
   </div>
   <div class="sec2Content">
-    <div class="title2">1. Definitions</div>
+    <h2 class="title2">1. Definitions</h2>
     <div class="content2Section">
       <p class="content2p1">In this privacy policy, the following definitions are used:</p>
 
       <div class="content2p2">
-        <p class="content2p2Span">1. Level 1 Chargers:</p>
+        <!-- <p class="content2p2Span">1. Level 1 Chargers:</p>
         <p class="content2p2Content"> These are the slowest type of chargers, using a standard 120-volt household
-          outlet. They are best suited for overnight charging at home.</p>
-        <p class="content2p2Span">Data</p>
+          outlet. They are best suited for overnight charging at home.</p> -->
+        <h3 class="content2p2Span">Data</h3>
         <p class="content2p2Content">includes information that you submit to EVERTA via the Website, and information
           which is
           accessed by EVERTA pursuant to your visit to the Website.</p>
-        <p class="content2p2Span">Cookies</p>
+        <h3 class="content2p2Span">Cookies</h3>
         <p class="content2p2Content">A small file placed on your computer by this Website when you either visit, or use
           certain
           features of, the Website. A cookie generally allows the website to “remember” your actions or
           preference for a certain period of time.</p>
-        <p class="content2p2Span">Data Protection Laws</p>
+        <h3 class="content2p2Span">Data Protection Laws</h3>
         <p class="content2p2Content">Any applicable law relating to the processing of personal Data, including the GDPR
           and the
           Information Technology Act, 2000, as amended or substituted;</p>
-        <p class="content2p2Span">GDPR</p>
+        <h3 class="content2p2Span">GDPR</h3>
         <p class="content2p2Content">the General Data Protection Regulation (EU) 2016/679;</p>
-        <p class="content2p2Span">EVERTA or us</p>
+        <h3 class="content2p2Span">EVERTA or us</h3>
         <p class="content2p2Content">Everta, a Company incorporated in India whose Registered Office is at IILM, 5th
           Floor, 60,61,62
           DDU Marg, Rouse Avenue, New Delhi - 110002, India</p>
-        <p class="content2p2Span">User or you</p>
+        <h3 class="content2p2Span">User or you</h3>
         <p class="content2p2Content">The natural person who accesses the Website</p>
-        <p class="content2p2Span">Website</p>
+        <h3 class="content2p2Span">Website</h3>
         <p class="content2p2Content">The website that you are currently using, www.everta.com, and any sub-domains of
           this site,
           unless excluded by their own terms.</p>
-        <p class="content2p2Span">2. Scope</p>
+        <h2 class="content2p2Span">2. Scope</h2>
         <p class="content2p2Content">This policy applies to all visitors of this EVERTA’s website. EVERTA collects data
           to operate this
           website. You provide some of this data directly, such as when you submit an entry (through
@@ -70,7 +70,7 @@
           our collection and use of your data. For example, you may want to access, edit or remove the
           personal information in the Website or microsite account. When you are asked to provide
           personal data, you may decline.</p>
-        <p class="content2p2Span">3. Information covered by this Policy</p>
+        <h2 class="content2p2Span">3. Information covered by this Policy</h2>
         <p class="content2p2Content">This policy applies to Information collected and processed by EVERTA consisting of
           following:<br><br>3.1  Personal information is information related to a visitor, or a combination of pieces of
           information that could reasonably allow him to be identified. Personal information may
@@ -99,7 +99,7 @@
           domain or
           furnished under the Right to Information Act, 2005 or any other law for the time being in force
           shall not be regarded as sensitive personal information.</p>
-        <p class="content2p2Span">4. Purpose</p>
+        <h2 class="content2p2Span">4. Purpose</h2>
         <p class="content2p2Content">EVERTA shall collect and use Information for legitimate business purposes in order:
         </p>
         <div class="content2p2List">
@@ -122,7 +122,7 @@
             <li>to allow the visitor to subscribe to EVERTA’s news alerts.</li>
           </ul>
         </div>
-        <p class="content2p2Span">5. Collection of Information</p>
+        <h2 class="content2p2Span">5. Collection of Information</h2>
         <p class="content2p2Content">Only minimum Information required to meet the purposes mentioned in this policy
           shall be
           collected from the visitor/s. Neither EVERTA nor its representatives shall be responsible for the
@@ -135,7 +135,7 @@
             <li>data is collected automatically pursuant to your visit to the Website.</li>
           </ul>
         </div>
-        <p class="content2p2Span">6. Data shared by You</p>
+        <h2 class="content2p2Span">6. Data shared by You</h2>
         <p class="content2p2Content">EVERTA may collect your Data in several ways from your use of this Website. For
           instance:</p>
         <div class="content2p2List">
@@ -153,7 +153,7 @@
               application for a contests and quizzes).</li>
           </ul>
         </div>
-        <p class="content2p2Span">7. Data that is Collected Automatically</p>
+        <h2 class="content2p2Span">7. Data that is Collected Automatically</h2>
         <div class="content2p2List">
           <ul>
             <li>We automatically collect some information about your visit to the Website. This
@@ -170,7 +170,7 @@
               “Cookies”.</li>
           </ul>
         </div>
-        <p class="content2p2Span">8. Our Use of Data</p>
+        <h2 class="content2p2Span">8. Our Use of Data</h2>
         <p class="content2p2Content">Any or all the above Data may be required by us from time to time to provide
           information
           relating to EVERTA and to work on the experience when using our Website. Specifically, Data
@@ -202,7 +202,7 @@
         <br>
         <p class="content2p2Content">We use data to protect the security and safety of our Website.</p>
         <p class="content2p2Span">9. Who we share Data with</p>
-        <p class="content2p2Content">We may share your personal Data with:</p>
+        <h2 class="content2p2Content">We may share your personal Data with:</h2>
         <div class="content2p2List">
           <ul>
             <li>EVERTA-controlled affiliates and subsidiaries to assist them to reach out to you in
@@ -227,7 +227,7 @@
               stop an attack on our computer systems or networks.</li>
           </ul>
         </div>
-        <p class="content2p2Span">10. Keeping Data secure</p>
+        <h2 class="content2p2Span">10. Keeping Data secure</h2>
         <p class="content2p2Content">We will use technical and organisational measures to safeguard your Data and we
           store your
           Data on secure servers.</p>
@@ -236,7 +236,7 @@
           data
           breach. If you suspect any misuse or loss or unauthorised access to your Data, please let us
           know immediately by contacting us via e-mail, social media or telephone.</p>
-        <p class="content2p2Span">11. Retention of Personal Data</p>
+        <h2 class="content2p2Span">11. Retention of Personal Data</h2>
         <p class="content2p2Content">EVERTA retains personal Data for as long as necessary to provide the access to and
           use of the
           website, or for other essential purposes such as complying with our legal obligations,
@@ -246,7 +246,7 @@
         <p class="content2p2Content">Even if we delete your Data, it may persist on backup or archival media for audit,
           legal, tax or
           regulatory purposes.</p>
-        <p class="content2p2Span">12. Your Rights</p>
+        <h2 class="content2p2Span">12. Your Rights</h2>
         <p class="content2p2Content">When we process Data about you, we do so with your consent and/or as necessary to
           provide the website you use, operate our business, meet our contractual and legal
           obligations, protect the security of our systems and our customers, or fulfil other legitimate
@@ -295,7 +295,7 @@
           security
           technologies and procedures to help protect your personal data from unauthorized access,
           use or disclosure.</p>
-        <p class="content2p2Span">14. Where We Store and Process Personal Data</p>
+        <h2 class="content2p2Span">14. Where We Store and Process Personal Data</h2>
         <p class="content2p2Content">In general, personal Data collected and processed under this statement is hosted on
           servers
           located in India or the U.S. We take steps to ensure that the Data we collect under this privacy
@@ -307,13 +307,13 @@
           appropriate safeguards and procedures with the third parties we share your Data with. This
           ensures your Data is treated by those third parties in a way that is consistent with the Data
           Protection Laws.</p>
-        <p class="content2p2Span">15. Links to other websites</p>
+        <h2 class="content2p2Span">15. Links to other websites</h2>
         <p class="content2p2Content">This Website may, from time to time, provide links to other websites. We have no
           control over
           such websites and are not responsible for the content of these websites. This privacy policy
           does not extend to your use of such websites. You are advised to read the privacy policy or
           statement of other websites prior to using them.</p>
-        <p class="content2p2Span">16. Cookies</p>
+        <h2 class="content2p2Span">16. Cookies</h2>
         <p class="content2p2Content">This Website may place and access certain Cookies on your computer. EVERTA uses
           Cookies
           to improve your experience of using the Website.</p> <br>
@@ -333,21 +333,21 @@
           the pages viewed and other relevant usage statistics. To opt out of being tracked by Google
           Analytics visit: <a href="https://tools.google.com/dlpage/gaoptout"
             target="_blank">https://tools.google.com/dlpage/gaoptout</a></p>
-        <p class="content2p2Span">17. You can choose to delete Cookies at any time:</p>
+        <h2 class="content2p2Span">17. You can choose to delete Cookies at any time:</h2>
         <p class="content2p2Content">However, you may lose any information that enables you to access the Website more
           quickly
           and efficiently including, but not limited to, personalisation settings.</p>
-        <p class="content2p2Span">18. It is recommended that you ensure that your internet browser is up-to-date</p>
+        <h2 class="content2p2Span">18. It is recommended that you ensure that your internet browser is up-to-date</h2>
         <p class="content2p2Content">And that you consult the help and guidance provided by the developer of your
           internet
           browser if you are unsure about adjusting your privacy settings.</p>
-        <p class="content2p2Span">19. General</p>
+        <h2 class="content2p2Span">19. General</h2>
         <p class="content2p2Content">If any court or competent authority finds that any provision of this privacy policy
           (or part of
           any provision) is invalid, illegal or unenforceable, that provision or part-provision will, to the
           extent required, be deemed to be deleted, and the validity and enforceability of the other
           provisions of this privacy policy will not be affected.</p>
-        <p class="content2p2Span">19. Changes to this Privacy Statement</p>
+        <h2 class="content2p2Span">19. Changes to this Privacy Statement</h2>
         <p class="content2p2Content">However the Internet is an ever-evolving medium. EVERTA reserves the right to
           change this
           privacy statement from time to time to incorporate necessary future changes in accordance
@@ -356,7 +356,7 @@
           new policy may be. Any changes will be immediately posted on the Website and you are
           deemed to have accepted the terms of the privacy statement on your first use of the Website
           following the alterations.</p>
-        <p class="content2p2Span">20. Feedback or Concern</p>
+        <h2 class="content2p2Span">20. Feedback or Concern</h2>
         <p class="content2p2Content">For feedback or concern, if any, kindly contact :
           EVERTA through <a href="mailto:hello@everta.com" target="_blank">hello@everta.com</a>.</p>
         <button class="scroll-to-top">

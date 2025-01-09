@@ -1,6 +1,8 @@
-.page-404{ margin: 50px 0px 0px;
-    .image-container{ position: relative;
-        .background-image{ position: relative;
+.page-404{ margin: 38px 0px 33px;
+    @media (max-width:720px){margin: 0px 0px 70px;}
+    .image-container{ position: relative; width: 95%; margin: auto;
+        @media (max-width:720px){width: 100%;}
+        .background-image{ position: relative; width: 100%; object-fit:cover;
         }
         .content{ position: absolute; width: 100%; bottom:10%;
             .message{text-align: center; color: white; @include font24; @include verdanaregular; font-weight: $fontW400; line-height: 40px; word-wrap: break-word; text-align: center;
@@ -10,7 +12,7 @@
             .button-container{width: 100%; height: 100%; justify-content: flex-end; align-items: flex-start; display: inline-flex; margin-top: 36px; cursor: pointer;
                 @media (max-width: 1024px){margin-top: 26px;}
                 @media(max-width: 375px){margin-top: 24px;}
-                .back-to-home{width: 195px; padding:12px 32px; background: $primaryColor1 ; border-radius: 100px; justify-content: center; align-items: center; gap: 14px; display: flex;z-index: 1; margin: auto; cursor: pointer;
+                .back-to-home{ padding:18px 34px; background: $primaryColor1 ; border-radius: 100px; justify-content: center; align-items: center; gap: 14px; display: flex;z-index: 1; margin: auto; cursor: pointer;
                     @media (max-width: 1024px){padding: 8px 16px;}
                     button{color: #1E1E1E; font-size: 16px; @include terminaregular; font-weight: $fontW600; word-wrap: break-word;background: $primaryColor1; cursor: pointer;
                         @media (max-width: 1600px){@include font14;}
