@@ -820,22 +820,28 @@ if ($(".resDetailContentSec").length) {
         const readMore = document.getElementById("readMore");
         const contentBox = document.querySelector('.contentBox');
         const readMoreBtnBox = document.querySelector('.readMoreBtnBox');
-        readMore.addEventListener("click", function () {
-            if (contentBox.classList.contains("hideTxt")) {
-              contentBox.style.maxHeight = `${contentBox.scrollHeight}px`; // Set current height
-              contentBox.classList.remove("hideTxt");
-              contentBox.classList.add("removeFadeEffect");
-              readMoreBtnBox.classList.add("btnHide");
-            } else {
-              // Expand content
-              contentBox.style.maxHeight = `${contentBox.scrollHeight}px`; // Set dynamic max-height
-              contentBox.classList.add("hideTxt");
-            
-            }
-          });
+
+        if(contentBox.offsetHeight  <= 400){
+            contentBox.classList.remove("hideTxt");
+            readMoreBtnBox.style.display = "none"
+            contentBox.classList.add("removeFadeEffect");
+        }else{
+            readMore.addEventListener("click", function () {
+                if (contentBox.classList.contains("hideTxt")) {
+                  contentBox.style.maxHeight = `${contentBox.scrollHeight}px`; // Set current height
+                  contentBox.classList.remove("hideTxt");
+                  contentBox.classList.add("removeFadeEffect");
+                  readMoreBtnBox.classList.add("btnHide");
+                } else {
+                  // Expand content
+                  contentBox.style.maxHeight = `${contentBox.scrollHeight}px`; // Set dynamic max-height
+                  contentBox.classList.add("hideTxt");
+                
+                }
+            });
+        }
     })
 }
-
 if ($(".backtopCl").length) {
     document.addEventListener("DOMContentLoaded", () => {
         const backtop = document.getElementById("backtop")
