@@ -3,7 +3,7 @@
 <section class="resDetailBannerSec">
     <div class="secWrapper">
         <div class="backBtn">
-            <a href="new#newspage" >
+            <a href="javascript:history.back()" >
                 <i class="icon-icon-left backArrow"></i>Back 
             </a>
         </div>
@@ -16,6 +16,7 @@
         </div>
     </div>
 </section>
+
 <section class="resDetailContentSec">
     <div class="secWrapper">
         <div class="contentBox hideTxt">
@@ -62,6 +63,7 @@
         </div>           
     </div>
 </section>
+
 <section class="relatedPostSec">
     <div class="secWrapper">
         <div class="secHeading">
@@ -111,6 +113,7 @@
         </div>
     </div>
 </section>
+
 <div class="backtopCl" id="backtop">
     <a href="">
         <i class="icon-caretdoubleup fontellowdobuleUpIcon"></i>

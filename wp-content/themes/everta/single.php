@@ -13,7 +13,7 @@ get_header();
 <section class="resDetailBannerSec">
 	<div class="secWrapper">
 		<div class="backBtn">
-			<a href="<?php echo esc_url(get_post_type_archive_link('post')); ?>">
+			<a href="javascript:history.back()">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/left-arrow-gray.svg" alt="Back" />Back
 			</a>
 		</div>

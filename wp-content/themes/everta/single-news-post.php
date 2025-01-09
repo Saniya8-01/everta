@@ -4,7 +4,7 @@
 <section class="resDetailBannerSec">
 	<div class="secWrapper">
 		<div class="backBtn">
-			<a href="<?php echo esc_url(get_post_type_archive_link('post')); ?>">
+			<a href="javascript:history.back()">
 				<i class="icon-icon-left backArrow"></i>Back
 			</a>
 		</div>
