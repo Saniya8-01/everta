@@ -12949,7 +12949,7 @@ body {
   }
 }
 
-.title, .privacyPolicySec .sec2Content .title2, .privacyPolicySec .sec1Content .title1 {
+.title {
   width: 100%;
   color: black;
   font-size: 32px;
@@ -12959,22 +12959,22 @@ body {
   word-wrap: break-word;
 }
 @media screen and (max-width: 1800px) {
-  .title, .privacyPolicySec .sec2Content .title2, .privacyPolicySec .sec1Content .title1 {
+  .title {
     font-size: 30px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .title, .privacyPolicySec .sec2Content .title2, .privacyPolicySec .sec1Content .title1 {
+  .title {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .title, .privacyPolicySec .sec2Content .title2, .privacyPolicySec .sec1Content .title1 {
+  .title {
     font-size: 20px;
   }
 }
 
-.subtitle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span {
+.subtitle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span, .privacyPolicySec .sec2Content .title2 {
   color: black;
   font-size: 20px;
   font-family: "termina_testbold";
@@ -12983,17 +12983,17 @@ body {
   word-wrap: break-word;
 }
 @media screen and (max-width: 1600px) {
-  .subtitle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span {
+  .subtitle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span, .privacyPolicySec .sec2Content .title2 {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .subtitle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span {
+  .subtitle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span, .privacyPolicySec .sec2Content .title2 {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 720px) {
-  .subtitle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span {
+  .subtitle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span, .privacyPolicySec .sec2Content .title2 {
     font-size: 12px;
   }
 }
@@ -13023,12 +13023,13 @@ body {
 }
 
 .privacyPolicySec {
-  margin: 120px auto 200px;
-  width: 70%;
+  margin: 50px auto 200px;
+  width: 57.5%;
 }
 @media (max-width: 720px) {
   .privacyPolicySec {
-    width: 94%;
+    width: 91.5%;
+    margin-bottom: 88px;
   }
 }
 .privacyPolicySec .backArrow {
@@ -13038,6 +13039,14 @@ body {
   align-items: center;
   gap: 10px;
   display: inline-flex;
+  margin-bottom: 99px;
+  margin-top: 76px;
+}
+@media (max-width: 720px) {
+  .privacyPolicySec .backArrow {
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
 }
 .privacyPolicySec .backArrow .arrow {
   width: 32px;
@@ -13082,8 +13091,7 @@ body {
   font-weight: 600;
   line-height: 64px;
   word-wrap: break-word;
-  margin-bottom: 20px;
-  margin: 10px;
+  margin-bottom: 73px;
 }
 @media screen and (max-width: 1600px) {
   .privacyPolicySec .secHeading {
@@ -13108,10 +13116,8 @@ body {
 @media (max-width: 720px) {
   .privacyPolicySec .secHeading {
     line-height: 32px;
+    margin-bottom: 56px;
   }
-}
-.privacyPolicySec .sec1Content .title1 {
-  margin-bottom: 24px;
 }
 .privacyPolicySec .sec1Content .content1 {
   width: 100%;
@@ -13214,13 +13220,27 @@ body {
 }
 
 .page-404 {
-  margin: 50px 0px 0px;
+  margin: 38px 0px 33px;
+}
+@media (max-width: 720px) {
+  .page-404 {
+    margin: 0px 0px 70px;
+  }
 }
 .page-404 .image-container {
   position: relative;
+  width: 95%;
+  margin: auto;
+}
+@media (max-width: 720px) {
+  .page-404 .image-container {
+    width: 100%;
+  }
 }
 .page-404 .image-container .background-image {
   position: relative;
+  width: 100%;
+  object-fit: cover;
 }
 .page-404 .image-container .content, .page-404 .image-container .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .page-404 .image-container .content1, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li {
   position: absolute;
@@ -13279,8 +13299,7 @@ body {
   }
 }
 .page-404 .image-container .content .button-container .back-to-home, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home {
-  width: 195px;
-  padding: 12px 32px;
+  padding: 18px 34px;
   background: #F5F75E;
   border-radius: 100px;
   justify-content: center;
