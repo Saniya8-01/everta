@@ -31,7 +31,7 @@
             <hr class="bottomspace">
             <h2>Emerging Technologies in EV Charging</h2>
             <p>Before diving into the future, it’s important to understand the basics of EV charging. There are three primary types of EV chargers:</p>
-            <!--  <ol>
+            <ol>
                 <li> <span>Level 1 Chargers:</span> These are the slowest type of chargers, using a standard 120-volt household outlet. They are best suited for overnight charging at home.</li>
                 <li> <span>Level 2 Chargers:</span> These chargers use a 240-volt outlet, similar to what you would use for a dryer or oven. They provide faster charging times and are commonly found in homes, workplaces, and public charging stations.</li>
                 <li> <span>DC Fast Chargers:</span> These are the fastest chargers available, capable of charging an EV to 80% in as little as 30 minutes. They are typically found along highways and in urban areas, catering to drivers who need a quick recharge on the go.</li>
@@ -56,7 +56,7 @@
                 <figure class="singleCaption">
                     <figcaption>"Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus."</figcaption>
                 </figure>
-            </div> -->
+            </div>
         </div>
         <div class="readMoreBtnBox">
             <button class="ctaWhiteBlack" id="readMore">Read more</button>
