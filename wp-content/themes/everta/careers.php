@@ -45,8 +45,8 @@
             <h2><?php echo get_sub_field('heading'); ?></h2>
             <p><?php echo get_sub_field('subheading'); ?></p>
         </div>
-        <?php if (have_rows('banner_section')) : ?>
-        <?php while (have_rows('banner_section')) : the_row(); ?>
+        <?php endwhile; ?>
+        <?php endif; ?>
         <div class="careerFilterSection">
             <div class="selFilter">
                 <div class="customSelect">

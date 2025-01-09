@@ -449,3 +449,7 @@ Stack trace:
 [09-Jan-2025 08:30:05 UTC]   Automatic theme updates starting...
 [09-Jan-2025 08:30:05 UTC]   Automatic theme updates complete.
 [09-Jan-2025 08:30:05 UTC] Automatic updates complete.
+[09-Jan-2025 10:08:41 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\everta\wp-content\themes\everta\careers.php on line 427
+[09-Jan-2025 10:08:51 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\everta\wp-content\themes\everta\careers.php on line 427
+[09-Jan-2025 10:09:56 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\everta\wp-content\themes\everta\careers.php on line 425
+[09-Jan-2025 10:09:58 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\everta\wp-content\themes\everta\careers.php on line 425
