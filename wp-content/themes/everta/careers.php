@@ -103,7 +103,7 @@
                 <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="everta">
             </div>
         </div>
-        <div class="careerPositionBox" id="careerPositionBox">
+        <div class="careerPositionBox" id="careerPositionBox2">
             <div class="subBoxContent">
                 <h3>Sr. Customer Success Manager</h3>
                 <div class="posSubContent">
@@ -286,7 +286,7 @@
     <?php endif; ?>
 </section>
 
-<div class="careerOpeningModal" id="careerOpeningModal">
+<div class="careerOpeningModal" id="careerOpeningModal2">
     <div class="modalContent">
         <div class="jobHeadingDesc">
             <div class="closeBtn">
