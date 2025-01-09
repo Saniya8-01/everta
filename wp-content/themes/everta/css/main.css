@@ -1767,6 +1767,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges .chargesCount label input:checked + span {
   color: #FFFFFF;
   background: #1E1E1E;
+  color: #F5F75E;
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges .chargesCount label span {
   display: flex;

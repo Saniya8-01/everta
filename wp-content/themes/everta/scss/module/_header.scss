@@ -374,7 +374,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                             .chargesCount{flex: 1;
                                 label{width: 100%;
                                     input{visibility: hidden;height: 0;display: block;
-                                        &:checked + span{color: #FFFFFF;background: #1E1E1E;}
+                                        &:checked + span{color: #FFFFFF;background: #1E1E1E;color: $primaryColor1;}
                                     }
                                     span{display: flex;align-items: center;justify-content: center;cursor: pointer;;border: 1px solid #A5A5A5;border-radius: 100px;@include verdanaregular;@include font16;line-height: 175%;padding: 6px;width: 100%;}
                                 }
