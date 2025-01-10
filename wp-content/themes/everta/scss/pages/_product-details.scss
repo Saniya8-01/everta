@@ -19,7 +19,7 @@
             }
         }
         .bannerImages{position: relative;width: 90%;margin-bottom:26px;
-            .productImage{position: relative;z-index: 2;margin: 0 auto;height: 530px;transform: translateY(-150%);transition: 0.8s all ease-in-out;}
+            .productImage{position: relative;z-index: 2;margin: 0 auto;height: 530px;transform: translateY(-160%);transition: 0.8s all ease-in-out;}
             .bannerBg{position: absolute;top: 50%;transform: translateY(-50%);}
         }
         .ctaDiv{display: flex;gap: 36px;transition: 0.8s all ease-in-out;opacity: 0;}
@@ -188,7 +188,8 @@
 .industryStandardSection{margin-bottom: 290px;
     &#industry-standard{
         .scaleImage{
-            img{scale: 1.3;}
+            img{
+                animation: zoomeffect 20s forwards;}
         }
     }
     .sectionWrapper{

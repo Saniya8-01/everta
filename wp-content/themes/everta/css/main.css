@@ -13662,7 +13662,7 @@ body {
   z-index: 2;
   margin: 0 auto;
   height: 530px;
-  transform: translateY(-150%);
+  transform: translateY(-160%);
   transition: 0.8s all ease-in-out;
 }
 .productBanner .productBannerWrapper .bannerImages .bannerBg {
@@ -14063,7 +14063,7 @@ body {
   margin-bottom: 290px;
 }
 .industryStandardSection#industry-standard .scaleImage img {
-  scale: 1.3;
+  animation: zoomeffect 20s forwards;
 }
 .industryStandardSection .sectionWrapper .scaleImage {
   overflow: hidden;
