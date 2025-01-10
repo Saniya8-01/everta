@@ -191,7 +191,7 @@
         }
         .container{
             .accordions-wrapper{
-                .accordion{border: none;
+                .accordion{
                     &.active{padding-bottom:25px;}
                     .accordion-header{
                         h4{font-size: 20px;line-height: 24px;}

@@ -383,6 +383,70 @@
 <?php get_footer(); ?>
 
 <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const productInfoSection = document.querySelector('.productInfoSection');
+
+    // Check if viewport width is above 820px
+    function isLargeScreen() {
+        return window.innerWidth > 820;
+    }
+
+    if (productInfoSection && isLargeScreen()) {
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    productInfoSection.id = 'product-info';
+                } else {
+                    productInfoSection.removeAttribute('id');
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+
+        observer.observe(productInfoSection);
+    } 
+
+    // Optional: Re-check on window resize
+    window.addEventListener('resize', function () {
+        if (isLargeScreen()) {
+            observer.observe(productInfoSection);
+        } else {
+            observer.disconnect(); // Stop observing if screen is too small
+            productInfoSection.removeAttribute('id'); // Remove ID if resized below 820px
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const industrySection = document.querySelector('.industryStandardSection');
+
+    if (industrySection) {
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    industrySection.id = 'industry-standard';
+                } else {
+                    industrySection.removeAttribute('id');
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+
+        observer.observe(industrySection);
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+        const productBanner = document.querySelector('.productBanner');
+        if (productBanner) {
+            productBanner.setAttribute('id', 'animatedBanner');
+            console.log('ID added to .productBanner');
+        }
+    }, 1000); 
+});
+
     document.addEventListener('DOMContentLoaded', () => {
         const tabs = document.querySelectorAll('.tabContent'); // Get all tab content sections
         const hoverBoxes = document.querySelectorAll('.card'); // Get all cards (hover boxes)
@@ -530,8 +594,6 @@
             infinite: true,
         });
     }
-
-
 
     if ($(".technicalDetailsSection").length) {
         jQuery(document).ready(function () {
