@@ -337,26 +337,17 @@ body h1 {
 }
 @media screen and (max-width: 1600px) {
   .ctaYellow {
-    padding: 16px 32px;
+    padding: 18px 32px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .ctaYellow {
-    padding: 14px 32px;
-  }
   .ctaYellow::before {
     transform: translateY(-50%) scale(0.9);
     transform-origin: bottom;
   }
 }
-@media screen and (max-width: 1280px) {
-  .ctaYellow {
-    padding: 12px 32px;
-  }
-}
 @media screen and (max-width: 1024px) {
   .ctaYellow {
-    padding: 18px 32px;
     line-height: 15px;
     font-size: 14px;
   }
@@ -419,26 +410,17 @@ body h1 {
 }
 @media screen and (max-width: 1600px) {
   .ctaYellowBlack {
-    padding: 16px 32px;
+    padding: 18px 32px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .ctaYellowBlack {
-    padding: 14px 32px;
-  }
   .ctaYellowBlack::before {
     transform: translateY(-50%) scale(0.9);
     transform-origin: bottom;
   }
 }
-@media screen and (max-width: 1280px) {
-  .ctaYellowBlack {
-    padding: 12px 32px;
-  }
-}
 @media screen and (max-width: 1024px) {
   .ctaYellowBlack {
-    padding: 18px 32px;
     line-height: 15px;
     font-size: 14px;
   }
@@ -501,26 +483,17 @@ body h1 {
 }
 @media screen and (max-width: 1600px) {
   .ctaWhiteBlack {
-    padding: 16px 32px;
+    padding: 18px 32px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .ctaWhiteBlack {
-    padding: 14px 32px;
-  }
   .ctaWhiteBlack::before {
     transform: translateY(-50%) scale(0.9);
     transform-origin: bottom;
   }
 }
-@media screen and (max-width: 1280px) {
-  .ctaWhiteBlack {
-    padding: 12px 32px;
-  }
-}
 @media screen and (max-width: 1024px) {
   .ctaWhiteBlack {
-    padding: 18px 32px;
     line-height: 15px;
     font-size: 14px;
   }
@@ -582,26 +555,17 @@ body h1 {
 }
 @media screen and (max-width: 1600px) {
   .ctaBlack {
-    padding: 16px 32px;
+    padding: 18px 32px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .ctaBlack {
-    padding: 14px 32px;
-  }
   .ctaBlack::before {
     transform: translateY(-50%) scale(0.9);
     transform-origin: bottom;
   }
 }
-@media screen and (max-width: 1280px) {
-  .ctaBlack {
-    padding: 12px 32px;
-  }
-}
 @media screen and (max-width: 1024px) {
   .ctaBlack {
-    padding: 18px 32px;
     line-height: 15px;
     font-size: 14px;
   }
@@ -665,26 +629,17 @@ body h1 {
 }
 @media screen and (max-width: 1600px) {
   .ctaWhite {
-    padding: 16px 32px;
+    padding: 18px 32px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .ctaWhite {
-    padding: 14px 32px;
-  }
   .ctaWhite::before {
     transform: translateY(-50%) scale(0.9);
     transform-origin: bottom;
   }
 }
-@media screen and (max-width: 1280px) {
-  .ctaWhite {
-    padding: 12px 32px;
-  }
-}
 @media screen and (max-width: 1024px) {
   .ctaWhite {
-    padding: 18px 32px;
     line-height: 15px;
     font-size: 14px;
   }
@@ -916,6 +871,9 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a:
   color: #1E1E1E;
   background: #F5F75E;
 }
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .languageTranslator::before {
+  content: none !important;
+}
 header .headerWrapper .headerMenu .hamburger-menu {
   display: none;
 }
@@ -1082,12 +1040,12 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 @media all and (max-width: 1024px) {
   header .headerWrapper {
-    padding: 10px 30px;
+    padding: 10px 40px;
   }
 }
 @media all and (max-width: 820px) {
   header .headerWrapper {
-    padding: 20px 30px;
+    padding: 20px;
     z-index: 99;
   }
   header .headerWrapper .headerLogo img {
@@ -1327,7 +1285,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
     top: 12px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 680px) {
   header .headerWrapper {
     padding: 20px;
   }
@@ -2270,7 +2228,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerM
   text-decoration: underline;
 }
 footer .footerContainer .footerRight .footerRightContainer .footerRights {
-  padding-top: 33px;
+  padding-top: 45px;
   border-top: 1px solid #A5A5A5;
   display: flex;
   justify-content: space-between;
@@ -2334,9 +2292,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerMenuWrapper p {
     margin-bottom: 20px;
   }
-  footer .footerContainer .footerRight .footerRightContainer .footerRights {
-    padding-top: 33px;
-  }
   footer .footerContainer .footerRight .footerRightContainer .footerRights .footerBottomLinks {
     gap: 24px;
   }
@@ -2362,7 +2317,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 20px;
   }
   footer .footerContainer .footerRight .footerRightContainer .footerRights {
-    padding-top: 30px;
+    padding-top: 42px;
   }
   footer .footerContainer .footerRight .footerRightContainer .footerRights .footerBottomLinks {
     gap: 22px;
@@ -2389,7 +2344,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 14px;
   }
   footer .footerContainer .footerRight .footerRightContainer .footerRights {
-    padding-top: 24px;
+    padding-top: 36px;
   }
   footer .footerContainer .footerRight .footerRightContainer .footerRights .footerBottomLinks {
     gap: 20px;
@@ -2411,12 +2366,13 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   footer .footerContainer .footerRight .footerRightContainer .footerMenus {
     padding: 18px 30px;
+    grid-template-columns: repeat(3, 1fr);
   }
   footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerMenuWrapper p {
     margin-bottom: 12px;
   }
   footer .footerContainer .footerRight .footerRightContainer .footerRights {
-    padding-top: 18px;
+    padding-top: 32px;
   }
   footer .footerContainer .footerRight .footerRightContainer .footerRights .footerBottomLinks {
     gap: 14px;
@@ -2444,7 +2400,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 14px;
   }
   footer .footerContainer .footerRight .footerRightContainer .footerRights {
-    padding-top: 20px;
+    padding-top: 35px;
   }
   footer .footerContainer .footerRight .footerRightContainer .footerRights .footerBottomLinks {
     gap: 16px;
@@ -2458,7 +2414,35 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   footer .footerContainer .footerLeft {
     flex-basis: 100%;
     padding: 32px 20px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
+}
+@media screen and (max-width: 820px) and (max-width: 1600px) {
+  footer .footerContainer .footerLeft {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1440px) {
+  footer .footerContainer .footerLeft {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1024px) {
+  footer .footerContainer .footerLeft {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 680px) {
+  footer .footerContainer .footerLeft {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 820px) {
   footer .footerContainer .footerLeft .footerSocialmedia {
     padding-top: 18px;
     gap: 24px;
@@ -2468,7 +2452,35 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     flex-basis: 100%;
     background: #FAFAFA;
     padding: 32px 20px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
+}
+@media screen and (max-width: 820px) and (max-width: 1600px) {
+  footer .footerContainer .footerRight {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1440px) {
+  footer .footerContainer .footerRight {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1024px) {
+  footer .footerContainer .footerRight {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 680px) {
+  footer .footerContainer .footerRight {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 820px) {
   footer .footerContainer .footerRight .footerRightContainer {
     display: flex;
     gap: 32px;
@@ -2694,7 +2706,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .bannerSection .bannerSectionWrapper .bannerSectionContent {
     width: 80%;
-    left: 60px;
+    left: 40px;
     top: 80px;
   }
   .bannerSection .bannerSectionWrapper .bannerSectionContent h1 {
@@ -2925,10 +2937,37 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding-top: 0px;
   }
   .withEaseSection .divWrapper .leftContent {
-    padding: 0px 20px;
+    padding-left: 120px;
+    padding-right: 120px;
     flex-basis: 100%;
     position: unset;
   }
+}
+@media screen and (max-width: 820px) and (max-width: 1600px) {
+  .withEaseSection .divWrapper .leftContent {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1440px) {
+  .withEaseSection .divWrapper .leftContent {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1024px) {
+  .withEaseSection .divWrapper .leftContent {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 680px) {
+  .withEaseSection .divWrapper .leftContent {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 820px) {
   .withEaseSection .divWrapper .leftContent img {
     width: 60%;
   }
@@ -2946,7 +2985,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .rightContent {
     overflow: hidden;
     flex-basis: 100%;
-    padding-left: 5px;
+    padding-left: 25px;
   }
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
     gap: 0px;
@@ -2954,6 +2993,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .rightContent .rightContentWrapper .slick-track {
     gap: 15px;
     display: flex;
+  }
+}
+@media all and (max-width: 680px) {
+  .withEaseSection .divWrapper .rightContent {
+    padding-left: 5px;
   }
 }
 
@@ -3005,11 +3049,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1024px) {
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
     padding-left: 20px;
     padding-right: 20px;
@@ -3039,11 +3083,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1024px) {
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading p {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading p {
     padding-left: 20px;
     padding-right: 20px;
@@ -3120,12 +3164,12 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1440px) {
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 h3 {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -3219,7 +3263,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 40px;
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box {
-    padding: 40px 80px;
+    padding: 48px 80px;
     height: 120px;
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active {
@@ -3266,11 +3310,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1280px) and (max-width: 1024px) {
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1280px) and (max-width: 768px) {
+@media screen and (max-width: 1280px) and (max-width: 680px) {
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box {
     padding-left: 20px;
     padding-right: 20px;
@@ -3331,11 +3375,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 820px) and (max-width: 1024px) {
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 820px) and (max-width: 768px) {
+@media screen and (max-width: 820px) and (max-width: 680px) {
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box {
     padding-left: 20px;
     padding-right: 20px;
@@ -3412,14 +3456,19 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     font-size: 30px;
   }
 }
+@media screen and (max-width: 1600px) {
+  .partnersSection .partnersSectionWrapper h3 {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 1440px) {
   .partnersSection .partnersSectionWrapper h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 1024px) {
   .partnersSection .partnersSectionWrapper h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .partnersSection .partnersSectionWrapper .logoSliderContainer {
@@ -3656,12 +3705,12 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1440px) {
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -3941,11 +3990,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 820px) and (max-width: 1024px) {
   .chargingSection .tab-wrapper .tab-header {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 820px) and (max-width: 768px) {
+@media screen and (max-width: 820px) and (max-width: 680px) {
   .chargingSection .tab-wrapper .tab-header {
     padding-left: 20px;
     padding-right: 20px;
@@ -4310,11 +4359,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1024px) {
   .mapSection .mapSectionDivider .map h2 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .mapSection .mapSectionDivider .map h2 {
     padding-left: 20px;
     padding-right: 20px;
@@ -4441,7 +4490,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 14px;
   }
 }
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1180px) {
   .mapSection .mapSectionDivider .map h2 {
     margin-bottom: 24px;
     margin-top: 32px;
@@ -4454,6 +4503,14 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .mapSection .mapSectionDivider .stats .statCard h4 {
     margin-bottom: 12px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .mapSection .mapSectionDivider .map {
+    flex-basis: 70%;
+  }
+  .mapSection .mapSectionDivider .stats {
+    flex-basis: 30%;
   }
 }
 @media all and (max-width: 820px) {
@@ -4482,7 +4539,35 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .mapSection .mapSectionDivider .stats .statCard {
     padding: 40px 20px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
+}
+@media screen and (max-width: 820px) and (max-width: 1600px) {
+  .mapSection .mapSectionDivider .stats .statCard {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1440px) {
+  .mapSection .mapSectionDivider .stats .statCard {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 1024px) {
+  .mapSection .mapSectionDivider .stats .statCard {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 820px) and (max-width: 680px) {
+  .mapSection .mapSectionDivider .stats .statCard {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 820px) {
   .mapSection .mapSectionDivider .stats .statCard h3 {
     font-size: 36px;
     font-style: normal;
@@ -4554,11 +4639,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1024px) {
   .testimonialSection .testimonialSectionWrapper .testimonialSectionHeading h2 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .testimonialSection .testimonialSectionWrapper .testimonialSectionHeading h2 {
     padding-left: 20px;
     padding-right: 20px;
@@ -4584,11 +4669,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1024px) {
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -4699,11 +4784,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1024px) {
   .testimonialSection .testimonialSectionWrapper .progresBar {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .testimonialSection .testimonialSectionWrapper .progresBar {
     padding-left: 20px;
     padding-right: 20px;
@@ -4750,11 +4835,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1800px) and (max-width: 1024px) {
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1800px) and (max-width: 768px) {
+@media screen and (max-width: 1800px) and (max-width: 680px) {
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -4767,7 +4852,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     width: 100%;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .commaImg {
-    margin-bottom: 36px;
+    margin-bottom: 60px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
     margin-bottom: 36px;
@@ -4811,11 +4896,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1600px) and (max-width: 1024px) {
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1600px) and (max-width: 768px) {
+@media screen and (max-width: 1600px) and (max-width: 680px) {
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -4827,7 +4912,8 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 32px 40px 32px 0px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .commaImg {
-    margin-bottom: 32px;
+    width: 45px;
+    height: 30px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
     margin-bottom: 32px;
@@ -4871,11 +4957,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1440px) and (max-width: 1024px) {
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1440px) and (max-width: 768px) {
+@media screen and (max-width: 1440px) and (max-width: 680px) {
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -4887,7 +4973,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 30px 32px 28px 0px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .commaImg {
-    margin-bottom: 30px;
+    margin-bottom: 64px;
+    width: 40px;
+    height: 30px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
     margin-bottom: 30px;
@@ -4942,11 +5030,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 680px) and (max-width: 1024px) {
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 680px) and (max-width: 768px) {
+@media screen and (max-width: 680px) and (max-width: 680px) {
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -5024,11 +5112,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1024px) {
   .formSection .formWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .formSection .formWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -5054,12 +5142,12 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1440px) {
   .formSection .formWrapper .formTitle h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
   .formSection .formWrapper .formTitle h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -5232,11 +5320,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1800px) and (max-width: 1024px) {
   .formSection .formWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1800px) and (max-width: 768px) {
+@media screen and (max-width: 1800px) and (max-width: 680px) {
   .formSection .formWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -5287,11 +5375,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1600px) and (max-width: 1024px) {
   .formSection .formWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1600px) and (max-width: 768px) {
+@media screen and (max-width: 1600px) and (max-width: 680px) {
   .formSection .formWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -5319,7 +5407,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 120px;
   }
   .formSection .formWrapper {
-    padding: 40px 0px;
+    padding: 60px 0px;
     padding-left: 120px;
     padding-right: 120px;
     gap: 70px;
@@ -5339,11 +5427,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1440px) and (max-width: 1024px) {
   .formSection .formWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1440px) and (max-width: 768px) {
+@media screen and (max-width: 1440px) and (max-width: 680px) {
   .formSection .formWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -5390,11 +5478,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1280px) and (max-width: 1024px) {
   .formSection .formWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1280px) and (max-width: 768px) {
+@media screen and (max-width: 1280px) and (max-width: 680px) {
   .formSection .formWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -5421,11 +5509,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1180px) and (max-width: 1024px) {
   .formSection .formWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1180px) and (max-width: 768px) {
+@media screen and (max-width: 1180px) and (max-width: 680px) {
   .formSection .formWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -5473,11 +5561,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 820px) and (max-width: 1024px) {
   .formSection .formWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 820px) and (max-width: 768px) {
+@media screen and (max-width: 820px) and (max-width: 680px) {
   .formSection .formWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -5502,11 +5590,13 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     line-height: 28px;
     margin-bottom: 40px;
   }
+  .formSection .formWrapper .wpcf7 {
+    flex-basis: 100%;
+  }
   .formSection .formWrapper .wpcf7 form {
     display: block;
   }
   .formSection .formWrapper .wpcf7 form .input {
-    flex-basis: 100%;
     width: 100%;
   }
   .formSection .formWrapper .wpcf7 form .input p {
@@ -5593,11 +5683,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media screen and (max-width: 1024px) {
   .faqSection .faq-heading h2 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .faqSection .faq-heading h2 {
     padding-left: 20px;
     padding-right: 20px;
@@ -5701,6 +5791,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   color: #1E1E1E;
   font-family: "verdanaregular";
   transition: 0.5s all ease-in-out;
+  color: #4B4B4B;
 }
 @media screen and (max-width: 1600px) {
   .faqSection .container .accordions-wrapper .accordion .accordion-body p {
@@ -5847,6 +5938,14 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 0px 124px;
   }
 }
+@media all and (max-width: 820px) {
+  .faqSection .container .accordions-wrapper .accordion .accordion-header {
+    padding: 24px 40px;
+  }
+  .faqSection .container .accordions-wrapper .accordion .accordion-body {
+    padding: 0px 104px;
+  }
+}
 @media all and (max-width: 680px) {
   .faqSection {
     margin-bottom: 100px;
@@ -5893,6 +5992,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .faqSection .container .accordions-wrapper .accordion .accordion-body p {
     font-size: 12px;
+    color: #4B4B4B;
   }
 }
 
@@ -5921,11 +6021,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .careerBannerSection .careerSectionWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .careerBannerSection .careerSectionWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -6117,11 +6217,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .careerTeamSection .careerSectionWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .careerTeamSection .careerSectionWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -6354,11 +6454,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
     padding-left: 20px;
     padding-right: 20px;
@@ -6377,14 +6477,19 @@ body {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 1600px) {
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent h3 {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 1440px) {
   .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 1024px) {
   .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent .posSubContent {
@@ -6784,11 +6889,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .careerCVSection .careerSectionWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .careerCVSection .careerSectionWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -6945,11 +7050,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .careerHiringSection .careerSectionWrapper .secHeading {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .careerHiringSection .careerSectionWrapper .secHeading {
     padding-left: 20px;
     padding-right: 20px;
@@ -7330,11 +7435,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .careerWallSection .careerSectionWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .careerWallSection .careerSectionWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -7637,14 +7742,19 @@ body {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 1600px) {
+  .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent h3 {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 1440px) {
   .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 1024px) {
   .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent {
@@ -8006,11 +8116,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .journeySection .journeySecWrapper .secHeading {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .journeySection .journeySecWrapper .secHeading {
     padding-left: 20px;
     padding-right: 20px;
@@ -8494,11 +8604,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .ourStrengthsSec .secWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .ourStrengthsSec .secWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -8818,11 +8928,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .ourStorySec .secWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .ourStorySec .secWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -9067,11 +9177,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .foundersSec .secWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .foundersSec .secWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -9573,11 +9683,11 @@ body {
 }
 @media screen and (max-width: 820px) and (max-width: 1024px) {
   .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 820px) and (max-width: 768px) {
+@media screen and (max-width: 820px) and (max-width: 680px) {
   .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox {
     padding-left: 20px;
     padding-right: 20px;
@@ -9633,11 +9743,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .careerAtEvertaSec .secWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .careerAtEvertaSec .secWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -10028,11 +10138,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .resDetailBannerSec .secWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .resDetailBannerSec .secWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -10229,11 +10339,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .resDetailContentSec .secWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .resDetailContentSec .secWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -10261,14 +10371,19 @@ body {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 1600px) {
+  .resDetailContentSec .secWrapper .contentBox h2 {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 1440px) {
   .resDetailContentSec .secWrapper .contentBox h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 1024px) {
   .resDetailContentSec .secWrapper .contentBox h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .resDetailContentSec .secWrapper .contentBox h3 {
@@ -10671,11 +10786,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .relatedPostSec .secWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .relatedPostSec .secWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -11508,11 +11623,11 @@ body {
 }
 @media screen and (max-width: 680px) and (max-width: 1024px) {
   .resourcesBanner .resorucesBannerWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 680px) and (max-width: 768px) {
+@media screen and (max-width: 680px) and (max-width: 680px) {
   .resourcesBanner .resorucesBannerWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -11600,12 +11715,12 @@ body {
 }
 @media screen and (max-width: 1440px) {
   .resourcesfaqSection .faq-heading h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
   .resourcesfaqSection .faq-heading h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -11627,11 +11742,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .resourcesfaqSection .faq-heading h2 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .resourcesfaqSection .faq-heading h2 {
     padding-left: 20px;
     padding-right: 20px;
@@ -11699,11 +11814,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .cardSection .cardSectionWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .cardSection .cardSectionWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -11725,12 +11840,12 @@ body {
 }
 @media screen and (max-width: 1440px) {
   .cardSection .cardSectionWrapper .heading h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
   .cardSection .cardSectionWrapper .heading h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -12312,11 +12427,11 @@ body {
 }
 @media screen and (max-width: 680px) and (max-width: 1024px) {
   .cardSection .cardSectionWrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 680px) and (max-width: 768px) {
+@media screen and (max-width: 680px) and (max-width: 680px) {
   .cardSection .cardSectionWrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -12449,12 +12564,12 @@ body {
 }
 @media screen and (max-width: 1440px) {
   .manualBrochureSection .faq-heading h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
   .manualBrochureSection .faq-heading h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -12476,11 +12591,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .manualBrochureSection .faq-heading h2 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .manualBrochureSection .faq-heading h2 {
     padding-left: 20px;
     padding-right: 20px;
@@ -12501,14 +12616,19 @@ body {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 1600px) {
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header h4 {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 1440px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header h4 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 1024px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
@@ -12530,11 +12650,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
     padding-left: 20px;
     padding-right: 20px;
@@ -12639,11 +12759,11 @@ body {
 }
 @media screen and (max-width: 1800px) and (max-width: 1024px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1800px) and (max-width: 768px) {
+@media screen and (max-width: 1800px) and (max-width: 680px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
     padding-left: 20px;
     padding-right: 20px;
@@ -12700,11 +12820,11 @@ body {
 }
 @media screen and (max-width: 1600px) and (max-width: 1024px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1600px) and (max-width: 768px) {
+@media screen and (max-width: 1600px) and (max-width: 680px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
     padding-left: 20px;
     padding-right: 20px;
@@ -12758,11 +12878,11 @@ body {
 }
 @media screen and (max-width: 1440px) and (max-width: 1024px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1440px) and (max-width: 768px) {
+@media screen and (max-width: 1440px) and (max-width: 680px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
     padding-left: 20px;
     padding-right: 20px;
@@ -12816,11 +12936,11 @@ body {
 }
 @media screen and (max-width: 1280px) and (max-width: 1024px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1280px) and (max-width: 768px) {
+@media screen and (max-width: 1280px) and (max-width: 680px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
     padding-left: 20px;
     padding-right: 20px;
@@ -12868,11 +12988,11 @@ body {
 }
 @media screen and (max-width: 1180px) and (max-width: 1024px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 1180px) and (max-width: 768px) {
+@media screen and (max-width: 1180px) and (max-width: 680px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
     padding-left: 20px;
     padding-right: 20px;
@@ -12971,11 +13091,11 @@ body {
 }
 @media screen and (max-width: 680px) and (max-width: 1024px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 680px) and (max-width: 768px) {
+@media screen and (max-width: 680px) and (max-width: 680px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
     padding-left: 20px;
     padding-right: 20px;
@@ -13035,14 +13155,19 @@ body {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 1600px) {
+  .title {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 1440px) {
   .title {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 1024px) {
   .title {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -13435,11 +13560,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .productBanner {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .productBanner {
     padding-left: 20px;
     padding-right: 20px;
@@ -13721,11 +13846,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .secondFold {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .secondFold {
     padding-left: 20px;
     padding-right: 20px;
@@ -13759,14 +13884,19 @@ body {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 1600px) {
+  .secondFold .secondFoldWrapper .industryCard h3 {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 1440px) {
   .secondFold .secondFoldWrapper .industryCard h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 1024px) {
   .secondFold .secondFoldWrapper .industryCard h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .secondFold .secondFoldWrapper .industryCard p {
@@ -13945,11 +14075,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .industryStandardSection .sectionWrapper .bottomInfo {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .industryStandardSection .sectionWrapper .bottomInfo {
     padding-left: 20px;
     padding-right: 20px;
@@ -13969,12 +14099,12 @@ body {
 }
 @media screen and (max-width: 1440px) {
   .industryStandardSection .sectionWrapper .bottomInfo h3 {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
   .industryStandardSection .sectionWrapper .bottomInfo h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -14037,14 +14167,19 @@ body {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 1600px) {
+  .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-current {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 1440px) {
   .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-current {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 1024px) {
   .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-current {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media all and (max-width: 1800px) {
@@ -14275,11 +14410,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .productInfoSection {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .productInfoSection {
     padding-left: 20px;
     padding-right: 20px;
@@ -14679,11 +14814,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .technicalDetailsSection {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .technicalDetailsSection {
     padding-left: 20px;
     padding-right: 20px;
@@ -15084,11 +15219,11 @@ body {
 }
 @media screen and (max-width: 820px) and (max-width: 1024px) {
   .technicalDetailsSection .technicalDetailsWrapper .accordionContainer {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 820px) and (max-width: 768px) {
+@media screen and (max-width: 820px) and (max-width: 680px) {
   .technicalDetailsSection .technicalDetailsWrapper .accordionContainer {
     padding-left: 20px;
     padding-right: 20px;
@@ -15214,12 +15349,12 @@ body {
 }
 @media screen and (max-width: 1440px) {
   .productSection .productWrapper .tabContent .cards .card .card-wrapper h3 {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
   .productSection .productWrapper .tabContent .cards .card .card-wrapper h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -15522,11 +15657,11 @@ body {
 }
 @media screen and (max-width: 820px) and (max-width: 1024px) {
   .productSection .productWrapper .productHeader {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-@media screen and (max-width: 820px) and (max-width: 768px) {
+@media screen and (max-width: 820px) and (max-width: 680px) {
   .productSection .productWrapper .productHeader {
     padding-left: 20px;
     padding-right: 20px;

@@ -34,7 +34,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 			<nav class="headerWrapper">
 				<div class="headerLogo">
 					<a href="<?php echo get_site_url(); ?>">
-						<img src="<?php bloginfo('template_directory'); ?>/images/everta-logo.svg" />
+						<img src="<?php bloginfo('template_directory'); ?>/images/everta-logo.svg" alt=""/>
 					</a>
 				</div>
 				<div class="headerMenu">
