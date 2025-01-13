@@ -342,10 +342,10 @@ body h1{
         padding-right: 80px;
     }
     @media screen and (max-width:1024px) {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:680px) {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -460,10 +460,10 @@ body h1{
         font-size: 32px;
     }
     @media screen and (max-width:1440px) {
-        font-size: 28px;
+        font-size: 24px;
     }
     @media screen and (max-width:1024px) {
-        font-size: 24px;
+        font-size: 22px;
     }
     @media screen and (max-width:720px) {
         font-size: 20px;
@@ -475,11 +475,14 @@ body h1{
     @media screen and (max-width:1800px) {
         font-size: 30px;
     }
+    @media screen and (max-width:1600px) {
+        font-size: 26px;
+    }
     @media screen and (max-width:1440px) {
-        font-size: 24px;
+        font-size: 22px;
     }
     @media screen and (max-width:1024px) {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 @mixin font28 {

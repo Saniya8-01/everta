@@ -29,9 +29,15 @@
             <p>
                 <?php echo get_sub_field('banner_subcontent'); ?>
             </p>
-            <a href="<?php echo get_sub_field('banner_cta_link'); ?>" class="ctaYellow">
-                <?php echo get_sub_field('banner_cta_text'); ?>
-            </a>
+            <?php 
+            $banner_cta_link = get_sub_field('banner_cta_link');
+            $banner_cta_text = get_sub_field('banner_cta_text');
+            
+            if ($banner_cta_link && $banner_cta_text) : ?>
+                <a href="<?php echo $banner_cta_link; ?>" class="ctaYellow">
+                    <?php echo $banner_cta_text; ?>
+                </a>
+            <?php endif; ?>            
         </div>
     </div>
     <?php endwhile; ?>
@@ -54,9 +60,16 @@
                 <p>
                     <?php echo get_sub_field('subcontent'); ?>
                 </p>
-                <a href="<?php echo get_sub_field('explore_link'); ?>" class="ctaWhiteBlack">
-                    <?php echo get_sub_field('explore_text'); ?>
-                </a>
+                <?php 
+                $explore_link = get_sub_field('explore_link');
+                $explore_text = get_sub_field('explore_text');
+                
+                if ($explore_link && $explore_text) : ?>
+                    <a href="<?php echo $explore_link; ?>" class="ctaWhiteBlack">
+                        <?php echo $explore_text; ?>
+                    </a>
+                <?php endif; ?>
+                
             </div>
         </div>
         <div class="rightContent">
@@ -102,9 +115,16 @@
                     <p>
                         <?php echo get_sub_field('hovercard_para'); ?>
                     </p>
-                    <a href="<?php echo get_sub_field('explore_link'); ?>" class="ctaYellowBlack">
-                        <?php echo get_sub_field('explore_text'); ?>
-                    </a>
+                    <?php 
+                    $explore_link = get_sub_field('explore_link');
+                    $explore_text = get_sub_field('explore_text');
+                    
+                    if ($explore_link && $explore_text) : ?>
+                        <a href="<?php echo $explore_link; ?>" class="ctaYellowBlack">
+                            <?php echo $explore_text; ?>
+                        </a>
+                    <?php endif; ?>
+                    
                 </div>
                 <div class="image">
                     <?php $hoverImage = get_sub_field('hover_image');
@@ -157,8 +177,12 @@
     <div class="tab-wrapper">
         <!-- Heading and Tabs -->
         <div class="tab-header">
-            <h2><?php echo get_sub_field('heading'); ?></h2>
-            <p><?php echo get_sub_field('subheading'); ?></p>
+            <h2>
+                <?php echo get_sub_field('heading'); ?>
+            </h2>
+            <p>
+                <?php echo get_sub_field('subheading'); ?>
+            </p>
             <div class="tab-buttons">
                 <button class="tab-button active" data-tab="ac">AC</button>
                 <button class="tab-button" data-tab="dc">DC</button>
@@ -168,8 +192,17 @@
         <!-- Tab Content for AC -->
         <div class="tab-content active" id="ac">
             <div class="cards">
-                <?php $related_post = get_sub_field('related_products_ac'); if ($related_post) : ?>
-                <?php foreach ($related_post as $post) : setup_postdata($post); $post_id = get_the_ID(); $post_link = get_permalink($post_id); ?>
+                <?php 
+        $related_post = get_sub_field('related_products_ac'); 
+        if ($related_post) : 
+            $counter = 0; // Initialize counter
+            foreach ($related_post as $post) : 
+                setup_postdata($post); 
+                $post_id = get_the_ID(); 
+                $post_link = get_permalink($post_id);
+                if ($counter >= 3) break; // Stop loop after 3 cards
+                $counter++;
+        ?>
                 <div class="card">
                     <div class="card-wrapper">
                         <?php $full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
@@ -178,17 +211,17 @@
                             <?php the_title(); ?>
                         </h3>
                         <?php 
-                        $features = [];
-                        if (have_rows('banner_section', $post_id)) : 
-                            while (have_rows('banner_section', $post_id)) : the_row(); 
-                                if (have_rows('features_list')) : 
-                                    while (have_rows('features_list')) : the_row(); 
-                                        $features[] = get_sub_field('feature_info');
-                                    endwhile; 
-                                endif; 
+                $features = [];
+                if (have_rows('banner_section', $post_id)) : 
+                    while (have_rows('banner_section', $post_id)) : the_row(); 
+                        if (have_rows('features_list')) : 
+                            while (have_rows('features_list')) : the_row(); 
+                                $features[] = get_sub_field('feature_info');
                             endwhile; 
                         endif; 
-                        ?>
+                    endwhile; 
+                endif; 
+                ?>
                         <h5>
                             <?php echo implode(' • ', $features); ?>
                         </h5>
@@ -209,8 +242,17 @@
         <!-- Tab Content for DC -->
         <div class="tab-content" id="dc">
             <div class="cards">
-                <?php $related_post = get_sub_field('related_products_dc'); if ($related_post) : ?>
-                <?php foreach ($related_post as $post) : setup_postdata($post); $post_id = get_the_ID(); $post_link = get_permalink($post_id); ?>
+                <?php 
+        $related_post = get_sub_field('related_products_dc'); 
+        if ($related_post) : 
+            $counter = 0; // Initialize counter
+            foreach ($related_post as $post) : 
+                setup_postdata($post); 
+                $post_id = get_the_ID(); 
+                $post_link = get_permalink($post_id);
+                if ($counter >= 3) break; // Stop loop after 3 cards
+                $counter++;
+        ?>
                 <div class="card">
                     <div class="card-wrapper">
                         <?php $full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
@@ -219,17 +261,17 @@
                             <?php the_title(); ?>
                         </h3>
                         <?php 
-                        $features = [];
-                        if (have_rows('banner_section', $post_id)) : 
-                            while (have_rows('banner_section', $post_id)) : the_row(); 
-                                if (have_rows('features_list')) : 
-                                    while (have_rows('features_list')) : the_row(); 
-                                        $features[] = get_sub_field('feature_info');
-                                    endwhile; 
-                                endif; 
+                $features = [];
+                if (have_rows('banner_section', $post_id)) : 
+                    while (have_rows('banner_section', $post_id)) : the_row(); 
+                        if (have_rows('features_list')) : 
+                            while (have_rows('features_list')) : the_row(); 
+                                $features[] = get_sub_field('feature_info');
                             endwhile; 
                         endif; 
-                        ?>
+                    endwhile; 
+                endif; 
+                ?>
                         <h5>
                             <?php echo implode(' • ', $features); ?>
                         </h5>
@@ -246,6 +288,7 @@
                 <?php endif; ?>
             </div>
         </div>
+
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
@@ -263,9 +306,15 @@
                 <p>
                     <?php echo get_sub_field('explore_subheading'); ?>
                 </p>
-                <a href="<?php echo get_sub_field('solutions_link'); ?>" class="ctaBlack">
-                    <?php echo get_sub_field('solutions_text'); ?>
-                </a>
+                <?php 
+                $solutions_link = get_sub_field('solutions_link');
+                $solutions_text = get_sub_field('solutions_text');
+                
+                if ($solutions_link && $solutions_text) : ?>
+                    <a href="<?php echo $solutions_link; ?>" class="ctaBlack">
+                        <?php echo $solutions_text; ?>
+                    </a>
+                <?php endif; ?>                
             </div>
         </div>
         <div class="rightContent">
@@ -428,43 +477,43 @@
 
 <script>
     if ($("#faqAccordion").length) {
-    jQuery(document).ready(function () {
-        const accordionHeaders = document.querySelectorAll(".accordion-header");
-        ActivatingFirstAccordion();
-        function ActivatingFirstAccordion() {
-            accordionHeaders[0].parentElement.classList.add("active");
-            accordionHeaders[0].nextElementSibling.style.maxHeight = "fit-content";
-        }
-        function toggleActiveAccordion(e, header) {
-            const activeAccordion = document.querySelector(".accordion.active");
-            const clickedAccordion = header.parentElement;
-            const accordionBody = header.nextElementSibling;
-            if (activeAccordion && activeAccordion != clickedAccordion) {
-                activeAccordion.querySelector(".accordion-body").style.maxHeight = 0;
-                activeAccordion.classList.remove("active");
+        jQuery(document).ready(function () {
+            const accordionHeaders = document.querySelectorAll(".accordion-header");
+            ActivatingFirstAccordion();
+            function ActivatingFirstAccordion() {
+                accordionHeaders[0].parentElement.classList.add("active");
+                accordionHeaders[0].nextElementSibling.style.maxHeight = "fit-content";
             }
-            clickedAccordion.classList.toggle("active");
-            if (clickedAccordion.classList.contains("active")) {
-                accordionBody.style.maxHeight = "fit-content";
-            } else {
-                accordionBody.style.maxHeight = 0;
+            function toggleActiveAccordion(e, header) {
+                const activeAccordion = document.querySelector(".accordion.active");
+                const clickedAccordion = header.parentElement;
+                const accordionBody = header.nextElementSibling;
+                if (activeAccordion && activeAccordion != clickedAccordion) {
+                    activeAccordion.querySelector(".accordion-body").style.maxHeight = 0;
+                    activeAccordion.classList.remove("active");
+                }
+                clickedAccordion.classList.toggle("active");
+                if (clickedAccordion.classList.contains("active")) {
+                    accordionBody.style.maxHeight = "fit-content";
+                } else {
+                    accordionBody.style.maxHeight = 0;
+                }
             }
-        }
-        accordionHeaders.forEach(function (header) {
-            header.addEventListener("click", function (event) {
-                toggleActiveAccordion(event, header);
+            accordionHeaders.forEach(function (header) {
+                header.addEventListener("click", function (event) {
+                    toggleActiveAccordion(event, header);
+                });
+            });
+            function resizeActiveAccordionBody() {
+                const activeAccordionBody = document.querySelector(
+                    ".accordion.active .accordion-body"
+                );
+                if (activeAccordionBody)
+                    activeAccordionBody.style.maxHeight = "fit-content";
+            }
+            window.addEventListener("resize", function () {
+                resizeActiveAccordionBody();
             });
         });
-        function resizeActiveAccordionBody() {
-            const activeAccordionBody = document.querySelector(
-                ".accordion.active .accordion-body"
-            );
-            if (activeAccordionBody)
-                activeAccordionBody.style.maxHeight = "fit-content";
-        }
-        window.addEventListener("resize", function () {
-            resizeActiveAccordionBody();
-        });
-    });
-}
+    }
 </script>

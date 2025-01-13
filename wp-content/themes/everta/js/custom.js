@@ -213,9 +213,9 @@ if ($(".testimonialSection").length) {
 
         responsive: [
             {
-                breakpoint: 1181,
+                breakpoint: 1440,
                 settings: {
-                    slidesToShow: 2.1,
+                    slidesToShow: 1.9,
                 }
             },
             {
@@ -971,6 +971,8 @@ $(window).scroll(function () {
         });
     });
 
+
+    
 
 
 

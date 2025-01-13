@@ -36,12 +36,26 @@
             <?php endif; ?>
         </div>
         <div class="ctaDiv">
-            <a href="<?php echo get_sub_field('buy_link'); ?>" class="ctaYellow">
-                <?php echo get_sub_field('buy_text'); ?>
-            </a>
-            <a href="<?php echo get_sub_field('download_link'); ?>" class="ctaWhiteBlack" download>
-                <?php echo get_sub_field('download_text'); ?>
-            </a>
+            <?php 
+            $buy_link = get_sub_field('buy_link');
+            $buy_text = get_sub_field('buy_text');
+            
+            if ($buy_link && $buy_text) : ?>
+                <a href="<?php echo $buy_link; ?>" class="ctaYellow">
+                    <?php echo $buy_text; ?>
+                </a>
+            <?php endif; ?>
+            
+            <?php 
+            $download_link = get_sub_field('download_link');
+            $download_text = get_sub_field('download_text');
+            
+            if ($download_link && $download_text) : ?>
+                <a href="<?php echo $download_link; ?>" class="ctaWhiteBlack" download>
+                    <?php echo $download_text; ?>
+                </a>
+            <?php endif; ?>
+            
         </div>
         <?php endwhile; ?>
         <?php endif; ?>
@@ -247,9 +261,16 @@
                 <p>
                     <?php echo get_sub_field('explore_subheading'); ?>
                 </p>
-                <a href="<?php echo get_sub_field('solutions_link'); ?>" class="ctaBlack">
-                    <?php echo get_sub_field('solutions_text'); ?>
-                </a>
+                <?php 
+                $solutions_link = get_sub_field('solutions_link');
+                $solutions_text = get_sub_field('solutions_text');
+                
+                if ($solutions_link && $solutions_text) : ?>
+                    <a href="<?php echo esc_url($solutions_link); ?>" class="ctaBlack">
+                        <?php echo esc_html($solutions_text); ?>
+                    </a>
+                <?php endif; ?>
+                
             </div>
         </div>
         <div class="rightContent">
@@ -315,12 +336,26 @@
             </p>
         </div>
         <div class="productCtas">
-            <a href="<?php echo get_sub_field('cta_link_first'); ?>" class="ctaBlack">
-                <?php echo get_sub_field('cta_text_first'); ?>
-            </a>
-            <a href="<?php echo get_sub_field('cta_link_second'); ?>" class="ctaYellow">
-                <?php echo get_sub_field('cta_text_second'); ?>
-            </a>
+            <?php 
+            $cta_link_first = get_sub_field('cta_link_first');
+            $cta_text_first = get_sub_field('cta_text_first');
+            
+            if ($cta_link_first && $cta_text_first) : ?>
+                <a href="<?php echo esc_url($cta_link_first); ?>" class="ctaBlack">
+                    <?php echo esc_html($cta_text_first); ?>
+                </a>
+            <?php endif; ?>
+            
+            <?php 
+            $cta_link_second = get_sub_field('cta_link_second');
+            $cta_text_second = get_sub_field('cta_text_second');
+            
+            if ($cta_link_second && $cta_text_second) : ?>
+                <a href="<?php echo esc_url($cta_link_second); ?>" class="ctaYellow">
+                    <?php echo esc_html($cta_text_second); ?>
+                </a>
+            <?php endif; ?>
+            
         </div>
     </div>
     <?php endwhile; ?>
@@ -383,6 +418,77 @@
 <?php get_footer(); ?>
 
 <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const productInfoSection = document.querySelector('.productInfoSection');
+
+    // Check if viewport width is above 820px
+    function isLargeScreen() {
+        return window.innerWidth > 820;
+    }
+
+    if (productInfoSection && isLargeScreen()) {
+        const observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    productInfoSection.id = 'product-info';
+                    observer.disconnect(); // Stop observing after first trigger
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+
+        observer.observe(productInfoSection);
+    } 
+
+    // Optional: Re-check on window resize
+    window.addEventListener('resize', function () {
+        if (isLargeScreen()) {
+            const newObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        productInfoSection.id = 'product-info';
+                        observer.disconnect(); // Stop observing after first trigger
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            newObserver.observe(productInfoSection);
+        } else {
+            productInfoSection.removeAttribute('id'); // Remove ID if resized below 820px
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const industrySection = document.querySelector('.industryStandardSection');
+
+    if (industrySection) {
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    industrySection.id = 'industry-standard';
+                } else {
+                    industrySection.removeAttribute('id');
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+
+        observer.observe(industrySection);
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+        const productBanner = document.querySelector('.productBanner');
+        if (productBanner) {
+            productBanner.setAttribute('id', 'animatedBanner');
+            console.log('ID added to .productBanner');
+        }
+    }, 1000); 
+});
+
     document.addEventListener('DOMContentLoaded', () => {
         const tabs = document.querySelectorAll('.tabContent'); // Get all tab content sections
         const hoverBoxes = document.querySelectorAll('.card'); // Get all cards (hover boxes)
@@ -530,8 +636,6 @@
             infinite: true,
         });
     }
-
-
 
     if ($(".technicalDetailsSection").length) {
         jQuery(document).ready(function () {

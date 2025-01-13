@@ -229,7 +229,16 @@
                     <p><?php echo get_sub_field('title'); ?></p>
                     <h2><?php echo get_sub_field('heading'); ?></h2>
                     <p><?php echo get_sub_field('subheading'); ?></p>
-                    <a href="<?php echo get_sub_field('readmore_link'); ?>" class="ctaYellowBlack"><?php echo get_sub_field('readmore_text'); ?></a>
+                    <?php 
+$readmore_link = get_sub_field('readmore_link');
+$readmore_text = get_sub_field('readmore_text');
+
+if ($readmore_link && $readmore_text) : ?>
+    <a href="<?php echo esc_url($readmore_link); ?>" class="ctaYellowBlack">
+        <?php echo esc_html($readmore_text); ?>
+    </a>
+<?php endif; ?>
+
                 </div>
             </div>
         </div>
@@ -244,7 +253,16 @@
     <div class="secWrapper">
         <div class="secHeading">
             <h2><?php echo get_sub_field('heading'); ?></h2>
-            <a href="<?php echo get_sub_field('career_link'); ?>" class="ctaBlack"><?php echo get_sub_field('career_text'); ?></a>
+            <?php 
+$career_link = get_sub_field('career_link');
+$career_text = get_sub_field('career_text');
+
+if ($career_link && $career_text) : ?>
+    <a href="<?php echo esc_url($career_link); ?>" class="ctaBlack">
+        <?php echo esc_html($career_text); ?>
+    </a>
+<?php endif; ?>
+
         </div>
     </div>
     <?php endwhile; ?>

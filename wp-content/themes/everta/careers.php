@@ -12,9 +12,15 @@
             <p>
                 <?php echo get_sub_field('subheading'); ?>
             </p>
-            <a href="#evertaTeam" class="ctaYellow">
-                <?php echo get_sub_field('cta_text'); ?>
-            </a>
+            <?php 
+            $cta_text = get_sub_field('cta_text');
+            
+            if ($cta_text) : ?>
+                <a href="#evertaTeam" class="ctaYellow">
+                    <?php echo esc_html($cta_text); ?>
+                </a>
+            <?php endif; ?>
+            
         </div>
         <div class="careerBannerImg">
             <?php
@@ -45,8 +51,8 @@
             <h2><?php echo get_sub_field('heading'); ?></h2>
             <p><?php echo get_sub_field('subheading'); ?></p>
         </div>
-        <?php if (have_rows('banner_section')) : ?>
-        <?php while (have_rows('banner_section')) : the_row(); ?>
+        <?php endwhile; ?>
+        <?php endif; ?>
         <div class="careerFilterSection">
             <div class="selFilter">
                 <div class="customSelect">
@@ -193,9 +199,15 @@
         <p>
             <?php echo get_sub_field('subheading'); ?>
         </p>
-        <a href="javascript:void(0);" class="ctaBlack">
-            <?php echo get_sub_field('cta_text'); ?>
-        </a>
+        <?php 
+        $cta_text = get_sub_field('cta_text');
+        
+        if ($cta_text) : ?>
+            <a href="javascript:void(0);" class="ctaBlack">
+                <?php echo esc_html($cta_text); ?>
+            </a>
+        <?php endif; ?>
+        
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
@@ -215,32 +227,35 @@
         </div>
         <div class="hiringProcessContainer">
             <?php if (have_rows('hiring_steps')) : ?>
+            <?php $counter = 1; // Initialize the counter ?>
             <?php while (have_rows('hiring_steps')) : the_row(); ?>
-            <div class="hiringProcessBox">
-                <div class="logoBox">
-                    <?php 
-                    $iconImage = get_sub_field('icon_image');
-                    if (!empty($iconImage)) : ?>
-                    <img src="<?php echo esc_url($iconImage['url']); ?>"
-                        alt="<?php echo esc_attr($iconImage['alt']); ?>">
-                    <?php endif; ?>
-                </div>
-                <div class="contentBox">
-                    <div class="boxNumber">
-                        <?php echo get_sub_field('step_number'); ?>
+                <div class="hiringProcessBox">
+                    <div class="logoBox">
+                        <?php 
+                        $iconImage = get_sub_field('icon_image');
+                        if (!empty($iconImage)) : ?>
+                            <img src="<?php echo esc_url($iconImage['url']); ?>"
+                                 alt="<?php echo esc_attr($iconImage['alt']); ?>">
+                        <?php endif; ?>
                     </div>
-                    <div class="subHeadings">
-                        <h3>
-                            <?php echo get_sub_field('title'); ?>
-                        </h3>
-                        <h6>
-                            <?php echo get_sub_field('description'); ?>
-                        </h6>
+                    <div class="contentBox">
+                        <div class="boxNumber">
+                            <?php echo $counter; // Output the dynamic counter ?>
+                        </div>
+                        <div class="subHeadings">
+                            <h3>
+                                <?php echo get_sub_field('title'); ?>
+                            </h3>
+                            <h6>
+                                <?php echo get_sub_field('description'); ?>
+                            </h6>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <?php $counter++; // Increment the counter for each step ?>
             <?php endwhile; ?>
-            <?php endif; ?>
+        <?php endif; ?>
+        
         </div>
     </div>
     <?php endwhile; ?>
@@ -305,7 +320,6 @@
     <?php endif; ?>
 </section>
 
-
 <?php
             $args = array('post_type' => 'career', 'posts_per_page' => -1, 'order' => 'DESC');
             $the_query = new WP_Query($args);
@@ -362,60 +376,21 @@
                         </div>
                     </div>
                 </div>
-                <a href="<?php echo get_field('cta_url'); ?>" class="ctaBlack">
-                    <?php echo get_field('cta_text'); ?>
-                </a>
+                <?php 
+                $cta_url = get_field('cta_url');
+                $cta_text = get_field('cta_text');
+                
+                if ($cta_url && $cta_text) : ?>
+                    <a href="<?php echo esc_url($cta_url); ?>" class="ctaBlack">
+                        <?php echo esc_html($cta_text); ?>
+                    </a>
+                <?php endif; ?>
+                
             </div>
         </div>
         <div class="jobDescription">
             <div class="detailWrapper">
-                <div class="jobDetail">
-                    <p>
-                        <?php echo get_field('job_details'); ?>
-                    </p>
-                </div>
-                <?php if (have_rows('job_role')) : ?>
-                <?php while (have_rows('job_role')) : the_row(); ?>
-                <div class="jobRole">
-                    <h4>
-                        <?php echo get_sub_field('title'); ?>
-                    </h4>
-                    <p>
-                        <?php echo get_sub_field('subtitle'); ?>
-                    </p>
-                    <ul>
-                        <?php if (have_rows('job_role_list')) : ?>
-                        <?php while (have_rows('job_role_list')) : the_row(); ?>
-                        <li>
-                            <?php echo get_sub_field('job_role_point'); ?>
-                        </li>
-                        <?php endwhile; ?>
-                        <?php endif; ?>
-                    </ul>
-                </div>
-                <?php endwhile; ?>
-                <?php endif; ?>
-                <?php if (have_rows('job_responsiblity')) : ?>
-                <?php while (have_rows('job_responsiblity')) : the_row(); ?>
-                <div class="jobResponsiblity">
-                    <h4>
-                        <?php echo get_sub_field('title'); ?>
-                    </h4>
-                    <p>
-                        <?php echo get_sub_field('subtitle'); ?>
-                    </p>
-                    <ul>
-                        <?php if (have_rows('responsiblity_list')) : ?>
-                        <?php while (have_rows('responsiblity_list')) : the_row(); ?>
-                        <li>
-                            <?php echo get_sub_field('responsiblity_point'); ?>
-                        </li>
-                        <?php endwhile; ?>
-                        <?php endif; ?>
-                    </ul>
-                </div>
-                <?php endwhile; ?>
-                <?php endif; ?>
+                <?php the_content(); ?>
             </div>
         </div>
     </div>

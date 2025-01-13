@@ -13,10 +13,17 @@
                     $count = 0;
                     while (have_rows('resources_tabs')) : the_row(); 
                     ?>
-                    <a href="<?php echo get_sub_field('tab_link'); ?>" 
-                       class="<?php echo ($count == 3) ? 'active' : ''; ?>">
-                        <?php echo get_sub_field('tab_text'); ?>
-                    </a>
+                    <?php 
+                    $tab_link = get_sub_field('tab_link');
+                    $tab_text = get_sub_field('tab_text');
+                    
+                    if ($tab_link && $tab_text) : ?>
+                        <a href="<?php echo $tab_link; ?>" 
+                           class="<?php echo ($count == 3) ? 'active' : ''; ?>">
+                            <?php echo $tab_text; ?>
+                        </a>
+                    <?php endif; ?>
+                    
                     <?php 
                     $count++;
                     endwhile; ?>

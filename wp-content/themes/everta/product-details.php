@@ -1,6 +1,5 @@
 <?php get_header(); /*Template name: Product Details*/ ?>
 
-
 <section class="productBanner">
     <?php if (have_rows('banner_section')) : ?>
     <?php while (have_rows('banner_section')) : the_row(); ?>
@@ -493,8 +492,6 @@ if ($(".industryStandardSection").length) {
         infinite: true,
     });
 }
-
-
 
     if ($(".technicalDetailsSection").length) {
     jQuery(document).ready(function () {
