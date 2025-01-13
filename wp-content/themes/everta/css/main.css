@@ -2903,9 +2903,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     display: none !important;
   }
   .bannerSection .bannerSectionWrapper .bannerSectionContent {
-    left: 0;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     padding: 0px 20px;
     width: 100%;
     display: flex;
