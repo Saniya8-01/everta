@@ -12024,6 +12024,33 @@ body {
   }
 }
 
+.no-posts-message {
+  font-family: "termina_testmedium";
+  font-size: 36px;
+  line-height: 100%;
+  font-weight: 600;
+}
+@media screen and (max-width: 1600px) {
+  .no-posts-message {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .no-posts-message {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .no-posts-message {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .no-posts-message {
+    font-size: 20px;
+  }
+}
+
 .cardSection .cardSectionWrapper {
   margin-top: 72px;
   padding-left: 120px;
