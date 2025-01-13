@@ -219,7 +219,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
         .headerWrapper{padding: 10px 40px;}
     }
     @media all and (max-width:820px){
-        .headerWrapper{padding: 20px;z-index: 99;
+        .headerWrapper{padding: 20px 40px; z-index: 99;
             .headerLogo{img{position: relative;height: 20px;width: 90px;z-index: 99;}}
             .headerMenu{
                 .navMenu{position: absolute;top: 0;right: -110%;width: 100%;transition: 0.4s all ease-in-out;overflow: hidden;height: 100vh;
