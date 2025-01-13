@@ -47,78 +47,77 @@
             <div class="blogsTabWrapper">
                 <a href="#" class="active" data-filter="all">All</a>
                 <?php
-                $args = array('post_type' => 'post', 'posts_per_page' => -1, 'order' => 'DESC');
-                $the_query = new WP_Query($args);
-                $found_posts = false; // Variable to check if posts are found
-
-                while ($the_query->have_posts()) : $the_query->the_post();
-                    $terms = get_the_terms($post->ID, 'category');
-                    if ($terms && !is_wp_error($terms)) :
-                        $links = array();
-                        foreach ($terms as $term) {
-                            $links[] = $term->name;
-                        }
-                        $tax_links = join(" ", str_replace('-', ' ', $links));
-                        $tax = strtolower($tax_links);
-                        $found_posts = true;
-                    else :
-                        $tax = '';
-                    endif;
+                    $args = array('post_type' => 'post', 'posts_per_page' => -1, 'order' => 'DESC');
+                    $the_query = new WP_Query($args);
+                    if ($the_query->have_posts()) {
+                        while ($the_query->have_posts()) : $the_query->the_post();
+                            $terms = get_the_terms($post->ID, 'category');
+                            if ($terms && ! is_wp_error($terms)) {
+                                $links = array();
+                                foreach ($terms as $term) {
+                                    $links[] = $term->name;
+                                }
+                                $tax_links = join(" ", str_replace('-', ' ', $links));
+                                $tax = strtolower($tax_links);
+                                echo '<a href="#" data-filter="' . esc_attr($tax) . '">' . esc_html($tax) . '</a>';
+                            }
+                        endwhile;
+                    } else {
+                        echo '<p>No categories found.</p>';
+                    }
+                    wp_reset_postdata();
                 ?>
-                    <a href="#" data-filter="<?php echo esc_attr($tax); ?>"><?php echo esc_html($tax); ?></a>
-                <?php endwhile; wp_reset_postdata(); ?>
             </div>
         </div>
 
         <div class="cardGrid" id="cardGrid">
             <?php
-            $the_query = new WP_Query($args);
-            $found_posts = false;
-
-            while ($the_query->have_posts()) : $the_query->the_post();
-                $terms = get_the_terms($post->ID, 'category');
-                if ($terms && !is_wp_error($terms)) :
-                    $links = array();
-                    foreach ($terms as $term) {
-                        $links[] = $term->name;
-                    }
-                    $tax_links = join(" ", str_replace('-', ' ', $links));
-                    $tax = strtolower($tax_links);
-                    $found_posts = true;
-                else :
-                    $tax = '';
-                endif;
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()) {
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                        $terms = get_the_terms($post->ID, 'category');
+                        if ($terms && ! is_wp_error($terms)) {
+                            $links = array();
+                            foreach ($terms as $term) {
+                                $links[] = $term->name;
+                            }
+                            $tax_links = join(" ", str_replace('-', ' ', $links));
+                            $tax = strtolower($tax_links);
+                        } else {
+                            $tax = '';
+                        }
             ?>
-                <a href="<?php the_permalink(); ?>" class="cards" data-category="<?php echo esc_attr($tax); ?>">
-                    <div class="cardImg">
-                        <img src="<?php echo esc_url(wp_get_attachment_url(get_post_thumbnail_id($post->ID))); ?>" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" />
-                    </div>
-                    <div class="cardContent">
-                        <span class="tag"><?php echo esc_html($tax); ?></span>
-                        <div class="cardInfo">
-                            <div class="cardTypo">
-                                <h3><?php 
-                                    $title = get_the_title(); 
-                                    echo (strlen($title) > 50) ? esc_html(substr($title, 0, 50)) . '...' : esc_html($title); 
-                                ?></h3>
-                                <p><?php echo esc_html(get_the_date('d M Y')); ?> • <?php echo esc_html(estimate_reading_time(get_the_ID())); ?> mins read</p>
-                            </div>
-                            <div class="redirectArrow">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                            </div>
+            <a href="<?php the_permalink(); ?>" class="cards" data-category="<?php echo esc_attr($tax); ?>">
+                <div class="cardImg">
+                    <img src="<?php echo esc_url(wp_get_attachment_url(get_post_thumbnail_id($post->ID))); ?>" alt="" title="" />
+                </div>
+                <div class="cardContent">
+                    <span class="tag"> <?php echo esc_html($tax); ?></span>
+                    <div class="cardInfo">
+                        <div class="cardTypo">
+                            <h3><?php 
+                                $title = get_the_title(); 
+                                echo (strlen($title) > 50) ? esc_html(substr($title, 0, 50)) . '...' : esc_html($title); 
+                            ?></h3>
+                            <p><?php echo get_the_date('d M Y'); ?> • <?php echo estimate_reading_time(get_the_ID()); ?> mins read</p>
+                        </div>
+                        <div class="redirectArrow">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/right-arrow.svg" alt="">
                         </div>
                     </div>
-                </a>
-            <?php endwhile; wp_reset_postdata(); ?>
-
-            <!-- No posts found message -->
-            <?php if (!$found_posts) : ?>
-                <p class="no-posts">No posts found for the selected category.</p>
-            <?php endif; ?>
+                </div>
+            </a>
+            <?php endwhile; 
+                } else {
+                    echo '<p>No posts found.</p>';
+                }
+                wp_reset_postdata();
+            ?>
         </div>
         <div id="pagination" class="pagination"></div>
     </div>
 </section>
+
 
 <?php get_footer(); ?>
 
