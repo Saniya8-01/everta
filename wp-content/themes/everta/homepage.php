@@ -29,9 +29,15 @@
             <p>
                 <?php echo get_sub_field('banner_subcontent'); ?>
             </p>
-            <a href="<?php echo get_sub_field('banner_cta_link'); ?>" class="ctaYellow">
-                <?php echo get_sub_field('banner_cta_text'); ?>
-            </a>
+            <?php 
+            $banner_cta_link = get_sub_field('banner_cta_link');
+            $banner_cta_text = get_sub_field('banner_cta_text');
+            
+            if ($banner_cta_link && $banner_cta_text) : ?>
+                <a href="<?php echo $banner_cta_link; ?>" class="ctaYellow">
+                    <?php echo $banner_cta_text; ?>
+                </a>
+            <?php endif; ?>            
         </div>
     </div>
     <?php endwhile; ?>
@@ -54,9 +60,16 @@
                 <p>
                     <?php echo get_sub_field('subcontent'); ?>
                 </p>
-                <a href="<?php echo get_sub_field('explore_link'); ?>" class="ctaWhiteBlack">
-                    <?php echo get_sub_field('explore_text'); ?>
-                </a>
+                <?php 
+                $explore_link = get_sub_field('explore_link');
+                $explore_text = get_sub_field('explore_text');
+                
+                if ($explore_link && $explore_text) : ?>
+                    <a href="<?php echo $explore_link; ?>" class="ctaWhiteBlack">
+                        <?php echo $explore_text; ?>
+                    </a>
+                <?php endif; ?>
+                
             </div>
         </div>
         <div class="rightContent">
@@ -102,9 +115,16 @@
                     <p>
                         <?php echo get_sub_field('hovercard_para'); ?>
                     </p>
-                    <a href="<?php echo get_sub_field('explore_link'); ?>" class="ctaYellowBlack">
-                        <?php echo get_sub_field('explore_text'); ?>
-                    </a>
+                    <?php 
+                    $explore_link = get_sub_field('explore_link');
+                    $explore_text = get_sub_field('explore_text');
+                    
+                    if ($explore_link && $explore_text) : ?>
+                        <a href="<?php echo $explore_link; ?>" class="ctaYellowBlack">
+                            <?php echo $explore_text; ?>
+                        </a>
+                    <?php endif; ?>
+                    
                 </div>
                 <div class="image">
                     <?php $hoverImage = get_sub_field('hover_image');
@@ -286,9 +306,15 @@
                 <p>
                     <?php echo get_sub_field('explore_subheading'); ?>
                 </p>
-                <a href="<?php echo get_sub_field('solutions_link'); ?>" class="ctaBlack">
-                    <?php echo get_sub_field('solutions_text'); ?>
-                </a>
+                <?php 
+                $solutions_link = get_sub_field('solutions_link');
+                $solutions_text = get_sub_field('solutions_text');
+                
+                if ($solutions_link && $solutions_text) : ?>
+                    <a href="<?php echo $solutions_link; ?>" class="ctaBlack">
+                        <?php echo $solutions_text; ?>
+                    </a>
+                <?php endif; ?>                
             </div>
         </div>
         <div class="rightContent">
