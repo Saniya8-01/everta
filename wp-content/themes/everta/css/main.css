@@ -9350,7 +9350,7 @@ body {
     transform: scaleY(0.7);
   }
   .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-list {
-    padding: 0 20px;
+    padding: 0 10px !important;
   }
 }
 
@@ -10167,6 +10167,9 @@ body {
 .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox.slick-dotted.slick-slider .slick-dots li button {
   width: 8px;
   height: 8px;
+}
+.visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox.slick-dotted.slick-slider .slick-dots li button::before {
+  display: none;
 }
 .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox.slick-dotted.slick-slider .slick-dots li.slick-active {
   background: rgb(245, 247, 94);
@@ -16129,4 +16132,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */

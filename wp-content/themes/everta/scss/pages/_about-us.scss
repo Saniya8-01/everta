@@ -526,7 +526,7 @@
                     .sliderBox{
                         .sliderImg{margin: 0 10px;}
                         .slick-slide{transform: scaleY(0.7);}
-                        .slick-list{padding: 0 20px;}
+                        .slick-list{padding: 0 10px !important;}
                     }
                 }
             }
@@ -836,7 +836,9 @@
                     &.slick-dotted.slick-slider{
                         .slick-dots{bottom: -65px; display: inline-flex;
                             li{width: 8px; height: 8px; background: rgba(245, 247, 94, 0.20); border-radius: 100%;
-                                button{width: 8px; height: 8px;}
+                                button{width: 8px; height: 8px;
+                                    &::before{display: none;}
+                                }
                                 &.slick-active{background: rgba(245, 247, 94, 1);}
                                 &:only-child {
                                     display: none;

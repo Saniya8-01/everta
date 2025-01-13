@@ -568,8 +568,6 @@ if ($(".visitUsSec").length) {
 
         if (activeSlide) {
             const companyName = activeSlide.getAttribute("data-company").toLowerCase();
-            console.log(companyName);
-            
             if (window.getComputedStyle(desktopSVG).display !== "none") {
                 if (companyName === "india") {
                     INDIA.style.opacity = 1;
