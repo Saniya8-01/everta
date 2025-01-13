@@ -760,6 +760,7 @@
             .cards {
                 border-bottom: 1px solid $tertiaryColor3;
                 border-top: 1px solid $tertiaryColor3;
+                .slick-track{float: left;}
                 .card {
                     border-right: 1px solid $tertiaryColor3;
                     transition: all 0.3s ease-out;

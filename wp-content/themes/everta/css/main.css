@@ -15407,6 +15407,9 @@ body {
   border-bottom: 1px solid #D8DBDC;
   border-top: 1px solid #D8DBDC;
 }
+.productSection .productWrapper .tabContent .cards .slick-track {
+  float: left;
+}
 .productSection .productWrapper .tabContent .cards .card {
   border-right: 1px solid #D8DBDC;
   transition: all 0.3s ease-out;

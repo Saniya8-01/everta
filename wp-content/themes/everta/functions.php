@@ -315,3 +315,10 @@ function estimate_reading_time($post_id) {
     return $reading_time;
 }
 
+function register_my_menus() {
+    register_nav_menus(array(
+        'primary-menu' => __('Primary Menu'), // Register the menu location
+    ));
+}
+add_action('after_setup_theme', 'register_my_menus');
+
