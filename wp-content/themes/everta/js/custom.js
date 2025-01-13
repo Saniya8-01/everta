@@ -552,7 +552,7 @@ if ($(".visitUsSec").length) {
         dots: true,
         centerMode: false,
         focusOnSelect: true,
-        infinite: false,
+        infinite: true,
         autoplay: true,
     });
 
