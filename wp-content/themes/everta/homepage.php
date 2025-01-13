@@ -380,7 +380,7 @@
             <?php if (have_rows('testimonial_card')) : ?>
             <?php while (have_rows('testimonial_card')) : the_row(); ?>
             <div class="testimonialCard">
-                <img src="<?php bloginfo('template_directory'); ?>/images/comma-svg.svg" alt="" class="commaImg">
+                <i class="icon-dquotes fontelloQouteIcon"></i>
                 <p class="testimonialPara">
                     <?php echo get_sub_field('testimonial_words'); ?>
                 </p>

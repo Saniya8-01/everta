@@ -80,7 +80,7 @@
 							</ul>
 						</div>
 						<div class="arrowBox">
-							<i class="icon-icon-right rotateRightArrow"></i>
+							<i class="icon-right-arrow  rotateRightArrow"></i>
 						</div>
 					</div>
 				</a>
@@ -94,7 +94,7 @@
 
 <div class="backtopCl" id="backtop">
 	<a href="#">
-		<i class="icon-caretdoubleup fontellowdobuleUpIcon"></i>
+		<i class="icon-double-arrow fontellowdobuleUpIcon"></i>
 	</a>
 </div>
 

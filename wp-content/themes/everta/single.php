@@ -14,7 +14,7 @@ get_header();
 	<div class="secWrapper">
 		<div class="backBtn">
 			<a href="javascript:history.back()">
-				<i class="icon-left-arrow backArrow"></i>Back 
+				<i class="icon-left-arrow backArrow"></i></i>Back 
 			</a>
 		</div>
 		<div class="secHeading">
@@ -49,6 +49,7 @@ get_header();
 	<div class="secWrapper">
 		<div class="contentBox hideTxt">
 			<?php the_content(); ?>
+			<p class="highlightedTxt">"Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus."</p>
 		</div>
 		<div class="readMoreBtnBox">
 			<button class="ctaWhiteBlack" id="readMore">Read more</button>
@@ -89,7 +90,7 @@ get_header();
 							</ul>
 						</div>
 						<div class="arrowBox">
-							<i class="icon-icon-right rotateRightArrow"></i>
+							<i class="icon-right-arrow  rotateRightArrow"></i>
 						</div>
 					</div>
 				</a>
@@ -103,7 +104,7 @@ get_header();
 
 <div class="backtopCl" id="backtop">
 	<a href="#">
-		<i class="icon-caretdoubleup fontellowdobuleUpIcon"></i>
+		<i class="icon-double-arrow fontellowdobuleUpIcon"></i>
 	</a>
 </div>
 

@@ -2013,12 +2013,13 @@
                 width: 100%;
                 &:last-child{border-right: none;}
 
-                .commaImg {
-                    margin-bottom: 64px;
+                .fontelloQouteIcon {
+                    font-size: 36px;
+                    color: #006E50;
                 }
 
                 .testimonialPara {
-                    margin-bottom: 40px;
+                    margin: 64px 0 40px;
                     color: $quaternaryColor2;
                     @include verdanaregular;
                     @include font20;
@@ -2096,13 +2097,9 @@
                     margin-right: 52px;
                     padding: 36px 50px 36px 0px;
                     width: 100%;
-
-                    .commaImg {
-                        margin-bottom: 60px;
-                    }
-
+                    
                     .testimonialPara{
-                        margin-bottom: 36px;
+                        margin: 60px 0 36px;
                     }
 
                     .testimonial {
@@ -2147,11 +2144,6 @@
                 .testimonialCard {
                     margin-right: 48px;
                     padding: 32px 40px 32px 0px;
-
-                    .commaImg {
-                        width: 45px;
-                        height: 30px;
-                    }
 
                     .testimonialPara {
                         margin-bottom: 32px;
@@ -2200,14 +2192,10 @@
                     margin-right: 40px;
                     padding: 30px 32px 28px 0px;
 
-                    .commaImg {
-                        margin-bottom: 64px;
-                        width: 40px;
-                        height: 30px;
-                    }
+                    .fontelloQouteIcon{font-size: 32px;}
 
                     .testimonialPara {
-                        margin-bottom: 30px;
+                        margin-bottom: 64px 0 30px;
                     }
 
                     .testimonial {
@@ -2240,6 +2228,16 @@
             }
         }
     }
+    @media all and (max-width: 720px){
+        .testimonialSectionWrapper{
+            .testimonialCardWrapper{
+                .testimonialCard{
+                    .fontelloQouteIcon{font-size: 36px;}
+                    .testimonialPara{margin: 30px 0 30px;}
+                }
+            }
+        }
+    }
 
     @media all and (max-width:680px) {
         margin-bottom: 100px;
@@ -2268,12 +2266,7 @@
                     width: 100%;
                     border-right: none;
 
-                    .commaImg {
-                        margin-bottom: 30px;
-                    }
-
                     .testimonialPara {
-                        margin-bottom: 30px;
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 400;

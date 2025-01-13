@@ -2,8 +2,8 @@
     .secWrapper{@include wrapper; width: 70%; margin: 0 auto;
         .backBtn{margin-bottom: 32px; display: inline-block;
             a{display: flex; align-items: center; gap: 10px; color: $quaternaryColor2; @include terminabold; @include font20; line-height: 140%; font-weight: $fontW600;
-                .backArrow{color: $quaternaryColor2; @include terminabold;
-                    &::before{margin: 0; font-weight: $fontW600; font-size: 24px;  }
+                .backArrow{color: $quaternaryColor2; @include terminabold; font-size: 20px;
+                    &::before{margin: 0;}
                 }
             }
         }
@@ -78,7 +78,7 @@
             h5{margin-bottom: 24px; color: #000; @include terminabold; @include font16; line-height: 150%;}
 
             p{color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 30px;}
-            ol{margin-left: 20px; margin-bottom: 50px;
+            ol{margin-left: 50px; margin-bottom: 50px;
                 li{list-style: decimal; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
                     span{@include verdanabold;}
                 }
@@ -100,6 +100,9 @@
                         &::before{content:''; position: absolute; top: 0; border-left: 2px solid #000; height: 100%; left: 0; }
                     }
                 }
+            }
+            .highlightedTxt{position: relative; padding: 0 10px; color: #000; @include font20; @include verdanaregular; line-height: 140%; font-style: italic; background: #F5F75E; padding: 36px 0 20px 10px;
+                &::before{content:''; position: absolute;  border-left: 2px solid #000; height: calc(100% - 56px); left: 0; }
             }
             .bottomspace{margin-bottom: 34px; overflow: auto; border: none;}
             &:last-child{margin-bottom: 0;}
@@ -148,8 +151,8 @@
                 h4{margin-bottom: 20px;}
                 h5{margin-bottom: 20px;}
                 p{margin-bottom: 26px;}
-                ol{margin-bottom: 40px;}
-                ul{margin-bottom: 40px;}
+                ol{margin-bottom: 40px; margin-left: 40px;}
+                ul{margin-bottom: 40px; margin-left: 40px;  }
                 .figCaptionBox{padding: 35px 0 0 0;
                     .singleCaption{padding: 30px 0 16px;}
                 }
@@ -162,9 +165,9 @@
             .contentBox{
                 &.hideTxt{max-height: 730px;}
                 p{margin-bottom: 24px;}
-                ol{margin-bottom: 40px;}
-                ul{margin-bottom: 40px;}
-                .figCaptionBox{padding: 32px 0 0 0;}
+                ol{margin-bottom: 40px; margin-left: 30px;}
+                ul{margin-bottom: 40px; margin-left: 30px;}
+                .figCaptionBox{padding: 32px 0 3 0;}
             }
         }
     }
@@ -221,9 +224,7 @@
                         }
                     }
                     .arrowBox{border: 1px solid #000; border-radius: 100%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;opacity: 0; visibility: hidden; transition: 0.3s all ease-in-out;
-                        .rotateRightArrow{font-size: 24px; transform: rotate(-45deg); font-weight: $fontW400; @include verdanaregular;
-                            &::before{margin: 0;}
-                        }
+                        .rotateRightArrow{font-size: 20px; transform: rotate(-45deg);}
                     }
                 }
                 &:hover{background: $primaryColor1;
@@ -402,9 +403,7 @@
 
 #backtop{position: fixed; right: 120px; bottom: 100px; opacity: 0; transition: all 0.3s ease-in-out; visibility: hidden; z-index: 2;
     a{width: 70px; height: 70px; background: $primaryColor1; border-radius: 100%; display: flex; align-items: center; justify-content: center; transition: all 0.1s ease-in-out;
-        .fontellowdobuleUpIcon{color: #343330;
-            &::before{font-size: 22px; margin: 0; font-weight: $fontW500; }
-        }
+        .fontellowdobuleUpIcon{color: #343330;font-size: 22px;}
     }
     &.show{opacity: 1; visibility: visible;}
    
@@ -413,16 +412,12 @@
     }
     @media all and (max-width: 1440px){right: 80px;
         a{width: 55px; height: 55px;
-            .fontellowdobuleUpIcon{
-                &::before{font-size: 20px;}
-            }
+            .fontellowdobuleUpIcon{font-size: 20px;}
         }
     }
     @media all and (max-width: 1280px){right: 70px;
         a{width: 45px; height: 45px;
-            .fontellowdobuleUpIcon{
-                &::before{font-size: 18px;}
-            }
+            .fontellowdobuleUpIcon{ font-size: 18px;}
         }
     }
     @media all and (max-width: 1024px){right: 60px;}
@@ -431,9 +426,7 @@
     }
     @media all and (max-width: 720px){right: 30px;
         a{width: 40px; height: 40px;
-            .fontellowdobuleUpIcon{
-                &::before{font-size: 16px;}
-            }
+            .fontellowdobuleUpIcon{font-size: 16px;}
         }
     }
 }

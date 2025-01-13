@@ -58,7 +58,7 @@
                 <div class="customSelect">
                     <div class="selectBtn">
                         <span class="sBtntext">Location</span>
-                        <img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg" alt="everta">
+                        <i class="icon-down-arrow fontellowDownArrow"></i>
                     </div>
                     <ul class="options">
                         <?php
@@ -81,7 +81,7 @@
                 <div class="customSelect">
                     <div class="selectBtn">
                         <span class="sBtntext">Department</span>
-                        <img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg" alt="everta">
+                        <i class="icon-down-arrow fontellowDownArrow"></i>
                     </div>
                     <ul class="options">
                         <?php
@@ -104,7 +104,7 @@
                 <div class="customSelect">
                     <div class="selectBtn">
                         <span class="sBtntext">Contract Type</span>
-                        <img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg" alt="everta">
+                        <i class="icon-down-arrow fontellowDownArrow"></i>
                     </div>
                     <ul class="options">
                         <?php
@@ -177,7 +177,7 @@
                 </div>
             </div>
             <div class="subBoxImg">
-                <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="everta">
+                <i class="icon-right-arrow  rotateRightArrow"></i>
             </div>
         </div>
         <?php $counter = $counter + 1;

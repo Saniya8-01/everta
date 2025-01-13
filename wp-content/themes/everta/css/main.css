@@ -4861,11 +4861,12 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard:last-child {
   border-right: none;
 }
-.testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .commaImg {
-  margin-bottom: 64px;
+.testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .fontelloQouteIcon {
+  font-size: 36px;
+  color: #006E50;
 }
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
-  margin-bottom: 40px;
+  margin: 64px 0 40px;
   color: #4B4B4B;
   font-family: "verdanaregular";
   font-size: 20px;
@@ -5027,11 +5028,8 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 36px 50px 36px 0px;
     width: 100%;
   }
-  .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .commaImg {
-    margin-bottom: 60px;
-  }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
-    margin-bottom: 36px;
+    margin: 60px 0 36px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial {
     gap: 12px;
@@ -5090,10 +5088,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard {
     margin-right: 48px;
     padding: 32px 40px 32px 0px;
-  }
-  .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .commaImg {
-    width: 45px;
-    height: 30px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
     margin-bottom: 32px;
@@ -5156,13 +5150,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-right: 40px;
     padding: 30px 32px 28px 0px;
   }
-  .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .commaImg {
-    margin-bottom: 64px;
-    width: 40px;
-    height: 30px;
+  .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .fontelloQouteIcon {
+    font-size: 32px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
-    margin-bottom: 30px;
+    margin-bottom: 64px 0 30px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial {
     gap: 10px;
@@ -5182,6 +5174,14 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 @media all and (max-width: 1280px) {
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
     padding-right: 0px;
+  }
+}
+@media all and (max-width: 720px) {
+  .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .fontelloQouteIcon {
+    font-size: 36px;
+  }
+  .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
+    margin: 30px 0 30px;
   }
 }
 @media all and (max-width: 680px) {
@@ -5235,11 +5235,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     width: 100%;
     border-right: none;
   }
-  .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .commaImg {
-    margin-bottom: 30px;
-  }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
-    margin-bottom: 30px;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -6489,6 +6485,7 @@ body {
   padding: 14px 0px;
   position: relative;
   justify-content: space-between;
+  align-items: center;
 }
 .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .sBtntext {
   color: #1E1E1E;
@@ -6506,8 +6503,9 @@ body {
     font-size: 12px;
   }
 }
-.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .img {
-  display: block;
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .fontellowDownArrow {
+  font-size: 8px;
+  transition: 0.5s all ease-in-out;
 }
 .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .options {
   position: absolute;
@@ -6560,7 +6558,7 @@ body {
   background-color: #787878;
   border-radius: 5px;
 }
-.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect.active .selectBtn img {
+.careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect.active .selectBtn .fontellowDownArrow {
   transform: rotate(-180deg);
 }
 .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect.active .options {
@@ -6716,13 +6714,17 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg img {
-  display: block;
-  object-fit: cover;
-  width: 100%;
+.careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg .rotateRightArrow {
+  font-size: 20px;
+  transform: rotate(-45deg);
 }
 .careerTeamSection .careerSectionWrapperTwo .careerPositionBox:hover {
   background: #F5F75E;
@@ -6808,8 +6810,8 @@ body {
     padding-bottom: 36px;
   }
   .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg {
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
   }
   .careerTeamSection .dnfContainer {
     margin: 160px auto;
@@ -6828,8 +6830,8 @@ body {
     padding-bottom: 32px;
   }
   .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
   .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent h3 {
     margin-bottom: 20px;
@@ -6865,10 +6867,6 @@ body {
   .careerTeamSection .careerSectionWrapperTwo .careerPositionBox {
     padding-top: 30px;
     padding-bottom: 30px;
-  }
-  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg {
-    width: 60px;
-    height: 60px;
   }
   .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent .posSubContent {
     gap: 25px;
@@ -6940,6 +6938,13 @@ body {
   }
   .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent h3 {
     margin-bottom: 16px;
+  }
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg {
+    width: 55px;
+    height: 55px;
+  }
+  .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxImg .rotateRightArrow {
+    font-size: 18px;
   }
 }
 @media all and (max-width: 720px) {
@@ -10368,11 +10373,10 @@ body {
 .resDetailBannerSec .secWrapper .backBtn a .backArrow {
   color: #4B4B4B;
   font-family: "termina_testbold";
+  font-size: 20px;
 }
 .resDetailBannerSec .secWrapper .backBtn a .backArrow::before {
   margin: 0;
-  font-weight: 600;
-  font-size: 24px;
 }
 .resDetailBannerSec .secWrapper .secHeading h1 {
   color: #1E1E1E;
@@ -10653,7 +10657,7 @@ body {
   }
 }
 .resDetailContentSec .secWrapper .contentBox ol {
-  margin-left: 20px;
+  margin-left: 50px;
   margin-bottom: 50px;
 }
 .resDetailContentSec .secWrapper .contentBox ol li {
@@ -10782,6 +10786,39 @@ body {
   height: 100%;
   left: 0;
 }
+.resDetailContentSec .secWrapper .contentBox .highlightedTxt {
+  position: relative;
+  padding: 0 10px;
+  color: #000;
+  font-size: 20px;
+  font-family: "verdanaregular";
+  line-height: 140%;
+  font-style: italic;
+  background: #F5F75E;
+  padding: 36px 0 20px 10px;
+}
+@media screen and (max-width: 1600px) {
+  .resDetailContentSec .secWrapper .contentBox .highlightedTxt {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resDetailContentSec .secWrapper .contentBox .highlightedTxt {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .resDetailContentSec .secWrapper .contentBox .highlightedTxt {
+    font-size: 12px;
+  }
+}
+.resDetailContentSec .secWrapper .contentBox .highlightedTxt::before {
+  content: "";
+  position: absolute;
+  border-left: 2px solid #000;
+  height: calc(100% - 56px);
+  left: 0;
+}
 .resDetailContentSec .secWrapper .contentBox .bottomspace {
   margin-bottom: 34px;
   overflow: auto;
@@ -10877,9 +10914,11 @@ body {
   }
   .resDetailContentSec .secWrapper .contentBox ol {
     margin-bottom: 40px;
+    margin-left: 40px;
   }
   .resDetailContentSec .secWrapper .contentBox ul {
     margin-bottom: 40px;
+    margin-left: 40px;
   }
   .resDetailContentSec .secWrapper .contentBox .figCaptionBox {
     padding: 35px 0 0 0;
@@ -10900,12 +10939,14 @@ body {
   }
   .resDetailContentSec .secWrapper .contentBox ol {
     margin-bottom: 40px;
+    margin-left: 30px;
   }
   .resDetailContentSec .secWrapper .contentBox ul {
     margin-bottom: 40px;
+    margin-left: 30px;
   }
   .resDetailContentSec .secWrapper .contentBox .figCaptionBox {
-    padding: 32px 0 0 0;
+    padding: 32px 0 3 0;
   }
 }
 @media all and (max-width: 1024px) {
@@ -11121,13 +11162,8 @@ body {
   transition: 0.3s all ease-in-out;
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
-  font-size: 24px;
+  font-size: 20px;
   transform: rotate(-45deg);
-  font-weight: 400;
-  font-family: "verdanaregular";
-}
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow::before {
-  margin: 0;
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard:hover {
   background: #F5F75E;
@@ -11420,11 +11456,7 @@ body {
 }
 #backtop a .fontellowdobuleUpIcon {
   color: #343330;
-}
-#backtop a .fontellowdobuleUpIcon::before {
   font-size: 22px;
-  margin: 0;
-  font-weight: 500;
 }
 #backtop.show {
   opacity: 1;
@@ -11447,7 +11479,7 @@ body {
     width: 55px;
     height: 55px;
   }
-  #backtop a .fontellowdobuleUpIcon::before {
+  #backtop a .fontellowdobuleUpIcon {
     font-size: 20px;
   }
 }
@@ -11459,7 +11491,7 @@ body {
     width: 45px;
     height: 45px;
   }
-  #backtop a .fontellowdobuleUpIcon::before {
+  #backtop a .fontellowdobuleUpIcon {
     font-size: 18px;
   }
 }
@@ -11485,7 +11517,7 @@ body {
     width: 40px;
     height: 40px;
   }
-  #backtop a .fontellowdobuleUpIcon::before {
+  #backtop a .fontellowdobuleUpIcon {
     font-size: 16px;
   }
 }
@@ -13533,9 +13565,6 @@ body {
   width: 100%;
   margin-bottom: 15px;
 }
-.privacyPolicySec .sec2Content .title2 {
-  margin-bottom: 24px;
-}
 .privacyPolicySec .sec2Content .content2Section {
   width: 100%;
 }
@@ -13562,15 +13591,20 @@ body {
     font-size: 12px;
   }
 }
-.privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span {
-  margin-top: 12px;
-}
 .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content a {
   color: blue;
 }
+.privacyPolicySec .sec2Content .content2Section .content2p2 .subHeadingHr {
+  height: 64px;
+}
+@media (max-width: 720px) {
+  .privacyPolicySec .sec2Content .content2Section .content2p2 .subHeadingHr {
+    height: 56px;
+  }
+}
 .privacyPolicySec .sec2Content .content2Section .content2p2 .scroll-to-top {
   position: fixed;
-  top: 50%;
+  bottom: 0%;
   right: 20px;
   transform: translateY(-50%);
   width: 60px;
@@ -13725,7 +13759,7 @@ body {
     padding: 8px 16px;
   }
 }
-.page-404 .image-container .content .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home button, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home button {
+.page-404 .image-container .content .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home a, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home a {
   color: #1E1E1E;
   font-size: 16px;
   font-family: "termina_testregular";
@@ -13735,19 +13769,19 @@ body {
   cursor: pointer;
 }
 @media (max-width: 1600px) {
-  .page-404 .image-container .content .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home button, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home button {
+  .page-404 .image-container .content .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home a, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home a {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1600px) and (max-width: 1440px) {
-  .page-404 .image-container .content .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home button, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home button {
+  .page-404 .image-container .content .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home a, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home a {
     font-size: 12px;
   }
 }
 .page-404 .image-container .content .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home .arrow, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home .arrow, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home .arrow, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home .arrow, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home .arrow {
   display: none;
 }
-@media (max-width: 375px) {
+@media (max-width: 720px) {
   .page-404 .image-container .content .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home .arrow, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home .arrow, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home .arrow, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home .arrow, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home .arrow {
     display: inline;
   }
@@ -16076,4 +16110,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
