@@ -393,12 +393,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (productInfoSection && isLargeScreen()) {
-        const observer = new IntersectionObserver(function (entries) {
+        const observer = new IntersectionObserver(function (entries, observer) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     productInfoSection.id = 'product-info';
-                } else {
-                    productInfoSection.removeAttribute('id');
+                    observer.disconnect(); // Stop observing after first trigger
                 }
             });
         }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
@@ -409,9 +408,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // Optional: Re-check on window resize
     window.addEventListener('resize', function () {
         if (isLargeScreen()) {
-            observer.observe(productInfoSection);
+            const newObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        productInfoSection.id = 'product-info';
+                        observer.disconnect(); // Stop observing after first trigger
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            newObserver.observe(productInfoSection);
         } else {
-            observer.disconnect(); // Stop observing if screen is too small
             productInfoSection.removeAttribute('id'); // Remove ID if resized below 820px
         }
     });

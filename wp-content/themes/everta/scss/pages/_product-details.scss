@@ -352,7 +352,7 @@
             h2{@include terminamedium;@include font48;font-weight: 700;line-height: 133.333%;margin-bottom: 24px;text-transform: uppercase;color: #1E1E1E;text-align: center;}
             p{@include verdanaregular;@include font24;font-weight: 400;line-height: 166.667%;color: #4B4B4B;text-align: center;width: 70%;}
         }
-        .productDetails{display: flex;gap:100px;align-items:end;justify-content: center;transition: gap 2s ease-in-out, transform 2s ease-in-out;transform:translateY(-150px);
+        .productDetails{display: flex;gap:100px;;opacity: 0;;align-items:end;justify-content: center;transition: 2s all ease-in-out;transform:translateY(-150px);
             .feature{width: 30%;order:1;
                 &:nth-child(even){order: 3;
                     .information{

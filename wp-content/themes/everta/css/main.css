@@ -14520,9 +14520,10 @@ body {
 .productInfoSection .productInfoWrapper .productDetails {
   display: flex;
   gap: 100px;
+  opacity: 0;
   align-items: end;
   justify-content: center;
-  transition: gap 2s ease-in-out, transform 2s ease-in-out;
+  transition: 2s all ease-in-out;
   transform: translateY(-150px);
 }
 .productInfoSection .productInfoWrapper .productDetails .feature {
