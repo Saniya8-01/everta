@@ -2715,11 +2715,12 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .bannerSection .bannerSectionWrapper .bannerImageWrapper {
   height: 100%;
+  position: relative;
 }
 .bannerSection .bannerSectionWrapper .bannerImageWrapper .mobileImage {
   display: none;
 }
-.bannerSection .bannerSectionWrapper .blackOverlay {
+.bannerSection .bannerSectionWrapper .bannerImageWrapper .blackOverlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -16124,4 +16125,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
