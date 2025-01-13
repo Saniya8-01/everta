@@ -24,18 +24,22 @@
         }
     }
     .sec2Content{
-        .title2{@extend .subtitle ;margin-bottom: 24px;      
+        .title2{@extend .subtitle ;  
         }
         .content2Section{ width: 100%;
             .content2p1{color: black; @include font20; @include terminaregular; font-weight: $fontW400; line-height: 32px; word-wrap: break-word
             }
             .content2p2{
-                .content2p2Span{@extend .subtitle; margin-top: 12px;
+                .content2p2Span{@extend .subtitle;
                 }
                 .content2p2Content{@extend .content;
                     a{color: blue;}
                 }
-                .scroll-to-top {position: fixed;top: 50%;right: 20px;transform: translateY(-50%);width: 60px;height: 60px;background: #F5F75E;border: none;border-radius: 50%;display: flex;justify-content: center;align-items: center;box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);cursor: pointer;transition: transform 0.3s ease, box-shadow 0.3s ease;z-index: 1000;                  
+                .subHeadingHr{height: 64px;
+                  @media (max-width: 720px){height: 56px;
+                  }
+                }
+                .scroll-to-top {position: fixed;bottom: 0%;right: 20px;transform: translateY(-50%);width: 60px;height: 60px;background: #F5F75E;border: none;border-radius: 50%;display: flex;justify-content: center;align-items: center;box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);cursor: pointer;transition: transform 0.3s ease, box-shadow 0.3s ease;z-index: 1000;                  
                     &:hover {
                       transform: translateY(-50%) scale(1.1); box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
                     }                 

@@ -4889,12 +4889,15 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 12px;
 }
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial .testimonialImage {
   overflow: hidden;
   border-radius: 50%;
+  flex-shrink: 0;
+  width: 75px;
+  height: 75px;
 }
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial h3 {
   margin-bottom: 8px;
@@ -5031,6 +5034,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial {
     gap: 12px;
   }
+  .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial .testimonialImage {
+    width: 70px;
+    height: 70px;
+  }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial h3 {
     margin-bottom: 8px;
   }
@@ -5087,6 +5094,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial {
     gap: 10px;
+  }
+  .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial .testimonialImage {
+    width: 65px;
+    height: 65px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial h3 {
     margin-bottom: 8px;
@@ -5147,6 +5158,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial {
     gap: 10px;
+  }
+  .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial .testimonialImage {
+    width: 60px;
+    height: 60px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial h3 {
     margin-bottom: 8px;
@@ -13523,9 +13538,6 @@ body {
   width: 100%;
   margin-bottom: 15px;
 }
-.privacyPolicySec .sec2Content .title2 {
-  margin-bottom: 24px;
-}
 .privacyPolicySec .sec2Content .content2Section {
   width: 100%;
 }
@@ -13552,15 +13564,20 @@ body {
     font-size: 12px;
   }
 }
-.privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span {
-  margin-top: 12px;
-}
 .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content a {
   color: blue;
 }
+.privacyPolicySec .sec2Content .content2Section .content2p2 .subHeadingHr {
+  height: 64px;
+}
+@media (max-width: 720px) {
+  .privacyPolicySec .sec2Content .content2Section .content2p2 .subHeadingHr {
+    height: 56px;
+  }
+}
 .privacyPolicySec .sec2Content .content2Section .content2p2 .scroll-to-top {
   position: fixed;
-  top: 50%;
+  bottom: 0%;
   right: 20px;
   transform: translateY(-50%);
   width: 60px;
@@ -13715,7 +13732,7 @@ body {
     padding: 8px 16px;
   }
 }
-.page-404 .image-container .content .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home button, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home button {
+.page-404 .image-container .content .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home a, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home a {
   color: #1E1E1E;
   font-size: 16px;
   font-family: "termina_testregular";
@@ -13725,19 +13742,19 @@ body {
   cursor: pointer;
 }
 @media (max-width: 1600px) {
-  .page-404 .image-container .content .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home button, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home button {
+  .page-404 .image-container .content .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home a, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home a {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1600px) and (max-width: 1440px) {
-  .page-404 .image-container .content .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home button, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home button, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home button, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home button {
+  .page-404 .image-container .content .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home a, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home a, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home a {
     font-size: 12px;
   }
 }
 .page-404 .image-container .content .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home .arrow, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home .arrow, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home .arrow, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home .arrow, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home .arrow {
   display: none;
 }
-@media (max-width: 375px) {
+@media (max-width: 720px) {
   .page-404 .image-container .content .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec1Content .content1 .button-container .back-to-home .arrow, .privacyPolicySec .sec1Content .page-404 .image-container .content1 .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .button-container .back-to-home .arrow, .privacyPolicySec .sec2Content .content2Section .content2p2 .page-404 .image-container .content2p2Content .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .button-container .back-to-home .arrow, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .page-404 .image-container li .button-container .back-to-home .arrow, .page-404 .image-container .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .button-container .back-to-home .arrow, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .page-404 .image-container li .button-container .back-to-home .arrow {
     display: inline;
   }
