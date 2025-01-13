@@ -145,7 +145,7 @@
         <div class="mainContainer">
             <div class="card contentBox">
                 <h2><?php echo get_sub_field('heading'); ?></h2>
-                <?php echo get_sub_field('description'); ?>
+                <p><?php echo get_sub_field('description'); ?></p>
             </div>
             <div class="card imgBox">
                 <div class="sliderBox">

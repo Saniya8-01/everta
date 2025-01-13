@@ -5,7 +5,7 @@
 	<div class="secWrapper">
 		<div class="backBtn">
 			<a href="javascript:history.back()">
-				<i class="icon-icon-left backArrow"></i>Back
+				<i class="icon-left-arrow backArrow"></i>Back 
 			</a>
 		</div>
 		<div class="secHeading">

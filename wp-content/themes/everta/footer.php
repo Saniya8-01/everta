@@ -33,7 +33,7 @@
                         $icon_svg = get_sub_field('icon_svg', 'option'); // Get the SVG field
                         ?>
                         <a href="<?php echo esc_url($icon_url); ?>" class="socialmediaIcons" target="_blank" rel="noopener noreferrer">
-                            <?php echo $icon_svg; // Output the SVG dynamically ?>
+                            <i class="socialIcons <?php echo $icon_svg;?>"></i> 
                         </a>
                     <?php endwhile; ?>
                 <?php endif; ?>
