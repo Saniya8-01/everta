@@ -4,24 +4,37 @@
     <?php if (have_rows('banner_section')) : ?>
     <?php while (have_rows('banner_section')) : the_row(); ?>
     <div class="bannerSectionWrapper">
-        <div class="bannerImageWrapper">
-            <?php
-            $desktop_image = get_sub_field('desktop_image');
-            $mobile_image = get_sub_field('mobile_image');
+        <?php
+        // Get the media choice for the current section (either 'Image' or 'Video')
+        $mediaChoice = get_sub_field('media_choice');
         ?>
-            <?php if ( ! empty( $desktop_image ) ): ?>
-            <img src="<?php echo esc_url( $desktop_image['url'] ); ?>"
-                alt="<?php echo esc_attr( $desktop_image['alt'] ); ?>" class="desktopImage">
-            <?php endif; ?>
-
-            <?php if ( ! empty( $mobile_image ) ): ?>
-
-            <img src="<?php echo esc_url( $mobile_image['url'] ); ?>"
-                alt="<?php echo esc_attr( $mobile_image['alt'] ); ?>" class="mobileImage">
-            <?php endif; ?>
-
-        </div>
-        <div class="blackOverlay"></div>
+        
+        <!-- Media Section: Image or Video -->
+        <?php if ( $mediaChoice == 'Image' ) : ?>
+            <div class="bannerImageWrapper">
+                <?php
+                $desktop_image = get_sub_field('desktop_image');
+                $mobile_image = get_sub_field('mobile_image');
+                ?>
+                <?php if ( ! empty( $desktop_image ) ): ?>
+                <img src="<?php echo esc_url( $desktop_image['url'] ); ?>"
+                    alt="<?php echo esc_attr( $desktop_image['alt'] ); ?>" class="desktopImage">
+                <?php endif; ?>
+    
+                <?php if ( ! empty( $mobile_image ) ): ?>
+                <img src="<?php echo esc_url( $mobile_image['url'] ); ?>"
+                    alt="<?php echo esc_attr( $mobile_image['alt'] ); ?>" class="mobileImage">
+                <?php endif; ?>
+                <div class="blackOverlay"></div>
+            </div>
+        <?php elseif ( $mediaChoice == 'Video' ) : ?>
+            <div class="videoDiv">
+                <video autoplay="" preload="auto" loop="" muted="" playsinline="">
+                    <source src="<?php echo esc_url(get_sub_field('video_link')); ?>" type="video/mp4">
+                </video>
+            </div>
+        <?php endif; ?>
+    
         <div class="bannerSectionContent">
             <h1>
                 <?php echo get_sub_field('banner_heading'); ?>
@@ -34,8 +47,8 @@
             $banner_cta_text = get_sub_field('banner_cta_text');
             
             if ($banner_cta_link && $banner_cta_text) : ?>
-                <a href="<?php echo $banner_cta_link; ?>" class="ctaYellow">
-                    <?php echo $banner_cta_text; ?>
+                <a href="<?php echo esc_url($banner_cta_link); ?>" class="ctaYellow">
+                    <?php echo esc_html($banner_cta_text); ?>
                 </a>
             <?php endif; ?>            
         </div>
