@@ -65,7 +65,7 @@ get_header();
 				</div>
 				<div class="button-container">
 					<div class="back-to-home">
-						<button>Back to home</button>
+						<a href="#">Back to home</a>
 						<img class="arrow" src="<?php echo get_template_directory_uri(); ?>/images/arrow-right.svg" alt="arrow-right">
 					</div>
 				</div>
