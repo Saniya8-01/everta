@@ -52,11 +52,9 @@
             As EV adoption continues to rise, the future of EV charging looks bright. With advancements in technology and increased investment from both public and private sectors, charging an EV will become more convenient, faster, and more sustainable. Whether you’re an EV owner or considering making the switch, staying informed about these developments will help you navigate the exciting future of electric mobility.
             Stay tuned to our blog for more updates and insights into the world of EV charging and sustainable transportation. Together, we can drive towards a greener and more sustainable future.</p>
             <hr class="bottomspace">
-            <div class="figCaptionBox">
-                <figure class="singleCaption">
-                    <figcaption>"Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus."</figcaption>
-                </figure>
-            </div>
+            
+            <p class="highlightedTxt">Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus."</p>
+               
         </div>
         <div class="readMoreBtnBox">
             <button class="ctaWhiteBlack" id="readMore">Read more</button>
@@ -116,7 +114,7 @@
 
 <div class="backtopCl" id="backtop">
     <a href="">
-        <i class="icon-caretdoubleup fontellowdobuleUpIcon"></i>
+        <i class="icon-double-arrow fontellowdobuleUpIcon"></i>
         <!-- <img src="<?php bloginfo('template_directory'); ?>/images/top-double-up-arrow.svg" alt="" class="desktop"/> -->
     </a>
 </div>
