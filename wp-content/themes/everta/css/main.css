@@ -10926,6 +10926,9 @@ body {
   .resDetailContentSec .secWrapper .contentBox .figCaptionBox .singleCaption {
     padding: 30px 0 16px;
   }
+  .resDetailContentSec .secWrapper .contentBox .highlightedTxt {
+    padding: 30px 0 16px 10px;
+  }
   .resDetailContentSec .secWrapper .contentBox .bottomspace {
     margin-bottom: 20px;
   }
@@ -10947,6 +10950,9 @@ body {
   }
   .resDetailContentSec .secWrapper .contentBox .figCaptionBox {
     padding: 32px 0 3 0;
+  }
+  .resDetailContentSec .secWrapper .contentBox .highlightedTxt {
+    padding: 32px 0 16px 10px;
   }
 }
 @media all and (max-width: 1024px) {
@@ -10990,6 +10996,9 @@ body {
   }
   .resDetailContentSec .secWrapper .contentBox .figCaptionBox {
     padding: 30px 0 0 0;
+  }
+  .resDetailContentSec .secWrapper .contentBox .highlightedTxt {
+    padding: 30px 0 30px 10px;
   }
 }
 
