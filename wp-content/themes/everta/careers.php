@@ -1,5 +1,6 @@
 <?php get_header(); /*Template name: Careers*/ ?>
 
+
 <section class="careerBannerSection">
     <?php if (have_rows('banner_section')) : ?>
     <?php while (have_rows('banner_section')) : the_row(); ?>
@@ -11,9 +12,15 @@
             <p>
                 <?php echo get_sub_field('subheading'); ?>
             </p>
-            <a href="#evertaTeam" class="ctaYellow">
-                <?php echo get_sub_field('cta_text'); ?>
-            </a>
+            <?php 
+            $cta_text = get_sub_field('cta_text');
+            
+            if ($cta_text) : ?>
+                <a href="#evertaTeam" class="ctaYellow">
+                    <?php echo esc_html($cta_text); ?>
+                </a>
+            <?php endif; ?>
+            
         </div>
         <div class="careerBannerImg">
             <?php
@@ -38,10 +45,14 @@
 
 <section id="evertaTeam" class="careerTeamSection">
     <div class="careerSectionWrapper">
+        <?php if (have_rows('careerteam_section')) : ?>
+        <?php while (have_rows('careerteam_section')) : the_row(); ?>
         <div class="secHeading">
-            <h2>Join the Everta Team</h2>
-            <p>Explore Our Open Positions</p>
+            <h2><?php echo get_sub_field('heading'); ?></h2>
+            <p><?php echo get_sub_field('subheading'); ?></p>
         </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
         <div class="careerFilterSection">
             <div class="selFilter">
                 <div class="customSelect">
@@ -50,9 +61,21 @@
                         <img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg" alt="everta">
                     </div>
                     <ul class="options">
-                        <li class="option">New Delhi, India</li>
-                        <li class="option">India</li>
-                        <li class="option">UAE</li>
+                        <?php
+                        $locations = get_posts(array(
+                            'post_type' => 'career',
+                            'posts_per_page' => -1,
+                            'fields' => 'ids'
+                        ));
+                        $unique_locations = array_unique(array_map(function($id) {
+                            return get_field('job_location', $id);
+                        }, $locations));
+                        foreach ($unique_locations as $location) {
+                            if ($location) {
+                                echo '<li class="option">' . esc_html($location) . '</li>';
+                            }
+                        }
+                        ?>
                     </ul>
                 </div>
                 <div class="customSelect">
@@ -61,20 +84,44 @@
                         <img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg" alt="everta">
                     </div>
                     <ul class="options">
-                        <li class="option">Data Analyst</li>
-                        <li class="option">Design & Tech</li>
-                        <li class="option">Sales Manager</li>
+                        <?php
+                        $departments = get_posts(array(
+                            'post_type' => 'career',
+                            'posts_per_page' => -1,
+                            'fields' => 'ids'
+                        ));
+                        $unique_departments = array_unique(array_map(function($id) {
+                            return get_the_title($id);
+                        }, $departments));
+                        foreach ($unique_departments as $department) {
+                            if ($department) {
+                                echo '<li class="option">' . esc_html($department) . '</li>';
+                            }
+                        }
+                        ?>
                     </ul>
                 </div>
                 <div class="customSelect">
                     <div class="selectBtn">
-                        <span class="sBtntext">Contract type</span>
+                        <span class="sBtntext">Contract Type</span>
                         <img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg" alt="everta">
                     </div>
                     <ul class="options">
-                        <li class="option">Remote</li>
-                        <li class="option">In office</li>
-                        <li class="option">Full Time</li>
+                        <?php
+                                        $contract_types = get_posts(array(
+                                            'post_type' => 'career',
+                                            'posts_per_page' => -1,
+                                            'fields' => 'ids'
+                                        ));
+                                        $unique_contracts = array_unique(array_map(function($id) {
+                                            return get_field('job_type', $id);
+                                        }, $contract_types));
+                                        foreach ($unique_contracts as $contract) {
+                                            if ($contract) {
+                                                echo '<li class="option">' . esc_html($contract) . '</li>';
+                                            }
+                                        }
+                                        ?>
                     </ul>
                 </div>
             </div>
@@ -85,17 +132,47 @@
         </div>
     </div>
     <div class="careerSectionWrapperTwo">
-        <div class="careerPositionBox" id="careerPositionBox">
+        <?php
+            $args = array('post_type' => 'career', 'posts_per_page' => -1, 'order' => 'DESC');
+            $the_query = new WP_Query($args);
+            $counter = 1;
+            while ($the_query->have_posts()):
+                $the_query->the_post();
+            ?>
+        <?php
+                $terms = get_the_terms($post->ID, 'career_categories');
+                if ($terms && !is_wp_error($terms)):
+                    $links = array();
+                    foreach ($terms as $term) {
+                        $links[] = $term->slug;
+                    }
+                    $tax_links = join(" ", str_replace(' ', '-', $links));
+                    $tax = strtolower($tax_links);
+                else:
+                    $tax = '';
+                endif;
+                ?>
+        <?php
+                global $post;
+                $post_slug = $post->post_name;
+                ?>
+        <div class="careerPositionBox" id="careerPositionBox<?php echo $counter; ?>">
             <div class="subBoxContent">
-                <h3>Sales Manager</h3>
+                <h3>
+                    <?php the_title(); ?>
+                </h3>
                 <div class="posSubContent">
                     <div>
                         <img src="<?php bloginfo('template_directory'); ?>/images/map-logo.svg" alt="everta">
-                        <h4>New Delhi, India</h4>
+                        <h4>
+                            <?php echo get_field('job_location'); ?>
+                        </h4>
                     </div>
                     <div>
                         <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg" alt="everta">
-                        <h4>Full Time</h4>
+                        <h4>
+                            <?php echo get_field('job_type'); ?>
+                        </h4>
                     </div>
                 </div>
             </div>
@@ -103,65 +180,13 @@
                 <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="everta">
             </div>
         </div>
-        <div class="careerPositionBox" id="careerPositionBox">
-            <div class="subBoxContent">
-                <h3>Sr. Customer Success Manager</h3>
-                <div class="posSubContent">
-                    <div>
-                        <img src="<?php bloginfo('template_directory'); ?>/images/map-logo.svg" alt="everta">
-                        <h4>UAE</h4>
-                    </div>
-                    <div>
-                        <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg" alt="everta">
-                        <h4>In office</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="subBoxImg">
-                <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="everta">
-            </div>
-        </div>
-        <div class="careerPositionBox" id="careerPositionBox">
-            <div class="subBoxContent">
-                <h3>Data Analyst</h3>
-                <div class="posSubContent">
-                    <div>
-                        <img src="<?php bloginfo('template_directory'); ?>/images/map-logo.svg" alt="everta">
-                        <h4>New Delhi, India</h4>
-                    </div>
-                    <div>
-                        <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg" alt="everta">
-                        <h4>Full Time</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="subBoxImg">
-                <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="everta">
-            </div>
-        </div>
-        <div class="careerPositionBox" id="careerPositionBox">
-            <div class="subBoxContent">
-                <h3>Sr. Customer Success Manager</h3>
-                <div class="posSubContent">
-                    <div>
-                        <img src="<?php bloginfo('template_directory'); ?>/images/map-logo.svg" alt="everta">
-                        <h4>New Delhi, India</h4>
-                    </div>
-                    <div>
-                        <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg" alt="everta">
-                        <h4>Full Time</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="subBoxImg">
-                <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="everta">
-            </div>
-        </div>
+        <?php $counter = $counter + 1;
+        endwhile;
+        wp_reset_postdata(); ?>
     </div>
     <div class="dnfContainer">
         <p>No job listings available at the moment. Stay tuned for future openings.</p>
     </div>
-
 </section>
 
 <section class="careerCVSection">
@@ -174,9 +199,15 @@
         <p>
             <?php echo get_sub_field('subheading'); ?>
         </p>
-        <a href="javascript:void(0);" class="ctaBlack">
-            <?php echo get_sub_field('cta_text'); ?>
-        </a>
+        <?php 
+        $cta_text = get_sub_field('cta_text');
+        
+        if ($cta_text) : ?>
+            <a href="javascript:void(0);" class="ctaBlack">
+                <?php echo esc_html($cta_text); ?>
+            </a>
+        <?php endif; ?>
+        
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
@@ -196,32 +227,35 @@
         </div>
         <div class="hiringProcessContainer">
             <?php if (have_rows('hiring_steps')) : ?>
+            <?php $counter = 1; // Initialize the counter ?>
             <?php while (have_rows('hiring_steps')) : the_row(); ?>
-            <div class="hiringProcessBox">
-                <div class="logoBox">
-                    <?php 
-                    $iconImage = get_sub_field('icon_image');
-                    if (!empty($iconImage)) : ?>
-                    <img src="<?php echo esc_url($iconImage['url']); ?>"
-                        alt="<?php echo esc_attr($iconImage['alt']); ?>">
-                    <?php endif; ?>
-                </div>
-                <div class="contentBox">
-                    <div class="boxNumber">
-                        <?php echo get_sub_field('step_number'); ?>
+                <div class="hiringProcessBox">
+                    <div class="logoBox">
+                        <?php 
+                        $iconImage = get_sub_field('icon_image');
+                        if (!empty($iconImage)) : ?>
+                            <img src="<?php echo esc_url($iconImage['url']); ?>"
+                                 alt="<?php echo esc_attr($iconImage['alt']); ?>">
+                        <?php endif; ?>
                     </div>
-                    <div class="subHeadings">
-                        <h3>
-                            <?php echo get_sub_field('title'); ?>
-                        </h3>
-                        <h6>
-                            <?php echo get_sub_field('description'); ?>
-                        </h6>
+                    <div class="contentBox">
+                        <div class="boxNumber">
+                            <?php echo $counter; // Output the dynamic counter ?>
+                        </div>
+                        <div class="subHeadings">
+                            <h3>
+                                <?php echo get_sub_field('title'); ?>
+                            </h3>
+                            <h6>
+                                <?php echo get_sub_field('description'); ?>
+                            </h6>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <?php $counter++; // Increment the counter for each step ?>
             <?php endwhile; ?>
-            <?php endif; ?>
+        <?php endif; ?>
+        
         </div>
     </div>
     <?php endwhile; ?>
@@ -286,7 +320,31 @@
     <?php endif; ?>
 </section>
 
-<div class="careerOpeningModal" id="careerOpeningModal">
+<?php
+            $args = array('post_type' => 'career', 'posts_per_page' => -1, 'order' => 'DESC');
+            $the_query = new WP_Query($args);
+            $counter = 1;
+            while ($the_query->have_posts()):
+                $the_query->the_post();
+            ?>
+<?php
+                $terms = get_the_terms($post->ID, 'career_categories');
+                if ($terms && !is_wp_error($terms)):
+                    $links = array();
+                    foreach ($terms as $term) {
+                        $links[] = $term->slug;
+                    }
+                    $tax_links = join(" ", str_replace(' ', '-', $links));
+                    $tax = strtolower($tax_links);
+                else:
+                    $tax = '';
+                endif;
+                ?>
+<?php
+                global $post;
+                $post_slug = $post->post_name;
+                ?>
+<div class="careerOpeningModal" id="careerOpeningModal<?php echo $counter; ?>">
     <div class="modalContent">
         <div class="jobHeadingDesc">
             <div class="closeBtn">
@@ -294,57 +352,51 @@
             </div>
             <div class="jobHeadingDescSub">
                 <div class="headingDescContent">
-                    <span>Finance</span>
+                    <span>
+                        <?php echo get_field('job_department'); ?>
+                    </span>
                     <div class="subBoxContent">
-                        <h3>Sales Manager</h3>
+                        <h3>
+                            <?php the_title(); ?>
+                        </h3>
                         <div class="posSubContent">
                             <div>
                                 <img src="<?php bloginfo('template_directory'); ?>/images/map-logo.svg" alt="everta">
-                                <h4>New Delhi, India</h4>
+                                <h4>
+                                    <?php echo get_field('job_location'); ?>
+                                </h4>
                             </div>
                             <div>
                                 <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg"
                                     alt="everta">
-                                <h4>Full Time</h4>
+                                <h4>
+                                    <?php echo get_field('job_type'); ?>
+                                </h4>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="" class="ctaBlack">Apply now</a>
+                <?php 
+                $cta_url = get_field('cta_url');
+                $cta_text = get_field('cta_text');
+                
+                if ($cta_url && $cta_text) : ?>
+                    <a href="<?php echo esc_url($cta_url); ?>" class="ctaBlack">
+                        <?php echo esc_html($cta_text); ?>
+                    </a>
+                <?php endif; ?>
+                
             </div>
         </div>
         <div class="jobDescription">
             <div class="detailWrapper">
-                <div class="jobDetail">
-                    <p>The Sales Manager will be responsible for leading and managing the sales team to achieve sales
-                        targets and drive revenue growth. This role involves developing strategic sales plans, building
-                        and maintaining customer relationships, and ensuring the sales team operates efficiently and
-                        effectively.</p>
-                </div>
-                <div class="jobRole">
-                    <h4>Your Role</h4>
-                    <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in
-                        every detail and process, ensuring that our products and services consistently reflect our
-                        commitment to excellence. At Everta, quality isn’t just a standard—it’s who we are.</p>
-                </div>
-                <div class="jobResponsiblity">
-                    <h4>Responsibilities</h4>
-                    <p>Quality is more than a goal—it’s the foundation of everything we do. We go beyond expectations in
-                        every detail and process.</p>
-                    <ul>
-                        <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond
-                            expectations in every detail and process.</li>
-                        <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond
-                            expectations in every detail and process.</li>
-                        <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond
-                            expectations in every detail and process.</li>
-                        <li>Quality is more than a goal—it’s the foundation of everything we do. We go beyond
-                            expectations in every detail and process.</li>
-                    </ul>
-                </div>
+                <?php the_content(); ?>
             </div>
         </div>
     </div>
 </div>
+<?php $counter = $counter + 1;
+endwhile;
+wp_reset_postdata(); ?>
 
 <?php get_footer(); ?>

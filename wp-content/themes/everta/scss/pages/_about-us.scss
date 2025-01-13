@@ -428,7 +428,7 @@
         }
     }
     
-}
+}  
 .ourStorySec{margin-bottom: 200px; background: $primaryColor1;
     .secWrapper{@include wrapper; padding-right: 0;
         .mainContainer{display: flex; align-items: center; gap: 180px; padding: 120px 0;
@@ -454,7 +454,9 @@
                             } 
                         }
                     }
+                    .slick-track{float: left;}
                 }
+
             }
         }
     }

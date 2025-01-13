@@ -3,8 +3,8 @@
 <section class="resDetailBannerSec">
     <div class="secWrapper">
         <div class="backBtn">
-            <a href="new#newspage" >
-                <i class="icon-icon-left backArrow"></i>Back 
+            <a href="javascript:history.back()" >
+                <i class="icon-left-arrow backArrow"></i>Back 
             </a>
         </div>
         <div class="secHeading">
@@ -16,13 +16,14 @@
         </div>
     </div>
 </section>
+
 <section class="resDetailContentSec">
     <div class="secWrapper">
         <div class="contentBox hideTxt">
             <h2>Introduction</h2>
             <p>Electric vehicles (EVs) are rapidly becoming a popular choice for eco-conscious consumers and tech enthusiasts alike. As more people make the switch to EVs, the demand for efficient and convenient charging solutions continues to grow. In this blog, we’ll explore the current state of EV charging, emerging technologies, and what the future holds for EV infrastructure.
             Understanding the Basics of EV Charging. </p>
-            <hr class="bottomspace">
+           <hr class="bottomspace">
             <figure class="imgFig">
                 <figcaption>Image caption goes here</figcaption>
                 <img src="<?php bloginfo('template_directory'); ?>/images/res-detail-inner-img.webp" alt="">
@@ -62,6 +63,7 @@
         </div>           
     </div>
 </section>
+
 <section class="relatedPostSec">
     <div class="secWrapper">
         <div class="secHeading">
@@ -83,7 +85,7 @@
                             </ul>    
                         </div>
                         <div class="arrowBox">
-                            <i class="icon-icon-right  rotateRightArrow"></i>
+                            <i class="icon-right-arrow  rotateRightArrow"></i>
                         </div>
                     </div>
                 </a>
@@ -103,7 +105,7 @@
                             </ul>    
                         </div>
                         <div class="arrowBox">
-                            <i class="icon-icon-right  rotateRightArrow"></i>
+                            <i class="icon-right-arrow  rotateRightArrow"></i>
                         </div>
                     </div>
                 </a>
@@ -111,6 +113,7 @@
         </div>
     </div>
 </section>
+
 <div class="backtopCl" id="backtop">
     <a href="">
         <i class="icon-caretdoubleup fontellowdobuleUpIcon"></i>

@@ -213,9 +213,9 @@ if ($(".testimonialSection").length) {
 
         responsive: [
             {
-                breakpoint: 1181,
+                breakpoint: 1440,
                 settings: {
-                    slidesToShow: 2.1,
+                    slidesToShow: 1.9,
                 }
             },
             {
@@ -739,12 +739,8 @@ if($(".careerTeamSection").length){
         
         elements.forEach((element) => {
             element.addEventListener("click", function () {
-               
                 const panelId = this.id.replace("careerPositionBox", "careerOpeningModal");
-                
                 const modal = document.getElementById(panelId);
-                
-                
                 modal.style.display = "block";
                 body.classList.add('hideScrollbar');
                 html.classList.add('hideScrollbarhtml');
@@ -824,22 +820,28 @@ if ($(".resDetailContentSec").length) {
         const readMore = document.getElementById("readMore");
         const contentBox = document.querySelector('.contentBox');
         const readMoreBtnBox = document.querySelector('.readMoreBtnBox');
-        readMore.addEventListener("click", function () {
-            if (contentBox.classList.contains("hideTxt")) {
-              contentBox.style.maxHeight = `${contentBox.scrollHeight}px`; // Set current height
-              contentBox.classList.remove("hideTxt");
-              contentBox.classList.add("removeFadeEffect");
-              readMoreBtnBox.classList.add("btnHide");
-            } else {
-              // Expand content
-              contentBox.style.maxHeight = `${contentBox.scrollHeight}px`; // Set dynamic max-height
-              contentBox.classList.add("hideTxt");
-            
-            }
-          });
+
+        if(contentBox.offsetHeight  <= 400){
+            contentBox.classList.remove("hideTxt");
+            readMoreBtnBox.style.display = "none"
+            contentBox.classList.add("removeFadeEffect");
+        }else{
+            readMore.addEventListener("click", function () {
+                if (contentBox.classList.contains("hideTxt")) {
+                  contentBox.style.maxHeight = `${contentBox.scrollHeight}px`; // Set current height
+                  contentBox.classList.remove("hideTxt");
+                  contentBox.classList.add("removeFadeEffect");
+                  readMoreBtnBox.classList.add("btnHide");
+                } else {
+                  // Expand content
+                  contentBox.style.maxHeight = `${contentBox.scrollHeight}px`; // Set dynamic max-height
+                  contentBox.classList.add("hideTxt");
+                
+                }
+            });
+        }
     })
 }
-
 if ($(".backtopCl").length) {
     document.addEventListener("DOMContentLoaded", () => {
         const backtop = document.getElementById("backtop")
@@ -969,6 +971,8 @@ $(window).scroll(function () {
         });
     });
 
+
+    
 
 
 

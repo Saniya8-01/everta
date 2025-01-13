@@ -70,9 +70,13 @@
 }
 .resDetailContentSec{margin-bottom: 120px;
     .secWrapper{@include wrapper; width: 70%; margin: 0 auto;
-        .contentBox{ position: relative; transition: 0.4s all ease-in-out; overflow: visible; 
-            &.hideTxt{ max-height: 1068px; overflow: hidden; transition: 0.4s all ease-in;}
+        .contentBox{ position: relative; transition: 0.3s all ease-in-out; overflow: visible; 
+            &.hideTxt{ max-height: 1068px; overflow: hidden; transition: 0.3s all ease-in;}
             h2{margin-bottom: 24px; color: #000; @include terminabold; @include font32; line-height: 150%;}
+            h3{margin-bottom: 24px; color: #000; @include terminabold; @include font24; line-height: 150%;}
+            h4{margin-bottom: 24px; color: #000; @include terminabold; @include font20; line-height: 160%;}
+            h5{margin-bottom: 24px; color: #000; @include terminabold; @include font16; line-height: 150%;}
+
             p{color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 30px;}
             ol{margin-left: 20px; margin-bottom: 50px;
                 li{list-style: decimal; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
@@ -97,7 +101,7 @@
                     }
                 }
             }
-            .bottomspace{margin-bottom: 34px; overflow: auto;}
+            .bottomspace{margin-bottom: 34px; overflow: auto; border: none;}
             &:last-child{margin-bottom: 0;}
             
             &::after{content: ''; background: linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, -0.79) 100%); width: 100%; height: 200px; bottom: 0px; left: 0;position: absolute;}
@@ -112,14 +116,14 @@
     @media all and (max-width: 1920px){
         .secWrapper{
             .contentBox{
-                &.hideTxt{height: 1000px;}
+                &.hideTxt{max-height: 900px;}
             }
         }
     }
     @media all and (max-width: 1800px){margin-bottom: 110px;
         .secWrapper{width: 75%;
             .contentBox{
-                &.hideTxt{height: 900px;}
+                &.hideTxt{max-height: 900px;}
                 .bottomspace{margin-bottom: 30px;}
             }
         }
@@ -127,7 +131,7 @@
     @media all and (max-width: 1600px){
         .secWrapper{width: 80%;
             .contentBox{
-                &.hideTxt{height: 850px;}               
+                &.hideTxt{max-height: 850px;}               
                 .bottomspace{margin-bottom: 25px;}
                 p{margin-bottom: 28px;}
                 ol{margin-bottom: 45px;}
@@ -138,8 +142,11 @@
     @media all and (max-width: 1440px){margin-bottom: 100px;
         .secWrapper{width: 85%;
             .contentBox{
-                &.hideTxt{height: 800px;}
+                &.hideTxt{max-height: 800px;}
                 h2{margin-bottom: 20px;}
+                h3{margin-bottom: 20px;}
+                h4{margin-bottom: 20px;}
+                h5{margin-bottom: 20px;}
                 p{margin-bottom: 26px;}
                 ol{margin-bottom: 40px;}
                 ul{margin-bottom: 40px;}
@@ -153,7 +160,7 @@
     @media all and (max-width: 1280px){
         .secWrapper{
             .contentBox{
-                &.hideTxt{height: 730px;}
+                &.hideTxt{max-height: 730px;}
                 p{margin-bottom: 24px;}
                 ol{margin-bottom: 40px;}
                 ul{margin-bottom: 40px;}
@@ -164,7 +171,7 @@
     @media all and (max-width: 1024px){
         .secWrapper{width: 85%;
             .contentBox{
-                &.hideTxt{ height: 650px;}
+                &.hideTxt{ max-height: 650px;}
             }
         }
     }
@@ -175,7 +182,7 @@
     @media all and (max-width: 720px){
         .secWrapper{width: 100%;
             .contentBox{
-                &.hideTxt{ height: 550px;}
+                &.hideTxt{ max-height: 550px;}
                 h2{font-size: 20px; line-height: 120%;}
                 p{font-size: 12px; line-height: 150%;}
                 ol{

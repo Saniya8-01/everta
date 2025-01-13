@@ -13,10 +13,16 @@
                     $count = 0;
                     while (have_rows('resources_tabs')) : the_row(); 
                     ?>
-                    <a href="<?php echo get_sub_field('tab_link'); ?>" 
-                       class="<?php echo ($count == 0) ? 'active' : ''; ?>">
-                        <?php echo get_sub_field('tab_text'); ?>
-                    </a>
+                    <?php 
+                    $tab_link = get_sub_field('tab_link');
+                    $tab_text = get_sub_field('tab_text');
+                    
+                    if ($tab_link && $tab_text) : ?>
+                        <a href="<?php echo $tab_link; ?>" 
+                           class="<?php echo ($count == 0) ? 'active' : ''; ?>">
+                            <?php echo $tab_text; ?>
+                        </a>
+                    <?php endif; ?>                    
                     <?php 
                     $count++;
                     endwhile; ?>
@@ -59,7 +65,7 @@
                 $terms = get_the_terms($post->ID, 'news_categories');
                 $tax = ($terms && !is_wp_error($terms)) ? strtolower(join(", ", wp_list_pluck($terms, 'name'))) : '';
             ?>
-                <a href="<?php the_permalink(); ?>" class="cards">
+                <a href="<?php the_permalink(); ?>" class="cards" data-date="<?php echo get_the_date('Y-m-d'); ?>" data-title="<?php echo esc_attr(get_the_title()); ?>">
                     <div class="cardImg">
                         <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title_attribute(); ?>">
                     </div>
@@ -84,7 +90,7 @@
 <?php get_footer(); ?>
 
 <script>
-   document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const optionMenu = document.querySelector("#customSelect");
     const selectBtn = optionMenu.querySelector("#selectBtn");
     const options = optionMenu.querySelectorAll(".option");
@@ -114,13 +120,13 @@
             let sortedCards = [...cards];
 
             if (sortType === "latest") {
-                sortedCards.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+                sortedCards.sort((a, b) => new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date')));
             } else if (sortType === "oldest") {
-                sortedCards.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+                sortedCards.sort((a, b) => new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date')));
             } else if (sortType === "az") {
-                sortedCards.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
+                sortedCards.sort((a, b) => a.getAttribute('data-title').localeCompare(b.getAttribute('data-title')));
             } else if (sortType === "za") {
-                sortedCards.sort((a, b) => b.dataset.title.localeCompare(a.dataset.title));
+                sortedCards.sort((a, b) => b.getAttribute('data-title').localeCompare(a.getAttribute('data-title')));
             }
 
             // Clear existing cards and re-append sorted ones

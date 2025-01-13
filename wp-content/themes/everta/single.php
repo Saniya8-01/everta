@@ -13,8 +13,8 @@ get_header();
 <section class="resDetailBannerSec">
 	<div class="secWrapper">
 		<div class="backBtn">
-			<a href="<?php echo esc_url(get_post_type_archive_link('post')); ?>">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/left-arrow-gray.svg" alt="Back" />Back
+			<a href="javascript:history.back()">
+				<i class="icon-left-arrow backArrow"></i>Back 
 			</a>
 		</div>
 		<div class="secHeading">
@@ -89,7 +89,7 @@ get_header();
 							</ul>
 						</div>
 						<div class="arrowBox">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/black-cta-arrow.svg" alt="">
+							<i class="icon-icon-right rotateRightArrow"></i>
 						</div>
 					</div>
 				</a>
@@ -103,8 +103,7 @@ get_header();
 
 <div class="backtopCl" id="backtop">
 	<a href="#">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/top-double-up-arrow.svg" alt="Back to top"
-			class="desktop" />
+		<i class="icon-caretdoubleup fontellowdobuleUpIcon"></i>
 	</a>
 </div>
 
