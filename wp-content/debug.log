@@ -548,3 +548,24 @@ Stack trace:
 [10-Jan-2025 08:06:58 UTC]   Automatic theme updates starting...
 [10-Jan-2025 08:06:58 UTC]   Automatic theme updates complete.
 [10-Jan-2025 08:06:58 UTC] Automatic updates complete.
+[13-Jan-2025 04:58:51 UTC] Automatic updates starting...
+[13-Jan-2025 04:58:57 UTC]   Automatic theme updates starting...
+[13-Jan-2025 04:58:57 UTC]   Automatic theme updates complete.
+[13-Jan-2025 04:58:57 UTC] Automatic updates complete.
+[13-Jan-2025 06:16:17 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\everta\wp-content\themes\everta\faq.php on line 18
+[13-Jan-2025 06:16:17 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\everta\wp-content\themes\everta\faq.php on line 18
+[13-Jan-2025 06:16:17 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\everta\wp-content\themes\everta\faq.php on line 18
+[13-Jan-2025 06:16:17 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\everta\wp-content\themes\everta\faq.php on line 18
+[13-Jan-2025 06:16:23 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in C:\xampp\htdocs\everta\wp-includes\formatting.php:4467
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-includes\formatting.php(4467): ltrim(Array)
+#1 C:\xampp\htdocs\everta\wp-content\themes\everta\blogs.php(16): esc_url(Array)
+#2 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#5 {main}
+  thrown in C:\xampp\htdocs\everta\wp-includes\formatting.php on line 4467
+[13-Jan-2025 06:16:34 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\everta\wp-content\themes\everta\manual&brochure.php on line 18
+[13-Jan-2025 06:16:34 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\everta\wp-content\themes\everta\manual&brochure.php on line 18
+[13-Jan-2025 06:16:34 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\everta\wp-content\themes\everta\manual&brochure.php on line 18
+[13-Jan-2025 06:16:34 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\everta\wp-content\themes\everta\manual&brochure.php on line 18

@@ -14691,8 +14691,8 @@ body {
     padding-left: 11px;
   }
   .productInfoSection .productInfoWrapper .productDetails .middle {
-    width: 350px;
-    height: 630px;
+    width: 300px;
+    height: 520px;
   }
 }
 @media all and (max-width: 1440px) {
@@ -14735,8 +14735,8 @@ body {
     padding-left: 10px;
   }
   .productInfoSection .productInfoWrapper .productDetails .middle {
-    width: 300px;
-    height: 550px;
+    width: 250px;
+    height: 500px;
   }
 }
 @media all and (max-width: 1280px) {
