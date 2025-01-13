@@ -4,7 +4,7 @@
     <div class="secWrapper">
         <div class="backBtn">
             <a href="javascript:history.back()" >
-                <i class="icon-icon-left backArrow"></i>Back 
+                <i class="icon-left-arrow backArrow"></i>Back 
             </a>
         </div>
         <div class="secHeading">
@@ -85,7 +85,7 @@
                             </ul>    
                         </div>
                         <div class="arrowBox">
-                            <i class="icon-icon-right  rotateRightArrow"></i>
+                            <i class="icon-right-arrow  rotateRightArrow"></i>
                         </div>
                     </div>
                 </a>
@@ -105,7 +105,7 @@
                             </ul>    
                         </div>
                         <div class="arrowBox">
-                            <i class="icon-icon-right  rotateRightArrow"></i>
+                            <i class="icon-right-arrow  rotateRightArrow"></i>
                         </div>
                     </div>
                 </a>

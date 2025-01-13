@@ -17,7 +17,6 @@ $current_url = home_url(add_query_arg([], $wp->request));
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="<?php bloginfo('template_directory'); ?>/css/fontello/css/fontello.css" rel="stylesheet">
 	<link href="<?php bloginfo('template_directory'); ?>/css/slick-theme.css" rel="stylesheet">
 	<link href="<?php bloginfo('template_directory'); ?>/css/slick.css" rel="stylesheet">
 	<link href="<?php bloginfo('template_directory'); ?>/css/main.css" rel="stylesheet">
