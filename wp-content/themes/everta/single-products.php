@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <section class="productBanner">
     <div class="productBannerWrapper">
         <div class="bannerHeading">
@@ -94,11 +93,17 @@
     <?php if (have_rows('industry_standard_section')) : ?>
     <?php while (have_rows('industry_standard_section')) : the_row(); ?>
     <div class="sectionWrapper">
+        <?php
+        // Get the field for selecting media type (image or video)
+        $mediaChoice = get_sub_field('media_choice');
+        ?>
+
+        <?php if ( $mediaChoice == 'Image' ) : ?>
         <div class="scaleImage">
             <?php
             $industryDesktopImage = get_sub_field('desktop_image');
             $industryMobileImage = get_sub_field('mobile_image');
-        ?>
+            ?>
             <?php if ( !empty( $industryDesktopImage ) ): ?>
             <img src="<?php echo esc_url( $industryDesktopImage['url'] ); ?>"
                 alt="<?php echo esc_attr( $industryDesktopImage['alt'] ); ?>" class="desktopImage">
@@ -109,6 +114,14 @@
                 alt="<?php echo esc_attr( $industryMobileImage['alt'] ); ?>" class="mobileImage">
             <?php endif; ?>
         </div>
+        <?php elseif ( $mediaChoice == 'Video' ) : ?>
+        <div class="videoDiv">
+            <video autoplay="" preload="auto" loop="" muted="" playsinline="">
+                <source src="<?php echo esc_url(get_sub_field('video_link')); ?>" type="video/mp4">
+            </video>
+        </div>
+        <?php endif; ?>
+
         <div class="bottomInfo">
             <h3>
                 <?php echo get_sub_field('industry_title'); ?>
