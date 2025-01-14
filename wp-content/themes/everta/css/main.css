@@ -3856,7 +3856,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
   padding: 70px 100px 58px 100px;
   transition: all 0.4s ease-out;
-  transform: translateY(30px);
+  transform: translateY(60px);
 }
 .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
   margin: auto;
@@ -4942,6 +4942,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial p {
     font-size: 12px;
   }
+}
+.testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .clientImages {
+  width: 150px;
 }
 .testimonialSection .testimonialSectionWrapper .progresBar {
   padding-left: 120px;
