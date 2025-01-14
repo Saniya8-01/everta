@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Check if there are any visible cards
         if (visibleCards.length === 0) {
-            cardGrid.innerHTML = `<p class="noPostsMessage">No posts found.</p>`;
+            cardGrid.innerHTML = `<p class="no-posts-message">No posts found.</p>`;
             pagination.innerHTML = ''; // Clear pagination if no results
             return;
         }
