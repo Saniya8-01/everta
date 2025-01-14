@@ -140,6 +140,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardGrid = document.getElementById('cardGrid');
     const pagination = document.getElementById('pagination');
     const searchInput = document.querySelector('.searchWrapper input[type="search"]');
+    
+    // Create and add the "No posts found" message
+    const noPostsMessage = document.createElement('div');
+    noPostsMessage.classList.add('no-posts-message');
+    noPostsMessage.textContent = "No posts found.";
 
     // Select all `.cards` inside `.cardGrid`
     const cards = Array.from(cardGrid.querySelectorAll('.cards'));
@@ -159,9 +164,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to render cards for the current page
     function renderCards(page, filteredCards = cards) {
-
         // Clear the current content in the card grid
         cardGrid.innerHTML = '';
+
+        // If no filtered cards, display "No posts found"
+        if (filteredCards.length === 0) {
+            cardGrid.appendChild(noPostsMessage); // Show "No posts found" message
+            pagination.style.display = 'none'; // Hide pagination
+            return;
+        }
 
         // Calculate the start and end index for cards to display
         const startIndex = (page - 1) * cardsPerPage;
@@ -170,13 +181,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Get the cards for the current page
         const visibleCards = filteredCards.slice(startIndex, endIndex);
 
-        if (visibleCards.length === 0) {
-        } else {
-            // Append the visible cards to the card grid
-            visibleCards.forEach((card) => {
-                cardGrid.appendChild(card);
-            });
-        }
+        // Append the visible cards to the card grid
+        visibleCards.forEach((card) => {
+            cardGrid.appendChild(card);
+        });
 
         // Render the pagination buttons
         renderPagination(filteredCards);
@@ -185,9 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to render pagination buttons
     function renderPagination(filteredCards) {
         pagination.innerHTML = ''; // Clear existing pagination
-    
+
         const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
-    
+
         if (totalPages > 1) {
             // Add "Previous" button with image and extra class
             const prevButton = document.createElement('button');
@@ -202,11 +210,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderCards(currentPage, filteredCards);
             });
             pagination.appendChild(prevButton);
-    
+
             // Pagination logic with ellipsis for mobile
             const maxVisiblePages = window.innerWidth <= 680 ? 3 : 6; // 3 pages for mobile, 6 for desktop/tablet
             let pageButtons = [];
-    
+
             // Show the first and last page buttons, and a few neighboring ones
             if (totalPages <= maxVisiblePages) {
                 // If total pages are less than or equal to maxVisiblePages, show all page numbers
@@ -226,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     pageButtons = [1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages];
                 }
             }
-    
+
             // Add the page number buttons to pagination
             pageButtons.forEach((button) => {
                 const pageButton = document.createElement('button');
@@ -243,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 pagination.appendChild(pageButton);
             });
-    
+
             // Add "Next" button with image and extra class
             const nextButton = document.createElement('button');
             const nextImage = document.createElement('img');
@@ -259,10 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pagination.appendChild(nextButton);
         }
     }
-    
-    
 
-    // Function to filter cards based on search input
     // Function to filter cards based on search input
     function filterCards(query) {
         const filteredCards = cards.filter((card) => {
@@ -275,7 +280,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         renderCards(currentPage, filteredCards);
     }
-
 
     // Listen for input changes in the search field
     searchInput.addEventListener('input', (e) => {
@@ -293,7 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render of the first page with all cards
     renderCards(currentPage);
 });
-
 
 </script>
 
