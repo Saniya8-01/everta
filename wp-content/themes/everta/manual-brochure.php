@@ -1,4 +1,4 @@
-<?php get_header(); /*Template name: Manual Brochure*/ ?>
+<?php get_header(); /*Template name: Manual-Brochure*/ ?>
 
 <Section class="resourcesBanner">
     <?php if (have_rows('resources_banner')) : ?>
