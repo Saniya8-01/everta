@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         } else {
             noPostsMessage.style.display = 'none';
-            pagination.style.display = 'block';
+            pagination.style.display = 'flex';
         }
 
         const startIndex = (page - 1) * cardsPerPage;
