@@ -335,6 +335,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                     &::-webkit-input-placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;}
                 }
                 .wpcf7-not-valid-tip{@include verdanaregular;@include font16;margin-top: 8px}
+                .selected-dial-code{@include verdanaregular;@include font16;line-height: 175%;padding-bottom: 8px;}
             }
         }
         .contactBottom{
@@ -539,6 +540,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                     &::placeholder{font-size: 12px;line-height: 18px;}
                     &::-webkit-input-placeholder{font-size: 12px;line-height: 18px;}
                 }
+                .selected-dial-code{font-size: 12px;line-height: 18px;}
             }
         }
         .contactBottom{

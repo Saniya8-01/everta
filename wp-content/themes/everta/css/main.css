@@ -1625,6 +1625,22 @@ header .headerWrapper .headerMenu .hamburger-menu {
     font-size: 12px;
   }
 }
+.contactForm .contactFormWrapper .contactTop .formFields .selected-dial-code {
+  font-family: "verdanaregular";
+  font-size: 16px;
+  line-height: 175%;
+  padding-bottom: 8px;
+}
+@media screen and (max-width: 1600px) {
+  .contactForm .contactFormWrapper .contactTop .formFields .selected-dial-code {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contactForm .contactFormWrapper .contactTop .formFields .selected-dial-code {
+    font-size: 12px;
+  }
+}
 .contactForm .contactFormWrapper .contactBottom h3 {
   font-family: "termina_testmedium";
   font-size: 24px;
@@ -2297,6 +2313,10 @@ header .headerWrapper .headerMenu .hamburger-menu {
     line-height: 18px;
   }
   .contactForm .contactFormWrapper .contactTop .formFields input::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .contactForm .contactFormWrapper .contactTop .formFields .selected-dial-code {
     font-size: 12px;
     line-height: 18px;
   }
