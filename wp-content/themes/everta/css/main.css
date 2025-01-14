@@ -11937,7 +11937,7 @@ body {
 @media all and (max-width: 680px) {
   .resourcesBanner {
     margin-top: 110px;
-    margin-bottom: 32px;
+    margin-bottom: 72px;
   }
   .resourcesBanner .resorucesBannerWrapper {
     width: 100%;
@@ -12094,11 +12094,17 @@ body {
   margin-top: 48px;
 }
 @media all and (max-width: 1600px) {
+  .resourcesfaqSection {
+    margin-bottom: 150px;
+  }
   .resourcesfaqSection .faq-heading h2 {
     margin-bottom: 60px;
   }
 }
 @media all and (max-width: 1440px) {
+  .resourcesfaqSection {
+    margin-bottom: 120px;
+  }
   .resourcesfaqSection .faq-heading h2 {
     margin-bottom: 56px;
   }
@@ -12120,7 +12126,15 @@ body {
     padding: 0px 60px;
   }
 }
+@media all and (max-width: 820px) {
+  .resourcesfaqSection .faq-heading h2 {
+    padding: 0px 40px;
+  }
+}
 @media all and (max-width: 680px) {
+  .resourcesfaqSection {
+    margin-bottom: 72px;
+  }
   .resourcesfaqSection .faq-heading h2 {
     margin-bottom: 32px;
     font-size: 20px;
@@ -12967,6 +12981,12 @@ body {
 .manualBrochureSection .container .accordions-wrapper .accordion.active {
   padding-bottom: 50px;
 }
+.manualBrochureSection .container .accordions-wrapper .accordion.active .accordion-header {
+  padding-bottom: 78px;
+}
+.manualBrochureSection .container .accordions-wrapper .accordion .accordion-header {
+  padding: 42px 120px;
+}
 .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header h4 {
   font-family: "termina_testmedium";
   font-weight: 600;
@@ -13164,6 +13184,12 @@ body {
   .manualBrochureSection .container .accordions-wrapper .accordion.active {
     padding-bottom: 40px;
   }
+  .manualBrochureSection .container .accordions-wrapper .accordion.active .accordion-header {
+    padding-bottom: 70px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header {
+    padding: 36px 90px;
+  }
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
     padding-left: 120px;
     padding-right: 120px;
@@ -13222,6 +13248,12 @@ body {
   .manualBrochureSection .container .accordions-wrapper .accordion.active {
     padding-bottom: 36px;
   }
+  .manualBrochureSection .container .accordions-wrapper .accordion.active .accordion-header {
+    padding-bottom: 60px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header {
+    padding: 30px 80px;
+  }
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
     padding-left: 120px;
     padding-right: 120px;
@@ -13279,6 +13311,9 @@ body {
   }
   .manualBrochureSection .container .accordions-wrapper .accordion.active {
     padding-bottom: 32px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion.active .accordion-header {
+    padding-bottom: 50px;
   }
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
     padding-left: 120px;
@@ -13384,8 +13419,17 @@ body {
   }
 }
 @media all and (max-width: 1024px) {
+  .manualBrochureSection .faq-heading h2 {
+    padding: 0px 60px;
+  }
   .manualBrochureSection .container .accordions-wrapper .accordion.active {
     padding-bottom: 30px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion.active .accordion-header {
+    padding-bottom: 40px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header {
+    padding: 20px 60px;
   }
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
     padding: 0px 60px;
@@ -13418,15 +13462,58 @@ body {
     margin-right: 30px;
   }
 }
+@media all and (max-width: 820px) {
+  .manualBrochureSection .faq-heading h2 {
+    padding: 0px 40px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header {
+    padding: 20px 40px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body {
+    padding: 0px 40px;
+  }
+}
 @media all and (max-width: 680px) {
   .manualBrochureSection .faq-heading h2 {
     margin-bottom: 32px;
     font-size: 20px;
     font-weight: 600;
     line-height: 28px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
+}
+@media screen and (max-width: 680px) and (max-width: 1600px) {
+  .manualBrochureSection .faq-heading h2 {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 680px) and (max-width: 1440px) {
+  .manualBrochureSection .faq-heading h2 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 680px) and (max-width: 1024px) {
+  .manualBrochureSection .faq-heading h2 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 680px) and (max-width: 680px) {
+  .manualBrochureSection .faq-heading h2 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 680px) {
   .manualBrochureSection .container .accordions-wrapper .accordion.active {
     padding-bottom: 25px;
+    padding-bottom: 32px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header {
+    padding: 16px 20px;
   }
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header h4 {
     font-size: 20px;
