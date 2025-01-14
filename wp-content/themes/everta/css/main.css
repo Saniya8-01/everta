@@ -1565,6 +1565,8 @@ header .headerWrapper .headerMenu .hamburger-menu {
   line-height: 175%;
   color: #1E1E1E;
   padding: 7px 0px 14px 0px;
+  width: 100%;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactTop .formFields input {
@@ -1605,6 +1607,21 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 @media screen and (max-width: 1440px) {
   .contactForm .contactFormWrapper .contactTop .formFields input::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+}
+.contactForm .contactFormWrapper .contactTop .formFields .wpcf7-not-valid-tip {
+  font-family: "verdanaregular";
+  font-size: 16px;
+  margin-top: 8px;
+}
+@media screen and (max-width: 1600px) {
+  .contactForm .contactFormWrapper .contactTop .formFields .wpcf7-not-valid-tip {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contactForm .contactFormWrapper .contactTop .formFields .wpcf7-not-valid-tip {
     font-size: 12px;
   }
 }
@@ -1679,7 +1696,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   display: flex;
   flex-direction: column;
   gap: 17px;
-  justify-content: space-between;
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields:last-child {
   flex-basis: 100%;
@@ -1709,6 +1725,8 @@ header .headerWrapper .headerMenu .hamburger-menu {
   line-height: 175%;
   color: #1E1E1E;
   padding: 7px 0px 14px 0px;
+  width: 100%;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input {
@@ -1725,6 +1743,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   font-size: 16px;
   line-height: 175%;
   color: #A5A5A5;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input::placeholder {
@@ -1741,6 +1760,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   font-size: 16px;
   line-height: 175%;
   color: #A5A5A5;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input::-webkit-input-placeholder {
@@ -1749,6 +1769,21 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 @media screen and (max-width: 1440px) {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+}
+.contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .wpcf7-not-valid-tip {
+  font-family: "verdanaregular";
+  font-size: 16px;
+  margin-top: 8px;
+}
+@media screen and (max-width: 1600px) {
+  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .wpcf7-not-valid-tip {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .wpcf7-not-valid-tip {
     font-size: 12px;
   }
 }
@@ -1765,6 +1800,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   width: 100%;
   height: 148px;
   resize: none;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields textarea {
@@ -1871,6 +1907,48 @@ header .headerWrapper .headerMenu .hamburger-menu {
   animation-fill-mode: both;
   -webkit-animation-duration: 0.4s;
   -webkit-animation-fill-mode: both;
+}
+.contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select {
+  padding: 7px 0px 20px 0px;
+  width: 100%;
+  border-bottom: 1px solid #A5A5A5;
+  color: #1E1E1E;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 175%;
+}
+@media screen and (max-width: 1600px) {
+  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select {
+    font-size: 12px;
+  }
+}
+.contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select option {
+  font-family: "verdanaregular";
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 175%;
+  color: #787878;
+  border-bottom: 1px solid #CCCCCC;
+}
+@media screen and (max-width: 1600px) {
+  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select option {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select option {
+    font-size: 12px;
+  }
+}
+.contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select option:hover {
+  background-color: #f1f1f1;
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges {
   display: flex;
@@ -2149,6 +2227,9 @@ header .headerWrapper .headerMenu .hamburger-menu {
     height: 40px;
     padding: 0 12px;
   }
+  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select {
+    padding: 6px 0px 18px 0px;
+  }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges {
     gap: 16px;
   }
@@ -2286,6 +2367,15 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .options::-webkit-scrollbar {
     width: 6px;
+  }
+  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select {
+    padding: 7px 0px 20px 0px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select option {
+    font-size: 12px;
+    line-height: 18px;
   }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges {
     gap: 12px;
@@ -16135,4 +16225,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}

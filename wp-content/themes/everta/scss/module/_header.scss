@@ -330,10 +330,11 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
             .formFields{flex-basis:calc(50% - 19px);display:flex;flex-direction:column;gap:17px;
                 &:first-child{flex-basis: 100%;}
                 label{text-transform: capitalize;@include terminamedium;@include font18;line-height: 140%;font-weight: 600;color: #1E1E1E;}
-                input{border-bottom: 1px solid #A5A5A5;@include verdanaregular;@include font16;line-height: 175%;color: #1E1E1E;padding:7px 0px 14px 0px;
+                input{border-bottom: 1px solid #A5A5A5;@include verdanaregular;@include font16;line-height: 175%;color: #1E1E1E;padding:7px 0px 14px 0px;width: 100%;font-weight: $fontW400;
                     &::placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;}
                     &::-webkit-input-placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;}
                 }
+                .wpcf7-not-valid-tip{@include verdanaregular;@include font16;margin-top: 8px}
             }
         }
         .contactBottom{
@@ -346,15 +347,16 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
             .contact-tab-content{display:none;
                 &.active{display: block;}
                 .contact-tab-wrapper{display: flex;flex-wrap:wrap;justify-content:space-between;gap:38px;
-                    .formFields{flex-basis:calc(50% - 19px);display:flex;flex-direction:column;gap:17px;justify-content:space-between;
+                    .formFields{flex-basis:calc(50% - 19px);display:flex;flex-direction:column;gap:17px;
                         &:last-child{flex-basis: 100%;}
                         label{text-transform: capitalize;@include terminaregular;@include font18;line-height: 140%;font-weight: 600;color: #1E1E1E;}
-                        input{border-bottom: 1px solid #A5A5A5;@include verdanaregular;@include font16;line-height: 175%;color: #1E1E1E;padding:7px 0px 14px 0px;
-                            &::placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;}
-                            &::-webkit-input-placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;}
+                        input{border-bottom: 1px solid #A5A5A5;@include verdanaregular;@include font16;line-height: 175%;color: #1E1E1E;padding:7px 0px 14px 0px;width: 100%;font-weight: $fontW400;
+                            &::placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;font-weight: $fontW400;}
+                            &::-webkit-input-placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;font-weight: $fontW400;}
                         }
+                        .wpcf7-not-valid-tip{@include verdanaregular;@include font16;margin-top: 8px}
                         .lowercase{text-transform: none;}
-                        textarea{border: 1px solid #A5A5A5;@include verdanaregular;@include font16;line-height: 175%;color: #1E1E1E;padding: 24px;width: 100%;height: 148px;resize: none;}
+                        textarea{border: 1px solid #A5A5A5;@include verdanaregular;@include font16;line-height: 175%;color: #1E1E1E;padding: 24px;width: 100%;height: 148px;resize: none;font-weight: $fontW400;}
                         .customSelect{position: relative;
                             .selectBtn{width: 100%; background: transparent; display: flex; cursor: pointer; border-bottom: 1px solid #A5A5A5;padding:7px 0px 14px 0px;position: relative; justify-content: space-between;
                               .sBtntext{color: $quaternaryColor1; @include verdanaregular; @include font16; font-weight: $fontW400;}
@@ -371,6 +373,11 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                               img{transform: rotate(-180deg);}
                             }
                             &.active .options{display: block; opacity: 0; z-index: 10; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; animation-duration: 0.4s; animation-fill-mode: both; -webkit-animation-duration: 0.4s; -webkit-animation-fill-mode: both;}
+                        }
+                        select{padding:7px 0px 20px 0px;width: 100%;border-bottom: 1px solid #A5A5A5;color: $quaternaryColor1; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%;
+                            option{@include verdanaregular; @include font16; font-weight: $fontW400; text-align: left;line-height: 175%; color: $quaternaryColor3; border-bottom: 1px solid #CCCCCC;
+                                &:hover{background-color: #f1f1f1;}
+                            }
                         }
                         .charges{display: flex;gap: 20px;
                             .chargesCount{flex: 1;
@@ -499,6 +506,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                   .option{height: 40px; padding: 0 12px;}
                                 }
                             }
+                            select{padding: 6px 0px 18px 0px;}
                             .charges{gap: 16px;
                                 .chargesCount{
                                     label{
@@ -556,6 +564,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                               .option{padding: 0 16px;font-size: 12px;line-height: 18px;}
                               &::-webkit-scrollbar{width: 6px;}
                             }
+                        }
+                        select{padding: 7px 0px 20px 0px;font-size: 12px;line-height: 18px;
+                            option{font-size: 12px;line-height: 18px;}
                         }
                         .charges{gap: 12px;
                             .chargesCount{

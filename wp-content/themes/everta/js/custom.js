@@ -940,7 +940,7 @@ $(window).scroll(function () {
 });
 }
 
-    var customSelects = document.querySelectorAll("#popupSelect");
+    let customSelects = document.querySelectorAll("#popupSelect");
 
     customSelects.forEach((customSelect) => {
         const selectBtn = customSelect.querySelector(".selectBtn");
