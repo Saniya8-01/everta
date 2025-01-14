@@ -142,45 +142,62 @@ document.addEventListener('DOMContentLoaded', () => {
     const pagination = document.getElementById('pagination');
     const searchInput = document.querySelector('.searchWrapper input[type="search"]');
 
+    // Create the no posts message element
+    const noPostsMessage = document.createElement('p');
+    noPostsMessage.textContent = 'No posts found.';
+    noPostsMessage.classList.add('no-posts-message');
+    noPostsMessage.style.display = 'none';
+    cardGrid.appendChild(noPostsMessage);
+
     // Select all `.cards` inside `.cardGrid`
     const cards = Array.from(cardGrid.querySelectorAll('.cards'));
 
-    // Function to get the number of cards per page based on screen width
     function getCardsPerPage() {
-        return window.innerWidth < 680 ? 4 : 6; // Mobile: 4, Desktop/iPad: 6
+        return window.innerWidth < 680 ? 4 : 6;
     }
 
     let cardsPerPage = getCardsPerPage();
     let currentPage = 1;
 
-    // Function to render cards for the current page
     function renderCards(page, filteredCards = cards) {
-        cardGrid.innerHTML = ''; // Clear current content
+        cardGrid.innerHTML = '';
+
+        if (filteredCards.length === 0) {
+            noPostsMessage.style.display = 'block';
+            cardGrid.appendChild(noPostsMessage);
+            pagination.style.display = 'none';
+            return;
+        } else {
+            noPostsMessage.style.display = 'none';
+            pagination.style.display = 'block';
+        }
+
         const startIndex = (page - 1) * cardsPerPage;
         const endIndex = startIndex + cardsPerPage;
         const visibleCards = filteredCards.slice(startIndex, endIndex);
 
-        // Check if there are any visible cards
-        if (visibleCards.length === 0) {
-            cardGrid.innerHTML = `<p class="no-posts-message">No posts found.</p>`;
-            pagination.innerHTML = ''; // Clear pagination if no results
-            return;
-        }
+        visibleCards.forEach((card) => {
+            cardGrid.appendChild(card);
+        });
 
-        // Append the visible cards to the card grid
-        visibleCards.forEach((card) => cardGrid.appendChild(card));
         renderPagination(filteredCards);
     }
 
-    // Function to render pagination buttons
     function renderPagination(filteredCards) {
-        pagination.innerHTML = ''; // Clear existing pagination
+        pagination.innerHTML = '';
         const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
 
-        if (totalPages <= 1) return;
+        if (totalPages <= 1) {
+            pagination.style.display = 'none';
+            return;
+        }
 
         const prevButton = document.createElement('button');
-        prevButton.textContent = 'Prev';
+        const prevImage = document.createElement('img');
+        prevImage.src = `${theme_vars.template_dir}/images/prev-arrow.svg`;
+        prevImage.alt = 'Previous';
+        prevButton.appendChild(prevImage);
+        prevButton.classList.add('pagination-prev');
         prevButton.disabled = currentPage === 1;
         prevButton.addEventListener('click', () => {
             currentPage--;
@@ -188,19 +205,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         pagination.appendChild(prevButton);
 
-        for (let i = 1; i <= totalPages; i++) {
-            const pageButton = document.createElement('button');
-            pageButton.textContent = i;
-            pageButton.classList.toggle('active', i === currentPage);
-            pageButton.addEventListener('click', () => {
-                currentPage = i;
-                renderCards(currentPage, filteredCards);
-            });
-            pagination.appendChild(pageButton);
+        const maxVisiblePages = window.innerWidth <= 680 ? 3 : 6;
+        let pageButtons = [];
+
+        if (totalPages <= maxVisiblePages) {
+            for (let i = 1; i <= totalPages; i++) {
+                pageButtons.push(i);
+            }
+        } else {
+            if (currentPage <= 2) {
+                pageButtons = [1, 2, 3, '...', totalPages];
+            } else if (currentPage >= totalPages - 1) {
+                pageButtons = [1, '...', totalPages - 2, totalPages - 1, totalPages];
+            } else {
+                pageButtons = [1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages];
+            }
         }
 
+        pageButtons.forEach((button) => {
+            const pageButton = document.createElement('button');
+            if (button === '...') {
+                pageButton.textContent = '...';
+                pageButton.disabled = true;
+            } else {
+                pageButton.textContent = button;
+                pageButton.classList.toggle('active', button === currentPage);
+                pageButton.addEventListener('click', () => {
+                    currentPage = button;
+                    renderCards(currentPage, filteredCards);
+                });
+            }
+            pagination.appendChild(pageButton);
+        });
+
         const nextButton = document.createElement('button');
-        nextButton.textContent = 'Next';
+        const nextImage = document.createElement('img');
+        nextImage.src = `${theme_vars.template_dir}/images/black-cta-arrow.svg`;
+        nextImage.alt = 'Next';
+        nextButton.appendChild(nextImage);
+        nextButton.classList.add('pagination-next');
         nextButton.disabled = currentPage === totalPages;
         nextButton.addEventListener('click', () => {
             currentPage++;
@@ -209,7 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination.appendChild(nextButton);
     }
 
-    // Function to filter cards based on search input
     function filterCards(query) {
         const filteredCards = cards.filter((card) => {
             const title = card.querySelector('.cardContent h3').textContent.toLowerCase();
@@ -217,13 +259,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const tag = card.querySelector('.cardContent .tag').textContent.toLowerCase();
             return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
         });
-        currentPage = 1; // Reset to the first page after filtering
+        currentPage = 1;
         renderCards(currentPage, filteredCards);
     }
 
-    // Event Listeners
     searchInput.addEventListener('input', (e) => {
-        filterCards(e.target.value.trim());
+        const query = e.target.value.trim();
+        filterCards(query);
     });
 
     window.addEventListener('resize', () => {
@@ -231,7 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCards(currentPage);
     });
 
-    // Initial render with all cards
     renderCards(currentPage);
 });
 

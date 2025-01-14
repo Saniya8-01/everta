@@ -907,8 +907,8 @@ if($(".relatedPostSec").length){
 
 /*Resources Details Page End*/
 
-
-var counted = 0;
+if($(".mapSection").length){
+    var counted = 0;
 $(window).scroll(function () {
     var oTop = $('.mapSectionDivider').offset().top - window.innerHeight;
     if (counted == 0 && $(window).scrollTop() > oTop) {
@@ -938,8 +938,9 @@ $(window).scroll(function () {
         counted = 1;
     }
 });
+}
 
-    let customSelects = document.querySelectorAll("#popupSelect");
+    var customSelects = document.querySelectorAll("#popupSelect");
 
     customSelects.forEach((customSelect) => {
         const selectBtn = customSelect.querySelector(".selectBtn");
