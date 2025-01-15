@@ -189,29 +189,21 @@
     </div>
 </section>
 
-<section class="careerCVSection">
-    <?php if (have_rows('cv_section')) : ?>
+<?php if (have_rows('cv_section')) : ?>
     <?php while (have_rows('cv_section')) : the_row(); ?>
-    <div class="careerSectionWrapper">
-        <h2>
-            <?php echo get_sub_field('heading'); ?>
-        </h2>
-        <p>
-            <?php echo get_sub_field('subheading'); ?>
-        </p>
-        <?php 
-        $cta_text = get_sub_field('cta_text');
-        
-        if ($cta_text) : ?>
-            <a href="javascript:void(0);" class="ctaBlack">
-                <?php echo esc_html($cta_text); ?>
-            </a>
-        <?php endif; ?>
-        
-    </div>
+        <section class="careerCVSection">
+            <div class="careerSectionWrapper">
+                <h2><?php echo get_sub_field('heading'); ?></h2>
+                <p><?php echo get_sub_field('subheading'); ?></p>
+                <?php $cta_text = get_sub_field('cta_text'); if ($cta_text) : ?>
+                    <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaBlack">
+                        <?php echo esc_html($cta_text); ?>
+                    </a>
+                <?php endif; ?>
+            </div>
+        </section>
     <?php endwhile; ?>
-    <?php endif; ?>
-</section>
+<?php endif; ?>
 
 <section class="careerHiringSection">
     <?php if (have_rows('hiring_section')) : ?>
