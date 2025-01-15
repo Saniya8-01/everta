@@ -228,6 +228,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                         .navLists{
                             ul{display: flex;flex-direction:column;align-items:start;padding:0px 20px;gap:24px;
                                 li{padding: 0px;display:flex;justify-content:space-between;align-items:center;width: 100%;flex-wrap:wrap;gap:0px;
+                                    &::before{content:none;}
                                     &.dropdown{transition: 0.3s all ease-in-out;
                                         &::before{content:none;}
                                         .mainManu{font-size: 16px;@include terminabold;}
@@ -484,7 +485,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
         }
     }
     @media all and (max-width:1366px){height: 650px;}
-    @media all and (max-width: 1280px){width: 1000px;
+    @media all and (max-width: 1280px){width: 1000px;height: 600px;
         .contactFormWrapper{padding: 42px;
             .contactHeading{margin-bottom:26px;}
             .contactTop{gap:32px;margin-bottom:36px;
@@ -588,3 +589,4 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
     }
     }
 }
+

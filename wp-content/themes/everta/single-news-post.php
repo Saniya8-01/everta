@@ -68,7 +68,10 @@
 								<?php echo esc_html(get_post_type()); ?>
 							</span>
 							<p>
-								<?php echo wp_trim_words(get_the_content(), 40, "..."); ?>
+								<?php 
+                                $title = get_the_title(); 
+                                echo (strlen($title) > 50) ? substr($title, 0, 40) . '...' : $title; 
+                            ?>
 							</p>
 							<ul>
 								<li>
