@@ -132,6 +132,20 @@
             }
         }
     }
+    @media all and (max-width: 1366px){
+        .missionSecWrapper{
+            .mainContainer{
+                .card{
+                    &:hover{
+                        .hoverContent{
+                           
+                            .cardIcon{left: 82%;}
+                        }
+                    }
+                }
+            }
+        }
+    }
     @media all and (max-width: 1280px){
         .missionSecWrapper{
             .mainContainer{
@@ -975,3 +989,4 @@
         }
     }
 }
+

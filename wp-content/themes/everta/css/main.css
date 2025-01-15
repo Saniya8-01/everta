@@ -3410,6 +3410,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box {
   padding: 70px 120px;
@@ -3452,7 +3453,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 h3 {
   font-family: "termina_testmedium";
   font-size: 36px;
-  line-height: 140%;
+  line-height: 100%;
   font-weight: 600;
   color: #1E1E1E;
 }
@@ -3496,6 +3497,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     font-size: 12px;
   }
 }
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .toggle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .toggle, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .toggle, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 .toggle, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 .toggle {
+  display: none;
+  text-transform: capitalize;
+}
 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content a, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 a, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 a {
   display: none;
 }
@@ -3505,6 +3510,97 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   transition: opacity 0.3s ease-in-out;
   z-index: 1;
   height: 0;
+}
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -moz-transition: all 120ms;
+  -webkit-transition: all 120ms;
+  -o-transition: all 120ms;
+  transition: all 120ms;
+  z-index: 99;
+  color: #5E5E5E;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup.hide {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) scale(0.8) !important;
+  -moz-transform: translateX(-50%) translateY(-50%) scale(0.8) !important;
+  -o-transform: translateX(-50%) translateY(-50%) scale(0.8) !important;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8) !important;
+}
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header {
+  padding: 50px 40px 40px 40px;
+  background: #F5F75E;
+}
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header .close {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  width: 51px;
+  height: 51px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header h3 {
+  font-family: "termina_testmedium";
+  font-size: 36px;
+  line-height: 100%;
+  font-weight: 600;
+  color: #1E1E1E;
+}
+@media screen and (max-width: 1600px) {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header h3 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header h3 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header h3 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header h3 {
+    font-size: 20px;
+  }
+}
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-body {
+  padding: 40px;
+}
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-body p {
+  color: #1E1E1E;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  line-height: 175%;
+  font-weight: 400;
+}
+@media screen and (max-width: 1600px) {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-body p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-body p {
+    font-size: 12px;
+  }
 }
 @media all and (max-width: 1800px) {
   .evertaEveryoneSection {
@@ -3654,6 +3750,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     line-height: 24px;
     text-align: center;
   }
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section {
+    position: relative;
+  }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box {
     padding: 40px 0px;
     padding-left: 120px;
@@ -3724,6 +3823,18 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     line-height: 24px;
     padding: 0px;
     text-align: left;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .toggle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .toggle, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .toggle, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 .toggle, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 .toggle {
+    display: block;
+    background: transparent;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content a, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 a, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 a {
     display: inline-block;
@@ -3737,6 +3848,25 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .image img {
     width: 100%;
+  }
+}
+@media all and (max-width: 720px) {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay {
+    width: 89%;
+  }
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header {
+    padding: 50px 20px 20px 20px;
+  }
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header .close {
+    width: 20px;
+    height: 20px;
+    right: 20px;
+  }
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header .close .fontelloCrossIcon {
+    font-size: 15px;
+  }
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-body {
+    padding: 20px;
   }
 }
 
@@ -8742,6 +8872,11 @@ body {
   }
   .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon {
     width: 160px;
+  }
+}
+@media all and (max-width: 1366px) {
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
+    left: 82%;
   }
 }
 @media all and (max-width: 1280px) {
@@ -16345,4 +16480,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
