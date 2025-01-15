@@ -109,9 +109,9 @@
                             </div>
                         </div>
                     </div>
-                <?php endwhile; ?>
+                <?php $counter=$counter+1; endwhile; ?>
             <?php endif; ?>
-        <?php $counter=$counter+1; endwhile; ?>
+        <?php endwhile; ?>
     <?php endif; ?>
 </section>
 
