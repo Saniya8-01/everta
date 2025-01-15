@@ -550,6 +550,15 @@
         .wallImgBoxContainer{
           .wallImgBox{padding: 14px 8px;}
         }
+        &.resetImage{
+          .wallImgBoxContainer{
+            &:nth-child(2){
+              img{
+                &.desktopWall{transform: translateX(7px) scale(1.05) !important;}
+              }
+            } 
+          }
+        }
       }
     }
   }
@@ -571,6 +580,15 @@
         .wallImgBoxContainer{
           .wallImgBox{padding: 12px 6px;}
         }
+        &.resetImage{
+          .wallImgBoxContainer{
+            &:nth-child(2){
+              img{
+                &.desktopWall{transform: translateX(8px) scale(1.05) !important;}
+              }
+            } 
+          }
+        }
       }
     }
   }
@@ -578,6 +596,15 @@
     .careerSectionWrapper{
       .secHeading{margin-bottom: 45px;}
       .evertaWallContainer{padding: 0 60px;
+        &.resetImage{
+          .wallImgBoxContainer{
+            &:nth-child(2){
+              img{
+                &.desktopWall{transform: translateX(5px) scale(1.05) !important;}
+              }
+            } 
+          }
+        }
       }
     }
   }

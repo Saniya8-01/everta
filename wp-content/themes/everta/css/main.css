@@ -8035,6 +8035,9 @@ body {
   .careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox {
     padding: 14px 8px;
   }
+  .careerWallSection .careerSectionWrapper .evertaWallContainer.resetImage .wallImgBoxContainer:nth-child(2) img.desktopWall {
+    transform: translateX(7px) scale(1.05) !important;
+  }
 }
 @media all and (max-width: 1440px) {
   .careerWallSection .careerSectionWrapper .secHeading {
@@ -8061,6 +8064,9 @@ body {
   .careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox {
     padding: 12px 6px;
   }
+  .careerWallSection .careerSectionWrapper .evertaWallContainer.resetImage .wallImgBoxContainer:nth-child(2) img.desktopWall {
+    transform: translateX(8px) scale(1.05) !important;
+  }
 }
 @media all and (max-width: 1024px) {
   .careerWallSection .careerSectionWrapper .secHeading {
@@ -8068,6 +8074,9 @@ body {
   }
   .careerWallSection .careerSectionWrapper .evertaWallContainer {
     padding: 0 60px;
+  }
+  .careerWallSection .careerSectionWrapper .evertaWallContainer.resetImage .wallImgBoxContainer:nth-child(2) img.desktopWall {
+    transform: translateX(5px) scale(1.05) !important;
   }
 }
 @media all and (max-width: 820px) {
