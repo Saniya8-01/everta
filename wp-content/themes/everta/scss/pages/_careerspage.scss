@@ -481,8 +481,8 @@
           }
         }
         &:nth-child(2){
-          .wallImgBox{border: 6px dashed $primaryColor1;
-            img{transform: rotate(10deg);
+          .wallImgBox{border: 6px dashed $primaryColor1; padding: 0; 
+            img{transform: rotate(10deg) translateX(10px);
               &.mblWall{display: none;}
             }
             

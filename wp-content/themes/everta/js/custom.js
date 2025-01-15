@@ -524,7 +524,7 @@ if ($(".vision").length) {
     })
 }
 if ($(".poweringIdeaSec").length) {
-    if (window.innerWidth > 820) {
+    if (window.innerWidth > 1024) {
         document.addEventListener("DOMContentLoaded", () => {
             const section = document.querySelector('.poweringIdeaSec');
             const poweringMainContainer = document.querySelector('.poweringMainContainer');
@@ -608,8 +608,6 @@ if ($(".visitUsSec").length) {
 
     showActiveIcon()
 }
-
-
 /******About Us Js End */
 
 /* Careers page JS Starts */

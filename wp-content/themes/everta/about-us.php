@@ -98,7 +98,7 @@
                     <?php endif; ?>
                 </div>
             </div>
-            <div  id="myPopup" class="popup hide">
+            <div id="myPopup" class="popup hide">
                 <div class="overlay">
                     <div class="popup-header">
                         <span class="close toggle" data-target="myPopup">

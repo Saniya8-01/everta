@@ -577,7 +577,7 @@
                         font-weight: 400;
                         padding: 0px;
                     }
-                    .toggle{display: none; text-transform: capitalize;}
+                    .toggle{display: none; text-transform: capitalize; margin-top: 5px;}
 
                     a {
                         display: none;
@@ -823,20 +823,17 @@
                     position: sticky;
                     top: 0;
                     margin-top: 0px;
-
-                    &:nth-child(odd) {
+                    
+                    &:nth-of-type(odd) {
                         background: $primaryColor1;
                     }
-
-                    &:nth-child(even) {
-                        background: #ffffff;
-
+                    &:nth-of-type(even) {
+                        background: #ffffff !important;
                         .content {
                             a {
                                 background: transparent;
                             }
                         }
-
                         &:hover {
                             background: #ffffff;
                         }
