@@ -85,7 +85,7 @@
                     <h3>
                         <?php echo get_sub_field('hovercard_title'); ?>
                     </h3>
-                    <p class ="paraText">
+                    <p>
                         <?php echo get_sub_field('hovercard_para'); ?>
                     </p>
                     <button class="toggle" data-target="myPopup">read more</button>
