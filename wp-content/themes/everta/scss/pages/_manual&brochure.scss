@@ -215,7 +215,7 @@
         .container{
             .accordions-wrapper{
                 .accordion{
-                    &.active{padding-bottom:25px;padding-bottom: 32px;}
+                    &.active{padding-bottom:25px;.accordion-header{padding-bottom: 32px;}}
                     .accordion-header{padding: 16px 20px;
                         h4{font-size: 20px;line-height: 24px;}
                     }

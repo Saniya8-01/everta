@@ -13537,6 +13537,8 @@ body {
 @media all and (max-width: 680px) {
   .manualBrochureSection .container .accordions-wrapper .accordion.active {
     padding-bottom: 25px;
+  }
+  .manualBrochureSection .container .accordions-wrapper .accordion.active .accordion-header {
     padding-bottom: 32px;
   }
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header {
