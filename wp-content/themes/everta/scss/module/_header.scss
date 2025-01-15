@@ -336,6 +336,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                 }
                 .wpcf7-not-valid-tip{@include verdanaregular;@include font16;margin-top: 8px}
                 .selected-dial-code{@include verdanaregular;@include font16;line-height: 175%;padding-bottom: 8px;}
+                .iti-arrow{margin-top:-5px;}
             }
         }
         .contactBottom{

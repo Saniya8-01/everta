@@ -1641,6 +1641,9 @@ header .headerWrapper .headerMenu .hamburger-menu {
     font-size: 12px;
   }
 }
+.contactForm .contactFormWrapper .contactTop .formFields .iti-arrow {
+  margin-top: -5px;
+}
 .contactForm .contactFormWrapper .contactBottom h3 {
   font-family: "termina_testmedium";
   font-size: 24px;
@@ -2826,6 +2829,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .bannerSection .bannerSectionWrapper .bannerImageWrapper {
   height: 100%;
   position: relative;
+}
+.bannerSection .bannerSectionWrapper .bannerImageWrapper img {
+  width: 100%;
 }
 .bannerSection .bannerSectionWrapper .bannerImageWrapper .mobileImage {
   display: none;
@@ -5482,29 +5488,27 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .formSection .formWrapper .wpcf7 form .input {
   width: 75%;
-}
-.formSection .formWrapper .wpcf7 form .input p {
   display: flex;
   flex-direction: column;
   gap: 17px;
   flex-shrink: 0;
 }
-.formSection .formWrapper .wpcf7 form .input p label {
+.formSection .formWrapper .wpcf7 form .input label {
   color: #1E1E1E;
   font-family: "termina_testbold";
   font-size: 18px;
 }
 @media screen and (max-width: 1600px) {
-  .formSection .formWrapper .wpcf7 form .input p label {
+  .formSection .formWrapper .wpcf7 form .input label {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .formSection .formWrapper .wpcf7 form .input p label {
+  .formSection .formWrapper .wpcf7 form .input label {
     font-size: 14px;
   }
 }
-.formSection .formWrapper .wpcf7 form .input p input {
+.formSection .formWrapper .wpcf7 form .input input {
   width: 100%;
   background: transparent;
   border-bottom: 1px solid rgba(62, 62, 62, 0.27);
@@ -5514,32 +5518,29 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   padding: 7px 0px 14px 0px;
 }
 @media screen and (max-width: 1600px) {
-  .formSection .formWrapper .wpcf7 form .input p input {
+  .formSection .formWrapper .wpcf7 form .input input {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .formSection .formWrapper .wpcf7 form .input p input {
+  .formSection .formWrapper .wpcf7 form .input input {
     font-size: 12px;
   }
 }
-.formSection .formWrapper .wpcf7 form .input p input::placeholder {
+.formSection .formWrapper .wpcf7 form .input input::placeholder {
   color: #1E1E1E;
   font-family: "verdanaregular";
   font-size: 16px;
 }
 @media screen and (max-width: 1600px) {
-  .formSection .formWrapper .wpcf7 form .input p input::placeholder {
+  .formSection .formWrapper .wpcf7 form .input input::placeholder {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .formSection .formWrapper .wpcf7 form .input p input::placeholder {
+  .formSection .formWrapper .wpcf7 form .input input::placeholder {
     font-size: 12px;
   }
-}
-.formSection .formWrapper .wpcf7 form .input p br {
-  display: none;
 }
 .formSection .formWrapper .wpcf7 form .wpcf7-not-valid-tip {
   font-family: "verdanaregular";
@@ -5634,10 +5635,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .formSection .formWrapper .wpcf7 form {
     gap: 50px;
   }
-  .formSection .formWrapper .wpcf7 form .input p {
+  .formSection .formWrapper .wpcf7 form .input {
     gap: 16px;
   }
-  .formSection .formWrapper .wpcf7 form .input p input {
+  .formSection .formWrapper .wpcf7 form .input input {
     padding: 7px 0px 14px 0px;
   }
   .formSection .formWrapper .wpcf7 form .ctaDiv input {
@@ -5689,10 +5690,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .formSection .formWrapper .wpcf7 .form {
     gap: 45%;
   }
-  .formSection .formWrapper .wpcf7 .form .input p {
+  .formSection .formWrapper .wpcf7 .form .input {
     gap: 14px;
   }
-  .formSection .formWrapper .wpcf7 .form .input p input {
+  .formSection .formWrapper .wpcf7 .form .input input {
     padding: 6px 0px 12px 0px;
   }
   .formSection .formWrapper .productCtas {
@@ -5741,10 +5742,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .formSection .formWrapper .wpcf7 form {
     gap: 40px;
   }
-  .formSection .formWrapper .wpcf7 form .input p {
+  .formSection .formWrapper .wpcf7 form .input {
     gap: 12px;
   }
-  .formSection .formWrapper .wpcf7 form .input p input {
+  .formSection .formWrapper .wpcf7 form .input input {
     padding: 6px 0px 12px 0px;
   }
   .formSection .formWrapper .wpcf7 form .ctaDiv input {
@@ -5895,18 +5896,16 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .formSection .formWrapper .wpcf7 form .input {
     width: 100%;
-  }
-  .formSection .formWrapper .wpcf7 form .input p {
     gap: 20px;
     margin-bottom: 32px;
   }
-  .formSection .formWrapper .wpcf7 form .input p label {
+  .formSection .formWrapper .wpcf7 form .input label {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
   }
-  .formSection .formWrapper .wpcf7 form .input p input {
+  .formSection .formWrapper .wpcf7 form .input input {
     width: 100%;
     font-size: 16px;
     font-style: normal;
@@ -5914,7 +5913,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     line-height: 28px;
     padding: 8px 0px;
   }
-  .formSection .formWrapper .wpcf7 form .input p input::placeholder {
+  .formSection .formWrapper .wpcf7 form .input input::placeholder {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
