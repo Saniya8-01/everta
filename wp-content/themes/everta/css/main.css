@@ -13961,6 +13961,10 @@ body {
   }
   .page-404 .image-container .mobimg {
     display: block;
+    width: 100%;
+  }
+  .page-404 .image-container .content404 {
+    padding: 0px 20px;
   }
 }
 

@@ -52,7 +52,8 @@
     @media all and (max-width: 820px){margin: 62px 0px 70px;
         .image-container{
             .desktopimg{display: none;}
-            .mobimg{display: block;}
+            .mobimg{display: block; width: 100%;}
+            .content404{padding: 0px 20px;}
         }
     }
 }
