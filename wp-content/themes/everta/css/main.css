@@ -1256,6 +1256,9 @@ header .headerWrapper .headerMenu .hamburger-menu {
     flex-wrap: wrap;
     gap: 0px;
   }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li::before {
+    content: none;
+  }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown {
     transition: 0.3s all ease-in-out;
   }
@@ -16331,4 +16334,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
