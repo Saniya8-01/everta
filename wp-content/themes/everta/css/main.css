@@ -3487,7 +3487,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   z-index: 1;
   height: 0;
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup {
+.evertaEveryoneSection .popup {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -3502,7 +3502,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup.hide {
+.evertaEveryoneSection .popup.hide {
   visibility: hidden;
   opacity: 0;
   transform: translateX(-50%) translateY(-50%) scale(0.8) !important;
@@ -3510,7 +3510,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   -o-transform: translateX(-50%) translateY(-50%) scale(0.8) !important;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8) !important;
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay {
+.evertaEveryoneSection .popup .overlay {
   width: 70%;
   position: absolute;
   top: 50%;
@@ -3518,11 +3518,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   transform: translate(-50%, -50%);
   background-color: #fff;
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header {
+.evertaEveryoneSection .popup .overlay .popup-header {
   padding: 50px 40px 40px 40px;
   background: #F5F75E;
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header .close {
+.evertaEveryoneSection .popup .overlay .popup-header .close {
   position: absolute;
   right: 0px;
   top: 20px;
@@ -3531,7 +3531,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   font-size: 20px;
   cursor: pointer;
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header h3 {
+.evertaEveryoneSection .popup .overlay .popup-header h3 {
   font-family: "termina_testmedium";
   font-size: 36px;
   line-height: 100%;
@@ -3539,29 +3539,29 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   color: #1E1E1E;
 }
 @media screen and (max-width: 1600px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header h3 {
+  .evertaEveryoneSection .popup .overlay .popup-header h3 {
     font-size: 32px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header h3 {
+  .evertaEveryoneSection .popup .overlay .popup-header h3 {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header h3 {
+  .evertaEveryoneSection .popup .overlay .popup-header h3 {
     font-size: 22px;
   }
 }
 @media screen and (max-width: 720px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header h3 {
+  .evertaEveryoneSection .popup .overlay .popup-header h3 {
     font-size: 20px;
   }
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-body {
+.evertaEveryoneSection .popup .overlay .popup-body {
   padding: 40px;
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-body p {
+.evertaEveryoneSection .popup .overlay .popup-body p {
   color: #1E1E1E;
   font-family: "verdanaregular";
   font-size: 16px;
@@ -3569,12 +3569,12 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-body p {
+  .evertaEveryoneSection .popup .overlay .popup-body p {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-body p {
+  .evertaEveryoneSection .popup .overlay .popup-body p {
     font-size: 12px;
   }
 }
@@ -3827,21 +3827,21 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
 }
 @media all and (max-width: 720px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay {
+  .evertaEveryoneSection .popup .overlay {
     width: 89%;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header {
+  .evertaEveryoneSection .popup .overlay .popup-header {
     padding: 50px 20px 20px 20px;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header .close {
+  .evertaEveryoneSection .popup .overlay .popup-header .close {
     width: 20px;
     height: 20px;
     right: 20px;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-header .close .fontelloCrossIcon {
+  .evertaEveryoneSection .popup .overlay .popup-header .close .fontelloCrossIcon {
     font-size: 15px;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .popup .overlay .popup-body {
+  .evertaEveryoneSection .popup .overlay .popup-body {
     padding: 20px;
   }
 }

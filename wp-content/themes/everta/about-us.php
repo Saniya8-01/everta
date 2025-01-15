@@ -70,56 +70,48 @@
 
 <section class="evertaEveryoneSection weValueSection">
     <?php if (have_rows('evertaeveryone_section')) : ?>
-    <?php while (have_rows('evertaeveryone_section')) : the_row(); ?>
-    <div class="evertaEveryoneSectionWrapper">
-        <div class="evertaEveryoneSectionHeading">
-            <h2>
-                <?php echo get_sub_field('evertaeveryone_mainheading'); ?>
-            </h2>
-        </div>
-        <div class="hover-section">
-            <?php if (have_rows('hover_section')) : ?>
-            <?php while (have_rows('hover_section')) : the_row(); ?>
-            <div class="hover-box">
-                <div class="content">
-                    <h3>
-                        <?php echo get_sub_field('hovercard_title'); ?>
-                    </h3>
-                    <p>
-                        <?php echo get_sub_field('hovercard_para'); ?>
-                    </p>
-                    <button class="toggle" data-target="myPopup">read more</button>
+        <?php while (have_rows('evertaeveryone_section')) : the_row(); ?>
+            <div class="evertaEveryoneSectionWrapper">
+                <div class="evertaEveryoneSectionHeading">
+                    <h2><?php echo get_sub_field('evertaeveryone_mainheading'); ?></h2>
                 </div>
-                <div class="image">
-                    <?php $hoverImage = get_sub_field('hover_image');
-                    if (!empty($hoverImage)) : ?>
-                    <img src="<?php echo esc_url($hoverImage['url']); ?>" loading="lazy"
-                        alt="<?php echo esc_attr($hoverImage['alt']); ?>" />
+                <div class="hover-section">
+                    <?php if (have_rows('hover_section')) : ?>
+                        <?php $counter=1; while (have_rows('hover_section')) : the_row(); ?>
+                            <div class="hover-box">
+                                <div class="content">
+                                    <h3><?php echo get_sub_field('hovercard_title'); ?></h3>
+                                    <p><?php echo get_sub_field('hovercard_para'); ?></p>
+                                    <button class="toggle" data-target="myPopup<?php echo $counter; ?>">read more</button>
+                                </div>
+                                <div class="image">
+                                    <?php $hoverImage = get_sub_field('hover_image'); if (!empty($hoverImage)) : ?>
+                                        <img src="<?php echo esc_url($hoverImage['url']); ?>" loading="lazy" alt="<?php echo esc_attr($hoverImage['alt']); ?>" />
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php $counter=$counter+1; endwhile; ?>
                     <?php endif; ?>
                 </div>
             </div>
-            <div id="myPopup" class="popup hide">
-                <div class="overlay">
-                    <div class="popup-header">
-                        <span class="close toggle" data-target="myPopup">
-                            <i class="icon-cross fontelloCrossIcon"></i>
-                        </span>
-                        <h3> 
-                            <?php echo get_sub_field('hovercard_title'); ?>
-                        </h3>
+            <?php if (have_rows('hover_section')) : ?>
+                <?php $counter=1; while (have_rows('hover_section')) : the_row(); ?>
+                    <div id="myPopup<?php echo $counter; ?>" class="popup hide">
+                        <div class="overlay">
+                            <div class="popup-header">
+                                <span class="close toggle" data-target="myPopup<?php echo $counter; ?>">
+                                    <i class="icon-cross fontelloCrossIcon"></i>
+                                </span>
+                                <h3><?php echo get_sub_field('hovercard_title'); ?></h3>
+                            </div>
+                            <div class="popup-body">
+                                <p><?php echo get_sub_field('hovercard_para'); ?></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="popup-body">
-                        <p> 
-                            <?php echo get_sub_field('hovercard_para'); ?>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <?php endwhile; ?>
+                <?php $counter=$counter+1; endwhile; ?>
             <?php endif; ?>
-        </div>
-    </div>
-    <?php endwhile; ?>
+        <?php endwhile; ?>
     <?php endif; ?>
 </section>
 
