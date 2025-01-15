@@ -7273,6 +7273,11 @@ body {
     width: 90%;
   }
 }
+@media all and (max-width: 360px) {
+  .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer button {
+    padding: 18px 28px;
+  }
+}
 
 .careerCVSection {
   margin-bottom: 200px;
