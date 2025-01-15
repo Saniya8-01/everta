@@ -31,7 +31,7 @@
         </div>
         <div class="searchWrapper">
             <img src="<?php bloginfo('template_directory'); ?>/images/search-icon.svg" alt="">
-            <input type="search" placeholder="Search here">
+            <input type="text" placeholder="Search here">
         </div>
     </div>
     <?php endwhile; ?>
@@ -96,7 +96,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cardGrid = document.getElementById('cardGrid');
     const pagination = document.getElementById('pagination');
-    const searchInput = document.querySelector('.searchWrapper input[type="search"]');
+    const searchInput = document.querySelector('.searchWrapper input[type="text"]');
     const optionMenu = document.querySelector("#customSelect");
     const selectBtn = optionMenu.querySelector("#selectBtn");
     const options = optionMenu.querySelectorAll(".option");
