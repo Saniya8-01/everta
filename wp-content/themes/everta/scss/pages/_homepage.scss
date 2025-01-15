@@ -733,7 +733,6 @@
             }
 
             .hover-section {
-
                 .hover-box {
                     padding: 36px 80px;
                     @include wrapper;
@@ -749,7 +748,7 @@
                         }
                     }
 
-                    .content {
+                    .content {flex-basis: 50%;
                         p {
                             margin-bottom: 26px;
                         }
@@ -757,10 +756,15 @@
                 }
             }
         }
-
-
-
-
+    }
+    @media all and (max-width: 1180px){
+        .evertaEveryoneSectionWrapper{
+            .hover-section{
+                .hover-box{
+                    .content {flex-basis: 55%;}
+                }
+            }
+        }
     }
 
     @media all and (max-width:820px) {

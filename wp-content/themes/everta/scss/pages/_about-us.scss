@@ -237,7 +237,7 @@
         .hover-section{
             .hover-box{
                 .content{
-                    p{@include font20;}
+                    p{@include font20; margin-bottom: 0;}
                 }
             }
         }
@@ -247,12 +247,22 @@
             .evertaEveryoneSectionHeading{
                 h2{margin-bottom: 50px;}
             }
+            .hover-section{
+                .hover-box{
+                    .content{flex-basis: 50%;}
+                }
+            }
         }
     }
     @media all and (max-width: 1280px){
         .evertaEveryoneSectionWrapper{
             .evertaEveryoneSectionHeading{
                 h2{margin-bottom: 40px;}
+            }
+            .hover-section{
+                .hover-box{
+                    .content{flex-basis: 55%;}
+                }
             }
         }
     }
@@ -363,7 +373,7 @@
     }
     @media all and (max-width: 1024px){margin-bottom: 100px;
         .secWrapper{
-            .innerSec{height: 430vh;
+            .innerSec{height: 380vh;
                 .cardsGroup{gap: 60px;
                     .card{padding-top: 100px; gap: 30px;
                         .contentBox{
@@ -372,6 +382,16 @@
                     }
                 }
             }
+        }
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1024px) and (min-height: 1366px) and (max-height: 1366px) {
+        .secWrapper {
+            .innerSec {height: 270vh;}
+        }
+    }
+    @media only screen and (min-width: 1366px) and (max-width: 1366px) and (min-height: 1024px) and (max-height: 1024px) {
+        .secWrapper {
+            .innerSec {height: 350vh;}
         }
     }
     @media all and (max-width: 820px){
@@ -508,10 +528,17 @@
         }
     }
     @media all and (max-width: 820px){
-        .secWrapper{padding-right: 0;
+        .secWrapper{padding: 0 0;
+
             .mainContainer{gap: 50px; padding: 50px 0; flex-flow: column;
-                .contentBox{width: 100%; padding-right: 30px;}
-               .imgBox{width: 100%;}
+                .contentBox{width: 100%; padding: 0 30px;}
+               .imgBox{width: 100%;
+                    .sliderBox{
+                        .sliderImg{margin: 0 15px;}
+                        .slick-slide{transform: scaleY(0.7);}
+                        .slick-list{padding: 0 15px !important;}
+                    }
+                }
             }
         }
     }
@@ -639,7 +666,7 @@
             .secContent{flex-flow: column; padding-bottom: 35px; gap: 35px;
                 .founderDetailsbox{gap: 20px; width: 100%; flex-flow: column; align-items: flex-start;
                     .detailBox{width: 100%; order: 1; text-align: start;
-                        p{margin-bottom: 8px; font-size: 12px; line-height: 150%;}
+                        p{margin-bottom: 4px; font-size: 12px; line-height: 150%;}
                         h6{font-size: 16px; line-height: 175%;}
                     }
                     &:last-child{flex-flow: column; align-items: flex-end;
@@ -913,7 +940,7 @@
             .visiUsMainContainer{flex-flow: column; gap: 24px;
                 .mapBox{width: 100%;
                     .desktopSVG{display: none;}
-                    .mblSVG{display: block;
+                    .mblSVG{display: block; padding: 20px 0 0 0;
                         svg{ 
                             .india{opacity: 0; transition: all 0.5s ease-in-out};
                             .uae{opacity: 0; transition: all 0.5s ease-in-out};
