@@ -93,7 +93,7 @@
                         <div class="cardTypo">
                             <h3><?php 
                                 $title = get_the_title(); 
-                                echo (strlen($title) > 50) ? substr($title, 0, 50) . '...' : $title; 
+                                echo (strlen($title) > 50) ? substr($title, 0, 30) . '...' : $title; 
                             ?></h3>
                             <p><?php echo get_the_date('d M Y'); ?> • <?php echo estimate_reading_time(get_the_ID()); ?> mins read</p>
                         </div>

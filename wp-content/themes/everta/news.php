@@ -72,7 +72,7 @@
                         <span class="tag"><?php echo esc_html($tax); ?></span>
                         <div class="cardInfo">
                             <div class="cardTypo">
-                                <h3><?php echo esc_html(wp_trim_words(get_the_title(), 10, '...')); ?></h3>
+                                <h3><?php echo esc_html(wp_trim_words(get_the_title(), 20, '...')); ?></h3>
                                 <p><?php echo get_the_date('d M Y'); ?> • <?php echo estimate_reading_time(get_the_ID()); ?> mins read</p>
                             </div>
                             <div class="redirectArrow">
