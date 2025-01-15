@@ -85,12 +85,16 @@ $(window).resize(function () {
 
 //-------------------Header Dropdown JS----------------------//
 $(document).ready(function () {
-    const dropdowns = document.querySelectorAll('.mainNavList.dropdown'); // Select all dropdowns
+    const dropdowns = document.querySelectorAll('.mainNavList.dropdown'); 
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
     if (isTouchDevice) {
         dropdowns.forEach(dropdown => {
             const toggleDropdown = (event) => {
+                // Prevent toggling when clicking inside the .dropdownMenu itself
+                if (event.target.closest('.dropdownMenu')) {
+                    return;
+                }
                 event.preventDefault();
 
                 // Close all other dropdowns
@@ -110,13 +114,10 @@ $(document).ready(function () {
                 dropdownMenu.style.opacity = isActive ? '0' : '1';
             };
 
-            // Ensure event listener is added for all dropdowns (including .languageTranslator)
-            const menuTrigger = dropdown.querySelector('.mainManu') || dropdown.querySelector('img');
-            if (menuTrigger) {
-                menuTrigger.addEventListener('click', toggleDropdown);
-            }
+            dropdown.addEventListener('click', toggleDropdown); // Bind directly to .mainNavList
         });
 
+        // Close dropdowns when clicking outside
         document.addEventListener('click', (event) => {
             if (!event.target.closest('.mainNavList')) {
                 dropdowns.forEach(dropdown => {
