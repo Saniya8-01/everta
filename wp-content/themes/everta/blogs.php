@@ -31,7 +31,7 @@
         </div>
         <div class="searchWrapper">
             <img src="<?php bloginfo('template_directory'); ?>/images/search-icon.svg" alt="">
-            <input type="search" placeholder="Search here">
+            <input type="text" placeholder="Search here">
         </div>
     </div>
     <?php endwhile; ?>
@@ -116,38 +116,44 @@ document.addEventListener("DOMContentLoaded", () => {
     const tabs = document.querySelectorAll(".blogsTabWrapper a");
     const cardGrid = document.getElementById("cardGrid");
     const pagination = document.getElementById("pagination");
-    const searchInput = document.querySelector(".searchWrapper input[type='search']");
+    const searchInput = document.querySelector(".searchWrapper input[type='text']");
     const noPostsMessage = document.createElement("div");
     noPostsMessage.classList.add("no-posts-message");
     noPostsMessage.textContent = "No posts found.";
+    cardGrid.appendChild(noPostsMessage); // Ensure it's part of the DOM but hidden initially
+    noPostsMessage.style.display = "none";
 
-    // Function to fetch all cards from the DOM
     function getCards() {
         return Array.from(cardGrid.querySelectorAll(".cards"));
     }
 
-    // Function to get the number of cards per page based on screen width
     function getCardsPerPage() {
-        return window.innerWidth < 680 ? 4 : 6; // 4 for mobile, 6 for desktop/iPad
+        return window.innerWidth < 680 ? 4 : 6;
     }
 
     let cardsPerPage = getCardsPerPage();
     let currentPage = 1;
-    let activeTabFilter = "all"; // Default to 'all' for tab filtering
+    let activeTabFilter = "all"; 
 
-    // Function to render cards for the current page
     function renderCards(page, filteredCards = getCards()) {
         const allCards = getCards();
         const startIndex = (page - 1) * cardsPerPage;
         const endIndex = startIndex + cardsPerPage;
         const visibleCards = filteredCards.slice(startIndex, endIndex);
 
-        allCards.forEach((card) => card.style.display = "none"); // Hide all cards initially
-        visibleCards.forEach((card) => card.style.display = "block"); // Show only the filtered cards
-        renderPagination(filteredCards);
+        allCards.forEach((card) => card.style.display = "none");
+        visibleCards.forEach((card) => card.style.display = "block");
+
+        // Show "No posts found" message if no posts are available
+        if (filteredCards.length === 0) {
+            noPostsMessage.style.display = "block";
+            pagination.style.display = "none";
+        } else {
+            noPostsMessage.style.display = "none";
+            renderPagination(filteredCards);
+        }
     }
 
-    // Function to render pagination buttons
     function renderPagination(filteredCards) {
         pagination.innerHTML = "";
         const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
@@ -219,7 +225,6 @@ document.addEventListener("DOMContentLoaded", () => {
         pagination.appendChild(nextButton);
     }
 
-    // Function to filter cards based on search query
     function filterCardsBySearch(query = "") {
         const cards = getCards();
         return cards.filter((card) => {
@@ -231,7 +236,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Function to filter cards based on category (tab)
     function filterCardsByCategory(filter = "all") {
         const cards = getCards();
         return cards.filter((card) => {
@@ -240,17 +244,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Combined function to handle both search and category filter
     function filterCards(query = "", filter = "all") {
         const filteredByCategory = filterCardsByCategory(filter);
         const filteredCards = filterCardsBySearch(query).filter((card) => {
             return filteredByCategory.includes(card);
         });
 
+        currentPage = 1; // Reset to the first page
         renderCards(currentPage, filteredCards);
     }
 
-    // Handle tab switching for category filters
     tabs.forEach((tab) => {
         tab.addEventListener("click", (e) => {
             e.preventDefault();
@@ -258,25 +261,22 @@ document.addEventListener("DOMContentLoaded", () => {
             tab.classList.add("active");
 
             const filter = tab.getAttribute("data-filter");
-            activeTabFilter = filter; // Store the active tab filter
-            const query = searchInput.value.trim(); // Get the current search query
-            filterCards(query, filter); // Apply both search query and active tab filter
+            activeTabFilter = filter;
+            const query = searchInput.value.trim();
+            filterCards(query, filter);
         });
     });
 
-    // Handle real-time search input changes
     searchInput.addEventListener("input", (e) => {
         const query = e.target.value.trim();
-        filterCards(query, activeTabFilter); // Apply the current search query and the active tab filter
+        filterCards(query, activeTabFilter);
     });
 
-    // Resize event for pagination adjustment
     window.addEventListener("resize", () => {
         cardsPerPage = getCardsPerPage();
-        renderCards(currentPage); // Re-render cards when window is resized
+        renderCards(currentPage);
     });
 
-    // Initial card render
     renderCards(currentPage);
 });
 

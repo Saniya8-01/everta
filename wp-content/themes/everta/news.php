@@ -31,7 +31,7 @@
         </div>
         <div class="searchWrapper">
             <img src="<?php bloginfo('template_directory'); ?>/images/search-icon.svg" alt="">
-            <input type="search" placeholder="Search here">
+            <input type="text" placeholder="Search here">
         </div>
     </div>
     <?php endwhile; ?>
@@ -96,7 +96,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cardGrid = document.getElementById('cardGrid');
     const pagination = document.getElementById('pagination');
-    const searchInput = document.querySelector('.searchWrapper input[type="search"]');
+    const searchInput = document.querySelector('.searchWrapper input[type="text"]');
     const optionMenu = document.querySelector("#customSelect");
     const selectBtn = optionMenu.querySelector("#selectBtn");
     const options = optionMenu.querySelectorAll(".option");
@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
     noPostsMessage.classList.add('no-posts-message');
     noPostsMessage.textContent = "No posts found.";
 
-    // Function to get cards from the DOM dynamically each time
     function getCards() {
         return Array.from(cardGrid.querySelectorAll('.cards'));
     }
@@ -117,10 +116,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let cardsPerPage = getCardsPerPage();
     let currentPage = 1;
-    let sortedCards = getCards();  // Keep track of the sorted cards
-    let filteredCards = sortedCards; // Track filtered cards
+    let allCards = getCards();
+    let sortedCards = [...allCards];
+    let filteredCards = [...sortedCards];
 
-    // Function to render cards and pagination
     function renderCards(page, filteredCards = sortedCards) {
         cardGrid.innerHTML = '';
 
@@ -138,140 +137,104 @@ document.addEventListener('DOMContentLoaded', () => {
         renderPagination(filteredCards);
     }
 
-    // Render pagination buttons
     function renderPagination(filteredCards) {
         pagination.innerHTML = '';
         const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
 
-        if (totalPages > 1) {
-            // Previous button
-            const prevButton = document.createElement('button');
-            const prevImage = document.createElement('img');
-            prevImage.src = `${theme_vars.template_dir}/images/prev-arrow.svg`;
-            prevImage.alt = 'Previous';
-            prevButton.appendChild(prevImage);
-            prevButton.classList.add('pagination-prev');
-            prevButton.disabled = currentPage === 1;
-            prevButton.addEventListener('click', () => {
-                currentPage--;
-                renderCards(currentPage, filteredCards);
-            });
-            pagination.appendChild(prevButton);
-
-            const maxVisiblePages = window.innerWidth <= 680 ? 3 : 6;
-            let pageButtons = [];
-
-            if (totalPages <= maxVisiblePages) {
-                for (let i = 1; i <= totalPages; i++) {
-                    pageButtons.push(i);
-                }
-            } else {
-                if (currentPage <= 2) {
-                    pageButtons = [1, 2, 3, '...', totalPages];
-                } else if (currentPage >= totalPages - 1) {
-                    pageButtons = [1, '...', totalPages - 2, totalPages - 1, totalPages];
-                } else {
-                    pageButtons = [1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages];
-                }
-            }
-
-            pageButtons.forEach(button => {
-                const pageButton = document.createElement('button');
-                pageButton.textContent = button;
-                if (button === '...') {
-                    pageButton.disabled = true;
-                } else {
-                    pageButton.classList.toggle('active', button === currentPage);
-                    pageButton.addEventListener('click', () => {
-                        currentPage = button;
-                        renderCards(currentPage, filteredCards);
-                    });
-                }
-                pagination.appendChild(pageButton);
-            });
-
-            // Next button
-            const nextButton = document.createElement('button');
-            const nextImage = document.createElement('img');
-            nextImage.src = `${theme_vars.template_dir}/images/black-cta-arrow.svg`;
-            nextImage.alt = 'Next';
-            nextButton.appendChild(nextImage);
-            nextButton.classList.add('pagination-next');
-            nextButton.disabled = currentPage === totalPages;
-            nextButton.addEventListener('click', () => {
-                currentPage++;
-                renderCards(currentPage, filteredCards);
-            });
-            pagination.appendChild(nextButton);
+        if (totalPages <= 1) {
+            pagination.style.display = 'none';
+            return;
         }
+
+        pagination.style.display = 'flex';
+
+        const prevButton = document.createElement('button');
+        const prevImage = document.createElement('img');
+        prevImage.src = `${theme_vars.template_dir}/images/prev-arrow.svg`;
+        prevImage.alt = 'Previous';
+        prevButton.appendChild(prevImage);
+        prevButton.classList.add('pagination-prev');
+        prevButton.disabled = currentPage === 1;
+        prevButton.addEventListener('click', () => {
+            currentPage--;
+            renderCards(currentPage, filteredCards);
+        });
+        pagination.appendChild(prevButton);
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement('button');
+            pageButton.textContent = i;
+            pageButton.classList.toggle('active', i === currentPage);
+            pageButton.addEventListener('click', () => {
+                currentPage = i;
+                renderCards(currentPage, filteredCards);
+            });
+            pagination.appendChild(pageButton);
+        }
+
+        const nextButton = document.createElement('button');
+        const nextImage = document.createElement('img');
+        nextImage.src = `${theme_vars.template_dir}/images/black-cta-arrow.svg`;
+        nextImage.alt = 'Next';
+        nextButton.appendChild(nextImage);
+        nextButton.classList.add('pagination-next');
+        nextButton.disabled = currentPage === totalPages;
+        nextButton.addEventListener('click', () => {
+            currentPage++;
+            renderCards(currentPage, filteredCards);
+        });
+        pagination.appendChild(nextButton);
     }
 
-    // Function to filter cards based on search input
     function filterCards(query) {
-        if (!query) {
-            // If query is empty, reset to show all sorted cards
-            filteredCards = sortedCards;
-        } else {
-            // Filter based on the query
-            filteredCards = sortedCards.filter(card => {
-                const title = card.querySelector('.cardContent h3').textContent.toLowerCase();
-                const description = card.querySelector('.cardContent p').textContent.toLowerCase();
-                const tag = card.querySelector('.cardContent .tag').textContent.toLowerCase();
-                return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
-            });
-        }
-        renderCards(1, filteredCards); // Render filtered cards
+        filteredCards = sortedCards.filter(card => {
+            const title = card.querySelector('.cardContent h3').textContent.toLowerCase();
+            const description = card.querySelector('.cardContent p').textContent.toLowerCase();
+            const tag = card.querySelector('.cardContent .tag').textContent.toLowerCase();
+            return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
+        });
+        currentPage = 1;
+        renderCards(currentPage, filteredCards);
     }
 
-    // Search functionality
     searchInput.addEventListener('input', (e) => {
-        const query = e.target.value.trim(); // Get the trimmed search query
-        filterCards(query); // Filter based on the query
+        filterCards(e.target.value.trim());
     });
 
-    // Sort functionality
     function sortCards(sortType) {
-        let cards = getCards(); // Get the current list of cards
-
+        sortedCards = [...allCards];
         if (sortType === "latest") {
-            sortedCards = cards.sort((a, b) => new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date')));
+            sortedCards.sort((a, b) => new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date')));
         } else if (sortType === "oldest") {
-            sortedCards = cards.sort((a, b) => new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date')));
+            sortedCards.sort((a, b) => new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date')));
         } else if (sortType === "az") {
-            sortedCards = cards.sort((a, b) => a.getAttribute('data-title').localeCompare(b.getAttribute('data-title')));
+            sortedCards.sort((a, b) => a.getAttribute('data-title').localeCompare(b.getAttribute('data-title')));
         } else if (sortType === "za") {
-            sortedCards = cards.sort((a, b) => b.getAttribute('data-title').localeCompare(a.getAttribute('data-title')));
+            sortedCards.sort((a, b) => b.getAttribute('data-title').localeCompare(a.getAttribute('data-title')));
         }
-
-        // After sorting, we apply the filter and render the cards
-        filterCards(searchInput.value.trim()); // Apply current search filter
+        filterCards(searchInput.value.trim());
     }
 
-    // Sort functionality - Event listener for sort options
     options.forEach(option => {
         option.addEventListener("click", function () {
             const sortType = this.getAttribute('data-sort');
             sBtn_text.textContent = this.textContent;
             optionMenu.classList.remove("active");
-            sortCards(sortType); // Call sort function on sort change
+            sortCards(sortType);
         });
     });
 
-    // Handle window resize to adjust number of cards per page
+    selectBtn.addEventListener('click', () => {
+        optionMenu.classList.toggle('active');
+    });
+
     window.addEventListener('resize', () => {
         cardsPerPage = getCardsPerPage();
-        renderCards(currentPage, filteredCards); // Re-render with current filter
+        renderCards(currentPage, filteredCards);
     });
 
-    // Handle opening and closing of the custom select menu
-    selectBtn.addEventListener('click', () => {
-        optionMenu.classList.toggle('active');  // Toggle the custom select menu visibility
-    });
-
-    // Initial render
     renderCards(currentPage);
 });
-
 
 </script>
 

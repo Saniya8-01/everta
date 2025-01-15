@@ -37,6 +37,7 @@
                     }
                     .redirectArrow{opacity: 1;}
                 }
+                .cardImg{img{width: 100%;}}
                 .cardContent{padding: 32px 24px;position: relative;
                     .tag{display: inline-block;border-radius: 4px;background: var(--Yellow-100, #F5F75E);padding: 4px 9px;@include verdanaregular;@include font16;line-height: 175%;font-weight: $fontW400;color: $quaternaryColor1;transition:0.3s all ease-in-out;margin-bottom: 24px;}
                     .cardInfo{display: flex;gap:14px;

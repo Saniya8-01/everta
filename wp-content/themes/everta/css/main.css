@@ -354,11 +354,6 @@ body h1 {
     font-size: 14px;
   }
 }
-@media screen and (max-width: 1280px) {
-  .ctaYellow {
-    padding: 12px 32px;
-  }
-}
 @media screen and (max-width: 1024px) {
   .ctaYellow {
     padding: 18px 32px;
@@ -439,11 +434,6 @@ body h1 {
     transform: translateY(-50%) scale(0.9);
     transform-origin: bottom;
     font-size: 14px;
-  }
-}
-@media screen and (max-width: 1280px) {
-  .ctaYellowBlack {
-    padding: 12px 32px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -528,11 +518,6 @@ body h1 {
     font-size: 14px;
   }
 }
-@media screen and (max-width: 1280px) {
-  .ctaWhiteBlack {
-    padding: 12px 32px;
-  }
-}
 @media screen and (max-width: 1024px) {
   .ctaWhiteBlack {
     padding: 18px 32px;
@@ -612,11 +597,6 @@ body h1 {
     transform: translateY(-50%) scale(0.9);
     transform-origin: bottom;
     font-size: 14px;
-  }
-}
-@media screen and (max-width: 1280px) {
-  .ctaBlack {
-    padding: 12px 32px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -700,11 +680,6 @@ body h1 {
     transform: translateY(-50%) scale(0.9);
     transform-origin: bottom;
     font-size: 14px;
-  }
-}
-@media screen and (max-width: 1280px) {
-  .ctaWhite {
-    padding: 12px 32px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -12584,6 +12559,9 @@ body {
 .cardSection .cardSectionWrapper .cardGrid .cards:hover .redirectArrow {
   opacity: 1;
 }
+.cardSection .cardSectionWrapper .cardGrid .cards .cardImg img {
+  width: 100%;
+}
 .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
   padding: 32px 24px;
   position: relative;
@@ -16480,4 +16458,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
