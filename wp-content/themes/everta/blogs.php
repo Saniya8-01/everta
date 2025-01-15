@@ -99,9 +99,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="redirectArrow">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                </div>
+                       <div class="redirectArrow">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
+                    </div>
             </a>
             <?php endwhile; wp_reset_postdata(); ?>
         </div>
@@ -112,7 +112,7 @@
 <?php get_footer(); ?>
 
 <script>
- document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const tabs = document.querySelectorAll(".blogsTabWrapper a");
     const cardGrid = document.getElementById("cardGrid");
     const pagination = document.getElementById("pagination");
@@ -121,7 +121,7 @@
     noPostsMessage.classList.add("no-posts-message");
     noPostsMessage.textContent = "No posts found.";
 
-    // Function to fetch cards dynamically from the DOM
+    // Function to fetch all cards from the DOM
     function getCards() {
         return Array.from(cardGrid.querySelectorAll(".cards"));
     }
@@ -133,22 +133,17 @@
 
     let cardsPerPage = getCardsPerPage();
     let currentPage = 1;
+    let activeTabFilter = "all"; // Default to 'all' for tab filtering
 
     // Function to render cards for the current page
     function renderCards(page, filteredCards = getCards()) {
-        cardGrid.innerHTML = "";
-
-        if (filteredCards.length === 0) {
-            cardGrid.appendChild(noPostsMessage);
-            pagination.style.display = "none";
-            return;
-        }
-
+        const allCards = getCards();
         const startIndex = (page - 1) * cardsPerPage;
         const endIndex = startIndex + cardsPerPage;
         const visibleCards = filteredCards.slice(startIndex, endIndex);
 
-        visibleCards.forEach((card) => cardGrid.appendChild(card));
+        allCards.forEach((card) => card.style.display = "none"); // Hide all cards initially
+        visibleCards.forEach((card) => card.style.display = "block"); // Show only the filtered cards
         renderPagination(filteredCards);
     }
 
@@ -164,107 +159,124 @@
             pagination.style.display = "flex";
         }
 
-        if (totalPages > 1) {
-            const prevButton = document.createElement("button");
-            const prevImage = document.createElement("img");
-            prevImage.src = `${theme_vars.template_dir}/images/prev-arrow.svg`;
-            prevImage.alt = "Previous";
-            prevButton.appendChild(prevImage);
-            prevButton.classList.add("pagination-prev");
-            prevButton.disabled = currentPage === 1;
-            prevButton.addEventListener("click", () => {
-                currentPage--;
-                renderCards(currentPage, filteredCards);
-            });
-            pagination.appendChild(prevButton);
+        const prevButton = document.createElement("button");
+        const prevImage = document.createElement("img");
+        prevImage.src = `${theme_vars.template_dir}/images/prev-arrow.svg`;
+        prevImage.alt = "Previous";
+        prevButton.appendChild(prevImage);
+        prevButton.classList.add("pagination-prev");
+        prevButton.disabled = currentPage === 1;
+        prevButton.addEventListener("click", () => {
+            currentPage--;
+            renderCards(currentPage, filteredCards);
+        });
+        pagination.appendChild(prevButton);
 
-            const maxVisiblePages = window.innerWidth <= 680 ? 3 : 6;
-            let pageButtons = [];
+        const totalPagesButtons = Math.min(totalPages, window.innerWidth <= 680 ? 3 : 6);
+        let pageButtons = [];
 
-            if (totalPages <= maxVisiblePages) {
-                for (let i = 1; i <= totalPages; i++) {
-                    pageButtons.push(i);
-                }
-            } else {
-                if (currentPage <= 2) {
-                    pageButtons = [1, 2, 3, "...", totalPages];
-                } else if (currentPage >= totalPages - 1) {
-                    pageButtons = [1, "...", totalPages - 2, totalPages - 1, totalPages];
-                } else {
-                    pageButtons = [1, "...", currentPage - 1, currentPage, currentPage + 1, "...", totalPages];
-                }
+        if (totalPages <= totalPagesButtons) {
+            for (let i = 1; i <= totalPages; i++) {
+                pageButtons.push(i);
             }
-
-            pageButtons.forEach((button) => {
-                const pageButton = document.createElement("button");
-                if (button === "...") {
-                    pageButton.textContent = "...";
-                    pageButton.disabled = true;
-                } else {
-                    pageButton.textContent = button;
-                    pageButton.classList.toggle("active", button === currentPage);
-                    pageButton.addEventListener("click", () => {
-                        currentPage = button;
-                        renderCards(currentPage, filteredCards);
-                    });
-                }
-                pagination.appendChild(pageButton);
-            });
-
-            const nextButton = document.createElement("button");
-            const nextImage = document.createElement("img");
-            nextImage.src = `${theme_vars.template_dir}/images/black-cta-arrow.svg`;
-            nextImage.alt = "Next";
-            nextButton.appendChild(nextImage);
-            nextButton.classList.add("pagination-next");
-            nextButton.disabled = currentPage === totalPages;
-            nextButton.addEventListener("click", () => {
-                currentPage++;
-                renderCards(currentPage, filteredCards);
-            });
-            pagination.appendChild(nextButton);
+        } else {
+            if (currentPage <= 2) {
+                pageButtons = [1, 2, 3, "...", totalPages];
+            } else if (currentPage >= totalPages - 1) {
+                pageButtons = [1, "...", totalPages - 2, totalPages - 1, totalPages];
+            } else {
+                pageButtons = [1, "...", currentPage - 1, currentPage, currentPage + 1, "...", totalPages];
+            }
         }
+
+        pageButtons.forEach((button) => {
+            const pageButton = document.createElement("button");
+            if (button === "...") {
+                pageButton.textContent = "...";
+                pageButton.disabled = true;
+            } else {
+                pageButton.textContent = button;
+                pageButton.classList.toggle("active", button === currentPage);
+                pageButton.addEventListener("click", () => {
+                    currentPage = button;
+                    renderCards(currentPage, filteredCards);
+                });
+            }
+            pagination.appendChild(pageButton);
+        });
+
+        const nextButton = document.createElement("button");
+        const nextImage = document.createElement("img");
+        nextImage.src = `${theme_vars.template_dir}/images/black-cta-arrow.svg`;
+        nextImage.alt = "Next";
+        nextButton.appendChild(nextImage);
+        nextButton.classList.add("pagination-next");
+        nextButton.disabled = currentPage === totalPages;
+        nextButton.addEventListener("click", () => {
+            currentPage++;
+            renderCards(currentPage, filteredCards);
+        });
+        pagination.appendChild(nextButton);
     }
 
-    // Function to filter cards based on tab or search input
-    function filterCards(query = "", filter = "all") {
+    // Function to filter cards based on search query
+    function filterCardsBySearch(query = "") {
         const cards = getCards();
-        const filteredCards = cards.filter((card) => {
+        return cards.filter((card) => {
             const title = card.querySelector(".cardContent h3").textContent.toLowerCase();
             const description = card.querySelector(".cardContent p").textContent.toLowerCase();
             const tag = card.querySelector(".cardContent .tag").textContent.toLowerCase();
-            const category = card.getAttribute("data-category");
-            const matchesFilter = filter === "all" || category === filter;
-            const matchesQuery = title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
-            return matchesFilter && matchesQuery;
+
+            return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
         });
-        currentPage = 1; // Reset to the first page when filtering
+    }
+
+    // Function to filter cards based on category (tab)
+    function filterCardsByCategory(filter = "all") {
+        const cards = getCards();
+        return cards.filter((card) => {
+            const category = card.getAttribute("data-category");
+            return filter === "all" || category === filter;
+        });
+    }
+
+    // Combined function to handle both search and category filter
+    function filterCards(query = "", filter = "all") {
+        const filteredByCategory = filterCardsByCategory(filter);
+        const filteredCards = filterCardsBySearch(query).filter((card) => {
+            return filteredByCategory.includes(card);
+        });
+
         renderCards(currentPage, filteredCards);
     }
 
-    // Handle tabs for filtering based on category
+    // Handle tab switching for category filters
     tabs.forEach((tab) => {
         tab.addEventListener("click", (e) => {
             e.preventDefault();
             tabs.forEach((t) => t.classList.remove("active"));
             tab.classList.add("active");
+
             const filter = tab.getAttribute("data-filter");
-            filterCards(searchInput.value.trim(), filter);
+            activeTabFilter = filter; // Store the active tab filter
+            const query = searchInput.value.trim(); // Get the current search query
+            filterCards(query, filter); // Apply both search query and active tab filter
         });
     });
 
-    // Handle search input changes
+    // Handle real-time search input changes
     searchInput.addEventListener("input", (e) => {
         const query = e.target.value.trim();
-        const activeFilter = document.querySelector(".blogsTabWrapper a.active").getAttribute("data-filter");
-        filterCards(query, activeFilter);
+        filterCards(query, activeTabFilter); // Apply the current search query and the active tab filter
     });
 
+    // Resize event for pagination adjustment
     window.addEventListener("resize", () => {
         cardsPerPage = getCardsPerPage();
-        renderCards(currentPage);
+        renderCards(currentPage); // Re-render cards when window is resized
     });
 
+    // Initial card render
     renderCards(currentPage);
 });
 

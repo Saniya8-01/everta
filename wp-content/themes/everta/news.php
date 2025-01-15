@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardsPerPage = getCardsPerPage();
     let currentPage = 1;
     let sortedCards = getCards();  // Keep track of the sorted cards
+    let filteredCards = sortedCards; // Track filtered cards
 
     // Function to render cards and pagination
     function renderCards(page, filteredCards = sortedCards) {
@@ -207,24 +208,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to filter cards based on search input
     function filterCards(query) {
-        const cards = getCards();
         if (!query) {
-            // If query is empty, show all cards
-            renderCards(1, sortedCards);
+            // If query is empty, reset to show all sorted cards
+            filteredCards = sortedCards;
         } else {
-            const filteredCards = cards.filter(card => {
+            // Filter based on the query
+            filteredCards = sortedCards.filter(card => {
                 const title = card.querySelector('.cardContent h3').textContent.toLowerCase();
                 const description = card.querySelector('.cardContent p').textContent.toLowerCase();
                 const tag = card.querySelector('.cardContent .tag').textContent.toLowerCase();
                 return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
             });
-            renderCards(1, filteredCards);
         }
+        renderCards(1, filteredCards); // Render filtered cards
     }
 
-    // Function to handle sorting
+    // Search functionality
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.trim(); // Get the trimmed search query
+        filterCards(query); // Filter based on the query
+    });
+
+    // Sort functionality
     function sortCards(sortType) {
-        let cards = getCards();
+        let cards = getCards(); // Get the current list of cards
 
         if (sortType === "latest") {
             sortedCards = cards.sort((a, b) => new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date')));
@@ -236,35 +243,35 @@ document.addEventListener('DOMContentLoaded', () => {
             sortedCards = cards.sort((a, b) => b.getAttribute('data-title').localeCompare(a.getAttribute('data-title')));
         }
 
-        // After sorting, render the cards and pagination
-        renderCards(currentPage, sortedCards);
+        // After sorting, we apply the filter and render the cards
+        filterCards(searchInput.value.trim()); // Apply current search filter
     }
 
-    // Search functionality
-    searchInput.addEventListener('input', (e) => {
-        const query = e.target.value.trim();
-        filterCards(query);
-    });
-
-    // Sort functionality
+    // Sort functionality - Event listener for sort options
     options.forEach(option => {
         option.addEventListener("click", function () {
             const sortType = this.getAttribute('data-sort');
             sBtn_text.textContent = this.textContent;
             optionMenu.classList.remove("active");
-            sortCards(sortType);
+            sortCards(sortType); // Call sort function on sort change
         });
     });
 
     // Handle window resize to adjust number of cards per page
     window.addEventListener('resize', () => {
         cardsPerPage = getCardsPerPage();
-        renderCards(currentPage);
+        renderCards(currentPage, filteredCards); // Re-render with current filter
+    });
+
+    // Handle opening and closing of the custom select menu
+    selectBtn.addEventListener('click', () => {
+        optionMenu.classList.toggle('active');  // Toggle the custom select menu visibility
     });
 
     // Initial render
     renderCards(currentPage);
 });
+
 
 </script>
 
