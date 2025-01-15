@@ -56,7 +56,6 @@
                 <li class="option" data-sort="za">Z-A</li>
             </ul>
         </div>
-        
         <div class="cardGrid" id="cardGrid">
             <?php
             $args = array('post_type' => 'news-post', 'posts_per_page' => -1, 'order' => 'DESC');
@@ -84,6 +83,7 @@
                 </a>
             <?php endwhile; wp_reset_postdata(); ?>
         </div>
+        <div id="pagination" class="pagination"></div>
     </div>
 </section>
 
