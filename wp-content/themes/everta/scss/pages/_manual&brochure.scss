@@ -14,8 +14,10 @@
     .container{
         .accordions-wrapper{
             .accordion{
-                &.active{padding-bottom:50px;}
-                .accordion-header{
+                &.active{padding-bottom:50px;
+                    .accordion-header{padding-bottom: 78px;}
+                }
+                .accordion-header{padding: 42px 120px;
                     h4{@include terminamedium;font-weight: 600;line-height: 112.5%;@include font32;color: #1E1E1E;}
                 }
                 .accordion-body{@include wrapper;width: 100%;
@@ -68,7 +70,8 @@
         .container{
             .accordions-wrapper{
                 .accordion{
-                    &.active{padding-bottom:40px;}
+                    &.active{padding-bottom:40px;.accordion-header{padding-bottom: 70px}}
+                    .accordion-header{padding: 36px 90px;}
                     .accordion-body{@include wrapper;
                         .brochureDiv{
                             .brochureElement{&:not(:last-child){padding-right: 140px;margin-right: 60px;}
@@ -95,7 +98,8 @@
         .container{
             .accordions-wrapper{
                 .accordion{
-                    &.active{padding-bottom:36px;}
+                    &.active{padding-bottom:36px;.accordion-header{padding-bottom: 60px}}
+                    .accordion-header{padding:30px 80px;}
                     .accordion-body{@include wrapper;
                         .brochureDiv{
                             .brochureElement{&:not(:last-child){padding-right: 120px;margin-right: 50px;}
@@ -122,7 +126,7 @@
         .container{
             .accordions-wrapper{
                 .accordion{
-                    &.active{padding-bottom:32px;}
+                    &.active{padding-bottom:32px;.accordion-header{padding-bottom: 50px}}
                     .accordion-body{@include wrapper;
                         .brochureDiv{
                             .brochureElement{&:not(:last-child){padding-right: 80px;margin-right: 40px;}
@@ -162,10 +166,16 @@
         }
     }
     @media all and (max-width:1024px){
+        .faq-heading {
+            h2 {
+                padding: 0px 60px;
+            }
+        }
         .container{
             .accordions-wrapper{
                 .accordion{
-                    &.active{padding-bottom:30px;}
+                    &.active{padding-bottom:30px; .accordion-header{padding-bottom: 40px;}}
+                    .accordion-header{padding: 20px 60px;}
                     .accordion-body{padding: 0px 60px;
                         .brochureDiv{padding-left:0px;flex-wrap:wrap;gap:30px;
                             .brochureElement{&:not(:last-child){padding-right: 0px;border-right: 0px;}border-right: 0px;
@@ -183,17 +193,30 @@
             }
         }
     }
-    @media all and (max-width:680px){
+    @media all and (max-width:820px){
         .faq-heading {
             h2 {
-                margin-bottom: 32px;font-size: 20px;font-weight: 600;line-height: 28px;
+                padding: 0px 40px;
             }
         }
         .container{
             .accordions-wrapper{
                 .accordion{
-                    &.active{padding-bottom:25px;}
-                    .accordion-header{
+                    .accordion-header{padding: 20px 40px;}
+                    .accordion-body{padding: 0px 40px;}
+                }}}
+    }
+    @media all and (max-width:680px){
+        .faq-heading {
+            h2 {
+                margin-bottom: 32px;font-size: 20px;font-weight: 600;line-height: 28px;@include wrapper;
+            }
+        }
+        .container{
+            .accordions-wrapper{
+                .accordion{
+                    &.active{padding-bottom:25px;.accordion-header{padding-bottom: 32px;}}
+                    .accordion-header{padding: 16px 20px;
                         h4{font-size: 20px;line-height: 24px;}
                     }
                     .accordion-body{@include wrapper;

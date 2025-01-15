@@ -33,7 +33,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 			<nav class="headerWrapper">
 				<div class="headerLogo">
 					<a href="<?php echo get_site_url(); ?>">
-						<img src="<?php bloginfo('template_directory'); ?>/images/everta-logo.svg" alt=""/>
+						<?php the_custom_logo();?>
 					</a>
 				</div>
 				<div class="headerMenu">
@@ -144,115 +144,11 @@ if (isset($locations[$menu_name])) {
 						<img src="<?php bloginfo('template_directory'); ?>/images/close-svg.svg" alt="">
 					</div>
 				</div>
-				<div class="contactTop">
-					<div class="formFields">
-						<label for="">First Name*</label>
-						<input type="text" placeholder="First name">
-					</div>
-					<div class="formFields">
-						<label for="">Your Email*</label>
-						<input type="email" placeholder="Your Email">
-					</div>
-					<div class="formFields">
-						<label for="">Mobile Number*</label>
-						<input type="text" placeholder="9987563984">
-					</div>
-				</div>
-				<div class="contactBottom">
-					<h3>I am looking to</h3>
-					<div class="contactTab">
-						<button class="contact-tab-btn" data-tab="contact-tab-partner">Partner with Everta</button>
-						<button class="contact-tab-btn" data-tab="contact-tab-charger">Buy Everta Charger</button>
-					</div>
-					<!-- Tab Content -->
-					<div id="contact-tab-partner" class="contact-tab-content active">
-						<div class="contact-tab-wrapper">
-							<div class="formFields">
-								<label for="">Company Name*</label>
-								<input type="text" placeholder="company name">
-							</div>
-							<div class="formFields">
-								<label for="">Your Target Market</label>
-								<div class="customSelect" id="popupSelect">
-									<div class="selectBtn">
-										<span class="sBtntext">Select Country</span>
-										<img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg"
-											alt="everta">
-									</div>
-									<ul class="options">
-										<li class="option">India</li>
-										<li class="option">USA</li>
-										<li class="option">UK</li>
-									</ul>
-								</div>
-							</div>
-							<div class="formFields">
-								<label for="">Write a Message</label>
-								<textarea name="" id="" placeholder="Write your message here..."></textarea>
-							</div>
-						</div>
-					</div>
-					<div id="contact-tab-charger" class="contact-tab-content">
-						<div class="contact-tab-wrapper">
-							<div class="formFields">
-								<label for="">Location</label>
-								<div class="customSelect" id="popupSelect">
-									<div class="selectBtn">
-										<span class="sBtntext">Select Country</span>
-										<img src="<?php bloginfo('template_directory'); ?>/images/dropdown-icon.svg"
-											alt="everta">
-									</div>
-									<ul class="options">
-										<li class="option">India</li>
-										<li class="option">USA</li>
-										<li class="option">UK</li>
-									</ul>
-								</div>
-							</div>
-							<div class="formFields">
-								<label for="" class="lowercase">How many chargers do you need?*</label>
-								<div class="charges">
-									<span class="chargesCount">
-										<label>
-											<input type="radio" name="radio">
-											<span>1-4</span>
-										</label>
-									</span>
-									<span class="chargesCount">
-										<label>
-											<input type="radio" name="radio">
-											<span>5-9</span>
-										</label>
-									</span>
-									<span class="chargesCount">
-										<label>
-											<input type="radio" name="radio">
-											<span>10-24</span>
-										</label>
-									</span>
-									<span class="chargesCount">
-										<label>
-											<input type="radio" name="radio">
-											<span>24-49</span>
-										</label>
-									</span>
-									<span class="chargesCount">
-										<label>
-											<input type="radio" name="radio">
-											<span>50+</span>
-										</label>
-									</span>
-								</div>
-							</div>
-							<div class="formFields">
-								<label for="">Write a Message</label>
-								<textarea name="" id="" placeholder="Write your message here..."></textarea>
-							</div>
-						</div>
-					</div>
-					<div class="submitDiv">
-						<input type="submit" value="Send Contact Request">
-					</div>
-				</div>
+				<?php
+				$shortcode = get_field('contact_us_popup', 'option');
+				if ($shortcode) {
+					echo do_shortcode($shortcode);
+				}
+				?>
 			</div>
 		</div>

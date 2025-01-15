@@ -9,7 +9,7 @@
         .bannerImageWrapper {
             height: 100%;
             position: relative;
-
+            img{width: 100%;}
             .mobileImage {
                 display: none;
             }
@@ -1050,7 +1050,7 @@
                     .card-wrapper {
                         padding: 70px 100px 58px 100px;
                         transition: all 0.4s ease-out;
-                        transform: translateY(30px);
+                        transform: translateY(60px);
 
                         img {
                             margin: auto;
@@ -2057,6 +2057,7 @@
                         line-height: 150%;
                     }
                 }
+                .clientImages{width: 150px;}
             }
         }
 
@@ -2349,36 +2350,11 @@
         .wpcf7{
             flex-basis: 60%;
             form{display: flex;gap:56px;
-                .input {      width: 75%;
-                    p{
-                        display: flex;
-                        flex-direction: column;
-                        gap: 17px;
-                        flex-shrink: 0;
-                        label {
-                            color: $quaternaryColor1;
-                            @include terminabold;
-                            @include font18;
+                .input {width: 75%;display: flex;flex-direction: column;gap: 17px;flex-shrink: 0;
+                        label {color: $quaternaryColor1;@include terminabold;@include font18;}
+                        input {width: 100%;background: transparent;border-bottom: 1px solid rgba(62, 62, 62, 0.27);color: $quaternaryColor1;@include verdanaregular;@include font16;padding: 7px 0px 14px 0px;
+                            &::placeholder {color: $quaternaryColor1;@include verdanaregular; @include font16;}
                         }
-            
-                        input {
-                            width: 100%;
-                            background: transparent;
-                            border-bottom: 1px solid rgba(62, 62, 62, 0.27);
-                            color: $quaternaryColor1;
-                            @include verdanaregular;
-                            @include font16;
-                            padding: 7px 0px 14px 0px;
-            
-                            &::placeholder {
-                                color: $quaternaryColor1;
-                                @include verdanaregular;
-                                @include font16;
-                            }
-                        }
-                        br{display: none}
-                    }
-        
                 }
                 .wpcf7-not-valid-tip{@include verdanaregular;@include font14;}
         
@@ -2413,13 +2389,13 @@
                 form{gap: 50px;
                     .input {
                         
-                        p{
+                        
                             gap: 16px;
         
                             input {
                                 padding: 7px 0px 14px 0px;
                             }
-                        }
+                       
                     }
                     .ctaDiv{
                         input{
@@ -2451,13 +2427,13 @@
                 .form{
                     gap: 45%;
                     .input {
-                        p{
+                        
                             gap: 14px;
         
                             input {
                                 padding: 6px 0px 12px 0px;
                             }
-                        }
+                        
                     }
                 }
             }
@@ -2483,13 +2459,13 @@
             .wpcf7{
                 form{gap: 40px;
                     .input {
-                        p{
+                      
                             gap: 12px;
         
                             input {
                                 padding: 6px 0px 12px 0px;
                             }
-                        }
+                        
                     }
                     .ctaDiv{
                         input{padding: 14px 32px;}
@@ -2576,7 +2552,7 @@
                     display: block;
                     .input {
                         width:100%;
-                        p{
+                        
                             gap: 20px;
                             margin-bottom: 32px;
             
@@ -2602,7 +2578,7 @@
                                     line-height: 28px;
                                 }
                             }
-                        }
+                        
                     }
                     .ctaDiv {
                         input{font-size: 12px;padding: 18px 32px; }
