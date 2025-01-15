@@ -72,13 +72,16 @@
                         <span class="tag"><?php echo esc_html($tax); ?></span>
                         <div class="cardInfo">
                             <div class="cardTypo">
-                                <h3><?php echo esc_html(wp_trim_words(get_the_title(), 20, '...')); ?></h3>
+                                <h3><?php 
+                                    $title = get_the_title(); 
+                                    echo (strlen($title) > 50) ? substr($title, 0, 40) . '...' : $title; 
+                                ?></h3>
                                 <p><?php echo get_the_date('d M Y'); ?> • <?php echo estimate_reading_time(get_the_ID()); ?> mins read</p>
                             </div>
-                            <div class="redirectArrow">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="Right Arrow">
-                            </div>
                         </div>
+                    </div>
+                    <div class="redirectArrow">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="Right Arrow">
                     </div>
                 </a>
             <?php endwhile; wp_reset_postdata(); ?>
@@ -91,55 +94,13 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+    const cardGrid = document.getElementById('cardGrid');
+    const pagination = document.getElementById('pagination');
+    const searchInput = document.querySelector('.searchWrapper input[type="search"]');
     const optionMenu = document.querySelector("#customSelect");
     const selectBtn = optionMenu.querySelector("#selectBtn");
     const options = optionMenu.querySelectorAll(".option");
     const sBtn_text = optionMenu.querySelector(".sBtntext");
-    const cardGrid = document.getElementById('cardGrid');
-    const cards = Array.from(cardGrid.querySelectorAll('.cards'));
-
-    // Toggle Dropdown
-    selectBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        optionMenu.classList.toggle("active");
-    });
-
-    document.addEventListener("click", (e) => {
-        if (!optionMenu.contains(e.target)) {
-            optionMenu.classList.remove("active");
-        }
-    });
-
-    // Sorting Logic
-    options.forEach(option => {
-        option.addEventListener("click", function () {
-            const sortType = this.getAttribute('data-sort');
-            sBtn_text.textContent = this.textContent;
-            optionMenu.classList.remove("active");
-
-            let sortedCards = [...cards];
-
-            if (sortType === "latest") {
-                sortedCards.sort((a, b) => new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date')));
-            } else if (sortType === "oldest") {
-                sortedCards.sort((a, b) => new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date')));
-            } else if (sortType === "az") {
-                sortedCards.sort((a, b) => a.getAttribute('data-title').localeCompare(b.getAttribute('data-title')));
-            } else if (sortType === "za") {
-                sortedCards.sort((a, b) => b.getAttribute('data-title').localeCompare(a.getAttribute('data-title')));
-            }
-
-            // Clear existing cards and re-append sorted ones
-            cardGrid.innerHTML = "";
-            sortedCards.forEach(card => cardGrid.appendChild(card));
-        });
-    });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const cardGrid = document.getElementById('cardGrid');
-    const pagination = document.getElementById('pagination');
-    const searchInput = document.querySelector('.searchWrapper input[type="search"]');
 
     const noPostsMessage = document.createElement('div');
     noPostsMessage.classList.add('no-posts-message');
@@ -156,9 +117,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let cardsPerPage = getCardsPerPage();
     let currentPage = 1;
+    let sortedCards = getCards();  // Keep track of the sorted cards
 
-    function renderCards(page, filteredCards = getCards()) {
-        const cards = getCards(); // Always get cards dynamically
+    // Function to render cards and pagination
+    function renderCards(page, filteredCards = sortedCards) {
         cardGrid.innerHTML = '';
 
         if (filteredCards.length === 0) {
@@ -175,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderPagination(filteredCards);
     }
 
+    // Render pagination buttons
     function renderPagination(filteredCards) {
         pagination.innerHTML = '';
         const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
@@ -242,28 +205,66 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Function to filter cards based on search input
     function filterCards(query) {
         const cards = getCards();
-        const filteredCards = cards.filter(card => {
-            const title = card.querySelector('.cardContent h3').textContent.toLowerCase();
-            const description = card.querySelector('.cardContent p').textContent.toLowerCase();
-            const tag = card.querySelector('.cardContent .tag').textContent.toLowerCase();
-            return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
-        });
-        renderCards(1, filteredCards);
+        if (!query) {
+            // If query is empty, show all cards
+            renderCards(1, sortedCards);
+        } else {
+            const filteredCards = cards.filter(card => {
+                const title = card.querySelector('.cardContent h3').textContent.toLowerCase();
+                const description = card.querySelector('.cardContent p').textContent.toLowerCase();
+                const tag = card.querySelector('.cardContent .tag').textContent.toLowerCase();
+                return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
+            });
+            renderCards(1, filteredCards);
+        }
     }
 
+    // Function to handle sorting
+    function sortCards(sortType) {
+        let cards = getCards();
+
+        if (sortType === "latest") {
+            sortedCards = cards.sort((a, b) => new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date')));
+        } else if (sortType === "oldest") {
+            sortedCards = cards.sort((a, b) => new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date')));
+        } else if (sortType === "az") {
+            sortedCards = cards.sort((a, b) => a.getAttribute('data-title').localeCompare(b.getAttribute('data-title')));
+        } else if (sortType === "za") {
+            sortedCards = cards.sort((a, b) => b.getAttribute('data-title').localeCompare(a.getAttribute('data-title')));
+        }
+
+        // After sorting, render the cards and pagination
+        renderCards(currentPage, sortedCards);
+    }
+
+    // Search functionality
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.trim();
         filterCards(query);
     });
 
+    // Sort functionality
+    options.forEach(option => {
+        option.addEventListener("click", function () {
+            const sortType = this.getAttribute('data-sort');
+            sBtn_text.textContent = this.textContent;
+            optionMenu.classList.remove("active");
+            sortCards(sortType);
+        });
+    });
+
+    // Handle window resize to adjust number of cards per page
     window.addEventListener('resize', () => {
         cardsPerPage = getCardsPerPage();
         renderCards(currentPage);
     });
 
+    // Initial render
     renderCards(currentPage);
 });
+
 </script>
 

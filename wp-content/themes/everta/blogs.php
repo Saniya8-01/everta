@@ -93,14 +93,14 @@
                         <div class="cardTypo">
                             <h3><?php 
                                 $title = get_the_title(); 
-                                echo (strlen($title) > 50) ? substr($title, 0, 30) . '...' : $title; 
+                                echo (strlen($title) > 50) ? substr($title, 0, 40) . '...' : $title; 
                             ?></h3>
                             <p><?php echo get_the_date('d M Y'); ?> • <?php echo estimate_reading_time(get_the_ID()); ?> mins read</p>
                         </div>
-                        <div class="redirectArrow">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
-                        </div>
                     </div>
+                </div>
+                <div class="redirectArrow">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
                 </div>
             </a>
             <?php endwhile; wp_reset_postdata(); ?>
@@ -132,7 +132,7 @@
     }
 
     let cardsPerPage = getCardsPerPage();
-    let currentPage = 1; 
+    let currentPage = 1;
 
     // Function to render cards for the current page
     function renderCards(page, filteredCards = getCards()) {
@@ -238,10 +238,11 @@
             const matchesQuery = title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
             return matchesFilter && matchesQuery;
         });
-        currentPage = 1;
+        currentPage = 1; // Reset to the first page when filtering
         renderCards(currentPage, filteredCards);
     }
 
+    // Handle tabs for filtering based on category
     tabs.forEach((tab) => {
         tab.addEventListener("click", (e) => {
             e.preventDefault();
@@ -252,6 +253,7 @@
         });
     });
 
+    // Handle search input changes
     searchInput.addEventListener("input", (e) => {
         const query = e.target.value.trim();
         const activeFilter = document.querySelector(".blogsTabWrapper a.active").getAttribute("data-filter");
@@ -265,6 +267,5 @@
 
     renderCards(currentPage);
 });
-
 
 </script>
