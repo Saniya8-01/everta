@@ -236,6 +236,5 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCards(currentPage);
 });
 
-
 </script>
 
