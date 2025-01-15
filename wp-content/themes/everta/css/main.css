@@ -2203,6 +2203,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
 @media all and (max-width: 1280px) {
   .contactForm {
     width: 1000px;
+    height: 600px;
   }
   .contactForm .contactFormWrapper {
     padding: 42px;
