@@ -436,11 +436,7 @@
   @media all and (max-width: 820px){
     .careerSectionWrapper{
       .hiringProcessContainer{flex-flow: column;
-        .hiringProcessBox{padding: 20px;width: 100%; gap: 20px; align-items: flex-start; position: sticky; top: 0;
-          // .contentBox{flex-flow: row; align-items: flex-start;
-
-          // }
-          // .boxNumber{margin: 30px 0 20px;}
+        .hiringProcessBox{padding: 40px;width: 100%; gap: 20px; align-items: flex-start; position: sticky; top: 0;
           .logoBox{width: 150px; height: 150px;}
           .contentBox{flex-flow: row; gap: 15px; width: 100%; align-items: flex-start;
             .boxNumber{margin: 0; width: 30px; height: 30px;}

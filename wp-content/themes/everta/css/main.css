@@ -7757,7 +7757,7 @@ body {
     flex-flow: column;
   }
   .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox {
-    padding: 20px;
+    padding: 40px;
     width: 100%;
     gap: 20px;
     align-items: flex-start;
