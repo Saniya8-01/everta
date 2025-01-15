@@ -85,9 +85,10 @@
                     <h3>
                         <?php echo get_sub_field('hovercard_title'); ?>
                     </h3>
-                    <p>
+                    <p class ="paraText">
                         <?php echo get_sub_field('hovercard_para'); ?>
                     </p>
+                    <button class="toggle" data-target="myPopup">read more</button>
                 </div>
                 <div class="image">
                     <?php $hoverImage = get_sub_field('hover_image');
@@ -95,6 +96,23 @@
                     <img src="<?php echo esc_url($hoverImage['url']); ?>" loading="lazy"
                         alt="<?php echo esc_attr($hoverImage['alt']); ?>" />
                     <?php endif; ?>
+                </div>
+            </div>
+            <div  id="myPopup" class="popup hide">
+                <div class="overlay">
+                    <div class="popup-header">
+                        <span class="close toggle" data-target="myPopup">
+                            <i class="icon-cross fontelloCrossIcon"></i>
+                        </span>
+                        <h3> 
+                            <?php echo get_sub_field('hovercard_title'); ?>
+                        </h3>
+                    </div>
+                    <div class="popup-body">
+                        <p> 
+                            <?php echo get_sub_field('hovercard_para'); ?>
+                        </p>
+                    </div>
                 </div>
             </div>
             <?php endwhile; ?>
@@ -254,14 +272,14 @@ if ($readmore_link && $readmore_text) : ?>
         <div class="secHeading">
             <h2><?php echo get_sub_field('heading'); ?></h2>
             <?php 
-$career_link = get_sub_field('career_link');
-$career_text = get_sub_field('career_text');
+        $career_link = get_sub_field('career_link');
+        $career_text = get_sub_field('career_text');
 
-if ($career_link && $career_text) : ?>
-    <a href="<?php echo esc_url($career_link); ?>" class="ctaBlack">
-        <?php echo esc_html($career_text); ?>
-    </a>
-<?php endif; ?>
+        if ($career_link && $career_text) : ?>
+            <a href="<?php echo esc_url($career_link); ?>" class="ctaBlack">
+                <?php echo esc_html($career_text); ?>
+            </a>
+        <?php endif; ?>
 
         </div>
     </div>
@@ -7493,3 +7511,22 @@ if ($career_link && $career_text) : ?>
 </section>
 
 <?php get_footer(); ?>
+<script>
+    $(document).on('click', '.toggle', function (event) {
+        event.preventDefault();
+        var target = $(this).data('target');
+        var popup = $('#' + target);
+        popup.toggleClass('hide');
+        if (!popup.hasClass('hide')) {
+            $('body').css('overflow', 'hidden');
+        } else {
+            $('body').css('overflow', 'auto');
+        }
+    });
+    $(document).on('click', function (event) {
+        if (!$(event.target).closest('.popup-body, .toggle').length) {
+            $('.popup-body').closest('.popup').addClass('hide');
+            $('body').css('overflow', 'auto');
+        }
+    });
+</script>
