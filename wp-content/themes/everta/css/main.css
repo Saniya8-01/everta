@@ -1014,9 +1014,6 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a:
   color: #1E1E1E;
   background: #F5F75E;
 }
-header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .languageTranslator::before {
-  content: none !important;
-}
 header .headerWrapper .headerMenu .hamburger-menu {
   display: none;
 }
