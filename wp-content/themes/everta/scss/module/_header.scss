@@ -269,7 +269,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                 .ctaContact{position: fixed;bottom:30px;
                                     .accordian-icon-wrapper {display: none;}
                                     a{padding: 20px 32px;letter-spacing: -0.48px;font-size: 12px;background: $primaryColor1;color:$quaternaryColor1;position: relative;padding-right: 66px;
-                                        &::before{content: url(../images/black-cta-arrow.svg); position: absolute; width: 16px; top: calc(50% + 2px); transform: translateY(-50%); right: 32px; opacity: 1; transition: transform 0.3s ease-out, opacity 0.3s ease-out;}
+                                        &::before{content: '\e80a'; font-family:'fontello'; font-size: 12px; position: absolute; width: 16px; top: 48%; transform: translateY(-50%); right: 32px; opacity: 1; transition: transform 0.3s ease-out, opacity 0.3s ease-out;}
                                     }
                                 }
                             }

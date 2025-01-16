@@ -107,51 +107,68 @@
 
 <section class="evertaEveryoneSection">
     <?php if (have_rows('evertaeveryone_section')) : ?>
-    <?php while (have_rows('evertaeveryone_section')) : the_row(); ?>
-    <div class="evertaEveryoneSectionWrapper">
-        <div class="evertaEveryoneSectionHeading">
-            <h2>
-                <?php echo get_sub_field('evertaeveryone_mainheading'); ?>
-            </h2>
-            <p>
-                <?php echo get_sub_field('evertaeveryone_subheading'); ?>
-            </p>
-        </div>
-        <div class="hover-section">
-            <?php if (have_rows('hover_section')) : ?>
-            <?php while (have_rows('hover_section')) : the_row(); ?>
-            <div class="hover-box">
-                <div class="content">
-                    <h3>
-                        <?php echo get_sub_field('hovercard_title'); ?>
-                    </h3>
+        <?php while (have_rows('evertaeveryone_section')) : the_row(); ?>
+            <div class="evertaEveryoneSectionWrapper">
+                <div class="evertaEveryoneSectionHeading">
+                    <h2>
+                        <?php echo get_sub_field('evertaeveryone_mainheading'); ?>
+                    </h2>
                     <p>
-                        <?php echo get_sub_field('hovercard_para'); ?>
+                        <?php echo get_sub_field('evertaeveryone_subheading'); ?>
                     </p>
-                    <?php 
-                    $explore_link = get_sub_field('explore_link');
-                    $explore_text = get_sub_field('explore_text');
-                    
-                    if ($explore_link && $explore_text) : ?>
-                        <a href="<?php echo $explore_link; ?>" class="ctaYellowBlack">
-                            <?php echo $explore_text; ?>
-                        </a>
-                    <?php endif; ?>
-                    
                 </div>
-                <div class="image">
-                    <?php $hoverImage = get_sub_field('hover_image');
-                    if (!empty($hoverImage)) : ?>
-                    <img src="<?php echo esc_url($hoverImage['url']); ?>" loading="lazy"
-                        alt="<?php echo esc_attr($hoverImage['alt']); ?>" />
+                <div class="hover-section">
+                    <?php if (have_rows('hover_section')) : ?>
+                        <?php $counter=1; while (have_rows('hover_section')) : the_row(); ?>
+                            <div class="hover-box">
+                                <div class="content">
+                                    <h3>
+                                        <?php echo get_sub_field('hovercard_title'); ?>
+                                    </h3>
+                                    <p>
+                                        <?php echo get_sub_field('hovercard_para'); ?>
+                                    </p>
+                                    <button class="toggle" data-target="myPopup<?php echo $counter; ?>">read more</button>
+                                    <?php 
+                                        $explore_link = get_sub_field('explore_link');
+                                        $explore_text = get_sub_field('explore_text');
+                                        
+                                        if ($explore_link && $explore_text) : ?>
+                                            <a href="<?php echo $explore_link; ?>" class="ctaYellowBlack">
+                                                <?php echo $explore_text; ?>
+                                            </a>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="image">
+                                    <?php $hoverImage = get_sub_field('hover_image');
+                                    if (!empty($hoverImage)) : ?>
+                                    <img src="<?php echo esc_url($hoverImage['url']); ?>" loading="lazy"
+                                        alt="<?php echo esc_attr($hoverImage['alt']); ?>" />
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php $counter=$counter+1; endwhile; ?>
                     <?php endif; ?>
                 </div>
             </div>
-            <?php endwhile; ?>
+            <?php if (have_rows('hover_section')) : ?>
+                <?php $counter=1; while (have_rows('hover_section')) : the_row(); ?>
+                    <div id="myPopup<?php echo $counter; ?>" class="popup hide">
+                        <div class="overlay">
+                            <div class="popup-header">
+                                <span class="close toggle" data-target="myPopup<?php echo $counter; ?>">
+                                    <i class="icon-cross fontelloCrossIcon"></i>
+                                </span>
+                                <h3><?php echo get_sub_field('hovercard_title'); ?></h3>
+                            </div>
+                            <div class="popup-body">
+                                <p><?php echo get_sub_field('hovercard_para'); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php $counter=$counter+1; endwhile; ?>
             <?php endif; ?>
-        </div>
-    </div>
-    <?php endwhile; ?>
+        <?php endwhile; ?>
     <?php endif; ?>
 </section>
 
@@ -206,16 +223,16 @@
         <div class="tab-content active" id="ac">
             <div class="cards">
                 <?php 
-        $related_post = get_sub_field('related_products_ac'); 
-        if ($related_post) : 
-            $counter = 0; // Initialize counter
-            foreach ($related_post as $post) : 
-                setup_postdata($post); 
-                $post_id = get_the_ID(); 
-                $post_link = get_permalink($post_id);
-                if ($counter >= 3) break; // Stop loop after 3 cards
-                $counter++;
-        ?>
+                    $related_post = get_sub_field('related_products_ac'); 
+                    if ($related_post) : 
+                        $counter = 0; // Initialize counter
+                        foreach ($related_post as $post) : 
+                            setup_postdata($post); 
+                            $post_id = get_the_ID(); 
+                            $post_link = get_permalink($post_id);
+                            if ($counter >= 3) break; // Stop loop after 3 cards
+                            $counter++;
+                    ?>
                 <div class="card">
                     <div class="card-wrapper">
                         <?php $full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
@@ -224,17 +241,17 @@
                             <?php the_title(); ?>
                         </h3>
                         <?php 
-                $features = [];
-                if (have_rows('banner_section', $post_id)) : 
-                    while (have_rows('banner_section', $post_id)) : the_row(); 
-                        if (have_rows('features_list')) : 
-                            while (have_rows('features_list')) : the_row(); 
-                                $features[] = get_sub_field('feature_info');
-                            endwhile; 
-                        endif; 
-                    endwhile; 
-                endif; 
-                ?>
+                            $features = [];
+                            if (have_rows('banner_section', $post_id)) : 
+                                while (have_rows('banner_section', $post_id)) : the_row(); 
+                                    if (have_rows('features_list')) : 
+                                        while (have_rows('features_list')) : the_row(); 
+                                            $features[] = get_sub_field('feature_info');
+                                        endwhile; 
+                                    endif; 
+                                endwhile; 
+                            endif; 
+                            ?>
                         <h5>
                             <?php echo implode(' • ', $features); ?>
                         </h5>
@@ -243,7 +260,8 @@
                         </p>
                     </div>
                     <a href="<?php echo esc_url($post_link); ?>">Explore more
-                        <img src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt="">
+                        <!-- <img src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt=""> -->
+                         <i class="icon-right-arrow fontellowRightArrow"></i>
                     </a>
                 </div>
                 <?php endforeach; ?>

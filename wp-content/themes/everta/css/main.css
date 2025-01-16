@@ -1363,10 +1363,12 @@ header .headerWrapper .headerMenu .hamburger-menu {
     padding-right: 66px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a::before {
-    content: url(../images/black-cta-arrow.svg);
+    content: "\e80a";
+    font-family: "fontello";
+    font-size: 12px;
     position: absolute;
     width: 16px;
-    top: calc(50% + 2px);
+    top: 48%;
     transform: translateY(-50%);
     right: 32px;
     opacity: 1;
@@ -3791,7 +3793,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
     display: block;
-    margin-bottom: 32px;
+    margin-bottom: 0px;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -3813,6 +3815,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content a, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 a, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 a {
     display: inline-block;
+    margin-top: 32px;
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .image {
     order: 1;
@@ -4173,6 +4176,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     font-size: 12px;
   }
 }
+.chargingSection .tab-wrapper .tab-content .cards .card .fontellowRightArrow {
+  font-size: 16px;
+  color: #F5F75E;
+  line-height: normal;
+}
 .chargingSection .tab-wrapper .tab-content .cards .card.active {
   background: #F5F75E;
   z-index: 2;
@@ -4193,11 +4201,22 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   color: #F5F75E;
   text-align: center;
   font-family: "termina_testmedium";
+  font-size: 18px;
   opacity: 0;
   width: 100%;
   z-index: 2;
   padding: 80px;
   transition: all 0.4s ease-out;
+}
+@media screen and (max-width: 1600px) {
+  .chargingSection .tab-wrapper .tab-content .cards .card a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .chargingSection .tab-wrapper .tab-content .cards .card a {
+    font-size: 14px;
+  }
 }
 .chargingSection .tab-wrapper .tab-content .cards .card a img {
   width: 14px;
@@ -4345,6 +4364,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a::before {
     border-top-right-radius: 30px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card a .fontellowRightArrow {
+    font-size: 14px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a img {
     width: 12px;
@@ -16621,4 +16643,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
