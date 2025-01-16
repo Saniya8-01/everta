@@ -976,11 +976,11 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMe
   min-width: 115px;
   gap: 0 !important;
 }
-header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li a {
   cursor: pointer;
   padding: 12px 40px;
 }
-header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p:hover {
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li a:hover {
   background: #F5F75E;
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact {
@@ -1038,7 +1038,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
     min-width: 110px;
   }
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li a {
     padding: 10px 36px;
   }
 }
@@ -1067,7 +1067,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
     min-width: 100px;
   }
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li a {
     padding: 9px 32px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
@@ -1097,7 +1097,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
     min-width: 90px;
   }
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li a {
     padding: 8px 28px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
@@ -1355,10 +1355,12 @@ header .headerWrapper .headerMenu .hamburger-menu {
     padding-right: 62px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a::before {
-    content: url(../images/black-cta-arrow.svg);
+    content: "\e80a";
+    font-family: "fontello";
+    font-size: 12px;
     position: absolute;
     width: 16px;
-    top: calc(50% + 2px);
+    top: 48%;
     transform: translateY(-50%);
     right: 32px;
     opacity: 1;
@@ -3864,7 +3866,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
     display: block;
-    margin-bottom: 32px;
+    margin-bottom: 0px;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -3886,6 +3888,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content a, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 a, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 a {
     display: inline-block;
+    margin-top: 32px;
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .image {
     order: 1;
@@ -4246,6 +4249,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     font-size: 12px;
   }
 }
+.chargingSection .tab-wrapper .tab-content .cards .card .fontellowRightArrow {
+  font-size: 16px;
+  color: #F5F75E;
+  line-height: normal;
+}
 .chargingSection .tab-wrapper .tab-content .cards .card.active {
   background: #F5F75E;
   z-index: 2;
@@ -4266,11 +4274,22 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   color: #F5F75E;
   text-align: center;
   font-family: "termina_testmedium";
+  font-size: 18px;
   opacity: 0;
   width: 100%;
   z-index: 2;
   padding: 80px;
   transition: all 0.4s ease-out;
+}
+@media screen and (max-width: 1600px) {
+  .chargingSection .tab-wrapper .tab-content .cards .card a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .chargingSection .tab-wrapper .tab-content .cards .card a {
+    font-size: 14px;
+  }
 }
 .chargingSection .tab-wrapper .tab-content .cards .card a img {
   width: 14px;
@@ -4418,6 +4437,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a::before {
     border-top-right-radius: 30px;
+  }
+  .chargingSection .tab-wrapper .tab-content .cards .card a .fontellowRightArrow {
+    font-size: 14px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a img {
     width: 12px;
@@ -4576,11 +4598,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a::after {
     border-top-left-radius: 30px;
-    width: 81%;
+    width: 91%;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a::before {
     border-top-right-radius: 30px;
-    width: 21%;
+    width: 11%;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a img {
     width: 10px;
@@ -10097,13 +10119,16 @@ body {
   transform-origin: left;
   width: 45%;
 }
-.foundersSec .secWrapper .secContent .founderDetailsbox:last-child {
+.foundersSec .secWrapper .secContent .founderDetailsbox:nth-child(1) {
+  flex-flow: row;
+}
+.foundersSec .secWrapper .secContent .founderDetailsbox:nth-child(2) {
   flex-flow: row-reverse;
 }
-.foundersSec .secWrapper .secContent .founderDetailsbox:last-child .detailBox {
+.foundersSec .secWrapper .secContent .founderDetailsbox:nth-child(2) .detailBox {
   text-align: start;
 }
-.foundersSec .secWrapper .secContent .founderDetailsbox:last-child .pictureBox {
+.foundersSec .secWrapper .secContent .founderDetailsbox:nth-child(2) .pictureBox {
   transform-origin: right;
 }
 .foundersSec:hover {
@@ -10260,11 +10285,15 @@ body {
     font-size: 16px;
     line-height: 175%;
   }
-  .foundersSec .secWrapper .secContent .founderDetailsbox:last-child {
+  .foundersSec .secWrapper .secContent .founderDetailsbox:nth-child(1) {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  .foundersSec .secWrapper .secContent .founderDetailsbox:nth-child(2) {
     flex-flow: column;
     align-items: flex-end;
   }
-  .foundersSec .secWrapper .secContent .founderDetailsbox:last-child .detailBox {
+  .foundersSec .secWrapper .secContent .founderDetailsbox:nth-child(2) .detailBox {
     text-align: end;
   }
   .foundersSec:hover {
@@ -16885,4 +16914,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */

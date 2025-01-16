@@ -623,6 +623,25 @@ if ($(".visitUsSec").length) {
 
     showActiveIcon()
 }
+if($(".evertaEveryoneSection").length){
+    $(document).on('click', '.toggle', function (event) {
+        event.preventDefault();
+        var target = $(this).data('target');
+        var popup = $('#' + target);
+        popup.toggleClass('hide');
+        if (!popup.hasClass('hide')) {
+            $('body').css('overflow', 'hidden');
+        } else {
+            $('body').css('overflow', 'auto');
+        }
+    });
+    $(document).on('click', function (event) {
+        if (!$(event.target).closest('.popup-body, .toggle').length) {
+            $('.popup-body').closest('.popup').addClass('hide');
+            $('body').css('overflow', 'auto');
+        }
+    });
+}
 /******About Us Js End */
 
 /* Careers page JS Starts */
@@ -941,34 +960,5 @@ $(window).scroll(function () {
 });
 }
 
-    let customSelects = document.querySelectorAll("#popupSelect");
-
-    customSelects.forEach((customSelect) => {
-        const selectBtn = customSelect.querySelector(".selectBtn");
-        const options = customSelect.querySelectorAll(".option");
-        const sBtn_text = customSelect.querySelector(".sBtntext");
-
-        // Toggle dropdown menu for this customSelect
-        selectBtn.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevent event bubbling
-            customSelect.classList.toggle("active");
-        });
-
-        // Handle option selection for this customSelect
-        options.forEach((option) => {
-            option.addEventListener("click", () => {
-                const selectedText = option.textContent.trim();
-                sBtn_text.textContent = selectedText; // Update button text
-                customSelect.classList.remove("active"); // Close dropdown
-            });
-        });
-    });
-
-    // Close all dropdowns if clicking outside any customSelect
-    document.addEventListener("click", () => {
-        customSelects.forEach((customSelect) => {
-            customSelect.classList.remove("active");
-        });
-    });
 
     

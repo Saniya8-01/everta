@@ -95,10 +95,10 @@ if (isset($locations[$menu_name])) {
 				<div class="dropdownMenu languageMenu">
 					<ul>
 						<li>
-							<p>EN</p>
+							<a href="">EN</a>
 						</li>
 						<li>
-							<p>PL</p>
+							<a href="">PL</a>
 						</li>
 					</ul>
 				</div>
