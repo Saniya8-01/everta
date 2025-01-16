@@ -23,12 +23,16 @@ function hasScrolled() {
     // Make sure they scroll more than delta
     if (Math.abs(lastScrollTop - st) <= delta) return;
 
-    // Detect if we are scrolling within the `.evertaEveryoneSection`
+    // Detect if we are scrolling within the `.evertaEveryoneSection` or `.chargingSection`
     const isWithinEvertaSection = isInSection('.evertaEveryoneSection');
+    const isWithinChargingSection = isInSection('.chargingSection');
 
-    if ($(window).width() <= 820 && isWithinEvertaSection) {
-        // Add nav-up class on reverse scroll within `.evertaEveryoneSection`
-        $("header").removeClass("nav-down").addClass("nav-up");
+    if ($(window).width() <= 820 && (isWithinEvertaSection || isWithinChargingSection)) {
+        // Add nav-up class on reverse scroll only within the specified sections
+        if ((isWithinEvertaSection && !isWithinChargingSection) ||
+            (isWithinChargingSection && !isWithinEvertaSection)) {
+            $("header").removeClass("nav-down").addClass("nav-up");
+        }
     } else if (st > lastScrollTop && st > navbarHeight) {
         // Scrolling down
         $("header").removeClass("nav-down").addClass("nav-up");
@@ -42,7 +46,7 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
-// Helper function to detect if the scroll position is within a specific section
+// Helper function to detect if the scroll position is within a specific section (80% visible)
 function isInSection(sectionClass) {
     const section = $(sectionClass);
     if (section.length) {
@@ -51,11 +55,15 @@ function isInSection(sectionClass) {
         const scrollTop = $(window).scrollTop();
         const windowHeight = $(window).height();
 
-        // Check if the current scroll position overlaps with the section
-        return scrollTop + windowHeight > sectionTop && scrollTop < sectionBottom;
+        // Calculate 80% of the section height
+        const sectionVisible = scrollTop + windowHeight * 0.5; // 80% from top of the window
+
+        // Check if 80% of the section is visible in the viewport
+        return sectionVisible > sectionTop && scrollTop < sectionBottom;
     }
     return false;
 }
+
 
 // Menu toggle functionality for <= 1024px width
 $(document).ready(function () {
@@ -956,7 +964,30 @@ $(window).scroll(function () {
         });
     });
 
-
+    let blocked = false;
+    let blockTimeout = null;
+    // let prevDeltaY = 0;
+    $(".mousescrollSlide").on('mousewheel DOMMouseScroll wheel', (function (e) {
+        let deltaX = e.originalEvent.deltaX;
+        let deltaY = e.originalEvent.deltaY;
+        if (typeof deltaY != 'undefined') {
+            clearTimeout(blockTimeout);
+            blockTimeout = setTimeout(function () {
+                blocked = false;
+            }, 50);
+            if ((deltaY < 1 && deltaY > -1) && ((deltaX > 10 && deltaX > prevDeltaX) || (deltaX < -10 && deltaX < prevDeltaX) || !blocked)) {
+                e.preventDefault();
+                e.stopPropagation();
+                blocked = true;
+                prevDeltaX = deltaX;
+                if (deltaX > 0) {
+                    $(this).slick('slickNext');
+                } else {
+                    $(this).slick('slickPrev');
+                }
+            }
+        }
+    }));
     
 
 

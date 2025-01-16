@@ -675,7 +675,7 @@
 
         .logoSliderContainer {position: relative;
             .left-fade,
-            .right-fade {position: absolute;top: 0;bottom: 0;width: 150px;z-index: 9;}
+            .right-fade {position: absolute;top: 0;bottom: 0;width: 150px;z-index: 5;}
             .left-fade {left: 0;background: linear-gradient(90deg, #1E1E1E 39.32%, rgba(30, 30, 30, 0.00) 100%);}
             .right-fade {right: 0;background: linear-gradient(270deg, #1E1E1E 39.32%, rgba(30, 30, 30, 0.00) 100%);}
             .logoSlider {
@@ -684,7 +684,7 @@
                     align-items: center;
                 }
 
-                .logo {
+                .logo {padding: 0px 20px;
                     img {
                         margin: auto;
                     }
@@ -2273,7 +2273,7 @@
     @media all and (max-width:1280px) {
 
         .formWrapper {
-            padding: 36px 0px;
+            padding: 40px 0px;
             @include wrapper;
         }
     }
