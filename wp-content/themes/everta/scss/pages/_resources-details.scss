@@ -219,8 +219,8 @@
                 .imgBox{margin-bottom: 30px;
                     img{width: 100%; height: 100%; object-fit: cover;}
                 }
-                .contentBox{padding: 0 24px 55px; display: flex; align-items: flex-end; justify-content: space-between;
-                    .content{width: calc(100% - 75px);
+                .contentBox{padding: 0 24px 55px; display: flex; align-items: flex-end; justify-content: space-between; position: relative;
+                    .content{width: 100%;
                         span{padding: 4px 8px; background: $primaryColor1; border-radius: 4px; color: #000; @include verdanaregular; @include font16; line-height: 175%; transition: 0.3s all ease-in-out;}
                         p{margin: 24px 0 14px 0; color: $quaternaryColor1; @include verdanaregular; @include font24; line-height: 166%;}
                         ul{display: flex; align-items: center; gap: 10px;
@@ -231,7 +231,7 @@
                             }
                         }
                     }
-                    .arrowBox{border: 1px solid #000; border-radius: 100%; width: 64px; height: 64px; display: flex; align-items: center; justify-content: center;opacity: 0; visibility: hidden; transition: 0.3s all ease-in-out;
+                    .arrowBox{border: 1px solid #000; border-radius: 100%; width: 64px; height: 64px; display: flex; align-items: center; justify-content: center;opacity: 0; visibility: hidden; transition: 0.3s all ease-in-out; position: absolute; right: 24px;
                         .rotateRightArrow{font-size: 20px; transform: rotate(-45deg);}
                     }
                 }
@@ -267,7 +267,7 @@
             .cardContainer{
                 .blogCard{
                     .contentBox{
-                        .content{width: calc(100% - 70px);
+                        .content{
                             p{margin: 22px 0 12px 0;}
                         }
                         .arrowBox{width: 60px; height: 60px;}
@@ -289,6 +289,7 @@
                                 }
                             }
                         }
+                        .arrowBox{right: 22px;}
                     }
                 }
                 .slick-prev,
@@ -306,10 +307,10 @@
                 .blogCard{
                     .imgBox{margin-bottom: 25px;}
                     .contentBox{padding: 0 20px 45px;
-                        .content{width: calc(100% - 60px);
+                        .content{
                             p{margin: 20px 0 10px 0;}
                         }
-                        .arrowBox{width: 50px; height: 50px;
+                        .arrowBox{width: 50px; height: 50px; right: 20px;
                             .rotateRightArrow{font-size: 16px;}
                         }
                     }
@@ -330,7 +331,7 @@
                 .blogCard{width: calc(50% - 13px); margin: 0 10px;
                     .imgBox{margin-bottom: 20px;}
                     .contentBox{padding: 0 18px 40px;
-                        .content{width: calc(100% - 50px);
+                        .content{
                             p{margin: 18px 0 10px 0;}
                             ul{
                                 li:last-child{
@@ -338,7 +339,7 @@
                                 }
                             }
                         }
-                        .arrowBox{width: 45px; height: 45px;
+                        .arrowBox{width: 45px; height: 45px; right: 18px;
                             .rotateRightArrow{font-size: 14px;}
                         }
                     }
@@ -374,8 +375,9 @@
                 .blogCard{
                     .imgBox{margin-bottom: 20px;}
                     .contentBox{padding: 0 18px 35px;align-items: end;
-                        .content{width: calc(100% - 50px);}
-                        .arrowBox{opacity: 1; visibility: visible; width: 40px; height: 40px;}
+                        .arrowBox{opacity: 1; visibility: visible; width: 35px; height: 35px; right: 18px; bottom: 30px;
+                            .rotateRightArrow{font-size: 12px;}
+                        }
                     }
                     &:hover{background: #fff;
                         .contentBox{
@@ -419,9 +421,7 @@
                                 }
                             }
                         }
-                        .arrowBox{
-                            .rotateRightArrow{font-size: 12px;}
-                        }
+                        .arrowBox{right: 16px;}
                     }
                 }
                 .slick-list{margin: 0 -5px;}

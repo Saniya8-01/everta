@@ -11434,9 +11434,10 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  position: relative;
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 {
-  width: calc(100% - 75px);
+  width: 100%;
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content span, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 span, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 span {
   padding: 4px 8px;
@@ -11521,6 +11522,8 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s all ease-in-out;
+  position: absolute;
+  right: 24px;
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
   font-size: 20px;
@@ -11584,9 +11587,6 @@ body {
   .relatedPostSec .secWrapper .secHeading {
     margin-bottom: 60px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 {
-    width: calc(100% - 70px);
-  }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 p {
     margin: 22px 0 12px 0;
   }
@@ -11610,6 +11610,9 @@ body {
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li:last-child::before, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li:last-child::before {
     top: 9px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
+    right: 22px;
   }
   .relatedPostSec .secWrapper .cardContainer .slick-prev,
   .relatedPostSec .secWrapper .cardContainer .slick-next {
@@ -11641,15 +11644,13 @@ body {
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
     padding: 0 20px 45px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 {
-    width: calc(100% - 60px);
-  }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 p {
     margin: 20px 0 10px 0;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
     width: 50px;
     height: 50px;
+    right: 20px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
     font-size: 16px;
@@ -11689,9 +11690,6 @@ body {
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
     padding: 0 18px 40px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 {
-    width: calc(100% - 50px);
-  }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 p {
     margin: 18px 0 10px 0;
   }
@@ -11701,6 +11699,7 @@ body {
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
     width: 45px;
     height: 45px;
+    right: 18px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
     font-size: 14px;
@@ -11742,14 +11741,16 @@ body {
     padding: 0 18px 35px;
     align-items: end;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 {
-    width: calc(100% - 50px);
-  }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
     opacity: 1;
     visibility: visible;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+    right: 18px;
+    bottom: 30px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
+    font-size: 12px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard:hover {
     background: #fff;
@@ -11821,8 +11822,8 @@ body {
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li:last-child::before, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li:last-child::before {
     top: 6px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
-    font-size: 12px;
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
+    right: 16px;
   }
   .relatedPostSec .secWrapper .cardContainer .slick-list {
     margin: 0 -5px;
