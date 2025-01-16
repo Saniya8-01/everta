@@ -941,34 +941,5 @@ $(window).scroll(function () {
 });
 }
 
-    let customSelects = document.querySelectorAll("#popupSelect");
-
-    customSelects.forEach((customSelect) => {
-        const selectBtn = customSelect.querySelector(".selectBtn");
-        const options = customSelect.querySelectorAll(".option");
-        const sBtn_text = customSelect.querySelector(".sBtntext");
-
-        // Toggle dropdown menu for this customSelect
-        selectBtn.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevent event bubbling
-            customSelect.classList.toggle("active");
-        });
-
-        // Handle option selection for this customSelect
-        options.forEach((option) => {
-            option.addEventListener("click", () => {
-                const selectedText = option.textContent.trim();
-                sBtn_text.textContent = selectedText; // Update button text
-                customSelect.classList.remove("active"); // Close dropdown
-            });
-        });
-    });
-
-    // Close all dropdowns if clicking outside any customSelect
-    document.addEventListener("click", () => {
-        customSelects.forEach((customSelect) => {
-            customSelect.classList.remove("active");
-        });
-    });
 
     

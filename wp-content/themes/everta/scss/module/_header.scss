@@ -35,7 +35,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                 .languageMenu{
                                     ul{min-width: 115px;gap:0 !important;
                                         li{
-                                            p{cursor: pointer;padding: 12px 40px;
+                                            a{cursor: pointer;padding: 12px 40px;
                                                 &:hover{background: $primaryColor1;}
                                             }
                                         }
@@ -69,7 +69,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                 .languageMenu{
                                     ul{min-width: 110px;
                                         li{
-                                            p{padding: 10px 36px;}
+                                            a{padding: 10px 36px;}
                                         }
                                     }
                                 }
@@ -100,7 +100,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                     .languageMenu{
                                         ul{min-width: 100px;
                                             li{
-                                                p{padding: 9px 32px;}
+                                                a{padding: 9px 32px;}
                                             }}
                                     }
                                 }
@@ -133,7 +133,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                     .languageMenu{
                                         ul{min-width: 90px;
                                             li{
-                                                p{padding: 8px 28px;}
+                                                a{padding: 8px 28px;}
                                             }
                                         }
                                     }

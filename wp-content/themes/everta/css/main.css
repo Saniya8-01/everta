@@ -976,11 +976,11 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMe
   min-width: 115px;
   gap: 0 !important;
 }
-header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li a {
   cursor: pointer;
   padding: 12px 40px;
 }
-header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p:hover {
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li a:hover {
   background: #F5F75E;
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact {
@@ -1038,7 +1038,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
     min-width: 110px;
   }
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li a {
     padding: 10px 36px;
   }
 }
@@ -1067,7 +1067,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
     min-width: 100px;
   }
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li a {
     padding: 9px 32px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
@@ -1097,7 +1097,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
     min-width: 90px;
   }
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li p {
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul li a {
     padding: 8px 28px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
