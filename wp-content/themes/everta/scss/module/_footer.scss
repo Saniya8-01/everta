@@ -31,10 +31,10 @@ footer{
     }
     @media all and (max-width:1800px){
         .footerContainer{
-            .footerLeft{padding: 40px 80px;
+            .footerLeft{padding: 50px 80px;
                 .footerSocialmedia{gap: 24px;}
             }
-            .footerRight{padding: 40px 80px;
+            .footerRight{padding: 50px 80px;
                 .footerRightContainer{gap: 65px;
                     .footerMenus{gap: 40px 80px;
                         .footerMenuWrapper{
@@ -50,10 +50,10 @@ footer{
     }
     @media all and (max-width:1600px){
         .footerContainer{
-            .footerLeft{padding: 30px 70px;
+            .footerLeft{padding: 50px 70px;
                 .footerSocialmedia{padding-top: 40px;gap: 20px;}
             }
-            .footerRight{padding: 30px 70px;
+            .footerRight{padding: 50px 70px;
                 .footerRightContainer{gap: 55px;
                     .footerMenus{gap: 30px 70px;
                         .footerMenuWrapper{
@@ -69,16 +69,16 @@ footer{
     }
     @media all and (max-width:1440px){
         .footerContainer{
-            .footerLeft{padding: 25px 40px;
+            .footerLeft{padding: 40px 80px;
                 .footerSocialmedia{padding-top: 36px;gap: 18px;
                     .socialmediaIcons{
                         .socialIcons{font-size: 18px;}
                     }
                 }
             }
-            .footerRight{padding: 25px 40px;
+            .footerRight{padding: 40px 80px;
                 .footerRightContainer{gap: 30px;
-                    .footerMenus{padding: 25px 40px;gap: 30px 60px;
+                    .footerMenus{gap: 30px 60px;
                         .footerMenuWrapper{
                             p{margin-bottom: 14px;}
                         }
@@ -97,14 +97,14 @@ footer{
             }
         }
     }
-    @media all and (max-width:1180px){
+    @media all and (max-width:1280px){
         .footerContainer{
-            .footerLeft{padding: 18px 30px;
+            .footerLeft{padding: 35px 30px;
                 .footerSocialmedia{padding-top: 28px;gap: 14px;}
             }
-            .footerRight{padding: 18px 30px;
+            .footerRight{padding: 35px 30px;
                 .footerRightContainer{gap: 24px;
-                    .footerMenus{padding: 18px 30px;grid-template-columns:repeat(3,1fr);
+                    .footerMenus{grid-template-columns:repeat(3,1fr);
                         .footerMenuWrapper{
                             p{margin-bottom: 12px;}
                         }
