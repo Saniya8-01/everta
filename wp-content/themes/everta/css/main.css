@@ -4458,38 +4458,38 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     height: 10px;
   }
 }
-@media all and (max-width: 1024px) and (min-height: 1366px) {
+@media all and (max-width: 1024px) {
   .chargingSection .tab-wrapper .tab-header {
     padding-left: 120px;
     padding-right: 120px;
     align-items: flex-start;
   }
 }
-@media screen and (max-width: 1024px) and (min-height: 1366px) and (max-width: 1600px) {
+@media screen and (max-width: 1024px) and (max-width: 1600px) {
   .chargingSection .tab-wrapper .tab-header {
     padding-left: 90px;
     padding-right: 90px;
   }
 }
-@media screen and (max-width: 1024px) and (min-height: 1366px) and (max-width: 1440px) {
+@media screen and (max-width: 1024px) and (max-width: 1440px) {
   .chargingSection .tab-wrapper .tab-header {
     padding-left: 80px;
     padding-right: 80px;
   }
 }
-@media screen and (max-width: 1024px) and (min-height: 1366px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (max-width: 1024px) {
   .chargingSection .tab-wrapper .tab-header {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
-@media screen and (max-width: 1024px) and (min-height: 1366px) and (max-width: 680px) {
+@media screen and (max-width: 1024px) and (max-width: 680px) {
   .chargingSection .tab-wrapper .tab-header {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
-@media all and (max-width: 1024px) and (min-height: 1366px) {
+@media all and (max-width: 1024px) {
   .chargingSection .tab-wrapper .tab-header h2 {
     margin-bottom: 8px;
     font-size: 24px;
@@ -5331,7 +5331,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
   padding-left: 120px;
   padding-right: 120px;
-  padding-right: 0px;
+  padding-right: 0px !important;
   margin-bottom: 60px;
 }
 @media screen and (max-width: 1600px) {
@@ -5709,7 +5709,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper {
     padding-left: 120px;
     padding-right: 120px;
-    padding-right: 0px;
+    padding-right: 20px !important;
     margin-bottom: 32px;
   }
 }
@@ -5739,7 +5739,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media all and (max-width: 680px) {
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard {
-    margin-right: 0px;
+    margin-right: 10px;
     padding: 0px;
     width: 100%;
     border-right: none;

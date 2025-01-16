@@ -209,7 +209,7 @@ if ($(".testimonialSection").length) {
     var autoplaySpeed = 5000;
     $(".testimonialCardWrapper").slick({
         dots: false,
-        slidesToShow: 2.7,
+        slidesToShow: 2.4,
         arrows: false,
         slidesToScroll: 1,
         autoplay: true,
@@ -224,7 +224,7 @@ if ($(".testimonialSection").length) {
             {
                 breakpoint: 1440,
                 settings: {
-                    slidesToShow: 1.9,
+                    slidesToShow: 2.2,
                 }
             },
             {
@@ -971,54 +971,4 @@ $(window).scroll(function () {
         });
     });
 
-    let blocked = false;
-    let blockTimeout = null;
-    // let prevDeltaY = 0;
-    $(".mousescrollSlide").on('mousewheel DOMMouseScroll wheel', (function (e) {
-        let deltaX = e.originalEvent.deltaX;
-        let deltaY = e.originalEvent.deltaY;
-        if (typeof deltaY != 'undefined') {
-            clearTimeout(blockTimeout);
-            blockTimeout = setTimeout(function () {
-                blocked = false;
-            }, 50);
-            if ((deltaY < 1 && deltaY > -1) && ((deltaX > 10 && deltaX > prevDeltaX) || (deltaX < -10 && deltaX < prevDeltaX) || !blocked)) {
-                e.preventDefault();
-                e.stopPropagation();
-                blocked = true;
-                prevDeltaX = deltaX;
-                if (deltaX > 0) {
-                    $(this).slick('slickNext');
-                } else {
-                    $(this).slick('slickPrev');
-                }
-            }
-        }
-    }));
     
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
