@@ -100,7 +100,7 @@ footer{
     @media all and (max-width:1280px){
         .footerContainer{
             .footerLeft{padding: 35px 30px;
-                .footerSocialmedia{padding-top: 28px;gap: 14px;}
+                .footerSocialmedia{padding-top: 26px;gap: 14px;}
             }
             .footerRight{padding: 35px 30px;
                 .footerRightContainer{gap: 24px;
@@ -118,12 +118,12 @@ footer{
     }
     @media all and (max-width:1024px){
         .footerContainer{
-            .footerLeft{padding: 20px 40px;
+            .footerLeft{padding: 40px;
                 .footerSocialmedia{padding-top: 32px;gap: 16px;}
             }
-            .footerRight{padding: 20px 40px;
+            .footerRight{padding:40px;
                 .footerRightContainer{gap: 24px;
-                    .footerMenus{padding: 20px 40px;grid-template-columns:repeat(2,1fr);
+                    .footerMenus{grid-template-columns:repeat(2,1fr);
                         .footerMenuWrapper{
                             p{margin-bottom: 14px;}
                         }

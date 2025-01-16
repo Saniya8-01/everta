@@ -2619,7 +2619,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 35px 30px;
   }
   footer .footerContainer .footerLeft .footerSocialmedia {
-    padding-top: 28px;
+    padding-top: 26px;
     gap: 14px;
   }
   footer .footerContainer .footerRight {
@@ -2643,20 +2643,19 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media all and (max-width: 1024px) {
   footer .footerContainer .footerLeft {
-    padding: 20px 40px;
+    padding: 40px;
   }
   footer .footerContainer .footerLeft .footerSocialmedia {
     padding-top: 32px;
     gap: 16px;
   }
   footer .footerContainer .footerRight {
-    padding: 20px 40px;
+    padding: 40px;
   }
   footer .footerContainer .footerRight .footerRightContainer {
     gap: 24px;
   }
   footer .footerContainer .footerRight .footerRightContainer .footerMenus {
-    padding: 20px 40px;
     grid-template-columns: repeat(2, 1fr);
   }
   footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerMenuWrapper p {
