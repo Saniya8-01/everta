@@ -5442,7 +5442,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   color: #006E50;
 }
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
-  margin: 64px 0 40px;
+  margin: 64px 0px 40px;
   color: #4B4B4B;
   font-family: "verdanaregular";
   font-size: 20px;
@@ -5733,7 +5733,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     font-size: 32px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
-    margin-bottom: 64px 0 30px;
+    margin: 64px 0px 30px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial {
     gap: 10px;
