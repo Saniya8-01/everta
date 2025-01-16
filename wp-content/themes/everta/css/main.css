@@ -11414,7 +11414,6 @@ body {
 }
 .relatedPostSec .secWrapper .cardContainer {
   display: block;
-  border: 1px solid red;
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard {
   width: calc(50% - 15px);
