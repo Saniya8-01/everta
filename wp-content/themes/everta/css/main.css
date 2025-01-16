@@ -2958,7 +2958,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     height: auto;
   }
   .bannerSection .bannerSectionWrapper .bannerSectionContent {
-    left: 70px;
+    left: 80px;
     top: 120px;
   }
   .bannerSection .bannerSectionWrapper .bannerSectionContent h1 {
@@ -2966,6 +2966,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .bannerSection .bannerSectionWrapper .bannerSectionContent p {
     margin-bottom: 36px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .bannerSection .bannerSectionWrapper .bannerSectionContent {
+    left: 40px;
   }
 }
 @media all and (max-width: 820px) {
@@ -3189,6 +3194,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
     gap: 70px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .withEaseSection .divWrapper .leftContent {
+    padding: 0px 30px 0px 40px;
   }
 }
 @media all and (max-width: 1024px) and (min-height: 1366px) {

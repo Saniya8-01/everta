@@ -151,7 +151,7 @@
 
         .bannerSectionWrapper {
             .bannerSectionContent {
-                left: 70px;
+                left: 80px;
                 top: 120px;
 
                 h1 {
@@ -161,6 +161,14 @@
                 p {
                     margin-bottom: 36px;
                 }
+            }
+        }
+    }
+
+    @media all and (max-width:1024px) {
+        .bannerSectionWrapper {
+            .bannerSectionContent {
+                left: 40px;
             }
         }
     }
@@ -419,6 +427,13 @@
                 .rightContentWrapper {
                     gap: 70px;
                 }
+            }
+        }
+    }
+    @media all and (max-width:1024px){
+        .divWrapper {
+            .leftContent {
+                padding: 0px 30px 0px 40px;
             }
         }
     }
