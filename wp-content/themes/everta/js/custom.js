@@ -24,8 +24,8 @@ function hasScrolled() {
     if (Math.abs(lastScrollTop - st) <= delta) return;
 
     // Detect if we are scrolling within the `.evertaEveryoneSection` or `.chargingSection`
-    const isWithinEvertaSection = isInSection('.evertaEveryoneSection');
-    const isWithinChargingSection = isInSection('.chargingSection');
+    const isWithinEvertaSection = isInSection('.hover-section');
+    const isWithinChargingSection = isInSection('.cards');
 
     if ($(window).width() <= 820 && (isWithinEvertaSection || isWithinChargingSection)) {
         // Add nav-up class on reverse scroll only within the specified sections
@@ -56,7 +56,7 @@ function isInSection(sectionClass) {
         const windowHeight = $(window).height();
 
         // Calculate 80% of the section height
-        const sectionVisible = scrollTop + windowHeight * 0.5; // 80% from top of the window
+        const sectionVisible = scrollTop + windowHeight * 0.2; // 80% from top of the window
 
         // Check if 80% of the section is visible in the viewport
         return sectionVisible > sectionTop && scrollTop < sectionBottom;
