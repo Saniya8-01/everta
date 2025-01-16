@@ -4686,7 +4686,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .exploreSection .exploreSectionWrapper .leftContent {
     flex-basis: 100%;
-    padding: 72px 38px;
+    padding: 72px 20px;
     order: 2;
   }
   .exploreSection .exploreSectionWrapper .leftContent .contentWrapper {
