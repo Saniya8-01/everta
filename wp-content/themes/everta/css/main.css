@@ -5358,9 +5358,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding-right: 20px;
   }
 }
-.testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .slick-list {
-  overflow: visible;
-}
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard {
   border-right: 1px solid #D8DBDC;
   margin-right: 52px;
