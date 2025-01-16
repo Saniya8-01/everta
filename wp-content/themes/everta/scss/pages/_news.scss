@@ -258,8 +258,11 @@
                 h2 {margin-bottom: 32px;font-size: 20px;font-weight: 600;line-height: 24px;}
             }
             .blogsTabs{overflow-x:scroll; white-space: nowrap;-webkit-overflow-scrolling: touch;
-                .blogsTabWrapper{display: inline-flex;gap:12px;
-                    a{padding: 9px 16px;font-size: 12px;line-height: 18px;font-weight: 400;}
+                .blogsTabWrapper{display: inline-flex;gap:0px;
+                    a{padding: 9px 16px;font-size: 12px;line-height: 18px;font-weight: 400;margin-left: 12px;
+                        &:last-child{margin-right: 20px;}
+                        &:first-child{margin-left: 20px;}
+                    }
                 }
             }
             .customSelect{
