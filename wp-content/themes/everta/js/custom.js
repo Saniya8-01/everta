@@ -64,6 +64,8 @@ function isInSection(sectionClass) {
     return false;
 }
 
+let customSelects = document.querySelectorAll("#popupSelect");
+
 
 // Menu toggle functionality for <= 1024px width
 $(document).ready(function () {
@@ -75,10 +77,13 @@ $(document).ready(function () {
                 menuOpen = true; // Menu is open
                 $('body').css("overflow", "hidden");
                 $('html').css("overflow", "hidden");
+                $(".languageTranslatorMbl").css("display","none");
             } else {
                 menuOpen = false; // Menu is closed
                 $('body').css("overflow", "visible");
+                $('body').css("overflow-x", "hidden");
                 $('html').css("overflow", "visible");
+                $(".languageTranslatorMbl").css("display","block");
             }
         });
     }
@@ -623,25 +628,6 @@ if ($(".visitUsSec").length) {
 
     showActiveIcon()
 }
-if($(".evertaEveryoneSection").length){
-    $(document).on('click', '.toggle', function (event) {
-        event.preventDefault();
-        var target = $(this).data('target');
-        var popup = $('#' + target);
-        popup.toggleClass('hide');
-        if (!popup.hasClass('hide')) {
-            $('body').css('overflow', 'hidden');
-        } else {
-            $('body').css('overflow', 'auto');
-        }
-    });
-    $(document).on('click', function (event) {
-        if (!$(event.target).closest('.popup-body, .toggle').length) {
-            $('.popup-body').closest('.popup').addClass('hide');
-            $('body').css('overflow', 'auto');
-        }
-    });
-}
 /******About Us Js End */
 
 /* Careers page JS Starts */
@@ -960,5 +946,22 @@ $(window).scroll(function () {
 });
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const languageTranslator = document.querySelector('.languageTranslatorMbl');
+    const languageMenu = document.querySelector('.languageMenuMbl');
 
-    
+    languageTranslator.addEventListener('click', function (event) {
+        languageTranslator.classList.toggle('active');
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!languageTranslator.contains(event.target)) {
+            languageTranslator.classList.remove('active');
+        }
+    });
+});
+
+
+
+   

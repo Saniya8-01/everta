@@ -52,6 +52,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                     }
                 }
             }
+            .languageTranslatorMbl{display: none;}
             .hamburger-menu{display: none;}
         }
     }
@@ -302,11 +303,25 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                         }
                     }
                 }
+                .languageTranslatorMbl{display: block;position: absolute;top: 50%;transform: translateY(-50%);right: 100px;
+                    &.active{.languageMenuMbl{opacity: 1;visibility: visible;}}
+                    .languageMenuMbl{opacity: 0;visibility: hidden;position: absolute;top:100%;left:-20px;padding-top:20px;transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+                        ul{background:#ffffff;min-width: 64px;display:flex;flex-direction:column;align-items: start;gap:12px;border:1px solid #1E1E1E;padding:12px 20px;
+                            li{&:first-child{a{text-decoration:underline;}}
+                                a{@include terminamedium;font-size: 12px;color: #323232;font-weight: 600;line-height: 16px;}
+                            }
+                        }
+                    }
+                }
             }
         }
     }
     @media all and (max-width: 680px){
-        .headerWrapper{padding: 20px;}
+        .headerWrapper{padding: 20px;
+            .headerMenu{
+                .languageTranslatorMbl{right: 68px;}
+            }
+        }
     }
 }
 
