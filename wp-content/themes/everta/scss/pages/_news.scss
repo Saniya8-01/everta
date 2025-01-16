@@ -5,7 +5,7 @@
         }
         .blogsTabs{
             .blogsTabWrapper{display: flex;align-items:center;gap:16px;
-                a{color: #1E1E1E;@include verdanaregular;@include font16;line-height: 140%;font-weight: $fontW400;border-radius: 100px;border: 1px solid var(--Black-40, #A5A5A5); padding: 16px 32px;
+                a{color: #1E1E1E;@include verdanaregular;@include font16;line-height: 140%;font-weight: $fontW400;border-radius: 100px;border: 1px solid var(--Black-40, #A5A5A5); padding: 16px 32px;text-transform:capitalize;
                     &.active{color: $primaryColor1;background: #1E1E1E;}
                 }
             }
@@ -258,8 +258,11 @@
                 h2 {margin-bottom: 32px;font-size: 20px;font-weight: 600;line-height: 24px;}
             }
             .blogsTabs{overflow-x:scroll; white-space: nowrap;-webkit-overflow-scrolling: touch;
-                .blogsTabWrapper{display: inline-flex;gap:12px;
-                    a{padding: 9px 16px;font-size: 12px;line-height: 18px;font-weight: 400;}
+                .blogsTabWrapper{display: inline-flex;gap:0px;
+                    a{padding: 9px 16px;font-size: 12px;line-height: 18px;font-weight: 400;margin-left: 12px;
+                        &:last-child{margin-right: 20px;}
+                        &:first-child{margin-left: 20px;}
+                    }
                 }
             }
             .customSelect{

@@ -267,9 +267,12 @@ if ($(".testimonialSection").length) {
 
 
 function initializeSlick() {
-    if ($(window).width() <= 820) {
-        if (!$(".rightContentWrapper").hasClass('slick-initialized')) {
-            $(".rightContentWrapper").slick({
+    var windowWidth = $(window).width();
+    var windowHeight = $(window).height();
+
+    if ((windowWidth <= 820) || (windowWidth <= 1024 && windowHeight >= 1366)) {
+        if (!$('.rightContentWrapper').hasClass('slick-initialized')) {
+            $('.rightContentWrapper').slick({
                 dots: false,
                 slidesToShow: 1.5,
                 arrows: false,
@@ -281,16 +284,20 @@ function initializeSlick() {
                         settings: {
                             slidesToShow: 1.2,
                         }
-                    },
+                    }
                 ]
             });
         }
     } else {
-        if ($(".rightContentWrapper").hasClass('slick-initialized')) {
-            $(".rightContentWrapper").slick('unslick');
+        if ($('.rightContentWrapper').hasClass('slick-initialized')) {
+            $('.rightContentWrapper').slick('unslick');
         }
     }
 }
+
+$(window).on('resize', initializeSlick);
+$(document).ready(initializeSlick);
+
 
 $(document).ready(function () {
     initializeSlick();

@@ -48,7 +48,6 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                     &:hover{color: #1E1E1E;background: $primaryColor1;}
                                 }
                             }
-                            .languageTranslator{&::before{content: none !important;}}
                         }
                     }
                 }
