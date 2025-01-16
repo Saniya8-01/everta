@@ -3840,6 +3840,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .evertaEveryoneSection .popup .overlay .popup-header .close .fontelloCrossIcon {
     font-size: 15px;
   }
+  .evertaEveryoneSection .popup .overlay .popup-header h3 {
+    line-height: 140%;
+  }
   .evertaEveryoneSection .popup .overlay .popup-body {
     padding: 20px;
   }
@@ -11110,6 +11113,33 @@ body {
   height: 100%;
   left: 0;
 }
+.resDetailContentSec .secWrapper .contentBox .wp-caption-text, .resDetailContentSec .secWrapper .contentBox .wp-element-caption {
+  position: relative;
+  padding-left: 10px;
+  color: #000;
+  font-size: 16px;
+  font-family: "verdanaregular";
+  line-height: 175%;
+  margin: 16px 0;
+}
+@media screen and (max-width: 1600px) {
+  .resDetailContentSec .secWrapper .contentBox .wp-caption-text, .resDetailContentSec .secWrapper .contentBox .wp-element-caption {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .resDetailContentSec .secWrapper .contentBox .wp-caption-text, .resDetailContentSec .secWrapper .contentBox .wp-element-caption {
+    font-size: 12px;
+  }
+}
+.resDetailContentSec .secWrapper .contentBox .wp-caption-text::before, .resDetailContentSec .secWrapper .contentBox .wp-element-caption::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-left: 2px solid #000;
+  height: 100%;
+  left: 0;
+}
 .resDetailContentSec .secWrapper .contentBox .figCaptionBox {
   padding: 40px 0 0 0;
 }
@@ -11356,6 +11386,9 @@ body {
     line-height: 150%;
   }
   .resDetailContentSec .secWrapper .contentBox .imgFig figcaption {
+    margin: 10px 0;
+  }
+  .resDetailContentSec .secWrapper .contentBox .wp-caption-text, .resDetailContentSec .secWrapper .contentBox .wp-element-caption {
     margin: 10px 0;
   }
   .resDetailContentSec .secWrapper .contentBox .figCaptionBox {
