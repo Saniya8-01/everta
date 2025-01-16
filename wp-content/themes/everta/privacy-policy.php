@@ -384,98 +384,14 @@
           <hr class="subHeadingHr">
         <h2 class="content2p2Span">21. Feedback or Concern</h2>
         <p class="content2p2Content">For feedback or concern, if any, kindly contact :
-          EVERTA through <a href="mailto:hello@everta.com" target="_blank">hello@everta.com</a>.</p>
+          EVERTA through<a href="mailto:hello@everta.com" target="_blank">hello@everta.com</a>.</p>
         <button class="scroll-to-top">
           <img src="<?php echo get_template_directory_uri(); ?>/images/scrollTop.svg" alt="Scroll to Top">
         </button>
       </div>
-      <!-- <p class="content2p3">
-        <span class="content2p3Span">2. Level 2 Chargers:</span>
-        <span class="content2p3Content">These chargers use a 240-volt outlet, similar to what you would use for a dryer
-          or oven. They provide faster charging times and are commonly found in homes, workplaces, and public charging
-          stations.</span>
-      </p> -->
-      <!-- <p class="content2p4">
-        <span class="content2p4Span">3. DC Fast Chargers:</span>
-        <span class="content2p4Content"> These are the fastest chargers available, capable of charging an EV to 80% in
-          as little as 30 minutes. They are typically found along highways and in urban areas, catering to drivers who
-          need a quick recharge on the go.</span>
-      </p> -->
     </div>
   </div>
-
-  <!-- <div class="sec3Content" style="width: 100%">
-    <p class="content3p1" style="">The future of EV charging is set to be transformed by several emerging technologies:
-    </p>
-    <p class="content3p2">
-      <span class="content3p2Span">1. Wireless Charging:</span>
-      <span class="content3p2Content"> Also known as inductive charging, this technology allows EVs to be charged
-        without the need for cables. By simply parking over a charging pad, the vehicle can receive power through
-        electromagnetic fields. This technology is still in its early stages but holds great promise for the
-        future.</span>
-    </p>
-    <p class="content3p3">
-      <span class="content3p3Span">2. Ultra-Fast Charging:</span>
-      <span class="content3p3Content"> While DC fast chargers are already quick, ultra-fast chargers are being developed
-        to reduce charging times even further. Companies are working on chargers that can deliver up to 350 kW of power,
-        potentially charging an EV in under 15 minutes.</span>
-    </p>
-    <p class="content3p4">
-      <span class="content3p4Span">3. Vehicle-to-Grid (V2G) Technology: </span>
-      <span class="content3p4Content">This innovation enables EVs to not only draw power from the grid but also to
-        supply power back to it. V2G technology can help balance electricity demand and supply, making the grid more
-        resilient and reducing energy costs.<br /></span>
-    </p>
-    <p class="content3p5">
-      <span class="content3p5Span">4. Solar-Powered Charging Stations: </span>
-      <span class="content3p5Content">Combining EV charging stations with solar panels can provide a sustainable and
-        cost-effective solution for powering EVs. These stations can generate their own electricity, reducing reliance
-        on the grid and lowering carbon footprints.</span>
-    </p>
-  </div> -->
-
-
-  <!-- <div
-    style="width: 100%; color: black; font-size: 32px; font-family: Termina; font-weight: 700; line-height: 48px; word-wrap: break-word; margin-top: 64px; margin-bottom: 24px">
-    Lorem ipsum title 3
-  </div> -->
-  <!-- <div
-    style="width: 100%; color: black; font-size: 20px; font-family: Verdana; font-weight: 400; line-height: 32px; word-wrap: break-word; margin-bottom: 200px">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-    dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<br /><br /> aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem
-    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Last
-    updated: 9 December 2024
-  </div> -->
 
 </section>
 
 <?php get_footer(); ?>
-
-<script>
-  const scrollToTopButton = document.querySelector(".scroll-to-top");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollToTopButton.style.display = "flex"; // Show the button
-    } else {
-      scrollToTopButton.style.display = "none"; // Hide the button
-    }
-  });
-
-  scrollToTopButton.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
-
-</script>
