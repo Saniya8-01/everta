@@ -115,169 +115,163 @@
     <?php endif; ?>
 </section>
 
-<section class="ourStrengthsSec">
-    <?php if (have_rows('ourstrength_section')) : ?>
+<?php if (have_rows('ourstrength_section')) : ?>
     <?php while (have_rows('ourstrength_section')) : the_row(); ?>
-    <div class="secWrapper">
-        <div class="innerSec">
-            <div class="secHeading">
-                <h2><?php echo get_sub_field('section_heading'); ?></h2>
-            </div>
-            <div class="cardsGroup">
-                <?php if (have_rows('cards_section')) : ?>
-                <?php while (have_rows('cards_section')) : the_row(); ?>
-                <div class="card">
-                    <div class="imgBox">
-                        <?php $icon = get_sub_field('icon_image');
-                        if (!empty($icon)) : ?>
-                        <img src="<?php echo esc_url($icon['url']); ?>" loading="lazy"
-                            alt="<?php echo esc_attr($icon['alt']); ?>" />
-                        <?php endif; ?>
-                    </div>
-                    <div class="contentBox">
-                        <h5><?php echo get_sub_field('card_title'); ?></h5>
-                        <p><?php echo get_sub_field('card_description'); ?></p>
-                    </div>
-                </div>
-                <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-    <?php endwhile; ?>
-    <?php endif; ?>
-</section>
-
-<section class="ourStorySec">
-    <?php if (have_rows('ourstory_section')) : ?>
-    <?php while (have_rows('ourstory_section')) : the_row(); ?>
-    <div class="secWrapper">
-        <div class="mainContainer">
-            <div class="card contentBox">
-                <h2><?php echo get_sub_field('heading'); ?></h2>
-                <p><?php echo get_sub_field('description'); ?></p>
-            </div>
-            <div class="card imgBox">
-                <div class="sliderBox">
-                    <?php if (have_rows('image_slider')) : ?>
-                    <?php while (have_rows('image_slider')) : the_row(); ?>
-                    <div class="sliderImg">
-                        <figure>
-                            <?php $sliderImage = get_sub_field('slider_image');
-                            if (!empty($sliderImage)) : ?>
-                            <img src="<?php echo esc_url($sliderImage['url']); ?>" loading="lazy"
-                                alt="<?php echo esc_attr($sliderImage['alt']); ?>" />
+        <?php $ourstrengthsec = get_sub_field( "heading" ); if ( $ourstrengthsec ) {?>
+            <section class="ourStrengthsSec">
+                <div class="secWrapper">
+                    <div class="innerSec">
+                        <div class="secHeading">
+                            <h2><?php echo get_sub_field('section_heading'); ?></h2>
+                        </div>
+                        <div class="cardsGroup">
+                            <?php if (have_rows('cards_section')) : ?>
+                                <?php while (have_rows('cards_section')) : the_row(); ?>
+                                    <div class="card">
+                                        <div class="imgBox">
+                                            <?php $icon = get_sub_field('icon_image'); if (!empty($icon)) : ?>
+                                                <img src="<?php echo esc_url($icon['url']); ?>" loading="lazy" alt="<?php echo esc_attr($icon['alt']); ?>" />
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="contentBox">
+                                            <h5><?php echo get_sub_field('card_title'); ?></h5>
+                                            <p><?php echo get_sub_field('card_description'); ?></p>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
                             <?php endif; ?>
-                            <figcaption><?php echo get_sub_field('image_caption'); ?></figcaption>
-                        </figure>
+                        </div>
                     </div>
-                    <?php endwhile; ?>
-                    <?php endif; ?>
                 </div>
-            </div>
-        </div>
-    </div>
+            </section>
+        <?php } ?>
     <?php endwhile; ?>
-    <?php endif; ?>
-</section>
-
-<section class="foundersSec">
-    <?php if (have_rows('founder_section')) : ?>
-    <?php while (have_rows('founder_section')) : the_row(); ?>
-    <div class="secWrapper">
-        <div class="secHeading">
-            <h2><?php echo get_sub_field('heading'); ?></h2>
-            <p><?php echo get_sub_field('subheading'); ?></p>
-        </div>
-        <div class="secContent">
-            <?php if (have_rows('founder_details')) : ?>
-            <?php while (have_rows('founder_details')) : the_row(); ?>
-            <div class="founderDetailsbox">
-                <div class="detailBox">
-                    <p><?php echo get_sub_field('founder_designation'); ?></p>
-                    <h6><?php echo get_sub_field('founder_name'); ?></h6>
-                </div>
-                <div class="pictureBox">
-                    <?php $founderImage = get_sub_field('founder_image');
-                    if (!empty($founderImage)) : ?>
-                    <img src="<?php echo esc_url($founderImage['url']); ?>" loading="lazy"
-                        alt="<?php echo esc_attr($founderImage['alt']); ?>" />
-                    <?php endif; ?>
-                </div>
-            </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
-        </div>
-    </div>
-    <?php endwhile; ?>
-    <?php endif; ?>
-</section>
-
-<section class="poweringIdeaSec">
-    <?php if (have_rows('poweringidea_section')) : ?>
-    <?php while (have_rows('poweringidea_section')) : the_row(); ?>
-    <div class="secWrapper">
-        <div class="poweringMainContainer">
-            <div class="imgBox">
-                <?php
-                $desktopImage = get_sub_field('desktop_image');
-                $mobileImage = get_sub_field('mobile_image');
-            ?>
-                <?php if ( !empty( $desktopImage ) ): ?>
-                <img src="<?php echo esc_url( $desktopImage['url'] ); ?>"
-                    alt="<?php echo esc_attr( $desktopImage['alt'] ); ?>" class="bannerDesktop">
-                <?php endif; ?>
-    
-                <?php if ( !empty( $mobileImage ) ): ?>
-    
-                <img src="<?php echo esc_url( $mobileImage['url'] ); ?>"
-                    alt="<?php echo esc_attr( $mobileImage['alt'] ); ?>" class="bannerMbl">
-                <?php endif; ?>
-            </div>
-            <div class="contentBox">
-                <div class="innerContentGroup">
-                    <p><?php echo get_sub_field('title'); ?></p>
-                    <h2><?php echo get_sub_field('heading'); ?></h2>
-                    <p><?php echo get_sub_field('subheading'); ?></p>
-                    <?php 
-$readmore_link = get_sub_field('readmore_link');
-$readmore_text = get_sub_field('readmore_text');
-
-if ($readmore_link && $readmore_text) : ?>
-    <a href="<?php echo esc_url($readmore_link); ?>" class="ctaYellowBlack">
-        <?php echo esc_html($readmore_text); ?>
-    </a>
 <?php endif; ?>
 
+<?php if (have_rows('ourstory_section')) : ?>
+    <?php while (have_rows('ourstory_section')) : the_row(); ?>
+        <?php $ourstorysec = get_sub_field( "heading" ); if ( $ourstorysec ) {?>
+            <section class="ourStorySec">
+                <div class="secWrapper">
+                    <div class="mainContainer">
+                        <div class="card contentBox">
+                            <h2><?php echo get_sub_field('heading'); ?></h2>
+                            <p><?php echo get_sub_field('description'); ?></p>
+                        </div>
+                        <div class="card imgBox">
+                            <div class="sliderBox">
+                                <?php if (have_rows('image_slider')) : ?>
+                                    <?php while (have_rows('image_slider')) : the_row(); ?>
+                                        <div class="sliderImg">
+                                            <figure>
+                                                <?php $sliderImage = get_sub_field('slider_image'); if (!empty($sliderImage)) : ?>
+                                                    <img src="<?php echo esc_url($sliderImage['url']); ?>" loading="lazy" alt="<?php echo esc_attr($sliderImage['alt']); ?>" />
+                                                <?php endif; ?>
+                                                <figcaption><?php echo get_sub_field('image_caption'); ?></figcaption>
+                                            </figure>
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </section>
+        <?php } ?>
     <?php endwhile; ?>
-    <?php endif; ?>
-</section>
+<?php endif; ?>
 
-<section class="careerAtEvertaSec">
-    <?php if (have_rows('career_section')) : ?>
+<?php if (have_rows('founder_section')) : ?>
+    <?php while (have_rows('founder_section')) : the_row(); ?>
+        <?php $foundersec = get_sub_field( "heading" ); if ( $foundersec ) {?>
+            <section class="foundersSec">
+                <div class="secWrapper">
+                    <div class="secHeading">
+                        <h2><?php echo get_sub_field('heading'); ?></h2>
+                        <p><?php echo get_sub_field('subheading'); ?></p>
+                    </div>
+                    <div class="secContent">
+                        <?php if (have_rows('founder_details')) : ?>
+                            <?php while (have_rows('founder_details')) : the_row(); ?>
+                                <div class="founderDetailsbox">
+                                    <div class="detailBox">
+                                        <p><?php echo get_sub_field('founder_designation'); ?></p>
+                                        <h6><?php echo get_sub_field('founder_name'); ?></h6>
+                                    </div>
+                                    <div class="pictureBox">
+                                        <?php $founderImage = get_sub_field('founder_image'); if (!empty($founderImage)) : ?>
+                                            <img src="<?php echo esc_url($founderImage['url']); ?>" loading="lazy" alt="<?php echo esc_attr($founderImage['alt']); ?>" />
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </section>
+        <?php } ?>
+    <?php endwhile; ?>
+<?php endif; ?>
+
+<?php if (have_rows('poweringidea_section')) : ?>
+    <?php while (have_rows('poweringidea_section')) : the_row(); ?>
+        <?php $poweringideasec = get_sub_field( "heading" ); if ( $poweringideasec ) {?>
+            <section class="poweringIdeaSec"> 
+                <div class="secWrapper">
+                    <div class="poweringMainContainer">
+                        <div class="imgBox">
+                            <?php
+                                $desktopImage = get_sub_field('desktop_image');
+                                $mobileImage = get_sub_field('mobile_image');
+                            ?>
+                            <?php if ( !empty( $desktopImage ) ): ?>
+                                <img src="<?php echo esc_url( $desktopImage['url'] ); ?>" alt="<?php echo esc_attr( $desktopImage['alt'] ); ?>" class="bannerDesktop">
+                            <?php endif; ?>
+                            <?php if ( !empty( $mobileImage ) ): ?>
+                                <img src="<?php echo esc_url( $mobileImage['url'] ); ?>" alt="<?php echo esc_attr( $mobileImage['alt'] ); ?>" class="bannerMbl">
+                            <?php endif; ?>
+                        </div>
+                        <div class="contentBox">
+                            <div class="innerContentGroup">
+                                <p><?php echo get_sub_field('title'); ?></p>
+                                <h2><?php echo get_sub_field('heading'); ?></h2>
+                                <p><?php echo get_sub_field('subheading'); ?></p>
+                                <?php 
+                                    $readmore_link = get_sub_field('readmore_link');
+                                    $readmore_text = get_sub_field('readmore_text');
+                                if ($readmore_link && $readmore_text) : ?>
+                                    <a href="<?php echo esc_url($readmore_link); ?>" class="ctaYellowBlack"><?php echo esc_html($readmore_text); ?></a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <?php } ?>
+    <?php endwhile; ?>
+<?php endif; ?>
+
+<?php if (have_rows('career_section')) : ?>
     <?php while (have_rows('career_section')) : the_row(); ?>
-    <div class="secWrapper">
-        <div class="secHeading">
-            <h2><?php echo get_sub_field('heading'); ?></h2>
-            <?php 
-        $career_link = get_sub_field('career_link');
-        $career_text = get_sub_field('career_text');
-
-        if ($career_link && $career_text) : ?>
-            <a href="<?php echo esc_url($career_link); ?>" class="ctaBlack">
-                <?php echo esc_html($career_text); ?>
-            </a>
-        <?php endif; ?>
-
-        </div>
-    </div>
+        <?php $careersec = get_sub_field( "heading" ); if ( $careersec ) {?>
+            <section class="careerAtEvertaSec">
+                <div class="secWrapper">
+                    <div class="secHeading">
+                        <h2><?php echo get_sub_field('heading'); ?></h2>
+                        <?php 
+                            $career_link = get_sub_field('career_link');
+                            $career_text = get_sub_field('career_text');
+                        if ($career_link && $career_text) : ?>
+                            <a href="<?php echo esc_url($career_link); ?>" class="ctaBlack">
+                                <?php echo esc_html($career_text); ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </section>
+        <?php } ?>
     <?php endwhile; ?>
-    <?php endif; ?>
-</section>
+<?php endif; ?>
 
 <section class="visitUsSec">
     <?php if (have_rows('map_section')) : ?>
