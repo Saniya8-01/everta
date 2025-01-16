@@ -407,7 +407,7 @@
                 <?php echo get_sub_field('heading'); ?>
             </h2>
         </div>
-        <div class="testimonialCardWrapper mousescrollSlide">
+        <div class="testimonialCardWrapper">
             <?php if (have_rows('testimonial_card')) : ?>
             <?php while (have_rows('testimonial_card')) : the_row(); ?>
             <div class="testimonialCard">

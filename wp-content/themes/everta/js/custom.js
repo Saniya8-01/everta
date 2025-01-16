@@ -24,8 +24,8 @@ function hasScrolled() {
     if (Math.abs(lastScrollTop - st) <= delta) return;
 
     // Detect if we are scrolling within the `.evertaEveryoneSection` or `.chargingSection`
-    const isWithinEvertaSection = isInSection('.evertaEveryoneSection');
-    const isWithinChargingSection = isInSection('.chargingSection');
+    const isWithinEvertaSection = isInSection('.hover-section');
+    const isWithinChargingSection = isInSection('.cards');
 
     if ($(window).width() <= 820 && (isWithinEvertaSection || isWithinChargingSection)) {
         // Add nav-up class on reverse scroll only within the specified sections
@@ -56,7 +56,7 @@ function isInSection(sectionClass) {
         const windowHeight = $(window).height();
 
         // Calculate 80% of the section height
-        const sectionVisible = scrollTop + windowHeight * 0.5; // 80% from top of the window
+        const sectionVisible = scrollTop + windowHeight * 0.2; // 80% from top of the window
 
         // Check if 80% of the section is visible in the viewport
         return sectionVisible > sectionTop && scrollTop < sectionBottom;
@@ -209,7 +209,7 @@ if ($(".testimonialSection").length) {
     var autoplaySpeed = 5000;
     $(".testimonialCardWrapper").slick({
         dots: false,
-        slidesToShow: 2.7,
+        slidesToShow: 2.4,
         arrows: false,
         slidesToScroll: 1,
         autoplay: true,
@@ -224,7 +224,7 @@ if ($(".testimonialSection").length) {
             {
                 breakpoint: 1440,
                 settings: {
-                    slidesToShow: 1.9,
+                    slidesToShow: 2.2,
                 }
             },
             {
@@ -267,9 +267,12 @@ if ($(".testimonialSection").length) {
 
 
 function initializeSlick() {
-    if ($(window).width() <= 820) {
-        if (!$(".rightContentWrapper").hasClass('slick-initialized')) {
-            $(".rightContentWrapper").slick({
+    var windowWidth = $(window).width();
+    var windowHeight = $(window).height();
+
+    if ((windowWidth <= 820) || (windowWidth <= 1024 && windowHeight >= 1366)) {
+        if (!$('.rightContentWrapper').hasClass('slick-initialized')) {
+            $('.rightContentWrapper').slick({
                 dots: false,
                 slidesToShow: 1.5,
                 arrows: false,
@@ -281,16 +284,20 @@ function initializeSlick() {
                         settings: {
                             slidesToShow: 1.2,
                         }
-                    },
+                    }
                 ]
             });
         }
     } else {
-        if ($(".rightContentWrapper").hasClass('slick-initialized')) {
-            $(".rightContentWrapper").slick('unslick');
+        if ($('.rightContentWrapper').hasClass('slick-initialized')) {
+            $('.rightContentWrapper').slick('unslick');
         }
     }
 }
+
+$(window).on('resize', initializeSlick);
+$(document).ready(initializeSlick);
+
 
 $(document).ready(function () {
     initializeSlick();
@@ -953,84 +960,5 @@ $(window).scroll(function () {
 });
 }
 
-    let customSelects = document.querySelectorAll("#popupSelect");
 
-    customSelects.forEach((customSelect) => {
-        const selectBtn = customSelect.querySelector(".selectBtn");
-        const options = customSelect.querySelectorAll(".option");
-        const sBtn_text = customSelect.querySelector(".sBtntext");
-
-        // Toggle dropdown menu for this customSelect
-        selectBtn.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevent event bubbling
-            customSelect.classList.toggle("active");
-        });
-
-        // Handle option selection for this customSelect
-        options.forEach((option) => {
-            option.addEventListener("click", () => {
-                const selectedText = option.textContent.trim();
-                sBtn_text.textContent = selectedText; // Update button text
-                customSelect.classList.remove("active"); // Close dropdown
-            });
-        });
-    });
-
-    // Close all dropdowns if clicking outside any customSelect
-    document.addEventListener("click", () => {
-        customSelects.forEach((customSelect) => {
-            customSelect.classList.remove("active");
-        });
-    });
-
-    let blocked = false;
-    let blockTimeout = null;
-    // let prevDeltaY = 0;
-    $(".mousescrollSlide").on('mousewheel DOMMouseScroll wheel', (function (e) {
-        let deltaX = e.originalEvent.deltaX;
-        let deltaY = e.originalEvent.deltaY;
-        if (typeof deltaY != 'undefined') {
-            clearTimeout(blockTimeout);
-            blockTimeout = setTimeout(function () {
-                blocked = false;
-            }, 50);
-            if ((deltaY < 1 && deltaY > -1) && ((deltaX > 10 && deltaX > prevDeltaX) || (deltaX < -10 && deltaX < prevDeltaX) || !blocked)) {
-                e.preventDefault();
-                e.stopPropagation();
-                blocked = true;
-                prevDeltaX = deltaX;
-                if (deltaX > 0) {
-                    $(this).slick('slickNext');
-                } else {
-                    $(this).slick('slickPrev');
-                }
-            }
-        }
-    }));
     
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
