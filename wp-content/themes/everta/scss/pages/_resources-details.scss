@@ -225,7 +225,7 @@
                 }
                 .contentBox{padding: 0 24px 55px; display: flex; align-items: flex-end; justify-content: space-between; position: relative;
                     .content{width: 100%;
-                        span{padding: 4px 8px; background: $primaryColor1; border-radius: 4px; color: #000; @include verdanaregular; @include font16; line-height: 175%; transition: 0.3s all ease-in-out;}
+                        span{padding: 4px 8px; background: $primaryColor1; border-radius: 4px; color: #000; @include verdanaregular; @include font16; line-height: 175%; transition: 0.3s all ease-in-out; text-transform: capitalize; }
                         p{margin: 24px 0 14px 0; color: $quaternaryColor1; @include verdanaregular; @include font24; line-height: 166%;}
                         ul{display: flex; align-items: center; gap: 10px;
                             li{color: #000; @include verdanaregular; @include font16; line-height: 175%; position: relative;

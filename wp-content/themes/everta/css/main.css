@@ -1347,12 +1347,13 @@ header .headerWrapper .headerMenu .hamburger-menu {
     display: none;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
-    padding: 18px 32px;
+    padding: 20px 32px;
+    letter-spacing: -0.48px;
     font-size: 12px;
     background: #F5F75E;
     color: #1E1E1E;
     position: relative;
-    padding-right: 62px;
+    padding-right: 66px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a::before {
     content: "\e80a";
@@ -11778,6 +11779,7 @@ body {
   font-size: 16px;
   line-height: 175%;
   transition: 0.3s all ease-in-out;
+  text-transform: capitalize;
 }
 @media screen and (max-width: 1600px) {
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content span, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 span, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 span {
