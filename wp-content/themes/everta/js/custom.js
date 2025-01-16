@@ -623,6 +623,25 @@ if ($(".visitUsSec").length) {
 
     showActiveIcon()
 }
+if($(".evertaEveryoneSection").length){
+    $(document).on('click', '.toggle', function (event) {
+        event.preventDefault();
+        var target = $(this).data('target');
+        var popup = $('#' + target);
+        popup.toggleClass('hide');
+        if (!popup.hasClass('hide')) {
+            $('body').css('overflow', 'hidden');
+        } else {
+            $('body').css('overflow', 'auto');
+        }
+    });
+    $(document).on('click', function (event) {
+        if (!$(event.target).closest('.popup-body, .toggle').length) {
+            $('.popup-body').closest('.popup').addClass('hide');
+            $('body').css('overflow', 'auto');
+        }
+    });
+}
 /******About Us Js End */
 
 /* Careers page JS Starts */

@@ -690,9 +690,9 @@
                     }
                     .content {order: 2;flex-basis: 100%;
                         h3 {font-size: 20px;font-style: normal;font-weight: 600;line-height: 140%;margin-bottom: 16px;}
-                        p {display: block;margin-bottom: 32px;font-size: 12px;font-style: normal;font-weight: 400;line-height: 24px;padding: 0px;text-align: left;display: -webkit-box;text-overflow: ellipsis;overflow: hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
+                        p {display: block;margin-bottom: 0px;font-size: 12px;font-style: normal;font-weight: 400;line-height: 24px;padding: 0px;text-align: left;display: -webkit-box;text-overflow: ellipsis;overflow: hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
                         .toggle{display: block; background: transparent; font-weight: $fontW700;font-size: 14px; line-height: 150%;}
-                        a{display: inline-block;}
+                        a{display: inline-block; margin-top: 32px;}
                     }
                     .image {order: 1;opacity: 1;height: auto;width: 100%;flex-basis: 100%;
                         img {width: 100%;}
@@ -701,7 +701,6 @@
             }
         }
     }
-
     @media all and (max-width: 720px){
         .popup{
             .overlay{width: 89%;
@@ -942,6 +941,7 @@
                             line-height: 175%;
                         }
                     }
+                    .fontellowRightArrow{font-size: 16px; color: $primaryColor1; line-height: normal;}
 
                     &.active {
                         background: $primaryColor1;
@@ -964,6 +964,7 @@
                         color: $primaryColor1;
                         text-align: center;
                         @include terminamedium;
+                        @include font18;
                         opacity: 0;
                         width: 100%;
                         z-index: 2;
@@ -1175,12 +1176,13 @@
                             padding: 40px;
                             &::after{border-top-left-radius: 30px;}
                             &::before{border-top-right-radius: 30px;}
-
+                            .fontellowRightArrow{font-size: 14px;}
                             img {
                                 width: 12px;
                                 height: 12px;
                             }
                         }
+
                     }
                 }
             }
@@ -1229,9 +1231,7 @@
                             }
                         }
 
-                        a {
-                            padding: 30px;
-
+                        a {padding: 30px;
                             img {
                                 width: 10px;
                                 height: 10px;

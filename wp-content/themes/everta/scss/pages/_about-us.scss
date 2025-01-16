@@ -586,8 +586,9 @@
                     h6{color: $quaternaryColor1; @include verdanabold; @include font24; line-height: 140%; text-transform: capitalize;}
                 }
                 .pictureBox{transition: all 0.5s ease-in-out; position: relative; overflow: hidden;transform-origin: left; width: 45%;}
-
-                &:last-child{flex-flow: row-reverse;
+                
+                &:nth-child(1){flex-flow: row;}
+                &:nth-child(2){flex-flow: row-reverse;
                     .detailBox{text-align: start;}
                     .pictureBox{transform-origin: right;}
                 }
@@ -682,7 +683,8 @@
                         p{margin-bottom: 4px; font-size: 12px; line-height: 150%;}
                         h6{font-size: 16px; line-height: 175%;}
                     }
-                    &:last-child{flex-flow: column; align-items: flex-end;
+                    &:nth-child(1){flex-flow: column; align-items: flex-start; }
+                    &:nth-child(2){flex-flow: column; align-items: flex-end;
                         .detailBox{text-align: end;}
                     }
                 }

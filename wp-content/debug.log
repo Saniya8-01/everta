@@ -487,3 +487,150 @@ Stack trace:
 [16-Jan-2025 08:19:55 UTC]   Automatic theme updates starting...
 [16-Jan-2025 08:19:55 UTC]   Automatic theme updates complete.
 [16-Jan-2025 08:19:55 UTC] Automatic updates complete.
+[16-Jan-2025 12:02:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\single-products.php on line 394
+[16-Jan-2025 12:02:18 UTC] PHP Stack trace:
+[16-Jan-2025 12:02:18 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:02:18 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:02:18 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:02:18 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:03:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 222
+[16-Jan-2025 12:03:03 UTC] PHP Stack trace:
+[16-Jan-2025 12:03:03 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:03:03 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:03:03 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:03:03 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:03:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 222
+[16-Jan-2025 12:03:03 UTC] PHP Stack trace:
+[16-Jan-2025 12:03:03 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:03:03 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:03:03 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:03:03 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:03:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 272
+[16-Jan-2025 12:03:03 UTC] PHP Stack trace:
+[16-Jan-2025 12:03:03 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:03:03 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:03:03 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:03:03 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:03:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 272
+[16-Jan-2025 12:03:03 UTC] PHP Stack trace:
+[16-Jan-2025 12:03:03 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:03:03 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:03:03 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:03:03 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:03:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 222
+[16-Jan-2025 12:03:41 UTC] PHP Stack trace:
+[16-Jan-2025 12:03:41 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:03:41 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:03:41 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:03:41 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:03:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 222
+[16-Jan-2025 12:03:41 UTC] PHP Stack trace:
+[16-Jan-2025 12:03:41 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:03:41 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:03:41 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:03:41 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:03:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 272
+[16-Jan-2025 12:03:41 UTC] PHP Stack trace:
+[16-Jan-2025 12:03:41 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:03:41 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:03:41 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:03:41 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:03:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 272
+[16-Jan-2025 12:03:41 UTC] PHP Stack trace:
+[16-Jan-2025 12:03:41 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:03:41 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:03:41 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:03:41 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:03:43 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 222
+[16-Jan-2025 12:03:43 UTC] PHP Stack trace:
+[16-Jan-2025 12:03:43 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:03:43 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:03:43 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:03:43 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:03:43 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 222
+[16-Jan-2025 12:03:43 UTC] PHP Stack trace:
+[16-Jan-2025 12:03:43 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:03:43 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:03:43 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:03:43 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:03:43 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 272
+[16-Jan-2025 12:03:43 UTC] PHP Stack trace:
+[16-Jan-2025 12:03:43 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:03:43 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:03:43 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:03:43 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:03:43 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 272
+[16-Jan-2025 12:03:43 UTC] PHP Stack trace:
+[16-Jan-2025 12:03:43 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:03:43 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:03:43 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:03:43 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:04:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 222
+[16-Jan-2025 12:04:23 UTC] PHP Stack trace:
+[16-Jan-2025 12:04:23 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:04:23 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:04:23 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:04:23 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:04:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 222
+[16-Jan-2025 12:04:23 UTC] PHP Stack trace:
+[16-Jan-2025 12:04:23 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:04:23 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:04:23 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:04:23 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:04:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 272
+[16-Jan-2025 12:04:23 UTC] PHP Stack trace:
+[16-Jan-2025 12:04:23 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:04:23 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:04:23 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:04:23 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:04:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 272
+[16-Jan-2025 12:04:23 UTC] PHP Stack trace:
+[16-Jan-2025 12:04:23 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:04:23 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:04:23 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:04:23 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:04:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 222
+[16-Jan-2025 12:04:51 UTC] PHP Stack trace:
+[16-Jan-2025 12:04:51 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:04:51 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:04:51 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:04:51 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:04:51 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 272
+[16-Jan-2025 12:04:51 UTC] PHP Stack trace:
+[16-Jan-2025 12:04:51 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:04:51 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:04:51 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:04:51 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:46:29 UTC] PHP Warning:  Undefined variable $counter in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 131
+[16-Jan-2025 12:46:29 UTC] PHP Stack trace:
+[16-Jan-2025 12:46:29 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:46:29 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:46:29 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:46:29 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:46:29 UTC] PHP Warning:  Undefined variable $counter in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 131
+[16-Jan-2025 12:46:29 UTC] PHP Stack trace:
+[16-Jan-2025 12:46:29 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:46:29 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:46:29 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:46:29 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 12:46:29 UTC] PHP Warning:  Undefined variable $counter in D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php on line 131
+[16-Jan-2025 12:46:29 UTC] PHP Stack trace:
+[16-Jan-2025 12:46:29 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 12:46:29 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 12:46:29 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 12:46:29 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 13:01:58 UTC] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in D:\SACHIN\www\everta\wp-content\plugins\advanced-custom-fields-pro\includes\loop.php on line 262
+[16-Jan-2025 13:01:58 UTC] PHP Stack trace:
+[16-Jan-2025 13:01:58 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 13:01:58 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 13:01:58 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 13:01:58 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 13:01:58 UTC] PHP   5. the_row($format = *uninitialized*) D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php:122
+[16-Jan-2025 13:01:58 UTC] PHP   6. acf_update_loop($i = 'active', $key = 'i', $value = 0) D:\SACHIN\www\everta\wp-content\plugins\advanced-custom-fields-pro\includes\api\api-template.php:655
+[16-Jan-2025 13:06:24 UTC] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in D:\SACHIN\www\everta\wp-content\plugins\advanced-custom-fields-pro\includes\api\api-template.php on line 847
+[16-Jan-2025 13:06:24 UTC] PHP Stack trace:
+[16-Jan-2025 13:06:24 UTC] PHP   1. {main}() D:\SACHIN\www\everta\index.php:0
+[16-Jan-2025 13:06:24 UTC] PHP   2. require() D:\SACHIN\www\everta\index.php:17
+[16-Jan-2025 13:06:24 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
+[16-Jan-2025 13:06:24 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
+[16-Jan-2025 13:06:24 UTC] PHP   5. get_sub_field($selector = 'hover_image', $format_value = *uninitialized*, $escape_html = *uninitialized*) D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php:144
