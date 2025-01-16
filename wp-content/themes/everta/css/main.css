@@ -4599,11 +4599,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a::after {
     border-top-left-radius: 30px;
-    width: 81%;
+    width: 91%;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a::before {
     border-top-right-radius: 30px;
-    width: 21%;
+    width: 11%;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a img {
     width: 10px;
