@@ -10857,12 +10857,15 @@ body {
 
 .resDetailContentSec {
   margin-bottom: 120px;
+  position: relative;
+  overflow: hidden;
 }
 .resDetailContentSec .secWrapper {
   padding-left: 120px;
   padding-right: 120px;
   width: 70%;
   margin: 0 auto;
+  overflow: hidden;
 }
 @media screen and (max-width: 1600px) {
   .resDetailContentSec .secWrapper {
@@ -10890,13 +10893,13 @@ body {
 }
 .resDetailContentSec .secWrapper .contentBox {
   position: relative;
-  transition: 0.5s all ease-in-out;
-  overflow: visible;
+  transition: 0.8s all ease-in-out;
+  overflow: hidden;
 }
 .resDetailContentSec .secWrapper .contentBox.hideTxt {
   max-height: 1068px;
   overflow: hidden;
-  transition: 0.5s all ease-in;
+  transition: 0.8s all ease-in;
 }
 .resDetailContentSec .secWrapper .contentBox h2 {
   margin-bottom: 24px;
@@ -11524,6 +11527,7 @@ body {
   transition: 0.3s all ease-in-out;
   position: absolute;
   right: 24px;
+  bottom: 35px;
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
   font-size: 20px;
@@ -11613,6 +11617,7 @@ body {
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
     right: 22px;
+    bottom: 25px;
   }
   .relatedPostSec .secWrapper .cardContainer .slick-prev,
   .relatedPostSec .secWrapper .cardContainer .slick-next {
@@ -11747,7 +11752,7 @@ body {
     width: 35px;
     height: 35px;
     right: 18px;
-    bottom: 30px;
+    bottom: 25px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
     font-size: 12px;
@@ -11824,6 +11829,7 @@ body {
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
     right: 16px;
+    bottom: 14px;
   }
   .relatedPostSec .secWrapper .cardContainer .slick-list {
     margin: 0 -5px;

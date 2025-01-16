@@ -72,10 +72,10 @@
         }
     }
 }
-.resDetailContentSec{margin-bottom: 120px;
-    .secWrapper{@include wrapper; width: 70%; margin: 0 auto;
-        .contentBox{ position: relative; transition: 0.5s all ease-in-out; overflow: visible; 
-            &.hideTxt{ max-height: 1068px; overflow: hidden; transition: 0.5s all ease-in;}
+.resDetailContentSec{margin-bottom: 120px; position: relative; overflow: hidden;
+    .secWrapper{@include wrapper; width: 70%; margin: 0 auto; overflow: hidden;
+        .contentBox{ position: relative; transition: 0.8s all ease-in-out; overflow: hidden; 
+            &.hideTxt{ max-height: 1068px; overflow: hidden; transition: 0.8s all ease-in;}
             h2{margin-bottom: 24px; color: #000; @include terminabold; @include font32; line-height: 150%;}
             h3{margin-bottom: 24px; color: #000; @include terminabold; @include font24; line-height: 150%;}
             h4{margin-bottom: 24px; color: #000; @include terminabold; @include font20; line-height: 160%;}
@@ -231,7 +231,7 @@
                             }
                         }
                     }
-                    .arrowBox{border: 1px solid #000; border-radius: 100%; width: 64px; height: 64px; display: flex; align-items: center; justify-content: center;opacity: 0; visibility: hidden; transition: 0.3s all ease-in-out; position: absolute; right: 24px;
+                    .arrowBox{border: 1px solid #000; border-radius: 100%; width: 64px; height: 64px; display: flex; align-items: center; justify-content: center;opacity: 0; visibility: hidden; transition: 0.3s all ease-in-out; position: absolute; right: 24px; bottom: 35px;
                         .rotateRightArrow{font-size: 20px; transform: rotate(-45deg);}
                     }
                 }
@@ -289,7 +289,7 @@
                                 }
                             }
                         }
-                        .arrowBox{right: 22px;}
+                        .arrowBox{right: 22px; bottom: 25px;}
                     }
                 }
                 .slick-prev,
@@ -375,7 +375,7 @@
                 .blogCard{
                     .imgBox{margin-bottom: 20px;}
                     .contentBox{padding: 0 18px 35px;align-items: end;
-                        .arrowBox{opacity: 1; visibility: visible; width: 35px; height: 35px; right: 18px; bottom: 30px;
+                        .arrowBox{opacity: 1; visibility: visible; width: 35px; height: 35px; right: 18px; bottom: 25px;
                             .rotateRightArrow{font-size: 12px;}
                         }
                     }
@@ -421,7 +421,7 @@
                                 }
                             }
                         }
-                        .arrowBox{right: 16px;}
+                        .arrowBox{right: 16px; bottom: 14px;}
                     }
                 }
                 .slick-list{margin: 0 -5px;}
