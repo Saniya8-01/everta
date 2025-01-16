@@ -2416,7 +2416,7 @@ footer .footerContainer .footerLeft {
   padding: 60px 120px;
 }
 footer .footerContainer .footerLeft .footerSocialmedia {
-  padding-top: 28px;
+  padding-top: 44px;
   border-top: 1px solid #A5A5A5;
   display: flex;
   gap: 24px;
@@ -2539,7 +2539,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 40px 80px;
   }
   footer .footerContainer .footerLeft .footerSocialmedia {
-    padding-top: 28px;
     gap: 24px;
   }
   footer .footerContainer .footerRight {
@@ -2563,7 +2562,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 30px 70px;
   }
   footer .footerContainer .footerLeft .footerSocialmedia {
-    padding-top: 22px;
+    padding-top: 40px;
     gap: 20px;
   }
   footer .footerContainer .footerRight {
@@ -2590,7 +2589,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 25px 40px;
   }
   footer .footerContainer .footerLeft .footerSocialmedia {
-    padding-top: 20px;
+    padding-top: 36px;
     gap: 18px;
   }
   footer .footerContainer .footerLeft .footerSocialmedia .socialmediaIcons .socialIcons {
@@ -2616,12 +2615,17 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     gap: 20px;
   }
 }
+@media all and (max-width: 1366px) {
+  footer .footerContainer .footerLeft .footerSocialmedia {
+    padding-top: 32px;
+  }
+}
 @media all and (max-width: 1180px) {
   footer .footerContainer .footerLeft {
     padding: 18px 30px;
   }
   footer .footerContainer .footerLeft .footerSocialmedia {
-    padding-top: 16px;
+    padding-top: 28px;
     gap: 14px;
   }
   footer .footerContainer .footerRight {
@@ -2649,7 +2653,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 20px 40px;
   }
   footer .footerContainer .footerLeft .footerSocialmedia {
-    padding-top: 18px;
+    padding-top: 32px;
     gap: 16px;
   }
   footer .footerContainer .footerRight {

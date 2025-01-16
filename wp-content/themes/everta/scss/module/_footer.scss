@@ -1,7 +1,7 @@
 footer{
     .footerContainer{display: flex;
         .footerLeft{flex-basis: 25%;display: flex;align-items: center;justify-content: space-between;flex-direction: column;background: $primaryColor1;padding: 60px 120px;
-            .footerSocialmedia{padding-top: 28px;border-top: 1px solid $quaternaryColor4;display: flex;gap: 24px;
+            .footerSocialmedia{padding-top: 44px;border-top: 1px solid $quaternaryColor4;display: flex;gap: 24px;
                 .socialmediaIcons{
                     .socialIcons{font-size: 20px;}
                 }
@@ -32,7 +32,7 @@ footer{
     @media all and (max-width:1800px){
         .footerContainer{
             .footerLeft{padding: 40px 80px;
-                .footerSocialmedia{padding-top: 28px;gap: 24px;}
+                .footerSocialmedia{gap: 24px;}
             }
             .footerRight{padding: 40px 80px;
                 .footerRightContainer{gap: 65px;
@@ -51,7 +51,7 @@ footer{
     @media all and (max-width:1600px){
         .footerContainer{
             .footerLeft{padding: 30px 70px;
-                .footerSocialmedia{padding-top: 22px;gap: 20px;}
+                .footerSocialmedia{padding-top: 40px;gap: 20px;}
             }
             .footerRight{padding: 30px 70px;
                 .footerRightContainer{gap: 55px;
@@ -70,7 +70,7 @@ footer{
     @media all and (max-width:1440px){
         .footerContainer{
             .footerLeft{padding: 25px 40px;
-                .footerSocialmedia{padding-top: 20px;gap: 18px;
+                .footerSocialmedia{padding-top: 36px;gap: 18px;
                     .socialmediaIcons{
                         .socialIcons{font-size: 18px;}
                     }
@@ -90,10 +90,17 @@ footer{
             }
         }
     }
+    @media all and (max-width:1366px){
+        .footerContainer{
+            .footerLeft{
+                .footerSocialmedia{padding-top: 32px;}
+            }
+        }
+    }
     @media all and (max-width:1180px){
         .footerContainer{
             .footerLeft{padding: 18px 30px;
-                .footerSocialmedia{padding-top: 16px;gap: 14px;}
+                .footerSocialmedia{padding-top: 28px;gap: 14px;}
             }
             .footerRight{padding: 18px 30px;
                 .footerRightContainer{gap: 24px;
@@ -112,7 +119,7 @@ footer{
     @media all and (max-width:1024px){
         .footerContainer{
             .footerLeft{padding: 20px 40px;
-                .footerSocialmedia{padding-top: 18px;gap: 16px;}
+                .footerSocialmedia{padding-top: 32px;gap: 16px;}
             }
             .footerRight{padding: 20px 40px;
                 .footerRightContainer{gap: 24px;
