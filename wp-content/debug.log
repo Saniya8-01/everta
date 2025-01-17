@@ -644,3 +644,10 @@ Stack trace:
 [17-Jan-2025 04:25:49 UTC] PHP Parse error:  syntax error, unexpected token "echo", expecting "," or ";" in D:\SACHIN\www\everta\wp-content\themes\everta\header.php on line 69
 [17-Jan-2025 04:25:51 UTC] PHP Parse error:  syntax error, unexpected token "echo", expecting "," or ";" in D:\SACHIN\www\everta\wp-content\themes\everta\header.php on line 69
 [17-Jan-2025 04:26:12 UTC] PHP Parse error:  syntax error, unexpected token "echo", expecting "," or ";" in D:\SACHIN\www\everta\wp-content\themes\everta\header.php on line 69
+[17-Jan-2025 07:39:47 UTC] Cron unschedule event error for hook: do_pings, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":false,"args":[]}
+[17-Jan-2025 08:06:28 UTC] Automatic updates starting...
+[17-Jan-2025 08:06:30 UTC]   Automatic plugin updates starting...
+[17-Jan-2025 08:06:30 UTC]   Automatic plugin updates complete.
+[17-Jan-2025 08:06:31 UTC]   Automatic theme updates starting...
+[17-Jan-2025 08:06:31 UTC]   Automatic theme updates complete.
+[17-Jan-2025 08:06:31 UTC] Automatic updates complete.
