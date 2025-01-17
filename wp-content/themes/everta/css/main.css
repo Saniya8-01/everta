@@ -6240,7 +6240,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .formSection .formWrapper .wpcf7 .form .input input {
     padding: 6px 0px 12px 0px;
   }
-  .formSection .formWrapper .wpcf7 .form .ctaDiv input {
+  .formSection .formWrapper .wpcf7 .form .input .ctaDiv input {
     padding: 16px 32px;
   }
   .formSection .formWrapper .productCtas {
@@ -6295,7 +6295,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .formSection .formWrapper .wpcf7 form .input input {
     padding: 6px 0px 12px 0px;
   }
-  .formSection .formWrapper .wpcf7 form .ctaDiv input {
+  .formSection .formWrapper .wpcf7 form .input .ctaDiv input {
     padding: 14px 32px;
   }
   .formSection .formWrapper .productCtas {
