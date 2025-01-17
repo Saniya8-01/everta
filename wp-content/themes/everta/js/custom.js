@@ -215,6 +215,7 @@ if ($(".testimonialSection").length) {
     var $slider = $(".testimonialCardWrapper");
     var $progressBar = $(".progress-bar");
     var autoplaySpeed = 5000;
+    var $progressContainer = $(".progresBar");
     
     $slider.on('init', function(event, slick) {
         if (slick.slideCount > slick.options.slidesToShow) {
@@ -277,8 +278,10 @@ if ($(".testimonialSection").length) {
         if (slick.slideCount > slick.options.slidesToShow) {
             startProgressBar();
             $progressBar.show();
+            $progressContainer.show();
         } else {
             $progressBar.hide();
+            $progressContainer.hide();
         }
     });
 } 

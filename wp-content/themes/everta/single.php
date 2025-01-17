@@ -77,7 +77,7 @@ get_header();
 											echo ' ';
 										}
 										echo $category_detail[0]->name;
-										?>
+									?>
 									</span>
 									<p><?php $title = get_the_title(); echo (strlen($title) > 50) ? substr($title, 0, 40) . '...' : $title; ?></p>
 									<ul>

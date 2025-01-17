@@ -64,9 +64,7 @@
 					</div>
 					<div class="contentBox">
 						<div class="content">
-							<span>
-								<?php echo esc_html(get_post_type()); ?>
-							</span>
+							<span>News</span>
 							<p>
 								<?php 
                                 $title = get_the_title(); 
