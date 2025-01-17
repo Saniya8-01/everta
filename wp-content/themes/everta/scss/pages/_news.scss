@@ -5,7 +5,7 @@
         }
         .blogsTabs{
             .blogsTabWrapper{display: flex;align-items:center;gap:16px;
-                a{color: #1E1E1E;@include verdanaregular;@include font16;line-height: 140%;font-weight: $fontW400;border-radius: 100px;border: 1px solid var(--Black-40, #A5A5A5); padding: 16px 32px;text-transform:capitalize;
+                a{color: #1E1E1E;@include verdanaregular;@include font16;line-height: 140%;font-weight: $fontW400;border-radius: 100px;border: 1px solid var(--Black-40, #A5A5A5); padding: 18px 32px;text-transform:capitalize;
                     &.active{color: $primaryColor1;background: #1E1E1E;}
                 }
             }
@@ -102,7 +102,7 @@
             }
             .blogsTabs{
                 .blogsTabWrapper{gap:15px;
-                    a{padding: 15px 30px;}
+                    a{padding: 16px 32px;}
                 }
             }
             .customSelect{
@@ -139,7 +139,7 @@
             }
             .blogsTabs{
                 .blogsTabWrapper{
-                    a{padding: 15px 30px;}
+                    a{padding: 15px 32px;}
                 }
             }
             .customSelect{
@@ -173,7 +173,7 @@
         .cardSectionWrapper{margin-top: 40px;margin-bottom:70px;
             .blogsTabs{
                 .blogsTabWrapper{gap:12px;
-                    a{padding: 12px 28px;}
+                    a{padding: 12px 32px;}
                 }
             }
             .customSelect{
@@ -226,7 +226,7 @@
         .cardSectionWrapper{
             .blogsTabs{
                 .blogsTabWrapper{gap:12px;
-                    a{padding: 12px 24px;}
+                    a{padding: 12px 32px;}
                 }
             }
             .customSelect{
@@ -242,6 +242,14 @@
             .cardGrid{gap:20px;
                 .cards{
                     .cardContent{padding: 22px 14px;
+                    }
+                }
+            }
+            .blogsTabs{
+                .blogsTabWrapper{gap:0px;
+                    a{padding: 10px 24px;margin-left: 16px;
+                        &:last-child{margin-right: 40px;}
+                        &:first-child{margin-left: 40px;}
                     }
                 }
             }
