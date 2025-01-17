@@ -424,6 +424,16 @@ body h1 {
   opacity: 0;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
+@media screen and (max-width: 1600px) {
+  .ctaYellowBlack::before {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ctaYellowBlack::before {
+    font-size: 12px;
+  }
+}
 .ctaYellowBlack:hover {
   padding-right: 66px;
 }
@@ -439,16 +449,14 @@ body h1 {
   .ctaYellowBlack {
     padding: 14px 32px;
   }
-  .ctaYellowBlack::before {
-    transform: translateY(-50%) scale(0.9);
-    transform-origin: bottom;
-    font-size: 14px;
-  }
 }
 @media screen and (max-width: 1024px) {
   .ctaYellowBlack {
     padding: 18px 32px;
     line-height: 15px;
+    font-size: 14px;
+  }
+  .ctaYellowBlack::before {
     font-size: 14px;
   }
 }
@@ -506,6 +514,16 @@ body h1 {
   opacity: 0;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
+@media screen and (max-width: 1600px) {
+  .ctaWhiteBlack::before {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ctaWhiteBlack::before {
+    font-size: 12px;
+  }
+}
 .ctaWhiteBlack:hover {
   padding-right: 66px;
 }
@@ -521,16 +539,14 @@ body h1 {
   .ctaWhiteBlack {
     padding: 14px 32px;
   }
-  .ctaWhiteBlack::before {
-    transform: translateY(-50%) scale(0.9);
-    transform-origin: bottom;
-    font-size: 14px;
-  }
 }
 @media screen and (max-width: 1024px) {
   .ctaWhiteBlack {
     padding: 18px 32px;
     line-height: 15px;
+    font-size: 14px;
+  }
+  .ctaWhiteBlack::before {
     font-size: 14px;
   }
 }
@@ -588,6 +604,16 @@ body h1 {
   opacity: 0;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
+@media screen and (max-width: 1600px) {
+  .ctaBlack::before {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ctaBlack::before {
+    font-size: 12px;
+  }
+}
 .ctaBlack:hover {
   padding-right: 66px;
 }
@@ -603,16 +629,14 @@ body h1 {
   .ctaBlack {
     padding: 14px 32px;
   }
-  .ctaBlack::before {
-    transform: translateY(-50%) scale(0.9);
-    transform-origin: bottom;
-    font-size: 14px;
-  }
 }
 @media screen and (max-width: 1024px) {
   .ctaBlack {
     padding: 18px 32px;
     line-height: 15px;
+    font-size: 14px;
+  }
+  .ctaBlack::before {
     font-size: 14px;
   }
 }
@@ -671,6 +695,16 @@ body h1 {
   opacity: 0;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
+@media screen and (max-width: 1600px) {
+  .ctaWhite::before {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ctaWhite::before {
+    font-size: 12px;
+  }
+}
 .ctaWhite:hover {
   padding-right: 66px;
   border-color: #4B4B4B;
@@ -687,16 +721,14 @@ body h1 {
   .ctaWhite {
     padding: 14px 32px;
   }
-  .ctaWhite::before {
-    transform: translateY(-50%) scale(0.9);
-    transform-origin: bottom;
-    font-size: 14px;
-  }
 }
 @media screen and (max-width: 1024px) {
   .ctaWhite {
     padding: 18px 32px;
     line-height: 15px;
+    font-size: 14px;
+  }
+  .ctaWhite::before {
     font-size: 14px;
   }
 }
