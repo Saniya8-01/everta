@@ -245,7 +245,10 @@
                     }
                 }
             }
-            .blogsTabs{
+            .blogsTabs{overflow-x:scroll; white-space: nowrap;-webkit-overflow-scrolling: touch;scrollbar-width: none; -ms-overflow-style: none;margin:0 -40px;
+                &::-webkit-scrollbar {
+                    display: none; 
+                }
                 .blogsTabWrapper{gap:0px;
                     a{padding: 10px 24px;margin-left: 16px;
                         &:last-child{margin-right: 40px;}
@@ -265,7 +268,7 @@
             .heading{
                 h2 {margin-bottom: 32px;font-size: 20px;font-weight: 600;line-height: 24px;}
             }
-            .blogsTabs{overflow-x:scroll; white-space: nowrap;-webkit-overflow-scrolling: touch;
+            .blogsTabs{overflow-x:scroll; white-space: nowrap;-webkit-overflow-scrolling: touch;margin:0 -20px;
                 .blogsTabWrapper{display: inline-flex;gap:0px;
                     a{padding: 9px 16px;font-size: 12px;line-height: 18px;font-weight: 400;margin-left: 12px;
                         &:last-child{margin-right: 20px;}

@@ -12623,7 +12623,7 @@ body {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    margin: 0 -20px;
+    margin: 0 -40px;
   }
   .resourcesBanner .resorucesBannerWrapper .resourcesTabs::-webkit-scrollbar {
     display: none;
@@ -13496,6 +13496,17 @@ body {
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
     padding: 22px 14px;
   }
+  .cardSection .cardSectionWrapper .blogsTabs {
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin: 0 -40px;
+  }
+  .cardSection .cardSectionWrapper .blogsTabs::-webkit-scrollbar {
+    display: none;
+  }
   .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper {
     gap: 0px;
   }
@@ -13567,6 +13578,7 @@ body {
     overflow-x: scroll;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+    margin: 0 -20px;
   }
   .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper {
     display: inline-flex;
