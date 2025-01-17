@@ -64,7 +64,7 @@
                     foreach ($terms as $term) {
                         $links[] = $term->name;
                     }
-                    $tax_links = join(" ", str_replace('-', ' ', $links));
+                    $tax_links = join(",", array_map('strtolower', $links)); // Changed from space to comma
                     $tax = strtolower($tax_links);
                 else :
                     $tax = '';
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const noPostsMessage = document.createElement("div");
     noPostsMessage.classList.add("no-posts-message");
     noPostsMessage.textContent = "No posts found.";
-    cardGrid.appendChild(noPostsMessage); // Ensure it's part of the DOM but hidden initially
+    cardGrid.appendChild(noPostsMessage);
     noPostsMessage.style.display = "none";
 
     function getCards() {
@@ -137,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
         allCards.forEach((card) => card.style.display = "none");
         visibleCards.forEach((card) => card.style.display = "block");
 
-        // Show "No posts found" message if no posts are available
         if (filteredCards.length === 0) {
             noPostsMessage.style.display = "block";
             pagination.style.display = "none";
@@ -163,7 +162,6 @@ document.addEventListener("DOMContentLoaded", () => {
         prevImage.src = `${theme_vars.template_dir}/images/prev-arrow.svg`;
         prevImage.alt = "Previous";
         prevButton.appendChild(prevImage);
-        prevButton.classList.add("pagination-prev");
         prevButton.disabled = currentPage === 1;
         prevButton.addEventListener("click", () => {
             currentPage--;
@@ -171,45 +169,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         pagination.appendChild(prevButton);
 
-        const totalPagesButtons = Math.min(totalPages, window.innerWidth <= 680 ? 3 : 6);
-        let pageButtons = [];
-
-        if (totalPages <= totalPagesButtons) {
-            for (let i = 1; i <= totalPages; i++) {
-                pageButtons.push(i);
-            }
-        } else {
-            if (currentPage <= 2) {
-                pageButtons = [1, 2, 3, "...", totalPages];
-            } else if (currentPage >= totalPages - 1) {
-                pageButtons = [1, "...", totalPages - 2, totalPages - 1, totalPages];
-            } else {
-                pageButtons = [1, "...", currentPage - 1, currentPage, currentPage + 1, "...", totalPages];
-            }
-        }
-
-        pageButtons.forEach((button) => {
+        for (let i = 1; i <= totalPages; i++) {
             const pageButton = document.createElement("button");
-            if (button === "...") {
-                pageButton.textContent = "...";
-                pageButton.disabled = true;
-            } else {
-                pageButton.textContent = button;
-                pageButton.classList.toggle("active", button === currentPage);
-                pageButton.addEventListener("click", () => {
-                    currentPage = button;
-                    renderCards(currentPage, filteredCards);
-                });
-            }
+            pageButton.textContent = i;
+            pageButton.classList.toggle("active", i === currentPage);
+            pageButton.addEventListener("click", () => {
+                currentPage = i;
+                renderCards(currentPage, filteredCards);
+            });
             pagination.appendChild(pageButton);
-        });
+        }
 
         const nextButton = document.createElement("button");
         const nextImage = document.createElement("img");
         nextImage.src = `${theme_vars.template_dir}/images/black-cta-arrow.svg`;
         nextImage.alt = "Next";
         nextButton.appendChild(nextImage);
-        nextButton.classList.add("pagination-next");
         nextButton.disabled = currentPage === totalPages;
         nextButton.addEventListener("click", () => {
             currentPage++;
@@ -219,31 +194,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function filterCardsBySearch(query = "") {
-        const cards = getCards();
-        return cards.filter((card) => {
+        return getCards().filter((card) => {
             const title = card.querySelector(".cardContent h3").textContent.toLowerCase();
-            const description = card.querySelector(".cardContent p").textContent.toLowerCase();
-            const tag = card.querySelector(".cardContent .tag").textContent.toLowerCase();
-
-            return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
+            return title.includes(query.toLowerCase());
         });
     }
 
     function filterCardsByCategory(filter = "all") {
-        const cards = getCards();
-        return cards.filter((card) => {
-            const category = card.getAttribute("data-category");
-            return filter === "all" || category === filter;
-        });
-    }
+    return getCards().filter((card) => {
+        const categories = card.getAttribute("data-category").split(","); // Changed from space to comma
+        return filter === "all" || categories.includes(filter);
+    });
+}
 
     function filterCards(query = "", filter = "all") {
         const filteredByCategory = filterCardsByCategory(filter);
-        const filteredCards = filterCardsBySearch(query).filter((card) => {
-            return filteredByCategory.includes(card);
-        });
-
-        currentPage = 1; // Reset to the first page
+        const filteredCards = filterCardsBySearch(query).filter((card) => filteredByCategory.includes(card));
+        currentPage = 1;
         renderCards(currentPage, filteredCards);
     }
 
@@ -252,17 +219,13 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             tabs.forEach((t) => t.classList.remove("active"));
             tab.classList.add("active");
-
-            const filter = tab.getAttribute("data-filter");
-            activeTabFilter = filter;
-            const query = searchInput.value.trim();
-            filterCards(query, filter);
+            activeTabFilter = tab.getAttribute("data-filter");
+            filterCards(searchInput.value.trim(), activeTabFilter);
         });
     });
 
     searchInput.addEventListener("input", (e) => {
-        const query = e.target.value.trim();
-        filterCards(query, activeTabFilter);
+        filterCards(e.target.value.trim(), activeTabFilter);
     });
 
     window.addEventListener("resize", () => {
