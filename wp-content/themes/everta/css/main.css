@@ -15845,6 +15845,7 @@ body {
   align-items: end;
   transition: 2s all ease-in-out;
   transform: translateY(-150px);
+  justify-content: space-between;
 }
 .productInfoSection .productInfoWrapper .productDetails .feature {
   width: 30%;
@@ -17237,4 +17238,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
