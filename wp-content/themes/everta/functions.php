@@ -198,7 +198,6 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 
-
 //News Post
 register_post_type( 'news-post', array('labels' => array(
     'name' => __( 'News Post' ),
