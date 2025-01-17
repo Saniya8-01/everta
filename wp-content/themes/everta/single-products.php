@@ -541,7 +541,7 @@ document.addEventListener('DOMContentLoaded', function () {
             infinite: false,
             responsive: [
                 {
-                    breakpoint: 821,
+                    breakpoint: 1025,
                     settings: {
                         slidesToShow: 2,
                     }

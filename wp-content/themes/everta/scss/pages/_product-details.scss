@@ -174,7 +174,7 @@
             }
         }
     }
-    @media all and (max-width:680px){
+    @media all and (max-width:820px){
         margin-bottom: 72px;
     .secondFoldWrapper{grid-template-columns:repeat(1,1fr);
         .industryCard{padding: 0px 0px 32px 0px;&:not(:last-child){margin-right: 0;border-bottom: 1px solid #D9D9D9;margin-bottom: 32px;border-right: 0px;}
@@ -872,13 +872,14 @@
                         color: $primaryColor1;
                         text-align: center;
                         @include terminamedium;
+                        @include font18;
                         opacity: 0;
                         width: 100%;
                         z-index: 2;
                         padding: 80px;
                         transition: all 0.4s ease-out;
 
-                        .fontellowRightArrow{font-size: 16px; color: $primaryColor1; line-height: normal;}
+                        .fontellowRightArrow{color: $primaryColor1; @include font18;}
 
                         &::before {
                             position: absolute;
@@ -1158,7 +1159,6 @@
                             opacity: 1;
                             background: #ffffff;
                             .fontellowRightArrow{font-size: 14px;}
-
                             &::after {
                                 border-top-left-radius: 30px;
                                 width: 81%;
@@ -1191,7 +1191,7 @@
                 .cards {border: none;
                     .card{
                         .card-wrapper{ padding: 35px 40px 30px 20px;}
-                        a{padding-left: 20px;}
+                        a{padding-left: 20px;padding-right: 20px;}
                     }
                     .slick-prev,
                     .slick-next {

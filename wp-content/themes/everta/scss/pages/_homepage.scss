@@ -941,7 +941,6 @@
                             line-height: 175%;
                         }
                     }
-                    .fontellowRightArrow{font-size: 16px; color: $primaryColor1; line-height: normal;}
 
                     &.active {
                         background: $primaryColor1;
@@ -971,6 +970,8 @@
                         padding: 80px;
                         transition: all 0.4s ease-out;
                         line-height: 100%;
+
+                        .fontellowRightArrow{ @include font18; color: $primaryColor1;}
 
                         img {
                             width: 14px;
@@ -1482,6 +1483,8 @@
                             font-weight: 600;
                             height: auto;
                             opacity: 1;
+
+                            .fontellowRightArrow{font-size: 14px;}
 
                             &::after {
                                 border-top-left-radius: 30px;
