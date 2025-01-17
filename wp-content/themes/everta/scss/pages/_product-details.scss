@@ -496,6 +496,13 @@
 }
 
 .technicalDetailsSection{margin-bottom:200px;@include wrapper;
+    &#technical-details{
+        .technicalDetailsWrapper{
+            .image{
+                .desktopImage{animation: zoomeffect 20s forwards;}.mobileImage{animation: zoomeffect 20s forwards;}
+            }
+        }
+    }
     .technicalDetailsWrapper{display: flex;justify-content:space-between;gap:140px;
         .accordionContainer{width:55%;
             .accordionHeading{

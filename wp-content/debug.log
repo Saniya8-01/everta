@@ -648,3 +648,17 @@ Stack trace:
 [17-Jan-2025 08:08:04 UTC]   Automatic theme updates starting...
 [17-Jan-2025 08:08:04 UTC]   Automatic theme updates complete.
 [17-Jan-2025 08:08:04 UTC] Automatic updates complete.
+[17-Jan-2025 10:48:43 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 10:49:28 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 10:49:34 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 10:49:37 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 10:50:55 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 10:54:57 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 10:56:01 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 10:56:07 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 10:56:10 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 10:56:14 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 11:04:13 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 11:04:17 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 11:04:44 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[17-Jan-2025 11:06:54 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79

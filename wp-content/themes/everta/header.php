@@ -40,84 +40,85 @@ $current_url = home_url(add_query_arg([], $wp->request));
 					<div class="navMenu">
 						<div class="navLinks">
 							<div class="navLists">
-
 								<?php
-// Define the menu location.
-$menu_name = 'primary-menu'; // Update with your correct menu location.
-// Get the menu locations.
-$locations = get_nav_menu_locations();
-if (isset($locations[$menu_name])) {
-    $menu_id = $locations[$menu_name];
-    $menu_items = wp_get_nav_menu_items($menu_id);
-    if (!empty($menu_items)) {
-        // Group menu items by parent ID for easier processing.
-        $menu_tree = [];
-        foreach ($menu_items as $menu_item) {
-            $menu_tree[$menu_item->menu_item_parent][] = $menu_item;
-        }
-        // Function to render the menu recursively (supports 3 levels).
-        function render_menu_items($items, $menu_tree) {
-            echo '<ul class="mainNav">';
-            foreach ($items as $item) {
-                $has_children = isset($menu_tree[$item->ID]);
-                // Start the menu item
-                echo '<li class="mainNavList' . ($has_children ? ' dropdown' : '') . '">';
-                echo '<a href="' . esc_url($item->url) . '" class="mainManu">' . esc_html($item->title) . '</a>';
-                // Check if this item has children (submenus)
-                if ($has_children) {
-					echo '<i class="icon-down-arrow ' . get_template_directory_uri() . ' arrowImage"></i>';
-                    echo '<div class="accordian-icon-wrapper"><div class="accordion-icon"></div></div>';
-                    echo '<div class="dropdownMenu">';
-                    // Render child menu items as "Title" for the submenu
-                    echo '<ul>';
-                    foreach ($menu_tree[$item->ID] as $child_item) {
-                        echo '<li class="submenu-title">';
-                        echo '<p>' . esc_html($child_item->title) . '</p>';
-                        // Render the submenus (if any)
-                        if (isset($menu_tree[$child_item->ID])) {
-                            foreach ($menu_tree[$child_item->ID] as $sub_item) {
-                                echo '<a href="' . esc_url($sub_item->url) . '">' . esc_html($sub_item->title) . '</a>';
-                            }
-                           
-                        }
-                        echo '</li>';
-                    }
-                    echo '</ul>';
-                    echo '</div>';
-                }
-                echo '</li>';
-			} ?>
-			<li class="mainNavList dropdown languageTranslator">
-				<i class="icon-globe fonelloGlobeIcon"></i>
-				<i class="icon-down-arrow arrowImage"></i>
-				<div class="dropdownMenu languageMenu">
-					<ul>
-						<li>
-							<a href="">EN</a>
-						</li>
-						<li>
-							<a href="">PL</a>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li class="mainNavList ctaContact">
-				<a href="javascript:void(0);" class="mainManu" onClick="openForm()">Contact us</a>
-			</li>
-			<?php 
-			
-            echo '</ul>';
-        }
-        // Render the top-level menu.
-        render_menu_items($menu_tree[0], $menu_tree); // Start rendering from the top level.
-    } else {
-        echo '<p>No menu items found.</p>';
-    }
-} else {
-    echo '<p>No menu assigned to this location.</p>';
-}
-?>
-
+								// Define the menu location.
+								$menu_name = 'primary-menu'; // Update with your correct menu location.
+								// Get the menu locations.
+								$locations = get_nav_menu_locations();
+								if (isset($locations[$menu_name])) {
+									$menu_id = $locations[$menu_name];
+									$menu_items = wp_get_nav_menu_items($menu_id);
+									if (!empty($menu_items)) {
+										// Group menu items by parent ID for easier processing.
+										$menu_tree = [];
+										foreach ($menu_items as $menu_item) {
+											$menu_tree[$menu_item->menu_item_parent][] = $menu_item;
+										}
+										// Function to render the menu recursively (supports 3 levels).
+										function render_menu_items($items, $menu_tree) {
+											echo '<ul class="mainNav">';
+											foreach ($items as $item) {
+												$has_children = isset($menu_tree[$item->ID]);
+												// Start the menu item
+												echo '<li class="mainNavList' . ($has_children ? ' dropdown' : '') . '">';
+												echo '<a href="' . esc_url($item->url) . '" class="mainManu">' . esc_html($item->title) . '</a>';
+												// Check if this item has children (submenus)
+												if ($has_children) {
+													echo '<img src="' . get_template_directory_uri() . '/images/chevron-down.svg" alt="" class="arrowImage">';
+													echo '<div class="accordian-icon-wrapper"><div class="accordion-icon"></div></div>';
+													echo '<div class="dropdownMenu">';
+													// Render child menu items as "Title" for the submenu
+													echo '<ul>';
+													foreach ($menu_tree[$item->ID] as $child_item) {
+														echo '<li class="submenu-title">';
+														echo '<p>' . esc_html($child_item->title) . '</p>';
+														// Render the submenus (if any)
+														if (isset($menu_tree[$child_item->ID])) {
+															foreach ($menu_tree[$child_item->ID] as $sub_item) {
+																$serverurl = @basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+																$suburl = !empty($sub_item->url) ? @basename(parse_url($sub_item->url, PHP_URL_PATH)) : '';
+															if($serverurl == $suburl){ $activee = 'active';}else { $activee = '';}
+																echo '<a href="' . esc_url($sub_item->url) . '" class="'.$activee.'">' . esc_html($sub_item->title) . '</a>';
+															}
+														}
+														echo '</li>';
+													}
+													echo '</ul>';
+													echo '</div>';
+												}
+												echo '</li>';
+											} ?>
+											<li class="mainNavList dropdown languageTranslator">
+												<img src="<?php bloginfo('template_directory'); ?>/images/language-svg.svg"
+													alt="">
+												<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg"
+													alt="" class="arrowImage">
+												<div class="dropdownMenu languageMenu">
+													<ul>
+														<li>
+															<a href="">EN</a>
+														</li>
+														<li>
+															<a href="">PL</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="mainNavList ctaContact">
+												<a href="javascript:void(0);" class="mainManu" onClick="openForm()">Contact us</a>
+											</li>
+											<?php
+											echo '</ul>';
+										}
+										// Render the top-level menu.
+										render_menu_items($menu_tree[0], $menu_tree); // Start rendering from the top level.
+									} else {
+										echo '<p>No menu items found.</p>';
+									}
+								} else {
+									echo '<p>No menu assigned to this location.</p>';
+								}
+								?>
 </div>
 						</div>
 					</div>

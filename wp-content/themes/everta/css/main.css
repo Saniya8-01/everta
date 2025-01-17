@@ -1021,6 +1021,9 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMe
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a:hover {
   background: #F5F75E;
 }
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a.active {
+  background: #F5F75E;
+}
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
   min-width: 115px;
   gap: 0 !important;
@@ -1392,6 +1395,10 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a:hover {
     background: unset;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a.active {
+    background: unset;
+    font-family: "verdanabold";
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .dropdown a {
     cursor: default;
@@ -11895,6 +11902,7 @@ body {
   line-height: 175%;
   transition: 0.3s all ease-in-out;
   text-transform: capitalize;
+  display: inline-block;
 }
 @media screen and (max-width: 1600px) {
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span {
@@ -16206,6 +16214,12 @@ body {
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+.technicalDetailsSection#technical-details .technicalDetailsWrapper .image .desktopImage {
+  animation: zoomeffect 20s forwards;
+}
+.technicalDetailsSection#technical-details .technicalDetailsWrapper .image .mobileImage {
+  animation: zoomeffect 20s forwards;
 }
 .technicalDetailsSection .technicalDetailsWrapper {
   display: flex;

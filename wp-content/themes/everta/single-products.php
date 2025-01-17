@@ -437,9 +437,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     const industrySection = document.querySelector('.industryStandardSection');
+    const technicalSection = document.querySelector('.technicalDetailsSection');
 
     if (industrySection) {
-        const observer = new IntersectionObserver(function (entries) {
+        const industryObserver = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     industrySection.id = 'industry-standard';
@@ -447,12 +448,25 @@ document.addEventListener('DOMContentLoaded', function () {
                     industrySection.removeAttribute('id');
                 }
             });
-        }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+        }, { threshold: 0.5 }); 
 
-        observer.observe(industrySection);
+        industryObserver.observe(industrySection);
+    }
+
+    if (technicalSection) {
+        const technicalObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    technicalSection.id = 'technical-details';
+                } else {
+                    technicalSection.removeAttribute('id');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        technicalObserver.observe(technicalSection);
     }
 });
-
 
 document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
