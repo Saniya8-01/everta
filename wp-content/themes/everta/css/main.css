@@ -13321,7 +13321,7 @@ body {
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo h3 {
     margin-bottom: 14px;
   }
-  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow .rotateRightArrow {
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
     right: 22px;
     bottom: 25px;
   }
@@ -13455,7 +13455,6 @@ body {
     width: 45px;
     height: 45px;
     right: 18px;
-    bottom: 30px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow .rotateRightArrow {
     font-size: 14px;
