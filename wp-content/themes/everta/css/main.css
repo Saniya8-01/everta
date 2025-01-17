@@ -15199,7 +15199,7 @@ body {
     gap: 16px;
     flex-direction: column;
     margin: 0 auto;
-    align-items: flex-start;
+    align-items: center;
   }
 }
 
