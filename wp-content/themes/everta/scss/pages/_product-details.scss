@@ -14,7 +14,7 @@
         .productDetails{display: flex;gap:120px;margin-bottom:42px;transition: 0.8s all ease-in-out;opacity: 0;
             p{@include terminaregular;@include font18;font-weight: 600;line-height: 155.556%;color: #1E1E1E;position:relative;
                 &:not(:last-child){
-                    &::after{content: "";position: absolute;top: 50%;transform: translateY(-50%);width: 13px;height: 13px;background: #787878;border-radius: 50%;right: -54px;}
+                    &::after{content: "";position: absolute;top: 50%;transform: translateY(-50%);width: 13px;height: 13px;background: #787878;border-radius: 50%;right: -60px;}
                 }
             }
         }
@@ -47,7 +47,7 @@
         .productDetails{gap:100px;margin-bottom:36px;
             p{
                 &:not(:last-child){
-                    &::after{width: 10px;height: 10px;right: -45px;}
+                    &::after{width: 10px;height: 10px;right: -50px;}
                 }
             }
         }
@@ -63,7 +63,7 @@
         .productDetails{gap:90px;margin-bottom:32px;
             p{
                 &:not(:last-child){
-                    &::after{width: 10px;height: 10px;right: -40px;}
+                    &::after{width: 10px;height: 10px;right: -45px;}
                 }
             }
         }
@@ -77,7 +77,7 @@
         .productDetails{gap:80px;margin-bottom:28px;
             p{
                 &:not(:last-child){
-                    &::after{width: 8px;height: 8px;right: -36px;}
+                    &::after{width: 8px;height: 8px;right: -40px;}
                 }
             }
         }

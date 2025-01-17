@@ -15002,7 +15002,7 @@ body {
   height: 13px;
   background: #787878;
   border-radius: 50%;
-  right: -54px;
+  right: -60px;
 }
 .productBanner .productBannerWrapper .bannerImages {
   position: relative;
@@ -15065,7 +15065,7 @@ body {
   .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
     width: 10px;
     height: 10px;
-    right: -45px;
+    right: -50px;
   }
   .productBanner .productBannerWrapper .bannerImages {
     margin-bottom: 24px;
@@ -15089,7 +15089,7 @@ body {
   .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
     width: 10px;
     height: 10px;
-    right: -40px;
+    right: -45px;
   }
   .productBanner .productBannerWrapper .bannerImages {
     margin-bottom: 20px;
@@ -15112,7 +15112,7 @@ body {
   .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
     width: 8px;
     height: 8px;
-    right: -36px;
+    right: -40px;
   }
   .productBanner .productBannerWrapper .bannerImages {
     margin-bottom: 18px;
