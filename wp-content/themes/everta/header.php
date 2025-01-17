@@ -65,7 +65,7 @@ if (isset($locations[$menu_name])) {
                 echo '<a href="' . esc_url($item->url) . '" class="mainManu">' . esc_html($item->title) . '</a>';
                 // Check if this item has children (submenus)
                 if ($has_children) {
-                    echo '<img src="' . get_template_directory_uri() . '/images/chevron-down.svg" alt="" class="arrowImage">';
+					echo '<i class="icon-down-arrow ' . get_template_directory_uri() . ' arrowImage"></i>';
                     echo '<div class="accordian-icon-wrapper"><div class="accordion-icon"></div></div>';
                     echo '<div class="dropdownMenu">';
                     // Render child menu items as "Title" for the submenu
@@ -88,10 +88,8 @@ if (isset($locations[$menu_name])) {
                 echo '</li>';
 			} ?>
 			<li class="mainNavList dropdown languageTranslator">
-				<img src="<?php bloginfo('template_directory'); ?>/images/language-svg.svg"
-					alt="">
-				<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg"
-					alt="" class="arrowImage">
+				<i class="icon-globe fonelloGlobeIcon"></i>
+				<i class="icon-down-arrow arrowImage"></i>
 				<div class="dropdownMenu languageMenu">
 					<ul>
 						<li>
@@ -123,9 +121,8 @@ if (isset($locations[$menu_name])) {
 </div>
 						</div>
 					</div>
-					<li class="languageTranslatorMbl">
-						<img src="<?php bloginfo('template_directory'); ?>/images/language-svg.svg"
-							alt="">
+					<li class="languageTranslatorMbl">					
+							<i class="icon-globe fonelloGlobeIconMbl"></i>
 						<div class="languageMenuMbl">
 							<ul>
 								<li>

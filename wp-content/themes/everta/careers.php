@@ -194,7 +194,7 @@
         <?php $cvheading = get_sub_field( "heading" ); if ( $cvheading ) {?>
             <section class="careerCVSection">
                 <div class="careerSectionWrapper">
-                    <h2><?php echo get_sub_field(''); ?></h2>
+                    <h2><?php echo get_sub_field('heading'); ?></h2>
                     <p><?php echo get_sub_field('subheading'); ?></p>
                     <?php $cta_text = get_sub_field('cta_text'); if ($cta_text) : ?>
                         <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaBlack">

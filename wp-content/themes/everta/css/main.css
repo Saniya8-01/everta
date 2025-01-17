@@ -334,6 +334,16 @@ body h1 {
   opacity: 0;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
+@media screen and (max-width: 1600px) {
+  .ctaYellow::before {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ctaYellow::before {
+    font-size: 12px;
+  }
+}
 .ctaYellow:hover {
   padding-right: 66px;
 }
@@ -349,16 +359,14 @@ body h1 {
   .ctaYellow {
     padding: 14px 32px;
   }
-  .ctaYellow::before {
-    transform: translateY(-50%) scale(0.9);
-    transform-origin: bottom;
-    font-size: 14px;
-  }
 }
 @media screen and (max-width: 1024px) {
   .ctaYellow {
     padding: 18px 32px;
     line-height: 15px;
+    font-size: 14px;
+  }
+  .ctaYellow::before {
     font-size: 14px;
   }
 }
@@ -828,6 +836,7 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
   display: flex;
+  align-items: center;
   gap: 10px;
   padding: 15px 0px;
   position: relative;
@@ -870,6 +879,11 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .arrowImage {
   transition: 0.3s all ease-in-out;
+  font-size: 8px;
+  line-height: normal;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .fonelloGlobeIcon {
+  font-size: 24px;
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .accordian-icon-wrapper {
   display: none;
@@ -1020,6 +1034,9 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a:
 header .headerWrapper .headerMenu .languageTranslatorMbl {
   display: none;
 }
+header .headerWrapper .headerMenu .languageTranslatorMbl .fonelloGlobeIconMbl {
+  font-size: 24px;
+}
 header .headerWrapper .headerMenu .hamburger-menu {
   display: none;
 }
@@ -1086,6 +1103,12 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
     gap: 40px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .arrowImage {
+    font-size: 6px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .fonelloGlobeIcon {
+    font-size: 18px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu {
     left: -32px;
@@ -3533,23 +3556,23 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   border: none;
   z-index: 2;
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content1 h3 {
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content h3 {
   margin-bottom: 32px;
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content2p2Content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content1 p {
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content p {
   display: block;
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content a, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content2p2Content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec1Content .content1 a, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content1 a {
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content a {
   display: inline-block;
 }
 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .image {
   opacity: 1;
   height: auto;
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 {
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content {
   flex-basis: 45%;
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 h3 {
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3 {
   font-family: "termina_testmedium";
   font-size: 36px;
   line-height: 100%;
@@ -3557,26 +3580,26 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   color: #1E1E1E;
 }
 @media screen and (max-width: 1600px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 h3 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3 {
     font-size: 32px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 h3 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3 {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 h3 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3 {
     font-size: 22px;
   }
 }
 @media screen and (max-width: 720px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 h3 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3 {
     font-size: 20px;
   }
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
   display: none;
   margin-bottom: 48px;
   color: #1E1E1E;
@@ -3587,21 +3610,21 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   padding: 0px;
 }
 @media screen and (max-width: 1600px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
     font-size: 12px;
   }
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .toggle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .toggle, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .toggle, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 .toggle, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 .toggle {
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content .toggle {
   display: none;
   text-transform: capitalize;
   margin-top: 5px;
 }
-.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content a, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 a, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 a {
+.evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content a {
   display: none;
 }
 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .image {
@@ -3716,10 +3739,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding: 60px 120px;
     height: 170px;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content1 h3 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content h3 {
     margin-bottom: 28px;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
     margin-bottom: 40px;
   }
 }
@@ -3740,10 +3763,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active {
     height: 370px;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content1 h3 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content h3 {
     margin-bottom: 24px;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
     margin-bottom: 30px;
   }
 }
@@ -3764,13 +3787,13 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active {
     height: 330px;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content1 h3 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content h3 {
     margin-bottom: 24px;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content {
     flex-basis: 40%;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
     margin-bottom: 36px;
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .image {
@@ -3819,18 +3842,18 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active {
     height: 320px;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content1 h3 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box.active .content h3 {
     margin-bottom: 20px;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content {
     flex-basis: 50%;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
     margin-bottom: 26px;
   }
 }
 @media all and (max-width: 1180px) {
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content {
     flex-basis: 55%;
   }
 }
@@ -3897,24 +3920,24 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box:nth-of-type(even) {
     background: #ffffff !important;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box:nth-of-type(even) .content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box:nth-of-type(even) .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box:nth-of-type(even) li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box:nth-of-type(even) .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box:nth-of-type(even) li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box:nth-of-type(even) .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content a, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box:nth-of-type(even) .content2p2Content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box:nth-of-type(even) .privacyPolicySec .sec1Content .content1 a, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box:nth-of-type(even) .content1 a {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box:nth-of-type(even) .content a {
     background: transparent;
   }
   .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box:nth-of-type(even):hover {
     background: #ffffff;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content {
     order: 2;
     flex-basis: 100%;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content h3, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content h3, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 h3, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 h3 {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3 {
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
     margin-bottom: 16px;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
     display: block;
     margin-bottom: 0px;
     font-size: 12px;
@@ -3929,14 +3952,14 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li .toggle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li .toggle, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content .toggle, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content .toggle, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 .toggle, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 .toggle {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content .toggle {
     display: block;
     background: transparent;
     font-weight: 700;
     font-size: 14px;
     line-height: 150%;
   }
-  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li a, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box li a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content a, .privacyPolicySec .sec2Content .content2Section .content2p2 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content a, .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 a, .privacyPolicySec .sec1Content .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 a {
+  .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content a {
     display: inline-block;
     margin-top: 32px;
   }
@@ -9383,22 +9406,22 @@ body {
 .weValueSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
   margin-bottom: 56px;
 }
-.weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
+.weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
   font-size: 20px;
   margin-bottom: 0;
 }
 @media screen and (max-width: 1600px) {
-  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
+  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
+  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 720px) {
-  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box li p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content p, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 p {
+  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content p {
     font-size: 12px;
   }
 }
@@ -9406,7 +9429,7 @@ body {
   .weValueSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
     margin-bottom: 50px;
   }
-  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 {
+  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content {
     flex-basis: 50%;
   }
 }
@@ -9414,7 +9437,7 @@ body {
   .weValueSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
     margin-bottom: 40px;
   }
-  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box li, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content2p2Content, .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content1 {
+  .weValueSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content {
     flex-basis: 55%;
   }
 }
@@ -11827,10 +11850,10 @@ body {
   justify-content: space-between;
   position: relative;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 {
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content {
   width: 100%;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content span, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 span, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 span {
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span {
   padding: 4px 8px;
   background: #F5F75E;
   border-radius: 4px;
@@ -11842,16 +11865,16 @@ body {
   text-transform: capitalize;
 }
 @media screen and (max-width: 1600px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content span, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 span, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 span {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content span, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 span, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 span {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span {
     font-size: 12px;
   }
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 p {
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
   margin: 24px 0 14px 0;
   color: #1E1E1E;
   font-family: "verdanaregular";
@@ -11859,21 +11882,21 @@ body {
   line-height: 166%;
 }
 @media screen and (max-width: 1600px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 p {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 p {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
     font-size: 16px;
   }
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul {
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li {
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li {
   color: #000;
   font-family: "verdanaregular";
   font-size: 16px;
@@ -11881,19 +11904,19 @@ body {
   position: relative;
 }
 @media screen and (max-width: 1600px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li {
     font-size: 12px;
   }
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li:last-child, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li:last-child, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li:last-child, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li:last-child, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li:last-child, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li:last-child {
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child {
   padding-left: 15px;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li:last-child::before, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li:last-child::before {
+.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before {
   content: "";
   position: absolute;
   width: 5px;
@@ -11925,7 +11948,7 @@ body {
 .relatedPostSec .secWrapper .cardContainer .blogCard:hover {
   background: #F5F75E;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content span, .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content span, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content2p2Content span, .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .privacyPolicySec .sec1Content .content1 span, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content1 span {
+.relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content span {
   background: #fff;
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .arrowBox {
@@ -11980,7 +12003,7 @@ body {
   .relatedPostSec .secWrapper .secHeading {
     margin-bottom: 60px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 p {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
     margin: 22px 0 12px 0;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
@@ -12001,7 +12024,7 @@ body {
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
     padding: 0 22px 50px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li:last-child::before, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li:last-child::before {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before {
     top: 9px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
@@ -12038,7 +12061,7 @@ body {
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
     padding: 0 20px 45px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 p {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
     margin: 20px 0 10px 0;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
@@ -12084,10 +12107,10 @@ body {
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
     padding: 0 18px 40px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 p {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
     margin: 18px 0 10px 0;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li:last-child::before, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li:last-child::before {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before {
     top: 8px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
@@ -12110,7 +12133,7 @@ body {
   .relatedPostSec .secWrapper .cardContainer .blogCard:hover {
     background: #fff;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content span, .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content span, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content2p2Content span, .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .privacyPolicySec .sec1Content .content1 span, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content1 span {
+  .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content span {
     background: #F5F75E;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .arrowBox {
@@ -12149,7 +12172,7 @@ body {
   .relatedPostSec .secWrapper .cardContainer .blogCard:hover {
     background: #fff;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content span, .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content span, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content2p2Content span, .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .privacyPolicySec .sec1Content .content1 span, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content1 span {
+  .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content span {
     background: #F5F75E;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .arrowBox {
@@ -12196,24 +12219,24 @@ body {
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
     padding: 0 16px 24px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li span, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content span, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content span, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 span, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 span {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span {
     line-height: 150%;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li p, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content p, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content p, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 p, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 p {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
     margin: 16px 0 14px 0;
     font-size: 16px;
     line-height: 175%;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul {
     gap: 8px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li {
     line-height: 150%;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li:last-child, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li:last-child, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li:last-child, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li:last-child, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li:last-child, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li:last-child {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child {
     padding-left: 13px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox li ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content ul li:last-child::before, .privacyPolicySec .sec2Content .content2Section .content2p2 .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content2p2Content ul li:last-child::before, .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .privacyPolicySec .sec1Content .content1 ul li:last-child::before, .privacyPolicySec .sec1Content .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content1 ul li:last-child::before {
+  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before {
     top: 6px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
@@ -13083,6 +13106,7 @@ body {
   border: 1px solid #D2D2D2;
   transition: 0.3s all ease-in-out;
   position: relative;
+  cursor: pointer;
 }
 .cardSection .cardSectionWrapper .cardGrid .cards:hover {
   background: #F5F75E;
@@ -13093,11 +13117,14 @@ body {
 .cardSection .cardSectionWrapper .cardGrid .cards:hover .redirectArrow {
   opacity: 1;
 }
+.cardSection .cardSectionWrapper .cardGrid .cards .cardImg {
+  margin-bottom: 30px;
+}
 .cardSection .cardSectionWrapper .cardGrid .cards .cardImg img {
   width: 100%;
 }
 .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
-  padding: 32px 24px;
+  padding: 0 24px 55px;
   position: relative;
 }
 .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
@@ -13164,13 +13191,22 @@ body {
   }
 }
 .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
+  border: 1px solid #000;
+  border-radius: 100%;
   width: 64px;
   height: 64px;
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s all ease-in-out;
+  position: absolute;
+  right: 24px;
+  bottom: 35px;
+  opacity: 0;
+}
+.cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow .rotateRightArrow {
+  font-size: 20px;
+  transform: rotate(-45deg);
 }
 .cardSection .cardSectionWrapper .pagination {
   display: flex;
@@ -13239,9 +13275,6 @@ body {
     margin-bottom: 110px;
     margin-top: 70px;
   }
-  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
-    padding: 32px 24px;
-  }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
     padding: 4px 9px;
   }
@@ -13307,7 +13340,7 @@ body {
     margin-top: 60px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
-    padding: 30px 22px;
+    padding: 0 22px 50px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
     padding: 4px 8px;
@@ -13319,9 +13352,9 @@ body {
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo h3 {
     margin-bottom: 14px;
   }
-  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
-    width: 50px;
-    height: 50px;
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow .rotateRightArrow {
+    right: 22px;
+    bottom: 25px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 22px;
@@ -13365,8 +13398,11 @@ body {
     margin-bottom: 80px;
     margin-top: 50px;
   }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardImg {
+    margin-bottom: 25px;
+  }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
-    padding: 28px 20px;
+    padding: 0 20px 45px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
     padding: 4px 8px;
@@ -13379,8 +13415,12 @@ body {
     margin-bottom: 12px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow .rotateRightArrow {
+    font-size: 16px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 20px;
@@ -13426,8 +13466,11 @@ body {
     margin-bottom: 70px;
     margin-top: 40px;
   }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardImg {
+    margin-bottom: 20px;
+  }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
-    padding: 24px 16px;
+    padding: 0 18px 40px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
     padding: 3px 7px;
@@ -13440,8 +13483,13 @@ body {
     margin-bottom: 10px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
-    width: 36px;
-    height: 36px;
+    width: 45px;
+    height: 45px;
+    right: 18px;
+    bottom: 30px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow .rotateRightArrow {
+    font-size: 14px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 16px;
@@ -13487,6 +13535,20 @@ body {
   }
   .cardSection .cardSectionWrapper .cardGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
+    padding: 0 18px 35px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
+    opacity: 1;
+    visibility: visible;
+    width: 35px;
+    height: 35px;
+    right: 18px;
+    bottom: 25px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow .rotateRightArrow {
+    font-size: 12px;
   }
 }
 @media all and (max-width: 820px) {
@@ -13644,6 +13706,10 @@ body {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
+    right: 16px;
+    bottom: 14px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 12px;
@@ -14351,281 +14417,331 @@ body {
   }
 }
 
-.title {
-  width: 100%;
-  color: black;
-  font-size: 32px;
-  font-family: "termina_testbold";
-  font-weight: 700;
-  line-height: 48px;
-  word-wrap: break-word;
-}
-@media screen and (max-width: 1800px) {
-  .title {
-    font-size: 30px;
-  }
-}
-@media screen and (max-width: 1600px) {
-  .title {
-    font-size: 26px;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .title {
-    font-size: 22px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .title {
-    font-size: 18px;
-  }
-}
-
-.subtitle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span, .privacyPolicySec .sec2Content .title2 {
-  color: black;
-  font-size: 20px;
-  font-family: "termina_testbold";
-  font-weight: 700;
-  line-height: 32px;
-  word-wrap: break-word;
-}
-@media screen and (max-width: 1600px) {
-  .subtitle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span, .privacyPolicySec .sec2Content .title2 {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .subtitle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span, .privacyPolicySec .sec2Content .title2 {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .subtitle, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Span, .privacyPolicySec .sec2Content .title2 {
-    font-size: 12px;
-  }
-}
-
-.content, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec1Content .content1 {
-  color: black;
-  font-size: 20px;
-  font-family: "termina_testregular";
-  font-weight: 400;
-  line-height: 32px;
-  word-wrap: break-word;
-}
-@media screen and (max-width: 1600px) {
-  .content, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec1Content .content1 {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .content, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec1Content .content1 {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .content, .privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li, .privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content, .privacyPolicySec .sec1Content .content1 {
-    font-size: 12px;
-  }
-}
-
 .privacyPolicySec {
-  margin: 50px auto 200px;
-  width: 57.5%;
+  margin: 180px auto;
+  width: 58%;
 }
-@media (max-width: 720px) {
-  .privacyPolicySec {
-    width: 91.5%;
-    margin-bottom: 88px;
-  }
+.privacyPolicySec .backBtn {
+  margin-bottom: 100px;
+  display: inline-block;
 }
-.privacyPolicySec .backArrow {
-  width: 100%;
-  height: 100%;
-  justify-content: flex-start;
+.privacyPolicySec .backBtn a {
+  display: flex;
   align-items: center;
   gap: 10px;
-  display: inline-flex;
-  margin-bottom: 99px;
-  margin-top: 76px;
-}
-@media (max-width: 720px) {
-  .privacyPolicySec .backArrow {
-    margin-bottom: 24px;
-    margin-top: 24px;
-  }
-}
-.privacyPolicySec .backArrow .arrow {
-  width: 32px;
-  height: 32px;
-  position: relative;
-}
-.privacyPolicySec .backArrow .arrow .arrowChild {
-  width: 24px;
-  height: 20px;
-  left: 4px;
-  top: 6px;
-  position: absolute;
-}
-.privacyPolicySec .backArrow .backText {
   color: #4B4B4B;
+  font-family: "termina_testbold";
   font-size: 20px;
-  font-family: "termina_testmedium";
+  line-height: 140%;
   font-weight: 600;
-  line-height: 24px;
-  word-wrap: break-word;
 }
 @media screen and (max-width: 1600px) {
-  .privacyPolicySec .backArrow .backText {
+  .privacyPolicySec .backBtn a {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .privacyPolicySec .backArrow .backText {
+  .privacyPolicySec .backBtn a {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 720px) {
-  .privacyPolicySec .backArrow .backText {
+  .privacyPolicySec .backBtn a {
     font-size: 12px;
   }
 }
-.privacyPolicySec .secHeading {
-  width: 100%;
-  color: #1E1E1E;
-  font-size: 48px;
-  font-family: "termina_testmedium";
-  font-weight: 600;
-  line-height: 64px;
-  word-wrap: break-word;
-  margin-bottom: 73px;
+.privacyPolicySec .backBtn a .backArrow {
+  color: #4B4B4B;
+  font-family: "termina_testbold";
+  font-size: 20px;
 }
 @media screen and (max-width: 1600px) {
-  .privacyPolicySec .secHeading {
+  .privacyPolicySec .backBtn a .backArrow {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .privacyPolicySec .backBtn a .backArrow {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .privacyPolicySec .backBtn a .backArrow {
+    font-size: 12px;
+  }
+}
+.privacyPolicySec .backBtn a .backArrow::before {
+  margin: 0;
+}
+.privacyPolicySec .privacyContent .HeadingBox {
+  margin-bottom: 64px;
+}
+.privacyPolicySec .privacyContent .HeadingBox .secHeading {
+  color: #1E1E1E;
+  text-shadow: 0px 5.12px 43.52px rgba(0, 0, 0, 0.1);
+  font-family: "termina_testmedium";
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 133%;
+}
+@media screen and (max-width: 1600px) {
+  .privacyPolicySec .privacyContent .HeadingBox .secHeading {
     font-size: 40px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .privacyPolicySec .secHeading {
+  .privacyPolicySec .privacyContent .HeadingBox .secHeading {
     font-size: 36px;
   }
 }
 @media screen and (max-width: 820px) {
-  .privacyPolicySec .secHeading {
+  .privacyPolicySec .privacyContent .HeadingBox .secHeading {
     font-size: 30px;
   }
 }
 @media screen and (max-width: 720px) {
-  .privacyPolicySec .secHeading {
+  .privacyPolicySec .privacyContent .HeadingBox .secHeading {
     font-size: 24px;
   }
 }
-@media (max-width: 720px) {
-  .privacyPolicySec .secHeading {
-    line-height: 32px;
-    margin-bottom: 56px;
+.privacyPolicySec .privacyContent .ContentBox h2 {
+  color: #000;
+  font-size: 32px;
+  font-family: "termina_testbold";
+  line-height: 150%;
+  margin: 64px 0px 24px;
+}
+@media screen and (max-width: 1800px) {
+  .privacyPolicySec .privacyContent .ContentBox h2 {
+    font-size: 30px;
   }
 }
-.privacyPolicySec .sec1Content .content1 {
-  width: 100%;
-  margin-bottom: 15px;
+@media screen and (max-width: 1600px) {
+  .privacyPolicySec .privacyContent .ContentBox h2 {
+    font-size: 26px;
+  }
 }
-.privacyPolicySec .sec2Content .content2Section {
-  width: 100%;
+@media screen and (max-width: 1440px) {
+  .privacyPolicySec .privacyContent .ContentBox h2 {
+    font-size: 22px;
+  }
 }
-.privacyPolicySec .sec2Content .content2Section .content2p1 {
-  color: black;
-  font-size: 20px;
-  font-family: "termina_testregular";
-  font-weight: 400;
-  line-height: 32px;
-  word-wrap: break-word;
+@media screen and (max-width: 1024px) {
+  .privacyPolicySec .privacyContent .ContentBox h2 {
+    font-size: 18px;
+  }
+}
+.privacyPolicySec .privacyContent .ContentBox h3 {
+  color: #000;
+  font-size: 28px;
+  font-family: "termina_testbold";
+  line-height: 150%;
+  margin: 52px 0px 20px;
 }
 @media screen and (max-width: 1600px) {
-  .privacyPolicySec .sec2Content .content2Section .content2p1 {
+  .privacyPolicySec .privacyContent .ContentBox h3 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .privacyPolicySec .privacyContent .ContentBox h3 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .privacyPolicySec .privacyContent .ContentBox h3 {
+    font-size: 14px;
+  }
+}
+.privacyPolicySec .privacyContent .ContentBox h4 {
+  color: #000;
+  font-size: 24px;
+  font-family: "termina_testbold";
+  line-height: 150%;
+  margin: 40px 0px 20px;
+}
+@media screen and (max-width: 1600px) {
+  .privacyPolicySec .privacyContent .ContentBox h4 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .privacyPolicySec .privacyContent .ContentBox h4 {
+    font-size: 16px;
+  }
+}
+.privacyPolicySec .privacyContent .ContentBox p {
+  color: #000;
+  font-family: "verdanaregular";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .privacyPolicySec .privacyContent .ContentBox p {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .privacyPolicySec .sec2Content .content2Section .content2p1 {
+  .privacyPolicySec .privacyContent .ContentBox p {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 720px) {
-  .privacyPolicySec .sec2Content .content2Section .content2p1 {
+  .privacyPolicySec .privacyContent .ContentBox p {
     font-size: 12px;
   }
 }
-.privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2Content a {
-  color: blue;
+.privacyPolicySec .privacyContent .ContentBox ul {
+  padding-left: 20px;
 }
-.privacyPolicySec .sec2Content .content2Section .content2p2 .subHeadingHr {
-  height: 64px;
+.privacyPolicySec .privacyContent .ContentBox ul li {
+  list-style-type: disc;
+  color: #000;
+  font-family: "verdanaregular";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 20px;
 }
-@media (max-width: 720px) {
-  .privacyPolicySec .sec2Content .content2Section .content2p2 .subHeadingHr {
-    height: 56px;
+@media screen and (max-width: 1600px) {
+  .privacyPolicySec .privacyContent .ContentBox ul li {
+    font-size: 18px;
   }
 }
-.privacyPolicySec .sec2Content .content2Section .content2p2 .scroll-to-top {
-  position: fixed;
-  bottom: 0%;
-  right: 20px;
-  transform: translateY(-50%);
-  width: 60px;
-  height: 60px;
-  background: #F5F75E;
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 1000;
-}
-.privacyPolicySec .sec2Content .content2Section .content2p2 .scroll-to-top:hover {
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-.privacyPolicySec .sec2Content .content2Section .content2p2 .scroll-to-top img {
-  width: 24px;
-  height: 24px;
-  display: block;
-}
-@media (max-width: 768px) {
-  .privacyPolicySec .sec2Content .content2Section .content2p2 .scroll-to-top {
-    width: 50px;
-    height: 50px;
-  }
-  .privacyPolicySec .sec2Content .content2Section .content2p2 .scroll-to-top img {
-    width: 20px;
-    height: 20px;
+@media screen and (max-width: 1440px) {
+  .privacyPolicySec .privacyContent .ContentBox ul li {
+    font-size: 16px;
   }
 }
-.privacyPolicySec .sec2Content .content2Section .content2p2 .content2p2List ul li {
-  margin-top: 20px;
-  list-style: disc;
-  margin-left: 20px;
+@media screen and (max-width: 720px) {
+  .privacyPolicySec .privacyContent .ContentBox ul li {
+    font-size: 12px;
+  }
 }
-.privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights {
-  margin-top: 12px;
-  margin-left: 20px;
+.privacyPolicySec .privacyContent .ContentBox ol {
+  padding-left: 20px;
 }
-.privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li {
-  margin-bottom: 0.5em;
-  list-style: disc;
+.privacyPolicySec .privacyContent .ContentBox ol li {
+  list-style-type: decimal;
+  color: #000;
+  font-family: "verdanaregular";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 20px;
 }
-.privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li strong {
-  font-weight: bold;
+@media screen and (max-width: 1600px) {
+  .privacyPolicySec .privacyContent .ContentBox ol li {
+    font-size: 18px;
+  }
 }
-.privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul {
-  margin-top: 0.5em;
-  padding-left: 1.5em;
+@media screen and (max-width: 1440px) {
+  .privacyPolicySec .privacyContent .ContentBox ol li {
+    font-size: 16px;
+  }
 }
-.privacyPolicySec .sec2Content .content2Section .content2p2 .data-rights ul li ul li {
-  list-style: circle;
+@media screen and (max-width: 720px) {
+  .privacyPolicySec .privacyContent .ContentBox ol li {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .privacyPolicySec {
+    margin: 160px auto;
+    width: 60%;
+  }
+  .privacyPolicySec .backBtn {
+    margin-bottom: 80px;
+  }
+  .privacyPolicySec .privacyContent .HeadingBox {
+    margin-bottom: 54px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h2 {
+    margin: 54px 0px 20px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h3 {
+    margin: 42px 0px 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h4 {
+    margin: 30px 0px 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox p {
+    margin-bottom: 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox ul li {
+    margin-bottom: 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox ol li {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .privacyPolicySec {
+    margin: 140px auto;
+    width: 64%;
+  }
+  .privacyPolicySec .backBtn {
+    margin-bottom: 60px;
+  }
+  .privacyPolicySec .privacyContent .HeadingBox {
+    margin-bottom: 48px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h2 {
+    margin: 48px 0px 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h3 {
+    margin: 36px 0px 14px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h4 {
+    margin: 26px 0px 14px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox p {
+    margin-bottom: 14px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox ul li {
+    margin-bottom: 14px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox ol li {
+    margin-bottom: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .privacyPolicySec {
+    margin: 100px auto;
+    width: 74%;
+  }
+  .privacyPolicySec .backBtn {
+    margin-bottom: 24px;
+  }
+  .privacyPolicySec .privacyContent .HeadingBox {
+    margin-bottom: 56px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h2 {
+    margin: 56px 0px 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h3 {
+    margin: 42px 0px 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h4 {
+    margin: 36px 0px 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox p {
+    margin-bottom: 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox ul li {
+    margin-bottom: 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox ol li {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .privacyPolicySec {
+    width: 100%;
+    padding: 0px 20px;
+  }
 }
 
 .page-404 {
