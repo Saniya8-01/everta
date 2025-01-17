@@ -634,3 +634,9 @@ Stack trace:
 [16-Jan-2025 13:06:24 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
 [16-Jan-2025 13:06:24 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
 [16-Jan-2025 13:06:24 UTC] PHP   5. get_sub_field($selector = 'hover_image', $format_value = *uninitialized*, $escape_html = *uninitialized*) D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php:144
+[17-Jan-2025 08:21:39 UTC] Automatic updates starting...
+[17-Jan-2025 08:21:41 UTC]   Automatic plugin updates starting...
+[17-Jan-2025 08:21:41 UTC]   Automatic plugin updates complete.
+[17-Jan-2025 08:21:42 UTC]   Automatic theme updates starting...
+[17-Jan-2025 08:21:42 UTC]   Automatic theme updates complete.
+[17-Jan-2025 08:21:42 UTC] Automatic updates complete.
