@@ -11895,6 +11895,7 @@ body {
   line-height: 175%;
   transition: 0.3s all ease-in-out;
   text-transform: capitalize;
+  display: inline-block;
 }
 @media screen and (max-width: 1600px) {
   .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span {
