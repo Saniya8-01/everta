@@ -8671,6 +8671,20 @@ body {
   align-items: center;
   gap: 4px;
 }
+.careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div .fontellolocateIcon, .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div .fontelloBrifIcon {
+  font-size: 16px;
+  line-height: normal;
+}
+@media screen and (max-width: 1600px) {
+  .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div .fontellolocateIcon, .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div .fontelloBrifIcon {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div .fontellolocateIcon, .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div .fontelloBrifIcon {
+    font-size: 12px;
+  }
+}
 .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div img {
   display: block;
   object-fit: cover;
