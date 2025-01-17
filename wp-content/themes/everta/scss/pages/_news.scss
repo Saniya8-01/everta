@@ -3,10 +3,15 @@
         .heading{
             h2 {margin-bottom: 24px;color: $quaternaryColor1;@include terminamedium;@include font36;font-weight: 600;line-height: 133.333%;text-transform: uppercase;}
         }
-        .blogsTabs{
-            .blogsTabWrapper{display: flex;align-items:center;gap:16px;
-                a{color: #1E1E1E;@include verdanaregular;@include font16;line-height: 140%;font-weight: $fontW400;border-radius: 100px;border: 1px solid var(--Black-40, #A5A5A5); padding: 18px 32px;text-transform:capitalize;
+        .blogsTabs{overflow-x:scroll; white-space: nowrap;-webkit-overflow-scrolling: touch;scrollbar-width: none; -ms-overflow-style: none;margin:0 -120px;
+            &::-webkit-scrollbar {
+                display: none; 
+            }
+            .blogsTabWrapper{display: flex;align-items:center;
+                a{color: #1E1E1E;@include verdanaregular;@include font16;line-height: 140%;font-weight: $fontW400;border-radius: 100px;border: 1px solid var(--Black-40, #A5A5A5); padding: 18px 32px;text-transform:capitalize;margin-left:16px;
                     &.active{color: $primaryColor1;background: #1E1E1E;}
+                    &:last-child{margin-right: 120px;}
+                    &:first-child{margin-left: 120px;}
                 }
             }
         }
@@ -89,7 +94,7 @@
                 }
             }
             .blogsTabs{
-                .blogsTabWrapper{gap:16px;
+                .blogsTabWrapper{
                     a{padding: 16px 32px;}
                 }
             }
@@ -105,9 +110,12 @@
             .heading{
                 h2 {margin-bottom: 22px;}
             }
-            .blogsTabs{
-                .blogsTabWrapper{gap:15px;
-                    a{padding: 16px 32px;}
+            .blogsTabs{margin: 0 -90px;
+                .blogsTabWrapper{
+                    a{padding: 16px 32px;
+                        &:last-child{margin-right: 90px;}
+                        &:first-child{margin-left: 90px;}
+                    }
                 }
             }
             .customSelect{
@@ -142,9 +150,12 @@
             .heading{
                 h2 {margin-bottom: 20px;}
             }
-            .blogsTabs{
+            .blogsTabs{margin: 0 -80px;
                 .blogsTabWrapper{
-                    a{padding: 15px 32px;}
+                    a{padding: 15px 32px;
+                        &:last-child{margin-right: 80px;}
+                        &:first-child{margin-left: 80px;}
+                    }
                 }
             }
             .customSelect{
@@ -180,7 +191,7 @@
     @media all and (max-width:1280px){
         .cardSectionWrapper{margin-top: 40px;margin-bottom:70px;
             .blogsTabs{
-                .blogsTabWrapper{gap:12px;
+                .blogsTabWrapper{
                     a{padding: 12px 32px;}
                 }
             }
@@ -235,9 +246,12 @@
     }
     @media all and (max-width:1024px){
         .cardSectionWrapper{
-            .blogsTabs{
-                .blogsTabWrapper{gap:12px;
-                    a{padding: 12px 32px;}
+            .blogsTabs{margin: 0 -40px;
+                .blogsTabWrapper{
+                    a{padding: 12px 32px;
+                        &:last-child{margin-right: 40px;}
+                        &:first-child{margin-left: 40px;}
+                    }
                 }
             }
             .customSelect{
@@ -262,15 +276,9 @@
                     }
                 }
             }
-            .blogsTabs{overflow-x:scroll; white-space: nowrap;-webkit-overflow-scrolling: touch;scrollbar-width: none; -ms-overflow-style: none;margin:0 -40px;
-                &::-webkit-scrollbar {
-                    display: none; 
-                }
-                .blogsTabWrapper{gap:0px;
-                    a{padding: 10px 24px;margin-left: 16px;
-                        &:last-child{margin-right: 40px;}
-                        &:first-child{margin-left: 40px;}
-                    }
+            .blogsTabs{
+                .blogsTabWrapper{
+                    a{padding: 10px 24px;}
                 }
             }
             .pagination {
@@ -285,8 +293,8 @@
             .heading{
                 h2 {margin-bottom: 32px;font-size: 20px;font-weight: 600;line-height: 24px;}
             }
-            .blogsTabs{overflow-x:scroll; white-space: nowrap;-webkit-overflow-scrolling: touch;margin:0 -20px;
-                .blogsTabWrapper{display: inline-flex;gap:0px;
+            .blogsTabs{margin:0 -20px;
+                .blogsTabWrapper{
                     a{padding: 9px 16px;font-size: 12px;line-height: 18px;font-weight: 400;margin-left: 12px;
                         &:last-child{margin-right: 20px;}
                         &:first-child{margin-left: 20px;}
