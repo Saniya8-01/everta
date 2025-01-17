@@ -332,14 +332,13 @@
                         </h3>
                         <div class="posSubContent">
                             <div>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/map-logo.svg" alt="everta">
+                                <i class="icon-locat fontellolocateIcon" ></i>
                                 <h4>
                                     <?php echo get_field('job_location'); ?>
                                 </h4>
                             </div>
                             <div>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg"
-                                    alt="everta">
+                                <i class="icon-briefcase fontelloBrifIcon" ></i>
                                 <h4>
                                     <?php echo get_field('job_type'); ?>
                                 </h4>
