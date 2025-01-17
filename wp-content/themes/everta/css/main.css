@@ -334,6 +334,16 @@ body h1 {
   opacity: 0;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
+@media screen and (max-width: 1600px) {
+  .ctaYellow::before {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ctaYellow::before {
+    font-size: 12px;
+  }
+}
 .ctaYellow:hover {
   padding-right: 66px;
 }
@@ -349,16 +359,14 @@ body h1 {
   .ctaYellow {
     padding: 14px 32px;
   }
-  .ctaYellow::before {
-    transform: translateY(-50%) scale(0.9);
-    transform-origin: bottom;
-    font-size: 14px;
-  }
 }
 @media screen and (max-width: 1024px) {
   .ctaYellow {
     padding: 18px 32px;
     line-height: 15px;
+    font-size: 14px;
+  }
+  .ctaYellow::before {
     font-size: 14px;
   }
 }
