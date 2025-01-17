@@ -39,23 +39,6 @@
         <div class="blogsTabs">
             <div class="blogsTabWrapper">
                 <a href="#" class="active" data-filter="all">All</a>
-                <?php $args = array('post_type' => 'post', 'posts_per_page' => -1, 'order' => 'DESC');
-                    $the_query = new WP_Query($args);
-                    while ($the_query->have_posts()) : $the_query->the_post();
-                    $terms = get_the_terms($post->ID, 'category');
-                    if ($terms && ! is_wp_error($terms)) :
-                        $links = array();
-                        foreach ($terms as $term) {
-                            $links[] = $term->name;
-                        }
-                        $tax_links = join(" ", str_replace('-', ' ', $links));
-                        $tax = strtolower($tax_links);
-                    else :
-                        $tax = '';
-                    endif;
-                ?>
-                    <a href="#" data-filter="<?php echo $tax; ?>"><?php echo $tax; ?></a>
-                <?php endwhile; wp_reset_postdata(); ?>
                 <!-- Gitsy -->
                 <?php
                     $terms = get_categories("categories");

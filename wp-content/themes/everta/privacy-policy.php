@@ -16,4 +16,8 @@
     </div>
 </section>
 
+<div class="backtopCl" id="backtop">
+	<a href="#"><i class="icon-double-arrow fontellowdobuleUpIcon"></i></a>
+</div>
+
 <?php get_footer(); ?>
