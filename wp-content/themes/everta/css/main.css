@@ -828,7 +828,6 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
   display: flex;
-  align-items: center;
   gap: 10px;
   padding: 15px 0px;
   position: relative;
@@ -882,6 +881,7 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .accordian-
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown {
   transition: 0.3s all ease-in-out;
+  align-items: center;
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown::before {
   position: absolute;
