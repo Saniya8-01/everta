@@ -14950,7 +14950,7 @@ body {
 }
 .productBanner .productBannerWrapper .productDetails {
   display: flex;
-  gap: 157px;
+  gap: 120px;
   margin-bottom: 42px;
   transition: 0.8s all ease-in-out;
   opacity: 0;
@@ -14982,7 +14982,7 @@ body {
   height: 13px;
   background: #787878;
   border-radius: 50%;
-  right: -85px;
+  right: -54px;
 }
 .productBanner .productBannerWrapper .bannerImages {
   position: relative;
@@ -15017,13 +15017,11 @@ body {
     margin-bottom: 4px;
   }
   .productBanner .productBannerWrapper .productDetails {
-    gap: 157px;
     margin-bottom: 42px;
   }
   .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
     width: 13px;
     height: 13px;
-    right: -85px;
   }
   .productBanner .productBannerWrapper .bannerImages {
     margin-bottom: 26px;
@@ -15041,13 +15039,13 @@ body {
     margin-top: 130px;
   }
   .productBanner .productBannerWrapper .productDetails {
-    gap: 140px;
+    gap: 100px;
     margin-bottom: 36px;
   }
   .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
     width: 10px;
     height: 10px;
-    right: -75px;
+    right: -45px;
   }
   .productBanner .productBannerWrapper .bannerImages {
     margin-bottom: 24px;
@@ -15065,13 +15063,13 @@ body {
     margin-top: 110px;
   }
   .productBanner .productBannerWrapper .productDetails {
-    gap: 120px;
+    gap: 90px;
     margin-bottom: 32px;
   }
   .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
     width: 10px;
     height: 10px;
-    right: -65px;
+    right: -40px;
   }
   .productBanner .productBannerWrapper .bannerImages {
     margin-bottom: 20px;
@@ -15088,13 +15086,13 @@ body {
     margin-top: 100px;
   }
   .productBanner .productBannerWrapper .productDetails {
-    gap: 100px;
+    gap: 80px;
     margin-bottom: 28px;
   }
   .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
     width: 8px;
     height: 8px;
-    right: -54px;
+    right: -36px;
   }
   .productBanner .productBannerWrapper .bannerImages {
     margin-bottom: 18px;

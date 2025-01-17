@@ -11,10 +11,10 @@
         .bannerHeading{transition: 0.8s all ease-in-out;opacity: 0;
             h1{margin-bottom: 4px;@include terminamedium;@include font64;line-height: 150%;text-transform: uppercase;font-weight: 600;}
         }
-        .productDetails{display: flex;gap:157px;margin-bottom:42px;transition: 0.8s all ease-in-out;opacity: 0;
+        .productDetails{display: flex;gap:120px;margin-bottom:42px;transition: 0.8s all ease-in-out;opacity: 0;
             p{@include terminaregular;@include font18;font-weight: 600;line-height: 155.556%;color: #1E1E1E;position:relative;
                 &:not(:last-child){
-                    &::after{content: "";position: absolute;top: 50%;transform: translateY(-50%);width: 13px;height: 13px;background: #787878;border-radius: 50%;right: -85px;}
+                    &::after{content: "";position: absolute;top: 50%;transform: translateY(-50%);width: 13px;height: 13px;background: #787878;border-radius: 50%;right: -54px;}
                 }
             }
         }
@@ -30,10 +30,10 @@
         .bannerHeading{
             h1{margin-bottom: 4px;}
         }
-        .productDetails{gap:157px;margin-bottom:42px;
+        .productDetails{margin-bottom:42px;
             p{
                 &:not(:last-child){
-                    &::after{width: 13px;height: 13px;right: -85px;}
+                    &::after{width: 13px;height: 13px;}
                 }
             }
         }
@@ -44,10 +44,10 @@
     @media all and (max-width:1600px){
         margin-bottom: 150px;margin-top: 130px;
     .productBannerWrapper{
-        .productDetails{gap:140px;margin-bottom:36px;
+        .productDetails{gap:100px;margin-bottom:36px;
             p{
                 &:not(:last-child){
-                    &::after{width: 10px;height: 10px;right: -75px;}
+                    &::after{width: 10px;height: 10px;right: -45px;}
                 }
             }
         }
@@ -60,10 +60,10 @@
     @media all and (max-width:1440px){
         margin-bottom: 120px;margin-top: 110px;
     .productBannerWrapper{
-        .productDetails{gap:120px;margin-bottom:32px;
+        .productDetails{gap:90px;margin-bottom:32px;
             p{
                 &:not(:last-child){
-                    &::after{width: 10px;height: 10px;right: -65px;}
+                    &::after{width: 10px;height: 10px;right: -40px;}
                 }
             }
         }
@@ -74,10 +74,10 @@
     @media all and (max-width:1280px){
     margin-top: 100px;
     .productBannerWrapper{
-        .productDetails{gap:100px;margin-bottom:28px;
+        .productDetails{gap:80px;margin-bottom:28px;
             p{
                 &:not(:last-child){
-                    &::after{width: 8px;height: 8px;right: -54px;}
+                    &::after{width: 8px;height: 8px;right: -36px;}
                 }
             }
         }
