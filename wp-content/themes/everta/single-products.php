@@ -336,7 +336,7 @@
     <?php endif; ?>
 </section>
 
-<section class="formSection">
+<section class="formSection productFormSection">
     <?php if (have_rows('form_section')) : ?>
     <?php while (have_rows('form_section')) : the_row(); ?>
     <div class="formWrapper">
@@ -364,7 +364,7 @@
             $cta_text_second = get_sub_field('cta_text_second');
             
             if ($cta_link_second && $cta_text_second) : ?>
-                <a href="<?php echo esc_url($cta_link_second); ?>" class="ctaYellow">
+                <a href="<?php echo esc_url($cta_link_second); ?>" class="ctaYellowBlack">
                     <?php echo esc_html($cta_text_second); ?>
                 </a>
             <?php endif; ?>
@@ -408,14 +408,14 @@
                         endif; 
                         ?>
                         <h5>
-                            <?php echo implode(' • ', $features); ?>
+                            <?php echo implode(' &nbsp;•&nbsp; ', $features); ?>
                         </h5>
                         <p>
                             <?php echo wp_trim_words(get_the_content(), 40, '...'); ?>
                         </p>
                     </div>
                     <a href="<?php echo esc_url($post_link); ?>">Explore more
-                        <img src="<?php bloginfo('template_directory'); ?>/images/yellow-cta-arrow.svg" alt="">
+                        <i class="icon-right-arrow fontellowRightArrow"></i>
                     </a>
                 </div>
                 <?php endforeach; ?>

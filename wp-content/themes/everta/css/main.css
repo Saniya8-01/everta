@@ -309,6 +309,7 @@ body h1 {
   overflow: hidden;
   text-align: left;
   display: inline-block;
+  border: 1px solid #F5F75E;
 }
 @media screen and (max-width: 1600px) {
   .ctaYellow {
@@ -389,7 +390,7 @@ body h1 {
   position: relative;
   overflow: hidden;
   text-align: left;
-  border: 1px solid #4B4B4B;
+  border: 1px solid #1E1E1E;
   display: inline-block;
 }
 @media screen and (max-width: 1600px) {
@@ -545,6 +546,7 @@ body h1 {
   letter-spacing: -0.64px;
   color: #F5F75E;
   background: #1E1E1E;
+  border: 1px solid #1E1E1E;
   border-style: none;
   padding: 20px 32px;
   border-radius: 100px;
@@ -626,6 +628,7 @@ body h1 {
   letter-spacing: -0.64px;
   color: #1E1E1E;
   background: #fff;
+  border: 1px solid #fff;
   border-style: none;
   border: 1px solid #4B4B4B;
   padding: 20px 32px;
@@ -4925,6 +4928,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   transform: translate(-50%, 0px);
 }
 .exploreSection .exploreSectionWrapper .rightContent img {
+  padding-top: 40px;
   transform: translate(-50%, 300px);
   left: 50%;
   position: absolute;
@@ -4964,7 +4968,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 120px;
   }
   .exploreSection .exploreSectionWrapper .leftContent {
-    padding: 80px 70px;
+    padding: 100px 70px;
   }
   .exploreSection .exploreSectionWrapper .leftContent .contentWrapper {
     width: 85%;
@@ -4978,7 +4982,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media all and (max-width: 1280px) {
   .exploreSection .exploreSectionWrapper .leftContent {
-    padding: 70px 60px;
+    padding: 90px 60px;
   }
   .exploreSection .exploreSectionWrapper .leftContent .contentWrapper h2 {
     margin-bottom: 22px;
@@ -4989,7 +4993,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media all and (max-width: 1180px) {
   .exploreSection .exploreSectionWrapper .leftContent {
-    padding: 50px 40px;
+    padding: 100px 40px;
   }
   .exploreSection .exploreSectionWrapper .leftContent .contentWrapper {
     width: 90%;
@@ -5428,6 +5432,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding-right: 20px;
   }
 }
+.testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .slick-track {
+  float: left;
+}
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard {
   border-right: 1px solid #D8DBDC;
   margin-right: 52px;
@@ -5735,6 +5742,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
     margin: 64px 0px 30px;
   }
+  .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .clientImages {
+    width: 120px;
+  }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial {
     gap: 10px;
   }
@@ -5761,6 +5771,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
     margin: 30px 0 30px;
+  }
+  .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .clientImages {
+    width: 110px;
   }
 }
 @media all and (max-width: 680px) {
@@ -14844,6 +14857,9 @@ body {
   }
 }
 @media all and (max-width: 680px) {
+  .productBanner {
+    margin-bottom: 100px;
+  }
   .productBanner .productBannerWrapper {
     align-items: flex-start;
   }
@@ -14865,6 +14881,7 @@ body {
   }
   .productBanner .productBannerWrapper .productDetails p span {
     font-weight: 700;
+    font-family: "termina_testmedium";
   }
   .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
     width: 180px;
@@ -15103,7 +15120,7 @@ body {
 }
 
 .industryStandardSection {
-  margin-bottom: 290px;
+  margin-bottom: 200px;
 }
 .industryStandardSection#industry-standard .scaleImage img {
   animation: zoomeffect 20s forwards;
@@ -15250,7 +15267,7 @@ body {
 }
 @media all and (max-width: 1800px) {
   .industryStandardSection {
-    margin-bottom: 250px;
+    margin-bottom: 180px;
   }
   .industryStandardSection .sectionWrapper .bottomInfo {
     margin-top: 70px;
@@ -15277,7 +15294,7 @@ body {
 }
 @media all and (max-width: 1600px) {
   .industryStandardSection {
-    margin-bottom: 220px;
+    margin-bottom: 150px;
   }
   .industryStandardSection .sectionWrapper .bottomInfo {
     margin-top: 60px;
@@ -15305,7 +15322,7 @@ body {
 }
 @media all and (max-width: 1440px) {
   .industryStandardSection {
-    margin-bottom: 200px;
+    margin-bottom: 120px;
   }
   .industryStandardSection .sectionWrapper .bottomInfo {
     margin-top: 56px;
@@ -15335,9 +15352,6 @@ body {
   }
 }
 @media all and (max-width: 1280px) {
-  .industryStandardSection {
-    margin-bottom: 150px;
-  }
   .industryStandardSection .sectionWrapper .bottomInfo {
     margin-top: 50px;
   }
@@ -15450,8 +15464,9 @@ body {
   }
   .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-current {
     padding-top: 0px;
-    font-size: 15.43px;
-    line-height: 21.21px;
+    font-size: 15.427px;
+    line-height: 21.212px;
+    font-weight: 700;
   }
 }
 
@@ -15488,7 +15503,6 @@ body {
 }
 .productInfoSection#product-info .productInfoWrapper .productDetails {
   transform: translateY(0);
-  justify-content: space-between;
   opacity: 1;
 }
 .productInfoSection#product-info .productInfoWrapper .productDetails .feature .information::before {
@@ -15512,7 +15526,7 @@ body {
   align-items: center;
 }
 .productInfoSection .productInfoWrapper .headingWrapper h2 {
-  font-family: "termina_testmedium";
+  font-family: "termina_testbold";
   font-size: 48px;
   font-weight: 700;
   line-height: 133.333%;
@@ -15562,10 +15576,9 @@ body {
 }
 .productInfoSection .productInfoWrapper .productDetails {
   display: flex;
-  gap: 100px;
+  gap: 115px;
   opacity: 0;
   align-items: end;
-  justify-content: center;
   transition: 2s all ease-in-out;
   transform: translateY(-150px);
 }
@@ -15645,7 +15658,7 @@ body {
   }
 }
 .productInfoSection .productInfoWrapper .productDetails .middle {
-  width: 370px;
+  width: 374px;
   order: 2;
   height: 660px;
 }
@@ -15670,7 +15683,7 @@ body {
     margin-bottom: 22px;
   }
   .productInfoSection .productInfoWrapper .productDetails {
-    gap: 90px;
+    gap: 100px;
   }
   .productInfoSection .productInfoWrapper .productDetails .feature .information {
     padding-top: 30px;
@@ -15710,7 +15723,7 @@ body {
     margin-bottom: 20px;
   }
   .productInfoSection .productInfoWrapper .productDetails {
-    gap: 80px;
+    gap: 90px;
     transform: translateY(-120px);
   }
   .productInfoSection .productInfoWrapper .productDetails .feature .information {
@@ -15754,7 +15767,6 @@ body {
     margin-bottom: 20px;
   }
   .productInfoSection .productInfoWrapper .productDetails {
-    gap: 80px;
     transform: translateY(-100px);
   }
   .productInfoSection .productInfoWrapper .productDetails .feature .information {
@@ -15798,7 +15810,7 @@ body {
     margin-bottom: 16px;
   }
   .productInfoSection .productInfoWrapper .productDetails {
-    gap: 70px;
+    gap: 80px;
   }
   .productInfoSection .productInfoWrapper .productDetails .feature .information {
     padding-top: 20px;
@@ -15842,6 +15854,7 @@ body {
     flex-direction: column;
     transform: translateY(0);
     align-items: center;
+    opacity: 1;
   }
   .productInfoSection .productInfoWrapper .productDetails .feature, .productInfoSection .productInfoWrapper .productDetails .right {
     display: none;
@@ -16005,7 +16018,7 @@ body {
   padding: 24px 0px;
 }
 .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header h4 {
-  font-family: "termina_testmedium";
+  font-family: "termina_testbold";
   font-size: 24px;
   line-height: 133.333%;
   color: #1E1E1E;
@@ -16070,7 +16083,7 @@ body {
   font-family: "verdanaregular";
   font-size: 20px;
   font-weight: 400;
-  line-height: 168%;
+  line-height: 160%;
   color: #696969;
 }
 @media screen and (max-width: 1600px) {
@@ -16096,8 +16109,7 @@ body {
   border-radius: 50%;
   background: #696969;
   left: -22px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 12px;
 }
 .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body p {
   font-family: "verdanaregular";
@@ -16170,6 +16182,7 @@ body {
     width: 9px;
     height: 9px;
     left: -22px;
+    top: 11px;
   }
 }
 @media all and (max-width: 1600px) {
@@ -16258,6 +16271,7 @@ body {
     width: 7px;
     height: 7px;
     left: -20px;
+    top: 10px;
   }
   .technicalDetailsSection .technicalDetailsWrapper .image {
     width: 40%;
@@ -16296,6 +16310,7 @@ body {
   .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul li::before {
     width: 6px;
     height: 6px;
+    top: 9px;
   }
   .technicalDetailsSection .technicalDetailsWrapper .image {
     width: 42%;
@@ -16384,7 +16399,7 @@ body {
   .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header h4 {
     width: 100%;
     font-size: 12px;
-    line-height: 32px;
+    line-height: 24px;
   }
   .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header .accordian-icon-wrapper {
     padding: 9px;
@@ -16400,6 +16415,22 @@ body {
     width: 5px;
     height: 5px;
     left: -16px;
+    top: 10px;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .image {
+    width: 100%;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .image .desktopImage {
+    display: none;
+  }
+  .technicalDetailsSection .technicalDetailsWrapper .image .mobileImage {
+    display: block;
+    width: 100%;
+  }
+}
+@media all and (max-width: 680px) {
+  .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul li::before {
+    top: 7px;
   }
   .technicalDetailsSection .technicalDetailsWrapper .image {
     width: 100%;
@@ -16413,8 +16444,34 @@ body {
   }
 }
 
+.productFormSection .formWrapper .formTitle h2 {
+  font-size: 48px;
+  line-height: 133.33%;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1600px) {
+  .productFormSection .formWrapper .formTitle h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .productFormSection .formWrapper .formTitle h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .productFormSection .formWrapper .formTitle h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .productFormSection .formWrapper .formTitle h2 {
+    font-size: 24px;
+  }
+}
+
 .productSection {
-  margin-bottom: 200px;
+  margin-bottom: 250px;
 }
 .productSection .productWrapper .productHeader h2 {
   margin-bottom: 64px;
@@ -16564,10 +16621,10 @@ body {
   padding: 80px;
   transition: all 0.4s ease-out;
 }
-.productSection .productWrapper .tabContent .cards .card a img {
-  width: 14px;
-  height: 14px;
-  z-index: 2;
+.productSection .productWrapper .tabContent .cards .card a .fontellowRightArrow {
+  font-size: 16px;
+  color: #F5F75E;
+  line-height: normal;
 }
 .productSection .productWrapper .tabContent .cards .card a::before {
   position: absolute;
@@ -16628,7 +16685,7 @@ body {
 }
 @media all and (max-width: 1800px) {
   .productSection {
-    margin-bottom: 180px;
+    margin-bottom: 230px;
   }
   .productSection .productWrapper .productHeader h2 {
     margin-bottom: 62px;
@@ -16655,7 +16712,7 @@ body {
 }
 @media all and (max-width: 1600px) {
   .productSection {
-    margin-bottom: 150px;
+    margin-bottom: 200px;
   }
   .productSection .productWrapper .productHeader h2 {
     margin-bottom: 56px;
@@ -16701,7 +16758,7 @@ body {
 }
 @media all and (max-width: 1440px) {
   .productSection {
-    margin-bottom: 120px;
+    margin-bottom: 180px;
   }
   .productSection .productWrapper .productHeader h2 {
     margin-bottom: 48px;
@@ -16775,7 +16832,7 @@ body {
 }
 @media all and (max-width: 820px) {
   .productSection {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
   .productSection .productWrapper .productHeader {
     padding-left: 120px;
@@ -16813,6 +16870,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
+    text-align: left;
   }
   .productSection .productWrapper .tabContent .cards .card {
     min-height: auto;
@@ -16867,6 +16925,9 @@ body {
     opacity: 1;
     background: #ffffff;
   }
+  .productSection .productWrapper .tabContent .cards .card a .fontellowRightArrow {
+    font-size: 14px;
+  }
   .productSection .productWrapper .tabContent .cards .card a::after {
     border-top-left-radius: 30px;
     width: 81%;
@@ -16889,11 +16950,14 @@ body {
   }
 }
 @media all and (max-width: 680px) {
-  .productSection {
-    margin-bottom: 100px;
-  }
   .productSection .productWrapper .tabContent .cards {
     border: none;
+  }
+  .productSection .productWrapper .tabContent .cards .card .card-wrapper {
+    padding: 35px 40px 30px 20px;
+  }
+  .productSection .productWrapper .tabContent .cards .card a {
+    padding-left: 20px;
   }
   .productSection .productWrapper .tabContent .cards .slick-prev.slick-next,
   .productSection .productWrapper .tabContent .cards .slick-next.slick-next {
