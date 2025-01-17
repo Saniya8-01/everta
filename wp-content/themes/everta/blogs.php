@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div class="redirectArrow">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/right-arrow.svg" alt="">
+                    <i class="icon-right-arrow  rotateRightArrow"></i>
                 </div>
             </a>
             <?php endwhile; wp_reset_postdata(); ?>

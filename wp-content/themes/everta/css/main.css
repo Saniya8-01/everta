@@ -828,6 +828,7 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
   display: flex;
+  align-items: center;
   gap: 10px;
   padding: 15px 0px;
   position: relative;
@@ -870,6 +871,11 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .arrowImage {
   transition: 0.3s all ease-in-out;
+  font-size: 8px;
+  line-height: normal;
+}
+header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .fonelloGlobeIcon {
+  font-size: 24px;
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .accordian-icon-wrapper {
   display: none;
@@ -1020,6 +1026,9 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a:
 header .headerWrapper .headerMenu .languageTranslatorMbl {
   display: none;
 }
+header .headerWrapper .headerMenu .languageTranslatorMbl .fonelloGlobeIconMbl {
+  font-size: 24px;
+}
 header .headerWrapper .headerMenu .hamburger-menu {
   display: none;
 }
@@ -1086,6 +1095,12 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
     gap: 40px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .arrowImage {
+    font-size: 6px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .fonelloGlobeIcon {
+    font-size: 18px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu {
     left: -32px;
@@ -13060,6 +13075,7 @@ body {
   border: 1px solid #D2D2D2;
   transition: 0.3s all ease-in-out;
   position: relative;
+  cursor: pointer;
 }
 .cardSection .cardSectionWrapper .cardGrid .cards:hover {
   background: #F5F75E;
@@ -13070,11 +13086,14 @@ body {
 .cardSection .cardSectionWrapper .cardGrid .cards:hover .redirectArrow {
   opacity: 1;
 }
+.cardSection .cardSectionWrapper .cardGrid .cards .cardImg {
+  margin-bottom: 30px;
+}
 .cardSection .cardSectionWrapper .cardGrid .cards .cardImg img {
   width: 100%;
 }
 .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
-  padding: 32px 24px;
+  padding: 0 24px 55px;
   position: relative;
 }
 .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
@@ -13141,13 +13160,22 @@ body {
   }
 }
 .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
+  border: 1px solid #000;
+  border-radius: 100%;
   width: 64px;
   height: 64px;
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s all ease-in-out;
+  position: absolute;
+  right: 24px;
+  bottom: 35px;
+  opacity: 0;
+}
+.cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow .rotateRightArrow {
+  font-size: 20px;
+  transform: rotate(-45deg);
 }
 .cardSection .cardSectionWrapper .pagination {
   display: flex;
@@ -13216,9 +13244,6 @@ body {
     margin-bottom: 110px;
     margin-top: 70px;
   }
-  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
-    padding: 32px 24px;
-  }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
     padding: 4px 9px;
   }
@@ -13284,7 +13309,7 @@ body {
     margin-top: 60px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
-    padding: 30px 22px;
+    padding: 0 22px 50px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
     padding: 4px 8px;
@@ -13296,9 +13321,9 @@ body {
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo h3 {
     margin-bottom: 14px;
   }
-  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
-    width: 50px;
-    height: 50px;
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow .rotateRightArrow {
+    right: 22px;
+    bottom: 25px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 22px;
@@ -13342,8 +13367,11 @@ body {
     margin-bottom: 80px;
     margin-top: 50px;
   }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardImg {
+    margin-bottom: 25px;
+  }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
-    padding: 28px 20px;
+    padding: 0 20px 45px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
     padding: 4px 8px;
@@ -13356,8 +13384,12 @@ body {
     margin-bottom: 12px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow .rotateRightArrow {
+    font-size: 16px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 20px;
@@ -13403,8 +13435,11 @@ body {
     margin-bottom: 70px;
     margin-top: 40px;
   }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardImg {
+    margin-bottom: 20px;
+  }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
-    padding: 24px 16px;
+    padding: 0 18px 40px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
     padding: 3px 7px;
@@ -13417,8 +13452,13 @@ body {
     margin-bottom: 10px;
   }
   .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
-    width: 36px;
-    height: 36px;
+    width: 45px;
+    height: 45px;
+    right: 18px;
+    bottom: 30px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow .rotateRightArrow {
+    font-size: 14px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 16px;
@@ -13465,13 +13505,24 @@ body {
   .cardSection .cardSectionWrapper .cardGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
+    padding: 0 18px 35px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
+    opacity: 1;
+    visibility: visible;
+    width: 35px;
+    height: 35px;
+    right: 18px;
+    bottom: 25px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow .rotateRightArrow {
+    font-size: 12px;
+  }
 }
 @media all and (max-width: 820px) {
   .cardSection .cardSectionWrapper .cardGrid {
     gap: 20px;
-  }
-  .cardSection .cardSectionWrapper .cardGrid .cards .cardContent {
-    padding: 22px 14px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 14px;
@@ -13596,6 +13647,10 @@ body {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
+  }
+  .cardSection .cardSectionWrapper .cardGrid .cards .redirectArrow {
+    right: 16px;
+    bottom: 14px;
   }
   .cardSection .cardSectionWrapper .pagination button {
     padding: 12px;

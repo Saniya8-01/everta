@@ -6,11 +6,12 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                 .navLinks{
                     .navLists{
                         ul{display: flex;align-items:center;gap:56px;
-                            li{display:flex;gap:10px;padding:15px 0px;position:relative;padding-right:7px;
+                            li{display:flex; align-items: center; gap:10px;padding:15px 0px;position:relative;padding-right:7px;
                                 &:hover{&::before{width: 100%;}}
                                 &::before{position: absolute;content:"";bottom: 0;left: 0;width: 0;height: 5px;background: $primaryColor1;transition: 0.3s all ease-in-out;}
                                 .mainManu{@include verdanaregular;@include font20;line-height: 150%;color: $quaternaryColor1;transition: 0.3s all ease-in-out;}
-                                .arrowImage{transition: 0.3s all ease-in-out;}
+                                .arrowImage{transition: 0.3s all ease-in-out; font-size: 8px; line-height: normal;}
+                                .fonelloGlobeIcon{font-size: 24px;}
                                 .accordian-icon-wrapper{display: none;}
                                 &.dropdown{transition: 0.3s all ease-in-out;
                                     &::before{position: absolute;content:"";bottom: 0;left: 0;width: 0;height: 5px;background: $primaryColor1;transition: 0.3s all ease-in-out;}
@@ -52,7 +53,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                     }
                 }
             }
-            .languageTranslatorMbl{display: none;}
+            .languageTranslatorMbl{display: none;
+                .fonelloGlobeIconMbl{font-size: 24px;}
+            }
             .hamburger-menu{display: none;}
         }
     }
@@ -123,6 +126,9 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                         .navLists{
                             ul{gap:40px;
                                 li{
+                                    .arrowImage{font-size: 6px;}
+                                    .fonelloGlobeIcon{font-size: 18px;}
+
                                     .dropdownMenu{left:-32px;
                                         ul{gap:28px;padding:18px 0px;
                                             li{
