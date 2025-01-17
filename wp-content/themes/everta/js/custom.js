@@ -23,14 +23,16 @@ function hasScrolled() {
     // Make sure they scroll more than delta
     if (Math.abs(lastScrollTop - st) <= delta) return;
 
-    // Detect if we are scrolling within the `.evertaEveryoneSection` or `.chargingSection`
+    // Detect if we are scrolling within the `.hover-section`, `.cards`, or `.hiringProcessContainer`
     const isWithinEvertaSection = isInSection('.hover-section');
     const isWithinChargingSection = isInSection('.cards');
+    const isWithinHiringSection = isInSection('.hiringProcessContainer');
 
-    if ($(window).width() <= 820 && (isWithinEvertaSection || isWithinChargingSection)) {
+    if ($(window).width() <= 820 && (isWithinEvertaSection || isWithinChargingSection || isWithinHiringSection)) {
         // Add nav-up class on reverse scroll only within the specified sections
-        if ((isWithinEvertaSection && !isWithinChargingSection) ||
-            (isWithinChargingSection && !isWithinEvertaSection)) {
+        if ((isWithinEvertaSection && !isWithinChargingSection && !isWithinHiringSection) ||
+            (isWithinChargingSection && !isWithinEvertaSection && !isWithinHiringSection) ||
+            (isWithinHiringSection && !isWithinEvertaSection && !isWithinChargingSection)) {
             $("header").removeClass("nav-down").addClass("nav-up");
         }
     } else if (st > lastScrollTop && st > navbarHeight) {
@@ -63,6 +65,7 @@ function isInSection(sectionClass) {
     }
     return false;
 }
+
 
 let customSelects = document.querySelectorAll("#popupSelect");
 
