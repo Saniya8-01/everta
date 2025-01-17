@@ -825,6 +825,7 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li {
   display: flex;
+  align-items: center;
   gap: 10px;
   padding: 15px 0px;
   position: relative;
@@ -867,6 +868,8 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .arrowImage {
   transition: 0.3s all ease-in-out;
+  font-size: 8px;
+  line-height: normal;
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .accordian-icon-wrapper {
   display: none;
@@ -1080,6 +1083,9 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul {
     gap: 40px;
+  }
+  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .arrowImage {
+    font-size: 6px;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu {
     left: -32px;

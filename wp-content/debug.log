@@ -634,3 +634,13 @@ Stack trace:
 [16-Jan-2025 13:06:24 UTC] PHP   3. require_once() D:\SACHIN\www\everta\wp-blog-header.php:19
 [16-Jan-2025 13:06:24 UTC] PHP   4. include() D:\SACHIN\www\everta\wp-includes\template-loader.php:106
 [16-Jan-2025 13:06:24 UTC] PHP   5. get_sub_field($selector = 'hover_image', $format_value = *uninitialized*, $escape_html = *uninitialized*) D:\SACHIN\www\everta\wp-content\themes\everta\homepage.php:144
+[17-Jan-2025 03:58:51 UTC] Automatic updates starting...
+[17-Jan-2025 03:58:53 UTC]   Automatic plugin updates starting...
+[17-Jan-2025 03:58:53 UTC]   Automatic plugin updates complete.
+[17-Jan-2025 03:58:54 UTC]   Automatic theme updates starting...
+[17-Jan-2025 03:58:54 UTC]   Automatic theme updates complete.
+[17-Jan-2025 03:58:54 UTC] Automatic updates complete.
+[17-Jan-2025 04:25:22 UTC] PHP Parse error:  syntax error, unexpected token "echo", expecting "," or ";" in D:\SACHIN\www\everta\wp-content\themes\everta\header.php on line 69
+[17-Jan-2025 04:25:49 UTC] PHP Parse error:  syntax error, unexpected token "echo", expecting "," or ";" in D:\SACHIN\www\everta\wp-content\themes\everta\header.php on line 69
+[17-Jan-2025 04:25:51 UTC] PHP Parse error:  syntax error, unexpected token "echo", expecting "," or ";" in D:\SACHIN\www\everta\wp-content\themes\everta\header.php on line 69
+[17-Jan-2025 04:26:12 UTC] PHP Parse error:  syntax error, unexpected token "echo", expecting "," or ";" in D:\SACHIN\www\everta\wp-content\themes\everta\header.php on line 69

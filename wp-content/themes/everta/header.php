@@ -65,7 +65,8 @@ if (isset($locations[$menu_name])) {
                 echo '<a href="' . esc_url($item->url) . '" class="mainManu">' . esc_html($item->title) . '</a>';
                 // Check if this item has children (submenus)
                 if ($has_children) {
-                    echo '<img src="' . get_template_directory_uri() . '/images/chevron-down.svg" alt="" class="arrowImage">';
+					echo '<i class="icon-down-arrow ' . get_template_directory_uri() . ' arrowImage"></i>';
+                    // echo '<img src="' . get_template_directory_uri() . '/images/chevron-down.svg" alt="" class="arrowImage">';
                     echo '<div class="accordian-icon-wrapper"><div class="accordion-icon"></div></div>';
                     echo '<div class="dropdownMenu">';
                     // Render child menu items as "Title" for the submenu
