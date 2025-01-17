@@ -14396,6 +14396,21 @@ body {
   font-family: "termina_testbold";
   font-size: 20px;
 }
+@media screen and (max-width: 1600px) {
+  .privacyPolicySec .backBtn a .backArrow {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .privacyPolicySec .backBtn a .backArrow {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .privacyPolicySec .backBtn a .backArrow {
+    font-size: 12px;
+  }
+}
 .privacyPolicySec .backBtn a .backArrow::before {
   margin: 0;
 }
@@ -14571,6 +14586,102 @@ body {
 @media screen and (max-width: 720px) {
   .privacyPolicySec .privacyContent .ContentBox ol li {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .privacyPolicySec {
+    margin: 160px auto;
+    width: 60%;
+  }
+  .privacyPolicySec .backBtn {
+    margin-bottom: 80px;
+  }
+  .privacyPolicySec .privacyContent .HeadingBox {
+    margin-bottom: 54px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h2 {
+    margin: 54px 0px 20px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h3 {
+    margin: 42px 0px 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h4 {
+    margin: 30px 0px 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox p {
+    margin-bottom: 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox ul li {
+    margin-bottom: 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox ol li {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .privacyPolicySec {
+    margin: 140px auto;
+    width: 64%;
+  }
+  .privacyPolicySec .backBtn {
+    margin-bottom: 60px;
+  }
+  .privacyPolicySec .privacyContent .HeadingBox {
+    margin-bottom: 48px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h2 {
+    margin: 48px 0px 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h3 {
+    margin: 36px 0px 14px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h4 {
+    margin: 26px 0px 14px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox p {
+    margin-bottom: 14px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox ul li {
+    margin-bottom: 14px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox ol li {
+    margin-bottom: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .privacyPolicySec {
+    margin: 100px auto;
+    width: 74%;
+  }
+  .privacyPolicySec .backBtn {
+    margin-bottom: 24px;
+  }
+  .privacyPolicySec .privacyContent .HeadingBox {
+    margin-bottom: 56px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h2 {
+    margin: 56px 0px 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h3 {
+    margin: 42px 0px 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox h4 {
+    margin: 36px 0px 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox p {
+    margin-bottom: 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox ul li {
+    margin-bottom: 16px;
+  }
+  .privacyPolicySec .privacyContent .ContentBox ol li {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .privacyPolicySec {
+    width: 100%;
+    padding: 0px 20px;
   }
 }
 
