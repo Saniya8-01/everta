@@ -182,12 +182,16 @@
                     </div>
                     <div class="mobileUi">
                         <div class="mobileSliderContainer">
-                            <?php if (have_rows('product_feature_mobile')) : ?>
-                                <?php while (have_rows('product_feature_mobile')) : the_row(); ?>
-                                    <div class="sliderContent">
-                                        <h4><?php echo get_sub_field('mobile_title'); ?></h4>
-                                        <p><?php echo get_sub_field('mobile_description'); ?></p>
-                                    </div>
+                            <?php if (have_rows('feature_points')) : ?>
+                                <?php while (have_rows('feature_points')) : the_row(); ?>
+                                    <?php if (have_rows('product_feature')) : ?>
+                                        <?php while (have_rows('product_feature')) : the_row(); ?>
+                                            <div class="sliderContent">
+                                                <h4><?php echo get_sub_field('desktop_title'); ?></h4>
+                                                <p><?php echo get_sub_field('desktop_description'); ?></p>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
                                 <?php endwhile; ?>
                             <?php endif; ?>
                         </div>
