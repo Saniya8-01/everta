@@ -212,7 +212,16 @@ if ($(".testimonialSection").length) {
     var $slider = $(".testimonialCardWrapper");
     var $progressBar = $(".progress-bar");
     var autoplaySpeed = 5000;
-    $(".testimonialCardWrapper").slick({
+    
+    $slider.on('init', function(event, slick) {
+        if (slick.slideCount > slick.options.slidesToShow) {
+            startProgressBar();
+        } else {
+            $progressBar.hide();
+        }
+    });
+
+    $slider.slick({
         dots: false,
         slidesToShow: 2.4,
         arrows: false,
@@ -246,10 +255,10 @@ if ($(".testimonialSection").length) {
             }
         ]
     });
-    // Function to animate the progress bar
+
     function startProgressBar() {
         $progressBar.css({
-            width: "0%", // Reset progress bar
+            width: "0%", 
             transition: "none",
         });
 
@@ -258,17 +267,19 @@ if ($(".testimonialSection").length) {
                 width: "100%",
                 transition: `width ${autoplaySpeed}ms linear`,
             });
-        }, 10); // Slight delay to ensure transition starts
+        }, 10);
     }
 
-    // Restart progress bar on slide change
-    $slider.on("beforeChange", function () {
-        startProgressBar();
+    $slider.on("beforeChange", function (event, slick) {
+        if (slick.slideCount > slick.options.slidesToShow) {
+            startProgressBar();
+            $progressBar.show();
+        } else {
+            $progressBar.hide();
+        }
     });
+} 
 
-    // Start progress bar when slider is initialized
-    startProgressBar();
-}
 
 
 function initializeSlick() {
@@ -368,56 +379,60 @@ document.addEventListener('DOMContentLoaded', () => {
     // Re-apply the effect on window resize
     window.addEventListener('resize', applyHoverOrClickEffect);
 });
-
 document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelectorAll('.tab-content'); // Get all tab content sections
-    const hoverBoxes = document.querySelectorAll('.card'); // Get all cards (hover boxes)
+    const tabs = document.querySelectorAll('.tab-content');
+    const hoverBoxes = document.querySelectorAll('.card');
 
     function setDefaultActiveCards() {
-        // Loop through all tabs and set the first card as active
         tabs.forEach((tab) => {
-            const firstCard = tab.querySelector('.card'); // Get the first card in each tab
+            const firstCard = tab.querySelector('.card');
             if (firstCard) {
-                firstCard.classList.add('active'); // Add 'active' class to the first card
+                firstCard.classList.add('active');
             }
         });
     }
 
-    function applyHoverEffect() {
-        if (window.innerWidth > 820) {
-            // On larger screens, add hover functionality
+    function applyInteractionEffect() {
+        if (window.innerWidth > 1180) {
             hoverBoxes.forEach((box) => {
+                box.removeEventListener('click', handleClick);
                 box.addEventListener('mouseenter', handleMouseEnter);
             });
+        } else if (window.innerWidth >= 1024 && window.innerWidth <= 1180) {
+            hoverBoxes.forEach((box) => {
+                box.removeEventListener('mouseenter', handleMouseEnter);
+                box.addEventListener('click', handleClick);
+            });
         } else {
-            // On smaller screens, remove the 'active' class and event listeners
             hoverBoxes.forEach((box) => {
                 box.classList.remove('active');
                 box.removeEventListener('mouseenter', handleMouseEnter);
+                box.removeEventListener('click', handleClick);
             });
         }
     }
 
     function handleMouseEnter(event) {
-        const currentTab = event.currentTarget.closest('.tab-content'); // Get the parent tab of the hovered card
-        const cardsInCurrentTab = currentTab.querySelectorAll('.card'); // Get all cards in the current tab
+        const currentTab = event.currentTarget.closest('.tab-content');
+        const cardsInCurrentTab = currentTab.querySelectorAll('.card');
 
-        // Remove 'active' class from all cards in the current tab
         cardsInCurrentTab.forEach((item) => item.classList.remove('active'));
-
-        // Add 'active' class to the hovered card
         event.currentTarget.classList.add('active');
     }
 
-    // Set the first card as active by default on page load
+    function handleClick(event) {
+        const currentTab = event.currentTarget.closest('.tab-content');
+        const cardsInCurrentTab = currentTab.querySelectorAll('.card');
+
+        cardsInCurrentTab.forEach((item) => item.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+    }
+
     setDefaultActiveCards();
-
-    // Apply hover effect on load
-    applyHoverEffect();
-
-    // Re-apply hover effect on window resize
-    window.addEventListener('resize', applyHoverEffect);
+    applyInteractionEffect();
+    window.addEventListener('resize', applyInteractionEffect);
 });
+
 
 $.fn.isInViewport = function (threshold = 0) {
     var elementTop = $(this).offset().top;

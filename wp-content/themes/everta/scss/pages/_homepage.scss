@@ -1625,6 +1625,7 @@
             }
 
             img {
+                padding-top: 40px;
                 transform: translate(-50%, 300px);
                 left: 50%;
                 position: absolute;
@@ -1684,7 +1685,7 @@
         .exploreSectionWrapper {
 
             .leftContent {
-                padding: 80px 70px;
+                padding: 100px 70px;
 
                 .contentWrapper {
                     width: 85%;
@@ -1706,7 +1707,7 @@
         .exploreSectionWrapper {
 
             .leftContent {
-                padding: 70px 60px;
+                padding: 90px 60px;
 
                 .contentWrapper {
 
@@ -1727,7 +1728,7 @@
         .exploreSectionWrapper {
 
             .leftContent {
-                padding: 50px 40px;
+                padding: 100px 40px;
 
                 .contentWrapper {
                     width: 90%;
@@ -2068,7 +2069,7 @@
             @include wrapper;
             padding-right: 0px !important;
             margin-bottom: 60px;
-            
+            .slick-track{float: left;}
             .testimonialCard {
                 border-right: 1px solid $tertiaryColor3;
                 margin-right: 52px;
@@ -2262,6 +2263,8 @@
                         margin: 64px 0px 30px;
                     }
 
+                    .clientImages{width: 120px;}
+
                     .testimonial {
                         gap: 10px;
                         .testimonialImage{
@@ -2298,6 +2301,7 @@
                 .testimonialCard{
                     .fontelloQouteIcon{font-size: 36px;}
                     .testimonialPara{margin: 30px 0 30px;}
+                    .clientImages{width: 110px;}
                 }
             }
         }
