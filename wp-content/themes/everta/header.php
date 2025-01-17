@@ -124,6 +124,20 @@ if (isset($locations[$menu_name])) {
 </div>
 						</div>
 					</div>
+					<li class="languageTranslatorMbl">
+						<img src="<?php bloginfo('template_directory'); ?>/images/language-svg.svg"
+							alt="">
+						<div class="languageMenuMbl">
+							<ul>
+								<li>
+									<a href="">EN</a>
+								</li>
+								<li>
+									<a href="">PL</a>
+								</li>
+							</ul>
+						</div>
+					</li>
 					<div class="hamburger-menu">
 						<div class="button_toggle" id="toggle">
 							<span class="spanParent">

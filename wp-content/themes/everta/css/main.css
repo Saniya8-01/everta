@@ -1017,6 +1017,9 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a:
   color: #1E1E1E;
   background: #F5F75E;
 }
+header .headerWrapper .headerMenu .languageTranslatorMbl {
+  display: none;
+}
 header .headerWrapper .headerMenu .hamburger-menu {
   display: none;
 }
@@ -1430,10 +1433,53 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .hamburger-menu .button_toggle .spanParent span:nth-of-type(3) {
     top: 12px;
   }
+  header .headerWrapper .headerMenu .languageTranslatorMbl {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100px;
+  }
+  header .headerWrapper .headerMenu .languageTranslatorMbl.active .languageMenuMbl {
+    opacity: 1;
+    visibility: visible;
+  }
+  header .headerWrapper .headerMenu .languageTranslatorMbl .languageMenuMbl {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    padding-top: 20px;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  header .headerWrapper .headerMenu .languageTranslatorMbl .languageMenuMbl ul {
+    background: #ffffff;
+    min-width: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+    border: 1px solid #1E1E1E;
+    padding: 12px 20px;
+  }
+  header .headerWrapper .headerMenu .languageTranslatorMbl .languageMenuMbl ul li:first-child a {
+    text-decoration: underline;
+  }
+  header .headerWrapper .headerMenu .languageTranslatorMbl .languageMenuMbl ul li a {
+    font-family: "termina_testmedium";
+    font-size: 12px;
+    color: #323232;
+    font-weight: 600;
+    line-height: 16px;
+  }
 }
 @media all and (max-width: 680px) {
   header .headerWrapper {
     padding: 20px;
+  }
+  header .headerWrapper .headerMenu .languageTranslatorMbl {
+    right: 68px;
   }
 }
 
@@ -5402,7 +5448,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   color: #006E50;
 }
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
-  margin: 64px 0 40px;
+  margin: 64px 0px 40px;
   color: #4B4B4B;
   font-family: "verdanaregular";
   font-size: 20px;
@@ -5693,7 +5739,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     font-size: 32px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
-    margin-bottom: 64px 0 30px;
+    margin: 64px 0px 30px;
   }
   .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial {
     gap: 10px;
@@ -13036,6 +13082,7 @@ body {
   color: #1E1E1E;
   transition: 0.3s all ease-in-out;
   margin-bottom: 24px;
+  text-transform: capitalize;
 }
 @media screen and (max-width: 1600px) {
   .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .tag {
@@ -16923,4 +16970,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
