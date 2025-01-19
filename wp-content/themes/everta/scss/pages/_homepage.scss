@@ -23,8 +23,9 @@
                 mix-blend-mode: overlay;
             }
         }
-        .videoDiv{
-            .mobileVideo{display: none;}
+        .videoDiv{overflow: hidden;
+            .mobileVideo{display: none;width: 100%;}
+            .desktopVideo{width: 100%;}
         }
         .bannerSectionContent {
             position: absolute;

@@ -674,3 +674,10 @@ Stack trace:
 [19-Jan-2025 08:07:00 UTC]   Automatic theme updates starting...
 [19-Jan-2025 08:07:00 UTC]   Automatic theme updates complete.
 [19-Jan-2025 08:07:00 UTC] Automatic updates complete.
+[19-Jan-2025 09:07:31 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "explore_cta_text" in C:\xampp\htdocs\everta\wp-content\themes\everta\homepage.php:270
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\homepage.php on line 270

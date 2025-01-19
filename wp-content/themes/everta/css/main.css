@@ -2144,6 +2144,21 @@ header .headerWrapper .headerMenu .hamburger-menu {
     font-size: 12px;
   }
 }
+.contactForm .contactFormWrapper .contactBottom .formFields .wpcf7-not-valid-tip {
+  font-family: "verdanaregular";
+  font-size: 16px;
+  margin-top: 8px;
+}
+@media screen and (max-width: 1600px) {
+  .contactForm .contactFormWrapper .contactBottom .formFields .wpcf7-not-valid-tip {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contactForm .contactFormWrapper .contactBottom .formFields .wpcf7-not-valid-tip {
+    font-size: 12px;
+  }
+}
 .contactForm .contactFormWrapper .contactBottom .submitDiv {
   margin-top: 32px;
   display: flex;
@@ -2417,6 +2432,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   .contactForm {
     right: -150%;
     width: 100%;
+    height: 100vh;
   }
   .contactForm .contactFormWrapper {
     padding: 80px 20px 48px 20px;
@@ -2999,8 +3015,15 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   background: linear-gradient(90deg, rgba(30, 30, 30, 0.7) 5.02%, rgba(111, 111, 111, 0.7) 53.08%, rgba(44, 44, 44, 0.4) 103.08%);
   mix-blend-mode: overlay;
 }
+.bannerSection .bannerSectionWrapper .videoDiv {
+  overflow: hidden;
+}
 .bannerSection .bannerSectionWrapper .videoDiv .mobileVideo {
   display: none;
+  width: 100%;
+}
+.bannerSection .bannerSectionWrapper .videoDiv .desktopVideo {
+  width: 100%;
 }
 .bannerSection .bannerSectionWrapper .bannerSectionContent {
   position: absolute;
@@ -15503,8 +15526,15 @@ body {
   overflow: hidden;
   transition: 2s all ease-in-out;
 }
+.industryStandardSection .sectionWrapper .videoDiv {
+  overflow: hidden;
+}
 .industryStandardSection .sectionWrapper .videoDiv .mobileVideo {
   display: none;
+  width: 100%;
+}
+.industryStandardSection .sectionWrapper .videoDiv .desktopVideo {
+  width: 100%;
 }
 .industryStandardSection .sectionWrapper .bottomInfo {
   margin-top: 72px;
@@ -15801,9 +15831,11 @@ body {
   }
   .industryStandardSection .sectionWrapper .videoDiv .mobileVideo {
     display: block;
+    width: 100%;
   }
   .industryStandardSection .sectionWrapper .videoDiv .desktopVideo {
     display: none;
+    width: 100%;
   }
   .industryStandardSection .sectionWrapper .bottomInfo {
     margin-top: 36px;
