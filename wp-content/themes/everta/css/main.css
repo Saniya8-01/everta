@@ -2178,7 +2178,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
 }
 .contactForm .contactFormWrapper .contactBottom .submitDiv .wpcf7-spinner {
-  display: none;
+  display: block;
 }
 @media all and (max-width: 1600px) {
   .contactForm {
