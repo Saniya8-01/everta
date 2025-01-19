@@ -198,6 +198,9 @@
             .desktopImage{overflow: hidden;transition:2s all ease-in-out;}
             .mobileImage{display: none;overflow: hidden;transition:2s all ease-in-out;}
         }
+        .videoDiv{
+            .mobileVideo{display: none;}
+        }
         .bottomInfo{margin-top: 72px;display:flex;justify-content:space-between;@include wrapper;
             h3{@include terminamedium;@include font36;font-weight: $fontW600;line-height: 133.333%;width: 50%;}
             .autoScroller{display: flex;gap:32px;width: 30%;align-items:flex-start;
@@ -314,6 +317,10 @@
         .scaleImage{
             .desktopImage{display: none;}
             .mobileImage{display: block;width: 100%;}
+        }
+        .videoDiv{
+            .mobileVideo{display: block;}
+            .desktopVideo{display: none;}
         }
         .bottomInfo{margin-top: 36px;flex-direction:column;gap:24px;
             h3{width: 100%;font-size: 20px;line-height: 28px;}

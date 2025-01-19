@@ -2148,8 +2148,10 @@ header .headerWrapper .headerMenu .hamburger-menu {
   margin-top: 32px;
   display: flex;
   justify-content: end;
+  align-items: center;
 }
 .contactForm .contactFormWrapper .contactBottom .submitDiv input {
+  order: 2;
   font-family: "termina_testregular";
   font-size: 16px;
   font-weight: 600;
@@ -2179,6 +2181,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 .contactForm .contactFormWrapper .contactBottom .submitDiv .wpcf7-spinner {
   display: block;
+  order: 1;
 }
 @media all and (max-width: 1600px) {
   .contactForm {
@@ -2996,6 +2999,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   background: linear-gradient(90deg, rgba(30, 30, 30, 0.7) 5.02%, rgba(111, 111, 111, 0.7) 53.08%, rgba(44, 44, 44, 0.4) 103.08%);
   mix-blend-mode: overlay;
 }
+.bannerSection .bannerSectionWrapper .videoDiv .mobileVideo {
+  display: none;
+}
 .bannerSection .bannerSectionWrapper .bannerSectionContent {
   position: absolute;
   left: 120px;
@@ -3173,6 +3179,12 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .bannerSection .bannerSectionWrapper .bannerImageWrapper .desktopImage {
     display: none !important;
+  }
+  .bannerSection .bannerSectionWrapper .videoDiv .mobileVideo {
+    display: block;
+  }
+  .bannerSection .bannerSectionWrapper .videoDiv .desktopVideo {
+    display: none;
   }
   .bannerSection .bannerSectionWrapper .bannerSectionContent {
     left: 0px;
@@ -15491,6 +15503,9 @@ body {
   overflow: hidden;
   transition: 2s all ease-in-out;
 }
+.industryStandardSection .sectionWrapper .videoDiv .mobileVideo {
+  display: none;
+}
 .industryStandardSection .sectionWrapper .bottomInfo {
   margin-top: 72px;
   display: flex;
@@ -15783,6 +15798,12 @@ body {
   .industryStandardSection .sectionWrapper .scaleImage .mobileImage {
     display: block;
     width: 100%;
+  }
+  .industryStandardSection .sectionWrapper .videoDiv .mobileVideo {
+    display: block;
+  }
+  .industryStandardSection .sectionWrapper .videoDiv .desktopVideo {
+    display: none;
   }
   .industryStandardSection .sectionWrapper .bottomInfo {
     margin-top: 36px;

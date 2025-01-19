@@ -23,6 +23,9 @@
                 mix-blend-mode: overlay;
             }
         }
+        .videoDiv{
+            .mobileVideo{display: none;}
+        }
         .bannerSectionContent {
             position: absolute;
             left: 120px;
@@ -208,6 +211,11 @@
                 .desktopImage {
                     display: none !important;
                 }
+            }
+
+            .videoDiv{
+                .mobileVideo{display: block;}
+                .desktopVideo{display: none;}
             }
 
             .bannerSectionContent {

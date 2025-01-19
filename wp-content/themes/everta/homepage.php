@@ -29,8 +29,11 @@
             </div>
         <?php elseif ( $mediaChoice == 'Video' ) : ?>
             <div class="videoDiv">
-                <video autoplay="" preload="auto" loop="" muted="" playsinline="">
+                <video autoplay="" preload="auto" loop="" muted="" playsinline="" class="desktopVideo">
                     <source src="<?php echo esc_url(get_sub_field('video_link')); ?>" type="video/mp4">
+                </video>
+                <video autoplay="" preload="auto" loop="" muted="" playsinline="" class="mobileVideo">
+                    <source src="<?php echo esc_url(get_sub_field('video_link_mobile')); ?>" type="video/mp4">
                 </video>
             </div>
         <?php endif; ?>
