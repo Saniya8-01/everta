@@ -15345,6 +15345,9 @@ body {
   border-radius: 50%;
   border: 1px solid #1E1E1E;
 }
+.secondFold .secondFoldWrapper .industryCard .imageDiv img {
+  width: 100%;
+}
 .secondFold .secondFoldWrapper .industryCard h3 {
   margin-bottom: 24px;
   font-family: "termina_testmedium";
