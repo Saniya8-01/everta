@@ -19,6 +19,9 @@ footer{
                             }
                         }
                     }
+                    #footerAddress{
+                        ul{li{a{cursor: default;}}}
+                    }
                 }
                 .footerRights{padding-top: 45px;border-top: 1px solid $quaternaryColor4;display: flex;justify-content: space-between;align-items: center;
                     p{color: $quaternaryColor1;@include font18;@include verdanaregular;line-height: 140%;letter-spacing: -0.36px;}

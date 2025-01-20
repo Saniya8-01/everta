@@ -101,7 +101,7 @@
                     <?php endif; ?>
                     <?php if (have_rows('address_contact_menu', 'option')) : ?>
                     <?php while (have_rows('address_contact_menu', 'option')) : the_row(); ?>
-                    <div class="footerMenuWrapper">
+                    <div class="footerMenuWrapper" id="footerAddress">
                         <p><?php echo get_sub_field('address_title', 'option'); ?></p>
                         <ul>
                             <li><a href="javascript:void(0);"><?php echo get_sub_field('address', 'option'); ?></a></li>

@@ -2673,6 +2673,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerM
 footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerMenuWrapper ul li .underline {
   text-decoration: underline;
 }
+footer .footerContainer .footerRight .footerRightContainer .footerMenus #footerAddress ul li a {
+  cursor: default;
+}
 footer .footerContainer .footerRight .footerRightContainer .footerRights {
   padding-top: 45px;
   border-top: 1px solid #A5A5A5;
@@ -4366,7 +4369,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .chargingSection .tab-wrapper .tab-content .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   border-bottom: 1px solid #D8DBDC;
   border-top: 1px solid #D8DBDC;
 }
@@ -4479,7 +4482,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   opacity: 0;
   width: 100%;
   z-index: 2;
-  padding: 80px;
+  padding: 60px;
   transition: all 0.4s ease-out;
   line-height: 100%;
 }
@@ -4565,7 +4568,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 30px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a {
-    padding: 65px;
+    padding: 50px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a img {
     width: 14px;
@@ -4603,7 +4606,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     margin-bottom: 20px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a {
-    padding: 50px;
+    padding: 40px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a::after {
     border-top-left-radius: 40px;
@@ -4644,9 +4647,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
     margin-bottom: 16px;
-  }
-  .chargingSection .tab-wrapper .tab-content .cards .card a {
-    padding: 40px;
   }
   .chargingSection .tab-wrapper .tab-content .cards .card a::after {
     border-top-left-radius: 30px;
@@ -5302,7 +5302,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .mapSection .mapSectionDivider .stats .statCard:not(:last-child) {
   border-bottom: 1px solid rgba(216, 219, 220, 0.2);
@@ -15340,6 +15339,9 @@ body {
 .secondFold .secondFoldWrapper .industryCard .imageDiv {
   margin-bottom: 48px;
   width: 180px;
+  padding: 40px;
+  border-radius: 50%;
+  border: 1px solid #1E1E1E;
 }
 .secondFold .secondFoldWrapper .industryCard h3 {
   margin-bottom: 24px;
@@ -15402,6 +15404,7 @@ body {
   }
   .secondFold .secondFoldWrapper .industryCard .imageDiv {
     margin-bottom: 45px;
+    padding: 36px;
   }
   .secondFold .secondFoldWrapper .industryCard h3 {
     margin-bottom: 24px;
@@ -15420,6 +15423,7 @@ body {
   .secondFold .secondFoldWrapper .industryCard .imageDiv {
     margin-bottom: 40px;
     width: 140px;
+    padding: 32px;
   }
   .secondFold .secondFoldWrapper .industryCard h3 {
     margin-bottom: 22px;
@@ -15438,6 +15442,7 @@ body {
   .secondFold .secondFoldWrapper .industryCard .imageDiv {
     margin-bottom: 32px;
     width: 120px;
+    padding: 30px;
   }
   .secondFold .secondFoldWrapper .industryCard h3 {
     margin-bottom: 20px;
@@ -15453,6 +15458,7 @@ body {
   .secondFold .secondFoldWrapper .industryCard .imageDiv {
     margin-bottom: 32px;
     width: 100px;
+    padding: 24px;
   }
   .secondFold .secondFoldWrapper .industryCard h3 {
     margin-bottom: 18px;
@@ -15468,6 +15474,7 @@ body {
   .secondFold .secondFoldWrapper .industryCard .imageDiv {
     margin-bottom: 28px;
     width: 80px;
+    padding: 20px;
   }
   .secondFold .secondFoldWrapper .industryCard h3 {
     margin-bottom: 14px;
@@ -15492,6 +15499,7 @@ body {
   .secondFold .secondFoldWrapper .industryCard .imageDiv {
     margin-bottom: 24px;
     width: 96px;
+    padding: 22px;
   }
   .secondFold .secondFoldWrapper .industryCard h3 {
     margin-bottom: 16px;
@@ -16920,9 +16928,6 @@ body {
 .productSection .productWrapper .tabContent .cards {
   border-bottom: 1px solid #D8DBDC;
   border-top: 1px solid #D8DBDC;
-}
-.productSection .productWrapper .tabContent .cards .slick-track {
-  float: left;
 }
 .productSection .productWrapper .tabContent .cards .card {
   border-right: 1px solid #D8DBDC;
