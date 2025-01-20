@@ -3759,6 +3759,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   display: none;
   text-transform: capitalize;
   margin-top: 5px;
+  font-family: "verdanaregular";
 }
 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content a {
   display: none;
@@ -17407,4 +17408,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
