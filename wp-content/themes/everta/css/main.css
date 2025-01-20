@@ -5303,6 +5303,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .mapSection .mapSectionDivider .stats .statCard:not(:last-child) {
   border-bottom: 1px solid rgba(216, 219, 220, 0.2);
@@ -17408,4 +17409,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
