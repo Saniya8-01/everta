@@ -662,3 +662,22 @@ Stack trace:
 [17-Jan-2025 11:04:17 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
 [17-Jan-2025 11:04:44 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
 [17-Jan-2025 11:06:54 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in C:\xampp\htdocs\everta\wp-content\themes\everta\header.php on line 79
+[19-Jan-2025 06:26:19 UTC] Automatic updates starting...
+[19-Jan-2025 06:26:22 UTC]   Automatic plugin updates starting...
+[19-Jan-2025 06:26:22 UTC]   Automatic plugin updates complete.
+[19-Jan-2025 06:26:23 UTC]   Automatic theme updates starting...
+[19-Jan-2025 06:26:23 UTC]   Automatic theme updates complete.
+[19-Jan-2025 06:26:23 UTC] Automatic updates complete.
+[19-Jan-2025 08:06:58 UTC] Automatic updates starting...
+[19-Jan-2025 08:07:00 UTC]   Automatic plugin updates starting...
+[19-Jan-2025 08:07:00 UTC]   Automatic plugin updates complete.
+[19-Jan-2025 08:07:00 UTC]   Automatic theme updates starting...
+[19-Jan-2025 08:07:00 UTC]   Automatic theme updates complete.
+[19-Jan-2025 08:07:00 UTC] Automatic updates complete.
+[19-Jan-2025 09:07:31 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "explore_cta_text" in C:\xampp\htdocs\everta\wp-content\themes\everta\homepage.php:270
+Stack trace:
+#0 C:\xampp\htdocs\everta\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\everta\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\everta\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\everta\wp-content\themes\everta\homepage.php on line 270

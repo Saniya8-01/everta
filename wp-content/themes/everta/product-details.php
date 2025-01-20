@@ -342,6 +342,85 @@
     </div>
 </section>
 
+<div class="contactTop">
+    <div class="formFields">
+        <label for="first-name">First Name*</label>
+        [text* first-name id:first-name placeholder "First name"]
+    </div>
+    <div class="formFields">
+        <label for="your-email">Your Email*</label>
+        [email* your-email id:your-email placeholder "Your Email"]
+    </div>
+    <div class="formFields">
+        <label for="mobile-number">Mobile Number*</label>
+[phonetext phonenumber autocomplete:tel placeholder "9987563984"]
+    </div>
+</div>
+
+<div class="contactBottom">
+    <h3>I am looking to</h3>
+    <div class="contactTab">
+        <button type="button" class="contact-tab-btn" data-tab="contact-tab-partner">Partner with Everta</button>
+        <button type="button" class="contact-tab-btn" data-tab="contact-tab-charger">Buy Everta Charger</button>
+    </div>
+
+    <!-- Partner Tab Content -->
+    <div id="contact-tab-partner" class="contact-tab-content active">
+        <div class="contact-tab-wrapper">
+            <div class="formFields">
+                <label for="company-name">Company Name*</label>
+                [text* text-560 placeholder "Company Name"]
+            </div>
+
+            <div class="formFields">
+                <label for="target-market">Your Target Market</label>
+                [select* select-391 class:options "India" "USA" "Poland"]
+            </div>
+        </div>
+    </div>
+
+    <!-- Charger Tab Content -->
+    <div id="contact-tab-charger" class="contact-tab-content">
+        <div class="contact-tab-wrapper">
+            <div class="formFields">
+                <label for="charger-location">Location</label>
+                [select* select-81 "India" "USA" "Poland" "UAE"]
+            </div>
+
+            <div class="formFields">
+                <label for="chargers-needed" class="lowercase">How many chargers do you need?*</label>
+                <div class="charges">
+                    <span class="chargesCount">
+                        <label><input type="radio" name="chargers-needed" value="1-4"><span>1-4</span></label>
+                    </span>
+                    <span class="chargesCount">
+                        <label><input type="radio" name="chargers-needed" value="5-9"><span>5-9</span></label>
+                    </span>
+                    <span class="chargesCount">
+                        <label><input type="radio" name="chargers-needed" value="10-24"><span>10-24</span></label>
+                    </span>
+                    <span class="chargesCount">
+                        <label><input type="radio" name="chargers-needed" value="24-49"><span>24-49</span></label>
+                    </span>
+                    <span class="chargesCount">
+                        <label><input type="radio" name="chargers-needed" value="50+"><span>50+</span></label>
+                    </span>
+                </div>
+            </div>
+
+ 
+        </div>
+    </div>
+    <div class="formFields">
+        <label for="charger-message">Write a Message</label>
+        [textarea* textarea-262 placeholder "Write your message here..."]
+    </div>
+
+    <div class="submitDiv">
+        [submit class:submitDiv "Send Contact Request"]
+    </div>
+</div>
+
 <?php get_footer(); ?>
 
 <script>

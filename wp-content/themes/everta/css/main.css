@@ -1789,6 +1789,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content {
   display: none;
+  margin-bottom: 38px;
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content.active {
   display: block;
@@ -1804,9 +1805,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   display: flex;
   flex-direction: column;
   gap: 17px;
-}
-.contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields:last-child {
-  flex-basis: 100%;
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields label {
   text-transform: capitalize;
@@ -2101,12 +2099,74 @@ header .headerWrapper .headerMenu .hamburger-menu {
     font-size: 12px;
   }
 }
+.contactForm .contactFormWrapper .contactBottom .formFields {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.contactForm .contactFormWrapper .contactBottom .formFields label {
+  text-transform: capitalize;
+  font-family: "termina_testregular";
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 600;
+  color: #1E1E1E;
+}
+@media screen and (max-width: 1600px) {
+  .contactForm .contactFormWrapper .contactBottom .formFields label {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contactForm .contactFormWrapper .contactBottom .formFields label {
+    font-size: 14px;
+  }
+}
+.contactForm .contactFormWrapper .contactBottom .formFields textarea {
+  border: 1px solid #A5A5A5;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  line-height: 175%;
+  color: #1E1E1E;
+  padding: 24px;
+  width: 100%;
+  height: 148px;
+  resize: none;
+  font-weight: 400;
+}
+@media screen and (max-width: 1600px) {
+  .contactForm .contactFormWrapper .contactBottom .formFields textarea {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contactForm .contactFormWrapper .contactBottom .formFields textarea {
+    font-size: 12px;
+  }
+}
+.contactForm .contactFormWrapper .contactBottom .formFields .wpcf7-not-valid-tip {
+  font-family: "verdanaregular";
+  font-size: 16px;
+  margin-top: 8px;
+}
+@media screen and (max-width: 1600px) {
+  .contactForm .contactFormWrapper .contactBottom .formFields .wpcf7-not-valid-tip {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contactForm .contactFormWrapper .contactBottom .formFields .wpcf7-not-valid-tip {
+    font-size: 12px;
+  }
+}
 .contactForm .contactFormWrapper .contactBottom .submitDiv {
   margin-top: 32px;
   display: flex;
   justify-content: end;
+  align-items: center;
 }
 .contactForm .contactFormWrapper .contactBottom .submitDiv input {
+  order: 2;
   font-family: "termina_testregular";
   font-size: 16px;
   font-weight: 600;
@@ -2135,7 +2195,8 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
 }
 .contactForm .contactFormWrapper .contactBottom .submitDiv .wpcf7-spinner {
-  display: none;
+  display: block;
+  order: 1;
 }
 @media all and (max-width: 1600px) {
   .contactForm {
@@ -2196,6 +2257,12 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges .chargesCount label span {
     padding: 6px;
+  }
+  .contactForm .contactFormWrapper .contactBottom .formFields {
+    gap: 17px;
+  }
+  .contactForm .contactFormWrapper .contactBottom .formFields textarea textarea {
+    padding: 22px;
   }
   .contactForm .contactFormWrapper .contactBottom .submitDiv {
     margin-top: 30px;
@@ -2322,9 +2389,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input {
     padding: 6px 0px 12px 0px;
   }
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields textarea {
-    padding: 20px;
-  }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .selectBtn {
     padding: 6px 0px 12px 0px;
   }
@@ -2345,6 +2409,12 @@ header .headerWrapper .headerMenu .hamburger-menu {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges .chargesCount label span {
     padding: 6px;
   }
+  .contactForm .contactFormWrapper .contactBottom .formFields {
+    gap: 16px;
+  }
+  .contactForm .contactFormWrapper .contactBottom .formFields textarea textarea {
+    padding: 20px;
+  }
   .contactForm .contactFormWrapper .contactBottom .submitDiv {
     margin-top: 30px;
   }
@@ -2362,6 +2432,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   .contactForm {
     right: -150%;
     width: 100%;
+    height: 100vh;
   }
   .contactForm .contactFormWrapper {
     padding: 80px 20px 48px 20px;
@@ -2456,12 +2527,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
     font-size: 12px;
     line-height: 18px;
   }
-  .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields textarea {
-    font-size: 12px;
-    line-height: 18px;
-    padding: 16px;
-    height: 148px;
-  }
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .selectBtn {
     padding: 7px 0px 14px 0px;
   }
@@ -2496,6 +2561,19 @@ header .headerWrapper .headerMenu .hamburger-menu {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges .chargesCount label span {
     line-height: 18px;
     font-size: 12px;
+  }
+  .contactForm .contactFormWrapper .contactBottom .formFields {
+    gap: 12px;
+  }
+  .contactForm .contactFormWrapper .contactBottom .formFields label {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+  .contactForm .contactFormWrapper .contactBottom .formFields textarea {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 16px;
+    height: 148px;
   }
   .contactForm .contactFormWrapper .contactBottom .submitDiv {
     margin-top: 48px;
@@ -2937,6 +3015,16 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   background: linear-gradient(90deg, rgba(30, 30, 30, 0.7) 5.02%, rgba(111, 111, 111, 0.7) 53.08%, rgba(44, 44, 44, 0.4) 103.08%);
   mix-blend-mode: overlay;
 }
+.bannerSection .bannerSectionWrapper .videoDiv {
+  overflow: hidden;
+}
+.bannerSection .bannerSectionWrapper .videoDiv .mobileVideo {
+  display: none;
+  width: 100%;
+}
+.bannerSection .bannerSectionWrapper .videoDiv .desktopVideo {
+  width: 100%;
+}
 .bannerSection .bannerSectionWrapper .bannerSectionContent {
   position: absolute;
   left: 120px;
@@ -3114,6 +3202,12 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .bannerSection .bannerSectionWrapper .bannerImageWrapper .desktopImage {
     display: none !important;
+  }
+  .bannerSection .bannerSectionWrapper .videoDiv .mobileVideo {
+    display: block;
+  }
+  .bannerSection .bannerSectionWrapper .videoDiv .desktopVideo {
+    display: none;
   }
   .bannerSection .bannerSectionWrapper .bannerSectionContent {
     left: 0px;
@@ -15432,6 +15526,16 @@ body {
   overflow: hidden;
   transition: 2s all ease-in-out;
 }
+.industryStandardSection .sectionWrapper .videoDiv {
+  overflow: hidden;
+}
+.industryStandardSection .sectionWrapper .videoDiv .mobileVideo {
+  display: none;
+  width: 100%;
+}
+.industryStandardSection .sectionWrapper .videoDiv .desktopVideo {
+  width: 100%;
+}
 .industryStandardSection .sectionWrapper .bottomInfo {
   margin-top: 72px;
   display: flex;
@@ -15723,6 +15827,14 @@ body {
   }
   .industryStandardSection .sectionWrapper .scaleImage .mobileImage {
     display: block;
+    width: 100%;
+  }
+  .industryStandardSection .sectionWrapper .videoDiv .mobileVideo {
+    display: block;
+    width: 100%;
+  }
+  .industryStandardSection .sectionWrapper .videoDiv .desktopVideo {
+    display: none;
     width: 100%;
   }
   .industryStandardSection .sectionWrapper .bottomInfo {
