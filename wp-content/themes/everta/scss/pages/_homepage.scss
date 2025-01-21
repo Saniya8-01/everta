@@ -2,7 +2,7 @@
     position: relative;
     margin-top: 100px;
     margin-bottom: 200px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 96px);
     overflow: hidden;
 
     .bannerSectionWrapper {
@@ -96,12 +96,12 @@
     }
 
     @media all and (max-width:1536px) {
-        height: calc(100vh - 88px);
+        height: calc(100vh - 89px);
     }
 
     @media all and (max-width:1440px) {
         margin-top: 77px;
-        height: auto;
+        height: calc(100vh - 77px);
         margin-bottom: 120px;
 
         .bannerSectionWrapper {
