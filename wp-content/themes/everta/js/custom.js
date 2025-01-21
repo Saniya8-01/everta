@@ -78,14 +78,15 @@ $(document).ready(function () {
             $(".navMenu").toggleClass("open");
             if ($(".navMenu").hasClass("open")) {
                 menuOpen = true; // Menu is open
-                $('body').css("overflow", "hidden");
-                $('html').css("overflow", "hidden");
+                $('body').css("overflow-y", "hidden");
+                $('html').css("overflow-y", "hidden");
                 $(".languageTranslatorMbl").css("display","none");
             } else {
                 menuOpen = false; // Menu is closed
-                $('body').css("overflow", "visible");
+                $('body').css("overflow-y", "visible");
                 $('body').css("overflow-x", "hidden");
-                $('html').css("overflow", "visible");
+                $('html').css("overflow-y", "visible");
+                $('html').css("overflow-x", "hidden");
                 $(".languageTranslatorMbl").css("display","block");
             }
         });
@@ -840,7 +841,9 @@ function openForm() {
 function closeForm() {
     document.getElementById("contactForm").classList.remove("open");
     $('body').css("overflow-y", "visible");
+    $('body').css("overflow-x", "hidden");
     $('html').css("overflow-y", "visible");
+    $('html').css("overflow-x", "hidden");
 }
 
 if ($('.careerWallSection').length) {
