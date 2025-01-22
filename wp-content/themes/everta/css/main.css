@@ -9408,7 +9408,7 @@ body {
   transform: translateX(0%);
 }
 .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
-  left: 85%;
+  left: 80%;
 }
 .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon img {
   transform: scale3d(1.6, 1.6, 1.6);
@@ -9419,6 +9419,15 @@ body {
   }
   .missionSection .missionSecWrapper .mainContainer .card {
     padding: 130px 10px 110px 110px;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover {
+    width: 120%;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardTxt {
+    width: 72%;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
+    left: 79%;
   }
 }
 @media all and (max-width: 1600px) {
@@ -9448,10 +9457,19 @@ body {
   .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon {
     width: 160px;
   }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardTxt {
+    width: 70%;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
+    left: 80%;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon img {
+    transform: scale3d(1.6, 1.6, 1.6);
+  }
 }
 @media all and (max-width: 1366px) {
   .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
-    left: 82%;
+    left: 78%;
   }
 }
 @media all and (max-width: 1280px) {
@@ -9465,7 +9483,7 @@ body {
     width: 140px;
   }
   .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
-    left: 83%;
+    left: 77%;
   }
 }
 @media all and (max-width: 1024px) {
@@ -9503,7 +9521,7 @@ body {
     transform: translateX(150%);
   }
   .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon.iconReset {
-    transform: translateX(40%);
+    transform: translateX(0%);
     transition: 0.8s all ease-in-out;
   }
   .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon.iconReset img {
@@ -9511,6 +9529,12 @@ body {
   }
   .missionSection .missionSecWrapper .mainContainer .card h2 {
     order: 0;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover {
+    width: 100%;
+  }
+  .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardTxt {
+    width: 100%;
   }
   .missionSection .missionSecWrapper .mainContainer .card:hover .hoverContent .cardIcon {
     left: unset;
@@ -9525,7 +9549,7 @@ body {
     transform: translateX(-150%);
   }
   .missionSection .missionSecWrapper .mainContainer .card:last-child .hoverContent .cardIcon.visionIconReset {
-    transform: translateX(-38%);
+    transform: translateX(0%);
     transition: 0.8s all ease-in-out;
   }
   .missionSection .missionSecWrapper .mainContainer .card:last-child .hoverContent .cardIcon.visionIconReset img {
@@ -9538,10 +9562,10 @@ body {
     gap: 20px;
   }
   .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon.iconReset {
-    transform: translateX(30%);
+    transform: translateX(0%);
   }
   .missionSection .missionSecWrapper .mainContainer .card:last-child .hoverContent .cardIcon.visionIconReset {
-    transform: translateX(-25%);
+    transform: translateX(0%);
   }
 }
 @media all and (max-width: 720px) {
@@ -9558,10 +9582,10 @@ body {
     line-height: 150%;
   }
   .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardIcon.iconReset {
-    transform: translateX(25%);
+    transform: translateX(0%);
   }
   .missionSection .missionSecWrapper .mainContainer .card:last-child .hoverContent .cardIcon.visionIconReset {
-    transform: translateX(-20%);
+    transform: translateX(0%);
   }
 }
 
