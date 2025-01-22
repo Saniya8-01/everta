@@ -660,12 +660,14 @@ if ($(".evertaEveryoneSection").length) {
             $('body').css('overflow', 'hidden');
         } else {
             $('body').css('overflow', 'auto');
+            $('body').css("overflow-x", "hidden");
         }
     });
     $(document).on('click', function (event) {
         if (!$(event.target).closest('.popup-body, .toggle').length) {
             $('.popup-body').closest('.popup').addClass('hide');
             $('body').css('overflow', 'auto');
+            $('body').css("overflow-x", "hidden");
         }
     });
 }
