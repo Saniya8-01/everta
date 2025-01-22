@@ -275,234 +275,98 @@
             }
         }
     }
-
-    @media all and (max-width:1800px) {
-        margin-bottom: 180px;
-
-        .divWrapper {
-            gap: 50px;
-            padding-top: 150px;
-
-            .leftContent {
-                flex-basis: 50%;
-                top: 150px;
-                padding: 0px 90px 0px 120px;
-            }
-
+    @media all and (max-width:1800px) {margin-bottom: 180px;
+        .divWrapper {gap: 50px;padding-top: 150px;
+            .leftContent {top: 150px;padding: 0px 90px 0px 120px;}
             .rightContent {
-                flex-basis: 50%;
-
-                .rightContentWrapper {
-                    gap: 150px;
+                .rightContentWrapper {gap: 150px;
                     .imageDiv{width: 75%;}
                 }
             }
         }
     }
-
-    @media all and (max-width:1600px) {
-        margin-bottom: 150px;
-
-        .divWrapper {
-            gap: 45px;
-            padding-top: 130px;
-
-            .leftContent {
-                padding: 0px 60px 0px 90px;
-                flex-basis: 45%;
-                top: 130px;
-
-                &.image-state {
-                    top: -80px;}
-
+    @media all and (max-width:1600px) {margin-bottom: 150px;
+        .divWrapper {gap: 45px;padding-top: 130px;
+            .leftContent {padding: 0px 60px 0px 90px;width: 45%;top: 130px;
+                &.image-state {top: -80px;}
                 .leftMobileTitle {
-                    p {
-                        margin-bottom: 32px;
-                        margin-top: 32px;
-                    }
+                    p {margin-bottom: 32px;margin-top: 32px;}
                 }
             }
-
             .rightContent {
-                .rightContentWrapper {
-                    gap: 100px;
-                    .imageDiv{
-                        width: 70%;
-                    }
+                .rightContentWrapper {gap: 100px;
+                    .imageDiv{width: 70%;}
                 }
             }
         }
     }
-
-    @media all and (max-width:1440px) {
-        margin-bottom: 120px;
-
-        .divWrapper {
-            gap: 40px;
-            padding-top: 100px;
-
-            .leftContent {
-                padding: 0px 40px 0px 80px;
-                flex-basis: 43%;
-                top: 100px;
-
+    @media all and (max-width:1440px) {margin-bottom: 120px;
+        .divWrapper {gap: 40px;padding-top: 100px;
+            .leftContent {padding: 0px 40px 0px 80px;width: 43%;top: 100px;
                 .leftMobileTitle {
-                    p {
-                        margin-bottom: 28px;
-                        margin-top: 28px;
-                    }
+                    p {margin-bottom: 28px;margin-top: 28px;}
                 }
             }
-
             .rightContent {
-                .rightContentWrapper {
-                    gap: 90px;
-                    .imageDiv{
-                        width: 65%;
-                    }
+                .rightContentWrapper {gap: 90px;
+                    .imageDiv{width: 65%;}
                 }
             }
         }
     }
 
     @media all and (max-width:1280px) {
-
-        .divWrapper {
-            gap: 36px;
-            padding-top: 80px;
-
-            .leftContent {
-                padding: 0px 30px 0px 80px;
-                top: 80px;
-                
-                &.image-state {
-                    top: -80px;}
-
+        .divWrapper {gap: 36px;padding-top: 80px;
+            .leftContent {padding: 0px 30px 0px 80px;top: 80px;
+                &.image-state {top: -80px;}
                 .leftMobileTitle {
-                    p {
-                        margin-bottom: 24x;
-                        margin-top: 24px;
-                    }
+                    p {margin-bottom: 24x;margin-top: 24px;}
                 }
             }
-
             .rightContent {
-                .rightContentWrapper {
-                    gap: 70px;
-                }
+                .rightContentWrapper {gap: 70px;}
             }
         }
     }
     @media all and (max-width:1024px){
         .divWrapper {
-            .leftContent {
-                padding: 0px 30px 0px 40px;
-            }
+            .leftContent {padding: 0px 30px 0px 40px;}
         }
     }
-    @media all and (max-width:1024px) and (min-height:1366px){
-        height: auto;
-        margin-bottom: 100px;
-
-        .divWrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 38px;
-            padding-top: 0px;
-
-            .leftContent {
-                @include wrapper;
-                flex-basis: 100%;
-                position: unset;
-
-                img {
-                    width: 60%;
-                }
-
-                .leftMobileTitle {
-                    transform: translateY(0px);
-
-                    p {
-                        @include verdanaregular;
-                        font-size: 12px;
-                        font-weight: 400;
-                        line-height: 24px;
-                        margin-bottom: 24px;
-                        margin-top: 24px;
-                    }
+    @media all and (max-width:1024px) and (min-height:1366px){height: auto;margin-bottom: 100px;
+        .divWrapper {display: flex;flex-direction: column;gap: 38px;padding-top: 0px;
+            .leftContent {@include wrapper;width: 100%;position: unset;
+                img {width: 60%;}
+                .leftMobileTitle {transform: translateY(0px);
+                    p {@include verdanaregular;font-size: 12px;font-weight: 400;line-height: 24px;margin-bottom: 24px;margin-top: 24px;}
                 }
             }
 
-            .rightContent {
-                overflow: hidden;
-                flex-basis: 100%;
-                padding-left: 25px;
-
-                .rightContentWrapper {
-                    gap: 0px;
-
-                    .slick-track {
-                        gap: 15px;
-                        display: flex;
-                    }
+            .rightContent {overflow: hidden;width: 100%;padding-left: 25px;
+                .rightContentWrapper {gap: 0px;
+                    .slick-track {gap: 15px;display: flex;}
                 }
             }
         }
     }
-    @media all and (max-width:820px) {
-        height: auto;
-        margin-bottom: 100px;
-
-        .divWrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 38px;
-            padding-top: 0px;
-
-            .leftContent {
-                @include wrapper;
-                flex-basis: 100%;
-                position: unset;
-
-                img {
-                    width: 60%;
-                }
-
-                .leftMobileTitle {
-                    transform: translateY(0px);
-
-                    p {
-                        @include verdanaregular;
-                        font-size: 12px;
-                        font-weight: 400;
-                        line-height: 24px;
-                        margin-bottom: 24px;
-                        margin-top: 24px;
-                    }
+    @media all and (max-width:820px) {height: auto;margin-bottom: 100px;
+        .divWrapper {display: flex;flex-direction: column;gap: 38px;padding-top: 0px;
+            .leftContent {@include wrapper;width: 100%;position: unset;
+                img {width: 60%;}
+                .leftMobileTitle {transform: translateY(0px);
+                    p {@include verdanaregular;font-size: 12px;font-weight: 400;line-height: 24px;margin-bottom: 24px;margin-top: 24px;}
                 }
             }
-
-            .rightContent {
-                overflow: hidden;
-                flex-basis: 100%;
-                padding-left: 25px;
-
-                .rightContentWrapper {
-                    gap: 0px;
-
-                    .slick-track {
-                        gap: 15px;
-                        display: flex;
-                    }
+            .rightContent {overflow: hidden;width: 100%;padding-left: 25px;
+                .rightContentWrapper {gap: 0px;
+                    .slick-track {gap: 15px;display: flex;}
                 }
             }
         }
     }
     @media all and (max-width:680px){
         .divWrapper{
-            .rightContent{
-                padding-left: 5px;
-            }
+            .rightContent{padding-left: 5px;}
         }
     }
 }
