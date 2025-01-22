@@ -89,7 +89,7 @@
                         .cardTxt{
                             p{transform: translateX(0%);}
                         }
-                        .cardIcon{left: 85%;
+                        .cardIcon{left: 80%;
                             img{transform: scale3d(1.6, 1.6, 1.6);}
                         }
                     }
@@ -100,7 +100,14 @@
     @media all and (max-width: 1800px){margin-bottom: 180px;
         .missionSecWrapper{
             .mainContainer{
-                .card{padding: 130px 10px 110px 110px;}
+                .card{padding: 130px 10px 110px 110px;
+                    &:hover{width: 120%;
+                        .hoverContent{
+                            .cardTxt{width: 72%;}
+                            .cardIcon{left: 79%;}
+                        }
+                    }
+                }
             }
         }
     }
@@ -128,6 +135,14 @@
                         .cardTxt{height: 160px;}
                         .cardIcon{width: 160px;}
                     }
+                    &:hover{
+                        .hoverContent{
+                            .cardTxt{width: 70%;}
+                            .cardIcon{left: 80%;
+                                img{transform: scale3d(1.6, 1.6, 1.6);}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -138,7 +153,7 @@
                 .card{
                     &:hover{
                         .hoverContent{
-                            .cardIcon{left: 82%;}
+                            .cardIcon{left: 78%;}
                         }
                     }
                 }
@@ -155,7 +170,7 @@
                     }
                     &:hover{
                         .hoverContent{
-                            .cardIcon{left: 83%;}
+                            .cardIcon{left: 77%;}
                         }
                     }
                 }
@@ -171,14 +186,15 @@
                             p{transform: translateX(0);}
                         }
                         .cardIcon{width: 180px; position: relative; transform: translateX(150%); 
-                            &.iconReset{transform: translateX(40%); transition: 0.8s all ease-in-out;
+                            &.iconReset{transform: translateX(0%); transition: 0.8s all ease-in-out;
                                 img{ transition: 0.8s all ease-in-out;}
                             }
                         }
                     }
                     h2{order: 0;}
-                    &:hover{
+                    &:hover{width: 100%;
                         .hoverContent{
+                            .cardTxt{width: 100%;}
                             .cardIcon{left: unset;
                                 img{transform: scale3d(1, 1, 1);}
                             }
@@ -187,7 +203,7 @@
                     &:last-child{
                         .hoverContent{align-items: flex-start;
                             .cardIcon{transform: translateX(-150%);
-                                &.visionIconReset{transform: translateX(-38%); transition: 0.8s all ease-in-out;
+                                &.visionIconReset{transform: translateX(0%); transition: 0.8s all ease-in-out;
                                     img{ transition: 0.8s all ease-in-out;}
                                 }
                             }
@@ -203,13 +219,13 @@
                 .card{padding: 30px; gap: 20px;
                     .hoverContent{
                         .cardIcon{
-                            &.iconReset{transform: translateX(30%);}
+                            &.iconReset{transform: translateX(0%);}
                         }
                     }
                     &:last-child{
                         .hoverContent{
                             .cardIcon{
-                                &.visionIconReset{transform: translateX(-25%);}
+                                &.visionIconReset{transform: translateX(0%);}
                             }
                         }
                     }
@@ -227,13 +243,13 @@
                             p{font-size: 12px; line-height: 150%;}
                         }
                         .cardIcon{
-                            &.iconReset{transform: translateX(25%);}
+                            &.iconReset{transform: translateX(0%);}
                         }
                     }
                     &:last-child{
                         .hoverContent{
                             .cardIcon{
-                                &.visionIconReset{transform: translateX(-20%);}
+                                &.visionIconReset{transform: translateX(0%);}
                             }
                         }
                     }
