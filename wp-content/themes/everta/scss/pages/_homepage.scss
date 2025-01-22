@@ -2,7 +2,7 @@
     position: relative;
     margin-top: 100px;
     margin-bottom: 200px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 96px);
     overflow: hidden;
 
     .bannerSectionWrapper {
@@ -96,12 +96,12 @@
     }
 
     @media all and (max-width:1536px) {
-        height: calc(100vh - 88px);
+        height: calc(100vh - 89px);
     }
 
     @media all and (max-width:1440px) {
         margin-top: 77px;
-        height: auto;
+        height: calc(100vh - 77px);
         margin-bottom: 120px;
 
         .bannerSectionWrapper {
@@ -1848,6 +1848,7 @@
                 flex-grow: 1; // Equalize height for all statCards
                 display: flex; // Make content inside the card flexible
                 flex-direction: column;
+                justify-content: center;
 
                 &:not(:last-child) {
                     border-bottom: 1px solid rgba(216, 219, 220, 0.20);

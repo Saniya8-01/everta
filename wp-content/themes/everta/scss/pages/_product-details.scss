@@ -126,7 +126,7 @@
 .secondFold{margin-bottom: 200px;@include wrapper;
     .secondFoldWrapper{display: grid;grid-template-columns:repeat(3,1fr);
         .industryCard{padding: 36px 53px 0px 0px;&:not(:last-child){margin-right: 53px;border-right: 1px solid #D9D9D9;;}
-            .imageDiv{margin-bottom: 48px;width: 180px;padding: 40px;border-radius: 50%;border:1px solid $quaternaryColor1;}
+            .imageDiv{margin-bottom: 48px;width: 180px;height: 180px;padding: 40px;border-radius: 50%;border:1px solid $quaternaryColor1;img{width: 100%;height: 100%;}}
             h3{margin-bottom: 24px;@include terminamedium;@include font32;font-weight: $fontW600;line-height: 112.5%;color: #000;}
             p{@include verdanaregular;@include font20;line-height: 168%;font-weight: $fontW400;}
         }
@@ -144,7 +144,7 @@
         margin-bottom: 150px;
     .secondFoldWrapper{
         .industryCard{padding: 32px 40px 0px 0px;&:not(:last-child){margin-right: 40px;}
-            .imageDiv{margin-bottom: 40px;width: 140px;padding: 32px;}
+            .imageDiv{margin-bottom: 40px;width: 140px;height: 140px;padding: 32px;}
             h3{margin-bottom: 22px}
         }
     }
@@ -153,7 +153,7 @@
         margin-bottom: 120px;
     .secondFoldWrapper{
         .industryCard{padding: 24px 30px 0px 0px;&:not(:last-child){margin-right: 30px;}
-            .imageDiv{margin-bottom: 32px;width: 120px;padding: 30px;}
+            .imageDiv{margin-bottom: 32px;width: 120px;padding: 30px;height: 120px;}
             h3{margin-bottom: 20px}
         }
     }
@@ -161,7 +161,7 @@
     @media all and (max-width:1280px){
     .secondFoldWrapper{
         .industryCard{padding: 20px 24px 0px 0px;&:not(:last-child){margin-right: 24px;}
-            .imageDiv{margin-bottom: 32px;width: 100px;padding: 24px;}
+            .imageDiv{margin-bottom: 32px;width: 100px;padding: 24px;height: 100px;}
             h3{margin-bottom: 18px}
         }
     }
@@ -169,7 +169,7 @@
     @media all and (max-width:1024px){
         .secondFoldWrapper{
             .industryCard{padding: 14px 20px 0px 0px;&:not(:last-child){margin-right: 20px;}
-                .imageDiv{margin-bottom: 28px;width: 80px;padding: 20px;}
+                .imageDiv{margin-bottom: 28px;width: 80px;padding: 20px;height: 80px;}
                 h3{margin-bottom: 14px}
             }
         }
@@ -178,7 +178,7 @@
         margin-bottom: 72px;
     .secondFoldWrapper{grid-template-columns:repeat(1,1fr);
         .industryCard{padding: 0px 0px 32px 0px;&:not(:last-child){margin-right: 0;border-bottom: 1px solid #D9D9D9;margin-bottom: 32px;border-right: 0px;}
-            .imageDiv{margin-bottom: 24px;width: 96px;padding: 22px;}
+            .imageDiv{margin-bottom: 24px;width: 96px;padding: 22px;height: 96px;}
             h3{margin-bottom: 16px;font-size: 20px;font-style: normal;font-weight: 600;line-height: 28px;}
             p{font-size: 12px;font-style: normal;font-weight: 400;line-height: 18px;}
         }
@@ -321,7 +321,7 @@
         }
         .videoDiv{
             .mobileVideo{display: block;width: 100%;}
-            .desktopVideo{display: none;width: 100%;}
+            .desktopVideo{display: none;}
         }
         .bottomInfo{margin-top: 36px;flex-direction:column;gap:24px;
             h3{width: 100%;font-size: 20px;line-height: 28px;}

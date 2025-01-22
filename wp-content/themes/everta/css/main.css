@@ -2996,7 +2996,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   position: relative;
   margin-top: 100px;
   margin-bottom: 200px;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 96px);
   overflow: hidden;
 }
 .bannerSection .bannerSectionWrapper .bannerImageWrapper {
@@ -3110,13 +3110,13 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 @media all and (max-width: 1536px) {
   .bannerSection {
-    height: calc(100vh - 88px);
+    height: calc(100vh - 89px);
   }
 }
 @media all and (max-width: 1440px) {
   .bannerSection {
     margin-top: 77px;
-    height: auto;
+    height: calc(100vh - 77px);
     margin-bottom: 120px;
   }
   .bannerSection .bannerSectionWrapper .bannerSectionContent {
@@ -5303,6 +5303,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .mapSection .mapSectionDivider .stats .statCard:not(:last-child) {
   border-bottom: 1px solid rgba(216, 219, 220, 0.2);
@@ -15340,9 +15341,14 @@ body {
 .secondFold .secondFoldWrapper .industryCard .imageDiv {
   margin-bottom: 48px;
   width: 180px;
+  height: 180px;
   padding: 40px;
   border-radius: 50%;
   border: 1px solid #1E1E1E;
+}
+.secondFold .secondFoldWrapper .industryCard .imageDiv img {
+  width: 100%;
+  height: 100%;
 }
 .secondFold .secondFoldWrapper .industryCard h3 {
   margin-bottom: 24px;
@@ -15424,6 +15430,7 @@ body {
   .secondFold .secondFoldWrapper .industryCard .imageDiv {
     margin-bottom: 40px;
     width: 140px;
+    height: 140px;
     padding: 32px;
   }
   .secondFold .secondFoldWrapper .industryCard h3 {
@@ -15444,6 +15451,7 @@ body {
     margin-bottom: 32px;
     width: 120px;
     padding: 30px;
+    height: 120px;
   }
   .secondFold .secondFoldWrapper .industryCard h3 {
     margin-bottom: 20px;
@@ -15460,6 +15468,7 @@ body {
     margin-bottom: 32px;
     width: 100px;
     padding: 24px;
+    height: 100px;
   }
   .secondFold .secondFoldWrapper .industryCard h3 {
     margin-bottom: 18px;
@@ -15476,6 +15485,7 @@ body {
     margin-bottom: 28px;
     width: 80px;
     padding: 20px;
+    height: 80px;
   }
   .secondFold .secondFoldWrapper .industryCard h3 {
     margin-bottom: 14px;
@@ -15501,6 +15511,7 @@ body {
     margin-bottom: 24px;
     width: 96px;
     padding: 22px;
+    height: 96px;
   }
   .secondFold .secondFoldWrapper .industryCard h3 {
     margin-bottom: 16px;
@@ -15844,7 +15855,6 @@ body {
   }
   .industryStandardSection .sectionWrapper .videoDiv .desktopVideo {
     display: none;
-    width: 100%;
   }
   .industryStandardSection .sectionWrapper .bottomInfo {
     margin-top: 36px;
@@ -17408,4 +17418,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
