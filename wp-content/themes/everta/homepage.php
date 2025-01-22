@@ -98,6 +98,9 @@
                     <img src="<?php echo esc_url($rightImage['url']); ?>" loading="lazy"
                         alt="<?php echo esc_attr($rightImage['alt']); ?>" />
                     <?php endif; ?>
+                    <video autoplay="" preload="auto" loop="" muted="" playsinline="" class="desktopVideo">
+                        <source src="<?php echo esc_url(get_sub_field('video_link')); ?>" type="video/mp4">
+                    </video>
                 </div>
                 <?php endwhile; ?>
                 <?php endif; ?>
