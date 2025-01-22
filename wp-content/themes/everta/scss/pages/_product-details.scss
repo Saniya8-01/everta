@@ -11,11 +11,9 @@
         .bannerHeading{transition: 0.8s all ease-in-out;opacity: 0;
             h1{margin-bottom: 4px;@include terminamedium;@include font64;line-height: 150%;text-transform: uppercase;font-weight: 600;}
         }
-        .productDetails{display: flex;gap:120px;margin-bottom:42px;transition: 0.8s all ease-in-out;opacity: 0;
-            p{@include terminaregular;@include font18;font-weight: 600;line-height: 155.556%;color: #1E1E1E;position:relative;
-                &:not(:last-child){
-                    &::after{content: "";position: absolute;top: 50%;transform: translateY(-50%);width: 13px;height: 13px;background: #787878;border-radius: 50%;right: -60px;}
-                }
+        .productDetails{display: flex;gap:120px;margin-bottom:42px;transition: 0.8s all ease-in-out;opacity: 0;justify-content:center;
+            p{@include terminaregular;@include font18;font-weight: 600;line-height: 155.556%;color: #1E1E1E;position:relative;padding-left:30px;
+                    &::after{content: "";position: absolute;top: 7px;width: 13px;height: 13px;background: #787878;border-radius: 50%;left: 0;}
             }
         }
         .bannerImages{position: relative;width: 90%;margin-bottom:26px;
@@ -32,9 +30,8 @@
         }
         .productDetails{margin-bottom:42px;
             p{
-                &:not(:last-child){
-                    &::after{width: 13px;height: 13px;}
-                }
+                    &::after{top:6px}
+
             }
         }
         .bannerImages{margin-bottom:26px;.productImage{height: 450px;}}
@@ -46,9 +43,9 @@
     .productBannerWrapper{
         .productDetails{gap:100px;margin-bottom:36px;
             p{
-                &:not(:last-child){
-                    &::after{width: 10px;height: 10px;right: -50px;}
-                }
+    
+                    &::after{width: 10px;height: 10px;top: 5px;}
+               
             }
         }
         .bannerImages{margin-bottom:24px;
@@ -61,11 +58,7 @@
         margin-bottom: 120px;margin-top: 110px;
     .productBannerWrapper{
         .productDetails{gap:90px;margin-bottom:32px;
-            p{
-                &:not(:last-child){
-                    &::after{width: 10px;height: 10px;right: -45px;}
-                }
-            }
+  
         }
         .bannerImages{margin-bottom:20px;.productImage{height: 300px;}}
         .ctaDiv{gap: 30px;}
@@ -75,10 +68,8 @@
     margin-top: 100px;
     .productBannerWrapper{
         .productDetails{gap:80px;margin-bottom:28px;
-            p{
-                &:not(:last-child){
-                    &::after{width: 8px;height: 8px;right: -40px;}
-                }
+            p{padding-left: 24px;
+                    &::after{width: 8px;height: 8px;} 
             }
         }
         .bannerImages{margin-bottom:18px;}
@@ -93,10 +84,8 @@
         margin-top: 110px;
         .productBannerWrapper{
             .productDetails{gap:40px;margin-bottom:24px;
-                p{
-                    &:not(:last-child){
-                        &::after{width: 6px;height: 6px;right: -23px;}
-                    }
+                p{padding-left: 20px;
+                        &::after{width: 6px;height: 6px;top: 6px;}
                 }
             }
             .bannerImages{margin-bottom:18px;.productImage{height: 330px;transform: translateY(-200%);}}
@@ -110,11 +99,9 @@
                 h1{margin-bottom: 24px;font-size: 24px;font-weight: 600;line-height: 32px;}
             }
             .productDetails{gap:4px;margin-bottom:48px;flex-direction:column;
-                p{font-size: 12px;font-weight: 500;line-height: 28px;
+                p{font-size: 12px;font-weight: 500;line-height: 28px;padding-left:0;
                     span{font-weight: 700;@include terminamedium;}
-                    &:not(:last-child){
                         &::after{width: 180px;height: 1px;right: unset;left: 0;bottom: -4px;top:unset;transform: none;background: #A5A5A5;}
-                    }
                 }
             }
             .bannerImages{margin-bottom:48px;width:100%;.productImage{height: 230px;transform: translateY(-250%);}}

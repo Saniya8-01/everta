@@ -15093,6 +15093,7 @@ body {
   margin-bottom: 42px;
   transition: 0.8s all ease-in-out;
   opacity: 0;
+  justify-content: center;
 }
 .productBanner .productBannerWrapper .productDetails p {
   font-family: "termina_testregular";
@@ -15101,6 +15102,7 @@ body {
   line-height: 155.556%;
   color: #1E1E1E;
   position: relative;
+  padding-left: 30px;
 }
 @media screen and (max-width: 1600px) {
   .productBanner .productBannerWrapper .productDetails p {
@@ -15112,16 +15114,15 @@ body {
     font-size: 14px;
   }
 }
-.productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
+.productBanner .productBannerWrapper .productDetails p::after {
   content: "";
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 7px;
   width: 13px;
   height: 13px;
   background: #787878;
   border-radius: 50%;
-  right: -60px;
+  left: 0;
 }
 .productBanner .productBannerWrapper .bannerImages {
   position: relative;
@@ -15158,9 +15159,8 @@ body {
   .productBanner .productBannerWrapper .productDetails {
     margin-bottom: 42px;
   }
-  .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
-    width: 13px;
-    height: 13px;
+  .productBanner .productBannerWrapper .productDetails p::after {
+    top: 6px;
   }
   .productBanner .productBannerWrapper .bannerImages {
     margin-bottom: 26px;
@@ -15181,10 +15181,10 @@ body {
     gap: 100px;
     margin-bottom: 36px;
   }
-  .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
+  .productBanner .productBannerWrapper .productDetails p::after {
     width: 10px;
     height: 10px;
-    right: -50px;
+    top: 5px;
   }
   .productBanner .productBannerWrapper .bannerImages {
     margin-bottom: 24px;
@@ -15205,11 +15205,6 @@ body {
     gap: 90px;
     margin-bottom: 32px;
   }
-  .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
-    width: 10px;
-    height: 10px;
-    right: -45px;
-  }
   .productBanner .productBannerWrapper .bannerImages {
     margin-bottom: 20px;
   }
@@ -15228,10 +15223,12 @@ body {
     gap: 80px;
     margin-bottom: 28px;
   }
-  .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
+  .productBanner .productBannerWrapper .productDetails p {
+    padding-left: 24px;
+  }
+  .productBanner .productBannerWrapper .productDetails p::after {
     width: 8px;
     height: 8px;
-    right: -40px;
   }
   .productBanner .productBannerWrapper .bannerImages {
     margin-bottom: 18px;
@@ -15253,10 +15250,13 @@ body {
     gap: 40px;
     margin-bottom: 24px;
   }
-  .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
+  .productBanner .productBannerWrapper .productDetails p {
+    padding-left: 20px;
+  }
+  .productBanner .productBannerWrapper .productDetails p::after {
     width: 6px;
     height: 6px;
-    right: -23px;
+    top: 6px;
   }
   .productBanner .productBannerWrapper .bannerImages {
     margin-bottom: 18px;
@@ -15291,12 +15291,13 @@ body {
     font-size: 12px;
     font-weight: 500;
     line-height: 28px;
+    padding-left: 0;
   }
   .productBanner .productBannerWrapper .productDetails p span {
     font-weight: 700;
     font-family: "termina_testmedium";
   }
-  .productBanner .productBannerWrapper .productDetails p:not(:last-child)::after {
+  .productBanner .productBannerWrapper .productDetails p::after {
     width: 180px;
     height: 1px;
     right: unset;
@@ -17442,4 +17443,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
