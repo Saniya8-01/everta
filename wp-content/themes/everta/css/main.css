@@ -3246,7 +3246,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .withEaseSection .divWrapper .leftContent {
   padding: 0px 120px;
-  flex-basis: 50%;
+  width: 50%;
   position: sticky;
   top: 170px;
   overflow: hidden;
@@ -3292,7 +3292,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
 }
 .withEaseSection .divWrapper .rightContent {
-  flex-basis: 50%;
+  width: 50%;
 }
 .withEaseSection .divWrapper .rightContent .rightContentWrapper {
   display: grid;
@@ -3307,10 +3307,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   position: relative;
   width: 80%;
 }
-.withEaseSection .divWrapper .rightContent .rightContentWrapper .imageDiv:nth-child(even) {
-  margin-left: auto;
+.withEaseSection .divWrapper .rightContent .rightContentWrapper .imageDiv video {
+  max-width: 100%;
 }
-.withEaseSection .divWrapper .rightContent .rightContentWrapper .imageDiv:nth-child(even) img {
+.withEaseSection .divWrapper .rightContent .rightContentWrapper .imageDiv:nth-child(even) {
   margin-left: auto;
 }
 @media all and (max-width: 1800px) {

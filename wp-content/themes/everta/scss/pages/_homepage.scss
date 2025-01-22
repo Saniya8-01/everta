@@ -254,69 +254,23 @@
         justify-content: space-between;
         padding-top: 170px;
 
-        .leftContent {
-            padding: 0px 120px;
-            flex-basis: 50%;
-            position: sticky;
-            top: 170px;
-            overflow: hidden;
-
-            .leftImage {
-                transition: 0.8s all ease-in-out;
-                transform-origin: left bottom;
+        .leftContent {padding: 0px 120px;width: 50%;position: sticky;top: 170px;overflow: hidden;
+            .leftImage {transition: 0.8s all ease-in-out;transform-origin: left bottom;}
+            &.image-state {top: 0;
+                .leftImage {transform: scale(0.6);}
+                .leftMobileTitle {transform: translateY(0px);}
             }
-
-            &.image-state {
-                top: 0;
-
-                .leftImage {
-                    transform: scale(0.6);
-                }
-
-                .leftMobileTitle {
-                    transform: translateY(0px);
-                }
-            }
-
-            .leftMobileTitle {
-                transform: translateY(500px);
-                transition: 0.8s all ease-in-out;
-
-                p {
-                    margin-bottom: 40px;
-                    margin-top: 40px;
-                    @include verdanaregular;
-                    @include font20;
-                    line-height: 160%;
-                    color: $quaternaryColor1;
-                }
+            .leftMobileTitle {transform: translateY(500px);transition: 0.8s all ease-in-out;
+                p {margin-bottom: 40px;margin-top: 40px;@include verdanaregular;@include font20;line-height: 160%;color: $quaternaryColor1;}
             }
         }
 
-        .rightContent {
-            flex-basis: 50%;
-
-            .rightContentWrapper {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 187px;
-
-                &::-webkit-scrollbar {
-                    display: none;
-                }
-
-                .imageDiv {
-                    display: block;
-                    position: relative;
-                    width: 80%;
-
-                    &:nth-child(even) {
-                        margin-left: auto;
-
-                        img {
-                            margin-left: auto;
-                        }
-                    }
+        .rightContent {width: 50%;
+            .rightContentWrapper {display: grid;grid-template-columns: 1fr;gap: 187px;
+                &::-webkit-scrollbar {display: none;}
+                .imageDiv {display: block;position: relative;width: 80%;
+                    video{max-width: 100%;}
+                    &:nth-child(even) {margin-left: auto;}
                 }
             }
         }

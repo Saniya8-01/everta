@@ -90,19 +90,24 @@
         </div>
         <div class="rightContent">
             <div class="rightContentWrapper">
-                <?php if (have_rows('right_images')) : ?>
-                <?php while (have_rows('right_images')) : the_row(); ?>
-                <div class="imageDiv">
-                    <?php $rightImage = get_sub_field('right_image');
-                    if (!empty($rightImage)) : ?>
-                    <img src="<?php echo esc_url($rightImage['url']); ?>" loading="lazy"
-                        alt="<?php echo esc_attr($rightImage['alt']); ?>" />
-                    <?php endif; ?>
-                    <video autoplay="" preload="auto" loop="" muted="" playsinline="" class="desktopVideo">
-                        <source src="<?php echo esc_url(get_sub_field('video_link')); ?>" type="video/mp4">
-                    </video>
-                </div>
-                <?php endwhile; ?>
+                <?php if( have_rows('image_video_box') ): ?>
+                    <?php while( have_rows('image_video_box') ): the_row();?>
+                        <?php if( get_row_layout() == 'image_box' ): ?>
+                            <div class="imageDiv">
+                                <?php $rightImage = get_sub_field('image_field'); if (!empty($rightImage)) : ?>
+                                    <img src="<?php echo esc_url($rightImage['url']); ?>" loading="lazy" alt="<?php echo esc_attr($rightImage['alt']); ?>" />
+                                <?php endif; ?>
+                            </div>
+
+                            <?php elseif( get_row_layout() == 'video_box' ): ?>
+                                <div class="imageDiv">
+                                    <video autoplay="" preload="auto" loop="" muted="" playsinline="" class="desktopVideo">
+                                        <source src="<?php echo esc_url(get_sub_field('video_field')); ?>" type="video/mp4">
+                                    </video>
+                                </div>
+
+                        <?php endif;?>
+                    <?php endwhile; ?>
                 <?php endif; ?>
             </div>
         </div>
