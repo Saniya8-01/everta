@@ -3322,12 +3322,8 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     padding-top: 150px;
   }
   .withEaseSection .divWrapper .leftContent {
-    flex-basis: 50%;
     top: 150px;
     padding: 0px 90px 0px 120px;
-  }
-  .withEaseSection .divWrapper .rightContent {
-    flex-basis: 50%;
   }
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
     gap: 150px;
@@ -3346,7 +3342,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 60px 0px 90px;
-    flex-basis: 45%;
+    width: 45%;
     top: 130px;
   }
   .withEaseSection .divWrapper .leftContent.image-state {
@@ -3373,7 +3369,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .withEaseSection .divWrapper .leftContent {
     padding: 0px 40px 0px 80px;
-    flex-basis: 43%;
+    width: 43%;
     top: 100px;
   }
   .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
@@ -3426,7 +3422,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .leftContent {
     padding-left: 120px;
     padding-right: 120px;
-    flex-basis: 100%;
+    width: 100%;
     position: unset;
   }
 }
@@ -3471,7 +3467,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .withEaseSection .divWrapper .rightContent {
     overflow: hidden;
-    flex-basis: 100%;
+    width: 100%;
     padding-left: 25px;
   }
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
@@ -3496,7 +3492,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .withEaseSection .divWrapper .leftContent {
     padding-left: 120px;
     padding-right: 120px;
-    flex-basis: 100%;
+    width: 100%;
     position: unset;
   }
 }
@@ -3541,7 +3537,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .withEaseSection .divWrapper .rightContent {
     overflow: hidden;
-    flex-basis: 100%;
+    width: 100%;
     padding-left: 25px;
   }
   .withEaseSection .divWrapper .rightContent .rightContentWrapper {
