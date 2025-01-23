@@ -1007,6 +1007,53 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const overlay = document.getElementById("overlay");
+    const progressBar = document.getElementById("progress-bar");
+
+    let progress = 0;
+
+    function updateProgress(percent) {
+        progressBar.style.width = `${percent}%`;
+    }
+
+    function startLoader() {
+        // Fake progress to simulate loading
+        const fakeProgressInterval = setInterval(() => {
+            if (progress < 90) {
+                progress += 2; // Increment progress gradually
+                updateProgress(progress);
+            } else {
+                clearInterval(fakeProgressInterval);
+            }
+        }, 30);
+
+        // When the page is fully loaded
+        window.onload = function () {
+            clearInterval(fakeProgressInterval); // Stop fake progress
+            progress = 100; // Set progress to 100%
+            updateProgress(progress);
+
+            // Hide the overlay after a slight delay
+            setTimeout(() => {
+                overlay.style.display = "none";
+            }, 300);
+        };
+    }
+
+    // Check if user is a first-time visitor
+    if (!localStorage.getItem('visited')) {
+        // First-time visitor: Show the loader
+        startLoader();
+        localStorage.setItem('visited', 'true'); // Mark as visited
+    } else {
+        // Returning visitor: Hide the loader immediately
+        overlay.style.display = "none";
+    }
+});
+
+
+
 
 
    
