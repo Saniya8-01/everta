@@ -161,7 +161,6 @@ $(document).ready(function () {
         });
     }
 });
-
 //-------------------Header Dropdown JS----------------------//
 
 if ($(".partnersSection").length) {
@@ -314,7 +313,6 @@ function initializeSlick() {
 
 $(window).on('resize', initializeSlick);
 $(document).ready(initializeSlick);
-
 
 $(document).ready(function () {
     initializeSlick();
