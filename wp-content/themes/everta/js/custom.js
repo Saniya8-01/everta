@@ -66,9 +66,7 @@ function isInSection(sectionClass) {
     return false;
 }
 
-
 let customSelects = document.querySelectorAll("#popupSelect");
-
 
 // Menu toggle functionality for <= 1024px width
 $(document).ready(function () {
@@ -211,7 +209,6 @@ if ($(".chargingSection").length) {
         });
     });
 }
-
 if ($(".testimonialSection").length) {
     var $slider = $(".testimonialCardWrapper");
     var $progressBar = $(".progress-bar");
@@ -286,9 +283,6 @@ if ($(".testimonialSection").length) {
         }
     });
 } 
-
-
-
 function initializeSlick() {
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
@@ -386,6 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Re-apply the effect on window resize
     window.addEventListener('resize', applyHoverOrClickEffect);
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tab-content');
     const hoverBoxes = document.querySelectorAll('.card');
@@ -439,7 +434,6 @@ document.addEventListener('DOMContentLoaded', () => {
     applyInteractionEffect();
     window.addEventListener('resize', applyInteractionEffect);
 });
-
 
 $.fn.isInViewport = function (threshold = 0) {
     var elementTop = $(this).offset().top;
@@ -991,21 +985,21 @@ $(window).scroll(function () {
 });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const languageTranslator = document.querySelector('.languageTranslatorMbl');
-    const languageMenu = document.querySelector('.languageMenuMbl');
+// document.addEventListener('DOMContentLoaded', function () {
+//     const languageTranslator = document.querySelector('.languageTranslatorMbl');
+//     const languageMenu = document.querySelector('.languageMenuMbl');
 
-    languageTranslator.addEventListener('click', function (event) {
-        languageTranslator.classList.toggle('active');
-        event.stopPropagation();
-    });
+//     languageTranslator.addEventListener('click', function (event) {
+//         languageTranslator.classList.toggle('active');
+//         event.stopPropagation();
+//     });
 
-    document.addEventListener('click', function (event) {
-        if (!languageTranslator.contains(event.target)) {
-            languageTranslator.classList.remove('active');
-        }
-    });
-});
+//     document.addEventListener('click', function (event) {
+//         if (!languageTranslator.contains(event.target)) {
+//             languageTranslator.classList.remove('active');
+//         }
+//     });
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
     const overlay = document.getElementById("overlay");
