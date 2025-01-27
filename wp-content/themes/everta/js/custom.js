@@ -66,9 +66,7 @@ function isInSection(sectionClass) {
     return false;
 }
 
-
 let customSelects = document.querySelectorAll("#popupSelect");
-
 
 // Menu toggle functionality for <= 1024px width
 $(document).ready(function () {
@@ -163,7 +161,6 @@ $(document).ready(function () {
         });
     }
 });
-
 //-------------------Header Dropdown JS----------------------//
 
 if ($(".partnersSection").length) {
@@ -211,7 +208,6 @@ if ($(".chargingSection").length) {
         });
     });
 }
-
 if ($(".testimonialSection").length) {
     var $slider = $(".testimonialCardWrapper");
     var $progressBar = $(".progress-bar");
@@ -286,9 +282,6 @@ if ($(".testimonialSection").length) {
         }
     });
 } 
-
-
-
 function initializeSlick() {
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
@@ -320,7 +313,6 @@ function initializeSlick() {
 
 $(window).on('resize', initializeSlick);
 $(document).ready(initializeSlick);
-
 
 $(document).ready(function () {
     initializeSlick();
@@ -386,6 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Re-apply the effect on window resize
     window.addEventListener('resize', applyHoverOrClickEffect);
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tab-content');
     const hoverBoxes = document.querySelectorAll('.card');
@@ -439,7 +432,6 @@ document.addEventListener('DOMContentLoaded', () => {
     applyInteractionEffect();
     window.addEventListener('resize', applyInteractionEffect);
 });
-
 
 $.fn.isInViewport = function (threshold = 0) {
     var elementTop = $(this).offset().top;
@@ -991,21 +983,78 @@ $(window).scroll(function () {
 });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const languageTranslator = document.querySelector('.languageTranslatorMbl');
-    const languageMenu = document.querySelector('.languageMenuMbl');
+// document.addEventListener('DOMContentLoaded', function () {
+//     const languageTranslator = document.querySelector('.languageTranslatorMbl');
+//     const languageMenu = document.querySelector('.languageMenuMbl');
 
-    languageTranslator.addEventListener('click', function (event) {
-        languageTranslator.classList.toggle('active');
-        event.stopPropagation();
-    });
+//     languageTranslator.addEventListener('click', function (event) {
+//         languageTranslator.classList.toggle('active');
+//         event.stopPropagation();
+//     });
 
-    document.addEventListener('click', function (event) {
-        if (!languageTranslator.contains(event.target)) {
-            languageTranslator.classList.remove('active');
-        }
-    });
+//     document.addEventListener('click', function (event) {
+//         if (!languageTranslator.contains(event.target)) {
+//             languageTranslator.classList.remove('active');
+//         }
+//     });
+// });
+
+// Check if the user is a first-time visitor
+document.addEventListener("DOMContentLoaded", function () {
+    const overlay = document.getElementById("overlay");
+    const progressBar = document.getElementById("progress-bar");
+    let progress = 0;
+
+    // Update progress bar width
+    function updateProgress(percent) {
+        progressBar.style.width = `${percent}%`;
+    }
+
+    function startLoader() {
+        const startTime = performance.now(); // Start time of page load
+        const estimatedTime = 2000; // Estimated minimum time in milliseconds (adjust as needed)
+
+        const fakeProgressInterval = setInterval(() => {
+            if (progress < 90) {
+                progress += 2;
+                updateProgress(progress);
+            }
+        }, estimatedTime / 90); // Divide estimated time for smooth progress
+
+        // Real page load handling
+        window.onload = function () {
+            clearInterval(fakeProgressInterval);
+
+            const loadTime = performance.now() - startTime; // Actual page load time
+            const remainingTime = Math.max(estimatedTime - loadTime, 0); // Adjust if page loads too fast
+
+            // Complete progress to 100%
+            setTimeout(() => {
+                progress = 100;
+                updateProgress(progress);
+
+                // Hide loader after completing progress bar
+                setTimeout(() => {
+                    overlay.style.display = "none";
+                }, 300); // Small delay to let the user see the full bar
+            }, remainingTime);
+        };
+    }
+
+    // Check if user is a first-time visitor
+    if (!localStorage.getItem('visited')) {
+        startLoader();
+        localStorage.setItem('visited', 'true'); // Mark as visited
+    } else {
+        overlay.style.display = "none"; // Immediately hide the loader for returning users
+    }
 });
+
+
+
+
+
+
 
 
 
