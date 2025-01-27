@@ -999,50 +999,60 @@ $(window).scroll(function () {
 //     });
 // });
 
+// Check if the user is a first-time visitor
 document.addEventListener("DOMContentLoaded", function () {
     const overlay = document.getElementById("overlay");
     const progressBar = document.getElementById("progress-bar");
-
     let progress = 0;
 
+    // Update progress bar width
     function updateProgress(percent) {
         progressBar.style.width = `${percent}%`;
     }
 
     function startLoader() {
-        // Fake progress to simulate loading
+        const startTime = performance.now(); // Start time of page load
+        const estimatedTime = 2000; // Estimated minimum time in milliseconds (adjust as needed)
+
         const fakeProgressInterval = setInterval(() => {
             if (progress < 90) {
-                progress += 2; // Increment progress gradually
+                progress += 2;
                 updateProgress(progress);
-            } else {
-                clearInterval(fakeProgressInterval);
             }
-        }, 30);
+        }, estimatedTime / 90); // Divide estimated time for smooth progress
 
-        // When the page is fully loaded
+        // Real page load handling
         window.onload = function () {
-            clearInterval(fakeProgressInterval); // Stop fake progress
-            progress = 100; // Set progress to 100%
-            updateProgress(progress);
+            clearInterval(fakeProgressInterval);
 
-            // Hide the overlay after a slight delay
+            const loadTime = performance.now() - startTime; // Actual page load time
+            const remainingTime = Math.max(estimatedTime - loadTime, 0); // Adjust if page loads too fast
+
+            // Complete progress to 100%
             setTimeout(() => {
-                overlay.style.display = "none";
-            }, 300);
+                progress = 100;
+                updateProgress(progress);
+
+                // Hide loader after completing progress bar
+                setTimeout(() => {
+                    overlay.style.display = "none";
+                }, 300); // Small delay to let the user see the full bar
+            }, remainingTime);
         };
     }
 
     // Check if user is a first-time visitor
     if (!localStorage.getItem('visited')) {
-        // First-time visitor: Show the loader
         startLoader();
         localStorage.setItem('visited', 'true'); // Mark as visited
     } else {
-        // Returning visitor: Hide the loader immediately
-        overlay.style.display = "none";
+        overlay.style.display = "none"; // Immediately hide the loader for returning users
     }
 });
+
+
+
+
 
 
 
