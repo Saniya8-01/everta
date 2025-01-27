@@ -2605,7 +2605,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   width: 0;
   height: 100%;
   background: #F5F75E;
-  transition: width 0.2s ease;
+  transition: width 0.5s ease-in-out;
 }
 @media all and (max-width: 1440px) {
   #overlay .loader-container img {
