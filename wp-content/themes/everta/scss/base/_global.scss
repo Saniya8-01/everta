@@ -590,6 +590,7 @@ $quaternaryColor1 : #1E1E1E;
 $quaternaryColor2 : #4B4B4B;
 $quaternaryColor3 : #787878;
 $quaternaryColor4 : #A5A5A5;
+
 $quaternaryColor5 : #D2D2D2;
 
 .ctaYellow{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; background: $primaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;border:1px solid $primaryColor1;
