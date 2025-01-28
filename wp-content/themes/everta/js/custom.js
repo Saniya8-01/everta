@@ -1000,55 +1000,49 @@ $(window).scroll(function () {
 // });
 
 // Check if the user is a first-time visitor
-document.addEventListener("DOMContentLoaded", function () {
-    const overlay = document.getElementById("overlay");
+document.addEventListener("DOMContentLoaded", () => {
     const progressBar = document.getElementById("progress-bar");
-    let progress = 0;
+    const overlay = document.getElementById("overlay");
+  
+    let simulatedProgress = 0; // Start at 0%
+  
+    // Simulate progress before the page is fully loaded
+    const simulateProgress = () => {
+      if (simulatedProgress < 90) {
+        simulatedProgress += 1; // Increment progress gradually
+        progressBar.style.width = `${simulatedProgress}%`;
+      }
+    };
+  
+    const simulationInterval = setInterval(simulateProgress, 50); // Update every 50ms
 
-    // Update progress bar width
-    function updateProgress(percent) {
-        progressBar.style.width = `${percent}%`;
-    }
-
-    function startLoader() {
-        const startTime = performance.now(); // Start time of page load
-        const estimatedTime = 2000; // Estimated minimum time in milliseconds (adjust as needed)
-
-        const fakeProgressInterval = setInterval(() => {
-            if (progress < 90) {
-                progress += 2;
-                updateProgress(progress);
-            }
-        }, estimatedTime / 90); // Divide estimated time for smooth progress
-
-        // Real page load handling
-        window.onload = function () {
-            clearInterval(fakeProgressInterval);
-
-            const loadTime = performance.now() - startTime; // Actual page load time
-            const remainingTime = Math.max(estimatedTime - loadTime, 0); // Adjust if page loads too fast
-
-            // Complete progress to 100%
-            setTimeout(() => {
-                progress = 100;
-                updateProgress(progress);
-
-                // Hide loader after completing progress bar
-                setTimeout(() => {
-                    overlay.style.display = "none";
-                }, 300); // Small delay to let the user see the full bar
-            }, remainingTime);
-        };
-    }
-
-    // Check if user is a first-time visitor
-    if (!localStorage.getItem('visited')) {
-        startLoader();
-        localStorage.setItem('visited', 'true'); // Mark as visited
-    } else {
-        overlay.style.display = "none"; // Immediately hide the loader for returning users
-    }
-});
+    // Simulate loading for localhost testing
+setTimeout(() => {
+    window.dispatchEvent(new Event("load"));
+  }, 2000); // Simulate a 2-second loading delay
+  
+  
+    // Sync with the actual loading state of the page
+    window.addEventListener("load", () => {
+      clearInterval(simulationInterval); // Stop simulated progress
+      progressBar.style.width = "100%"; // Fill to 100%
+  
+      // Wait for the progress bar animation to complete before hiding the overlay
+      setTimeout(() => {
+        overlay.style.opacity = "0"; // Fade out
+        setTimeout(() => {
+          overlay.style.display = "none"; // Fully remove overlay
+        }, 500); // Matches CSS fade-out animation duration
+      }, 500); // Delay to show the full progress bar for a moment
+    });
+  });
+  
+  
+  
+  
+  
+  
+  
 
 
 
