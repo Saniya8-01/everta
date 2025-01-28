@@ -446,25 +446,28 @@ $.fn.isInViewport = function (threshold = 0) {
     return viewportBottom > elementScrollStart && viewportTop < elementScrollEnd;
 };
 
-$(window).on('resize scroll', function () {
-    // Media query for >=1024px
-    if (window.innerWidth >= 1024) {
-        if ($('.withEaseSection').length) {
-            if ($('.withEaseSection').isInViewport(0.2)) {
-                setTimeout(() => {
-                    $('.leftContent').addClass('image-state');
-                }, 800);
-            } else {
-                setTimeout(() => {
-                    $('.leftContent').removeClass('image-state');
-                }, 800);
-            }
-        }
-    } else {
+$(document).ready(function () {
+    let hasTriggered = false; // Track whether the animation has triggered
 
-        $('.leftContent').removeClass('image-state');
-    }
+    $(window).on('resize scroll', function () {
+        if (hasTriggered) return; // Prevent further execution if already triggered
+
+        // Media query for >=1024px
+        if (window.innerWidth >= 1024) {
+            if ($('.withEaseSection').length) {
+                if ($('.withEaseSection').isInViewport(0.2)) {
+                    setTimeout(() => {
+                        $('.leftContent').addClass('image-state');
+                        hasTriggered = true; // Mark as triggered
+                    }, 800);
+                }
+            }
+        } else {
+            $('.leftContent').removeClass('image-state');
+        }
+    });
 });
+
 
 $(window).on('resize scroll', function () {
     if ($('.exploreSection').length) {
