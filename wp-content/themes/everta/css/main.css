@@ -11652,7 +11652,7 @@ body {
   font-family: "verdanabold";
 }
 .resDetailContentSec .secWrapper .contentBox ul {
-  margin-left: 20px;
+  margin-left: 50px;
   margin-bottom: 50px;
 }
 .resDetailContentSec .secWrapper .contentBox ul li {
@@ -17491,4 +17491,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
