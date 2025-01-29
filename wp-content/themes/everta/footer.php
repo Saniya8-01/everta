@@ -55,48 +55,56 @@
                                 'theme_location'  => 'Company',
 
                             ]);
-                        ?>
+                         ?>
                     </div>
+                    <?php /* ?>
                     <div class="footerMenuWrapper">
                         <p><?php echo get_sub_field('ac_charging', 'option'); ?></p>
                         <?php
-                            wp_nav_menu([
+                           wp_nav_menu([
                                 'menu'            => 'AC Charging',
                                 'theme_location'  => 'AC Charging',
 
                             ]);
+                            
                         ?>
                     </div>
+                    <?php */ ?>
                     <div class="footerMenuWrapper">
                         <p><?php echo get_sub_field('dc_charging', 'option'); ?></p>
                         <?php
                             wp_nav_menu([
                                 'menu'            => 'DC Charging',
-                                'theme_location'  => 'Company',
+                                'theme_location'  => 'DC Charging',
 
                             ]);
+                            
                         ?>
                     </div>
-                    <div class="footerMenuWrapper">
+                  <?php /* ?>  <div class="footerMenuWrapper">
                         <p><?php echo get_sub_field('digital_products', 'option'); ?></p>
                         <?php
-                            wp_nav_menu([
+                           wp_nav_menu([
                                 'menu'            => 'Digital Products',
                                 'theme_location'  => 'Digital Products',
 
                             ]);
+                        
                         ?>
                     </div>
+					    <?php */ ?>
                     <div class="footerMenuWrapper">
                         <p><?php echo get_sub_field('resources', 'option'); ?></p>
                         <?php
-                            wp_nav_menu([
+                           wp_nav_menu([
                                 'menu'            => 'Resources',
                                 'theme_location'  => 'Resources',
 
                             ]);
+                        
                         ?>
                     </div>
+                
                     <?php endwhile; ?>
                     <?php endif; ?>
                     <?php if (have_rows('address_contact_menu', 'option')) : ?>
@@ -141,7 +149,21 @@
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script>
 <?php wp_footer(); ?>
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+    const radios = document.querySelectorAll('input[name="chargers-needed"]');
+    const hiddenField = document.querySelector('input[name="chargers-needed-hidden"]');
 
+    radios.forEach(radio => {
+        radio.addEventListener('change', function () {
+            if (hiddenField) {
+                hiddenField.value = this.value; // Assign selected value to hidden field
+            }
+        });
+    });
+});
+
+</script>
 </body>
 
 </html>
