@@ -731,3 +731,6 @@ $quaternaryColor5 : #D2D2D2;
   .icon-twitter:before { content: '\e80f'; } /* '' */
   .icon-youtube:before { content: '\e810'; } /* '' */
   
+
+.slick-track {display: flex !important;}
+.slick-slide {height: inherit !important;}

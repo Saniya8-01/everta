@@ -844,6 +844,14 @@ body h1 {
 .icon-youtube:before {
   content: "\e810";
 } /* '' */
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: inherit !important;
+}
+
 header {
   position: fixed;
   width: 100%;
