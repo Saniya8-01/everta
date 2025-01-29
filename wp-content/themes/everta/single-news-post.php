@@ -80,9 +80,9 @@
 								</li>
 							</ul>
 						</div>
-						<div class="arrowBox">
-							<i class="icon-right-arrow  rotateRightArrow"></i>
-						</div>
+					</div>
+					<div class="arrowBox">
+						<i class="icon-right-arrow  rotateRightArrow"></i>
 					</div>
 				</a>
 			</div>

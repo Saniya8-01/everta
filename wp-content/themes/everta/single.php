@@ -43,7 +43,6 @@ get_header();
 	<div class="secWrapper">
 		<div class="contentBox hideTxt">
 			<?php the_content(); ?>
-			<p class="highlightedTxt">"Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus."</p>
 		</div>
 		<div class="readMoreBtnBox">
 			<button class="ctaWhiteBlack" id="readMore">Read more</button>
@@ -85,8 +84,8 @@ get_header();
 										<li><?php echo estimate_reading_time(get_the_ID()); ?> mins read</li>
 									</ul>
 								</div>
-								<div class="arrowBox"><i class="icon-right-arrow  rotateRightArrow"></i></div>
 							</div>
+							<div class="arrowBox"><i class="icon-right-arrow  rotateRightArrow"></i></div>
 						</a>
 					</div>
 				<?php endforeach; ?>
