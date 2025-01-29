@@ -85,11 +85,13 @@
             ol{margin-left: 45px; margin-bottom: 50px;
                 li{list-style: decimal; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
                     span{@include verdanabold;}
+                    ul,ol,p{margin-top: 10px;}
                 }
             }
             ul{margin-left: 45px; margin-bottom: 50px;
                 li{list-style: disc; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
                     span{@include verdanabold;}
+                    ul,ol,p{margin-top: 10px;}
                 }
             }
             img{margin-bottom: 30px;}
