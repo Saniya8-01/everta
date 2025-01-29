@@ -92,6 +92,7 @@
                     span{@include verdanabold;}
                 }
             }
+            img{margin-bottom: 30px;}
             figure{margin-bottom: 30px;}
             .imgFig{
                 figcaption{position: relative; padding-left: 10px; color: #000; @include font16; @include verdanaregular; line-height: 175%; margin: 16px 0;
@@ -112,6 +113,7 @@
                 &::before{content:''; position: absolute;  border-left: 2px solid #000; height: calc(100% - 56px); left: 0; }
             }
             .bottomspace{margin-bottom: 34px; overflow: auto; border: none;}
+            .wp-block-separator{margin-bottom: 34px; overflow: auto; border: none;}
             &:last-child{margin-bottom: 0;}
             
             &::after{content: ''; background: linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, -0.79) 100%); width: 100%; height: 200px; bottom: 0px; left: 0;position: absolute;}
@@ -144,6 +146,7 @@
                 &.hideTxt{max-height: 850px;}               
                 .bottomspace{margin-bottom: 25px;}
                 p{margin-bottom: 28px;}
+                img{margin-bottom: 28px;}
                 ol{margin-bottom: 45px;}
                 ul{margin-bottom: 45px;}
             }
@@ -158,6 +161,7 @@
                 h4{margin-bottom: 20px;}
                 h5{margin-bottom: 20px;}
                 p{margin-bottom: 26px;}
+                img{margin-bottom: 26px;}
                 ol{margin-bottom: 40px; margin-left: 40px;}
                 ul{margin-bottom: 40px; margin-left: 40px;}
                 .figCaptionBox{padding: 35px 0 0 0;
@@ -173,9 +177,10 @@
             .contentBox{
                 &.hideTxt{max-height: 730px;}
                 p{margin-bottom: 24px;}
+                img{margin-bottom: 24px;}
                 ol{margin-bottom: 40px; margin-left: 25px;}
                 ul{margin-bottom: 40px; margin-left: 30px;}
-                .figCaptionBox{padding: 32px 0 3 0;}
+                .figCaptionBox{padding: 32px 0 0 0;}
                 .highlightedTxt{padding: 32px 0 16px 10px;}
             }
         }

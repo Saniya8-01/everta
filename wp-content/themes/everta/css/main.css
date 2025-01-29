@@ -11797,6 +11797,9 @@ body {
 .resDetailContentSec .secWrapper .contentBox ul li span {
   font-family: "verdanabold";
 }
+.resDetailContentSec .secWrapper .contentBox img {
+  margin-bottom: 30px;
+}
 .resDetailContentSec .secWrapper .contentBox figure {
   margin-bottom: 30px;
 }
@@ -11932,6 +11935,11 @@ body {
   overflow: auto;
   border: none;
 }
+.resDetailContentSec .secWrapper .contentBox .wp-block-separator {
+  margin-bottom: 34px;
+  overflow: auto;
+  border: none;
+}
 .resDetailContentSec .secWrapper .contentBox:last-child {
   margin-bottom: 0;
 }
@@ -11988,6 +11996,9 @@ body {
   .resDetailContentSec .secWrapper .contentBox p {
     margin-bottom: 28px;
   }
+  .resDetailContentSec .secWrapper .contentBox img {
+    margin-bottom: 28px;
+  }
   .resDetailContentSec .secWrapper .contentBox ol {
     margin-bottom: 45px;
   }
@@ -12020,6 +12031,9 @@ body {
   .resDetailContentSec .secWrapper .contentBox p {
     margin-bottom: 26px;
   }
+  .resDetailContentSec .secWrapper .contentBox img {
+    margin-bottom: 26px;
+  }
   .resDetailContentSec .secWrapper .contentBox ol {
     margin-bottom: 40px;
     margin-left: 40px;
@@ -12048,6 +12062,9 @@ body {
   .resDetailContentSec .secWrapper .contentBox p {
     margin-bottom: 24px;
   }
+  .resDetailContentSec .secWrapper .contentBox img {
+    margin-bottom: 24px;
+  }
   .resDetailContentSec .secWrapper .contentBox ol {
     margin-bottom: 40px;
     margin-left: 25px;
@@ -12057,7 +12074,7 @@ body {
     margin-left: 30px;
   }
   .resDetailContentSec .secWrapper .contentBox .figCaptionBox {
-    padding: 32px 0 3 0;
+    padding: 32px 0 0 0;
   }
   .resDetailContentSec .secWrapper .contentBox .highlightedTxt {
     padding: 32px 0 16px 10px;
@@ -17611,4 +17628,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
