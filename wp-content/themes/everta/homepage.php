@@ -2795,6 +2795,17 @@
     <?php endif; ?>
 </section>
 
+<div id="overlay">
+    <div class="loader-container">
+        <div class="logo-container">
+            <img src="<?php bloginfo('template_directory'); ?>/images/everta-loader-svg.svg" alt="Company Logo" title="Company Logo" class="company-logo">
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
+</div>
+
 <?php get_footer(); ?>
 
 <script>

@@ -91,7 +91,7 @@
                             'fields' => 'ids'
                         ));
                         $unique_departments = array_unique(array_map(function($id) {
-                            return get_the_title($id);
+                            return get_field('job_department', $id);
                         }, $departments));
                         foreach ($unique_departments as $department) {
                             if ($department) {
