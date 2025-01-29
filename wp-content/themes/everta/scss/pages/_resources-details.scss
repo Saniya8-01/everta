@@ -82,13 +82,13 @@
             h5{margin-bottom: 24px; color: #000; @include terminabold; @include font16; line-height: 150%;}
 
             p{color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 30px;}
-            ol{margin-left: 50px; margin-bottom: 50px;
+            ol{margin-left: 45px; margin-bottom: 50px;
                 li{list-style: decimal; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
                     span{@include verdanabold;}
                 }
             }
-            ul{margin-left: 20px; margin-bottom: 50px;
-                li{list-style: decimal; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
+            ul{margin-left: 45px; margin-bottom: 50px;
+                li{list-style: disc; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
                     span{@include verdanabold;}
                 }
             }
@@ -159,7 +159,7 @@
                 h5{margin-bottom: 20px;}
                 p{margin-bottom: 26px;}
                 ol{margin-bottom: 40px; margin-left: 40px;}
-                ul{margin-bottom: 40px; margin-left: 40px;  }
+                ul{margin-bottom: 40px; margin-left: 40px;}
                 .figCaptionBox{padding: 35px 0 0 0;
                     .singleCaption{padding: 30px 0 16px;}
                 }
@@ -173,7 +173,7 @@
             .contentBox{
                 &.hideTxt{max-height: 730px;}
                 p{margin-bottom: 24px;}
-                ol{margin-bottom: 40px; margin-left: 30px;}
+                ol{margin-bottom: 40px; margin-left: 25px;}
                 ul{margin-bottom: 40px; margin-left: 30px;}
                 .figCaptionBox{padding: 32px 0 3 0;}
                 .highlightedTxt{padding: 32px 0 16px 10px;}
@@ -219,18 +219,20 @@
             h2{@include terminamedium; @include font48; line-height: 133%; text-transform: uppercase; text-align: center;}
         }
         .cardContainer{display: block;
-            .blogCard{width: calc(50% - 15px); border: 1px solid $quaternaryColor5;transition: 0.3s all ease-in-out; margin: 0 15px;
-                .imgBox{margin-bottom: 30px;
-                    img{width: 100%; height: 100%; object-fit: cover;}
-                }
-                .contentBox{padding: 0 24px 55px; display: flex; align-items: flex-end; justify-content: space-between; position: relative;
-                    .content{width: 100%;
-                        span{padding: 4px 8px; background: $primaryColor1; border-radius: 4px; color: #000; @include verdanaregular; @include font16; line-height: 175%; transition: 0.3s all ease-in-out; text-transform: capitalize; display: inline-block;}
-                        p{margin: 24px 0 14px 0; color: $quaternaryColor1; @include verdanaregular; @include font24; line-height: 166%;}
-                        ul{display: flex; align-items: center; gap: 10px;
-                            li{color: #000; @include verdanaregular; @include font16; line-height: 175%; position: relative;
-                                &:last-child{padding-left: 15px;
-                                    &::before{content: ''; position: absolute; width: 5px; height: 5px; background: #000; top: 12px;left: 0; border-radius: 100%;}
+            .blogCard{width: calc(50% - 15px); border: 1px solid $quaternaryColor5; transition: 0.3s all ease-in-out; margin: 0 15px; position: relative;
+                a{display: block; height: 100%; 
+                    .imgBox{margin-bottom: 30px;
+                        img{width: 100%; height: 100%; object-fit: cover;}
+                    }
+                    .contentBox{padding: 0 24px 55px; display: flex; align-items: flex-end; justify-content: space-between; 
+                        .content{width: 100%;
+                            span{padding: 4px 8px; background: $primaryColor1; border-radius: 4px; color: #000; @include verdanaregular; @include font16; line-height: 175%; transition: 0.3s all ease-in-out; text-transform: capitalize; display: inline-block;}
+                            p{margin: 24px 0 14px 0; color: $quaternaryColor1; @include verdanaregular; @include font24; line-height: 166%;}
+                            ul{display: flex; align-items: center; gap: 10px;
+                                li{color: #000; @include verdanaregular; @include font16; line-height: 175%; position: relative;
+                                    &:last-child{padding-left: 15px;
+                                        &::before{content: ''; position: absolute; width: 5px; height: 5px; background: #000; top: 12px;left: 0; border-radius: 100%;}
+                                    }
                                 }
                             }
                         }
@@ -238,14 +240,15 @@
                     .arrowBox{border: 1px solid #000; border-radius: 100%; width: 64px; height: 64px; display: flex; align-items: center; justify-content: center;opacity: 0; visibility: hidden; transition: 0.3s all ease-in-out; position: absolute; right: 24px; bottom: 35px;
                         .rotateRightArrow{font-size: 20px; transform: rotate(-45deg);}
                     }
+                    
                 }
                 &:hover{background: $primaryColor1;
                     .contentBox{
                         .content{
                             span{background: #fff;}
                         }
-                        .arrowBox{opacity: 1; visibility: visible;}
                     }
+                    .arrowBox{opacity: 1; visibility: visible;}
                 }
             }
             .slick-list{margin: 0 -15px;}
@@ -270,9 +273,11 @@
             .secHeading{margin-bottom: 60px;}
             .cardContainer{
                 .blogCard{
-                    .contentBox{
-                        .content{
-                            p{margin: 22px 0 12px 0;}
+                    a{
+                        .contentBox{
+                            .content{
+                                p{margin: 22px 0 12px 0;}
+                            }
                         }
                         .arrowBox{width: 60px; height: 60px;}
                     }
@@ -285,11 +290,13 @@
             .secHeading{margin-bottom: 55px;}
             .cardContainer{
                 .blogCard{
-                    .contentBox{padding: 0 22px 50px;
-                        .content{
-                            ul{
-                                li:last-child{
-                                    &::before{top: 9px;}
+                    a{
+                        .contentBox{padding: 0 22px 50px;
+                            .content{
+                                ul{
+                                    li:last-child{
+                                        &::before{top: 9px;}
+                                    }
                                 }
                             }
                         }
@@ -309,10 +316,12 @@
             .secHeading{margin-bottom: 50px;}
             .cardContainer{
                 .blogCard{
-                    .imgBox{margin-bottom: 25px;}
-                    .contentBox{padding: 0 20px 45px;
-                        .content{
-                            p{margin: 20px 0 10px 0;}
+                    a{
+                        .imgBox{margin-bottom: 25px;}
+                        .contentBox{padding: 0 20px 45px;
+                            .content{
+                                p{margin: 20px 0 10px 0;}
+                            }
                         }
                         .arrowBox{width: 50px; height: 50px; right: 20px;
                             .rotateRightArrow{font-size: 16px;}
@@ -333,13 +342,15 @@
             .secHeading{margin-bottom: 45px;}
             .cardContainer{gap: 25px;
                 .blogCard{width: calc(50% - 13px); margin: 0 10px;
-                    .imgBox{margin-bottom: 20px;}
-                    .contentBox{padding: 0 18px 40px;
-                        .content{
-                            p{margin: 18px 0 10px 0;}
-                            ul{
-                                li:last-child{
-                                    &::before{top: 8px;}
+                    a{
+                        .imgBox{margin-bottom: 20px;}
+                        .contentBox{padding: 0 18px 40px;
+                            .content{
+                                p{margin: 18px 0 10px 0;}
+                                ul{
+                                    li:last-child{
+                                        &::before{top: 8px;}
+                                    }
                                 }
                             }
                         }
@@ -357,13 +368,15 @@
         .secWrapper{
             .cardContainer{
                 .blogCard{
-                    .contentBox{
+                    a{
                         .arrowBox{opacity: 1; visibility: visible;}
                     }
                     &:hover{background: #fff;
-                        .contentBox{
-                            .content{
-                                span{background: $primaryColor1;}
+                        a{
+                            .contentBox{
+                                .content{
+                                    span{background: $primaryColor1;}
+                                }
                             }
                             .arrowBox{opacity: 1; visibility: visible;}
                         }
@@ -377,16 +390,19 @@
             .secHeading{margin-bottom: 40px;}
             .cardContainer{
                 .blogCard{
-                    .imgBox{margin-bottom: 20px;}
-                    .contentBox{padding: 0 18px 35px; align-items: end;
+                    a{
+                        .imgBox{margin-bottom: 20px;}
+                        .contentBox{padding: 0 18px 35px; align-items: end;}
                         .arrowBox{opacity: 1; visibility: visible; width: 35px; height: 35px; right: 18px; bottom: 25px;
                             .rotateRightArrow{font-size: 12px;}
                         }
                     }
                     &:hover{background: #fff;
-                        .contentBox{
-                            .content{
-                                span{background: $primaryColor1;}
+                        a{
+                            .contentBox{
+                                .content{
+                                    span{background: $primaryColor1;}
+                                }
                             }
                             .arrowBox{opacity: 1; visibility: visible;}
                         }
@@ -413,15 +429,17 @@
             }
             .cardContainer{gap: 24px;
                 .blogCard{width: 100%; margin: 0 5px;
-                    .imgBox{margin-bottom: 24px;}
-                    .contentBox{padding: 0 16px 24px;
-                        .content{
-                            span{line-height: 150%;}
-                            p{margin: 16px 0 14px 0; font-size: 16px; line-height: 175%;}
-                            ul{gap: 8px;
-                                li{line-height: 150%;}
-                                li:last-child{padding-left: 13px;
-                                    &::before{top: 6px;}
+                    a{
+                        .imgBox{margin-bottom: 24px;}
+                        .contentBox{padding: 0 16px 24px;
+                            .content{
+                                span{line-height: 150%;}
+                                p{margin: 16px 0 14px 0; font-size: 16px; line-height: 175%;}
+                                ul{gap: 8px;
+                                    li{line-height: 150%;}
+                                    li:last-child{padding-left: 13px;
+                                        &::before{top: 6px;}
+                                    }
                                 }
                             }
                         }

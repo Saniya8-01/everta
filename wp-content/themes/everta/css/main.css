@@ -844,6 +844,14 @@ body h1 {
 .icon-youtube:before {
   content: "\e810";
 } /* '' */
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: inherit !important;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -8873,12 +8881,57 @@ body {
   overflow-y: auto;
   padding-right: 64px;
 }
+.careerOpeningModal .modalContent .jobDescription .detailWrapper h2 {
+  color: #000;
+  text-align: left;
+  font-family: "verdanabold";
+  font-size: 32px;
+  line-height: 150%;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 1800px) {
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper h2 {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper h2 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper h2 {
+    font-size: 18px;
+  }
+}
+.careerOpeningModal .modalContent .jobDescription .detailWrapper h3 {
+  color: #000;
+  text-align: left;
+  font-family: "verdanabold";
+  font-size: 24px;
+  line-height: 150%;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 1600px) {
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper h3 {
+    font-size: 16px;
+  }
+}
 .careerOpeningModal .modalContent .jobDescription .detailWrapper h4 {
   color: #4B4B4B;
-  text-align: justify;
+  text-align: left;
   font-family: "verdanabold";
   font-size: 20px;
-  font-weight: 700;
   line-height: 140%;
   margin-bottom: 8px;
 }
@@ -8897,6 +8950,24 @@ body {
     font-size: 12px;
   }
 }
+.careerOpeningModal .modalContent .jobDescription .detailWrapper h5 {
+  color: #000;
+  text-align: left;
+  font-family: "verdanabold";
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 1600px) {
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper h5 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper h5 {
+    font-size: 12px;
+  }
+}
 .careerOpeningModal .modalContent .jobDescription .detailWrapper p {
   color: #1E1E1E;
   text-align: justify;
@@ -8904,7 +8975,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 175%;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 1600px) {
   .careerOpeningModal .modalContent .jobDescription .detailWrapper p {
@@ -8918,6 +8989,7 @@ body {
 }
 .careerOpeningModal .modalContent .jobDescription .detailWrapper ul {
   padding-left: 20px;
+  margin-bottom: 20px;
 }
 .careerOpeningModal .modalContent .jobDescription .detailWrapper ul li {
   list-style: disc;
@@ -8942,6 +9014,37 @@ body {
 }
 .careerOpeningModal .modalContent .jobDescription .detailWrapper ul li:last-child {
   margin-bottom: 0;
+}
+.careerOpeningModal .modalContent .jobDescription .detailWrapper ol {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.careerOpeningModal .modalContent .jobDescription .detailWrapper ol li {
+  list-style: decimal;
+  margin-bottom: 8px;
+  color: #1E1E1E;
+  text-align: justify;
+  font-family: "verdanaregular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 175%;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 1600px) {
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper ol li {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper ol li {
+    font-size: 12px;
+  }
+}
+.careerOpeningModal .modalContent .jobDescription .detailWrapper ol li:last-child {
+  margin-bottom: 0;
+}
+.careerOpeningModal .modalContent .jobDescription .detailWrapper img {
+  margin-bottom: 20px;
 }
 .careerOpeningModal .modalContent .jobDescription .detailWrapper .jobDetail {
   margin-bottom: 32px;
@@ -9033,6 +9136,15 @@ body {
   }
   .careerOpeningModal .modalContent .jobDescription .detailWrapper {
     padding-right: 50px;
+  }
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper p {
+    margin-bottom: 16px;
+  }
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper ol {
+    margin-bottom: 16px;
+  }
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper ul {
+    margin-bottom: 16px;
   }
   .careerOpeningModal .modalContent .jobDescription .detailWrapper .jobDetail {
     margin-bottom: 28px;
@@ -9138,6 +9250,10 @@ body {
     line-height: 150%;
   }
   .careerOpeningModal .modalContent .jobDescription .detailWrapper ul li {
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .careerOpeningModal .modalContent .jobDescription .detailWrapper ol li {
     font-size: 12px;
     line-height: 150%;
   }
@@ -11622,7 +11738,7 @@ body {
   }
 }
 .resDetailContentSec .secWrapper .contentBox ol {
-  margin-left: 50px;
+  margin-left: 45px;
   margin-bottom: 50px;
 }
 .resDetailContentSec .secWrapper .contentBox ol li {
@@ -11652,11 +11768,11 @@ body {
   font-family: "verdanabold";
 }
 .resDetailContentSec .secWrapper .contentBox ul {
-  margin-left: 20px;
+  margin-left: 45px;
   margin-bottom: 50px;
 }
 .resDetailContentSec .secWrapper .contentBox ul li {
-  list-style: decimal;
+  list-style: disc;
   color: #000;
   font-family: "verdanaregular";
   font-size: 20px;
@@ -11934,7 +12050,7 @@ body {
   }
   .resDetailContentSec .secWrapper .contentBox ol {
     margin-bottom: 40px;
-    margin-left: 30px;
+    margin-left: 25px;
   }
   .resDetailContentSec .secWrapper .contentBox ul {
     margin-bottom: 40px;
@@ -12068,26 +12184,30 @@ body {
   border: 1px solid #D2D2D2;
   transition: 0.3s all ease-in-out;
   margin: 0 15px;
+  position: relative;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
+.relatedPostSec .secWrapper .cardContainer .blogCard a {
+  display: block;
+  height: 100%;
+}
+.relatedPostSec .secWrapper .cardContainer .blogCard a .imgBox {
   margin-bottom: 30px;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .imgBox img {
+.relatedPostSec .secWrapper .cardContainer .blogCard a .imgBox img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
+.relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox {
   padding: 0 24px 55px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  position: relative;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content {
+.relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content {
   width: 100%;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span {
+.relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content span {
   padding: 4px 8px;
   background: #F5F75E;
   border-radius: 4px;
@@ -12100,16 +12220,16 @@ body {
   display: inline-block;
 }
 @media screen and (max-width: 1600px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content span {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content span {
     font-size: 12px;
   }
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
+.relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content p {
   margin: 24px 0 14px 0;
   color: #1E1E1E;
   font-family: "verdanaregular";
@@ -12117,21 +12237,21 @@ body {
   line-height: 166%;
 }
 @media screen and (max-width: 1600px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content p {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content p {
     font-size: 16px;
   }
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul {
+.relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li {
+.relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul li {
   color: #000;
   font-family: "verdanaregular";
   font-size: 16px;
@@ -12139,19 +12259,19 @@ body {
   position: relative;
 }
 @media screen and (max-width: 1600px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul li {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul li {
     font-size: 12px;
   }
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child {
+.relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul li:last-child {
   padding-left: 15px;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before {
+.relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul li:last-child::before {
   content: "";
   position: absolute;
   width: 5px;
@@ -12161,7 +12281,7 @@ body {
   left: 0;
   border-radius: 100%;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
+.relatedPostSec .secWrapper .cardContainer .blogCard a .arrowBox {
   border: 1px solid #000;
   border-radius: 100%;
   width: 64px;
@@ -12176,7 +12296,7 @@ body {
   right: 24px;
   bottom: 35px;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
+.relatedPostSec .secWrapper .cardContainer .blogCard a .arrowBox .rotateRightArrow {
   font-size: 20px;
   transform: rotate(-45deg);
 }
@@ -12186,7 +12306,7 @@ body {
 .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content span {
   background: #fff;
 }
-.relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .arrowBox {
+.relatedPostSec .secWrapper .cardContainer .blogCard:hover .arrowBox {
   opacity: 1;
   visibility: visible;
 }
@@ -12238,10 +12358,10 @@ body {
   .relatedPostSec .secWrapper .secHeading {
     margin-bottom: 60px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content p {
     margin: 22px 0 12px 0;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .arrowBox {
     width: 60px;
     height: 60px;
   }
@@ -12256,13 +12376,13 @@ body {
   .relatedPostSec .secWrapper .secHeading {
     margin-bottom: 55px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox {
     padding: 0 22px 50px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul li:last-child::before {
     top: 9px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .arrowBox {
     right: 22px;
     bottom: 25px;
   }
@@ -12290,21 +12410,21 @@ body {
   .relatedPostSec .secWrapper .secHeading {
     margin-bottom: 50px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .imgBox {
     margin-bottom: 25px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox {
     padding: 0 20px 45px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content p {
     margin: 20px 0 10px 0;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .arrowBox {
     width: 50px;
     height: 50px;
     right: 20px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .arrowBox .rotateRightArrow {
     font-size: 16px;
   }
   .relatedPostSec .secWrapper .cardContainer .slick-prev,
@@ -12336,24 +12456,24 @@ body {
     width: calc(50% - 13px);
     margin: 0 10px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .imgBox {
     margin-bottom: 20px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox {
     padding: 0 18px 40px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content p {
     margin: 18px 0 10px 0;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul li:last-child::before {
     top: 8px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .arrowBox {
     width: 45px;
     height: 45px;
     right: 18px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .arrowBox .rotateRightArrow {
     font-size: 14px;
   }
   .relatedPostSec .secWrapper .cardContainer .slick-list {
@@ -12361,17 +12481,17 @@ body {
   }
 }
 @media all and (max-width: 1180px) {
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .arrowBox {
     opacity: 1;
     visibility: visible;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard:hover {
     background: #fff;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content span {
+  .relatedPostSec .secWrapper .cardContainer .blogCard:hover a .contentBox .content span {
     background: #F5F75E;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .arrowBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard:hover a .arrowBox {
     opacity: 1;
     visibility: visible;
   }
@@ -12386,14 +12506,14 @@ body {
   .relatedPostSec .secWrapper .secHeading {
     margin-bottom: 40px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .imgBox {
     margin-bottom: 20px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox {
     padding: 0 18px 35px;
     align-items: end;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .arrowBox {
     opacity: 1;
     visibility: visible;
     width: 35px;
@@ -12401,16 +12521,16 @@ body {
     right: 18px;
     bottom: 25px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox .rotateRightArrow {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .arrowBox .rotateRightArrow {
     font-size: 12px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard:hover {
     background: #fff;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .content span {
+  .relatedPostSec .secWrapper .cardContainer .blogCard:hover a .contentBox .content span {
     background: #F5F75E;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard:hover .contentBox .arrowBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard:hover a .arrowBox {
     opacity: 1;
     visibility: visible;
   }
@@ -12448,33 +12568,33 @@ body {
     width: 100%;
     margin: 0 5px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .imgBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .imgBox {
     margin-bottom: 24px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox {
     padding: 0 16px 24px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content span {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content span {
     line-height: 150%;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content p {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content p {
     margin: 16px 0 14px 0;
     font-size: 16px;
     line-height: 175%;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul {
     gap: 8px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul li {
     line-height: 150%;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul li:last-child {
     padding-left: 13px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .content ul li:last-child::before {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul li:last-child::before {
     top: 6px;
   }
-  .relatedPostSec .secWrapper .cardContainer .blogCard .contentBox .arrowBox {
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .arrowBox {
     right: 16px;
     bottom: 14px;
   }
@@ -17491,4 +17611,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
