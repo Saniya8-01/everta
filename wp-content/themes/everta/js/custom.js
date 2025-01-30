@@ -1041,10 +1041,479 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   
+  if ($(".homepageFaq").length) {
+    jQuery(document).ready(function () {
+        const accordionHeaders = document.querySelectorAll(".accordion-header");
+        ActivatingFirstAccordion();
+        function ActivatingFirstAccordion() {
+            accordionHeaders[0].parentElement.classList.add("active");
+            accordionHeaders[0].nextElementSibling.style.maxHeight = "fit-content";
+        }
+        function toggleActiveAccordion(e, header) {
+            const activeAccordion = document.querySelector(".accordion.active");
+            const clickedAccordion = header.parentElement;
+            const accordionBody = header.nextElementSibling;
+            if (activeAccordion && activeAccordion != clickedAccordion) {
+                activeAccordion.querySelector(".accordion-body").style.maxHeight = 0;
+                activeAccordion.classList.remove("active");
+            }
+            clickedAccordion.classList.toggle("active");
+            if (clickedAccordion.classList.contains("active")) {
+                accordionBody.style.maxHeight = "fit-content";
+            } else {
+                accordionBody.style.maxHeight = 0;
+            }
+        }
+        accordionHeaders.forEach(function (header) {
+            header.addEventListener("click", function (event) {
+                toggleActiveAccordion(event, header);
+            });
+        });
+        function resizeActiveAccordionBody() {
+            const activeAccordionBody = document.querySelector(
+                ".accordion.active .accordion-body"
+            );
+            if (activeAccordionBody)
+                activeAccordionBody.style.maxHeight = "fit-content";
+        }
+        window.addEventListener("resize", function () {
+            resizeActiveAccordionBody();
+        });
+    });
+}
   
   
-  
-  
+if ($(".manualBrochureSection").length) {
+    jQuery(document).ready(function () {
+        const accordionHeaders = document.querySelectorAll(".accordion-header");
+        ActivatingFirstAccordion();
+        function ActivatingFirstAccordion() {
+            accordionHeaders[0].parentElement.classList.add("active");
+            accordionHeaders[0].nextElementSibling.style.maxHeight = "fit-content";
+        }
+        function toggleActiveAccordion(e, header) {
+            const activeAccordion = document.querySelector(".accordion.active");
+            const clickedAccordion = header.parentElement;
+            const accordionBody = header.nextElementSibling;
+            if (activeAccordion && activeAccordion != clickedAccordion) {
+                activeAccordion.querySelector(".accordion-body").style.maxHeight = 0;
+                activeAccordion.classList.remove("active");
+            }
+            clickedAccordion.classList.toggle("active");
+            if (clickedAccordion.classList.contains("active")) {
+                accordionBody.style.maxHeight = "fit-content";
+            } else {
+                accordionBody.style.maxHeight = 0;
+            }
+        }
+        accordionHeaders.forEach(function (header) {
+            header.addEventListener("click", function (event) {
+                toggleActiveAccordion(event, header);
+            });
+        });
+        function resizeActiveAccordionBody() {
+            const activeAccordionBody = document.querySelector(
+                ".accordion.active .accordion-body"
+            );
+            if (activeAccordionBody)
+                activeAccordionBody.style.maxHeight = "fit-content";
+        }
+        window.addEventListener("resize", function () {
+            resizeActiveAccordionBody();
+        });
+    });
+}
+
+if ($(".resourcesfaqSection").length) {
+    jQuery(document).ready(function () {
+        const accordionHeaders = document.querySelectorAll(".accordion-header");
+        ActivatingFirstAccordion();
+        function ActivatingFirstAccordion() {
+            accordionHeaders[0].parentElement.classList.add("active");
+            accordionHeaders[0].nextElementSibling.style.maxHeight = "fit-content";
+        }
+        function toggleActiveAccordion(e, header) {
+            const activeAccordion = document.querySelector(".accordion.active");
+            const clickedAccordion = header.parentElement;
+            const accordionBody = header.nextElementSibling;
+            if (activeAccordion && activeAccordion != clickedAccordion) {
+                activeAccordion.querySelector(".accordion-body").style.maxHeight = 0;
+                activeAccordion.classList.remove("active");
+            }
+            clickedAccordion.classList.toggle("active");
+            if (clickedAccordion.classList.contains("active")) {
+                accordionBody.style.maxHeight = "fit-content";
+            } else {
+                accordionBody.style.maxHeight = 0;
+            }
+        }
+        accordionHeaders.forEach(function (header) {
+            header.addEventListener("click", function (event) {
+                toggleActiveAccordion(event, header);
+            });
+        });
+        function resizeActiveAccordionBody() {
+            const activeAccordionBody = document.querySelector(
+                ".accordion.active .accordion-body"
+            );
+            if (activeAccordionBody)
+                activeAccordionBody.style.maxHeight = "fit-content";
+        }
+        window.addEventListener("resize", function () {
+            resizeActiveAccordionBody();
+        });
+    });
+}
+
+if ($(".resourcesfaqSection").length) {
+    document.addEventListener("DOMContentLoaded", function () {
+        const accordionWrapper = document.querySelector(".accordions-wrapper");
+        const faqItems = accordionWrapper.querySelectorAll(".accordion");
+        const toggleButton = document.getElementById("toggleFaqButton");
+
+        const increment = 6; // Number of items to show at a time
+        let currentlyVisible = increment;
+
+        // Function for smooth slide effect
+        function slideDown(element) {
+            element.style.display = "block";
+            element.style.height = "0px";
+            element.style.overflow = "hidden";
+            let height = element.scrollHeight;
+            element.style.transition = "height 0.5s ease-out";
+            element.style.height = height + "px";
+            setTimeout(() => {
+                element.style.height = "";
+                element.style.overflow = "";
+            }, 500);
+        }
+
+        function slideUp(element) {
+            element.style.transition = "height 0.5s ease-out";
+            element.style.height = element.scrollHeight + "px";
+            setTimeout(() => {
+                element.style.height = "0px";
+                element.style.overflow = "hidden";
+            }, 10);
+            setTimeout(() => {
+                element.style.display = "none";
+                element.style.height = "";
+            }, 500);
+        }
+
+        // Hide all FAQ items initially except the first set
+        if (faqItems.length > increment) {
+            toggleButton.style.display = "block"; // Show the button
+            faqItems.forEach((item, index) => {
+                if (index >= increment) {
+                    item.style.display = "none"; // Hide extra items
+                }
+            });
+        } else {
+            toggleButton.style.display = "none"; // Hide the button if items are less than or equal to increment
+        }
+
+        // Handle button click
+        toggleButton.addEventListener("click", function () {
+            const isExpanded = toggleButton.getAttribute("data-expanded") === "true";
+
+            if (isExpanded) {
+                currentlyVisible = increment;
+                faqItems.forEach((item, index) => {
+                    if (index >= increment) {
+                        slideUp(item);
+                    }
+                });
+                toggleButton.textContent = "Load More";
+                toggleButton.setAttribute("data-expanded", "false");
+            } else {
+                const nextVisible = currentlyVisible + increment;
+                faqItems.forEach((item, index) => {
+                    if (index < nextVisible && item.style.display === "none") {
+                        slideDown(item);
+                    }
+                });
+                currentlyVisible = nextVisible;
+
+                if (currentlyVisible >= faqItems.length) {
+                    toggleButton.textContent = "Load Less";
+                    toggleButton.setAttribute("data-expanded", "true");
+                }
+            }
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const productInfoSection = document.querySelector('.productInfoSection');
+
+    // Check if viewport width is above 820px
+    function isLargeScreen() {
+        return window.innerWidth > 820;
+    }
+
+    if (productInfoSection && isLargeScreen()) {
+        const observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    productInfoSection.id = 'product-info';
+                    observer.disconnect(); // Stop observing after first trigger
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+
+        observer.observe(productInfoSection);
+    } 
+
+    // Optional: Re-check on window resize
+    window.addEventListener('resize', function () {
+        if (isLargeScreen()) {
+            const newObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        productInfoSection.id = 'product-info';
+                        observer.disconnect(); // Stop observing after first trigger
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            newObserver.observe(productInfoSection);
+        } else {
+            productInfoSection.removeAttribute('id'); // Remove ID if resized below 820px
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const industrySection = document.querySelector('.industryStandardSection');
+    const technicalSection = document.querySelector('.technicalDetailsSection');
+
+    if (industrySection) {
+        const industryObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    industrySection.id = 'industry-standard';
+                } else {
+                    industrySection.removeAttribute('id');
+                }
+            });
+        }, { threshold: 0.5 }); 
+
+        industryObserver.observe(industrySection);
+    }
+
+    if (technicalSection) {
+        const technicalObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    technicalSection.id = 'technical-details';
+                } else {
+                    technicalSection.removeAttribute('id');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        technicalObserver.observe(technicalSection);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+        const productBanner = document.querySelector('.productBanner');
+        if (productBanner) {
+            productBanner.setAttribute('id', 'animatedBanner');
+            console.log('ID added to .productBanner');
+        }
+    }, 1000); 
+});
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.tabContent'); // Get all tab content sections
+        const hoverBoxes = document.querySelectorAll('.card'); // Get all cards (hover boxes)
+
+        function setDefaultActiveCards() {
+            // Loop through all tabs and set the first card as active
+            tabs.forEach((tab) => {
+                const firstCard = tab.querySelector('.card'); // Get the first card in each tab
+                if (firstCard) {
+                    firstCard.classList.add('active'); // Add 'active' class to the first card
+                }
+            });
+        }
+
+        function applyHoverEffect() {
+            if (window.innerWidth > 820) {
+                // On larger screens, add hover functionality
+                hoverBoxes.forEach((box) => {
+                    box.addEventListener('mouseenter', handleMouseEnter);
+                });
+            } else {
+                // On smaller screens, remove the 'active' class and event listeners
+                hoverBoxes.forEach((box) => {
+                    box.classList.remove('active');
+                    box.removeEventListener('mouseenter', handleMouseEnter);
+                });
+            }
+        }
+
+        function handleMouseEnter(event) {
+            const currentTab = event.currentTarget.closest('.tabContent'); // Get the parent tab of the hovered card
+            const cardsInCurrentTab = currentTab.querySelectorAll('.card'); // Get all cards in the current tab
+
+            // Remove 'active' class from all cards in the current tab
+            cardsInCurrentTab.forEach((item) => item.classList.remove('active'));
+
+            // Add 'active' class to the hovered card
+            event.currentTarget.classList.add('active');
+        }
+
+        // Set the first card as active by default on page load
+        setDefaultActiveCards();
+
+        // Apply hover effect on load
+        applyHoverEffect();
+
+        // Re-apply hover effect on window resize
+        window.addEventListener('resize', applyHoverEffect);
+    });
+
+    if ($(".productSection").length) {
+        $(".cards").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+    }
+
+    function equalizeCardHeights() {
+        const cards = document.querySelectorAll('.card'); // Select all cards
+        let maxHeight = 0;
+
+        // Reset heights
+        cards.forEach((card) => {
+            card.style.height = 'auto'; // Reset any previously set heights
+        });
+
+        // Find the maximum height
+        cards.forEach((card) => {
+            const cardHeight = card.offsetHeight;
+            if (cardHeight > maxHeight) {
+                maxHeight = cardHeight;
+            }
+        });
+
+        // Apply the maximum height to all cards
+        cards.forEach((card) => {
+            card.style.height = `${maxHeight}px`;
+        });
+    }
+
+    $(document).ready(function () {
+        $(".cards").on('setPosition', function () {
+            equalizeCardHeights();
+        });
+
+        // Trigger the function on window resize
+        $(window).on('resize', function () {
+            equalizeCardHeights();
+        });
+    });
+
+    if ($(".productInfoSection").length) {
+        $(".mobileSliderContainer").slick({
+            dots: false,
+            slidesToShow: 1,
+            arrows: true,
+            infinite: false,
+        });
+
+        // Custom opacity handling for seamless loop
+        $(".animationWrapper").on("afterChange", function (event, slick, currentSlide) {
+            const $slider = $(this); // Restrict to current slider
+
+            // Reset opacity for all slides within this slider
+            $slider.find(".slick-slide").css("opacity", "0.2");
+
+            // Get the indexes of the visible slides
+            const totalSlides = slick.$slides.length;
+            const firstIndex = currentSlide;
+            const secondIndex = (currentSlide + 1) % totalSlides;
+            const thirdIndex = (currentSlide + 2) % totalSlides;
+
+            // Set opacity for the visible slides within this slider
+            $slider.find(`.slick-slide[data-slick-index="${firstIndex}"]`).css("opacity", "1"); // First slide (active)
+            $slider.find(`.slick-slide[data-slick-index="${secondIndex}"]`).css("opacity", "0.5"); // Second slide
+            $slider.find(`.slick-slide[data-slick-index="${thirdIndex}"]`).css("opacity", "0.2"); // Third slide
+        });
+    }
+
+    $(document).ready(function () {
+        if ($(".industryStandardSection").length) {
+            $(".animationWrapper").slick({
+                vertical: true,
+                dots: false,
+                slidesToShow: 3,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                infinite: true,
+            });
+        }
+    });
+    
+
+    if ($(".technicalDetailsSection").length) {
+        jQuery(document).ready(function () {
+            const accordionHeaders = document.querySelectorAll(".accordion-header");
+            function toggleActiveAccordion(e, header) {
+                const activeAccordion = document.querySelector(".accordion.active");
+                const clickedAccordion = header.parentElement;
+                const accordionBody = header.nextElementSibling;
+                if (activeAccordion && activeAccordion != clickedAccordion) {
+                    activeAccordion.querySelector(".accordion-body").style.maxHeight = 0;
+                    activeAccordion.classList.remove("active");
+                }
+                clickedAccordion.classList.toggle("active");
+                if (clickedAccordion.classList.contains("active")) {
+                    accordionBody.style.maxHeight = "fit-content";
+                } else {
+                    accordionBody.style.maxHeight = 0;
+                }
+            }
+            accordionHeaders.forEach(function (header) {
+                header.addEventListener("click", function (event) {
+                    toggleActiveAccordion(event, header);
+                });
+            });
+            function resizeActiveAccordionBody() {
+                const activeAccordionBody = document.querySelector(
+                    ".accordion.active .accordion-body"
+                );
+                if (activeAccordionBody)
+                    activeAccordionBody.style.maxHeight = "fit-content";
+            }
+            window.addEventListener("resize", function () {
+                resizeActiveAccordionBody();
+            });
+        });
+    }
   
   
   

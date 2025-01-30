@@ -176,8 +176,7 @@
 .industryStandardSection{margin-bottom: 200px;
     &#industry-standard{
         .scaleImage{
-            img{
-                animation: zoomeffect 20s forwards;}
+            img{animation: zoomeffect 20s forwards;}
         }
     }
     .sectionWrapper{
@@ -195,8 +194,9 @@
                 .image{flex-shrink: 0;width: 64px;height: 64px;}
                 .scrollAnimation{height: 190px;overflow: hidden;position: relative;
                     .animationWrapper{height: 190px;
+                        .slick-track{display: block !important;}
                         .animate{padding-bottom:29px;transition:0.3s all ease-in-out;
-                            &.slick-slide{@include verdanaregular;color: #000000;@include font24;font-weight: 400;line-height: 166.66%;transition:0.3s all ease-in-out;}
+                            &.slick-slide{@include verdanaregular;color: #000000;@include font24;font-weight: 400;line-height: 166.66%;transition:0.3s all ease-in-out;height: auto !important;}
                             &.slick-current{padding-top: 10px;color: #006E50;@include verdanabold;font-weight: 700;@include font32;line-height: 137.5%;transition:0.3s all ease-in-out;}
                         }
                     }

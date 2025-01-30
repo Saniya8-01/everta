@@ -15850,6 +15850,9 @@ body {
 .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper {
   height: 190px;
 }
+.industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .slick-track {
+  display: block !important;
+}
 .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate {
   padding-bottom: 29px;
   transition: 0.3s all ease-in-out;
@@ -15861,6 +15864,7 @@ body {
   font-weight: 400;
   line-height: 166.66%;
   transition: 0.3s all ease-in-out;
+  height: auto !important;
 }
 @media screen and (max-width: 1600px) {
   .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-slide {
