@@ -31,7 +31,7 @@
                             }
                             .pdfWrapper{display: flex;align-items:center;padding:8px 22px 8px 8px;&:not(:last-child){margin-bottom: 16px;}box-sizing: border-box;width: 100%; 
                                 img{margin-right: 12px;}
-                                .pdfName{flex-shrink: 0;margin-right: 66px;@include verdanaregular;@include font16;line-height: 175%;}
+                                .pdfName{flex-shrink: 0;margin-right: 66px;@include verdanaregular;@include font16;line-height: 175%;text-transform:capitalize;}
                                 .downloadLogo{margin-right: 0;}
                             }
                         }

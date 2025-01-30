@@ -14316,6 +14316,7 @@ body {
   font-family: "verdanaregular";
   font-size: 16px;
   line-height: 175%;
+  text-transform: capitalize;
 }
 @media screen and (max-width: 1600px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .pdfName {
@@ -17634,4 +17635,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
