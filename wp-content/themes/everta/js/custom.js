@@ -719,7 +719,7 @@ if($(".careerTeamSection").length){
         
             careerBoxes.forEach(box => {
                 const locationText = box.querySelector(".posSubContent h4")?.innerText.trim().toLowerCase() || "";
-                const departmentText = box.querySelector(".subBoxContent h3")?.innerText.trim().toLowerCase() || "";
+                const departmentText = box.getAttribute("data-job-department")?.trim().toLowerCase() || "";
                 const contractTypeText = box.querySelector(".posSubContent div:nth-of-type(2) h4")?.innerText.trim().toLowerCase() || "";
         
                 const isVisible = 
@@ -1006,39 +1006,42 @@ $(window).scroll(function () {
 document.addEventListener("DOMContentLoaded", () => {
     const progressBar = document.getElementById("progress-bar");
     const overlay = document.getElementById("overlay");
+    
+    let simulatedProgress = 0;
+    let progressComplete = false;
   
-    let simulatedProgress = 0; // Start at 0%
-  
-    // Simulate progress before the page is fully loaded
     const simulateProgress = () => {
       if (simulatedProgress < 90) {
-        simulatedProgress += 1; // Increment progress gradually
+        simulatedProgress += 1;
         progressBar.style.width = `${simulatedProgress}%`;
       }
     };
   
-    const simulationInterval = setInterval(simulateProgress, 50); // Update every 50ms
-
+    const simulationInterval = setInterval(simulateProgress, 50);
+  
     // Simulate loading for localhost testing
-setTimeout(() => {
-    window.dispatchEvent(new Event("load"));
-  }, 2000); // Simulate a 2-second loading delay
+    setTimeout(() => {
+      window.dispatchEvent(new Event("load"));
+    }, 2000); // Simulate a 2-second loading delay
   
-  
-    // Sync with the actual loading state of the page
     window.addEventListener("load", () => {
-      clearInterval(simulationInterval); // Stop simulated progress
-      progressBar.style.width = "100%"; // Fill to 100%
+      clearInterval(simulationInterval);
+      progressBar.style.width = "100%";
   
-      // Wait for the progress bar animation to complete before hiding the overlay
       setTimeout(() => {
-        overlay.style.opacity = "0"; // Fade out
+        overlay.style.opacity = "0";
         setTimeout(() => {
-          overlay.style.display = "none"; // Fully remove overlay
-        }, 500); // Matches CSS fade-out animation duration
-      }, 500); // Delay to show the full progress bar for a moment
+          overlay.style.display = "none";
+        }, 500);
+      }, 500);
     });
+  
+    if (document.readyState === "complete" && !progressComplete) {
+      window.dispatchEvent(new Event("load"));
+    }
   });
+  
+  
   
   
   

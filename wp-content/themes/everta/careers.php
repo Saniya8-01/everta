@@ -133,56 +133,51 @@
     </div>
     <div class="careerSectionWrapperTwo">
         <?php
-            $args = array('post_type' => 'career', 'posts_per_page' => -1, 'order' => 'DESC');
-            $the_query = new WP_Query($args);
-            $counter = 1;
-            while ($the_query->have_posts()):
-                $the_query->the_post();
-            ?>
-        <?php
-                $terms = get_the_terms($post->ID, 'career_categories');
-                if ($terms && !is_wp_error($terms)):
-                    $links = array();
-                    foreach ($terms as $term) {
-                        $links[] = $term->slug;
-                    }
-                    $tax_links = join(" ", str_replace(' ', '-', $links));
-                    $tax = strtolower($tax_links);
-                else:
-                    $tax = '';
-                endif;
-                ?>
-        <?php
-                global $post;
-                $post_slug = $post->post_name;
-                ?>
-        <div class="careerPositionBox" id="careerPositionBox<?php echo $counter; ?>">
-            <div class="subBoxContent">
-                <h3>
-                    <?php the_title(); ?>
-                </h3>
-                <div class="posSubContent">
-                    <div>
-                        <img src="<?php bloginfo('template_directory'); ?>/images/map-logo.svg" alt="everta">
-                        <h4>
-                            <?php echo get_field('job_location'); ?>
-                        </h4>
-                    </div>
-                    <div>
-                        <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg" alt="everta">
-                        <h4>
-                            <?php echo get_field('job_type'); ?>
-                        </h4>
-                    </div>
-                </div>
+$args = array('post_type' => 'career', 'posts_per_page' => -1, 'order' => 'DESC');
+$the_query = new WP_Query($args);
+$counter = 1;
+
+while ($the_query->have_posts()):
+    $the_query->the_post();
+    
+    $terms = get_the_terms($post->ID, 'career_categories');
+    if ($terms && !is_wp_error($terms)):
+        $links = array();
+        foreach ($terms as $term) {
+            $links[] = $term->slug;
+        }
+        $tax_links = join(" ", str_replace(' ', '-', $links));
+        $tax = strtolower($tax_links);
+    else:
+        $tax = '';
+    endif;
+    
+    global $post;
+    $post_slug = $post->post_name;
+?>
+<div class="careerPositionBox" id="careerPositionBox<?php echo $counter; ?>" 
+     data-job-department="<?php echo esc_attr(get_field('job_department')); ?>">
+    <div class="subBoxContent">
+        <h3><?php the_title(); ?></h3>
+        <div class="posSubContent">
+            <div>
+                <img src="<?php bloginfo('template_directory'); ?>/images/map-logo.svg" alt="everta">
+                <h4><?php echo get_field('job_location'); ?></h4>
             </div>
-            <div class="subBoxImg">
-                <i class="icon-right-arrow  rotateRightArrow"></i>
+            <div>
+                <img src="<?php bloginfo('template_directory'); ?>/images/briefcase-logo.svg" alt="everta">
+                <h4><?php echo get_field('job_type'); ?></h4>
             </div>
         </div>
-        <?php $counter = $counter + 1;
-        endwhile;
-        wp_reset_postdata(); ?>
+    </div>
+    <div class="subBoxImg">
+        <i class="icon-right-arrow rotateRightArrow"></i>
+    </div>
+</div>
+<?php $counter++;
+endwhile;
+wp_reset_postdata(); ?>
+
     </div>
     <div class="dnfContainer">
         <p>No job listings available at the moment. Stay tuned for future openings.</p>
