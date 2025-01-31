@@ -829,19 +829,41 @@ if($(".careerTeamSection").length){
 }
 
 function openForm() {
-    document.getElementById("contactForm").classList.add("open");
-    $('body').css("overflow-y", "hidden");
-    $('html').css("overflow-y", "hidden");
-    $('body').css("background", "hidden");
+    const contactForm = document.getElementById("contactForm");
+    contactForm.classList.add("open");
+
+    $('body, html').css({
+        "overflow-y": "hidden",
+        "overflow-x": "hidden",
+    });
 }
 
 function closeForm() {
-    document.getElementById("contactForm").classList.remove("open");
-    $('body').css("overflow-y", "visible");
-    $('body').css("overflow-x", "hidden");
-    $('html').css("overflow-y", "visible");
-    $('html').css("overflow-x", "hidden");
+    const contactForm = document.getElementById("contactForm");
+    contactForm.classList.remove("open");
+
+    $('body, html').css({
+        "overflow-y": "visible",
+        "overflow-x": "hidden",
+    });
 }
+
+document.addEventListener("click", function (event) {
+    const contactForm = document.getElementById("contactForm");
+    const contactFormWrapper = document.querySelector(".contactFormWrapper");
+    const contactButton = document.querySelector(".ctaContact .mainManu");
+
+    if (
+        contactForm.classList.contains("open") &&
+        !contactFormWrapper.contains(event.target) &&
+        event.target !== contactButton &&
+        !contactButton.contains(event.target)
+    ) {
+        closeForm();
+    }
+});
+
+
 
 if ($('.careerWallSection').length) {
     document.addEventListener("DOMContentLoaded", () => {
