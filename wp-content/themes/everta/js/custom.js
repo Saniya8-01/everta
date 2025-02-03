@@ -1025,46 +1025,54 @@ $(window).scroll(function () {
 //     });
 // });
 
-if($(".loaderOverlay").length){
-// Check if the user is a first-time visitor
-document.addEventListener("DOMContentLoaded", () => {
-    const progressBar = document.getElementById("progress-bar");
-    const overlay = document.getElementById("overlay");
-    
-    let simulatedProgress = 0;
-    let progressComplete = false;
+if ($(".loaderOverlay").length) {
+    document.addEventListener("DOMContentLoaded", () => {
+      const progressBar = document.getElementById("progress-bar");
+      const overlay = document.getElementById("overlay");
+      let progress = 0;
+      let isPageLoaded = false;
   
-    const simulateProgress = () => {
-      if (simulatedProgress < 90) {
-        simulatedProgress += 1;
-        progressBar.style.width = `${simulatedProgress}%`;
-      }
-    };
+      // Function to update progress bar
+      const updateProgressBar = (target) => {
+        const interval = setInterval(() => {
+          if (progress < target) {
+            progress++;
+            progressBar.style.width = `${progress}%`;
+          } else {
+            clearInterval(interval);
+            if (progress === 100 && isPageLoaded) {
+              hideLoader(); // Only hide loader if progress is complete and page is loaded
+            }
+          }
+        }, 20);
+      };
   
-    const simulationInterval = setInterval(simulateProgress, 50);
+      // Start the initial progress up to 90%
+      updateProgressBar(90);
   
-    // Simulate loading for localhost testing
-    setTimeout(() => {
-      window.dispatchEvent(new Event("load"));
-    }, 2000); // Simulate a 2-second loading delay
+      // Handle page load event
+      window.addEventListener("load", () => {
+        isPageLoaded = true;
+        updateProgressBar(100); // Progress to 100% after load
+      });
   
-    window.addEventListener("load", () => {
-      clearInterval(simulationInterval);
-      progressBar.style.width = "100%";
-  
-      setTimeout(() => {
-        overlay.style.opacity = "0";
+      // Function to hide the loader overlay
+      const hideLoader = () => {
         setTimeout(() => {
-          overlay.style.display = "none";
+          overlay.style.opacity = "0"; // Fade out
+          setTimeout(() => {
+            overlay.style.display = "none"; // Remove after fade
+          }, 500); // Match fade-out duration
         }, 500);
-      }, 500);
-    });
+      };
   
-    if (document.readyState === "complete" && !progressComplete) {
-      window.dispatchEvent(new Event("load"));
-    }
-  });
-}
+      // Fallback for fast local page loads
+      if (document.readyState === "complete") {
+        window.dispatchEvent(new Event("load"));
+      }
+    });
+  }
+  
   
   if ($(".homepageFaq").length) {
     jQuery(document).ready(function () {
