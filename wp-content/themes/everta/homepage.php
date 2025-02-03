@@ -2795,7 +2795,7 @@
     <?php endif; ?>
 </section>
 
-<div id="overlay">
+<div id="overlay" class="loaderOverlay">
     <div class="loader-container">
         <div class="logo-container">
             <img src="<?php bloginfo('template_directory'); ?>/images/everta-loader-svg.svg" alt="Company Logo" title="Company Logo" class="company-logo">

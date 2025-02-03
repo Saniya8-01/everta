@@ -1008,6 +1008,7 @@ $(window).scroll(function () {
 });
 }
 
+
 // document.addEventListener('DOMContentLoaded', function () {
 //     const languageTranslator = document.querySelector('.languageTranslatorMbl');
 //     const languageMenu = document.querySelector('.languageMenuMbl');
@@ -1024,6 +1025,7 @@ $(window).scroll(function () {
 //     });
 // });
 
+if($(".loaderOverlay").length){
 // Check if the user is a first-time visitor
 document.addEventListener("DOMContentLoaded", () => {
     const progressBar = document.getElementById("progress-bar");
@@ -1062,6 +1064,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.dispatchEvent(new Event("load"));
     }
   });
+}
   
   if ($(".homepageFaq").length) {
     jQuery(document).ready(function () {
@@ -1345,7 +1348,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const productBanner = document.querySelector('.productBanner');
         if (productBanner) {
             productBanner.setAttribute('id', 'animatedBanner');
-            console.log('ID added to .productBanner');
         }
     }, 1000); 
 });
@@ -1535,8 +1537,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 resizeActiveAccordionBody();
             });
         });
-    }
-  
+    } 
   
   
   
