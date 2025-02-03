@@ -88,26 +88,25 @@ $current_url = home_url(add_query_arg([], $wp->request));
 												}
 												echo '</li>';
 											} ?>
-											<li class="mainNavList dropdown languageTranslator">
-												<img src="<?php bloginfo('template_directory'); ?>/images/language-svg.svg"
-													alt="">
-												<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg"
-													alt="" class="arrowImage">
-												<div class="dropdownMenu languageMenu">
-													<ul>
-														<li>
-															<a href="">EN</a>
-														</li>
-														<li>
-															<a href="">PL</a>
-														</li>
-													</ul>
-												</div>
+								<li class="mainNavList dropdown languageTranslator">
+									<img src="<?php bloginfo('template_directory'); ?>/images/language-svg.svg" alt="">
+									<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt=""
+										class="arrowImage">
+									<div class="dropdownMenu languageMenu">
+										<ul>
+											<li>
+												<a href="">EN</a>
 											</li>
-											<li class="mainNavList ctaContact">
-												<a href="javascript:void(0);" class="mainManu" onClick="openForm()">Contact us</a>
+											<li>
+												<a href="">PL</a>
 											</li>
-											<?php
+										</ul>
+									</div>
+								</li>
+								<li class="mainNavList ctaContact">
+									<a href="javascript:void(0);" class="mainManu" onClick="openForm()">Contact us</a>
+								</li>
+								<?php
 											echo '</ul>';
 										}
 										// Render the top-level menu.
@@ -119,11 +118,11 @@ $current_url = home_url(add_query_arg([], $wp->request));
 									echo '<p>No menu assigned to this location.</p>';
 								}
 								?>
-</div>
+							</div>
 						</div>
 					</div>
-					<li class="languageTranslatorMbl">					
-							<i class="icon-globe fonelloGlobeIconMbl"></i>
+					<li class="languageTranslatorMbl">
+						<i class="icon-globe fonelloGlobeIconMbl"></i>
 						<div class="languageMenuMbl">
 							<ul>
 								<li>
@@ -147,24 +146,46 @@ $current_url = home_url(add_query_arg([], $wp->request));
 				</div>
 			</nav>
 		</header>
-
 		<div class="contactForm" id="contactForm">
-			<div class="contactFormWrapper">
+			<div class="contactFormWrapper" id="contactFormWrapper">
 				<div class="contactHeading">
 					<h2>Contact us</h2>
-					<div class="closeBtn" onClick="closeForm()">
+					<div class="closeBtn" id="closeBtn" onclick="closeForm();">
 						<img src="<?php bloginfo('template_directory'); ?>/images/close-svg.svg" alt="">
 					</div>
 				</div>
 				<?php
-				$shortcode = get_field('contact_us_popup', 'option');
-				if ($shortcode) {
-					echo do_shortcode($shortcode);
-				}
-				?>
+			  $shortcode = get_field('contact_us_popup', 'option');
+			  if ($shortcode) {
+				echo do_shortcode($shortcode);
+			  }
+			  ?>
+			</div>
+			<div class="thankyouPopup" id="thankyouPopup" style="display: none;">
+				<div class="closeBtn" id="closeBtn" onclick="closeForm();">
+					<img src="<?php bloginfo('template_directory'); ?>/images/close-svg.svg" alt="">
+				</div>
+				<div class="thankyouContent">
+					<div class="icon">
+						<img src="<?php bloginfo('template_directory'); ?>/images/thankyou-svg.svg" alt="">
+					</div>
+					<h2>Request received!</h2>
+					<p>Thank you for taking the first step in being a part of E-movement. Our team with follow up with
+						you soon!</p>
+				</div>
 			</div>
 		</div>
 
+		<script>
+			// Show Thank You popup after form submission
+			document.addEventListener('wpcf7mailsent', function () {
+				document.getElementById('thankyouPopup').style.display = 'block';
+				document.getElementById('contactFormWrapper').style.display = 'none';
+			}, false);
 
-
-		
+			// Close button to hide the form and popup
+			document.getElementById('closeBtn').addEventListener('click', function () {
+				document.getElementById('thankyouPopup').style.display = 'none';
+				document.getElementById('contactFormWrapper').style.display = 'block';
+			});
+		</script>

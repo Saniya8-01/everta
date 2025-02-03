@@ -1,5 +1,16 @@
 <?php get_header(); /*Template name: Homepage*/ ?>
 
+<div id="overlay" class="loaderOverlay">
+    <div class="loader-container">
+        <div class="logo-container">
+            <img src="<?php bloginfo('template_directory'); ?>/images/everta-loader-svg.svg" alt="Company Logo" title="Company Logo" class="company-logo">
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
+</div>
+
 <section class="bannerSection">
     <?php if (have_rows('banner_section')) : ?>
     <?php while (have_rows('banner_section')) : the_row(); ?>
@@ -2795,15 +2806,5 @@
     <?php endif; ?>
 </section>
 
-<div id="overlay" class="loaderOverlay">
-    <div class="loader-container">
-        <div class="logo-container">
-            <img src="<?php bloginfo('template_directory'); ?>/images/everta-loader-svg.svg" alt="Company Logo" title="Company Logo" class="company-logo">
-        </div>
-        <div class="progress-bar-container">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
-    </div>
-</div>
 
 <?php get_footer(); ?>
