@@ -9,7 +9,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                             li{display:flex; gap:10px;padding:15px 0px;position:relative;padding-right:7px;
                                 &:hover{&::before{width: 100%;}}
                                 &::before{position: absolute;content:"";bottom: 0;left: 0;width: 0;height: 5px;background: $primaryColor1;transition: 0.3s all ease-in-out;}
-                                .mainManu{@include verdanaregular;@include font20;line-height: 150%;color: $quaternaryColor1;transition: 0.3s all ease-in-out;}
+                                .mainManu{@include font20;line-height: 150%;color: $quaternaryColor1;transition: 0.3s all ease-in-out;font-weight: 400;}
                                 .arrowImage{transition: 0.3s all ease-in-out; font-size: 8px; line-height: normal;}
                                 .fonelloGlobeIcon{font-size: 24px;}
                                 .accordian-icon-wrapper{display: none;}
@@ -26,8 +26,8 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                     ul{background:#ffffff;min-width: 320px;display:flex;flex-direction:column;align-items: start;gap:40px;border:1px solid #1E1E1E;padding:24px 0px;
                                         li{display: flex;flex-direction:column;gap:0;width: 100%;padding:0px;
                                             &::before{content: none}
-                                            p{@include terminabold;@include font20;color: #323232;padding: 12px 40px;}
-                                            a{@include verdanaregular;@include font20;color: #323232;padding: 12px 40px;
+                                            p{@include font20;color: #323232;padding: 12px 40px;font-weight: 700;@include termina;}
+                                            a{@include font20;color: #323232;padding: 12px 40px;font-weight:400;
                                                 &:hover{background: $primaryColor1;}
                                                 &.active{background: $primaryColor1;}
                                             }
@@ -46,7 +46,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                             }
                             .ctaContact{padding: 0px; 
                                 &::before{content: none;}
-                                a{padding: 20px 32px;color: $primaryColor1;@include font16;@include terminamedium;letter-spacing: -0.64px;background: $quaternaryColor1;border-radius: 100px;transition:0.3s all ease-in-out;line-height: 100%;
+                                a{padding: 20px 32px;color: $primaryColor1;@include font16;@include termina;letter-spacing: -0.64px;background: $quaternaryColor1;border-radius: 100px;transition:0.3s all ease-in-out;line-height: 100%;font-weight:600;
                                     &:hover{color: #1E1E1E;background: $primaryColor1;}
                                 }
                             }
@@ -246,10 +246,10 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                     &::before{content:none;}
                                     &.dropdown{transition: 0.3s all ease-in-out;
                                         &::before{content:none;}
-                                        .mainManu{font-size: 16px;@include terminabold;}
+                                        .mainManu{font-size: 16px;@include termina;font-weight: 700;}
                                         &.active{
                                             &::before{width: 100%;}
-                                            .mainManu{@include terminabold;}
+                                            .mainManu{@include termina;font-weight: 700;}
                                             .accordian-icon-wrapper{background: $primaryColor1;
                                                 .accordion-icon {
                                                     &::after {transform: rotate(90deg);transition: 0.5s all ease-in-out;width: 0px;}
@@ -258,7 +258,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                             .dropdownMenu{height: auto;opacity: 1;transition: 0.5s all ease-in-out;margin-top: 16px;}
                                         }
                                     }
-                                    .mainManu{font-size: 16px;@include terminabold;}
+                                    .mainManu{font-size: 16px;@include termina;font-weight: 700;}
                                     .arrowImage{display: none;}
                                     .accordian-icon-wrapper{display: block;padding: 3px;transition: 0.3s all ease-in-out;
                                         .accordion-icon {position: relative;transition: 0.5s all ease-in-out;width: 21px;height:21px;
@@ -269,10 +269,10 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                     .dropdownMenu{position: relative;width: 100%;padding:0px 20px;transition: 0.5s all ease-in-out;height:0;opacity: 0;
                                         ul{background:transparent;min-width: 100%;gap:32px;padding-left:20px;border:none;border-left:4px solid $primaryColor1 !important;
                                             li{display: flex;flex-direction:column;gap:12px;align-items:start;
-                                                p{@include terminaregular;font-size: 16px;color: #909090;padding: 0px;}
+                                                p{@include termina;font-size: 16px;color: #909090;padding: 0px;font-weight: 400;}
                                                 a{font-size: 16px;line-height: 28px;color: #000;padding: 0px;pointer-events: unset;
                                                     &:hover{background: unset;}
-                                                    &.active{background: unset;@include verdanabold;}
+                                                    &.active{background: unset;font-weight: 700;}
                                                 }
                                             }
                                         }
@@ -316,7 +316,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                     .languageMenuMbl{opacity: 0;visibility: hidden;position: absolute;top:100%;left:-20px;padding-top:15px;transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
                         ul{background:#ffffff;min-width: 64px;display:flex;flex-direction:column;align-items: start;gap:12px;border:1px solid #1E1E1E;padding:12px 20px;
                             li{&:first-child{a{text-decoration:underline;}}
-                                a{@include terminamedium;font-size: 12px;color: #323232;font-weight: 600;line-height: 16px;}
+                                a{@include termina;font-size: 12px;color: #323232;font-weight: 600;line-height: 16px;}
                             }
                         }
                     }
@@ -354,28 +354,28 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
     scrollbar-width: thin;
     scrollbar-color: $quaternaryColor1 #f4f4f4;
         .contactHeading{display: flex;align-items:center;justify-content:space-between;margin-bottom:36px;
-            h2{@include terminamedium;@include font48;line-height: 160%;text-transform: uppercase;color: #1E1E1E;}
+            h2{@include termina;@include font48;line-height: 160%;text-transform: uppercase;color: #1E1E1E;font-weight: 600;}
             .closeBtn{cursor: pointer;}
         }
         .contactTop{display: flex;flex-wrap:wrap;justify-content:space-between;gap:38px;margin-bottom:48px;
             .formFields{flex-basis:calc(50% - 19px);display:flex;flex-direction:column;gap:17px;
                 &:first-child{flex-basis: 100%;}
-                label{text-transform: capitalize;@include terminamedium;@include font18;line-height: 140%;font-weight: 600;color: #1E1E1E;}
-                input{border-bottom: 1px solid #A5A5A5;@include verdanaregular;@include font16;line-height: 175%;color: #1E1E1E;padding:7px 0px 14px 0px;width: 100%;font-weight: $fontW400;
-                    &::placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;}
-                    &::-webkit-input-placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;}
+                label{text-transform: capitalize;@include termina;@include font18;line-height: 140%;font-weight: 600;color: #1E1E1E;}
+                input{border-bottom: 1px solid #A5A5A5;@include font16;line-height: 175%;color: #1E1E1E;padding:7px 0px 14px 0px;width: 100%;font-weight: 400;
+                    &::placeholder{@include font16;line-height: 175%;color: #A5A5A5;font-weight: 400;}
+                    &::-webkit-input-placeholder{@include font16;line-height: 175%;color: #A5A5A5;font-weight: 400;}
                 }
                 .selected-flag{background: transparent;padding: 0px;&:hover{background: transparent;}}
-                .wpcf7-not-valid-tip{@include verdanaregular;@include font16;margin-top: 8px}
-                .selected-dial-code{@include verdanaregular;@include font16;line-height: 175%;padding-bottom: 8px;}
+                .wpcf7-not-valid-tip{@include font16;margin-top: 8px;font-weight: 400;}
+                .selected-dial-code{@include font16;line-height: 175%;padding-bottom: 8px;font-weight: 400;}
                 .iti-arrow{margin-top:-5px;}
                 .iti-flag{margin-bottom:20px;}
             }
         }
         .contactBottom{
-            h3{@include terminamedium;@include font24;line-height: 120%;margin-bottom: 36px;font-weight: 600;color: #1E1E1E;}
+            h3{@include termina;@include font24;line-height: 120%;margin-bottom: 36px;font-weight: 600;color: #1E1E1E;font-weight: 600;}
             .contactTab{display: flex;align-items: center;gap: 16px;margin-bottom:48px;
-                .contact-tab-btn{@include verdanaregular;@include font20;line-height: 160%;background: #FFFFFF;border: 1px solid #A5A5A5;padding: 14px 56px;color: #1E1E1E;border-radius:100px;cursor: pointer;
+                .contact-tab-btn{@include font20;line-height: 160%;background: #FFFFFF;border: 1px solid #A5A5A5;padding: 14px 56px;color: #1E1E1E;border-radius:100px;cursor: pointer;font-weight:400;
                     &.active{color: $primaryColor1;background: #1E1E1E;}
                 }
             }
@@ -383,21 +383,21 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                 &.active{display: block;}
                 .contact-tab-wrapper{display: flex;flex-wrap:wrap;justify-content:space-between;gap:38px;
                     .formFields{flex-basis:calc(50% - 19px);display:flex;flex-direction:column;gap:17px;
-                        label{text-transform: capitalize;@include terminaregular;@include font18;line-height: 140%;font-weight: 600;color: #1E1E1E;}
-                        input{border-bottom: 1px solid #A5A5A5;@include verdanaregular;@include font16;line-height: 175%;color: #1E1E1E;padding:7px 0px 14px 0px;width: 100%;font-weight: $fontW400;
-                            &::placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;font-weight: $fontW400;}
-                            &::-webkit-input-placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;font-weight: $fontW400;}
+                        label{text-transform: capitalize;@include termina;@include font18;line-height: 140%;font-weight: 600;color: #1E1E1E;}
+                        input{border-bottom: 1px solid #A5A5A5;@include font16;line-height: 175%;color: #1E1E1E;padding:7px 0px 14px 0px;width: 100%;font-weight: 400;
+                            &::placeholder{@include font16;line-height: 175%;color: #A5A5A5;font-weight: 400;}
+                            &::-webkit-input-placeholder{@include font16;line-height: 175%;color: #A5A5A5;font-weight:400;}
                         }
-                        .wpcf7-not-valid-tip{@include verdanaregular;@include font16;margin-top: 8px}
+                        .wpcf7-not-valid-tip{@include font16;margin-top: 8px;}
                         .lowercase{text-transform: none;}
-                        textarea{border: 1px solid #A5A5A5;@include verdanaregular;@include font16;line-height: 175%;color: #1E1E1E;padding: 24px;width: 100%;height: 148px;resize: none;font-weight: $fontW400;}
+                        textarea{border: 1px solid #A5A5A5;@include font16;line-height: 175%;color: #1E1E1E;padding: 24px;width: 100%;height: 148px;resize: none;}
                         .customSelect{position: relative;
                             .selectBtn{width: 100%; background: transparent; display: flex; cursor: pointer; border-bottom: 1px solid #A5A5A5;padding:7px 0px 14px 0px;position: relative; justify-content: space-between;
-                              .sBtntext{color: $quaternaryColor1; @include verdanaregular; @include font16; font-weight: $fontW400;}
+                              .sBtntext{color: $quaternaryColor1; @include font16; font-weight:400;}
                               .img{display: block;}
                             }
                             .options{position: absolute; width: 100%; overflow-y: auto; max-height: 295px; margin-top: 10px; display:none; background: #fff;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); animation-name: fadeInDown; -webkit-animation-name: fadeInDown; animation-duration: 0.35s;animation-fill-mode: both; -webkit-animation-duration: 0.35s; -webkit-animation-fill-mode: both;
-                              .option{display: flex; height: 55px; cursor: pointer; padding: 0 16px; align-items: center; background: #fff;@include verdanaregular; @include font16; font-weight: $fontW400; text-align: left; color: $quaternaryColor3; border-bottom: 1px solid #CCCCCC;
+                              .option{display: flex; height: 55px; cursor: pointer; padding: 0 16px; align-items: center; background: #fff; @include font16; font-weight: 400; text-align: left; color: $quaternaryColor3; border-bottom: 1px solid #CCCCCC;
                                 &:last-child{border: none;}
                               }
                               &::-webkit-scrollbar{width: 6px;}
@@ -408,8 +408,8 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                             }
                             &.active .options{display: block; opacity: 0; z-index: 10; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; animation-duration: 0.4s; animation-fill-mode: both; -webkit-animation-duration: 0.4s; -webkit-animation-fill-mode: both;}
                         }
-                        select{padding:7px 0px 20px 0px;width: 100%;border-bottom: 1px solid #A5A5A5;color: $quaternaryColor1; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%;background:transparent;
-                            option{@include verdanaregular; @include font16; font-weight: $fontW400; text-align: left;line-height: 175%; color: $quaternaryColor3; border-bottom: 1px solid #CCCCCC;
+                        select{padding:7px 0px 20px 0px;width: 100%;border-bottom: 1px solid #A5A5A5;color: $quaternaryColor1; @include font16;line-height: 175%;background:transparent;
+                            option{@include font16;text-align: left;line-height: 175%; color: $quaternaryColor3; border-bottom: 1px solid #CCCCCC;
                                 &:hover{background-color: #f1f1f1;}
                             }
                         }
@@ -419,7 +419,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                                     input{visibility: hidden;height: 0;display: block;
                                         &:checked + span{color: #FFFFFF;background: #1E1E1E;color: $primaryColor1;}
                                     }
-                                    span{display: flex;align-items: center;justify-content: center;cursor: pointer;;border: 1px solid #A5A5A5;border-radius: 100px;@include verdanaregular;@include font16;line-height: 175%;padding: 6px;width: 100%;}
+                                    span{display: flex;align-items: center;justify-content: center;cursor: pointer;;border: 1px solid #A5A5A5;border-radius: 100px;@include font16;line-height: 175%;padding: 6px;width: 100%;}
                                 }
                             }
                         }
@@ -427,12 +427,12 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                 }
             }
             .formFields{display:flex;flex-direction:column;gap:17px;
-                label{text-transform: capitalize;@include terminaregular;@include font18;line-height: 140%;font-weight: 600;color: #1E1E1E;}
-                textarea{border: 1px solid #A5A5A5;@include verdanaregular;@include font16;line-height: 175%;color: #1E1E1E;padding: 24px;width: 100%;height: 148px;resize: none;font-weight: $fontW400;}
-                .wpcf7-not-valid-tip{@include verdanaregular;@include font16;margin-top: 8px}
+                label{text-transform: capitalize;@include termina;@include font18;line-height: 140%;font-weight: 600;color: #1E1E1E;}
+                textarea{border: 1px solid #A5A5A5;@include font16;line-height: 175%;color: #1E1E1E;padding: 24px;width: 100%;height: 148px;resize: none;}
+                .wpcf7-not-valid-tip{@include font16;margin-top: 8px}
             }
             .submitDiv {margin-top:32px;display:flex;justify-content:end;align-items:center;
-                input{order: 2;@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: $quaternaryColor1; background: $primaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;}
+                input{order: 2;@include termina; @include font16; font-weight: 600; line-height: 100%; letter-spacing: -0.64px; color: $quaternaryColor1; background: $primaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;}
                 .wpcf7-spinner{display: block;order: 1;}
             }
         }
@@ -441,8 +441,8 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
         .closeBtn{position: absolute;right: 96px;top: 96px;}
         .thankyouContent{margin-top: 220px;
             .icon{width: 228px;height: 228px;overflow: hidden;border: 2px solid $quaternaryColor1;border-radius: 50%;margin-bottom: 48px;padding: 50px 30px;img{width: 100%;height: 100%;}}
-            h2{@include terminamedium;@include font42;line-height: 160%;margin-bottom: 24px;font-weight: 600;text-transform: uppercase;color: #1E1E1E}
-            p{@include verdanaregular;@include font20;line-height: 160%;font-weight: 400;color: #1E1E1E;width: 70%;}
+            h2{@include termina;@include font42;line-height: 160%;margin-bottom: 24px;font-weight: 600;text-transform: uppercase;color: #1E1E1E}
+            p{@include font20;line-height: 160%;color: #1E1E1E;width: 70%;}
         }
     }
     @media all and (max-width: 1600px){width: 1100px;
