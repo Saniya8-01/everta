@@ -7598,6 +7598,7 @@ body {
   text-align: justify;
   font-size: 24px;
   line-height: 166%;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent .posSubContent div h4 {
@@ -8298,6 +8299,7 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox .contentBox .subHeadings h6 {
@@ -8931,6 +8933,7 @@ body {
   text-align: justify;
   font-size: 16px;
   line-height: 166%;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div h4 {
@@ -9389,7 +9392,7 @@ body {
   margin-bottom: 20px;
   color: #1e1e1e;
   font-family: "termina", sans-serif;
-  font-size: 600;
+  font-weight: 600;
   font-size: 80px;
   line-height: 120%;
 }
@@ -17673,4 +17676,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */

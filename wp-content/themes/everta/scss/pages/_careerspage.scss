@@ -103,7 +103,7 @@
               .posSubContent{display: flex; align-items: center; gap: 32px;
                   div{display: flex; align-items: center; gap: 8px;
                       img{display: block; object-fit: cover;}
-                      h4{color: $quaternaryColor1; text-align: justify; @include font24; line-height: 166%;}
+                      h4{color: $quaternaryColor1; text-align: justify; @include font24; line-height: 166%; font-weight: 400;}
                   }
               }
           }
@@ -336,7 +336,7 @@
           .boxNumber{width: 50px; height: 50px; line-height: 120%; padding: 12px; box-sizing: border-box; color: $primaryColor1; @include termina; @include font28; font-weight: 600; border-radius: 100%; background: $quaternaryColor1; display: flex; justify-content: center; align-items: center; margin: 74px 0px 28px;}
           .subHeadings{
             h3{color: $quaternaryColor1; @include termina; @include font24; font-weight: 700; line-height: 134%; margin-bottom: 10px; text-align: center}
-            h6{@include font20; line-height: 160%; text-align: center; visibility: hidden; opacity: 0; transition: all 0.3s ease-in-out;}
+            h6{@include font20; line-height: 160%; text-align: center; visibility: hidden; opacity: 0; transition: all 0.3s ease-in-out; font-weight: 400;}
           }
         }
         &:hover{background: $primaryColor1;
@@ -692,7 +692,7 @@
                           div{display: flex; align-items: center; gap: 4px;
                             .fontellolocateIcon, .fontelloBrifIcon{@include font16; line-height: normal;}
                               img{display: block; object-fit: cover;}
-                              h4{color: $quaternaryColor1; text-align: justify; @include font16; line-height: 166%;}
+                              h4{color: $quaternaryColor1; text-align: justify; @include font16; line-height: 166%; font-weight: 400;}
                           }
                       }
                   }

@@ -1,7 +1,7 @@
 .journeySection{margin: 172px 0 200px;
     .journeySecWrapper{
         .secHeading{ @include wrapper; width: 80%; margin-bottom: 40px;
-            h1{margin-bottom: 20px; color: #1e1e1e; @include termina; font-size: 600; @include font80; line-height: 120%;}
+            h1{margin-bottom: 20px; color: #1e1e1e; @include termina; font-weight: 600; @include font80; line-height: 120%;}
             p{color: #1e1e1e; @include font24; line-height: 166%;}
         }
         .imgBox{overflow: hidden; position: relative;
