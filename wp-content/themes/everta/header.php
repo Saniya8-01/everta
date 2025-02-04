@@ -17,6 +17,8 @@ $current_url = home_url(add_query_arg([], $wp->request));
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="h0ps://use.typekit.net/akf4uqs.css">
+	<link rel="stylesheet" href="h0ps://use.typekit.net/akf4uqs.css">
 	<link href="<?php bloginfo('template_directory'); ?>/css/slick-theme.css" rel="stylesheet">
 	<link href="<?php bloginfo('template_directory'); ?>/css/slick.css" rel="stylesheet">
 	<link href="<?php bloginfo('template_directory'); ?>/css/main.css" rel="stylesheet">
@@ -176,7 +178,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 			</div>
 		</div>
 
-		<script>
+		<script>   
 			// Show Thank You popup after form submission
 			document.addEventListener('wpcf7mailsent', function () {
 				document.getElementById('thankyouPopup').style.display = 'block';
