@@ -223,108 +223,21 @@ button {
 
 /************************************************ Fonts **************************************************/
 
-@font-face {
-    font-family: 'verdanaregular';
-    src: url('fonts/verdana/verdana-webfont.woff2') format('woff2'),
-         url('fonts/verdana/verdana-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'verdanabold';
-    src: url('fonts/verdana/verdana-bold-webfont.woff2') format('woff2'),
-         url('fonts/verdana/verdana-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'termina_testblack';
-    src: url('fonts/termina/terminatest-black-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'termina_testbold';
-    src: url('fonts/termina/terminatest-bold-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'termina_testdemi';
-    src: url('fonts/termina/terminatest-demi-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-demi-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'termina_testextra_light';
-    src: url('fonts/termina/terminatest-extralight-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-extralight-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'termina_testheavy';
-    src: url('fonts/termina/terminatest-heavy-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-heavy-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'termina_testlight';
-    src: url('fonts/termina/terminatest-light-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'termina_testmedium';
-    src: url('fonts/termina/terminatest-medium-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'termina_testregular';
-    src: url('fonts/termina/terminatest-regular-webfont.woff2') format('woff2'),
-         url('fonts/termina/terminatest-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-
 // font family :- termina
 // @mixin terminathin{font-family: 'termina_testthin';}
-@mixin terminaregular{font-family: 'termina_testregular';}
-@mixin terminalight{font-family: 'termina_testlight';}
-@mixin terminamedium{font-family: 'termina_testmedium';}
-@mixin terminabold{font-family: 'termina_testbold';}
-@mixin terminablack{font-family: 'termina_testblack';}
+@mixin terminaregular{font-family: "termina", sans-serif;font-weight: 400;font-style: normal;}
+@mixin terminamedium{font-family: "termina", sans-serif;font-weight: 600;font-style: normal;}
+@mixin terminabold{font-family: "termina", sans-serif;font-weight: 700;font-style: normal;}
 
 // font family :- verdana
-@mixin verdanaregular{font-family: 'verdanaregular';}
-@mixin verdanabold{font-family: 'verdanabold';}
+@mixin verdanaregular{font-family: "verdana-pro", sans-serif;font-weight: 400;font-style: normal;}
+@mixin verdanabold{font-family: "verdana-pro", sans-serif;font-weight: 700;font-style: normal;}
 
 /************************************************ Common CSS **************************************************/
 body h1{
-    @include terminaregular;
+    @include terminabold;
     position: relative;
     font-size: 96px;
-    font-weight: 700;
     line-height: 96px;
     letter-spacing: -0.4px;
 }
@@ -593,7 +506,7 @@ $quaternaryColor4 : #A5A5A5;
 
 $quaternaryColor5 : #D2D2D2;
 
-.ctaYellow{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; background: $primaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;border:1px solid $primaryColor1;
+.ctaYellow{@include terminamedium; @include font16;line-height: 100%; letter-spacing: -0.64px; background: $primaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;border:1px solid $primaryColor1;
     &::before{content: '\e80a'; font-family:'fontello'; @include font16; font-weight: 400; position: absolute; width: 16px; top: 50%; transform: translateY(-50%); right: 32px; opacity: 0; transition: transform 0.3s ease-out, opacity 0.3s ease-out;}
     &:hover{padding-right: 66px;
         &::before{opacity: 1;}
@@ -604,7 +517,7 @@ $quaternaryColor5 : #D2D2D2;
     @media screen and (max-width:820px) {padding-right: 62px;line-height:normal; font-size: 12px;&::before{opacity: 1; font-size: 12px}}
 }
 
-.ctaYellowBlack{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: #000; background: $primaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;border:1px solid #1E1E1E;display:inline-block;
+.ctaYellowBlack{@include terminamedium; @include font16;line-height: 100%; letter-spacing: -0.64px; color: #000; background: $primaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;border:1px solid #1E1E1E;display:inline-block;
     &::before{content: '\e80a'; font-family:'fontello'; @include font16; font-weight: 400; position: absolute; width: 16px; top: 50%; transform: translateY(-50%); right: 32px; opacity: 0; transition: transform 0.3s ease-out, opacity 0.3s ease-out;}
     &:hover{padding-right: 66px;
         &::before{opacity: 1;}
@@ -615,7 +528,7 @@ $quaternaryColor5 : #D2D2D2;
     @media screen and (max-width:820px) {padding-right: 62px;line-height:normal; font-size: 12px; &::before{opacity: 1; font-size: 12px}}
 }
 
-.ctaWhiteBlack{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: #000; background: transparent; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;border:1px solid $quaternaryColor2;display:inline-block;
+.ctaWhiteBlack{@include terminamedium; @include font16;line-height: 100%; letter-spacing: -0.64px; color: #000; background: transparent; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;border:1px solid $quaternaryColor2;display:inline-block;
     &::before{content: '\e80a'; font-family:'fontello'; @include font16; font-weight: 400; position: absolute; width: 16px; top: 50%; transform: translateY(-50%); right: 32px; opacity: 0; transition: transform 0.3s ease-out, opacity 0.3s ease-out;}
     &:hover{padding-right: 66px;
         &::before{opacity: 1;}
@@ -626,7 +539,7 @@ $quaternaryColor5 : #D2D2D2;
     @media screen and (max-width:820px) {padding-right: 62px;line-height:normal; font-size: 12px; &::before{opacity: 1; font-size: 12px}}
 }
 
-.ctaBlack{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: $primaryColor1; background: $quaternaryColor1;border: 1px solid $quaternaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;
+.ctaBlack{@include terminamedium; @include font16;line-height: 100%; letter-spacing: -0.64px; color: $primaryColor1; background: $quaternaryColor1;border: 1px solid $quaternaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;
 
     &::before{content: '\e80a'; font-family:'fontello'; @include font16; font-weight: 400; position: absolute; width: 16px; top: 50% ; transform: translateY(-50%); right: 32px; opacity: 0; transition: transform 0.3s ease-out, opacity 0.3s ease-out;}
     &:hover{padding-right: 66px;
@@ -638,7 +551,7 @@ $quaternaryColor5 : #D2D2D2;
     @media screen and (max-width:820px) {padding-right: 62px;line-height:normal; font-size: 12px; &::before{opacity: 1; font-size: 12px}}
 }
 
-.ctaWhite{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: $quaternaryColor1; background: #fff;border: 1px solid #fff; border-style: none; border: 1px solid $quaternaryColor2; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;
+.ctaWhite{@include terminamedium; @include font16; line-height: 100%; letter-spacing: -0.64px; color: $quaternaryColor1; background: #fff;border: 1px solid #fff; border-style: none; border: 1px solid $quaternaryColor2; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;
 
     &::before{content: '\e80a'; font-family:'fontello'; @include font16; font-weight: 400; position: absolute; width: 16px; top: 50%; transform: translateY(-50%); right: 32px; opacity: 0; transition: transform 0.3s ease-out, opacity 0.3s ease-out;}
 
