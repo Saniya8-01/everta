@@ -224,20 +224,14 @@ button {
 
 /************************************************ Fonts **************************************************/
 /************************************************ Common CSS **************************************************/
-body h1 {
-  font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  position: relative;
-  font-size: 96px;
-  line-height: 96px;
-  letter-spacing: -0.4px;
+body {
+  font-family: "verdana-pro", sans-serif;
+  font-weight: 400;
 }
 
 .ctaYellow {
   font-family: "termina", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: -0.64px;
@@ -327,7 +321,6 @@ body h1 {
 .ctaYellowBlack {
   font-family: "termina", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: -0.64px;
@@ -418,7 +411,6 @@ body h1 {
 .ctaWhiteBlack {
   font-family: "termina", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: -0.64px;
@@ -509,7 +501,6 @@ body h1 {
 .ctaBlack {
   font-family: "termina", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: -0.64px;
@@ -600,7 +591,6 @@ body h1 {
 .ctaWhite {
   font-family: "termina", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: -0.64px;
@@ -841,13 +831,11 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li::before {
   transition: 0.3s all ease-in-out;
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 150%;
   color: #1E1E1E;
   transition: 0.3s all ease-in-out;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .mainManu {
@@ -933,12 +921,11 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMe
   content: none;
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li p {
-  font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 20px;
   color: #323232;
   padding: 12px 40px;
+  font-weight: 700;
+  font-family: "termina", sans-serif;
 }
 @media screen and (max-width: 1600px) {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li p {
@@ -956,12 +943,10 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMe
   }
 }
 header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   color: #323232;
   padding: 12px 40px;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a {
@@ -1006,13 +991,12 @@ header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a 
   color: #F5F75E;
   font-size: 16px;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   letter-spacing: -0.64px;
   background: #1E1E1E;
   border-radius: 100px;
   transition: 0.3s all ease-in-out;
   line-height: 100%;
+  font-weight: 600;
 }
 @media screen and (max-width: 1600px) {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
@@ -1263,7 +1247,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
     font-size: 16px;
     font-family: "termina", sans-serif;
     font-weight: 700;
-    font-style: normal;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active::before {
     width: 100%;
@@ -1271,7 +1254,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active .mainManu {
     font-family: "termina", sans-serif;
     font-weight: 700;
-    font-style: normal;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li.dropdown.active .accordian-icon-wrapper {
     background: #F5F75E;
@@ -1291,7 +1273,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
     font-size: 16px;
     font-family: "termina", sans-serif;
     font-weight: 700;
-    font-style: normal;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .arrowImage {
     display: none;
@@ -1350,11 +1331,10 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li p {
     font-family: "termina", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 16px;
     color: #909090;
     padding: 0px;
+    font-weight: 400;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a {
     font-size: 16px;
@@ -1368,9 +1348,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .dropdownMenu ul li a.active {
     background: unset;
-    font-family: "verdana-pro", sans-serif;
     font-weight: 700;
-    font-style: normal;
   }
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .dropdown a {
     cursor: default;
@@ -1499,8 +1477,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   header .headerWrapper .headerMenu .languageTranslatorMbl .languageMenuMbl ul li a {
     font-family: "termina", sans-serif;
-    font-weight: 600;
-    font-style: normal;
     font-size: 12px;
     color: #323232;
     font-weight: 600;
@@ -1559,12 +1535,11 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 .contactForm .contactFormWrapper .contactHeading h2 {
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 48px;
   line-height: 160%;
   text-transform: uppercase;
   color: #1E1E1E;
+  font-weight: 600;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactHeading h2 {
@@ -1608,8 +1583,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
 .contactForm .contactFormWrapper .contactTop .formFields label {
   text-transform: capitalize;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 18px;
   line-height: 140%;
   font-weight: 600;
@@ -1627,9 +1600,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 .contactForm .contactFormWrapper .contactTop .formFields input {
   border-bottom: 1px solid #A5A5A5;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   color: #1E1E1E;
@@ -1648,12 +1618,10 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
 }
 .contactForm .contactFormWrapper .contactTop .formFields input::placeholder {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   color: #A5A5A5;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactTop .formFields input::placeholder {
@@ -1666,12 +1634,10 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
 }
 .contactForm .contactFormWrapper .contactTop .formFields input::-webkit-input-placeholder {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   color: #A5A5A5;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactTop .formFields input::-webkit-input-placeholder {
@@ -1691,11 +1657,9 @@ header .headerWrapper .headerMenu .hamburger-menu {
   background: transparent;
 }
 .contactForm .contactFormWrapper .contactTop .formFields .wpcf7-not-valid-tip {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   margin-top: 8px;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactTop .formFields .wpcf7-not-valid-tip {
@@ -1708,12 +1672,10 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
 }
 .contactForm .contactFormWrapper .contactTop .formFields .selected-dial-code {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   padding-bottom: 8px;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactTop .formFields .selected-dial-code {
@@ -1733,13 +1695,12 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 .contactForm .contactFormWrapper .contactBottom h3 {
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 24px;
   line-height: 120%;
   margin-bottom: 36px;
   font-weight: 600;
   color: #1E1E1E;
+  font-weight: 600;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactBottom h3 {
@@ -1758,9 +1719,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   margin-bottom: 48px;
 }
 .contactForm .contactFormWrapper .contactBottom .contactTab .contact-tab-btn {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 160%;
   background: #FFFFFF;
@@ -1769,6 +1727,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   color: #1E1E1E;
   border-radius: 100px;
   cursor: pointer;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactBottom .contactTab .contact-tab-btn {
@@ -1811,8 +1770,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields label {
   text-transform: capitalize;
   font-family: "termina", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 18px;
   line-height: 140%;
   font-weight: 600;
@@ -1830,9 +1787,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input {
   border-bottom: 1px solid #A5A5A5;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   color: #1E1E1E;
@@ -1851,9 +1805,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input::placeholder {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   color: #A5A5A5;
@@ -1870,9 +1821,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields input::-webkit-input-placeholder {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   color: #A5A5A5;
@@ -1889,9 +1837,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .wpcf7-not-valid-tip {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   margin-top: 8px;
 }
@@ -1910,9 +1855,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields textarea {
   border: 1px solid #A5A5A5;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   color: #1E1E1E;
@@ -1920,7 +1862,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   width: 100%;
   height: 148px;
   resize: none;
-  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields textarea {
@@ -1947,9 +1888,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .customSelect .selectBtn .sBtntext {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   font-weight: 400;
 }
@@ -1989,9 +1927,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   padding: 0 16px;
   align-items: center;
   background: #fff;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   font-weight: 400;
   text-align: left;
@@ -2037,11 +1972,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   width: 100%;
   border-bottom: 1px solid #A5A5A5;
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
-  font-weight: 400;
   line-height: 175%;
   background: transparent;
 }
@@ -2056,11 +1987,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
 }
 .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select option {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
-  font-weight: 400;
   text-align: left;
   line-height: 175%;
   color: #787878;
@@ -2106,9 +2033,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   cursor: pointer;
   border: 1px solid #A5A5A5;
   border-radius: 100px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   padding: 6px;
@@ -2132,8 +2056,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
 .contactForm .contactFormWrapper .contactBottom .formFields label {
   text-transform: capitalize;
   font-family: "termina", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 18px;
   line-height: 140%;
   font-weight: 600;
@@ -2151,9 +2073,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 .contactForm .contactFormWrapper .contactBottom .formFields textarea {
   border: 1px solid #A5A5A5;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   color: #1E1E1E;
@@ -2161,7 +2080,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   width: 100%;
   height: 148px;
   resize: none;
-  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .contactForm .contactFormWrapper .contactBottom .formFields textarea {
@@ -2174,9 +2092,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
 }
 .contactForm .contactFormWrapper .contactBottom .formFields .wpcf7-not-valid-tip {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   margin-top: 8px;
 }
@@ -2199,8 +2114,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
 .contactForm .contactFormWrapper .contactBottom .submitDiv input {
   order: 2;
   font-family: "termina", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   font-weight: 600;
   line-height: 100%;
@@ -2260,8 +2173,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 .contactForm .thankyouPopup .thankyouContent h2 {
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 42px;
   line-height: 160%;
   margin-bottom: 24px;
@@ -2290,12 +2201,8 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
 }
 .contactForm .thankyouPopup .thankyouContent p {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 160%;
-  font-weight: 400;
   color: #1E1E1E;
   width: 70%;
 }
@@ -2888,11 +2795,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerMenus {
 footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerMenuWrapper p {
   color: #1E1E1E;
   font-size: 20px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   line-height: 140%;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 @media screen and (max-width: 1600px) {
   footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerMenuWrapper p {
@@ -2917,11 +2822,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerM
 footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerMenuWrapper ul li a {
   color: #1E1E1E;
   font-size: 18px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   line-height: 140%;
   letter-spacing: -0.36px;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   footer .footerContainer .footerRight .footerRightContainer .footerMenus .footerMenuWrapper ul li a {
@@ -2952,11 +2855,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights {
 footer .footerContainer .footerRight .footerRightContainer .footerRights p {
   color: #1E1E1E;
   font-size: 18px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   line-height: 140%;
   letter-spacing: -0.36px;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   footer .footerContainer .footerRight .footerRightContainer .footerRights p {
@@ -2975,11 +2876,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 footer .footerContainer .footerRight .footerRightContainer .footerRights .footerBottomLinks a {
   color: #1E1E1E;
   font-size: 18px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   line-height: 140%;
   letter-spacing: -0.36px;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   footer .footerContainer .footerRight .footerRightContainer .footerRights .footerBottomLinks a {
@@ -3308,9 +3207,8 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   margin-bottom: 20px;
   color: #F5F75E;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 80px;
+  font-weight: 700;
   line-height: 120%;
   text-shadow: 0px 5.12px 43.52px rgba(0, 0, 0, 0.1);
 }
@@ -3342,9 +3240,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .bannerSection .bannerSectionWrapper .bannerSectionContent p {
   margin-bottom: 72px;
   color: #fff;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 @media all and (max-width: 1800px) {
   .bannerSection {
@@ -3544,9 +3439,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
   margin-bottom: 40px;
   margin-top: 40px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 160%;
   color: #1E1E1E;
@@ -3733,10 +3625,8 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     transform: translateY(0px);
   }
   .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
-    font-family: "verdana-pro", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 12px;
+    font-weight: 400;
     line-height: 24px;
     margin-bottom: 24px;
     margin-top: 24px;
@@ -3804,10 +3694,8 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     transform: translateY(0px);
   }
   .withEaseSection .divWrapper .leftContent .leftMobileTitle p {
-    font-family: "verdana-pro", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 12px;
+    font-weight: 400;
     line-height: 24px;
     margin-bottom: 24px;
     margin-top: 24px;
@@ -3837,13 +3725,12 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .evertaEveryoneSection .evertaEveryoneSectionWrapper .evertaEveryoneSectionHeading h2 {
   margin-bottom: 24px;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   padding-left: 120px;
   padding-right: 120px;
   text-transform: uppercase;
   line-height: 133.333%;
+  font-weight: 700;
   color: #1E1E1E;
 }
 @media screen and (max-width: 1600px) {
@@ -3894,10 +3781,8 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   margin-bottom: 56px;
   padding-left: 120px;
   padding-right: 120px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
+  font-weight: 400;
   line-height: 160%;
   color: #1E1E1E;
 }
@@ -3985,8 +3870,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content h3 {
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 36px;
   line-height: 100%;
   font-weight: 600;
@@ -4016,9 +3899,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   display: none;
   margin-bottom: 48px;
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   font-weight: 400;
@@ -4038,9 +3918,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   display: none;
   text-transform: capitalize;
   margin-top: 5px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 .evertaEveryoneSection .evertaEveryoneSectionWrapper .hover-section .hover-box .content a {
   display: none;
@@ -4098,8 +3975,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .evertaEveryoneSection .popup .overlay .popup-header h3 {
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 36px;
   line-height: 100%;
   font-weight: 600;
@@ -4130,9 +4005,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .evertaEveryoneSection .popup .overlay .popup-body p {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   font-weight: 400;
@@ -4433,8 +4305,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   text-transform: uppercase;
   font-weight: 700;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   margin-bottom: 86px;
   text-align: center;
 }
@@ -4563,8 +4433,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   color: #1E1E1E;
   text-align: center;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   font-weight: 700;
   line-height: 133.33%;
@@ -4595,9 +4463,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   color: #1E1E1E;
   text-align: center;
   width: 65%;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   font-weight: 400;
   line-height: 160%;
@@ -4625,9 +4490,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .chargingSection .tab-wrapper .tab-header .tab-buttons .tab-button {
   padding: 15px 50px;
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-weight: 400;
   line-height: 140%;
   font-size: 22px;
@@ -4691,8 +4553,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   margin-bottom: 32px;
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 36px;
   font-weight: 600;
   line-height: 133.333%;
@@ -4722,8 +4582,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   margin-bottom: 32px;
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 18px;
   font-weight: 600;
   line-height: 140%;
@@ -4741,9 +4599,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper p {
   text-align: center;
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   font-weight: 400;
   line-height: 175%;
@@ -4779,7 +4634,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   text-align: center;
   font-family: "termina", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 18px;
   opacity: 0;
   width: 100%;
@@ -5340,8 +5194,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   margin-bottom: 32px;
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   font-weight: 700;
   line-height: 133.333%;
@@ -5369,9 +5221,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .exploreSection .exploreSectionWrapper .leftContent .contentWrapper p {
   margin-bottom: 56px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   font-weight: 400;
   line-height: 160%;
@@ -5545,8 +5394,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   margin-top: 56px;
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   font-weight: 700;
   line-height: 133.333%;
@@ -5618,8 +5465,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .mapSection .mapSectionDivider .stats .statCard h3 {
   color: #fff;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 52px;
   letter-spacing: -1.04px;
   font-weight: 400;
@@ -5650,16 +5495,17 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   margin-bottom: 20px;
   color: #fff;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+  font-size: 12px;
   font-weight: 500;
   line-height: 140%;
 }
+@media screen and (max-width: 1440px) {
+  .mapSection .mapSectionDivider .stats .statCard h4 {
+    font-size: 10px;
+  }
+}
 .mapSection .mapSectionDivider .stats .statCard p {
   color: #fff;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   font-weight: 400;
@@ -5833,8 +5679,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   margin-bottom: 56px;
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   font-weight: 700;
   line-height: 133.333%;
@@ -5935,9 +5779,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonialPara {
   margin: 64px 0px 40px;
   color: #4B4B4B;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 160%;
 }
@@ -5971,9 +5812,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial h3 {
   margin-bottom: 8px;
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 20px;
   line-height: 140%;
   text-transform: capitalize;
@@ -5995,9 +5833,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .testimonialSection .testimonialSectionWrapper .testimonialCardWrapper .testimonialCard .testimonial p {
   color: #343434;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 150%;
 }
@@ -6396,12 +6231,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   color: #1E1E1E;
   margin-bottom: 32px;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 36px;
   line-height: 140%;
   letter-spacing: -0.72px;
   text-transform: uppercase;
+  font-weight: 700;
 }
 @media screen and (max-width: 1600px) {
   .formSection .formWrapper .formTitle h2 {
@@ -6425,9 +6259,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .formSection .formWrapper .formTitle p {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 150%;
 }
@@ -6463,9 +6294,8 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .formSection .formWrapper .wpcf7 form .input label {
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 18px;
+  font-weight: 700;
 }
 @media screen and (max-width: 1600px) {
   .formSection .formWrapper .wpcf7 form .input label {
@@ -6482,9 +6312,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   background: transparent;
   border-bottom: 1px solid rgba(62, 62, 62, 0.27);
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   padding: 7px 0px 14px 0px;
 }
@@ -6500,9 +6327,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .formSection .formWrapper .wpcf7 form .input input::placeholder {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
 }
 @media screen and (max-width: 1600px) {
@@ -6516,9 +6340,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
 }
 .formSection .formWrapper .wpcf7 form .wpcf7-not-valid-tip {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 14px;
 }
 @media screen and (max-width: 1440px) {
@@ -6531,8 +6352,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 }
 .formSection .formWrapper .wpcf7 form .ctaDiv input {
   font-family: "termina", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   font-weight: 600;
   line-height: 100%;
@@ -6917,8 +6736,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   margin-bottom: 40px;
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   font-weight: 700;
   line-height: 133.333%;
@@ -7007,9 +6824,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   background-color: #F5F75E;
 }
 .faqSection .container .accordions-wrapper .accordion .accordion-header h4 {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
   line-height: 120%;
   color: #1E1E1E;
@@ -7068,9 +6882,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   font-size: 18px;
   line-height: 140%;
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   transition: 0.5s all ease-in-out;
   color: #4B4B4B;
 }
@@ -7254,9 +7065,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     align-items: start;
   }
   .faqSection .container .accordions-wrapper .accordion .accordion-header h4 {
-    font-family: "verdana-pro", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
@@ -7325,8 +7133,6 @@ body {
 .careerBannerSection .careerSectionWrapper .secHeading h1 {
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 80px;
   font-weight: 600;
   line-height: 120%;
@@ -7360,11 +7166,7 @@ body {
   width: 80%;
   margin: 20px 0 36px;
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
-  font-weight: 400;
   line-height: 166%;
 }
 @media screen and (max-width: 1600px) {
@@ -7526,9 +7328,7 @@ body {
   color: #1E1E1E;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 48px;
-  font-weight: 700;
   line-height: 134%;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -7555,11 +7355,7 @@ body {
 }
 .careerTeamSection .careerSectionWrapper .secHeading p {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
-  font-weight: 400;
   line-height: 134%;
 }
 @media screen and (max-width: 1600px) {
@@ -7601,11 +7397,7 @@ body {
 }
 .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .sBtntext {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
-  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .careerTeamSection .careerSectionWrapper .careerFilterSection .selFilter .customSelect .selectBtn .sBtntext {
@@ -7645,11 +7437,7 @@ body {
   align-items: center;
   background: #fff;
   font-size: 18px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
-  font-weight: 400;
   text-align: left;
   color: #787878;
   border-bottom: 1px solid #CCCCCC;
@@ -7696,8 +7484,6 @@ body {
 }
 .careerTeamSection .careerSectionWrapper .careerFilterSection .filterBtnContainer button {
   font-family: "termina", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   font-weight: 600;
   line-height: 100%;
@@ -7771,8 +7557,6 @@ body {
 .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent h3 {
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 32px;
   font-weight: 600;
   line-height: 113%;
@@ -7815,11 +7599,7 @@ body {
 .careerTeamSection .careerSectionWrapperTwo .careerPositionBox .subBoxContent .posSubContent div h4 {
   color: #1E1E1E;
   text-align: justify;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
-  font-weight: 400;
   line-height: 166%;
 }
 @media screen and (max-width: 1600px) {
@@ -7867,11 +7647,7 @@ body {
 }
 .careerTeamSection .dnfContainer p {
   color: #8e8e8e;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 28px;
-  font-weight: 400;
   line-height: 134%;
   text-align: center;
 }
@@ -8233,8 +8009,6 @@ body {
 }
 .careerCVSection .careerSectionWrapper h2 {
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   text-transform: uppercase;
   font-size: 48px;
   font-weight: 700;
@@ -8265,11 +8039,7 @@ body {
 .careerCVSection .careerSectionWrapper p {
   color: #1E1E1E;
   text-align: center;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
-  font-weight: 400;
   line-height: 167%;
   margin: 20px 0 52px;
 }
@@ -8399,8 +8169,6 @@ body {
 .careerHiringSection .careerSectionWrapper .secHeading h2 {
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   font-weight: 700;
   line-height: 134%;
@@ -8430,11 +8198,7 @@ body {
   width: 65%;
   color: #1E1E1E;
   text-align: center;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
-  font-weight: 400;
   line-height: 167%;
 }
 @media screen and (max-width: 1600px) {
@@ -8487,8 +8251,6 @@ body {
   box-sizing: border-box;
   color: #F5F75E;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 28px;
   font-weight: 600;
   border-radius: 100%;
@@ -8516,8 +8278,6 @@ body {
 .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox .contentBox .subHeadings h3 {
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 24px;
   font-weight: 700;
   line-height: 134%;
@@ -8535,11 +8295,7 @@ body {
   }
 }
 .careerHiringSection .careerSectionWrapper .hiringProcessContainer .hiringProcessBox .contentBox .subHeadings h6 {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
-  font-weight: 400;
   line-height: 160%;
   text-align: center;
   visibility: hidden;
@@ -8823,8 +8579,6 @@ body {
   color: #1E1E1E;
   text-align: center;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 80px;
   font-weight: 700;
   line-height: 138%;
@@ -9102,11 +8856,7 @@ body {
   margin-bottom: 13px;
   color: #1E1E1E;
   text-align: justify;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
-  font-weight: 400;
   line-height: 175%;
   padding: 4px 8px;
   border-radius: 2px;
@@ -9126,8 +8876,6 @@ body {
 .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent h3 {
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 32px;
   font-weight: 600;
   line-height: 113%;
@@ -9184,11 +8932,7 @@ body {
 .careerOpeningModal .modalContent .jobHeadingDesc .jobHeadingDescSub .headingDescContent .subBoxContent .posSubContent div h4 {
   color: #1E1E1E;
   text-align: justify;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
-  font-weight: 400;
   line-height: 166%;
 }
 @media screen and (max-width: 1600px) {
@@ -9211,11 +8955,10 @@ body {
   padding-right: 64px;
 }
 .careerOpeningModal .modalContent .jobDescription .detailWrapper h2 {
-  color: #000;
+  color: #4B4B4B;
   text-align: left;
   font-family: "verdana-pro", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 32px;
   line-height: 150%;
   margin-bottom: 8px;
@@ -9241,11 +8984,10 @@ body {
   }
 }
 .careerOpeningModal .modalContent .jobDescription .detailWrapper h3 {
-  color: #000;
+  color: #4B4B4B;
   text-align: left;
   font-family: "verdana-pro", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 24px;
   line-height: 150%;
   margin-bottom: 8px;
@@ -9265,7 +9007,6 @@ body {
   text-align: left;
   font-family: "verdana-pro", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 20px;
   line-height: 140%;
   margin-bottom: 8px;
@@ -9286,11 +9027,10 @@ body {
   }
 }
 .careerOpeningModal .modalContent .jobDescription .detailWrapper h5 {
-  color: #000;
+  color: #4B4B4B;
   text-align: left;
   font-family: "verdana-pro", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 16px;
   line-height: 150%;
   margin-bottom: 8px;
@@ -9308,11 +9048,7 @@ body {
 .careerOpeningModal .modalContent .jobDescription .detailWrapper p {
   color: #1E1E1E;
   text-align: justify;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
-  font-weight: 400;
   line-height: 175%;
   margin-bottom: 20px;
 }
@@ -9335,11 +9071,7 @@ body {
   margin-bottom: 8px;
   color: #1E1E1E;
   text-align: justify;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
-  font-weight: 400;
   line-height: 175%;
   margin-bottom: 8px;
 }
@@ -9365,11 +9097,7 @@ body {
   margin-bottom: 8px;
   color: #1E1E1E;
   text-align: justify;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
-  font-weight: 400;
   line-height: 175%;
   margin-bottom: 8px;
 }
@@ -9664,8 +9392,7 @@ body {
   margin-bottom: 20px;
   color: #1e1e1e;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+  font-size: 600;
   font-size: 80px;
   line-height: 120%;
 }
@@ -9696,9 +9423,6 @@ body {
 }
 .journeySection .journeySecWrapper .secHeading p {
   color: #1e1e1e;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
   line-height: 166%;
 }
@@ -9841,9 +9565,6 @@ body {
 }
 .missionSection .missionSecWrapper .mainContainer .card .hoverContent .cardTxt p {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
   line-height: 166%;
   overflow: hidden;
@@ -9877,7 +9598,6 @@ body {
   text-shadow: 0px 6.577px 55.902px rgba(0, 0, 0, 0.1);
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   line-height: 110%;
   letter-spacing: -0.96px;
@@ -10208,8 +9928,7 @@ body {
   text-align: center;
   color: #F5F75E;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  font-weight: 600;
   font-size: 80px;
   line-height: 120%;
 }
@@ -10260,7 +9979,6 @@ body {
 .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox h5 {
   font-family: "verdana-pro", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 28px;
   line-height: 140%;
   text-transform: capitalize;
@@ -10283,9 +10001,6 @@ body {
 }
 .ourStrengthsSec .secWrapper .innerSec .cardsGroup .card .contentBox p {
   color: #1e1e1e;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
 }
@@ -10545,7 +10260,6 @@ body {
   color: #1E1E1E;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   line-height: 133%;
   text-transform: uppercase;
@@ -10574,9 +10288,6 @@ body {
 .ourStorySec .secWrapper .mainContainer .contentBox p {
   color: #1E1E1E;
   text-align: justify;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 175%;
   margin-bottom: 20px;
@@ -10618,9 +10329,6 @@ body {
   margin-top: 24px;
   position: relative;
   padding-left: 10px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
 }
@@ -10811,7 +10519,6 @@ body {
   text-align: center;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   line-height: 133%;
   text-transform: uppercase;
   font-size: 48px;
@@ -10840,9 +10547,6 @@ body {
 .foundersSec .secWrapper .secHeading p {
   color: #1E1E1E;
   text-align: center;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 160%;
 }
@@ -10881,9 +10585,6 @@ body {
 }
 .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox p {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
   line-height: 133%;
   margin-bottom: 10px;
@@ -10900,9 +10601,7 @@ body {
 }
 .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox h6 {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 24px;
   line-height: 140%;
   text-transform: capitalize;
@@ -11154,9 +10853,6 @@ body {
 .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p:first-child {
   color: #1E1E1E;
   font-size: 16px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   line-height: 250%;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -11175,7 +10871,6 @@ body {
   color: #1E1E1E;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 42px;
   line-height: 142%;
   text-transform: uppercase;
@@ -11203,9 +10898,6 @@ body {
 }
 .poweringIdeaSec .secWrapper .poweringMainContainer .contentBox .innerContentGroup p {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 160%;
   margin-bottom: 40px;
@@ -11399,7 +11091,6 @@ body {
   text-align: center;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   line-height: 133%;
   text-transform: uppercase;
@@ -11522,7 +11213,6 @@ body {
   color: #F5F75E;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   line-height: 133%;
   text-transform: uppercase;
@@ -11553,9 +11243,6 @@ body {
 }
 .visitUsSec .secWrapper .visiUsMainContainer .addressContent .visitUsSliderBox .addressBox p {
   color: #FAFAFA;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 28px;
   line-height: 142%;
   margin-bottom: 10px;
@@ -11806,8 +11493,6 @@ body {
   gap: 10px;
   color: #4B4B4B;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 20px;
   line-height: 140%;
   font-weight: 600;
@@ -11829,9 +11514,6 @@ body {
 }
 .resDetailBannerSec .secWrapper .backBtn a .backArrow {
   color: #4B4B4B;
-  font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 20px;
 }
 .resDetailBannerSec .secWrapper .backBtn a .backArrow::before {
@@ -11842,7 +11524,6 @@ body {
   text-shadow: 0px 5.12px 43.52px rgba(0, 0, 0, 0.1);
   font-family: "termina", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 48px;
   line-height: 133%;
   margin-bottom: 50px;
@@ -12026,7 +11707,6 @@ body {
   color: #000;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 32px;
   line-height: 150%;
 }
@@ -12055,7 +11735,6 @@ body {
   color: #000;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 24px;
   line-height: 150%;
 }
@@ -12074,7 +11753,6 @@ body {
   color: #000;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 20px;
   line-height: 160%;
 }
@@ -12098,7 +11776,6 @@ body {
   color: #000;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 16px;
   line-height: 150%;
 }
@@ -12114,9 +11791,6 @@ body {
 }
 .resDetailContentSec .secWrapper .contentBox p {
   color: #000;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 160%;
   margin-bottom: 30px;
@@ -12143,9 +11817,6 @@ body {
 .resDetailContentSec .secWrapper .contentBox ol li {
   list-style: decimal;
   color: #000;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 160%;
   margin-bottom: 10px;
@@ -12168,7 +11839,6 @@ body {
 .resDetailContentSec .secWrapper .contentBox ol li span {
   font-family: "verdana-pro", sans-serif;
   font-weight: 700;
-  font-style: normal;
 }
 .resDetailContentSec .secWrapper .contentBox ol li ul, .resDetailContentSec .secWrapper .contentBox ol li ol, .resDetailContentSec .secWrapper .contentBox ol li p {
   margin-top: 10px;
@@ -12180,9 +11850,6 @@ body {
 .resDetailContentSec .secWrapper .contentBox ul li {
   list-style: disc;
   color: #000;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 160%;
   margin-bottom: 10px;
@@ -12205,7 +11872,6 @@ body {
 .resDetailContentSec .secWrapper .contentBox ul li span {
   font-family: "verdana-pro", sans-serif;
   font-weight: 700;
-  font-style: normal;
 }
 .resDetailContentSec .secWrapper .contentBox ul li ul, .resDetailContentSec .secWrapper .contentBox ul li ol, .resDetailContentSec .secWrapper .contentBox ul li p {
   margin-top: 10px;
@@ -12221,9 +11887,6 @@ body {
   padding-left: 10px;
   color: #000;
   font-size: 16px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   line-height: 175%;
   margin: 16px 0;
 }
@@ -12250,9 +11913,6 @@ body {
   padding-left: 10px;
   color: #000;
   font-size: 16px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   line-height: 175%;
   margin: 16px 0;
 }
@@ -12287,9 +11947,6 @@ body {
   padding: 0 10px;
   color: #000;
   font-size: 20px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   line-height: 140%;
   font-style: italic;
 }
@@ -12321,9 +11978,6 @@ body {
   padding: 0 10px;
   color: #000;
   font-size: 20px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   line-height: 140%;
   font-style: italic;
   background: #F5F75E;
@@ -12590,7 +12244,6 @@ body {
 .relatedPostSec .secWrapper .secHeading h2 {
   font-family: "termina", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 48px;
   line-height: 133%;
   text-transform: uppercase;
@@ -12652,9 +12305,6 @@ body {
   background: #F5F75E;
   border-radius: 4px;
   color: #000;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   transition: 0.3s all ease-in-out;
@@ -12674,9 +12324,6 @@ body {
 .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content p {
   margin: 24px 0 14px 0;
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
   line-height: 166%;
 }
@@ -12697,9 +12344,6 @@ body {
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul li {
   color: #000;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   position: relative;
@@ -13156,12 +12800,11 @@ body {
 .resourcesBanner .resorucesBannerWrapper h1 {
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 80px;
   margin-bottom: 20px;
   text-align: center;
   line-height: 120%;
+  font-weight: 600;
 }
 @media screen and (max-width: 1800px) {
   .resourcesBanner .resorucesBannerWrapper h1 {
@@ -13190,9 +12833,6 @@ body {
 }
 .resourcesBanner .resorucesBannerWrapper p {
   color: #4B4B4B;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
   font-weight: 400;
   line-height: 133.333%;
@@ -13217,9 +12857,6 @@ body {
 }
 .resourcesBanner .resorucesBannerWrapper .resourcesTabs .resourcesTabWrapper a {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 140%;
   font-weight: 400;
@@ -13251,9 +12888,6 @@ body {
   background: #ffffff;
 }
 .resourcesBanner .searchWrapper input {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   color: #1E1E1E;
   padding: 12px 0px;
@@ -13277,9 +12911,6 @@ body {
   }
 }
 .resourcesBanner .searchWrapper input::placeholder {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   color: #1E1E1E;
 }
@@ -13299,9 +12930,6 @@ body {
   }
 }
 .resourcesBanner .searchWrapper input::-webkit-input-placeholder {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   color: #1E1E1E;
 }
@@ -13589,8 +13217,6 @@ body {
   margin-bottom: 64px;
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 36px;
   font-weight: 600;
   line-height: 133.333%;
@@ -13700,8 +13326,6 @@ body {
 
 .no-posts-message {
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 36px;
   line-height: 100%;
   font-weight: 600;
@@ -13761,8 +13385,6 @@ body {
   margin-bottom: 24px;
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 36px;
   font-weight: 600;
   line-height: 133.333%;
@@ -13805,9 +13427,6 @@ body {
 }
 .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper a {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 140%;
   font-weight: 400;
@@ -13866,9 +13485,6 @@ body {
 }
 .cardSection .cardSectionWrapper .customSelect .selectBtn .sBtntext {
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   font-weight: 400;
 }
@@ -13908,9 +13524,6 @@ body {
   padding: 0 16px;
   align-items: center;
   background: #fff;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   font-weight: 400;
   text-align: left;
@@ -13974,9 +13587,6 @@ body {
   border-radius: 4px;
   background: var(--Yellow-100, #F5F75E);
   padding: 4px 9px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   font-weight: 400;
@@ -14001,9 +13611,6 @@ body {
 }
 .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo h3 {
   margin-bottom: 14px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
   line-height: 166.667%;
   font-weight: 400;
@@ -14020,9 +13627,6 @@ body {
   }
 }
 .cardSection .cardSectionWrapper .cardGrid .cards .cardContent .cardInfo .cardTypo p {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   font-weight: 400;
@@ -14069,9 +13673,6 @@ body {
   background: #ffffff;
   color: #1E1E1E;
   border-radius: 50%;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
   line-height: 166.667%;
   font-weight: 400;
@@ -14590,8 +14191,6 @@ body {
   margin-bottom: 64px;
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 36px;
   font-weight: 600;
   line-height: 133.333%;
@@ -14654,8 +14253,6 @@ body {
 }
 .manualBrochureSection .container .accordions-wrapper .accordion .accordion-header h4 {
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-weight: 600;
   line-height: 112.5%;
   font-size: 32px;
@@ -14729,13 +14326,11 @@ body {
   background: #F2F3F3;
 }
 .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
   line-height: 166.667%;
   margin-bottom: 10px;
   position: relative;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .fileType {
@@ -14774,12 +14369,10 @@ body {
 .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .pdfName {
   flex-shrink: 0;
   margin-right: 66px;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   text-transform: capitalize;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .manualBrochureSection .container .accordions-wrapper .accordion .accordion-body .brochureDiv .brochureElement .pdfWrapper .pdfName {
@@ -15276,8 +14869,6 @@ body {
   gap: 10px;
   color: #4B4B4B;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 20px;
   line-height: 140%;
   font-weight: 600;
@@ -15299,9 +14890,6 @@ body {
 }
 .privacyPolicySec .backBtn a .backArrow {
   color: #4B4B4B;
-  font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 20px;
 }
 @media screen and (max-width: 1600px) {
@@ -15329,8 +14917,6 @@ body {
   color: #1E1E1E;
   text-shadow: 0px 5.12px 43.52px rgba(0, 0, 0, 0.1);
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 48px;
   font-weight: 600;
   line-height: 133%;
@@ -15360,7 +14946,6 @@ body {
   font-size: 32px;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   line-height: 150%;
   margin: 64px 0px 24px;
 }
@@ -15389,7 +14974,6 @@ body {
   font-size: 28px;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   line-height: 150%;
   margin: 52px 0px 20px;
 }
@@ -15413,7 +14997,6 @@ body {
   font-size: 24px;
   font-family: "termina", sans-serif;
   font-weight: 700;
-  font-style: normal;
   line-height: 150%;
   margin: 40px 0px 20px;
 }
@@ -15429,11 +15012,7 @@ body {
 }
 .privacyPolicySec .privacyContent .ContentBox p {
   color: #000;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
-  font-weight: 400;
   line-height: 160%;
   margin-bottom: 20px;
 }
@@ -15458,11 +15037,7 @@ body {
 .privacyPolicySec .privacyContent .ContentBox ul li {
   list-style-type: disc;
   color: #000;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
-  font-weight: 400;
   line-height: 160%;
   margin-bottom: 20px;
 }
@@ -15487,11 +15062,7 @@ body {
 .privacyPolicySec .privacyContent .ContentBox ol li {
   list-style-type: decimal;
   color: #000;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
-  font-weight: 400;
   line-height: 160%;
   margin-bottom: 20px;
 }
@@ -15627,9 +15198,7 @@ body {
 }
 .page-404 .image-container .content404 p {
   color: #FFF;
-  font-family: Verdana;
   font-size: 24px;
-  font-weight: 400;
   line-height: 166%;
   margin-bottom: 36px;
 }
@@ -15735,8 +15304,6 @@ body {
 .productBanner .productBannerWrapper .bannerHeading h1 {
   margin-bottom: 4px;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 64px;
   line-height: 150%;
   text-transform: uppercase;
@@ -15772,8 +15339,6 @@ body {
 }
 .productBanner .productBannerWrapper .productDetails p {
   font-family: "termina", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 18px;
   font-weight: 600;
   line-height: 155.556%;
@@ -15973,8 +15538,6 @@ body {
   .productBanner .productBannerWrapper .productDetails p span {
     font-weight: 700;
     font-family: "termina", sans-serif;
-    font-weight: 600;
-    font-style: normal;
   }
   .productBanner .productBannerWrapper .productDetails p::after {
     width: 180px;
@@ -16057,8 +15620,6 @@ body {
 .secondFold .secondFoldWrapper .industryCard h3 {
   margin-bottom: 24px;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 32px;
   font-weight: 600;
   line-height: 112.5%;
@@ -16085,12 +15646,8 @@ body {
   }
 }
 .secondFold .secondFoldWrapper .industryCard p {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 168%;
-  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .secondFold .secondFoldWrapper .industryCard p {
@@ -16297,8 +15854,6 @@ body {
 }
 .industryStandardSection .sectionWrapper .bottomInfo h3 {
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 36px;
   font-weight: 600;
   line-height: 133.333%;
@@ -16351,12 +15906,8 @@ body {
   transition: 0.3s all ease-in-out;
 }
 .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-slide {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   color: #000000;
   font-size: 24px;
-  font-weight: 400;
   line-height: 166.66%;
   transition: 0.3s all ease-in-out;
   height: auto !important;
@@ -16374,9 +15925,6 @@ body {
 .industryStandardSection .sectionWrapper .bottomInfo .autoScroller .scrollAnimation .animationWrapper .animate.slick-current {
   padding-top: 10px;
   color: #006E50;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 137.5%;
@@ -16671,8 +16219,6 @@ body {
 }
 .productInfoSection .productInfoWrapper .headingWrapper h2 {
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   font-weight: 700;
   line-height: 133.333%;
@@ -16702,11 +16248,7 @@ body {
   }
 }
 .productInfoSection .productInfoWrapper .headingWrapper p {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 24px;
-  font-weight: 400;
   line-height: 166.667%;
   color: #4B4B4B;
   text-align: center;
@@ -16766,8 +16308,6 @@ body {
 }
 .productInfoSection .productInfoWrapper .productDetails .feature .information h4 {
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 24px;
   font-weight: 700;
   line-height: 133.333%;
@@ -16789,9 +16329,6 @@ body {
   }
 }
 .productInfoSection .productInfoWrapper .productDetails .feature .information p {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 175%;
   font-weight: 400;
@@ -17027,17 +16564,12 @@ body {
   }
   .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .sliderContent h4 {
     font-family: "termina", sans-serif;
-    font-weight: 600;
-    font-style: normal;
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
     margin-bottom: 12px;
   }
   .productInfoSection .productInfoWrapper .productDetails .mobileUi .mobileSliderContainer .sliderContent p {
-    font-family: "verdana-pro", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
@@ -17125,8 +16657,6 @@ body {
 .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordionHeading h2 {
   margin-bottom: 48px;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   font-weight: 700;
   line-height: 133.333%;
@@ -17184,8 +16714,6 @@ body {
 }
 .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header h4 {
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 24px;
   line-height: 133.333%;
   color: #1E1E1E;
@@ -17194,6 +16722,7 @@ body {
   order: 1;
   transition: 0.5s all ease-in-out;
   text-transform: uppercase;
+  font-weight: 700;
 }
 @media screen and (max-width: 1600px) {
   .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-header h4 {
@@ -17247,11 +16776,7 @@ body {
 }
 .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body ul li {
   position: relative;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
-  font-weight: 400;
   line-height: 160%;
   color: #696969;
 }
@@ -17281,11 +16806,7 @@ body {
   top: 12px;
 }
 .technicalDetailsSection .technicalDetailsWrapper .accordionContainer .accordions-wrapper .accordion .accordion-body p {
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
-  font-weight: 400;
   line-height: 168%;
   color: #696969;
 }
@@ -17649,8 +17170,6 @@ body {
   color: #1E1E1E;
   text-align: center;
   font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 48px;
   font-weight: 700;
   line-height: 133.33%;
@@ -17704,8 +17223,6 @@ body {
   margin-bottom: 32px;
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 36px;
   font-weight: 600;
   line-height: 133.333%;
@@ -17735,8 +17252,6 @@ body {
   margin-bottom: 32px;
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 18px;
   font-weight: 600;
   line-height: 140%;
@@ -17754,11 +17269,7 @@ body {
 .productSection .productWrapper .tabContent .cards .card .card-wrapper p {
   text-align: center;
   color: #1E1E1E;
-  font-family: "verdana-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
-  font-weight: 400;
   line-height: 175%;
 }
 @media screen and (max-width: 1600px) {
@@ -17791,9 +17302,8 @@ body {
   color: #F5F75E;
   text-align: center;
   font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
   font-size: 18px;
+  font-weight: 600;
   opacity: 0;
   width: 100%;
   z-index: 2;
