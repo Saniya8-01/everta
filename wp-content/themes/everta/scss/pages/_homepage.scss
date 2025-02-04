@@ -1,73 +1,24 @@
-.bannerSection {
-    position: relative;
-    margin-top: 100px;
-    margin-bottom: 200px;
-    height: calc(100vh - 96px);
-    overflow: hidden;
-
+.bannerSection {position: relative;margin-top: 100px;margin-bottom: 200px;height: calc(100vh - 96px);overflow: hidden;
     .bannerSectionWrapper {
-        .bannerImageWrapper {
-            height: 100%;
-            position: relative;
+        .bannerImageWrapper {height: 100%;position: relative;
             img{width: 100%;}
-            .mobileImage {
-                display: none;
-            }
-            .blackOverlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(90deg, rgba(30, 30, 30, 0.70) 5.02%, rgba(111, 111, 111, 0.70) 53.08%, rgba(44, 44, 44, 0.40) 103.08%);
-                mix-blend-mode: overlay;
-            }
+            .mobileImage {display: none;}
+            .blackOverlay {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: linear-gradient(90deg, rgba(30, 30, 30, 0.70) 5.02%, rgba(111, 111, 111, 0.70) 53.08%, rgba(44, 44, 44, 0.40) 103.08%);mix-blend-mode: overlay;}
         }
         .videoDiv{overflow: hidden;
             .mobileVideo{display: none;width: 100%;}
             .desktopVideo{width: 100%;}
         }
-        .bannerSectionContent {
-            position: absolute;
-            left: 120px;
-            top: 240px;
-            width: 75%;
-
-            h1 {
-                margin-bottom: 20px;
-                color: $primaryColor1;
-                @include terminabold;
-                @include font80;
-                line-height: 120%;
-                text-shadow: 0px 5.12px 43.52px rgba(0, 0, 0, 0.10);
-            }
-
-            p {
-                margin-bottom: 72px;
-                color: #fff;
-                @include verdanaregular
-            }
+        .bannerSectionContent {position: absolute;left: 120px;top: 240px;width: 75%;
+            h1 {margin-bottom: 20px;color: $primaryColor1;@include termina;@include font80;font-weight: 700;line-height: 120%;text-shadow: 0px 5.12px 43.52px rgba(0, 0, 0, 0.10);}
+            p {margin-bottom: 72px;color: #fff;}
         }
     }
-
-    @media all and (max-width:1800px) {
-        margin-top: 96px;
-        margin-bottom: 180px;
-        height: auto;
-
+    @media all and (max-width:1800px) {margin-top: 96px;margin-bottom: 180px;height: auto;
         .bannerSectionWrapper {
-            .bannerSectionContent {
-                left: 100px;
-                top: 220px;
-                width: 70%;
-
-                h1 {
-                    margin-bottom: 18px;
-                }
-
-                p {
-                    margin-bottom: 70px;
-                }
+            .bannerSectionContent {left: 100px;top: 220px;width: 70%;
+                h1 {margin-bottom: 18px;}
+                p {margin-bottom: 70px;}
             }
         }
     }
@@ -260,7 +211,7 @@
                 .leftMobileTitle {transform: translateY(0px);}
             }
             .leftMobileTitle {transform: translateY(500px);transition: 0.8s all ease-in-out;
-                p {margin-bottom: 40px;margin-top: 40px;@include verdanaregular;@include font20;line-height: 160%;color: $quaternaryColor1;}
+                p {margin-bottom: 40px;margin-top: 40px;@include font20;line-height: 160%;color: $quaternaryColor1;}
             }
         }
 
@@ -337,7 +288,7 @@
             .leftContent {@include wrapper;width: 100%;position: unset;
                 img {width: 60%;}
                 .leftMobileTitle {transform: translateY(0px);
-                    p {@include verdanaregular;font-size: 12px;line-height: 24px;margin-bottom: 24px;margin-top: 24px;}
+                    p {font-size: 12px;font-weight: 400;line-height: 24px;margin-bottom: 24px;margin-top: 24px;}
                 }
             }
 
@@ -353,7 +304,7 @@
             .leftContent {@include wrapper;width: 100%;position: unset;
                 img {width: 60%;}
                 .leftMobileTitle {transform: translateY(0px);
-                    p {@include verdanaregular;font-size: 12px;line-height: 24px;margin-bottom: 24px;margin-top: 24px;}
+                    p {font-size: 12px;font-weight: 400;line-height: 24px;margin-bottom: 24px;margin-top: 24px;}
                 }
             }
             .rightContent {overflow: hidden;width: 100%;padding-left: 25px;
@@ -373,8 +324,8 @@
 .evertaEveryoneSection {margin-bottom: 200px;
     .evertaEveryoneSectionWrapper {
         .evertaEveryoneSectionHeading {
-            h2 {margin-bottom: 24px;@include terminabold;@include font48;@include wrapper;text-transform: uppercase;line-height: 133.333%;color: $quaternaryColor1;}
-            p {margin-bottom: 56px;@include wrapper;@include verdanaregular;@include font20;line-height: 160%;color: $quaternaryColor1;}
+            h2 {margin-bottom: 24px;@include termina;@include font48;@include wrapper;text-transform: uppercase;line-height: 133.333%;font-weight: 700;color: $quaternaryColor1;}
+            p {margin-bottom: 56px;@include wrapper;@include font20;font-weight: 400;line-height: 160%;color: $quaternaryColor1;}
         }
         .hover-section {display: flex;flex-direction: column;position: relative;
             .hover-box {padding: 70px 120px;display: flex;justify-content: space-between;align-items: center;position: relative;overflow: hidden;border-bottom: 1px solid #D8DBDC;transition: 0.4s all ease-in-out;height: 190px;margin-bottom: -2px;z-index: 1;
@@ -388,9 +339,9 @@
                     .image {opacity: 1;height: auto;}
                 }
                 .content {flex-basis: 45%;
-                    h3 {@include terminamedium;@include font36;line-height: 100%;font-weight: 600;color: $quaternaryColor1;}
-                    p {display: none;margin-bottom: 48px;color: $quaternaryColor1; @include verdanaregular;@include font16;line-height: 175%;font-weight: 400;padding: 0px;}
-                    .toggle{display: none; text-transform: capitalize; margin-top: 5px; @include verdanaregular;}
+                    h3 {@include termina;@include font36;line-height: 100%;font-weight: 600;color: $quaternaryColor1;}
+                    p {display: none;margin-bottom: 48px;color: $quaternaryColor1;@include font16;line-height: 175%;font-weight: 400;padding: 0px;}
+                    .toggle{display: none; text-transform: capitalize; margin-top: 5px;}
                     a {display: none;}
                 }
                 .image {flex-basis: 30%;opacity: 0;transition: opacity 0.3s ease-in-out;z-index: 1;height: 0;}
@@ -402,10 +353,10 @@
         .overlay{width: 70%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff;
             .popup-header{padding: 50px 40px 40px 40px; background: $primaryColor1;
                 .close {position: absolute;right: 0px;top: 20px;width: 51px;height: 51px;font-size: 20px;cursor: pointer;}
-                h3{@include terminamedium;@include font36;line-height: 100%;font-weight: 600;color: $quaternaryColor1;}
+                h3{@include termina;@include font36;line-height: 100%;font-weight: 600;color: $quaternaryColor1;}
             }
             .popup-body{padding: 40px; 
-                p {color: $quaternaryColor1;@include verdanaregular;@include font16;line-height: 175%;font-weight: 400;}
+                p {color: $quaternaryColor1;@include font16;line-height: 175%;font-weight: 400;}
             }
         }
     }
@@ -555,7 +506,7 @@
             line-height: 112.5%;
             text-transform: uppercase;
             font-weight: 700;
-            @include terminabold;
+            @include termina;
             margin-bottom: 86px;
             text-align: center;
         }
@@ -662,7 +613,7 @@
                 margin-bottom: 24px;
                 color: $quaternaryColor1;
                 text-align: center;
-                @include terminabold;
+                @include termina;
                 @include font48;
                 font-weight: 700;
                 line-height: 133.33%;
@@ -674,7 +625,6 @@
                 color: $quaternaryColor1;
                 text-align: center;
                 width: 65%;
-                @include verdanaregular;
                 @include font20;
                 font-weight: 400;
                 line-height: 160%;
@@ -688,7 +638,6 @@
                 .tab-button {
                     padding: 15px 50px;
                     color: $quaternaryColor1;
-                    @include verdanaregular;
                     font-weight: 400;
                     line-height: 140%;
                     @include font22;
@@ -742,7 +691,7 @@
                             text-align: center;
                             margin-bottom: 32px;
                             color: $quaternaryColor1;
-                            @include terminamedium;
+                            @include termina;
                             @include font36;
                             font-weight: 600;
                             line-height: 133.333%;
@@ -752,7 +701,7 @@
                             text-align: center;
                             margin-bottom: 32px;
                             color: $quaternaryColor1;
-                            @include terminamedium;
+                            @include termina;
                             @include font18;
                             font-weight: 600;
                             line-height: 140%;
@@ -761,7 +710,7 @@
                         p {
                             text-align: center;
                             color: $quaternaryColor1;
-                            @include verdanaregular;
+                
                             @include font16;
                             font-weight: 400;
                             line-height: 175%;
@@ -788,7 +737,8 @@
                         background: $primaryColor1;
                         color: $primaryColor1;
                         text-align: center;
-                        @include terminamedium;
+                        @include termina;
+                        font-weight: 600;
                         @include font18;
                         opacity: 0;
                         width: 100%;
@@ -1422,7 +1372,7 @@
                 h2 {
                     margin-bottom: 32px;
                     color: $quaternaryColor1;
-                    @include terminabold;
+                    @include termina;
                     @include font48;
                     font-weight: 700;
                     line-height: 133.333%;
@@ -1431,7 +1381,6 @@
 
                 p {
                     margin-bottom: 56px;
-                    @include verdanaregular;
                     @include font20;
                     font-weight: 400;
                     line-height: 160%;
@@ -1644,7 +1593,7 @@
                 margin-bottom: 46px;
                 margin-top: 56px;
                 color: $quaternaryColor1;
-                @include terminabold;
+                @include termina;
                 @include font48;
                 font-weight: 700;
                 line-height: 133.333%;
@@ -1673,7 +1622,7 @@
 
                 h3 {
                     color: #fff;
-                    @include terminamedium;
+                    @include termina;
                     @include font52;
                     letter-spacing: -1.04px;
                     font-weight: 400;
@@ -1684,14 +1633,14 @@
                 h4 {
                     margin-bottom: 20px;
                     color: #fff;
-                    @include terminamedium;
+                    @include termina;
+                    @include font12;
                     font-weight: 500;
                     line-height: 140%;
                 }
 
                 p {
                     color: #fff;
-                    @include verdanaregular;
                     @include font16;
                     line-height: 175%;
                     font-weight: 400;
@@ -1884,7 +1833,7 @@
             h2 {
                 margin-bottom: 56px;
                 color: $quaternaryColor1;
-                @include terminabold;
+                @include termina;
                 @include font48;
                 font-weight: 700;
                 line-height: 133.333%;
@@ -1913,7 +1862,6 @@
                 .testimonialPara {
                     margin: 64px 0px 40px;
                     color: $quaternaryColor2;
-                    @include verdanaregular;
                     @include font20;
                     line-height: 160%;
                 }
@@ -1934,7 +1882,6 @@
                     h3 {
                         margin-bottom: 8px;
                         color: $quaternaryColor1;
-                        @include verdanabold;
                         @include font20;
                         line-height: 140%;
                         text-transform: capitalize;
@@ -1942,7 +1889,6 @@
 
                     p {
                         color: #343434;
-                        @include verdanaregular;
                         @include font20;
                         line-height: 150%;
                     }
@@ -2226,16 +2172,16 @@
             h2 {
                 color: $quaternaryColor1;
                 margin-bottom: 32px;
-                @include terminabold;
+                @include termina;
                 @include font36;
                 line-height: 140%;
                 letter-spacing: -0.72px;
                 text-transform: uppercase;
+                font-weight: 700;
             }
 
             p {
                 color: $quaternaryColor1;
-                @include verdanaregular;
                 @include font20;
                 line-height: 150%;
             }
@@ -2244,16 +2190,16 @@
             flex-basis: 60%;
             form{display: flex;gap:56px;
                 .input {width: 75%;display: flex;flex-direction: column;gap: 17px;flex-shrink: 0;
-                        label {color: $quaternaryColor1;@include terminabold;@include font18;}
-                        input {width: 100%;background: transparent;border-bottom: 1px solid rgba(62, 62, 62, 0.27);color: $quaternaryColor1;@include verdanaregular;@include font16;padding: 7px 0px 14px 0px;
-                            &::placeholder {color: $quaternaryColor1;@include verdanaregular; @include font16;}
+                        label {color: $quaternaryColor1;@include termina;@include font18;font-weight: 700;}
+                        input {width: 100%;background: transparent;border-bottom: 1px solid rgba(62, 62, 62, 0.27);color: $quaternaryColor1;@include font16;padding: 7px 0px 14px 0px;
+                            &::placeholder {color: $quaternaryColor1;@include font16;}
                         }
                 }
-                .wpcf7-not-valid-tip{@include verdanaregular;@include font14;}
+                .wpcf7-not-valid-tip{@include font14;}
         
                 .ctaDiv {
                     flex-shrink: 0;
-                    input{@include terminaregular; @include font16; font-weight: $fontW600; line-height: 100%; letter-spacing: -0.64px; color: $primaryColor1; background: $quaternaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;}
+                    input{@include termina; @include font16; font-weight: 600; line-height: 100%; letter-spacing: -0.64px; color: $primaryColor1; background: $quaternaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;}
                     .wpcf7-spinner{display: none;}
                 }
                 .wpcf7-response-output{display: none;}
@@ -2498,7 +2444,7 @@
         h2 {
             margin-bottom: 40px;
             color: $quaternaryColor1;
-            @include terminabold;
+            @include termina;
             @include font48;
             font-weight: 700;
             line-height: 133.333%;
@@ -2553,7 +2499,6 @@
                     }
 
                     h4 {
-                        @include verdanaregular;
                         @include font24;
                         line-height: 120%;
                         color: $quaternaryColor1;
@@ -2608,7 +2553,6 @@
                         @include font18;
                         line-height: 140%;
                         color: $quaternaryColor1;
-                        @include verdanaregular;
                         transition: 0.5s all ease-in-out;
                         color: #4B4B4B;
                     }
@@ -2882,7 +2826,6 @@
                         align-items: start;
 
                         h4 {
-                            @include verdanaregular;
                             font-weight: 400;
                             font-size: 16px;
                             line-height: 28px;
