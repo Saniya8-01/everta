@@ -439,7 +439,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
     }
     .thankyouPopup{padding: 72px;background:$primaryColor1;border:12px solid $primaryColor1;height:100%;
         .closeBtn{position: absolute;right: 96px;top: 96px;}
-        .thankyouContent{margin-top: 246px;
+        .thankyouContent{margin-top: 220px;
             .icon{width: 228px;height: 228px;overflow: hidden;border: 2px solid $quaternaryColor1;border-radius: 50%;margin-bottom: 48px;padding: 50px 30px;img{width: 100%;height: 100%;}}
             h2{@include terminamedium;@include font42;line-height: 160%;margin-bottom: 24px;font-weight: 600;text-transform: uppercase;color: #1E1E1E}
             p{@include verdanaregular;@include font20;line-height: 160%;font-weight: 400;color: #1E1E1E;width: 70%;}
@@ -492,7 +492,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
     }
     .thankyouPopup{padding: 60px;
         .closeBtn{right: 80px;top: 80px;}
-        .thankyouContent{margin-top: 150px;
+        .thankyouContent{margin-top: 140px;
             .icon{width: 200px;height: 200px;margin-bottom: 40px;padding: 40px 24px;}
             h2{margin-bottom: 22px;}
 
