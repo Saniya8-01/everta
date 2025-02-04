@@ -67,7 +67,7 @@
             .card{width: 50%; padding: 140px 10px 120px 120px;  transition: width 0.8s ease; position: relative; overflow: hidden;
                 .hoverContent{margin-bottom: 35px;display: flex; align-items: center; transition:  0.4s ease-in; position: relative;
                     .cardTxt{width: 70%; overflow: hidden; height: 180px;
-                        p{color: $quaternaryColor1; @include verdanaregular; @include font24; line-height: 166%; overflow: hidden; transition: 0.4s all ease-in; transform: translateX(-100%);}
+                        p{color: $quaternaryColor1; @include font24; line-height: 166%; overflow: hidden; transition: 0.4s all ease-in; transform: translateX(-100%);}
                     }
                     .cardIcon{width: 180px; display: flex; justify-content: flex-start; position: absolute; left: 0; top: 0; transition: 0.4s all ease-in;
                         img{transition: 0.6s all ease-in;}
@@ -498,7 +498,7 @@
                     }
                     .slick-current.slick-active{transform: scaleY(1); opacity: 1;
                         figure{
-                            figcaption{opacity: 1; margin-top: 24px; position: relative; padding-left: 10px; @include verdanaregular; @include font16; line-height: 175%;
+                            figcaption{opacity: 1; margin-top: 24px; position: relative; padding-left: 10px; @include font16; line-height: 175%;
                                 &::before{content: ""; position: absolute; width: 1px; height: 100%; left: 0; border-left: 1px solid #000;}
                             } 
                         }
