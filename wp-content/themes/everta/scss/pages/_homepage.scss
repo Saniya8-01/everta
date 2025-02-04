@@ -1599,7 +1599,7 @@
                     margin-bottom: 20px;
                     color: #fff;
                     @include termina;
-                    @include font12;
+                    font-size: 12px;
                     font-weight: 500;
                     line-height: 140%;
                 }
@@ -2470,6 +2470,7 @@
                         width: 95%;
                         order: 2;
                         transition: 0.5s all ease-in-out;
+                        font-weight: 400;
                     }
 
                     .accordian-icon-wrapper {

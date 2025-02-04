@@ -5499,11 +5499,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   font-weight: 500;
   line-height: 140%;
 }
-@media screen and (max-width: 1440px) {
-  .mapSection .mapSectionDivider .stats .statCard h4 {
-    font-size: 10px;
-  }
-}
 .mapSection .mapSectionDivider .stats .statCard p {
   color: #fff;
   font-size: 16px;
@@ -6830,6 +6825,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   width: 95%;
   order: 2;
   transition: 0.5s all ease-in-out;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .faqSection .container .accordions-wrapper .accordion .accordion-header h4 {
