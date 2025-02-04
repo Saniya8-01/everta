@@ -6830,6 +6830,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   width: 95%;
   order: 2;
   transition: 0.5s all ease-in-out;
+  font-weight: 400;
 }
 @media screen and (max-width: 1600px) {
   .faqSection .container .accordions-wrapper .accordion .accordion-header h4 {
