@@ -829,19 +829,41 @@ if($(".careerTeamSection").length){
 }
 
 function openForm() {
-    document.getElementById("contactForm").classList.add("open");
-    $('body').css("overflow-y", "hidden");
-    $('html').css("overflow-y", "hidden");
-    $('body').css("background", "hidden");
+    const contactForm = document.getElementById("contactForm");
+    contactForm.classList.add("open");
+
+    $('body, html').css({
+        "overflow-y": "hidden",
+        "overflow-x": "hidden",
+    });
 }
 
 function closeForm() {
-    document.getElementById("contactForm").classList.remove("open");
-    $('body').css("overflow-y", "visible");
-    $('body').css("overflow-x", "hidden");
-    $('html').css("overflow-y", "visible");
-    $('html').css("overflow-x", "hidden");
+    const contactForm = document.getElementById("contactForm");
+    contactForm.classList.remove("open");
+
+    $('body, html').css({
+        "overflow-y": "visible",
+        "overflow-x": "hidden",
+    });
 }
+
+document.addEventListener("click", function (event) {
+    const contactForm = document.getElementById("contactForm");
+    const contactFormWrapper = document.querySelector(".contactFormWrapper");
+    const contactButton = document.querySelector(".ctaContact .mainManu");
+
+    if (
+        contactForm.classList.contains("open") &&
+        !contactFormWrapper.contains(event.target) &&
+        event.target !== contactButton &&
+        !contactButton.contains(event.target)
+    ) {
+        closeForm();
+    }
+});
+
+
 
 if ($('.careerWallSection').length) {
     document.addEventListener("DOMContentLoaded", () => {
@@ -986,6 +1008,7 @@ $(window).scroll(function () {
 });
 }
 
+
 // document.addEventListener('DOMContentLoaded', function () {
 //     const languageTranslator = document.querySelector('.languageTranslatorMbl');
 //     const languageMenu = document.querySelector('.languageMenuMbl');
@@ -1002,44 +1025,54 @@ $(window).scroll(function () {
 //     });
 // });
 
-// Check if the user is a first-time visitor
-document.addEventListener("DOMContentLoaded", () => {
-    const progressBar = document.getElementById("progress-bar");
-    const overlay = document.getElementById("overlay");
-    
-    let simulatedProgress = 0;
-    let progressComplete = false;
+if ($(".loaderOverlay").length) {
+    document.addEventListener("DOMContentLoaded", () => {
+      const progressBar = document.getElementById("progress-bar");
+      const overlay = document.getElementById("overlay");
+      let progress = 0;
+      let isPageLoaded = false;
   
-    const simulateProgress = () => {
-      if (simulatedProgress < 90) {
-        simulatedProgress += 1;
-        progressBar.style.width = `${simulatedProgress}%`;
-      }
-    };
+      // Function to update progress bar
+      const updateProgressBar = (target) => {
+        const interval = setInterval(() => {
+          if (progress < target) {
+            progress++;
+            progressBar.style.width = `${progress}%`;
+          } else {
+            clearInterval(interval);
+            if (progress === 100 && isPageLoaded) {
+              hideLoader(); // Only hide loader if progress is complete and page is loaded
+            }
+          }
+        }, 20);
+      };
   
-    const simulationInterval = setInterval(simulateProgress, 50);
+      // Start the initial progress up to 90%
+      updateProgressBar(90);
   
-    // Simulate loading for localhost testing
-    setTimeout(() => {
-      window.dispatchEvent(new Event("load"));
-    }, 2000); // Simulate a 2-second loading delay
+      // Handle page load event
+      window.addEventListener("load", () => {
+        isPageLoaded = true;
+        updateProgressBar(100); // Progress to 100% after load
+      });
   
-    window.addEventListener("load", () => {
-      clearInterval(simulationInterval);
-      progressBar.style.width = "100%";
-  
-      setTimeout(() => {
-        overlay.style.opacity = "0";
+      // Function to hide the loader overlay
+      const hideLoader = () => {
         setTimeout(() => {
-          overlay.style.display = "none";
+          overlay.style.opacity = "0"; // Fade out
+          setTimeout(() => {
+            overlay.style.display = "none"; // Remove after fade
+          }, 500); // Match fade-out duration
         }, 500);
-      }, 500);
-    });
+      };
   
-    if (document.readyState === "complete" && !progressComplete) {
-      window.dispatchEvent(new Event("load"));
-    }
-  });
+      // Fallback for fast local page loads
+      if (document.readyState === "complete") {
+        window.dispatchEvent(new Event("load"));
+      }
+    });
+  }
+  
   
   if ($(".homepageFaq").length) {
     jQuery(document).ready(function () {
@@ -1323,7 +1356,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const productBanner = document.querySelector('.productBanner');
         if (productBanner) {
             productBanner.setAttribute('id', 'animatedBanner');
-            console.log('ID added to .productBanner');
         }
     }, 1000); 
 });
@@ -1513,8 +1545,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 resizeActiveAccordionBody();
             });
         });
-    }
-  
+    } 
   
   
   

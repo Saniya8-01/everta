@@ -333,7 +333,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
     }
 }
 
-.contactForm{position: fixed;top:0;right:-110%;transition:0.3s all ease-in-out;z-index: 99;width: 1100px;height:100vh;
+.contactForm{position: fixed;top:0;right:-110%;transition:0.6s all ease-in-out;z-index: 99;width: 1100px;height:100vh;
     &.open{right: 0;}
     .contactFormWrapper{padding: 72px;background:#FFFFFF;border:12px solid $primaryColor1;overflow-y:auto !important;height:100% !important;  -ms-overflow-style: none; /* IE/Edge */
     /* Custom scrollbar for WebKit-based browsers */
@@ -365,9 +365,11 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                     &::placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;}
                     &::-webkit-input-placeholder{@include verdanaregular;@include font16;line-height: 175%;color: #A5A5A5;}
                 }
+                .selected-flag{background: transparent;padding: 0px;&:hover{background: transparent;}}
                 .wpcf7-not-valid-tip{@include verdanaregular;@include font16;margin-top: 8px}
                 .selected-dial-code{@include verdanaregular;@include font16;line-height: 175%;padding-bottom: 8px;}
                 .iti-arrow{margin-top:-5px;}
+                .iti-flag{margin-bottom:20px;}
             }
         }
         .contactBottom{
@@ -406,7 +408,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                             }
                             &.active .options{display: block; opacity: 0; z-index: 10; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; animation-duration: 0.4s; animation-fill-mode: both; -webkit-animation-duration: 0.4s; -webkit-animation-fill-mode: both;}
                         }
-                        select{padding:7px 0px 20px 0px;width: 100%;border-bottom: 1px solid #A5A5A5;color: $quaternaryColor1; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%;
+                        select{padding:7px 0px 20px 0px;width: 100%;border-bottom: 1px solid #A5A5A5;color: $quaternaryColor1; @include verdanaregular; @include font16; font-weight: $fontW400;line-height: 175%;background:transparent;
                             option{@include verdanaregular; @include font16; font-weight: $fontW400; text-align: left;line-height: 175%; color: $quaternaryColor3; border-bottom: 1px solid #CCCCCC;
                                 &:hover{background-color: #f1f1f1;}
                             }
@@ -435,12 +437,22 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
             }
         }
     }
+    .thankyouPopup{padding: 72px;background:$primaryColor1;border:12px solid $primaryColor1;height:100%;
+        .closeBtn{position: absolute;right: 96px;top: 96px;}
+        .thankyouContent{margin-top: 220px;
+            .icon{width: 228px;height: 228px;overflow: hidden;border: 2px solid $quaternaryColor1;border-radius: 50%;margin-bottom: 48px;padding: 50px 30px;img{width: 100%;height: 100%;}}
+            h2{@include terminamedium;@include font42;line-height: 160%;margin-bottom: 24px;font-weight: 600;text-transform: uppercase;color: #1E1E1E}
+            p{@include verdanaregular;@include font20;line-height: 160%;font-weight: 400;color: #1E1E1E;width: 70%;}
+        }
+    }
     @media all and (max-width: 1600px){width: 1100px;
     .contactFormWrapper{padding: 60px;
         .contactHeading{margin-bottom:32px;}
         .contactTop{gap:36px;margin-bottom:42px;
             .formFields{flex-basis:calc(50% - 18px);gap:15px;
                 input{padding:7px 0px 14px 0px;}
+                .iti-flag{margin-bottom:19px;}
+                .iti-arrow{margin-top:-6px;}
             }
         }
         .contactBottom{
@@ -478,6 +490,14 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
             }
         }
     }
+    .thankyouPopup{padding: 60px;
+        .closeBtn{right: 80px;top: 80px;}
+        .thankyouContent{margin-top: 140px;
+            .icon{width: 200px;height: 200px;margin-bottom: 40px;padding: 40px 24px;}
+            h2{margin-bottom: 22px;}
+
+        }
+    }
     }
     @media all and (max-width: 1440px){width: 1100px;
         .contactFormWrapper{padding: 50px;
@@ -485,6 +505,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
             .contactTop{gap:36px;margin-bottom:42px;
                 .formFields{flex-basis:calc(50% - 18px);gap:15px;
                     input{padding:7px 0px 14px 0px;}
+                    .iti-flag{margin-bottom:18px;}
                 }
             }
             .contactBottom{
@@ -519,14 +540,22 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                 }
             }
         }
-    }
+        .thankyouPopup{padding: 50px;
+            .closeBtn{right: 70px;top: 70px;}
+            .thankyouContent{margin-top: 120px;
+                .icon{width: 180px;height: 180px;margin-bottom: 36px;padding: 36px 20px;}
+                h2{margin-bottom: 20px;}
     
+            }
+        }
+    }
     @media all and (max-width: 1280px){width: 1000px;
         .contactFormWrapper{padding: 42px;
             .contactHeading{margin-bottom:26px;}
             .contactTop{gap:32px;margin-bottom:36px;
                 .formFields{flex-basis:calc(50% - 16px);gap:14px;
                     input{padding:6px 0px 12px 0px;}
+                    .iti-flag{margin-bottom:15px;}
                 }
             }
             .contactBottom{
@@ -563,6 +592,13 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                 }
             }
         }
+        .thankyouPopup{padding: 42px;
+            .closeBtn{right: 60px;top: 60px;}
+            .thankyouContent{margin-top: 100px;
+                .icon{width: 160px;height: 160px;margin-bottom: 32px;padding: 32px 20px;}
+                h2{margin-bottom: 20px;}
+            }
+        }
     }
     @media all and (max-width:820px){width: 100%;}
     @media all and (max-width:768px){
@@ -581,6 +617,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                     &::-webkit-input-placeholder{font-size: 12px;line-height: 18px;}
                 }
                 .selected-dial-code{font-size: 12px;line-height: 18px;}
+                .iti-flag{margin-bottom:16px;}
             }
         }
         .contactBottom{
@@ -627,6 +664,14 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
             .submitDiv {margin-top:48px;justify-content:center;
                 input{line-height:normal; font-size: 12px;letter-spacing:-0.48px;padding: 18px 32px;}
             }
+        }
+    }
+    .thankyouPopup{padding: 42px 20px;
+        .closeBtn{right: 30px;top: 30px;}
+        .thankyouContent{margin-top: 100px;
+            .icon{width: 120px;height: 120px;margin-bottom: 32px;padding: 32px 20px;}
+            h2{margin-bottom: 20px;}
+            p{width: 90%;}
         }
     }
     }
