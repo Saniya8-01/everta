@@ -2154,6 +2154,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   position: absolute;
   right: 96px;
   top: 96px;
+  cursor: pointer;
 }
 .contactForm .thankyouPopup .thankyouContent {
   margin-top: 220px;
