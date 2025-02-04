@@ -1,14 +1,14 @@
 .resDetailBannerSec{margin-top: 170px; margin-bottom: 120px;
     .secWrapper{@include wrapper; width: 70%; margin: 0 auto;
         .backBtn{margin-bottom: 32px; display: inline-block;
-            a{display: flex; align-items: center; gap: 10px; color: $quaternaryColor2; @include terminabold; @include font20; line-height: 140%; font-weight: $fontW600;
-                .backArrow{color: $quaternaryColor2; @include terminabold; font-size: 20px;
+            a{display: flex; align-items: center; gap: 10px; color: $quaternaryColor2; @include termina; @include font20; line-height: 140%; font-weight: 600;
+                .backArrow{color: $quaternaryColor2; @include termina; font-size: 20px;font-weight: 600;
                     &::before{margin: 0;}
                 }
             }
         }
         .secHeading{
-            h1{color: $quaternaryColor1; text-shadow: 0px 5.12px 43.52px rgba(0, 0, 0, 0.10); @include terminamedium; @include font48; line-height: 133%; margin-bottom: 50px;}
+            h1{color: $quaternaryColor1; text-shadow: 0px 5.12px 43.52px rgba(0, 0, 0, 0.10); @include termina; @include font48; line-height: 133%; margin-bottom: 50px;font-weight: 600;}
             .imgBox{
                 .mbl{display: none;}
             }
@@ -76,42 +76,42 @@
     .secWrapper{@include wrapper; width: 70%; margin: 0 auto; overflow: hidden;
         .contentBox{ position: relative; transition: 0.8s all ease-in-out; overflow: hidden; 
             &.hideTxt{ max-height: 1068px; overflow: hidden; transition: 0.8s all ease-in;}
-            h2{margin-bottom: 24px; color: #000; @include terminabold; @include font32; line-height: 150%;}
-            h3{margin-bottom: 24px; color: #000; @include terminabold; @include font24; line-height: 150%;}
-            h4{margin-bottom: 24px; color: #000; @include terminabold; @include font20; line-height: 160%;}
-            h5{margin-bottom: 24px; color: #000; @include terminabold; @include font16; line-height: 150%;}
+            h2{margin-bottom: 24px; color: #000; @include termina; @include font32; line-height: 150%;font-weight: 700;}
+            h3{margin-bottom: 24px; color: #000; @include termina; @include font24; line-height: 150%;font-weight: 700;}
+            h4{margin-bottom: 24px; color: #000; @include termina; @include font20; line-height: 160%;font-weight: 700;}
+            h5{margin-bottom: 24px; color: #000; @include termina; @include font16; line-height: 150%;font-weight: 700;}
 
-            p{color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 30px;}
+            p{color: #000;@include font20; line-height: 160%; margin-bottom: 30px;}
             ol{margin-left: 45px; margin-bottom: 50px;
-                li{list-style: decimal; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
-                    span{@include verdanabold;}
+                li{list-style: decimal; color: #000; @include font20; line-height: 160%; margin-bottom: 10px;
+                    span{font-weight: 700;}
                     ul,ol,p{margin-top: 10px;}
                 }
             }
             ul{margin-left: 45px; margin-bottom: 50px;
-                li{list-style: disc; color: #000; @include verdanaregular; @include font20; line-height: 160%; margin-bottom: 10px;
-                    span{@include verdanabold;}
+                li{list-style: disc; color: #000; @include font20; line-height: 160%; margin-bottom: 10px;
+                    span{font-weight: 700;}
                     ul,ol,p{margin-top: 10px;}
                 }
             }
             img{margin-bottom: 30px;}
             figure{margin-bottom: 30px;}
             .imgFig{
-                figcaption{position: relative; padding-left: 10px; color: #000; @include font16; @include verdanaregular; line-height: 175%; margin: 16px 0;
+                figcaption{position: relative; padding-left: 10px; color: #000; @include font16;  line-height: 175%; margin: 16px 0;
                     &::before{content:''; position: absolute; top: 0; border-left: 2px solid #000; height: 100%; left: 0; }
                 }
             }
-            .wp-caption-text, .wp-element-caption{position: relative; padding-left: 10px; color: #000; @include font16; @include verdanaregular; line-height: 175%; margin: 16px 0;
+            .wp-caption-text, .wp-element-caption{position: relative; padding-left: 10px; color: #000; @include font16;line-height: 175%; margin: 16px 0;
                 &::before{content:''; position: absolute; top: 0; border-left: 2px solid #000; height: 100%; left: 0; }
             }
             .figCaptionBox{padding: 40px 0 0 0;
                 .singleCaption{background: #F5F75E; padding: 36px 0 20px;  margin-bottom: 0;
-                    figcaption{position: relative; padding: 0 10px; color: #000; @include font20; @include verdanaregular; line-height: 140%; font-style: italic; 
+                    figcaption{position: relative; padding: 0 10px; color: #000; @include font20;line-height: 140%; font-style: italic; 
                         &::before{content:''; position: absolute; top: 0; border-left: 2px solid #000; height: 100%; left: 0; }
                     }
                 }
             }
-            .highlightedTxt{position: relative; padding: 0 10px; color: #000; @include font20; @include verdanaregular; line-height: 140%; font-style: italic; background: #F5F75E; padding: 36px 0 20px 10px;
+            .highlightedTxt{position: relative; padding: 0 10px; color: #000; @include font20;  line-height: 140%; font-style: italic; background: #F5F75E; padding: 36px 0 20px 10px;
                 &::before{content:''; position: absolute;  border-left: 2px solid #000; height: calc(100% - 56px); left: 0; }
             }
             .bottomspace{margin-bottom: 34px; overflow: auto; border: none;}
@@ -223,7 +223,7 @@
 .relatedPostSec{margin-bottom: 240px;
     .secWrapper{@include wrapper; width: 70%; margin: 0 auto;
         .secHeading{margin-bottom: 64px;
-            h2{@include terminamedium; @include font48; line-height: 133%; text-transform: uppercase; text-align: center;}
+            h2{@include termina; @include font48; line-height: 133%; text-transform: uppercase; text-align: center;font-weight: 600;}
         }
         .cardContainer{display: block;
             .blogCard{width: calc(50% - 15px); border: 1px solid $quaternaryColor5; transition: 0.3s all ease-in-out; margin: 0 15px; position: relative;
@@ -233,10 +233,10 @@
                     }
                     .contentBox{padding: 0 24px 55px; display: flex; align-items: flex-end; justify-content: space-between; 
                         .content{width: 100%;
-                            span{padding: 4px 8px; background: $primaryColor1; border-radius: 4px; color: #000; @include verdanaregular; @include font16; line-height: 175%; transition: 0.3s all ease-in-out; text-transform: capitalize; display: inline-block;}
-                            p{margin: 24px 0 14px 0; color: $quaternaryColor1; @include verdanaregular; @include font24; line-height: 166%;}
+                            span{padding: 4px 8px; background: $primaryColor1; border-radius: 4px; color: #000; @include font16; line-height: 175%; transition: 0.3s all ease-in-out; text-transform: capitalize; display: inline-block;}
+                            p{margin: 24px 0 14px 0; color: $quaternaryColor1; @include font24; line-height: 166%;}
                             ul{display: flex; align-items: center; gap: 10px;
-                                li{color: #000; @include verdanaregular; @include font16; line-height: 175%; position: relative;
+                                li{color: #000;@include font16; line-height: 175%; position: relative;
                                     &:last-child{padding-left: 15px;
                                         &::before{content: ''; position: absolute; width: 5px; height: 5px; background: #000; top: 12px;left: 0; border-radius: 100%;}
                                     }

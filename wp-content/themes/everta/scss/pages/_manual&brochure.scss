@@ -3,7 +3,7 @@
         h2 {
             margin-bottom: 64px;
             color: $quaternaryColor1;
-            @include terminamedium;
+            @include termina;
             @include font36;
             font-weight: 600;
             line-height: 133.333%;
@@ -18,7 +18,7 @@
                     .accordion-header{padding-bottom: 78px;}
                 }
                 .accordion-header{padding: 42px 120px;
-                    h4{@include terminamedium;font-weight: 600;line-height: 112.5%;@include font32;color: #1E1E1E;}
+                    h4{@include termina;font-weight: 600;line-height: 112.5%;@include font32;color: #1E1E1E;}
                 }
                 .accordion-body{@include wrapper;width: 100%;
                     .brochureDiv{display: flex;padding-left:24px;
@@ -26,12 +26,12 @@
                             &:nth-child(1){.pdfWrapper{background: rgba(245, 247, 94, 0.60);}}
                             &:nth-child(2){.pdfWrapper{background: rgba(0, 110, 80, 0.40);}}
                             &:nth-child(3){.pdfWrapper{background: #F2F3F3;}}
-                            .fileType{@include verdanaregular;@include font24;line-height: 166.667%;margin-bottom: 10px;position: relative;
+                            .fileType{@include font24;line-height: 166.667%;margin-bottom: 10px;position: relative;font-weight:400;
                                 &::before{content: "";position: absolute;width: 10px;height: 10px;top: 50%;transform: translateY(-50%);left: -24px;background: #1E1E1E;border-radius: 50%;}
                             }
                             .pdfWrapper{display: flex;align-items:center;padding:8px 22px 8px 8px;&:not(:last-child){margin-bottom: 16px;}box-sizing: border-box;width: 100%; 
                                 img{margin-right: 12px;}
-                                .pdfName{flex-shrink: 0;margin-right: 66px;@include verdanaregular;@include font16;line-height: 175%;text-transform:capitalize;}
+                                .pdfName{flex-shrink: 0;margin-right: 66px;@include font16;line-height: 175%;text-transform:capitalize;font-weight: 400;}
                                 .downloadLogo{margin-right: 0;}
                             }
                         }

@@ -11,10 +11,10 @@ footer{
             .footerRightContainer{display: flex;gap: 70px;flex-direction: column;
                 .footerMenus{display: grid;grid-template-columns: repeat(4,1fr);gap: 60px 120px;
                     .footerMenuWrapper{
-                        p{color: $quaternaryColor1;@include font20;@include verdanabold;line-height: 140%;margin-bottom: 20px;}
+                        p{color: $quaternaryColor1;@include font20;line-height: 140%;margin-bottom: 20px;font-weight: 700;}
                         ul{display: flex;flex-direction:column;gap:4px;
                             li{
-                                a{color: $quaternaryColor1;@include font18;@include verdanaregular;line-height: 140%;letter-spacing: -0.36px;&:not(:last-child){margin-bottom: 4px;}}
+                                a{color: $quaternaryColor1;@include font18;line-height: 140%;letter-spacing: -0.36px;font-weight: 400;&:not(:last-child){margin-bottom: 4px;}}
                                 .underline{text-decoration: underline;}
                             }
                         }
@@ -24,9 +24,9 @@ footer{
                     }
                 }
                 .footerRights{padding-top: 45px;border-top: 1px solid $quaternaryColor4;display: flex;justify-content: space-between;align-items: center;
-                    p{color: $quaternaryColor1;@include font18;@include verdanaregular;line-height: 140%;letter-spacing: -0.36px;}
+                    p{color: $quaternaryColor1;@include font18;line-height: 140%;letter-spacing: -0.36px;font-weight: 400;}
                     .footerBottomLinks{display: flex;gap: 24px;
-                        a{color: $quaternaryColor1;@include font18;@include verdanaregular;line-height: 140%;letter-spacing: -0.36px;}
+                        a{color: $quaternaryColor1;@include font18;line-height: 140%;letter-spacing: -0.36px;font-weight: 400;}
                     }
                 }
             }
