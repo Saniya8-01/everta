@@ -213,8 +213,9 @@ if ($(".testimonialSection").length) {
     var $progressBar = $(".progress-bar");
     var autoplaySpeed = 5000;
     var $progressContainer = $(".progresBar");
-    
-    $slider.on('init', function(event, slick) {
+    var progressTimeout;
+
+    $slider.on("init", function (event, slick) {
         if (slick.slideCount > slick.options.slidesToShow) {
             startProgressBar();
         } else {
@@ -227,61 +228,55 @@ if ($(".testimonialSection").length) {
         slidesToShow: 2.4,
         arrows: false,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: autoplaySpeed,
+        autoplay: false, // Custom autoplay logic
         speed: 1000,
         infinite: false,
         initialSlide: 0,
         focusOnSelect: true,
         cssEase: "linear",
-
         responsive: [
-            {
-                breakpoint: 1440,
-                settings: {
-                    slidesToShow: 2.2,
-                }
-            },
-            {
-                breakpoint: 821,
-                settings: {
-                    slidesToShow: 1.5,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
+            { breakpoint: 1440, settings: { slidesToShow: 2.2 } },
+            { breakpoint: 821, settings: { slidesToShow: 1.5 } },
+            { breakpoint: 768, settings: { slidesToShow: 1 } }
         ]
     });
 
     function startProgressBar() {
+        resetProgressBar();
         $progressBar.css({
-            width: "0%", 
-            transition: "none",
+            width: "100%",
+            transition: `width ${autoplaySpeed}ms linear`
         });
 
-        setTimeout(() => {
-            $progressBar.css({
-                width: "100%",
-                transition: `width ${autoplaySpeed}ms linear`,
-            });
-        }, 10);
+        clearTimeout(progressTimeout);
+        progressTimeout = setTimeout(() => {
+            if ($slider.slick("slickCurrentSlide") < $slider.slick("getSlick").slideCount - $slider.slick("getSlick").options.slidesToShow) {
+                $slider.slick("slickNext");
+            } else {
+                $slider.slick("slickGoTo", 0);
+            }
+        }, autoplaySpeed);
     }
 
-    $slider.on("beforeChange", function (event, slick) {
-        if (slick.slideCount > slick.options.slidesToShow) {
-            startProgressBar();
-            $progressBar.show();
-            $progressContainer.show();
-        } else {
-            $progressBar.hide();
-            $progressContainer.hide();
-        }
+    function resetProgressBar() {
+        clearTimeout(progressTimeout);
+        $progressBar.css({
+            width: "0%",
+            transition: "none"
+        });
+    }
+
+    // Handle progress reset and sync on all events
+    $slider.on("beforeChange", resetProgressBar);
+    $slider.on("afterChange", startProgressBar);
+
+    // Handle focus-based slide change sync
+    $slider.on("setPosition", function () {
+        resetProgressBar();
+        startProgressBar();
     });
-} 
+}
+
 function initializeSlick() {
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
@@ -829,7 +824,7 @@ if($(".careerTeamSection").length){
 }
 
 function openForm() {
-    const contactForm = document.getElementById("contactForm");
+    const contactForm = document.getElementById("contactFormContainer");
     contactForm.classList.add("open");
 
     $('body, html').css({
@@ -839,7 +834,7 @@ function openForm() {
 }
 
 function closeForm() {
-    const contactForm = document.getElementById("contactForm");
+    const contactForm = document.getElementById("contactFormContainer");
     contactForm.classList.remove("open");
 
     $('body, html').css({
@@ -1550,15 +1545,283 @@ if ($(".technicalDetailsSection").length) {
     });
 } 
   
-  
-  
+// Pagination fix for first code block
+if ($(".newsCards").length) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const cardGrid = document.getElementById('cardGrid');
+        const pagination = document.getElementById('pagination');
+        const searchInput = document.querySelector('.searchWrapper input[type="text"]');
+        const optionMenu = document.querySelector("#customSelect");
+        const selectBtn = optionMenu.querySelector("#selectBtn");
+        const options = optionMenu.querySelectorAll(".option");
+        const sBtn_text = optionMenu.querySelector(".sBtntext");
 
+        const noPostsMessage = document.createElement('div');
+        noPostsMessage.classList.add('no-posts-message');
+        noPostsMessage.textContent = "No posts found.";
 
+        function getCards() {
+            return Array.from(cardGrid.querySelectorAll('.cards'));
+        }
 
+        function getCardsPerPage() {
+            return window.innerWidth < 680 ? 4 : 6;
+        }
 
+        let cardsPerPage = getCardsPerPage();
+        let currentPage = 1;
+        let allCards = getCards();
+        let sortedCards = [...allCards];
+        let filteredCards = [...sortedCards];
 
+        function renderCards(page, filteredCards = sortedCards) {
+            cardGrid.innerHTML = '';
 
+            if (filteredCards.length === 0) {
+                cardGrid.appendChild(noPostsMessage);
+                pagination.style.display = 'none';
+                return;
+            }
 
+            const startIndex = (page - 1) * cardsPerPage;
+            const endIndex = startIndex + cardsPerPage;
+            const visibleCards = filteredCards.slice(startIndex, endIndex);
 
+            visibleCards.forEach(card => cardGrid.appendChild(card));
+            renderPagination(filteredCards);
+        }
 
-   
+        function renderPagination(filteredCards) {
+            pagination.innerHTML = '';
+            const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+
+            if (totalPages <= 1) {
+                pagination.style.display = 'none';
+                return;
+            }
+
+            pagination.style.display = 'flex';
+
+            const prevButton = document.createElement('button');
+            const prevImage = document.createElement('img');
+            prevImage.src = site_url + '/wp-content/themes/everta/images/prev-arrow.svg';
+            prevImage.alt = 'Previous';
+            prevButton.appendChild(prevImage);
+            prevButton.classList.add('pagination-prev');
+            prevButton.disabled = currentPage === 1;
+            prevButton.addEventListener('click', () => {
+                currentPage--;
+                renderCards(currentPage, filteredCards);
+            });
+            pagination.appendChild(prevButton);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.classList.toggle('active', i === currentPage);
+                pageButton.addEventListener('click', () => {
+                    currentPage = i;
+                    renderCards(currentPage, filteredCards);
+                });
+                pagination.appendChild(pageButton);
+            }
+
+            const nextButton = document.createElement('button');
+            const nextImage = document.createElement('img');
+            nextImage.src = site_url + '/wp-content/themes/everta/images/black-cta-arrow.svg';
+            nextImage.alt = 'Next';
+            nextButton.appendChild(nextImage);
+            nextButton.classList.add('pagination-next');
+            nextButton.disabled = currentPage === totalPages;
+            nextButton.addEventListener('click', () => {
+                currentPage++;
+                renderCards(currentPage, filteredCards);
+            });
+            pagination.appendChild(nextButton);
+        }
+
+        function filterCards(query) {
+            filteredCards = sortedCards.filter(card => {
+                const title = card.querySelector('.cardContent h3').textContent.toLowerCase();
+                const description = card.querySelector('.cardContent p').textContent.toLowerCase();
+                const tag = card.querySelector('.cardContent .tag').textContent.toLowerCase();
+                return title.includes(query.toLowerCase()) || description.includes(query.toLowerCase()) || tag.includes(query.toLowerCase());
+            });
+            currentPage = 1;
+            renderCards(currentPage, filteredCards);
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            filterCards(e.target.value.trim());
+        });
+
+        function sortCards(sortType) {
+            sortedCards = [...allCards];
+            if (sortType === "latest") {
+                sortedCards.sort((a, b) => new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date')));
+            } else if (sortType === "oldest") {
+                sortedCards.sort((a, b) => new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date')));
+            } else if (sortType === "az") {
+                sortedCards.sort((a, b) => a.getAttribute('data-title').localeCompare(b.getAttribute('data-title')));
+            } else if (sortType === "za") {
+                sortedCards.sort((a, b) => b.getAttribute('data-title').localeCompare(a.getAttribute('data-title')));
+            }
+            filterCards(searchInput.value.trim());
+        }
+
+        options.forEach(option => {
+            option.addEventListener("click", function () {
+                const sortType = this.getAttribute('data-sort');
+                sBtn_text.textContent = this.textContent;
+                optionMenu.classList.remove("active");
+                sortCards(sortType);
+            });
+        });
+
+        selectBtn.addEventListener('click', () => {
+            optionMenu.classList.toggle('active');
+        });
+
+        window.addEventListener('resize', () => {
+            cardsPerPage = getCardsPerPage();
+            renderCards(currentPage, filteredCards);
+        });
+
+        renderCards(currentPage);
+    });
+}
+
+if ($(".blogsCards").length) {
+    document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".blogsTabWrapper a");
+        const cardGrid = document.getElementById("cardGrid");
+        const pagination = document.getElementById("pagination");
+        const searchInput = document.querySelector(".searchWrapper input[type='text']");
+        const noPostsMessage = document.createElement("div");
+        noPostsMessage.classList.add("no-posts-message");
+        noPostsMessage.textContent = "No posts found.";
+        cardGrid.appendChild(noPostsMessage);
+        noPostsMessage.style.display = "none";
+
+        function getCards() {
+            return Array.from(cardGrid.querySelectorAll(".cards"));
+        }
+
+        function getCardsPerPage() {
+            return window.innerWidth < 680 ? 4 : 6;
+        }
+
+        let cardsPerPage = getCardsPerPage();
+        let currentPage = 1;
+        let activeTabFilter = "all"; 
+
+        function renderCards(page, filteredCards = getCards()) {
+            const allCards = getCards();
+            const startIndex = (page - 1) * cardsPerPage;
+            const endIndex = startIndex + cardsPerPage;
+            const visibleCards = filteredCards.slice(startIndex, endIndex);
+
+            allCards.forEach((card) => card.style.display = "none");
+            visibleCards.forEach((card) => card.style.display = "block");
+
+            if (filteredCards.length === 0) {
+                noPostsMessage.style.display = "block";
+                pagination.style.display = "none";
+            } else {
+                noPostsMessage.style.display = "none";
+                renderPagination(filteredCards);
+            }
+        }
+
+        function renderPagination(filteredCards) {
+            pagination.innerHTML = "";
+            const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+
+            if (filteredCards.length <= cardsPerPage) {
+                pagination.style.display = "none";
+                return;
+            } else {
+                pagination.style.display = "flex";
+            }
+
+            const prevButton = document.createElement("button");
+            const prevImage = document.createElement("img");
+            prevImage.src = site_url + '/wp-content/themes/everta/images/prev-arrow.svg';
+            prevImage.alt = "Previous";
+            prevButton.appendChild(prevImage);
+            prevButton.classList.add('pagination-prev');
+            prevButton.disabled = currentPage === 1;
+            prevButton.addEventListener("click", () => {
+                currentPage--;
+                renderCards(currentPage, filteredCards);
+            });
+            pagination.appendChild(prevButton);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement("button");
+                pageButton.textContent = i;
+                pageButton.classList.toggle("active", i === currentPage);
+                pageButton.addEventListener("click", () => {
+                    currentPage = i;
+                    renderCards(currentPage, filteredCards);
+                });
+                pagination.appendChild(pageButton);
+            }
+
+            const nextButton = document.createElement("button");
+            const nextImage = document.createElement("img");
+            nextImage.src = site_url + '/wp-content/themes/everta/images/black-cta-arrow.svg';
+            nextImage.alt = "Next";
+            nextButton.appendChild(nextImage);
+            nextButton.classList.add('pagination-next');
+            nextButton.disabled = currentPage === totalPages;
+            nextButton.addEventListener("click", () => {
+                currentPage++;
+                renderCards(currentPage, filteredCards);
+            });
+            pagination.appendChild(nextButton);
+        }
+
+        function filterCardsBySearch(query = "") {
+            return getCards().filter((card) => {
+                const title = card.querySelector(".cardContent h3").textContent.toLowerCase();
+                return title.includes(query.toLowerCase());
+            });
+        }
+
+        function filterCardsByCategory(filter = "all") {
+        return getCards().filter((card) => {
+            const categories = card.getAttribute("data-category").split(","); // Changed from space to comma
+            return filter === "all" || categories.includes(filter);
+        });
+    }
+
+        function filterCards(query = "", filter = "all") {
+            const filteredByCategory = filterCardsByCategory(filter);
+            const filteredCards = filterCardsBySearch(query).filter((card) => filteredByCategory.includes(card));
+            currentPage = 1;
+            renderCards(currentPage, filteredCards);
+        }
+
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", (e) => {
+                e.preventDefault();
+                tabs.forEach((t) => t.classList.remove("active"));
+                tab.classList.add("active");
+                activeTabFilter = tab.getAttribute("data-filter");
+                filterCards(searchInput.value.trim(), activeTabFilter);
+            });
+        });
+
+        searchInput.addEventListener("input", (e) => {
+            filterCards(e.target.value.trim(), activeTabFilter);
+        });
+
+        window.addEventListener("resize", () => {
+            cardsPerPage = getCardsPerPage();
+            renderCards(currentPage);
+        });
+
+        renderCards(currentPage);
+    });
+}
