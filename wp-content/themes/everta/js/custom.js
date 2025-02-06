@@ -1545,6 +1545,7 @@ if ($(".technicalDetailsSection").length) {
     });
 } 
   
+// Pagination fix for first code block
 if ($(".newsCards").length) {
     document.addEventListener('DOMContentLoaded', () => {
         const cardGrid = document.getElementById('cardGrid');
@@ -1554,56 +1555,56 @@ if ($(".newsCards").length) {
         const selectBtn = optionMenu.querySelector("#selectBtn");
         const options = optionMenu.querySelectorAll(".option");
         const sBtn_text = optionMenu.querySelector(".sBtntext");
-    
+
         const noPostsMessage = document.createElement('div');
         noPostsMessage.classList.add('no-posts-message');
         noPostsMessage.textContent = "No posts found.";
-    
+
         function getCards() {
             return Array.from(cardGrid.querySelectorAll('.cards'));
         }
-    
+
         function getCardsPerPage() {
             return window.innerWidth < 680 ? 4 : 6;
         }
-    
+
         let cardsPerPage = getCardsPerPage();
         let currentPage = 1;
         let allCards = getCards();
         let sortedCards = [...allCards];
         let filteredCards = [...sortedCards];
-    
+
         function renderCards(page, filteredCards = sortedCards) {
             cardGrid.innerHTML = '';
-    
+
             if (filteredCards.length === 0) {
                 cardGrid.appendChild(noPostsMessage);
                 pagination.style.display = 'none';
                 return;
             }
-    
+
             const startIndex = (page - 1) * cardsPerPage;
             const endIndex = startIndex + cardsPerPage;
             const visibleCards = filteredCards.slice(startIndex, endIndex);
-    
+
             visibleCards.forEach(card => cardGrid.appendChild(card));
             renderPagination(filteredCards);
         }
-    
+
         function renderPagination(filteredCards) {
             pagination.innerHTML = '';
             const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
-    
+
             if (totalPages <= 1) {
                 pagination.style.display = 'none';
                 return;
             }
-    
+
             pagination.style.display = 'flex';
-    
+
             const prevButton = document.createElement('button');
             const prevImage = document.createElement('img');
-            prevImage.src = `${theme_vars.template_dir}/images/prev-arrow.svg`;
+            prevImage.src = site_url + '/wp-content/themes/everta/images/prev-arrow.svg';
             prevImage.alt = 'Previous';
             prevButton.appendChild(prevImage);
             prevButton.classList.add('pagination-prev');
@@ -1613,7 +1614,7 @@ if ($(".newsCards").length) {
                 renderCards(currentPage, filteredCards);
             });
             pagination.appendChild(prevButton);
-    
+
             for (let i = 1; i <= totalPages; i++) {
                 const pageButton = document.createElement('button');
                 pageButton.textContent = i;
@@ -1624,10 +1625,10 @@ if ($(".newsCards").length) {
                 });
                 pagination.appendChild(pageButton);
             }
-    
+
             const nextButton = document.createElement('button');
             const nextImage = document.createElement('img');
-            nextImage.src = `${theme_vars.template_dir}/images/black-cta-arrow.svg`;
+            nextImage.src = site_url + '/wp-content/themes/everta/images/black-cta-arrow.svg';
             nextImage.alt = 'Next';
             nextButton.appendChild(nextImage);
             nextButton.classList.add('pagination-next');
@@ -1638,7 +1639,7 @@ if ($(".newsCards").length) {
             });
             pagination.appendChild(nextButton);
         }
-    
+
         function filterCards(query) {
             filteredCards = sortedCards.filter(card => {
                 const title = card.querySelector('.cardContent h3').textContent.toLowerCase();
@@ -1649,11 +1650,11 @@ if ($(".newsCards").length) {
             currentPage = 1;
             renderCards(currentPage, filteredCards);
         }
-    
+
         searchInput.addEventListener('input', (e) => {
             filterCards(e.target.value.trim());
         });
-    
+
         function sortCards(sortType) {
             sortedCards = [...allCards];
             if (sortType === "latest") {
@@ -1667,7 +1668,7 @@ if ($(".newsCards").length) {
             }
             filterCards(searchInput.value.trim());
         }
-    
+
         options.forEach(option => {
             option.addEventListener("click", function () {
                 const sortType = this.getAttribute('data-sort');
@@ -1676,16 +1677,16 @@ if ($(".newsCards").length) {
                 sortCards(sortType);
             });
         });
-    
+
         selectBtn.addEventListener('click', () => {
             optionMenu.classList.toggle('active');
         });
-    
+
         window.addEventListener('resize', () => {
             cardsPerPage = getCardsPerPage();
             renderCards(currentPage, filteredCards);
         });
-    
+
         renderCards(currentPage);
     });
 }
@@ -1701,28 +1702,28 @@ if ($(".blogsCards").length) {
         noPostsMessage.textContent = "No posts found.";
         cardGrid.appendChild(noPostsMessage);
         noPostsMessage.style.display = "none";
-    
+
         function getCards() {
             return Array.from(cardGrid.querySelectorAll(".cards"));
         }
-    
+
         function getCardsPerPage() {
             return window.innerWidth < 680 ? 4 : 6;
         }
-    
+
         let cardsPerPage = getCardsPerPage();
         let currentPage = 1;
         let activeTabFilter = "all"; 
-    
+
         function renderCards(page, filteredCards = getCards()) {
             const allCards = getCards();
             const startIndex = (page - 1) * cardsPerPage;
             const endIndex = startIndex + cardsPerPage;
             const visibleCards = filteredCards.slice(startIndex, endIndex);
-    
+
             allCards.forEach((card) => card.style.display = "none");
             visibleCards.forEach((card) => card.style.display = "block");
-    
+
             if (filteredCards.length === 0) {
                 noPostsMessage.style.display = "block";
                 pagination.style.display = "none";
@@ -1731,30 +1732,31 @@ if ($(".blogsCards").length) {
                 renderPagination(filteredCards);
             }
         }
-    
+
         function renderPagination(filteredCards) {
             pagination.innerHTML = "";
             const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
-    
+
             if (filteredCards.length <= cardsPerPage) {
                 pagination.style.display = "none";
                 return;
             } else {
                 pagination.style.display = "flex";
             }
-    
+
             const prevButton = document.createElement("button");
             const prevImage = document.createElement("img");
-            prevImage.src = `${theme_vars.template_dir}/images/prev-arrow.svg`;
+            prevImage.src = site_url + '/wp-content/themes/everta/images/prev-arrow.svg';
             prevImage.alt = "Previous";
             prevButton.appendChild(prevImage);
+            prevButton.classList.add('pagination-prev');
             prevButton.disabled = currentPage === 1;
             prevButton.addEventListener("click", () => {
                 currentPage--;
                 renderCards(currentPage, filteredCards);
             });
             pagination.appendChild(prevButton);
-    
+
             for (let i = 1; i <= totalPages; i++) {
                 const pageButton = document.createElement("button");
                 pageButton.textContent = i;
@@ -1765,12 +1767,13 @@ if ($(".blogsCards").length) {
                 });
                 pagination.appendChild(pageButton);
             }
-    
+
             const nextButton = document.createElement("button");
             const nextImage = document.createElement("img");
-            nextImage.src = `${theme_vars.template_dir}/images/black-cta-arrow.svg`;
+            nextImage.src = site_url + '/wp-content/themes/everta/images/black-cta-arrow.svg';
             nextImage.alt = "Next";
             nextButton.appendChild(nextImage);
+            nextButton.classList.add('pagination-next');
             nextButton.disabled = currentPage === totalPages;
             nextButton.addEventListener("click", () => {
                 currentPage++;
@@ -1778,28 +1781,28 @@ if ($(".blogsCards").length) {
             });
             pagination.appendChild(nextButton);
         }
-    
+
         function filterCardsBySearch(query = "") {
             return getCards().filter((card) => {
                 const title = card.querySelector(".cardContent h3").textContent.toLowerCase();
                 return title.includes(query.toLowerCase());
             });
         }
-    
+
         function filterCardsByCategory(filter = "all") {
         return getCards().filter((card) => {
             const categories = card.getAttribute("data-category").split(","); // Changed from space to comma
             return filter === "all" || categories.includes(filter);
         });
     }
-    
+
         function filterCards(query = "", filter = "all") {
             const filteredByCategory = filterCardsByCategory(filter);
             const filteredCards = filterCardsBySearch(query).filter((card) => filteredByCategory.includes(card));
             currentPage = 1;
             renderCards(currentPage, filteredCards);
         }
-    
+
         tabs.forEach((tab) => {
             tab.addEventListener("click", (e) => {
                 e.preventDefault();
@@ -1809,30 +1812,16 @@ if ($(".blogsCards").length) {
                 filterCards(searchInput.value.trim(), activeTabFilter);
             });
         });
-    
+
         searchInput.addEventListener("input", (e) => {
             filterCards(e.target.value.trim(), activeTabFilter);
         });
-    
+
         window.addEventListener("resize", () => {
             cardsPerPage = getCardsPerPage();
             renderCards(currentPage);
         });
-    
+
         renderCards(currentPage);
     });
 }
-
-
-
-  
-
-
-
-
-
-
-
-
-
-   
