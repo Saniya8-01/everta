@@ -13436,7 +13436,7 @@ body {
   display: none;
 }
 .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 .cardSection .cardSectionWrapper .blogsTabs .blogsTabWrapper a {

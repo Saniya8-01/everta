@@ -7,7 +7,7 @@
             &::-webkit-scrollbar {
                 display: none; 
             }
-            .blogsTabWrapper{display: flex;align-items:center;
+            .blogsTabWrapper{display: inline-flex;align-items:center;
                 a{color: #1E1E1E;@include font16;line-height: 140%;font-weight: 400;border-radius: 100px;border: 1px solid var(--Black-40, #A5A5A5); padding: 18px 32px;text-transform:capitalize;margin-left:16px;
                     &.active{color: $primaryColor1;background: #1E1E1E;}
                     &:last-child{margin-right: 120px;}
