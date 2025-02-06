@@ -147,36 +147,37 @@ $current_url = home_url(add_query_arg([], $wp->request));
 				</div>
 			</nav>
 		</header>
-		<div class="contactForm" id="contactForm">
-			<div class="contactFormWrapper" id="contactFormWrapper">
-				<div class="contactHeading">
-					<h2>Contact us</h2>
+		<div class="contactFormContainer" id="contactFormContainer">
+			<div class="contactForm" id="contactForm">
+				<div class="contactFormWrapper" id="contactFormWrapper">
+					<div class="contactHeading">
+						<h2>Contact us</h2>
+						<div class="closeBtn" id="closeBtn" onclick="closeForm();">
+							<img src="<?php bloginfo('template_directory'); ?>/images/close-svg.svg" alt="">
+						</div>
+					</div>
+					<?php
+				  $shortcode = get_field('contact_us_popup', 'option');
+				  if ($shortcode) {
+					echo do_shortcode($shortcode);
+				  }
+				  ?>
+				</div>
+				<div class="thankyouPopup" id="thankyouPopup" style="display: none;">
 					<div class="closeBtn" id="closeBtn" onclick="closeForm();">
 						<img src="<?php bloginfo('template_directory'); ?>/images/close-svg.svg" alt="">
 					</div>
-				</div>
-				<?php
-			  $shortcode = get_field('contact_us_popup', 'option');
-			  if ($shortcode) {
-				echo do_shortcode($shortcode);
-			  }
-			  ?>
-			</div>
-			<div class="thankyouPopup" id="thankyouPopup" style="display: none;">
-				<div class="closeBtn" id="closeBtn" onclick="closeForm();">
-					<img src="<?php bloginfo('template_directory'); ?>/images/close-svg.svg" alt="">
-				</div>
-				<div class="thankyouContent">
-					<div class="icon">
-						<img src="<?php bloginfo('template_directory'); ?>/images/thankyou-svg.svg" alt="">
+					<div class="thankyouContent">
+						<div class="icon">
+							<img src="<?php bloginfo('template_directory'); ?>/images/thankyou-svg.svg" alt="">
+						</div>
+						<h2>Request received!</h2>
+						<p>Thank you for taking the first step in being a part of E-movement. Our team with follow up with
+							you soon!</p>
 					</div>
-					<h2>Request received!</h2>
-					<p>Thank you for taking the first step in being a part of E-movement. Our team with follow up with
-						you soon!</p>
 				</div>
 			</div>
 		</div>
-
 		<script>   
 			// Show Thank You popup after form submission
 			document.addEventListener('wpcf7mailsent', function () {

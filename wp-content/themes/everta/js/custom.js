@@ -213,8 +213,9 @@ if ($(".testimonialSection").length) {
     var $progressBar = $(".progress-bar");
     var autoplaySpeed = 5000;
     var $progressContainer = $(".progresBar");
-    
-    $slider.on('init', function(event, slick) {
+    var progressTimeout;
+
+    $slider.on("init", function (event, slick) {
         if (slick.slideCount > slick.options.slidesToShow) {
             startProgressBar();
         } else {
@@ -227,61 +228,55 @@ if ($(".testimonialSection").length) {
         slidesToShow: 2.4,
         arrows: false,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: autoplaySpeed,
+        autoplay: false, // Custom autoplay logic
         speed: 1000,
         infinite: false,
         initialSlide: 0,
         focusOnSelect: true,
         cssEase: "linear",
-
         responsive: [
-            {
-                breakpoint: 1440,
-                settings: {
-                    slidesToShow: 2.2,
-                }
-            },
-            {
-                breakpoint: 821,
-                settings: {
-                    slidesToShow: 1.5,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
+            { breakpoint: 1440, settings: { slidesToShow: 2.2 } },
+            { breakpoint: 821, settings: { slidesToShow: 1.5 } },
+            { breakpoint: 768, settings: { slidesToShow: 1 } }
         ]
     });
 
     function startProgressBar() {
+        resetProgressBar();
         $progressBar.css({
-            width: "0%", 
-            transition: "none",
+            width: "100%",
+            transition: `width ${autoplaySpeed}ms linear`
         });
 
-        setTimeout(() => {
-            $progressBar.css({
-                width: "100%",
-                transition: `width ${autoplaySpeed}ms linear`,
-            });
-        }, 10);
+        clearTimeout(progressTimeout);
+        progressTimeout = setTimeout(() => {
+            if ($slider.slick("slickCurrentSlide") < $slider.slick("getSlick").slideCount - $slider.slick("getSlick").options.slidesToShow) {
+                $slider.slick("slickNext");
+            } else {
+                $slider.slick("slickGoTo", 0);
+            }
+        }, autoplaySpeed);
     }
 
-    $slider.on("beforeChange", function (event, slick) {
-        if (slick.slideCount > slick.options.slidesToShow) {
-            startProgressBar();
-            $progressBar.show();
-            $progressContainer.show();
-        } else {
-            $progressBar.hide();
-            $progressContainer.hide();
-        }
+    function resetProgressBar() {
+        clearTimeout(progressTimeout);
+        $progressBar.css({
+            width: "0%",
+            transition: "none"
+        });
+    }
+
+    // Handle progress reset and sync on all events
+    $slider.on("beforeChange", resetProgressBar);
+    $slider.on("afterChange", startProgressBar);
+
+    // Handle focus-based slide change sync
+    $slider.on("setPosition", function () {
+        resetProgressBar();
+        startProgressBar();
     });
-} 
+}
+
 function initializeSlick() {
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
@@ -829,7 +824,7 @@ if($(".careerTeamSection").length){
 }
 
 function openForm() {
-    const contactForm = document.getElementById("contactForm");
+    const contactForm = document.getElementById("contactFormContainer");
     contactForm.classList.add("open");
 
     $('body, html').css({
@@ -839,7 +834,7 @@ function openForm() {
 }
 
 function closeForm() {
-    const contactForm = document.getElementById("contactForm");
+    const contactForm = document.getElementById("contactFormContainer");
     contactForm.classList.remove("open");
 
     $('body, html').css({
