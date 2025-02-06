@@ -2325,7 +2325,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
     top: 80px;
   }
   .contactFormContainer .contactForm .thankyouPopup .thankyouContent {
-    margin-top: 140px;
+    margin-top: 120px;
   }
   .contactFormContainer .contactForm .thankyouPopup .thankyouContent .icon {
     width: 200px;
@@ -2411,7 +2411,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
     top: 70px;
   }
   .contactFormContainer .contactForm .thankyouPopup .thankyouContent {
-    margin-top: 120px;
+    margin-top: 100px;
   }
   .contactFormContainer .contactForm .thankyouPopup .thankyouContent .icon {
     width: 180px;
@@ -2506,7 +2506,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
     top: 60px;
   }
   .contactFormContainer .contactForm .thankyouPopup .thankyouContent {
-    margin-top: 100px;
+    margin-top: 80px;
   }
   .contactFormContainer .contactForm .thankyouPopup .thankyouContent .icon {
     width: 160px;
@@ -2674,7 +2674,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   .contactFormContainer .contactForm .contactFormWrapper .contactBottom .submitDiv {
     margin-top: 48px;
-    justify-content: center;
+    justify-content: end;
   }
   .contactFormContainer .contactForm .contactFormWrapper .contactBottom .submitDiv input {
     line-height: normal;

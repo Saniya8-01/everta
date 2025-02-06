@@ -493,7 +493,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
         }
         .thankyouPopup{padding: 60px;
             .closeBtn{right: 80px;top: 80px;}
-            .thankyouContent{margin-top: 140px;
+            .thankyouContent{margin-top: 120px;
                 .icon{width: 200px;height: 200px;margin-bottom: 40px;padding: 40px 24px;}
                 h2{margin-bottom: 22px;}
     
@@ -543,7 +543,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
             }
             .thankyouPopup{padding: 50px;
                 .closeBtn{right: 70px;top: 70px;}
-                .thankyouContent{margin-top: 120px;
+                .thankyouContent{margin-top: 100px;
                     .icon{width: 180px;height: 180px;margin-bottom: 36px;padding: 36px 20px;}
                     h2{margin-bottom: 20px;}
         
@@ -595,7 +595,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
             }
             .thankyouPopup{padding: 42px;
                 .closeBtn{right: 60px;top: 60px;}
-                .thankyouContent{margin-top: 100px;
+                .thankyouContent{margin-top: 80px;
                     .icon{width: 160px;height: 160px;margin-bottom: 32px;padding: 32px 20px;}
                     h2{margin-bottom: 20px;}
                 }
@@ -662,7 +662,7 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
                     label{font-size: 12px;line-height: 14.4px;}
                     textarea{font-size: 12px;line-height: 18px;padding: 16px;height: 148px;}
                 }
-                .submitDiv {margin-top:48px;justify-content:center;
+                .submitDiv {margin-top:48px;justify-content:end;
                     input{line-height:normal; font-size: 12px;letter-spacing:-0.48px;padding: 18px 32px;}
                 }
             }
@@ -678,7 +678,6 @@ header{position: fixed;width: 100%;top: 0;z-index: 9;transition: top 0.5s ease-i
         }
     }
 }
-
 
 #overlay {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: #fff;display: flex;justify-content: center;align-items: center;z-index: 9999;
     .loader-container {text-align: center;
