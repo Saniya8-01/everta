@@ -192,7 +192,7 @@ wp_reset_postdata(); ?>
                     <h2><?php echo get_sub_field('heading'); ?></h2>
                     <p><?php echo get_sub_field('subheading'); ?></p>
                     <?php $cta_text = get_sub_field('cta_text'); if ($cta_text) : ?>
-                        <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaBlack">
+                        <a href="mailto:<?php echo get_sub_field('cta_link'); ?>" class="ctaBlack">
                             <?php echo esc_html($cta_text); ?>
                         </a>
                     <?php endif; ?>

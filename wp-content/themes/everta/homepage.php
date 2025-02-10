@@ -2761,11 +2761,22 @@
             </p>
         </div>
         <?php
-        $shortcode = get_sub_field('contact_form_shortcode');
-        if ($shortcode) {
-            echo do_shortcode($shortcode);
-        }
-    ?>
+        // $shortcode = get_sub_field('contact_form_shortcode');
+        // if ($shortcode) {
+        //     echo do_shortcode($shortcode);
+        // }            
+        ?>
+        <div class="formContainer">
+            <form>
+                <div class="input">
+                    <label for="">Your Email</label>
+                    <input type="text" name="yourmail" placeholder="your@gmail.com">
+                </div>
+                <div class="ctaDiv">
+                    <input type="submit" name="continue" value="Continue">
+                </div>
+            </form>
+        </div>
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
@@ -2808,3 +2819,15 @@
 
 
 <?php get_footer(); ?>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var emailField = document.getElementById("your-email");
+        if (emailField) {
+            emailField.value = "<?php echo isset($_SESSION['user_email']) ? esc_js($_SESSION['user_email']) : ''; ?>";
+        }
+        document.addEventListener('wpcf7mailsent', function(event) {
+            document.getElementById('contactFormWrapper').style.display = 'block';
+        }, false);
+    });
+</script>
