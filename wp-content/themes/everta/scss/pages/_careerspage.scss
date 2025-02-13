@@ -507,7 +507,7 @@
           }
         }
         &:nth-child(2){
-          .wallImgBox{border: 6px dashed $primaryColor1; padding: 0; 
+          .wallImgBox{border: 6px dashed $primaryColor1; padding: 3px; 
             img{transform: rotate(10deg);
               &.mblWall{display: none;}
             }
@@ -532,7 +532,7 @@
         .wallImgBoxContainer{
           &:nth-child(2){
             img{
-              &.desktopWall{transform: translateX(10px) scale(1.05) !important;}
+              &.desktopWall{}
             }
           }   
           .wallImgBox{
@@ -630,8 +630,10 @@
       .evertaWallContainer{padding: 0px; flex-flow: column;
         .wallImgBoxContainer{width: 100%; flex-flow: wrap;
           .wallImgBox{padding:5px;
-            &.desktopWall{display: none;}
-            &.mblWall{display: block;}
+            img{
+              &.desktopWall{display: none;}
+              &.mblWall{display: block;}
+            }
           }
           &:nth-child(1){
             .wallImgBox{

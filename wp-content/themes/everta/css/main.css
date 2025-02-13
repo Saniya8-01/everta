@@ -8661,7 +8661,7 @@ body {
 }
 .careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:nth-child(2) .wallImgBox {
   border: 6px dashed #F5F75E;
-  padding: 0;
+  padding: 3px;
 }
 .careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:nth-child(2) .wallImgBox img {
   transform: rotate(10deg);
@@ -8680,9 +8680,6 @@ body {
 }
 .careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:nth-child(3) .wallImgBox:last-child img {
   transform: rotate(-10deg);
-}
-.careerWallSection .careerSectionWrapper .evertaWallContainer.resetImage .wallImgBoxContainer:nth-child(2) img.desktopWall {
-  transform: translateX(10px) scale(1.05) !important;
 }
 .careerWallSection .careerSectionWrapper .evertaWallContainer.resetImage .wallImgBoxContainer .wallImgBox img {
   transform: rotate(0deg) !important;
@@ -8773,10 +8770,10 @@ body {
   .careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox {
     padding: 5px;
   }
-  .careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox.desktopWall {
+  .careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox img.desktopWall {
     display: none;
   }
-  .careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox.mblWall {
+  .careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer .wallImgBox img.mblWall {
     display: block;
   }
   .careerWallSection .careerSectionWrapper .evertaWallContainer .wallImgBoxContainer:nth-child(1) .wallImgBox:first-child {
