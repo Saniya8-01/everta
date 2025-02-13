@@ -1176,9 +1176,6 @@ header .headerWrapper .headerMenu .hamburger-menu {
   header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul li .languageMenu ul {
     min-width: 80px;
   }
-  header .headerWrapper .headerMenu .navMenu .navLinks .navLists ul .ctaContact a {
-    padding: 10px 20px;
-  }
 }
 @media all and (max-width: 1024px) {
   header .headerWrapper {
@@ -1518,7 +1515,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   right: -110%;
   transition: 0.6s all ease-in-out;
   z-index: 99;
-  width: 1100px;
+  width: 1300px;
   height: 100%;
 }
 .contactFormContainer .contactForm .contactFormWrapper {
@@ -1985,7 +1982,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
   -webkit-animation-fill-mode: both;
 }
 .contactFormContainer .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select {
-  padding: 7px 0px 20px 0px;
+  padding: 7px 0px 18px 0px;
   width: 100%;
   border-bottom: 1px solid #A5A5A5;
   color: #1E1E1E;
@@ -2241,7 +2238,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 @media all and (max-width: 1600px) {
   .contactFormContainer .contactForm {
-    width: 1100px;
+    width: 1200px;
   }
   .contactFormContainer .contactForm .contactFormWrapper {
     padding: 60px;
@@ -2391,6 +2388,9 @@ header .headerWrapper .headerMenu .hamburger-menu {
     height: 50px;
     padding: 0 14px;
   }
+  .contactFormContainer .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select {
+    padding: 6px 0px 17px 0px;
+  }
   .contactFormContainer .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges {
     gap: 20px;
   }
@@ -2425,7 +2425,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
 }
 @media all and (max-width: 1280px) {
   .contactFormContainer .contactForm {
-    width: 1000px;
+    width: 1100px;
   }
   .contactFormContainer .contactForm .contactFormWrapper {
     padding: 42px;
@@ -2478,7 +2478,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
     padding: 0 12px;
   }
   .contactFormContainer .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select {
-    padding: 6px 0px 18px 0px;
+    padding: 6px 0px 15px 0px;
   }
   .contactFormContainer .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields .charges {
     gap: 16px;
@@ -2497,6 +2497,33 @@ header .headerWrapper .headerMenu .hamburger-menu {
   }
   .contactFormContainer .contactForm .contactFormWrapper .contactBottom .submitDiv input {
     padding: 18px 30px;
+  }
+  .contactFormContainer .contactForm .thankyouPopup {
+    padding: 42px;
+  }
+  .contactFormContainer .contactForm .thankyouPopup .closeBtn {
+    right: 60px;
+    top: 60px;
+  }
+  .contactFormContainer .contactForm .thankyouPopup .thankyouContent {
+    margin-top: 80px;
+  }
+  .contactFormContainer .contactForm .thankyouPopup .thankyouContent .icon {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 32px;
+    padding: 32px 20px;
+  }
+  .contactFormContainer .contactForm .thankyouPopup .thankyouContent h2 {
+    margin-bottom: 20px;
+  }
+}
+@media all and (max-width: 1180px) {
+  .contactFormContainer .contactForm {
+    width: 1000px;
+  }
+  .contactFormContainer .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select {
+    padding: 6px 0px 13px 0px;
   }
   .contactFormContainer .contactForm .thankyouPopup {
     padding: 42px;
@@ -2644,7 +2671,7 @@ header .headerWrapper .headerMenu .hamburger-menu {
     width: 6px;
   }
   .contactFormContainer .contactForm .contactFormWrapper .contactBottom .contact-tab-content .contact-tab-wrapper .formFields select {
-    padding: 7px 0px 20px 0px;
+    padding: 7px 0px 16px 0px;
     font-size: 12px;
     line-height: 18px;
   }
@@ -17680,4 +17707,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
