@@ -58,9 +58,7 @@
 			<div class="blogCard">
 				<a href="<?php the_permalink(); ?>">
 					<div class="imgBox">
-						<?php if (has_post_thumbnail()): ?>
-						<?php the_post_thumbnail('medium'); ?>
-						<?php endif; ?>
+						<img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title_attribute(); ?>">
 					</div>
 					<div class="contentBox">
 						<div class="content">

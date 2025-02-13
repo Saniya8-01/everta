@@ -3282,6 +3282,17 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .bannerSection .bannerSectionWrapper .bannerSectionContent p {
   margin-bottom: 72px;
   color: #fff;
+  font-size: 24px;
+}
+@media screen and (max-width: 1600px) {
+  .bannerSection .bannerSectionWrapper .bannerSectionContent p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .bannerSection .bannerSectionWrapper .bannerSectionContent p {
+    font-size: 16px;
+  }
 }
 @media all and (max-width: 1800px) {
   .bannerSection {
