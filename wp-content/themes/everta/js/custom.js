@@ -1020,53 +1020,7 @@ $(window).scroll(function () {
 //     });
 // });
 
-if ($(".loaderOverlay").length) {
-    document.addEventListener("DOMContentLoaded", () => {
-      const progressBar = document.getElementById("progress-bar");
-      const overlay = document.getElementById("overlay");
-      let progress = 0;
-      let isPageLoaded = false;
-  
-      // Function to update progress bar
-      const updateProgressBar = (target) => {
-        const interval = setInterval(() => {
-          if (progress < target) {
-            progress++;
-            progressBar.style.width = `${progress}%`;
-          } else {
-            clearInterval(interval);
-            if (progress === 100 && isPageLoaded) {
-              hideLoader(); // Only hide loader if progress is complete and page is loaded
-            }
-          }
-        }, 20);
-      };
-  
-      // Start the initial progress up to 90%
-      updateProgressBar(90);
-  
-      // Handle page load event
-      window.addEventListener("load", () => {
-        isPageLoaded = true;
-        updateProgressBar(100); // Progress to 100% after load
-      });
-  
-      // Function to hide the loader overlay
-      const hideLoader = () => {
-        setTimeout(() => {
-          overlay.style.opacity = "0"; // Fade out
-          setTimeout(() => {
-            overlay.style.display = "none"; // Remove after fade
-          }, 500); // Match fade-out duration
-        }, 500);
-      };
-  
-      // Fallback for fast local page loads
-      if (document.readyState === "complete") {
-        window.dispatchEvent(new Event("load"));
-      }
-    });
-}
+
   
   if ($(".homepageFaq").length) {
     jQuery(document).ready(function () {
@@ -1825,3 +1779,4 @@ if ($(".blogsCards").length) {
         renderCards(currentPage);
     });
 }
+
