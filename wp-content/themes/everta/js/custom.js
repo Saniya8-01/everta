@@ -1780,3 +1780,47 @@ if ($(".blogsCards").length) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Elements
+    const overlay = document.getElementById("overlay");
+    const circleBar = document.getElementById("circle-bar");
+    const percentage = document.getElementById("percentage");
+    let progress = 1; // Start progress at 1%
+    const total = 100;
+    // Update the progress bar and percentage on page load events
+    function updateProgress() {
+        if (progress <= total) {
+            const dashArray = `${progress}, 100`; // Fixed issue
+            circleBar.setAttribute("stroke-dasharray", dashArray);
+    
+            percentage.textContent = `${progress}%`; // Correct syntax
+        }
+    }
+    function startLoader() {
+        // When the page is fully loaded
+        window.onload = function () {
+            // Ensure the loader reaches 100% when the page fully loads
+            const completeProgress = setInterval(() => {
+                if (progress < 100) {
+                    progress++;
+                    updateProgress();
+                } else {
+                    clearInterval(completeProgress);
+                    // Remove loader after reaching 100%
+                    setTimeout(() => {
+                        overlay.style.display = "none";
+                    }, 300); // Small delay to show 100% before hiding the loader
+                }
+            }, 30); // Fast increments to reach 100% on page load
+        };
+    }
+    if (!localStorage.getItem('visited')) {
+        // First-time visitor, show loader
+        startLoader();
+        // Set localStorage flag to indicate the user has visited
+        localStorage.setItem('visited', 'true');
+    } else {
+        // Not the first time, hide the loader immediately
+        overlay.style.display = "none";
+    }
+});
