@@ -4,7 +4,7 @@
     <div class="loader-container">
         <div class="loaderDiv">
             <div class="circle">
-                <img src="<?php bloginfo('template_directory'); ?>/images/hartek-loader.png" alt="" title="" class="circle-bar" id="circle-bar">
+                <h2>Loading...</h2>
                 <!-- <div class="loader spin circle-bar" id="circle-bar">
                     <div class="spin__blocker"></div>
                     <div class="spin__bottom-left"></div>
@@ -2773,10 +2773,10 @@
         // }            
         ?>
         <div class="formContainer">
-            <form>
+            <form method="post">
                 <div class="input">
                     <label for="">Your Email</label>
-                    <input type="text" name="yourmail" placeholder="your@gmail.com">
+                    <input type="text" name="youremail" placeholder="your@gmail.com" required>
                 </div>
                 <div class="ctaDiv">
                     <input type="submit" name="continue" value="Continue">

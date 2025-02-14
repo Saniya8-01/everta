@@ -10,6 +10,19 @@
  * @package Everta
  */
 $current_url = home_url(add_query_arg([], $wp->request));
+if (isset($_REQUEST['youremail']) && !empty($_REQUEST['youremail'])) {
+	// Set the session variable for email
+	$youremaill = $_REQUEST['youremail'];
+	unset($_REQUEST['youremail']);
+	$_SESSION['user_email'] = sanitize_email($youremaill);
+	?>
+  <script>
+ document.addEventListener("DOMContentLoaded", function() {
+			 emailField.value = "<?php echo isset($_SESSION['user_email']) ? esc_js($_SESSION['user_email']) : ''; ?>";
+   });
+</script>
+	<?php
+}
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -147,7 +160,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 				</div>
 			</nav>
 		</header>
-		<div class="contactFormContainer" id="contactFormContainer">
+		<div class="contactFormContainer <?php if (isset($youremaill) && !empty($youremaill)) { echo 'open'; unset($youremaill);$youremaill=''; }?>" id="contactFormContainer">
 			<div class="contactForm" id="contactForm">
 				<div class="contactFormWrapper" id="contactFormWrapper">
 					<div class="contactHeading">
