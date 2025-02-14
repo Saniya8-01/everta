@@ -2163,7 +2163,10 @@ header .headerWrapper .headerMenu .hamburger-menu {
   background: #F5F75E;
   border: 12px solid #F5F75E;
   height: 100%;
-  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .contactFormContainer .contactForm .thankyouPopup .closeBtn {
   position: absolute;
