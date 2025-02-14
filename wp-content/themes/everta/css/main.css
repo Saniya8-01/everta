@@ -2756,49 +2756,19 @@ header .headerWrapper .headerMenu .hamburger-menu {
   width: 500px;
   margin-bottom: 20px;
 }
-#overlay .progress-bar-container {
-  width: 500px;
-  height: 12px;
-  background: #fff;
-  overflow: hidden;
-  margin: 0 auto;
-  border: 1px solid #1E1E1E;
-}
-#overlay .progress-bar-container .progress-bar {
-  width: 0;
-  height: 100%;
-  background: #F5F75E;
-  transition: width 0.5s ease-in-out;
-}
 @media all and (max-width: 1440px) {
   #overlay .loader-container img {
     width: 400px;
-  }
-  #overlay .progress-bar-container {
-    width: 400px;
-  }
-}
-@media all and (max-width: 1280px) {
-  #overlay .progress-bar-container {
-    height: 10px;
   }
 }
 @media all and (max-width: 1024px) {
   #overlay .loader-container img {
     width: 350px;
   }
-  #overlay .progress-bar-container {
-    width: 350px;
-    height: 10px;
-  }
 }
 @media all and (max-width: 680px) {
   #overlay .loader-container img {
     width: 300px;
-  }
-  #overlay .progress-bar-container {
-    width: 300px;
-    height: 8px;
   }
 }
 
