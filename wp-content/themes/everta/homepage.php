@@ -2776,7 +2776,7 @@
             <form method="post">
                 <div class="input">
                     <label for="">Your Email</label>
-                    <input type="text" name="youremail" placeholder="your@gmail.com" required>
+                    <input type="email" name="youremail" placeholder="your@gmail.com" required>
                 </div>
                 <div class="ctaDiv">
                     <input type="submit" name="continue" value="Continue">
