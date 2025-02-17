@@ -346,7 +346,7 @@ wp_reset_postdata(); ?>
                 $cta_text = get_field('cta_text');
                 
                 if ($cta_url && $cta_text) : ?>
-                    <a href="<?php echo esc_url($cta_url); ?>" class="ctaBlack">
+                    <a href="<?php echo esc_url($cta_url); ?>" target="_blank" class="ctaBlack">
                         <?php echo esc_html($cta_text); ?>
                     </a>
                 <?php endif; ?>
