@@ -5,12 +5,6 @@
         <div class="loaderDiv">
             <div class="circle">
                 <h2>Loading...</h2>
-                <!-- <div class="loader spin circle-bar" id="circle-bar">
-                    <div class="spin__blocker"></div>
-                    <div class="spin__bottom-left"></div>
-                    <div class="spin__bottom-right"></div>
-                    <div class="spin__top-left"></div>
-                </div> -->
                 <div id="percentage" class="percentage">1%</div>
             </div>
         </div>

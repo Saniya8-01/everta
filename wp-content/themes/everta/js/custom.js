@@ -829,7 +829,6 @@ function openForm() {
 
     $('body, html').css({
         "overflow-y": "hidden",
-        "overflow-x": "hidden",
     });
 }
 
@@ -839,7 +838,6 @@ function closeForm() {
 
     $('body, html').css({
         "overflow-y": "visible",
-        "overflow-x": "hidden",
     });
 }
 
