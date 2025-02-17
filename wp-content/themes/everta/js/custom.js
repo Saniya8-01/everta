@@ -829,7 +829,6 @@ function openForm() {
 
     $('body, html').css({
         "overflow-y": "hidden",
-        "overflow-x": "hidden",
     });
 }
 
@@ -839,7 +838,6 @@ function closeForm() {
 
     $('body, html').css({
         "overflow-y": "visible",
-        "overflow-x": "hidden",
     });
 }
 
@@ -1783,16 +1781,12 @@ if ($(".blogsCards").length) {
 document.addEventListener("DOMContentLoaded", function () {
     // Elements
     const overlay = document.getElementById("overlay");
-    const circleBar = document.getElementById("circle-bar");
     const percentage = document.getElementById("percentage");
     let progress = 1; // Start progress at 1%
     const total = 100;
     // Update the progress bar and percentage on page load events
     function updateProgress() {
-        if (progress <= total) {
-            const dashArray = `${progress}, 100`; // Fixed issue
-            circleBar.setAttribute("stroke-dasharray", dashArray);
-    
+        if (progress <= total) { // Fixed issue
             percentage.textContent = `${progress}%`; // Correct syntax
         }
     }
