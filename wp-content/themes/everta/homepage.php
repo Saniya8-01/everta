@@ -2776,7 +2776,9 @@
             <form method="post">
                 <div class="input">
                     <label for="">Your Email</label>
-                    <input type="email" name="youremail" placeholder="your@gmail.com" required>
+                    <input type="email" name="youremail" placeholder="your@gmail.com" required 
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                    title="Please enter a valid email address (e.g., your@gmail.com)">             
                 </div>
                 <div class="ctaDiv">
                     <input type="submit" name="continue" value="Continue">
