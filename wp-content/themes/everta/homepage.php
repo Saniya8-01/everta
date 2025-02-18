@@ -2814,7 +2814,7 @@
             <?php endif; ?>
         </div>
         <div class="toggleCta">
-            <button class="ctaWhiteBlack" id="toggleFaqButton" style="display: none;">Load More</button>
+            <a href="<?php echo get_sub_field('faq_link'); ?>" class="ctaWhiteBlack" id="toggleFaqButton">Learn More</a>
         </div>
     </div>
     <?php endwhile; ?>

@@ -163,6 +163,47 @@ $(document).ready(function () {
 });
 //-------------------Header Dropdown JS----------------------//
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Elements
+    const overlay = document.getElementById("overlay");
+    const percentage = document.getElementById("percentage");
+    let progress = 1; // Start progress at 1%
+    const total = 100;
+    // Update the progress bar and percentage on page load events
+    function updateProgress() {
+        if (progress <= total) { // Fixed issue
+            percentage.textContent = `${progress}%`; // Correct syntax
+        }
+    }
+    function startLoader() {
+        // When the page is fully loaded
+        window.onload = function () {
+            // Ensure the loader reaches 100% when the page fully loads
+            const completeProgress = setInterval(() => {
+                if (progress < 100) {
+                    progress++;
+                    updateProgress();
+                } else {
+                    clearInterval(completeProgress);
+                    // Remove loader after reaching 100%
+                    setTimeout(() => {
+                        overlay.style.display = "none";
+                    }, 300); // Small delay to show 100% before hiding the loader
+                }
+            }, 30); // Fast increments to reach 100% on page load
+        };
+    }
+    if (!localStorage.getItem('visited')) {
+        // First-time visitor, show loader
+        startLoader();
+        // Set localStorage flag to indicate the user has visited
+        localStorage.setItem('visited', 'true');
+    } else {
+        // Not the first time, hide the loader immediately
+        overlay.style.display = "none";
+    }
+});
+
 if ($(".partnersSection").length) {
     $(".logoSlider").slick({
         dots: false,
@@ -1061,85 +1102,6 @@ $(window).scroll(function () {
     });
 }
 
-if ($(".homepageFaq").length) {
-    document.addEventListener("DOMContentLoaded", function () {
-        const accordionWrapper = document.querySelector(".accordions-wrapper");
-        const faqItems = accordionWrapper.querySelectorAll(".accordion");
-        const toggleButton = document.getElementById("toggleFaqButton");
-
-        const increment = 6; // Number of items to show at a time
-        let currentlyVisible = increment;
-
-        // Function for smooth slide effect
-        function slideDown(element) {
-            element.style.display = "block";
-            element.style.height = "0px";
-            element.style.overflow = "hidden";
-            let height = element.scrollHeight;
-            element.style.transition = "height 0.5s ease-out";
-            element.style.height = height + "px";
-            setTimeout(() => {
-                element.style.height = "";
-                element.style.overflow = "";
-            }, 500);
-        }
-
-        function slideUp(element) {
-            element.style.transition = "height 0.5s ease-out";
-            element.style.height = element.scrollHeight + "px";
-            setTimeout(() => {
-                element.style.height = "0px";
-                element.style.overflow = "hidden";
-            }, 10);
-            setTimeout(() => {
-                element.style.display = "none";
-                element.style.height = "";
-            }, 500);
-        }
-
-        // Hide all FAQ items initially except the first set
-        if (faqItems.length > increment) {
-            toggleButton.style.display = "block"; // Show the button
-            faqItems.forEach((item, index) => {
-                if (index >= increment) {
-                    item.style.display = "none"; // Hide extra items
-                }
-            });
-        } else {
-            toggleButton.style.display = "none"; // Hide the button if items are less than or equal to increment
-        }
-
-        // Handle button click
-        toggleButton.addEventListener("click", function () {
-            const isExpanded = toggleButton.getAttribute("data-expanded") === "true";
-
-            if (isExpanded) {
-                currentlyVisible = increment;
-                faqItems.forEach((item, index) => {
-                    if (index >= increment) {
-                        slideUp(item);
-                    }
-                });
-                toggleButton.textContent = "Load More";
-                toggleButton.setAttribute("data-expanded", "false");
-            } else {
-                const nextVisible = currentlyVisible + increment;
-                faqItems.forEach((item, index) => {
-                    if (index < nextVisible && item.style.display === "none") {
-                        slideDown(item);
-                    }
-                });
-                currentlyVisible = nextVisible;
-
-                if (currentlyVisible >= faqItems.length) {
-                    toggleButton.textContent = "Load Less";
-                    toggleButton.setAttribute("data-expanded", "true");
-                }
-            }
-        });
-    });
-}
-
 if ($(".manualBrochureSection").length) {
     jQuery(document).ready(function () {
         const accordionHeaders = document.querySelectorAll(".accordion-header");
@@ -1856,44 +1818,3 @@ if ($(".blogsCards").length) {
         renderCards(currentPage);
     });
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Elements
-    const overlay = document.getElementById("overlay");
-    const percentage = document.getElementById("percentage");
-    let progress = 1; // Start progress at 1%
-    const total = 100;
-    // Update the progress bar and percentage on page load events
-    function updateProgress() {
-        if (progress <= total) { // Fixed issue
-            percentage.textContent = `${progress}%`; // Correct syntax
-        }
-    }
-    function startLoader() {
-        // When the page is fully loaded
-        window.onload = function () {
-            // Ensure the loader reaches 100% when the page fully loads
-            const completeProgress = setInterval(() => {
-                if (progress < 100) {
-                    progress++;
-                    updateProgress();
-                } else {
-                    clearInterval(completeProgress);
-                    // Remove loader after reaching 100%
-                    setTimeout(() => {
-                        overlay.style.display = "none";
-                    }, 300); // Small delay to show 100% before hiding the loader
-                }
-            }, 30); // Fast increments to reach 100% on page load
-        };
-    }
-    if (!localStorage.getItem('visited')) {
-        // First-time visitor, show loader
-        startLoader();
-        // Set localStorage flag to indicate the user has visited
-        localStorage.setItem('visited', 'true');
-    } else {
-        // Not the first time, hide the loader immediately
-        overlay.style.display = "none";
-    }
-});

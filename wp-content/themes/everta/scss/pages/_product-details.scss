@@ -8,8 +8,8 @@
         }
     }
     .productBannerWrapper{display: flex;flex-direction:column;align-items:center;
-        .bannerHeading{transition: 0.8s all ease-in-out;opacity: 0;
-            h1{margin-bottom: 4px;@include termina;@include font64;line-height: 150%;text-transform: uppercase;font-weight: 600;}
+        .bannerHeading{transition: 0.8s all ease-in-out;opacity: 0;margin-bottom:50px;
+            h1{margin-bottom: 4px;@include termina;@include font64;line-height: 100%;text-transform: uppercase;font-weight: 600;}
         }
         .productDetails{display: flex;gap:120px;margin-bottom:42px;transition: 0.8s all ease-in-out;opacity: 0;justify-content:center;
             p{@include termina;@include font18;font-weight: 600;line-height: 155.556%;color: #1E1E1E;position:relative;padding-left:30px;
@@ -41,6 +41,7 @@
     @media all and (max-width:1600px){
         margin-bottom: 150px;margin-top: 130px;
     .productBannerWrapper{
+        .bannerHeading{margin-bottom: 40px;}
         .productDetails{gap:100px;margin-bottom:36px;
             p{
     
@@ -57,6 +58,7 @@
     @media all and (max-width:1440px){
         margin-bottom: 120px;margin-top: 110px;
     .productBannerWrapper{
+        .bannerHeading{margin-bottom: 36px;}
         .productDetails{gap:90px;margin-bottom:32px;
   
         }
@@ -67,6 +69,7 @@
     @media all and (max-width:1280px){
     margin-top: 100px;
     .productBannerWrapper{
+        .bannerHeading{margin-bottom: 30px;}
         .productDetails{gap:80px;margin-bottom:28px;
             p{padding-left: 24px;
                     &::after{width: 8px;height: 8px;} 
@@ -83,6 +86,7 @@
     @media all and (max-width:820px){
         margin-top: 110px;
         .productBannerWrapper{
+            .bannerHeading{margin-bottom: 24px;}
             .productDetails{gap:40px;margin-bottom:24px;
                 p{padding-left: 20px;
                         &::after{width: 6px;height: 6px;top: 6px;}
@@ -795,6 +799,7 @@
             .cards {
                 border-bottom: 1px solid $tertiaryColor3;
                 border-top: 1px solid $tertiaryColor3;
+                .slick-track{float: left;}
                 .card {
                     border-right: 1px solid $tertiaryColor3;
                     transition: all 0.3s ease-out;
@@ -826,7 +831,7 @@
                         }
 
                         h5 {
-                            text-align: center;
+                            text-align: left;
                             margin-bottom: 32px;
                             color: $quaternaryColor1;
                             @include termina;
@@ -836,7 +841,7 @@
                         }
 
                         p {
-                            text-align: center;
+                            text-align: left;
                             color: $quaternaryColor1;
                             @include font16;
                             line-height: 175%;
