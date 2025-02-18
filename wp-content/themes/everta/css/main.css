@@ -6998,6 +6998,11 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .faqSection .container .accordions-wrapper .accordion.active .accordion-icon img {
   transform: rotate(-180deg);
 }
+.faqSection .container .toggleCta {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
 @media all and (max-width: 1800px) {
   .faqSection {
     margin-bottom: 180px;
@@ -7073,6 +7078,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .faqSection .container .accordions-wrapper .accordion .accordion-body {
     padding: 0px 156px;
   }
+  .faqSection .container .toggleCta {
+    margin-top: 40px;
+  }
 }
 @media all and (max-width: 1280px) {
   .faqSection .faq-heading h2 {
@@ -7103,6 +7111,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .faqSection .container .accordions-wrapper .accordion .accordion-body {
     padding: 0px 154px;
+  }
+  .faqSection .container .toggleCta {
+    margin-top: 36px;
   }
 }
 @media all and (max-width: 1024px) {
