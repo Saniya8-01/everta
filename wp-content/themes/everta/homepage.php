@@ -2767,17 +2767,16 @@
         // }            
         ?>
         <div class="formContainer">
-            <form method="post">
+            <form method="post" onsubmit="return validateEmail()">
                 <div class="input">
                     <label for="">Your Email</label>
-                    <input type="email" name="youremail" placeholder="your@gmail.com" required 
-                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
-                    title="Please enter a valid email address (e.g., your@gmail.com)">             
+                    <input type="text" name="youremail" id="email" placeholder="your@gmail.com" title="Please enter a valid email address (e.g., your@gmail.com)">
                 </div>
                 <div class="ctaDiv">
                     <input type="submit" name="continue" value="Continue">
                 </div>
             </form>
+            <span id="error-msg" style="color:red;"></span>
         </div>
     </div>
     <?php endwhile; ?>
@@ -2813,6 +2812,9 @@
             </div>
             <?php endwhile; ?>
             <?php endif; ?>
+        </div>
+        <div class="toggleCta">
+            <a href="<?php echo get_sub_field('faq_link'); ?>" class="ctaWhiteBlack" id="toggleFaqButton">Learn More</a>
         </div>
     </div>
     <?php endwhile; ?>

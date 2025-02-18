@@ -1,4 +1,4 @@
-.bannerSection {position: relative;margin-top: 100px;margin-bottom: 200px;height: calc(100vh - 96px);overflow:hidden;
+.bannerSection {position: relative;margin-top: 96px;margin-bottom: 200px;height: calc(100vh - 96px);overflow:hidden;
     .bannerSectionWrapper {
         .bannerImageWrapper {height: 100%;position: relative;
             img{width: 100%;}
@@ -14,7 +14,7 @@
             p {margin-bottom: 72px;color: #fff;@include font24;}
         }
     }
-    @media all and (max-width:1800px) {margin-top: 96px;margin-bottom: 180px;height: auto;
+    @media all and (max-width:1800px) {margin-bottom: 180px;height: auto;
         .bannerSectionWrapper {
             .bannerSectionContent {left: 100px;top: 220px;width: 70%;
                 h1 {margin-bottom: 18px;}
@@ -24,7 +24,7 @@
     }
 
     @media all and (max-width:1600px) {
-        margin-top: 88px;
+        margin-top: 89px;
         margin-bottom: 150px;
 
         .bannerSectionWrapper {
@@ -50,8 +50,8 @@
     }
 
     @media all and (max-width:1440px) {
-        margin-top: 77px;
-        height: calc(100vh - 77px);
+        margin-top: 82px;
+        height: calc(100vh - 82px);
         margin-bottom: 120px;
 
         .bannerSectionWrapper {
@@ -71,17 +71,13 @@
         }
     }
 
-    @media all and (max-width:1366px) {
-        height: calc(100vh - 77px);
-    }
-
     @media all and (max-width:1366px) and (min-height:1024px) {
         height: auto;
     }
 
     @media all and (max-width:1280px) {
-        margin-top: 69px;
-        height: calc(100vh - 69px);
+        margin-top: 78px;
+        height: calc(100vh - 78px);
 
         .bannerSectionWrapper {
             .bannerSectionContent {
@@ -100,7 +96,7 @@
     }
 
     @media all and (max-width:1200px) {
-        margin-top: 66px;
+        margin-top: 74px;
         height: auto;
 
         .bannerSectionWrapper {
@@ -663,7 +659,7 @@
                         }
 
                         h5 {
-                            text-align: center;
+                            text-align: left;
                             margin-bottom: 32px;
                             color: $quaternaryColor1;
                             @include termina;
@@ -673,9 +669,8 @@
                         }
 
                         p {
-                            text-align: center;
+                            text-align: left;
                             color: $quaternaryColor1;
-                
                             @include font16;
                             font-weight: 400;
                             line-height: 175%;
@@ -2435,6 +2430,7 @@
                 }
             }
         }
+        .toggleCta{display: flex;justify-content: center;margin-top: 48px;}
     }
 
     //------------------------Media Query--------------------------------//
@@ -2551,6 +2547,7 @@
                     }
                 }
             }
+            .toggleCta{margin-top: 40px;}
         }
     }
 
@@ -2599,6 +2596,7 @@
                     }
                 }
             }
+            .toggleCta{margin-top: 36px;}
         }
     }
 
