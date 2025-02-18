@@ -10602,7 +10602,7 @@ body {
   }
 }
 .foundersSec .secWrapper .secHeading {
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   padding-top: 70px;
 }
 .foundersSec .secWrapper .secHeading h2 {
@@ -10737,8 +10737,11 @@ body {
     margin-bottom: 180px;
   }
   .foundersSec .secWrapper .secHeading {
-    margin-bottom: 90px;
+    margin-bottom: 60px;
     padding-top: 60px;
+  }
+  .foundersSec .secWrapper .secHeading h2 {
+    margin-bottom: 22px;
   }
   .foundersSec .secWrapper .secContent {
     padding-bottom: 140px;
@@ -10749,8 +10752,11 @@ body {
     margin-bottom: 150px;
   }
   .foundersSec .secWrapper .secHeading {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     padding-top: 50px;
+  }
+  .foundersSec .secWrapper .secHeading h2 {
+    margin-bottom: 20px;
   }
   .foundersSec .secWrapper .secContent {
     padding-bottom: 120px;
@@ -10766,12 +10772,8 @@ body {
   .foundersSec {
     margin-bottom: 120px;
   }
-  .foundersSec .secWrapper .secHeading {
-    margin-bottom: 70px;
-    padding-top: 50px;
-  }
   .foundersSec .secWrapper .secHeading h2 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .foundersSec .secWrapper .secContent {
     padding-bottom: 100px;
@@ -10787,8 +10789,11 @@ body {
 }
 @media all and (max-width: 1280px) {
   .foundersSec .secWrapper .secHeading {
-    margin-bottom: 60px;
+    margin-bottom: 45px;
     padding-top: 45px;
+  }
+  .foundersSec .secWrapper .secHeading h2 {
+    margin-bottom: 12px;
   }
   .foundersSec .secWrapper .secContent {
     padding-bottom: 80px;
@@ -10807,7 +10812,11 @@ body {
     margin-bottom: 100px;
   }
   .foundersSec .secWrapper .secHeading {
+    margin-bottom: 40px;
     padding-top: 40px;
+  }
+  .foundersSec .secWrapper .secHeading h2 {
+    margin-bottom: 10px;
   }
   .foundersSec .secWrapper .secContent {
     padding-bottom: 60px;
@@ -10844,11 +10853,11 @@ body {
     background: #F5F75E;
   }
   .foundersSec .secWrapper .secHeading {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     padding-top: 30px;
   }
   .foundersSec .secWrapper .secHeading h2 {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     line-height: 116%;
     text-align: left;
   }
@@ -11140,6 +11149,7 @@ body {
   margin-bottom: 200px;
   border-top: 1px solid #BEC3C5;
   border-bottom: 1px solid #BEC3C5;
+  background: #F5F75E;
 }
 .careerAtEvertaSec .secWrapper {
   padding-left: 120px;
@@ -11541,7 +11551,7 @@ body {
 }
 
 .resDetailBannerSec {
-  margin-top: 170px;
+  margin-top: 172px;
   margin-bottom: 120px;
 }
 .resDetailBannerSec .secWrapper {
@@ -11644,7 +11654,7 @@ body {
 }
 @media all and (max-width: 1800px) {
   .resDetailBannerSec {
-    margin-top: 160px;
+    margin-top: 165px;
     margin-bottom: 110px;
   }
   .resDetailBannerSec .secWrapper {
@@ -11667,7 +11677,7 @@ body {
 }
 @media all and (max-width: 1440px) {
   .resDetailBannerSec {
-    margin-top: 140px;
+    margin-top: 120px;
     margin-bottom: 100px;
   }
   .resDetailBannerSec .secWrapper {
@@ -11685,7 +11695,7 @@ body {
 }
 @media all and (max-width: 1280px) {
   .resDetailBannerSec {
-    margin-top: 120px;
+    margin-top: 100px;
     margin-bottom: 80px;
   }
   .resDetailBannerSec .secWrapper .backBtn {
@@ -11701,7 +11711,6 @@ body {
 }
 @media all and (max-width: 1024px) {
   .resDetailBannerSec {
-    margin-top: 100px;
     margin-bottom: 60px;
   }
   .resDetailBannerSec .secWrapper {
@@ -11709,9 +11718,6 @@ body {
   }
 }
 @media all and (max-width: 820px) {
-  .resDetailBannerSec {
-    margin-top: 84px;
-  }
   .resDetailBannerSec .secWrapper {
     width: 90%;
   }
@@ -12880,7 +12886,7 @@ body {
 }
 
 .resourcesBanner {
-  margin-top: 206px;
+  margin-top: 172px;
   margin-bottom: 120px;
   display: flex;
   justify-content: center;
@@ -13041,7 +13047,7 @@ body {
 }
 @media all and (max-width: 1800px) {
   .resourcesBanner {
-    margin-top: 200px;
+    margin-top: 165px;
     margin-bottom: 120px;
   }
   .resourcesBanner .resorucesBannerWrapper {
@@ -13066,7 +13072,7 @@ body {
 }
 @media all and (max-width: 1600px) {
   .resourcesBanner {
-    margin-top: 160px;
+    margin-top: 150px;
   }
   .resourcesBanner .resorucesBannerWrapper {
     width: 60%;
@@ -13098,6 +13104,7 @@ body {
 @media all and (max-width: 1440px) {
   .resourcesBanner {
     margin-bottom: 80px;
+    margin-top: 120px;
   }
   .resourcesBanner .resorucesBannerWrapper {
     width: 60%;
@@ -13124,6 +13131,9 @@ body {
   }
 }
 @media all and (max-width: 1280px) {
+  .resourcesBanner {
+    margin-top: 100px;
+  }
   .resourcesBanner .resorucesBannerWrapper {
     width: 60%;
   }
@@ -13152,9 +13162,6 @@ body {
   }
 }
 @media all and (max-width: 1024px) {
-  .resourcesBanner {
-    margin-top: 100px;
-  }
   .resourcesBanner .resorucesBannerWrapper {
     width: 80%;
   }
@@ -13199,7 +13206,6 @@ body {
 }
 @media all and (max-width: 680px) {
   .resourcesBanner {
-    margin-top: 110px;
     margin-bottom: 72px;
   }
   .resourcesBanner .resorucesBannerWrapper {
@@ -14947,7 +14953,7 @@ body {
 }
 
 .privacyPolicySec {
-  margin: 180px auto;
+  margin: 172px auto;
   width: 58%;
 }
 .privacyPolicySec .backBtn {
@@ -15174,7 +15180,7 @@ body {
 }
 @media screen and (max-width: 1800px) {
   .privacyPolicySec {
-    margin: 160px auto;
+    margin: 165px auto;
     width: 60%;
   }
   .privacyPolicySec .backBtn {
@@ -15202,9 +15208,14 @@ body {
     margin-bottom: 16px;
   }
 }
+@media screen and (max-width: 1600px) {
+  .privacyPolicySec {
+    margin: 150px auto;
+  }
+}
 @media screen and (max-width: 1440px) {
   .privacyPolicySec {
-    margin: 140px auto;
+    margin: 120px auto;
     width: 64%;
   }
   .privacyPolicySec .backBtn {
@@ -15232,9 +15243,13 @@ body {
     margin-bottom: 14px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .privacyPolicySec {
     margin: 100px auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .privacyPolicySec {
     width: 74%;
   }
   .privacyPolicySec .backBtn {
@@ -15270,7 +15285,7 @@ body {
 }
 
 .page-404 {
-  margin: 132px 46px 32px;
+  margin: 172px 46px 32px;
 }
 .page-404 .image-container {
   position: relative;
@@ -15303,9 +15318,14 @@ body {
     font-size: 16px;
   }
 }
+@media all and (max-width: 1800px) {
+  .page-404 {
+    margin-top: 165px;
+  }
+}
 @media all and (max-width: 1600px) {
   .page-404 {
-    margin: 92px 36px 26px;
+    margin: 150px 36px 26px;
   }
   .page-404 .image-container .content404 {
     bottom: 40px;
@@ -15314,9 +15334,19 @@ body {
     margin-bottom: 30px;
   }
 }
+@media all and (max-width: 1440px) {
+  .page-404 {
+    margin-top: 120px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .page-404 {
+    margin-top: 100px;
+  }
+}
 @media all and (max-width: 1024px) {
   .page-404 {
-    margin: 92px 36px 26px;
+    margin: 100px 36px 26px;
   }
   .page-404 .image-container .content404 {
     bottom: 30px;
@@ -15327,7 +15357,7 @@ body {
 }
 @media all and (max-width: 820px) {
   .page-404 {
-    margin: 62px 0px 70px;
+    margin: 100px 0px 70px;
   }
   .page-404 .image-container .desktopimg {
     display: none;
@@ -15345,7 +15375,7 @@ body {
   margin-bottom: 200px;
   padding-left: 120px;
   padding-right: 120px;
-  margin-top: 162px;
+  margin-top: 172px;
 }
 @media screen and (max-width: 1600px) {
   .productBanner {
@@ -15484,7 +15514,7 @@ body {
 @media all and (max-width: 1800px) {
   .productBanner {
     margin-bottom: 180px;
-    margin-top: 162px;
+    margin-top: 165px;
   }
   .productBanner .productBannerWrapper .bannerHeading h1 {
     margin-bottom: 4px;
@@ -15508,7 +15538,7 @@ body {
 @media all and (max-width: 1600px) {
   .productBanner {
     margin-bottom: 150px;
-    margin-top: 130px;
+    margin-top: 150px;
   }
   .productBanner .productBannerWrapper .productDetails {
     gap: 100px;
@@ -15532,7 +15562,7 @@ body {
 @media all and (max-width: 1440px) {
   .productBanner {
     margin-bottom: 120px;
-    margin-top: 110px;
+    margin-top: 120px;
   }
   .productBanner .productBannerWrapper .productDetails {
     gap: 90px;
@@ -15570,15 +15600,7 @@ body {
     gap: 24px;
   }
 }
-@media all and (max-width: 1024px) {
-  .productBanner {
-    margin-top: 120px;
-  }
-}
 @media all and (max-width: 820px) {
-  .productBanner {
-    margin-top: 110px;
-  }
   .productBanner .productBannerWrapper .productDetails {
     gap: 40px;
     margin-bottom: 24px;
@@ -17767,4 +17789,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}
+}/*# sourceMappingURL=main.css.map */

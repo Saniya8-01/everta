@@ -1,4 +1,4 @@
-.productBanner{margin-bottom: 200px;@include wrapper;margin-top: 162px;
+.productBanner{margin-bottom: 200px;@include wrapper; margin-top: 172px;
     &#animatedBanner{
         .productBannerWrapper{
             .bannerHeading{opacity: 1;}
@@ -22,66 +22,55 @@
         }
         .ctaDiv{display: flex;gap: 36px;transition: 0.8s all ease-in-out;opacity: 0;}
     }
-    @media all and (max-width:1800px){
-        margin-bottom: 180px;margin-top: 162px;
-    .productBannerWrapper{
-        .bannerHeading{
-            h1{margin-bottom: 4px;}
-        }
-        .productDetails{margin-bottom:42px;
-            p{
-                    &::after{top:6px}
-
+    @media all and (max-width:1800px){margin-bottom: 180px;margin-top: 165px;
+        .productBannerWrapper{
+            .bannerHeading{
+                h1{margin-bottom: 4px;}
             }
+            .productDetails{margin-bottom:42px;
+                p{
+                        &::after{top:6px}
+
+                }
+            }
+            .bannerImages{margin-bottom:26px;.productImage{height: 450px;}}
+            .ctaDiv{gap: 36px;}
         }
-        .bannerImages{margin-bottom:26px;.productImage{height: 450px;}}
-        .ctaDiv{gap: 36px;}
     }
-    }
-    @media all and (max-width:1600px){
-        margin-bottom: 150px;margin-top: 130px;
-    .productBannerWrapper{
-        .productDetails{gap:100px;margin-bottom:36px;
-            p{
-    
+    @media all and (max-width:1600px){margin-bottom: 150px; margin-top: 150px;
+        .productBannerWrapper{
+            .productDetails{gap:100px;margin-bottom:36px;
+                p{
                     &::after{width: 10px;height: 10px;top: 5px;}
-               
+                }
             }
-        }
-        .bannerImages{margin-bottom:24px;
-            .productImage{height: 350px;}
-        }
-        .ctaDiv{gap: 34px;}
-    }
-    }
-    @media all and (max-width:1440px){
-        margin-bottom: 120px;margin-top: 110px;
-    .productBannerWrapper{
-        .productDetails{gap:90px;margin-bottom:32px;
-  
-        }
-        .bannerImages{margin-bottom:20px;.productImage{height: 300px;}}
-        .ctaDiv{gap: 30px;}
-    }
-    }
-    @media all and (max-width:1280px){
-    margin-top: 100px;
-    .productBannerWrapper{
-        .productDetails{gap:80px;margin-bottom:28px;
-            p{padding-left: 24px;
-                    &::after{width: 8px;height: 8px;} 
+            .bannerImages{margin-bottom:24px;
+                .productImage{height: 350px;}
             }
+            .ctaDiv{gap: 34px;}
         }
-        .bannerImages{margin-bottom:18px;}
-        .ctaDiv{gap: 24px;}
     }
-    }
-    @media all and (max-width:1024px){
-        margin-top: 120px;
-
+    @media all and (max-width:1440px){margin-bottom: 120px; margin-top: 120px;
+        .productBannerWrapper{
+            .productDetails{gap:90px;margin-bottom:32px;
+    
+            }
+            .bannerImages{margin-bottom:20px;.productImage{height: 300px;}}
+            .ctaDiv{gap: 30px;}
         }
+    }
+    @media all and (max-width:1280px){margin-top: 100px;
+        .productBannerWrapper{
+            .productDetails{gap:80px;margin-bottom:28px;
+                p{padding-left: 24px;
+                        &::after{width: 8px;height: 8px;} 
+                }
+            }
+            .bannerImages{margin-bottom:18px;}
+            .ctaDiv{gap: 24px;}
+        }
+    }
     @media all and (max-width:820px){
-        margin-top: 110px;
         .productBannerWrapper{
             .productDetails{gap:40px;margin-bottom:24px;
                 p{padding-left: 20px;
@@ -92,8 +81,7 @@
             .ctaDiv{gap: 20px;}
         }
     }
-    @media all and (max-width:680px){
-        margin-bottom: 100px;
+    @media all and (max-width:680px){margin-bottom: 100px;
         .productBannerWrapper{align-items: flex-start;
             .bannerHeading{
                 h1{margin-bottom: 24px;font-size: 24px;font-weight: 600;line-height: 32px;}
