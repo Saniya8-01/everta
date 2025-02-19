@@ -598,7 +598,7 @@
         .secContent{display: flex; align-items: center; justify-content: center; padding-bottom: 150px; gap: 60px;
             .founderDetailsbox{display: flex; align-items: center; gap: 70px; justify-content: flex-end; width:calc(50% - 30px);
                 .detailBox{width: calc(55% - 70px); text-align: end;
-                    p{color: $quaternaryColor1;  @include font24; line-height: 133%; margin-bottom: 10px;}
+                    p{color: $quaternaryColor1;  @include font24; line-height: 133%; margin-bottom: 10px; text-transform: capitalize;}
                     h6{color: $quaternaryColor1; font-weight: 700;  @include font24; line-height: 140%; text-transform: capitalize;}
                 }
                 .pictureBox{transition: all 0.5s ease-in-out; position: relative; overflow: hidden;transform-origin: left; width: 45%;}

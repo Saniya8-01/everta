@@ -10687,6 +10687,7 @@ body {
   font-size: 24px;
   line-height: 133%;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 @media screen and (max-width: 1600px) {
   .foundersSec .secWrapper .secContent .founderDetailsbox .detailBox p {
