@@ -9,7 +9,7 @@
     }
     .productBannerWrapper{display: flex;flex-direction:column;align-items:center;
         .bannerHeading{transition: 0.8s all ease-in-out;opacity: 0;margin-bottom:50px;
-            h1{margin-bottom: 4px;@include termina;@include font64;line-height: 100%;text-transform: uppercase;font-weight: 600;}
+            h1{margin-bottom: 4px;@include termina;@include font60;line-height: 100%;text-transform: uppercase;font-weight: 600;}
         }
         .productDetails{display: flex;gap:120px;margin-bottom:42px;transition: 0.8s all ease-in-out;opacity: 0;justify-content:center;
             p{@include termina;@include font18;font-weight: 600;line-height: 155.556%;color: #1E1E1E;position:relative;padding-left:30px;
