@@ -1,6 +1,6 @@
 .resourcesBanner{margin-top: 172px;margin-bottom: 120px;display: flex;justify-content:center;
     .resorucesBannerWrapper{width: 50%;
-        h1{color: #1E1E1E;@include termina;@include font80;margin-bottom: 20px;text-align: center;line-height: 120%;font-weight: 600;}
+        h1{color: #1E1E1E;@include termina;@include font60; text-transform: uppercase; margin-bottom: 20px;text-align: center;line-height: 120%;font-weight: 600;}
         p{color: #4B4B4B;@include font24;font-weight: 400;line-height: 133.333%;margin-bottom: 72px;text-align: center;}
         .resourcesTabs{
             .resourcesTabWrapper{display: flex;align-items:center;gap:16px;justify-content:center;

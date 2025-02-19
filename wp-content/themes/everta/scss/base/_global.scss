@@ -313,6 +313,27 @@ body{@include verdana;font-weight: 400;}
     }
 }
 
+@mixin font60 {
+	font-size: 60px;
+    @media screen and (max-width:1600px) {
+		font-size: 50px;
+	}
+	@media screen and (max-width:1440px) {
+		font-size: 44px;
+	}
+
+    @media screen and (max-width:1280px) {
+		font-size: 36px;
+	}
+
+    @media screen and (max-width:1024px) {
+		font-size: 32px;
+	}
+    @media screen and (max-width:780px) {
+		font-size: 28px;
+	}
+}
+
 @mixin font52 {
     font-size: 52px;
     @media screen and (max-width:1800px) {

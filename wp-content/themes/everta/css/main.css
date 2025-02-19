@@ -7238,33 +7238,34 @@ body {
 .careerBannerSection .careerSectionWrapper .secHeading h1 {
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 600;
   line-height: 120%;
-}
-@media screen and (max-width: 1800px) {
-  .careerBannerSection .careerSectionWrapper .secHeading h1 {
-    font-size: 72px;
-  }
+  text-transform: uppercase;
 }
 @media screen and (max-width: 1600px) {
   .careerBannerSection .careerSectionWrapper .secHeading h1 {
-    font-size: 64px;
+    font-size: 50px;
   }
 }
 @media screen and (max-width: 1440px) {
   .careerBannerSection .careerSectionWrapper .secHeading h1 {
-    font-size: 48px;
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .careerBannerSection .careerSectionWrapper .secHeading h1 {
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 1024px) {
   .careerBannerSection .careerSectionWrapper .secHeading h1 {
-    font-size: 38px;
+    font-size: 32px;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 780px) {
   .careerBannerSection .careerSectionWrapper .secHeading h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
 }
 .careerBannerSection .careerSectionWrapper .secHeading p {
@@ -8052,6 +8053,7 @@ body {
 
 .careerCVSection {
   margin-bottom: 200px;
+  background: #F5F75E;
 }
 @media screen and (max-width: 1800px) {
   .careerCVSection {
@@ -9457,7 +9459,7 @@ body {
 .journeySection .journeySecWrapper .secHeading {
   padding-left: 120px;
   padding-right: 120px;
-  width: 80%;
+  width: 85%;
   margin-bottom: 40px;
 }
 @media screen and (max-width: 1600px) {
@@ -9489,32 +9491,33 @@ body {
   color: #1e1e1e;
   font-family: "termina", sans-serif;
   font-weight: 600;
-  font-size: 80px;
+  font-size: 60px;
   line-height: 120%;
-}
-@media screen and (max-width: 1800px) {
-  .journeySection .journeySecWrapper .secHeading h1 {
-    font-size: 72px;
-  }
+  text-transform: uppercase;
 }
 @media screen and (max-width: 1600px) {
   .journeySection .journeySecWrapper .secHeading h1 {
-    font-size: 64px;
+    font-size: 50px;
   }
 }
 @media screen and (max-width: 1440px) {
   .journeySection .journeySecWrapper .secHeading h1 {
-    font-size: 48px;
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .journeySection .journeySecWrapper .secHeading h1 {
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 1024px) {
   .journeySection .journeySecWrapper .secHeading h1 {
-    font-size: 38px;
+    font-size: 32px;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 780px) {
   .journeySection .journeySecWrapper .secHeading h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
 }
 .journeySection .journeySecWrapper .secHeading p {
@@ -11154,7 +11157,6 @@ body {
   margin-bottom: 200px;
   border-top: 1px solid #BEC3C5;
   border-bottom: 1px solid #BEC3C5;
-  background: #F5F75E;
 }
 .careerAtEvertaSec .secWrapper {
   padding-left: 120px;
@@ -12403,9 +12405,9 @@ body {
   width: 100%;
 }
 .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content span {
-  padding: 4px 8px;
+  padding: 4px 16px;
   background: #F5F75E;
-  border-radius: 4px;
+  border-radius: 20px;
   color: #000;
   font-size: 16px;
   line-height: 175%;
@@ -12571,6 +12573,9 @@ body {
   .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox {
     padding: 0 22px 50px;
   }
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content span {
+    padding: 4px 15px;
+  }
   .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content ul li:last-child::before {
     top: 9px;
   }
@@ -12653,6 +12658,9 @@ body {
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox {
     padding: 0 18px 40px;
+  }
+  .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content span {
+    padding: 4px 14px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content p {
     margin: 18px 0 10px 0;
@@ -12768,6 +12776,7 @@ body {
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content span {
     line-height: 150%;
+    padding: 4px 16px;
   }
   .relatedPostSec .secWrapper .cardContainer .blogCard a .contentBox .content p {
     margin: 16px 0 14px 0;
@@ -12902,35 +12911,36 @@ body {
 .resourcesBanner .resorucesBannerWrapper h1 {
   color: #1E1E1E;
   font-family: "termina", sans-serif;
-  font-size: 80px;
+  font-size: 60px;
+  text-transform: uppercase;
   margin-bottom: 20px;
   text-align: center;
   line-height: 120%;
   font-weight: 600;
 }
-@media screen and (max-width: 1800px) {
-  .resourcesBanner .resorucesBannerWrapper h1 {
-    font-size: 72px;
-  }
-}
 @media screen and (max-width: 1600px) {
   .resourcesBanner .resorucesBannerWrapper h1 {
-    font-size: 64px;
+    font-size: 50px;
   }
 }
 @media screen and (max-width: 1440px) {
   .resourcesBanner .resorucesBannerWrapper h1 {
-    font-size: 48px;
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .resourcesBanner .resorucesBannerWrapper h1 {
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 1024px) {
   .resourcesBanner .resorucesBannerWrapper h1 {
-    font-size: 38px;
+    font-size: 32px;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 780px) {
   .resourcesBanner .resorucesBannerWrapper h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
 }
 .resourcesBanner .resorucesBannerWrapper p {
@@ -15021,6 +15031,7 @@ body {
   font-size: 48px;
   font-weight: 600;
   line-height: 133%;
+  text-transform: uppercase;
 }
 @media screen and (max-width: 1600px) {
   .privacyPolicySec .privacyContent .HeadingBox .secHeading {

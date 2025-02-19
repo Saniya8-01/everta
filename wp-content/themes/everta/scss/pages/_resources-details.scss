@@ -233,7 +233,7 @@
                     }
                     .contentBox{padding: 0 24px 55px; display: flex; align-items: flex-end; justify-content: space-between; 
                         .content{width: 100%;
-                            span{padding: 4px 8px; background: $primaryColor1; border-radius: 4px; color: #000; @include font16; line-height: 175%; transition: 0.3s all ease-in-out; text-transform: capitalize; display: inline-block;}
+                            span{padding: 4px 16px; background: $primaryColor1; border-radius: 20px; color: #000; @include font16; line-height: 175%; transition: 0.3s all ease-in-out; text-transform: capitalize; display: inline-block;}
                             p{margin: 24px 0 14px 0; color: $quaternaryColor1; @include font24; line-height: 166%;}
                             ul{display: flex; align-items: center; gap: 10px;
                                 li{color: #000; @include font16; line-height: 175%; position: relative;
@@ -300,6 +300,7 @@
                     a{
                         .contentBox{padding: 0 22px 50px;
                             .content{
+                                span{padding: 4px 15px;}
                                 ul{
                                     li:last-child{
                                         &::before{top: 9px;}
@@ -353,6 +354,7 @@
                         .imgBox{margin-bottom: 20px;}
                         .contentBox{padding: 0 18px 40px;
                             .content{
+                                span{padding: 4px 14px;}
                                 p{margin: 18px 0 10px 0;}
                                 ul{
                                     li:last-child{
@@ -440,7 +442,7 @@
                         .imgBox{margin-bottom: 24px;}
                         .contentBox{padding: 0 16px 24px;
                             .content{
-                                span{line-height: 150%;}
+                                span{line-height: 150%; padding: 4px 16px;}
                                 p{margin: 16px 0 14px 0; font-size: 16px; line-height: 175%;}
                                 ul{gap: 8px;
                                     li{line-height: 150%;}
