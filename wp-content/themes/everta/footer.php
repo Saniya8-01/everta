@@ -147,7 +147,7 @@
 </div>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom.min.js"></script>
 <?php wp_footer(); ?>
 <script>
    document.addEventListener('DOMContentLoaded', function () {
