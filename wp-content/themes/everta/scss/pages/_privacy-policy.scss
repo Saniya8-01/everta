@@ -1,4 +1,4 @@
-.privacyPolicySec{margin: 180px auto; width: 58%;
+.privacyPolicySec{margin: 172px auto; width: 58%;
     .backBtn{margin-bottom: 100px; display: inline-block;
         a{display: flex; align-items: center; gap: 10px; color: $quaternaryColor2; @include termina; @include font20; line-height: 140%; font-weight: 600;
             .backArrow{color: $quaternaryColor2; @include font20;
@@ -8,7 +8,7 @@
     }
     .privacyContent{
         .HeadingBox{margin-bottom: 64px;
-            .secHeading{color: #1E1E1E;text-shadow: 0px 5.12px 43.52px rgba(0, 0, 0, 0.10);@include termina; @include font48; font-weight: 600; line-height: 133%;}
+            .secHeading{color: #1E1E1E;text-shadow: 0px 5.12px 43.52px rgba(0, 0, 0, 0.10);@include termina; @include font48; font-weight: 600; line-height: 133%; text-transform: uppercase;}
         }
         .ContentBox{
             h2{color: #000;@include font32; @include termina; font-weight: 700; line-height: 150%; margin: 64px 0px 24px;}
@@ -23,7 +23,7 @@
             }
         }
     }
-    @media screen and (max-width:1800px) {margin: 160px auto; width: 60%;
+    @media screen and (max-width:1800px) {margin: 165px auto; width: 60%;
         .backBtn{margin-bottom: 80px;}
         .privacyContent{
             .HeadingBox{margin-bottom: 54px;}
@@ -41,7 +41,8 @@
             }
         }
     }
-    @media screen and (max-width:1440px) {margin: 140px auto; width: 64%;
+    @media screen and (max-width : 1600px){margin: 150px auto;}
+    @media screen and (max-width:1440px) {margin: 120px auto; width: 64%;
         .backBtn{margin-bottom: 60px;}
         .privacyContent{
             .HeadingBox{margin-bottom: 48px;}
@@ -59,7 +60,8 @@
             }
         }
     }
-    @media screen and (max-width:1024px) {margin: 100px auto;width: 74%;
+    @media screen and (max-width : 1280px){margin: 100px auto;}
+    @media screen and (max-width:1024px) {width: 74%;
         .backBtn{margin-bottom: 24px;}
         .privacyContent{
             .HeadingBox{margin-bottom: 56px;}

@@ -1,7 +1,7 @@
 .careerBannerSection{margin: 172px 0px 120px;
     .careerSectionWrapper{@include wrapper;
       .secHeading{margin-bottom: 60px;
-        h1{color: $quaternaryColor1; @include termina; @include font80; font-weight: 600; line-height: 120%; }
+        h1{color: $quaternaryColor1; @include termina; @include font60; font-weight: 600; line-height: 120%; text-transform: uppercase; }
         p{width: 80%; margin:20px 0 36px; color: $quaternaryColor1; @include font24; line-height: 166%;}
       }
       .careerBannerImg{
@@ -286,7 +286,7 @@
     }
   }
 }
-.careerCVSection{@include bottomSpace;
+.careerCVSection{@include bottomSpace;background: $primaryColor1;
   .careerSectionWrapper{@include wrapper; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 72px; padding-bottom: 72px; border: 1px solid $tertiaryColor1;
     h2{@include termina; text-transform: uppercase; @include font48; font-weight: 700; line-height: 134%; text-align: center; color: $quaternaryColor1;}
     p{color: $quaternaryColor1; text-align: center; @include font24; line-height: 167%; margin:20px 0 52px;}

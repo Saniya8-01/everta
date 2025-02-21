@@ -1,7 +1,7 @@
 .journeySection{margin: 172px 0 200px;
     .journeySecWrapper{
-        .secHeading{ @include wrapper; width: 80%; margin-bottom: 40px;
-            h1{margin-bottom: 20px; color: #1e1e1e; @include termina; font-weight: 600; @include font80; line-height: 120%;}
+        .secHeading{ @include wrapper; width: 85%; margin-bottom: 40px;
+            h1{margin-bottom: 20px; color: #1e1e1e; @include termina; font-weight: 600; @include font60; line-height: 120%; text-transform: uppercase;}
             p{color: #1e1e1e; @include font24; line-height: 166%;}
         }
         .imgBox{overflow: hidden; position: relative;
@@ -591,14 +591,14 @@
 }
 .foundersSec{ margin-bottom: 200px; transition: all 0.5s ease-in-out;
     .secWrapper{@include wrapper; 
-        .secHeading{ margin-bottom: 100px; padding-top: 70px;
+        .secHeading{ margin-bottom: 70px; padding-top: 70px;
             h2{color: $quaternaryColor1; text-align: center; @include termina; font-weight: 700; line-height: 133%; text-transform: uppercase; @include font48; margin-bottom: 24px;}
             p{color: $quaternaryColor1; text-align: center; @include font20; line-height: 160%;}
         }
         .secContent{display: flex; align-items: center; justify-content: center; padding-bottom: 150px; gap: 60px;
             .founderDetailsbox{display: flex; align-items: center; gap: 70px; justify-content: flex-end; width:calc(50% - 30px);
                 .detailBox{width: calc(55% - 70px); text-align: end;
-                    p{color: $quaternaryColor1;  @include font24; line-height: 133%; margin-bottom: 10px;}
+                    p{color: $quaternaryColor1;  @include font24; line-height: 133%; margin-bottom: 10px; text-transform: capitalize;}
                     h6{color: $quaternaryColor1; font-weight: 700;  @include font24; line-height: 140%; text-transform: capitalize;}
                 }
                 .pictureBox{transition: all 0.5s ease-in-out; position: relative; overflow: hidden;transform-origin: left; width: 45%;}
@@ -622,13 +622,17 @@
     }
     @media all and (max-width: 1800px){margin-bottom: 180px;
         .secWrapper{
-            .secHeading{margin-bottom: 90px; padding-top: 60px;}
+            .secHeading{margin-bottom: 60px; padding-top: 60px;
+                h2{margin-bottom: 22px;}
+            }
             .secContent{padding-bottom: 140px;}
         }
     }
     @media all and (max-width: 1600px){margin-bottom: 150px;
         .secWrapper{
-            .secHeading{margin-bottom: 80px; padding-top: 50px;}
+            .secHeading{margin-bottom: 50px; padding-top: 50px;
+                h2{margin-bottom: 20px;}
+            }
             .secContent{padding-bottom: 120px;
                 .founderDetailsbox{gap: 60px;
                     .detailBox{width: calc(55% - 60px);}
@@ -638,8 +642,8 @@
     }
     @media all and (max-width: 1440px){margin-bottom: 120px;
         .secWrapper{
-            .secHeading{margin-bottom: 70px; padding-top: 50px;
-                h2{margin-bottom: 20px;}
+            .secHeading{
+                h2{margin-bottom: 15px;}
             }
             .secContent{padding-bottom: 100px; gap: 50px;
                 .founderDetailsbox{gap: 50px; width: calc(50% - 25px);
@@ -650,7 +654,9 @@
     }
     @media all and (max-width: 1280px){
         .secWrapper{
-            .secHeading{margin-bottom: 60px; padding-top: 45px;}
+            .secHeading{margin-bottom: 45px; padding-top: 45px;
+                h2{margin-bottom: 12px;}
+            }
             .secContent{padding-bottom: 80px; gap: 50px;
                 .founderDetailsbox{gap: 40px; width: calc(50% - 25px);
                     .detailBox{width: calc(55% - 40px);}
@@ -660,7 +666,9 @@
     }
     @media all and (max-width: 1024px){margin-bottom: 100px;
         .secWrapper{
-            .secHeading{padding-top: 40px;}
+            .secHeading{margin-bottom: 40px; padding-top: 40px;
+                h2{margin-bottom: 10px;}
+            }
             .secContent{padding-bottom: 60px; gap: 40px;
                 .founderDetailsbox{gap: 30px; width: calc(50% - 20px);
                     .detailBox{width: calc(55% - 30px);}
@@ -689,8 +697,8 @@
     }
     @media all and (max-width: 720px){background: $primaryColor1;
         .secWrapper{
-            .secHeading{margin-bottom: 45px; padding-top: 30px;
-                h2{margin-bottom: 12px;  line-height: 116%; text-align: left;}
+            .secHeading{margin-bottom: 30px; padding-top: 30px;
+                h2{margin-bottom: 10px;  line-height: 116%; text-align: left;}
                 p{text-align: left;}
             }
             .secContent{flex-flow: column; padding-bottom: 35px; gap: 35px;

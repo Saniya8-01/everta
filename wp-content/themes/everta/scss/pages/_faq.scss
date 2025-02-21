@@ -1,6 +1,6 @@
-.resourcesBanner{margin-top: 206px;margin-bottom: 120px;display: flex;justify-content:center;
+.resourcesBanner{margin-top: 172px;margin-bottom: 120px;display: flex;justify-content:center;
     .resorucesBannerWrapper{width: 50%;
-        h1{color: #1E1E1E;@include termina;@include font80;margin-bottom: 20px;text-align: center;line-height: 120%;font-weight: 600;}
+        h1{color: #1E1E1E;@include termina;@include font60; text-transform: uppercase; margin-bottom: 20px;text-align: center;line-height: 120%;font-weight: 600;}
         p{color: #4B4B4B;@include font24;font-weight: 400;line-height: 133.333%;margin-bottom: 72px;text-align: center;}
         .resourcesTabs{
             .resourcesTabWrapper{display: flex;align-items:center;gap:16px;justify-content:center;
@@ -16,8 +16,7 @@
             &::-webkit-input-placeholder{@include font20;color: #1E1E1E;}
         }
     }
-    @media all and (max-width:1800px){
-        margin-top: 200px;margin-bottom: 120px;
+    @media all and (max-width:1800px){margin-top: 165px;margin-bottom: 120px;
     .resorucesBannerWrapper{width: 50%;
         h1{margin-bottom: 20px;}
         p{margin-bottom: 70px;}
@@ -30,8 +29,7 @@
         input{padding:12px 0px;}
     }
     }
-    @media all and (max-width:1600px){
-        margin-top: 160px;
+    @media all and (max-width:1600px){margin-top: 150px;
     .resorucesBannerWrapper{width: 60%;
         h1{margin-bottom: 20px;}
         p{margin-bottom: 60px;}
@@ -46,8 +44,7 @@
         input{padding:11px 0px;}
     }
     }
-    @media all and (max-width:1440px){
-    margin-bottom: 80px;
+    @media all and (max-width:1440px){margin-bottom: 80px;margin-top:120px;
     .resorucesBannerWrapper{width: 60%;
         h1{margin-bottom: 20px;}
         p{margin-bottom: 60px;}
@@ -62,7 +59,7 @@
         input{padding:10px 0px;}
     }
     }
-    @media all and (max-width:1280px){
+    @media all and (max-width:1280px){margin-top: 100px;
     .resorucesBannerWrapper{width: 60%;
         h1{margin-bottom: 18px;}
         p{margin-bottom: 50px;}
@@ -78,7 +75,6 @@
     }
     }
     @media all and (max-width:1024px){
-        margin-top: 100px;
     .resorucesBannerWrapper{width: 80%;
         h1{margin-bottom: 16px;}
         p{margin-bottom: 40px;}
@@ -104,8 +100,7 @@
             }
         }
     }
-    @media all and (max-width:680px){
-        margin-top: 110px;margin-bottom: 72px;
+    @media all and (max-width:680px){margin-bottom: 72px;
     .resorucesBannerWrapper{width: 100%;@include wrapper;
         h1{font-size: 32px;line-height: 36px;margin-bottom: 16px;text-align: left;}
         p{font-size: 16px;font-weight: 400;font-weight: 400;line-height: 28px; margin-bottom: 32px;text-align: left;}
