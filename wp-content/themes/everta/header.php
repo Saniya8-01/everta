@@ -21,7 +21,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 	<link rel="stylesheet" href="https://use.typekit.net/akf4uqs.css">
 	<link href="<?php bloginfo('template_directory'); ?>/css/slick-theme.css" rel="stylesheet">
 	<link href="<?php bloginfo('template_directory'); ?>/css/slick.css" rel="stylesheet">
-	<link href="<?php bloginfo('template_directory'); ?>/css/main.min.css" rel="stylesheet">
+	<link href="<?php bloginfo('template_directory'); ?>/css/main.css" rel="stylesheet">
 	<script type="text/javascript">
 		var site_url = "<?php echo get_site_url(); ?>";
 	</script>

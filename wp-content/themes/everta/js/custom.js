@@ -1059,8 +1059,6 @@ $(window).scroll(function () {
 //     });
 // });
 
-
-  
   if ($(".homepageFaq").length) {
     jQuery(document).ready(function () {
         const accordionHeaders = document.querySelectorAll(".accordion-header");
@@ -1402,6 +1400,30 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 if ($(".productSection").length) {
+    $(".cards").slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+}
+
+if ($(".chargingSection").length) {
     $(".cards").slick({
         slidesToShow: 3,
         slidesToScroll: 1,
