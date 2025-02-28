@@ -246,7 +246,7 @@
         </div>
         <!-- Tab Content for DC -->
         <div class="tab-content active" id="dc">
-            <div class="cards">
+            <div class="cardDc cards">
                 <?php 
             $related_post = get_sub_field('related_products_dc'); 
             if ($related_post) : 
@@ -295,7 +295,7 @@
         </div>
         <!-- Tab Content for AC -->
         <div class="tab-content" id="ac">
-            <div class="cards">
+            <div class="cardAc cards">
                 <?php 
                     $related_post = get_sub_field('related_products_ac'); 
                     if ($related_post) : 
@@ -326,9 +326,9 @@
                                 endwhile; 
                             endif; 
                             ?>
-                        <h5>
+                        <!-- <h5>
                             <?php echo implode(' • ', $features); ?>
-                        </h5>
+                        </h5> -->
                         <p>
                             <?php echo wp_trim_words(get_the_content(), 40, '...'); ?>
                         </p>
