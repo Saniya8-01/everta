@@ -370,7 +370,7 @@
                                             endwhile; 
                                             endif; 
                                         ?>
-                                        <h5><?php echo implode(' &nbsp;•&nbsp; ', $features); ?></h5>
+                                        <!-- <h5><?php echo implode(' &nbsp;•&nbsp; ', $features); ?></h5> -->
                                         <p><?php echo wp_trim_words(get_the_content(), 40, '...'); ?></p>
                                     </div>
                                     <a href="<?php echo esc_url($post_link); ?>">Explore more<i class="icon-right-arrow fontellowRightArrow"></i></a>

@@ -277,9 +277,9 @@
                         endwhile; 
                     endif; 
                     ?>
-                        <h5>
+                        <!-- <h5>
                             <?php echo implode(' • ', $features); ?>
-                        </h5>
+                        </h5> -->
                         <p>
                             <?php echo wp_trim_words(get_the_content(), 40, '...'); ?>
                         </p>
