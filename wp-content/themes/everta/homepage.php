@@ -229,120 +229,74 @@
 
 <section class="chargingSection">
     <?php if (have_rows('charging_section')) : ?>
-    <?php while (have_rows('charging_section')) : the_row(); ?>
-    <div class="tab-wrapper">
-        <!-- Heading and Tabs -->
-        <div class="tab-header">
-            <h2>
-                <?php echo get_sub_field('heading'); ?>
-            </h2>
-            <p>
-                <?php echo get_sub_field('subheading'); ?>
-            </p>
-            <div class="tab-buttons">
-                <button class="tab-button active" data-tab="dc">DC</button>
-                <button class="tab-button" data-tab="ac">AC</button>
-            </div>
-        </div>
-        <!-- Tab Content for DC -->
-        <div class="tab-content active" id="dc">
-            <div class="cardDc cards">
-                <?php 
-            $related_post = get_sub_field('related_products_dc'); 
-            if ($related_post) : 
-                $counter = 0; // Initialize counter
-                foreach ($related_post as $post) : 
-                    setup_postdata($post); 
-                    $post_id = get_the_ID(); 
-                    $post_link = get_permalink($post_id);
-                    if ($counter >= 3) break; // Stop loop after 3 cards
-                    $counter++;
-            ?>
-                <div class="card">
-                    <div class="card-wrapper">
-                        <?php $full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
-                        <img src="<?php echo $full_image_url[0]; ?>" alt="product-image">
-                        <h3>
-                            <?php the_title(); ?>
-                        </h3>
-                        <?php 
-                    $features = [];
-                    if (have_rows('banner_section', $post_id)) : 
-                        while (have_rows('banner_section', $post_id)) : the_row(); 
-                            if (have_rows('features_list')) : 
-                                while (have_rows('features_list')) : the_row(); 
-                                    $features[] = get_sub_field('feature_info');
-                                endwhile; 
-                            endif; 
-                        endwhile; 
-                    endif; 
-                    ?>
-                        <!-- <h5>
-                            <?php echo implode(' • ', $features); ?>
-                        </h5> -->
-                        <p>
-                            <?php echo wp_trim_words(get_the_content(), 40, '...'); ?>
-                        </p>
-                    </div>
-                    <a href="<?php echo esc_url($post_link); ?>">Explore more
-                        <i class="icon-right-arrow fontellowRightArrow"></i>
-                    </a>
-                </div>
-                <?php endforeach; ?>
-                <?php wp_reset_postdata(); ?>
-                <?php endif; ?>
-            </div>
-        </div>
-        <!-- Tab Content for AC -->
-        <div class="tab-content" id="ac">
-            <div class="cardAc cards">
-                <?php 
-                    $related_post = get_sub_field('related_products_ac'); 
-                    if ($related_post) : 
-                        $counter = 0; // Initialize counter
-                        foreach ($related_post as $post) : 
-                            setup_postdata($post); 
-                            $post_id = get_the_ID(); 
-                            $post_link = get_permalink($post_id);
-                            if ($counter >= 3) break; // Stop loop after 3 cards
-                            $counter++;
-                    ?>
-                <div class="card">
-                    <div class="card-wrapper">
-                        <?php $full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
-                        <img src="<?php echo $full_image_url[0]; ?>" alt="product-image">
-                        <h3>
-                            <?php the_title(); ?>
-                        </h3>
-                        <?php 
-                            $features = [];
-                            if (have_rows('banner_section', $post_id)) : 
-                                while (have_rows('banner_section', $post_id)) : the_row(); 
-                                    if (have_rows('features_list')) : 
-                                        while (have_rows('features_list')) : the_row(); 
-                                            $features[] = get_sub_field('feature_info');
-                                        endwhile; 
-                                    endif; 
-                                endwhile; 
-                            endif; 
-                            ?>
-                        <!-- <h5>
-                            <?php echo implode(' • ', $features); ?>
-                        </h5> -->
-                        <p>
-                            <?php echo wp_trim_words(get_the_content(), 40, '...'); ?>
-                        </p>
+        <?php while (have_rows('charging_section')) : the_row(); ?>
+            <div class="tab-wrapper">
+                <!-- Heading and Tabs -->
+                <div class="tab-header">
+                    <h2><?php echo get_sub_field('heading'); ?></h2>
+                    <p><?php echo get_sub_field('subheading'); ?></p>
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="dc">DC</button>
+                        <button class="tab-button" data-tab="ac">AC</button>
                     </div>
                 </div>
-                <?php endforeach; ?>
-                <?php wp_reset_postdata(); ?>
-                <?php endif; ?>
+
+                <!-- Tab Content for DC -->
+                <div class="tab-content active" id="dc">
+                    <div class="cardDc chargingCards">
+                        <?php 
+                        $related_post = get_sub_field('related_products_dc'); 
+                        if ($related_post) : 
+                            foreach ($related_post as $post) : 
+                                setup_postdata($post); 
+                                $post_id = get_the_ID(); 
+                                $post_link = get_permalink($post_id);
+                        ?>
+                        <div class="card">
+                            <div class="card-wrapper">
+                                <?php $full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
+                                <img src="<?php echo $full_image_url[0]; ?>" alt="product-image">
+                                <h3><?php the_title(); ?></h3>
+                                <p><?php echo wp_trim_words(get_the_content(), 40, '...'); ?></p>
+                            </div>
+                            <a href="<?php echo esc_url($post_link); ?>">Explore more</a>
+                        </div>
+                        <?php endforeach; ?>
+                        <?php wp_reset_postdata(); ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
+                <!-- Tab Content for AC -->
+                <div class="tab-content" id="ac">
+                    <div class="cardAc chargingCards">
+                        <?php 
+                        $related_post = get_sub_field('related_products_ac'); 
+                        if ($related_post) : 
+                            foreach ($related_post as $post) : 
+                                setup_postdata($post); 
+                                $post_id = get_the_ID(); 
+                                $post_link = get_permalink($post_id);
+                        ?>
+                        <div class="card">
+                            <div class="card-wrapper">
+                                <?php $full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
+                                <img src="<?php echo $full_image_url[0]; ?>" alt="product-image">
+                                <h3><?php the_title(); ?></h3>
+                                <p><?php echo wp_trim_words(get_the_content(), 40, '...'); ?></p>
+                            </div>
+                            <a href="<?php echo esc_url($post_link); ?>">Explore more</a>
+                        </div>
+                        <?php endforeach; ?>
+                        <?php wp_reset_postdata(); ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <?php endwhile; ?>
+        <?php endwhile; ?>
     <?php endif; ?>
 </section>
+
 
 <section class="exploreSection">
     <?php if (have_rows('explore_section')) : ?>

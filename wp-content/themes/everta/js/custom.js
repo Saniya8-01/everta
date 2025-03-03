@@ -1349,55 +1349,57 @@ if($(".productBanner").length){
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelectorAll('.tabContent'); // Get all tab content sections
-    const hoverBoxes = document.querySelectorAll('.card'); // Get all cards (hover boxes)
-
-    function setDefaultActiveCards() {
-        // Loop through all tabs and set the first card as active
-        tabs.forEach((tab) => {
-            const firstCard = tab.querySelector('.card'); // Get the first card in each tab
-            if (firstCard) {
-                firstCard.classList.add('active'); // Add 'active' class to the first card
-            }
-        });
-    }
-
-    function applyHoverEffect() {
-        if (window.innerWidth > 820) {
-            // On larger screens, add hover functionality
-            hoverBoxes.forEach((box) => {
-                box.addEventListener('mouseenter', handleMouseEnter);
-            });
-        } else {
-            // On smaller screens, remove the 'active' class and event listeners
-            hoverBoxes.forEach((box) => {
-                box.classList.remove('active');
-                box.removeEventListener('mouseenter', handleMouseEnter);
+if($(".productSection").length){
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.tabContent'); // Get all tab content sections
+        const hoverBoxes = document.querySelectorAll('.card'); // Get all cards (hover boxes)
+    
+        function setDefaultActiveCards() {
+            // Loop through all tabs and set the first card as active
+            tabs.forEach((tab) => {
+                const firstCard = tab.querySelector('.card'); // Get the first card in each tab
+                if (firstCard) {
+                    firstCard.classList.add('active'); // Add 'active' class to the first card
+                }
             });
         }
-    }
-
-    function handleMouseEnter(event) {
-        const currentTab = event.currentTarget.closest('.tabContent'); // Get the parent tab of the hovered card
-        const cardsInCurrentTab = currentTab.querySelectorAll('.card'); // Get all cards in the current tab
-
-        // Remove 'active' class from all cards in the current tab
-        cardsInCurrentTab.forEach((item) => item.classList.remove('active'));
-
-        // Add 'active' class to the hovered card
-        event.currentTarget.classList.add('active');
-    }
-
-    // Set the first card as active by default on page load
-    setDefaultActiveCards();
-
-    // Apply hover effect on load
-    applyHoverEffect();
-
-    // Re-apply hover effect on window resize
-    window.addEventListener('resize', applyHoverEffect);
-});
+    
+        function applyHoverEffect() {
+            if (window.innerWidth > 820) {
+                // On larger screens, add hover functionality
+                hoverBoxes.forEach((box) => {
+                    box.addEventListener('mouseenter', handleMouseEnter);
+                });
+            } else {
+                // On smaller screens, remove the 'active' class and event listeners
+                hoverBoxes.forEach((box) => {
+                    box.classList.remove('active');
+                    box.removeEventListener('mouseenter', handleMouseEnter);
+                });
+            }
+        }
+    
+        function handleMouseEnter(event) {
+            const currentTab = event.currentTarget.closest('.tabContent'); // Get the parent tab of the hovered card
+            const cardsInCurrentTab = currentTab.querySelectorAll('.card'); // Get all cards in the current tab
+    
+            // Remove 'active' class from all cards in the current tab
+            cardsInCurrentTab.forEach((item) => item.classList.remove('active'));
+    
+            // Add 'active' class to the hovered card
+            event.currentTarget.classList.add('active');
+        }
+    
+        // Set the first card as active by default on page load
+        setDefaultActiveCards();
+    
+        // Apply hover effect on load
+        applyHoverEffect();
+    
+        // Re-apply hover effect on window resize
+        window.addEventListener('resize', applyHoverEffect);
+    });
+}
 
 if ($(".productSection").length) {
     $(".cards").slick({
@@ -1423,53 +1425,53 @@ if ($(".productSection").length) {
     });
 }
 
-if ($(".chargingSection").length) {
-    $(".cardAc").slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 1025,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
-        ]
-    });
-}
+$(document).ready(function () {
+    if ($(".chargingSection").length) {
+        function initSlick() {
+            $(".cardAc, .cardDc").each(function () {
+                let $slider = $(this);
 
-if ($(".chargingSection").length) {
-    $(".cardDc").slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 1025,
-                settings: {
-                    slidesToShow: 2,
+                // Ensure Slick initializes only if it has more than 3 slides
+                if ($slider.children().length > 3) {
+                    if (!$slider.hasClass("slick-initialized")) {
+                        $slider.slick({
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            arrows: true,
+                            dots: false,
+                            infinite: false, // Change to true if you want infinite scrolling
+                            responsive: [
+                                { breakpoint: 1025, settings: { slidesToShow: 2 } },
+                                { breakpoint: 768, settings: { slidesToShow: 1 } }
+                            ]
+                        });
+                    }
                 }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
-        ]
-    });
-}
+            });
+        }
+
+        // Initialize Slick on page load
+        initSlick();
+
+        $(".tab-button").click(function () {
+            let tabId = $(this).attr("data-tab");
+
+            $(".tab-button").removeClass("active");
+            $(".tab-content").removeClass("active");
+
+            $(this).addClass("active");
+            $("#" + tabId).addClass("active");
+
+            // Refresh Slick after a short delay
+            setTimeout(() => {
+                $(".cardAc, .cardDc").slick("refresh");
+            }, 100);
+        });
+    }
+});
+
+
+
 
 function equalizeCardHeights() {
     const cards = document.querySelectorAll('.card'); // Select all cards

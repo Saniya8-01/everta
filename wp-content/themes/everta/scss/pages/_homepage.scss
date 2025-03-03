@@ -622,7 +622,7 @@
                 display: block;
             }
 
-            .cards {
+            .chargingCards {
                 border-bottom: 1px solid $tertiaryColor3;
                 border-top: 1px solid $tertiaryColor3;
                 .slick-track{float: left;}
@@ -774,7 +774,7 @@
             }
 
             .tab-content {
-                .cards {
+                .chargingCards {
                     .card {
                         .card-wrapper {
                             padding: 50px 80px 40px 80px;
@@ -833,7 +833,7 @@
             }
 
             .tab-content {
-                .cards {
+                .chargingCards {
                     .card {
                         .card-wrapper {
                             padding: 36px 60px 32px 60px;
@@ -897,7 +897,7 @@
             }
 
             .tab-content {
-                .cards {
+                .chargingCards {
                     .card {
 
                         .card-wrapper {
@@ -963,7 +963,7 @@
             }
 
             .tab-content {
-                .cards {
+                .chargingCards {
                     .card {
                         .card-wrapper {
                             padding: 20px 40px 16px 40px;
@@ -1082,7 +1082,7 @@
             }
 
             .tab-content {
-                .cards {
+                .chargingCards {
                     .card {
                         min-height: auto;
                         background: #ffffff;
@@ -1172,7 +1172,7 @@
     @media all and (max-width:680px) {
         .tab-wrapper {
             .tab-content {
-                .cards {border: none;
+                .chargingCards {border: none;
                     .card{
                         .card-wrapper{ padding: 35px 40px 30px 20px;}
                         a{padding-left: 20px;padding-right: 20px;}
@@ -1445,8 +1445,8 @@
             .statCard {
                 padding: 32px;
                 background: $quaternaryColor1;
-                flex-grow: 1; // Equalize height for all statCards
-                display: flex; // Make content inside the card flexible
+                flex-grow: 1; 
+                display: flex; 
                 flex-direction: column;
                 justify-content: center;
 

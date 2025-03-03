@@ -4629,14 +4629,14 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
 .chargingSection .tab-wrapper .tab-content.active {
   display: block;
 }
-.chargingSection .tab-wrapper .tab-content .cards {
+.chargingSection .tab-wrapper .tab-content .chargingCards {
   border-bottom: 1px solid #D8DBDC;
   border-top: 1px solid #D8DBDC;
 }
-.chargingSection .tab-wrapper .tab-content .cards .slick-track {
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-track {
   float: left;
 }
-.chargingSection .tab-wrapper .tab-content .cards .card {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card {
   border-right: 1px solid #D8DBDC;
   transition: all 0.3s ease-out;
   display: flex;
@@ -4646,16 +4646,16 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   margin-right: -2px;
   z-index: 1;
 }
-.chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper {
   padding: 70px 100px 58px 100px;
   transition: all 0.4s ease-out;
   transform: translateY(30px);
 }
-.chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper img {
   margin: auto;
   padding-bottom: 50px;
 }
-.chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h3 {
   text-align: center;
   margin-bottom: 32px;
   color: #1E1E1E;
@@ -4665,26 +4665,26 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   line-height: 133.333%;
 }
 @media screen and (max-width: 1600px) {
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h3 {
     font-size: 32px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h3 {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h3 {
     font-size: 22px;
   }
 }
 @media screen and (max-width: 720px) {
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h3 {
     font-size: 20px;
   }
 }
-.chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h5 {
   text-align: left;
   margin-bottom: 32px;
   color: #1E1E1E;
@@ -4694,42 +4694,42 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   line-height: 140%;
 }
 @media screen and (max-width: 1600px) {
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h5 {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h5 {
     font-size: 14px;
   }
 }
-.chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper p {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper p {
   text-align: left;
   color: #1E1E1E;
   font-size: 16px;
   line-height: 175%;
 }
 @media screen and (max-width: 1600px) {
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper p {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper p {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper p {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper p {
     font-size: 12px;
   }
 }
-.chargingSection .tab-wrapper .tab-content .cards .card.active {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card.active {
   background: #F5F75E;
   z-index: 2;
 }
-.chargingSection .tab-wrapper .tab-content .cards .card.active .card-wrapper {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card.active .card-wrapper {
   transform: translateY(0);
 }
-.chargingSection .tab-wrapper .tab-content .cards .card.active a {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card.active a {
   opacity: 1;
 }
-.chargingSection .tab-wrapper .tab-content .cards .card a {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4748,30 +4748,30 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   transition: all 0.4s ease-out;
 }
 @media screen and (max-width: 1600px) {
-  .chargingSection .tab-wrapper .tab-content .cards .card a {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .chargingSection .tab-wrapper .tab-content .cards .card a {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a {
     font-size: 14px;
   }
 }
-.chargingSection .tab-wrapper .tab-content .cards .card a .fontellowRightArrow {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card a .fontellowRightArrow {
   color: #F5F75E;
   font-size: 18px;
 }
 @media screen and (max-width: 1600px) {
-  .chargingSection .tab-wrapper .tab-content .cards .card a .fontellowRightArrow {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a .fontellowRightArrow {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1440px) {
-  .chargingSection .tab-wrapper .tab-content .cards .card a .fontellowRightArrow {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a .fontellowRightArrow {
     font-size: 14px;
   }
 }
-.chargingSection .tab-wrapper .tab-content .cards .card a::before {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card a::before {
   position: absolute;
   content: " ";
   top: 0;
@@ -4782,7 +4782,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   border-top-right-radius: 50px;
   z-index: -1;
 }
-.chargingSection .tab-wrapper .tab-content .cards .card a::after {
+.chargingSection .tab-wrapper .tab-content .chargingCards .card a::after {
   position: absolute;
   content: " ";
   top: 0;
@@ -4793,8 +4793,8 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   border-top-left-radius: 50px;
   z-index: -1;
 }
-.chargingSection .tab-wrapper .tab-content .cards .slick-prev,
-.chargingSection .tab-wrapper .tab-content .cards .slick-next {
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev,
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-next {
   padding: 12px;
   position: absolute;
   top: 110%;
@@ -4805,27 +4805,27 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   border-radius: 50%;
   border: 1px solid #1E1E1E;
 }
-.chargingSection .tab-wrapper .tab-content .cards .slick-prev::before,
-.chargingSection .tab-wrapper .tab-content .cards .slick-next::before {
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev::before,
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-next::before {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -55%);
 }
-.chargingSection .tab-wrapper .tab-content .cards .slick-prev.slick-next,
-.chargingSection .tab-wrapper .tab-content .cards .slick-next.slick-next {
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-next,
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-next {
   right: calc(50% - 60px);
 }
-.chargingSection .tab-wrapper .tab-content .cards .slick-prev.slick-next::before,
-.chargingSection .tab-wrapper .tab-content .cards .slick-next.slick-next::before {
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-next::before,
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-next::before {
   content: url(../images/next-button.svg);
 }
-.chargingSection .tab-wrapper .tab-content .cards .slick-prev.slick-prev,
-.chargingSection .tab-wrapper .tab-content .cards .slick-next.slick-prev {
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-prev,
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-prev {
   left: calc(50% - 60px);
 }
-.chargingSection .tab-wrapper .tab-content .cards .slick-prev.slick-prev::before,
-.chargingSection .tab-wrapper .tab-content .cards .slick-next.slick-prev::before {
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-prev::before,
+.chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-prev::before {
   content: url(../images/prev-button.svg);
 }
 @media all and (max-width: 1800px) {
@@ -4846,22 +4846,22 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .chargingSection .tab-wrapper .tab-header .tab-buttons .tab-button {
     padding: 14px 36px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper {
     padding: 50px 80px 40px 80px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper img {
     padding-bottom: 40px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h3 {
     margin-bottom: 30px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h5 {
     margin-bottom: 30px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a {
     padding: 65px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a img {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a img {
     width: 14px;
     height: 14px;
   }
@@ -4884,42 +4884,42 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .chargingSection .tab-wrapper .tab-header .tab-buttons .tab-button {
     padding: 12px 32px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper {
     padding: 36px 60px 32px 60px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper img {
     padding-bottom: 32px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h3 {
     margin-bottom: 20px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h5 {
     margin-bottom: 20px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a {
     padding: 50px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a::after {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a::after {
     border-top-left-radius: 40px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a::before {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a::before {
     border-top-right-radius: 40px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a img {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a img {
     width: 12px;
     height: 12px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .slick-prev,
-  .chargingSection .tab-wrapper .tab-content .cards .slick-next {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev,
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next {
     width: 40px;
     height: 40px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .slick-prev.slick-next,
-  .chargingSection .tab-wrapper .tab-content .cards .slick-next.slick-next {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-next,
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-next {
     right: calc(50% - 50px);
   }
-  .chargingSection .tab-wrapper .tab-content .cards .slick-prev.slick-prev,
-  .chargingSection .tab-wrapper .tab-content .cards .slick-next.slick-prev {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-prev,
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-prev {
     left: calc(50% - 50px);
   }
 }
@@ -4940,46 +4940,46 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .chargingSection .tab-wrapper .tab-header .tab-buttons .tab-button {
     padding: 10px 32px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper {
     padding: 32px 50px 24px 50px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper img {
     padding-bottom: 24px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h3 {
     margin-bottom: 16px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h5 {
     margin-bottom: 16px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a {
     padding: 40px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a::after {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a::after {
     border-top-left-radius: 30px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a::before {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a::before {
     border-top-right-radius: 30px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a img {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a img {
     width: 12px;
     height: 12px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .slick-prev,
-  .chargingSection .tab-wrapper .tab-content .cards .slick-next {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev,
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next {
     width: 36px;
     height: 36px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .slick-prev::before,
-  .chargingSection .tab-wrapper .tab-content .cards .slick-next::before {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev::before,
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next::before {
     transform: translate(-50%, -60%);
   }
-  .chargingSection .tab-wrapper .tab-content .cards .slick-prev.slick-next,
-  .chargingSection .tab-wrapper .tab-content .cards .slick-next.slick-next {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-next,
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-next {
     right: calc(50% - 50px);
   }
-  .chargingSection .tab-wrapper .tab-content .cards .slick-prev.slick-prev,
-  .chargingSection .tab-wrapper .tab-content .cards .slick-next.slick-prev {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-prev,
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-prev {
     left: calc(50% - 50px);
   }
 }
@@ -4997,22 +4997,22 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   .chargingSection .tab-wrapper .tab-header .tab-buttons .tab-button {
     padding: 8px 24px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper {
     padding: 20px 40px 16px 40px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper img {
     padding-bottom: 20px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h3 {
     margin-bottom: 16px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h5 {
     margin-bottom: 16px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a {
     padding: 30px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a img {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a img {
     width: 10px;
     height: 10px;
   }
@@ -5145,21 +5145,21 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     font-weight: 400;
     line-height: 140%;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card {
     min-height: auto;
     background: #ffffff;
     position: relative;
     margin-right: 0px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper {
     padding: 35px 40px 30px 40px;
     transform: translateY(0);
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper img {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper img {
     padding-bottom: 24px;
     margin: unset;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h3 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h3 {
     margin-bottom: 16px;
     font-size: 20px;
     font-style: normal;
@@ -5168,7 +5168,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     letter-spacing: -0.4px;
     text-align: left;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper h5 {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h5 {
     text-align: center;
     margin-bottom: 16px;
     font-size: 12px;
@@ -5177,14 +5177,14 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     line-height: 140%;
     text-align: left;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper p {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper p {
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     text-align: left;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -5198,47 +5198,47 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     opacity: 1;
     background: #ffffff;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a .fontellowRightArrow {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a .fontellowRightArrow {
     font-size: 14px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a::after {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a::after {
     border-top-left-radius: 30px;
     width: 81%;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a::before {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a::before {
     border-top-right-radius: 30px;
     width: 21%;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a img {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a img {
     width: 10px;
     height: 10px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .slick-prev.slick-next,
-  .chargingSection .tab-wrapper .tab-content .cards .slick-next.slick-next {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-next,
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-next {
     left: 92px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .slick-prev.slick-prev,
-  .chargingSection .tab-wrapper .tab-content .cards .slick-next.slick-prev {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-prev,
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-prev {
     left: 30px;
   }
 }
 @media all and (max-width: 680px) {
-  .chargingSection .tab-wrapper .tab-content .cards {
+  .chargingSection .tab-wrapper .tab-content .chargingCards {
     border: none;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card .card-wrapper {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper {
     padding: 35px 40px 30px 20px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .card a {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .slick-prev.slick-next,
-  .chargingSection .tab-wrapper .tab-content .cards .slick-next.slick-next {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-next,
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-next {
     left: 72px;
   }
-  .chargingSection .tab-wrapper .tab-content .cards .slick-prev.slick-prev,
-  .chargingSection .tab-wrapper .tab-content .cards .slick-next.slick-prev {
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-prev,
+  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-prev {
     left: 20px;
   }
 }
