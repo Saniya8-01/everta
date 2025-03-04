@@ -1433,20 +1433,18 @@ $(document).ready(function () {
 
                 // Check if the screen width is greater than 820px before initializing
                 if ($(window).width() > 820) {
-                    if ($slider.children().length > 3) {
-                        if (!$slider.hasClass("slick-initialized")) {
-                            $slider.slick({
-                                slidesToShow: 3,
-                                slidesToScroll: 1,
-                                arrows: true,
-                                dots: false,
-                                infinite: false, // Change to true if you want infinite scrolling
-                                responsive: [
-                                    { breakpoint: 1025, settings: { slidesToShow: 2 } },
-                                    { breakpoint: 768, settings: { slidesToShow: 1 } }
-                                ]
-                            });
-                        }
+                    if (!$slider.hasClass("slick-initialized")) {
+                        $slider.slick({
+                            slidesToShow: 3, // Show 3 slides normally
+                            slidesToScroll: 1,
+                            arrows: true,
+                            dots: false,
+                            infinite: false, // Change to true if you want infinite scrolling
+                            responsive: [
+                                { breakpoint: 1025, settings: { slidesToShow: 2 } },
+                                { breakpoint: 768, settings: { slidesToShow: 1 } }
+                            ]
+                        });
                     }
                 } else {
                     // Destroy Slick if screen width is 820px or less
@@ -1483,6 +1481,7 @@ $(document).ready(function () {
         });
     }
 });
+
 
 function equalizeCardHeights() {
     const cards = document.querySelectorAll('.card'); // Select all cards
