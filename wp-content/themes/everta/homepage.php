@@ -297,7 +297,6 @@
     <?php endif; ?>
 </section>
 
-
 <section class="exploreSection">
     <?php if (have_rows('explore_section')) : ?>
     <?php while (have_rows('explore_section')) : the_row(); ?>

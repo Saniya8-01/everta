@@ -1431,20 +1431,27 @@ $(document).ready(function () {
             $(".cardAc, .cardDc").each(function () {
                 let $slider = $(this);
 
-                // Ensure Slick initializes only if it has more than 3 slides
-                if ($slider.children().length > 3) {
-                    if (!$slider.hasClass("slick-initialized")) {
-                        $slider.slick({
-                            slidesToShow: 3,
-                            slidesToScroll: 1,
-                            arrows: true,
-                            dots: false,
-                            infinite: false, // Change to true if you want infinite scrolling
-                            responsive: [
-                                { breakpoint: 1025, settings: { slidesToShow: 2 } },
-                                { breakpoint: 768, settings: { slidesToShow: 1 } }
-                            ]
-                        });
+                // Check if the screen width is greater than 820px before initializing
+                if ($(window).width() > 820) {
+                    if ($slider.children().length > 3) {
+                        if (!$slider.hasClass("slick-initialized")) {
+                            $slider.slick({
+                                slidesToShow: 3,
+                                slidesToScroll: 1,
+                                arrows: true,
+                                dots: false,
+                                infinite: false, // Change to true if you want infinite scrolling
+                                responsive: [
+                                    { breakpoint: 1025, settings: { slidesToShow: 2 } },
+                                    { breakpoint: 768, settings: { slidesToShow: 1 } }
+                                ]
+                            });
+                        }
+                    }
+                } else {
+                    // Destroy Slick if screen width is 820px or less
+                    if ($slider.hasClass("slick-initialized")) {
+                        $slider.slick("unslick");
                     }
                 }
             });
@@ -1452,6 +1459,11 @@ $(document).ready(function () {
 
         // Initialize Slick on page load
         initSlick();
+
+        // Re-check and update Slick on window resize
+        $(window).resize(function () {
+            initSlick();
+        });
 
         $(".tab-button").click(function () {
             let tabId = $(this).attr("data-tab");
@@ -1462,16 +1474,15 @@ $(document).ready(function () {
             $(this).addClass("active");
             $("#" + tabId).addClass("active");
 
-            // Refresh Slick after a short delay
+            // Refresh Slick after a short delay if screen width > 820px
             setTimeout(() => {
-                $(".cardAc, .cardDc").slick("refresh");
+                if ($(window).width() > 820) {
+                    $(".cardAc, .cardDc").slick("refresh");
+                }
             }, 100);
         });
     }
 });
-
-
-
 
 function equalizeCardHeights() {
     const cards = document.querySelectorAll('.card'); // Select all cards
