@@ -117,7 +117,7 @@
 
 <?php if (have_rows('ourstrength_section')) : ?>
     <?php while (have_rows('ourstrength_section')) : the_row(); ?>
-        <?php $ourstrengthsec = get_sub_field( "heading" ); if ( $ourstrengthsec ) {?>
+        <?php $ourstrengthsec = get_sub_field( "section_heading" ); if ( $ourstrengthsec ) {?>
             <section class="ourStrengthsSec">
                 <div class="secWrapper">
                     <div class="innerSec">
