@@ -5147,9 +5147,9 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .chargingSection .tab-wrapper .tab-content .chargingCards .card {
     min-height: auto;
-    background: #ffffff;
-    position: relative;
-    margin-right: 0px;
+    position: sticky;
+    top: 0;
+    align-items: start;
   }
   .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper {
     padding: 35px 40px 30px 40px;
@@ -5157,7 +5157,7 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper img {
     padding-bottom: 24px;
-    margin: unset;
+    margin: 0;
   }
   .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h3 {
     margin-bottom: 16px;
@@ -5169,13 +5169,12 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     text-align: left;
   }
   .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper h5 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 16px;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
-    text-align: left;
   }
   .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper p {
     font-size: 12px;
@@ -5190,13 +5189,12 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     justify-content: start;
     gap: 8px;
     position: relative;
-    padding: 53px 50px 44px 50px;
+    padding: 53px 50px 44px 40px;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
     height: auto;
     opacity: 1;
-    background: #ffffff;
   }
   .chargingSection .tab-wrapper .tab-content .chargingCards .card a .fontellowRightArrow {
     font-size: 14px;
@@ -5213,13 +5211,14 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     width: 10px;
     height: 10px;
   }
-  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-next,
-  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-next {
-    left: 92px;
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card:nth-child(odd) {
+    background: #F5F75E;
   }
-  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-prev,
-  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-prev {
-    left: 30px;
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card:nth-child(even) {
+    background: #ffffff;
+  }
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card:nth-child(even) a {
+    background: #ffffff;
   }
 }
 @media all and (max-width: 680px) {
@@ -5228,18 +5227,41 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
   }
   .chargingSection .tab-wrapper .tab-content .chargingCards .card .card-wrapper {
     padding: 35px 40px 30px 20px;
+    transform: translateY(0);
   }
   .chargingSection .tab-wrapper .tab-content .chargingCards .card a {
-    padding-left: 20px;
-    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+    position: relative;
+    padding: 53px 50px 44px 20px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    height: auto;
+    opacity: 1;
   }
-  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-next,
-  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-next {
-    left: 72px;
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a::after {
+    border-top-left-radius: 30px;
+    width: 81%;
   }
-  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-prev.slick-prev,
-  .chargingSection .tab-wrapper .tab-content .chargingCards .slick-next.slick-prev {
-    left: 20px;
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a::before {
+    border-top-right-radius: 30px;
+    width: 21%;
+  }
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card a img {
+    width: 10px;
+    height: 10px;
+  }
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card:nth-child(odd) {
+    background: #F5F75E;
+  }
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card:nth-child(even) {
+    background: #ffffff;
+  }
+  .chargingSection .tab-wrapper .tab-content .chargingCards .card:nth-child(even) a {
+    background: #ffffff;
   }
 }
 
