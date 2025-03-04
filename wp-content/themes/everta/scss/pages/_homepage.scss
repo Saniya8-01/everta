@@ -1083,8 +1083,6 @@
 
             .tab-content {
                 .chargingCards {
-                    grid-template-columns: repeat(1, 1fr);
-
                     .card {
                         min-height: auto;
                         position: sticky;

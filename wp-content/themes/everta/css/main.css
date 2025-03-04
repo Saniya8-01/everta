@@ -5145,9 +5145,6 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     font-weight: 400;
     line-height: 140%;
   }
-  .chargingSection .tab-wrapper .tab-content .chargingCards {
-    grid-template-columns: repeat(1, 1fr);
-  }
   .chargingSection .tab-wrapper .tab-content .chargingCards .card {
     min-height: auto;
     position: sticky;
