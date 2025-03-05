@@ -237,7 +237,7 @@
                     <p><?php echo get_sub_field('subheading'); ?></p>
                     <div class="tab-buttons">
                         <button class="tab-button active" data-tab="dc">DC</button>
-                        <button class="tab-button" data-tab="ac">AC</button>
+                        <!-- <button class="tab-button" data-tab="ac">AC</button> -->
                     </div>
                 </div>
 

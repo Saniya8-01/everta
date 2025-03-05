@@ -25,7 +25,7 @@ function hasScrolled() {
 
     // Detect if we are scrolling within the `.hover-section`, `.cards`, or `.hiringProcessContainer`
     const isWithinEvertaSection = isInSection('.hover-section');
-    const isWithinChargingSection = isInSection('.cards');
+    const isWithinChargingSection = isInSection('.chargingCards');
     const isWithinHiringSection = isInSection('.hiringProcessContainer');
 
     if ($(window).width() <= 820 && (isWithinEvertaSection || isWithinChargingSection || isWithinHiringSection)) {

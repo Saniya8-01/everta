@@ -315,7 +315,7 @@
 <?php endif; ?>
 
 <?php if (have_rows('form_section')) : ?>
-    <?php while (have_rows('form_section')) : the_row(); ?>\
+    <?php while (have_rows('form_section')) : the_row(); ?>
         <?php $formsec = get_sub_field( "heading" ); if ( $formsec ) {?>
             <section class="formSection productFormSection">
                 <div class="formWrapper">
