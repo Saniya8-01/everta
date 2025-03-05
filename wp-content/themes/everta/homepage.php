@@ -440,7 +440,7 @@
             <form method="post" onsubmit="return validateEmail()">
                 <div class="input">
                     <label for="">Your Email</label>
-                    <input type="text" name="youremail" id="email" placeholder="your@gmail.com" title="Please enter a valid email address (e.g., your@gmail.com)">
+                    <input type="text" name="youremail" id="your-email" placeholder="your@gmail.com" title="Please enter a valid email address (e.g., your@gmail.com)">
                 </div>
                 <div class="ctaDiv">
                     <input type="submit" name="continue" value="Continue">
