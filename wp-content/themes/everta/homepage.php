@@ -259,7 +259,7 @@
                                 <h3><?php the_title(); ?></h3>
                                 <p><?php echo wp_trim_words(get_the_content(), 40, '...'); ?></p>
                             </div>
-                            <a href="<?php echo esc_url($post_link); ?>">Explore more</a>
+                            <a href="<?php echo esc_url($post_link); ?>">Explore more<i class="icon-right-arrow fontellowRightArrow"></i></a>
                         </div>
                         <?php endforeach; ?>
                         <?php wp_reset_postdata(); ?>
@@ -285,7 +285,7 @@
                                 <h3><?php the_title(); ?></h3>
                                 <p><?php echo wp_trim_words(get_the_content(), 40, '...'); ?></p>
                             </div>
-                            <a href="<?php echo esc_url($post_link); ?>">Explore more</a>
+                            <a href="<?php echo esc_url($post_link); ?>">Explore more<i class="icon-right-arrow fontellowRightArrow"></i></a>
                         </div>
                         <?php endforeach; ?>
                         <?php wp_reset_postdata(); ?>
