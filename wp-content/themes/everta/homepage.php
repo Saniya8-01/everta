@@ -297,7 +297,7 @@
     <?php endif; ?>
 </section>
 
-<section class="exploreSection">
+<!-- <section class="exploreSection">
     <?php if (have_rows('explore_section')) : ?>
     <?php while (have_rows('explore_section')) : the_row(); ?>
     <div class="exploreSectionWrapper">
@@ -330,7 +330,7 @@
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
-</section>
+</section> -->
 
 <section class="mapSection">
     <?php if (have_rows('map_section')) : ?>
@@ -370,7 +370,7 @@
     <?php endif; ?>
 </section>
 
-<section class="testimonialSection">
+<!-- <section class="testimonialSection">
     <?php if (have_rows('testimonial_section')) : ?>
     <?php while (have_rows('testimonial_section')) : the_row(); ?>
     <div class="testimonialSectionWrapper">
@@ -416,9 +416,9 @@
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
-</section>
+</section> -->
 
-<section class="formSection">
+<!-- <section class="formSection">
     <?php if (have_rows('form_section')) : ?>
     <?php while (have_rows('form_section')) : the_row(); ?>
     <div class="formWrapper">
@@ -451,7 +451,7 @@
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
-</section>
+</section> -->
 
 <section class="faqSection homepageFaq" id="faqAccordion">
     <?php if (have_rows('faq_section')) : ?>

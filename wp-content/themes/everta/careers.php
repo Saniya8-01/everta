@@ -239,7 +239,7 @@ wp_reset_postdata(); ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<?php if (have_rows('careerwall_section')) : ?>
+/* <?php if (have_rows('careerwall_section')) : ?>
     <?php while (have_rows('careerwall_section')) : the_row(); ?>
         <?php $careerwall = get_sub_field( "heading" ); if ( $careerwall ) {?>
             <section class="careerWallSection">
@@ -284,7 +284,7 @@ wp_reset_postdata(); ?>
             </section>
         <?php } ?>
     <?php endwhile; ?>
-<?php endif; ?>
+<?php endif; ?> */
 
 <?php
             $args = array('post_type' => 'career', 'posts_per_page' => -1, 'order' => 'DESC');
