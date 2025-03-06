@@ -418,7 +418,7 @@
     <?php endif; ?>
 </section> -->
 
-<!-- <section class="formSection">
+<section class="formSection">
     <?php if (have_rows('form_section')) : ?>
     <?php while (have_rows('form_section')) : the_row(); ?>
     <div class="formWrapper">
@@ -451,7 +451,7 @@
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
-</section> -->
+</section>
 
 <section class="faqSection homepageFaq" id="faqAccordion">
     <?php if (have_rows('faq_section')) : ?>
