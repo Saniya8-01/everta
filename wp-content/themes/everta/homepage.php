@@ -440,7 +440,7 @@
             <form method="post" onsubmit="return validateEmail()">
                 <div class="input">
                     <label for="">Your Email</label>
-                    <input type="text" name="youremail" id="your-email" placeholder="your@gmail.com" title="Please enter a valid email address (e.g., your@gmail.com)">
+                    <input type="text" name="youremail" id="email" placeholder="your@gmail.com" title="Please enter a valid email address (e.g., your@gmail.com)">
                 </div>
                 <div class="ctaDiv">
                     <input type="submit" name="continue" value="Continue">
@@ -503,4 +503,17 @@
             document.getElementById('contactFormWrapper').style.display = 'block';
         }, false);
     });
+
+    function validateEmail() {
+    const email = document.getElementById('email').value;
+    const errorMsg = document.getElementById('error-msg');
+    const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!pattern.test(email)) {
+      errorMsg.textContent = 'Please enter a valid email address (e.g., your@gmail.com)';
+      return false;
+    } else {
+      errorMsg.textContent = ''; // Clear error if valid
+      return true;
+    }
+  }
 </script>
