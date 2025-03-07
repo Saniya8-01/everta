@@ -1876,3 +1876,20 @@ if ($(".blogsCards").length) {
         renderCards(currentPage);
     });
 }
+
+//focus
+document.addEventListener('wpcf7invalid', function(event) {
+    // Use a small delay to ensure all validation messages are rendered
+    setTimeout(function() {
+        // Find all fields with validation errors
+        const invalidFields = event.target.querySelectorAll('.wpcf7-not-valid');
+        if (invalidFields.length > 0) {
+            // Log to check if any invalid fields are detected
+                    // Focus on the first invalid field and scroll it into view
+            invalidFields[0].focus();
+            invalidFields[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+            //console.log("No invalid fields found.");
+        }
+    }, 100); // 100ms delay to allow validation classes to load
+}, false);

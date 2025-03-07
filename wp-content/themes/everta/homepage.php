@@ -441,12 +441,12 @@
                 <div class="input">
                     <label for="">Your Email</label>
                     <input type="text" name="youremail" id="email" placeholder="your@gmail.com" title="Please enter a valid email address (e.g., your@gmail.com)">
+                    <span id="error-msg"></span>
                 </div>
                 <div class="ctaDiv">
                     <input type="submit" name="continue" value="Continue">
                 </div>
             </form>
-            <span id="error-msg" style="color:red;"></span>
         </div>
     </div>
     <?php endwhile; ?>
