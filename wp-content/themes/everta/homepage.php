@@ -237,7 +237,7 @@
                     <p><?php echo get_sub_field('subheading'); ?></p>
                     <div class="tab-buttons">
                         <button class="tab-button active" data-tab="dc">DC</button>
-                        <button class="tab-button" data-tab="ac">AC</button>
+                        <!-- <button class="tab-button" data-tab="ac">AC</button> -->
                     </div>
                 </div>
 
@@ -259,7 +259,7 @@
                                 <h3><?php the_title(); ?></h3>
                                 <p><?php echo wp_trim_words(get_the_content(), 40, '...'); ?></p>
                             </div>
-                            <a href="<?php echo esc_url($post_link); ?>">Explore more</a>
+                            <a href="<?php echo esc_url($post_link); ?>">Explore more<i class="icon-right-arrow fontellowRightArrow"></i></a>
                         </div>
                         <?php endforeach; ?>
                         <?php wp_reset_postdata(); ?>
@@ -285,7 +285,7 @@
                                 <h3><?php the_title(); ?></h3>
                                 <p><?php echo wp_trim_words(get_the_content(), 40, '...'); ?></p>
                             </div>
-                            <a href="<?php echo esc_url($post_link); ?>">Explore more</a>
+                            <a href="<?php echo esc_url($post_link); ?>">Explore more<i class="icon-right-arrow fontellowRightArrow"></i></a>
                         </div>
                         <?php endforeach; ?>
                         <?php wp_reset_postdata(); ?>
@@ -297,7 +297,7 @@
     <?php endif; ?>
 </section>
 
-<section class="exploreSection">
+<!-- <section class="exploreSection">
     <?php if (have_rows('explore_section')) : ?>
     <?php while (have_rows('explore_section')) : the_row(); ?>
     <div class="exploreSectionWrapper">
@@ -330,7 +330,7 @@
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
-</section>
+</section> -->
 
 <section class="mapSection">
     <?php if (have_rows('map_section')) : ?>
@@ -370,7 +370,7 @@
     <?php endif; ?>
 </section>
 
-<section class="testimonialSection">
+<!-- <section class="testimonialSection">
     <?php if (have_rows('testimonial_section')) : ?>
     <?php while (have_rows('testimonial_section')) : the_row(); ?>
     <div class="testimonialSectionWrapper">
@@ -416,7 +416,7 @@
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
-</section>
+</section> -->
 
 <section class="formSection">
     <?php if (have_rows('form_section')) : ?>
@@ -441,12 +441,12 @@
                 <div class="input">
                     <label for="">Your Email</label>
                     <input type="text" name="youremail" id="email" placeholder="your@gmail.com" title="Please enter a valid email address (e.g., your@gmail.com)">
+                    <span id="error-msg"></span>
                 </div>
                 <div class="ctaDiv">
                     <input type="submit" name="continue" value="Continue">
                 </div>
             </form>
-            <span id="error-msg" style="color:red;"></span>
         </div>
     </div>
     <?php endwhile; ?>
@@ -503,4 +503,17 @@
             document.getElementById('contactFormWrapper').style.display = 'block';
         }, false);
     });
+
+    function validateEmail() {
+    const email = document.getElementById('email').value;
+    const errorMsg = document.getElementById('error-msg');
+    const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!pattern.test(email)) {
+      errorMsg.textContent = 'Please enter a valid email address (e.g., your@gmail.com)';
+      return false;
+    } else {
+      errorMsg.textContent = ''; // Clear error if valid
+      return true;
+    }
+  }
 </script>
