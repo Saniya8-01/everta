@@ -1043,21 +1043,21 @@ $(window).scroll(function () {
 }
 
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const languageTranslator = document.querySelector('.languageTranslatorMbl');
-//     const languageMenu = document.querySelector('.languageMenuMbl');
+document.addEventListener('DOMContentLoaded', function () {
+    const languageTranslator = document.querySelector('.languageTranslatorMbl');
+    const languageMenu = document.querySelector('.languageMenuMbl');
 
-//     languageTranslator.addEventListener('click', function (event) {
-//         languageTranslator.classList.toggle('active');
-//         event.stopPropagation();
-//     });
+    languageTranslator.addEventListener('click', function (event) {
+        languageTranslator.classList.toggle('active');
+        event.stopPropagation();
+    });
 
-//     document.addEventListener('click', function (event) {
-//         if (!languageTranslator.contains(event.target)) {
-//             languageTranslator.classList.remove('active');
-//         }
-//     });
-// });
+    document.addEventListener('click', function (event) {
+        if (!languageTranslator.contains(event.target)) {
+            languageTranslator.classList.remove('active');
+        }
+    });
+});
 
   if ($(".homepageFaq").length) {
     jQuery(document).ready(function () {
