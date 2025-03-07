@@ -944,3 +944,37 @@ Stack trace:
 [04-Mar-2025 08:06:50 UTC]   Automatic theme updates starting...
 [04-Mar-2025 08:06:50 UTC]   Automatic theme updates complete.
 [04-Mar-2025 08:06:50 UTC] Automatic updates complete.
+[06-Mar-2025 04:48:10 UTC] Automatic updates starting...
+[06-Mar-2025 04:48:13 UTC]   Automatic plugin updates starting...
+[06-Mar-2025 04:48:13 UTC]   Automatic plugin updates complete.
+[06-Mar-2025 04:48:14 UTC]   Automatic theme updates starting...
+[06-Mar-2025 04:48:14 UTC]   Automatic theme updates complete.
+[06-Mar-2025 04:48:14 UTC] Automatic updates complete.
+[07-Mar-2025 04:49:02 UTC] Automatic updates starting...
+[07-Mar-2025 04:49:03 UTC]   Automatic plugin updates starting...
+[07-Mar-2025 04:49:03 UTC]   Automatic plugin updates complete.
+[07-Mar-2025 04:49:04 UTC]   Automatic theme updates starting...
+[07-Mar-2025 04:49:04 UTC]   Automatic theme updates complete.
+[07-Mar-2025 04:49:04 UTC] Automatic updates complete.
+[07-Mar-2025 07:02:45 UTC] PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($string) must be of type string, array given in D:\SACHIN\www\everta\wp-includes\formatting.php:2906
+Stack trace:
+#0 D:\SACHIN\www\everta\wp-content\themes\everta\careers.php(349): antispambot(Array)
+#1 D:\SACHIN\www\everta\wp-includes\template-loader.php(106): include('D:\\SACHIN\\www\\e...')
+#2 D:\SACHIN\www\everta\wp-blog-header.php(19): require_once('D:\\SACHIN\\www\\e...')
+#3 D:\SACHIN\www\everta\index.php(17): require('D:\\SACHIN\\www\\e...')
+#4 {main}
+  thrown in D:\SACHIN\www\everta\wp-includes\formatting.php on line 2906
+[07-Mar-2025 07:41:33 UTC] PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($string) must be of type string, array given in D:\SACHIN\www\everta\wp-includes\formatting.php:2906
+Stack trace:
+#0 D:\SACHIN\www\everta\wp-content\themes\everta\careers.php(349): antispambot(Array)
+#1 D:\SACHIN\www\everta\wp-includes\template-loader.php(106): include('D:\\SACHIN\\www\\e...')
+#2 D:\SACHIN\www\everta\wp-blog-header.php(19): require_once('D:\\SACHIN\\www\\e...')
+#3 D:\SACHIN\www\everta\index.php(17): require('D:\\SACHIN\\www\\e...')
+#4 {main}
+  thrown in D:\SACHIN\www\everta\wp-includes\formatting.php on line 2906
+[07-Mar-2025 08:06:45 UTC] Automatic updates starting...
+[07-Mar-2025 08:06:47 UTC]   Automatic plugin updates starting...
+[07-Mar-2025 08:06:47 UTC]   Automatic plugin updates complete.
+[07-Mar-2025 08:06:48 UTC]   Automatic theme updates starting...
+[07-Mar-2025 08:06:48 UTC]   Automatic theme updates complete.
+[07-Mar-2025 08:06:48 UTC] Automatic updates complete.

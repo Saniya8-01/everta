@@ -489,7 +489,7 @@
                 }
             }
             .imgBox{
-                .sliderBox{
+                .sliderBox{position: relative;
                     .sliderImg{margin:0 25px;}
                     .slick-slide{transform: scaleY(0.8);opacity: 0.3;
                         figure{
@@ -504,6 +504,20 @@
                         }
                     }
                     .slick-track{float: left;}
+                    .slick-prev,
+                    .slick-next {padding: 12px;position: absolute;top: 110%;width: 48px;height: 48px;cursor: pointer;z-index: 2;border-radius:50%;border:1px solid $quaternaryColor1;
+                        &::before{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-55%);}
+                        &.slick-next {left: 100px;
+                           &::before {
+                                content:'\e80a'; font-family: 'fontello';@include font16; font-weight: 400; color: #000;
+                            }
+                        }
+                        &.slick-prev {left: 25px;
+                            &::before {
+                                content: '\e80b'; font-family: 'fontello';@include font16; font-weight: 400; color: #000;
+                            }
+                        }
+                    }
                 }
 
             }
@@ -516,7 +530,15 @@
     }
     @media all and (max-width: 1600px){margin-bottom: 150px;
         .secWrapper{padding-right: 0;
-            .mainContainer{gap: 150px; padding: 100px 0;}
+            .mainContainer{gap: 150px; padding: 100px 0;
+                .imgBox{
+                    .sliderBox{
+                        .slick-prev,
+                        .slick-next {width: 40px;height: 40px;}
+                    }
+                }
+            
+            }
         }
     }
     @media all and (max-width: 1440px){margin-bottom: 120px;
@@ -528,6 +550,11 @@
                 .imgBox{
                     .sliderBox{
                         .sliderImg{margin: 0 20px;}
+                        .slick-prev,
+                        .slick-next {width: 36px;height: 36px; 
+                            &.slick-next {left: 80px}
+                            &.slick-prev {left: 20px}
+                        }
                     }
                 }
             }
@@ -551,6 +578,11 @@
                 .imgBox{
                     .sliderBox{
                         .sliderImg{margin: 0 15px;}
+                        .slick-prev,
+                        .slick-next { top: 120%;
+                            &.slick-next {left:92px}
+                            &.slick-prev {left: 30px;}
+                        }
                     }
                 }
             }
@@ -558,14 +590,19 @@
     }
     @media all and (max-width: 820px){
         .secWrapper{padding: 0 0;
-
-            .mainContainer{gap: 50px; padding: 50px 0; flex-flow: column;
+            .mainContainer{gap: 50px; padding: 50px 0 100px; flex-flow: column;
                 .contentBox{width: 100%; padding: 0 30px;}
                .imgBox{width: 100%;
                     .sliderBox{
                         .sliderImg{margin: 0 15px;}
                         .slick-slide{transform: scaleY(0.7);}
                         .slick-list{padding: 0 15px !important;}
+                        
+                        .slick-prev,
+                        .slick-next {top: 110%;
+                            &.slick-next {left:100px}
+                            &.slick-prev {left: 30px;}
+                        }
                     }
                 }
             }
@@ -573,7 +610,7 @@
     }
     @media all and (max-width: 720px){
         .secWrapper{padding: 0;
-            .mainContainer{gap: 50px; padding: 35px 0; 
+            .mainContainer{gap: 50px; padding: 35px 0 80px; 
                 .contentBox{padding: 0 20px;
                     h2{font-size: 24px; line-height: 116%;}
                     p{font-size: 12px; line-height: 150%;}
@@ -583,6 +620,12 @@
                         .sliderImg{margin: 0 10px;}
                         .slick-slide{transform: scaleY(0.7);}
                         .slick-list{padding: 0 10px !important;}
+
+                        .slick-prev,
+                        .slick-next {
+                            &.slick-next {left:80px}
+                            &.slick-prev {left: 20px;}
+                        }
                     }
                 }
             }

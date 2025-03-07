@@ -670,7 +670,7 @@
       }
       .jobDescription{background: #fff; padding: 68px 5px 34px 64px; 
         .detailWrapper{max-height: 450px; overflow-y: auto; padding-right: 64px;
-            h2{color: $quaternaryColor2; text-align: left; @include verdana;font-weight: 700; @include font32; line-height: 150%; margin-bottom: 8px;}
+            h2{color: $quaternaryColor2; text-align: left; @include verdana; font-weight: 700; @include font32; line-height: 150%; margin-bottom: 8px;}
             h3{color: $quaternaryColor2; text-align: left; @include verdana;font-weight: 700; @include font24; line-height: 150%; margin-bottom: 8px;}
             h4{color: $quaternaryColor2; text-align: left; @include verdana;font-weight: 700; @include font20; line-height: 140%; margin-bottom: 8px;}
             h5{color: $quaternaryColor2; text-align: left; @include verdana;font-weight: 700; @include font16; line-height: 150%; margin-bottom: 8px;}

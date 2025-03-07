@@ -10394,6 +10394,9 @@ body {
 .ourStorySec .secWrapper .mainContainer .contentBox p:last-child {
   margin-bottom: 0;
 }
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox {
+  position: relative;
+}
 .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .sliderImg {
   margin: 0 25px;
 }
@@ -10437,6 +10440,73 @@ body {
 .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-track {
   float: left;
 }
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev,
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next {
+  padding: 12px;
+  position: absolute;
+  top: 110%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  border: 1px solid #1E1E1E;
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev::before,
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-next,
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-next {
+  left: 100px;
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-next::before,
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-next::before {
+  content: "\e80a";
+  font-family: "fontello";
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+@media screen and (max-width: 1600px) {
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-next::before,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-next::before {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-next::before,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-next::before {
+    font-size: 12px;
+  }
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-prev,
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-prev {
+  left: 25px;
+}
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-prev::before,
+.ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-prev::before {
+  content: "\e80b";
+  font-family: "fontello";
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+@media screen and (max-width: 1600px) {
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-prev::before,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-prev::before {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-prev::before,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-prev::before {
+    font-size: 12px;
+  }
+}
 @media all and (max-width: 1800px) {
   .ourStorySec {
     margin-bottom: 180px;
@@ -10457,6 +10527,11 @@ body {
     gap: 150px;
     padding: 100px 0;
   }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next {
+    width: 40px;
+    height: 40px;
+  }
 }
 @media all and (max-width: 1440px) {
   .ourStorySec {
@@ -10474,6 +10549,19 @@ body {
   }
   .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .sliderImg {
     margin: 0 20px;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next {
+    width: 36px;
+    height: 36px;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-next,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-next {
+    left: 80px;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-prev,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-prev {
+    left: 20px;
   }
 }
 @media all and (max-width: 1280px) {
@@ -10505,6 +10593,18 @@ body {
   .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .sliderImg {
     margin: 0 15px;
   }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next {
+    top: 120%;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-next,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-next {
+    left: 92px;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-prev,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-prev {
+    left: 30px;
+  }
 }
 @media all and (max-width: 820px) {
   .ourStorySec .secWrapper {
@@ -10512,7 +10612,7 @@ body {
   }
   .ourStorySec .secWrapper .mainContainer {
     gap: 50px;
-    padding: 50px 0;
+    padding: 50px 0 100px;
     flex-flow: column;
   }
   .ourStorySec .secWrapper .mainContainer .contentBox {
@@ -10531,6 +10631,18 @@ body {
   .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-list {
     padding: 0 15px !important;
   }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next {
+    top: 110%;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-next,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-next {
+    left: 100px;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-prev,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-prev {
+    left: 30px;
+  }
 }
 @media all and (max-width: 720px) {
   .ourStorySec .secWrapper {
@@ -10538,7 +10650,7 @@ body {
   }
   .ourStorySec .secWrapper .mainContainer {
     gap: 50px;
-    padding: 35px 0;
+    padding: 35px 0 80px;
   }
   .ourStorySec .secWrapper .mainContainer .contentBox {
     padding: 0 20px;
@@ -10559,6 +10671,14 @@ body {
   }
   .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-list {
     padding: 0 10px !important;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-next,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-next {
+    left: 80px;
+  }
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-prev.slick-prev,
+  .ourStorySec .secWrapper .mainContainer .imgBox .sliderBox .slick-next.slick-prev {
+    left: 20px;
   }
 }
 
@@ -12518,7 +12638,23 @@ body {
 }
 .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-next::before,
 .relatedPostSec .secWrapper .cardContainer .slick-next.slick-next::before {
-  content: url(../images/next-button.svg);
+  content: "\e80a";
+  font-family: "fontello";
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+@media screen and (max-width: 1600px) {
+  .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-next::before,
+  .relatedPostSec .secWrapper .cardContainer .slick-next.slick-next::before {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-next::before,
+  .relatedPostSec .secWrapper .cardContainer .slick-next.slick-next::before {
+    font-size: 12px;
+  }
 }
 .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-prev,
 .relatedPostSec .secWrapper .cardContainer .slick-next.slick-prev {
@@ -12526,7 +12662,23 @@ body {
 }
 .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-prev::before,
 .relatedPostSec .secWrapper .cardContainer .slick-next.slick-prev::before {
-  content: url(../images/prev-button.svg);
+  content: "\e80b";
+  font-family: "fontello";
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+@media screen and (max-width: 1600px) {
+  .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-prev::before,
+  .relatedPostSec .secWrapper .cardContainer .slick-next.slick-prev::before {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .relatedPostSec .secWrapper .cardContainer .slick-prev.slick-prev::before,
+  .relatedPostSec .secWrapper .cardContainer .slick-next.slick-prev::before {
+    font-size: 12px;
+  }
 }
 @media all and (max-width: 1800px) {
   .relatedPostSec {
@@ -17513,7 +17665,23 @@ body {
 }
 .productSection .productWrapper .tabContent .cards .slick-prev.slick-next::before,
 .productSection .productWrapper .tabContent .cards .slick-next.slick-next::before {
-  content: url(../images/next-button.svg);
+  content: "\e80a";
+  font-family: "fontello";
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+@media screen and (max-width: 1600px) {
+  .productSection .productWrapper .tabContent .cards .slick-prev.slick-next::before,
+  .productSection .productWrapper .tabContent .cards .slick-next.slick-next::before {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .productSection .productWrapper .tabContent .cards .slick-prev.slick-next::before,
+  .productSection .productWrapper .tabContent .cards .slick-next.slick-next::before {
+    font-size: 12px;
+  }
 }
 .productSection .productWrapper .tabContent .cards .slick-prev.slick-prev,
 .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
@@ -17521,7 +17689,23 @@ body {
 }
 .productSection .productWrapper .tabContent .cards .slick-prev.slick-prev::before,
 .productSection .productWrapper .tabContent .cards .slick-next.slick-prev::before {
-  content: url(../images/prev-button.svg);
+  content: "\e80b";
+  font-family: "fontello";
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+@media screen and (max-width: 1600px) {
+  .productSection .productWrapper .tabContent .cards .slick-prev.slick-prev::before,
+  .productSection .productWrapper .tabContent .cards .slick-next.slick-prev::before {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .productSection .productWrapper .tabContent .cards .slick-prev.slick-prev::before,
+  .productSection .productWrapper .tabContent .cards .slick-next.slick-prev::before {
+    font-size: 12px;
+  }
 }
 @media all and (max-width: 1800px) {
   .productSection {

@@ -525,7 +525,7 @@ if ($(".ourStorySec").length) {
     $('.sliderBox').slick({
         slidesToShow: 1.4,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         dots: false,
         centerMode: false,
         focusOnSelect: true,
