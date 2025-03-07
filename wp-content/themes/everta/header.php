@@ -97,7 +97,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 									<div class="dropdownMenu languageMenu">
 										<ul>
 											<li>
-												<a href="https://ixdtm.com/projects/everta-poland/">PL</a>
+												<a href="https://everta.com/pl/">PL</a>
 											</li>
 										</ul>
 									</div>
@@ -125,7 +125,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 						<div class="languageMenuMbl">
 							<ul>
 								<li>
-									<a href="https://ixdtm.com/projects/everta-poland/">PL</a>
+									<a href="https://everta.com/pl/">PL</a>
 								</li>
 							</ul>
 						</div>
