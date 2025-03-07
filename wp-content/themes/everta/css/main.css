@@ -6455,6 +6455,10 @@ footer .footerContainer .footerRight .footerRightContainer .footerRights .footer
     font-size: 12px;
   }
 }
+.formSection .formWrapper .formContainer #error-msg {
+  display: block;
+  margin-top: 20px;
+}
 .formSection .formWrapper .productCtas {
   margin-left: auto;
   display: flex;
@@ -17808,4 +17812,4 @@ body {
   .productSection .productWrapper .tabContent .cards .slick-next.slick-prev {
     left: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}

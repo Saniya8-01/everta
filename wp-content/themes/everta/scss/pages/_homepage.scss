@@ -2066,6 +2066,7 @@
                     input{@include termina; @include font16; font-weight: 600; line-height: 100%; letter-spacing: -0.64px; color: $primaryColor1; background: $quaternaryColor1; border-style: none; padding: 20px 32px; border-radius: 100px; cursor: pointer; transition: all 0.3s ease-out; position: relative; overflow: hidden; text-align: left;display:inline-block;}
                 }
             }
+            #error-msg{display:block;margin-top: 20px;}
         }
         .productCtas{margin-left: auto;display: flex;gap: 32px;}
     }
