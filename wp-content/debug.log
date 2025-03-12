@@ -986,3 +986,67 @@ Stack trace:
 [12-Mar-2025 06:05:06 UTC]   Automatic theme updates starting...
 [12-Mar-2025 06:05:06 UTC]   Automatic theme updates complete.
 [12-Mar-2025 06:05:06 UTC] Automatic updates complete.
+[12-Mar-2025 06:50:48 UTC] PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($string) must be of type string, array given in D:\SACHIN\www\everta\wp-includes\formatting.php:2906
+Stack trace:
+#0 D:\SACHIN\www\everta\wp-content\themes\everta\careers.php(349): antispambot(Array)
+#1 D:\SACHIN\www\everta\wp-includes\template-loader.php(106): include('D:\\SACHIN\\www\\e...')
+#2 D:\SACHIN\www\everta\wp-blog-header.php(19): require_once('D:\\SACHIN\\www\\e...')
+#3 D:\SACHIN\www\everta\index.php(17): require('D:\\SACHIN\\www\\e...')
+#4 {main}
+  thrown in D:\SACHIN\www\everta\wp-includes\formatting.php on line 2906
+[12-Mar-2025 06:50:50 UTC] PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($string) must be of type string, array given in D:\SACHIN\www\everta\wp-includes\formatting.php:2906
+Stack trace:
+#0 D:\SACHIN\www\everta\wp-content\themes\everta\careers.php(349): antispambot(Array)
+#1 D:\SACHIN\www\everta\wp-includes\template-loader.php(106): include('D:\\SACHIN\\www\\e...')
+#2 D:\SACHIN\www\everta\wp-blog-header.php(19): require_once('D:\\SACHIN\\www\\e...')
+#3 D:\SACHIN\www\everta\index.php(17): require('D:\\SACHIN\\www\\e...')
+#4 {main}
+  thrown in D:\SACHIN\www\everta\wp-includes\formatting.php on line 2906
+[12-Mar-2025 06:51:15 UTC] PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($string) must be of type string, array given in D:\SACHIN\www\everta\wp-includes\formatting.php:2906
+Stack trace:
+#0 D:\SACHIN\www\everta\wp-content\themes\everta\careers.php(349): antispambot(Array)
+#1 D:\SACHIN\www\everta\wp-includes\template-loader.php(106): include('D:\\SACHIN\\www\\e...')
+#2 D:\SACHIN\www\everta\wp-blog-header.php(19): require_once('D:\\SACHIN\\www\\e...')
+#3 D:\SACHIN\www\everta\index.php(17): require('D:\\SACHIN\\www\\e...')
+#4 {main}
+  thrown in D:\SACHIN\www\everta\wp-includes\formatting.php on line 2906
+[12-Mar-2025 06:51:49 UTC] PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($string) must be of type string, array given in D:\SACHIN\www\everta\wp-includes\formatting.php:2906
+Stack trace:
+#0 D:\SACHIN\www\everta\wp-content\themes\everta\careers.php(349): antispambot(Array)
+#1 D:\SACHIN\www\everta\wp-includes\template-loader.php(106): include('D:\\SACHIN\\www\\e...')
+#2 D:\SACHIN\www\everta\wp-blog-header.php(19): require_once('D:\\SACHIN\\www\\e...')
+#3 D:\SACHIN\www\everta\index.php(17): require('D:\\SACHIN\\www\\e...')
+#4 {main}
+  thrown in D:\SACHIN\www\everta\wp-includes\formatting.php on line 2906
+[12-Mar-2025 06:52:25 UTC] PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($string) must be of type string, array given in D:\SACHIN\www\everta\wp-includes\formatting.php:2906
+Stack trace:
+#0 D:\SACHIN\www\everta\wp-content\themes\everta\careers.php(349): antispambot(Array)
+#1 D:\SACHIN\www\everta\wp-includes\template-loader.php(106): include('D:\\SACHIN\\www\\e...')
+#2 D:\SACHIN\www\everta\wp-blog-header.php(19): require_once('D:\\SACHIN\\www\\e...')
+#3 D:\SACHIN\www\everta\index.php(17): require('D:\\SACHIN\\www\\e...')
+#4 {main}
+  thrown in D:\SACHIN\www\everta\wp-includes\formatting.php on line 2906
+[12-Mar-2025 06:52:27 UTC] PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($string) must be of type string, array given in D:\SACHIN\www\everta\wp-includes\formatting.php:2906
+Stack trace:
+#0 D:\SACHIN\www\everta\wp-content\themes\everta\careers.php(349): antispambot(Array)
+#1 D:\SACHIN\www\everta\wp-includes\template-loader.php(106): include('D:\\SACHIN\\www\\e...')
+#2 D:\SACHIN\www\everta\wp-blog-header.php(19): require_once('D:\\SACHIN\\www\\e...')
+#3 D:\SACHIN\www\everta\index.php(17): require('D:\\SACHIN\\www\\e...')
+#4 {main}
+  thrown in D:\SACHIN\www\everta\wp-includes\formatting.php on line 2906
+[12-Mar-2025 06:52:29 UTC] PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($string) must be of type string, array given in D:\SACHIN\www\everta\wp-includes\formatting.php:2906
+Stack trace:
+#0 D:\SACHIN\www\everta\wp-content\themes\everta\careers.php(349): antispambot(Array)
+#1 D:\SACHIN\www\everta\wp-includes\template-loader.php(106): include('D:\\SACHIN\\www\\e...')
+#2 D:\SACHIN\www\everta\wp-blog-header.php(19): require_once('D:\\SACHIN\\www\\e...')
+#3 D:\SACHIN\www\everta\index.php(17): require('D:\\SACHIN\\www\\e...')
+#4 {main}
+  thrown in D:\SACHIN\www\everta\wp-includes\formatting.php on line 2906
+[12-Mar-2025 06:56:22 UTC] PHP Fatal error:  Uncaught TypeError: strlen(): Argument #1 ($string) must be of type string, array given in D:\SACHIN\www\everta\wp-includes\formatting.php:2906
+Stack trace:
+#0 D:\SACHIN\www\everta\wp-content\themes\everta\careers.php(349): antispambot(Array)
+#1 D:\SACHIN\www\everta\wp-includes\template-loader.php(106): include('D:\\SACHIN\\www\\e...')
+#2 D:\SACHIN\www\everta\wp-blog-header.php(19): require_once('D:\\SACHIN\\www\\e...')
+#3 D:\SACHIN\www\everta\index.php(17): require('D:\\SACHIN\\www\\e...')
+#4 {main}
+  thrown in D:\SACHIN\www\everta\wp-includes\formatting.php on line 2906

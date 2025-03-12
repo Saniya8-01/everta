@@ -25,6 +25,20 @@ $current_url = home_url(add_query_arg([], $wp->request));
 	<script type="text/javascript">
 		var site_url = "<?php echo get_site_url(); ?>";
 	</script>
+	<script> 
+		(async function redirectBasedOnLocation() { 
+			try { 
+				const response = await fetch('https://ipapi.co/json/'); 
+				const data = await response.json(); 
+				const redirectUrl = data.country_code === "PL" ? "https://ixdtm.com/projects/everta-poland/" : "https://ixdtm.com/projects/everta/"; 
+				window.location.replace(redirectUrl); // `replace` prevents back navigation 
+			} catch (error) { 
+				console.error("Error fetching location data:", error); 
+				window.location.replace("https://ixdtm.com/projects/everta/"); // Default to Poland 
+			} 
+			
+		})(); 
+	</script>
 	<?php wp_head(); ?>
 </head>
 
@@ -97,7 +111,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 									<div class="dropdownMenu languageMenu">
 										<ul>
 											<li>
-												<a href="https://everta.com/pl/">PL</a>
+												<a href="http://localhost/everta-poland/">PL</a>
 											</li>
 										</ul>
 									</div>

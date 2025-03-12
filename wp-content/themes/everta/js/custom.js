@@ -799,7 +799,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 if($(".careerTeamSection").length){
     document.addEventListener("DOMContentLoaded", function () {
-        const elements = document.querySelectorAll(".careerPositionBox");  
+        const elements = document.querySelectorAll(".careerPositionBox");
         const closeButtons = document.querySelectorAll(".closeBtn"); 
         const body = document.querySelector('body');
         const html = document.querySelector("html");
