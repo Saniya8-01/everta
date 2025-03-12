@@ -97,7 +97,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 									<div class="dropdownMenu languageMenu">
 										<ul>
 											<li>
-												<a href="http://localhost/everta-poland/">PL</a>
+												<a href="https://everta.com/pl/">PL</a>
 											</li>
 										</ul>
 									</div>
