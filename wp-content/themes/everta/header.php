@@ -34,9 +34,8 @@ $current_url = home_url(add_query_arg([], $wp->request));
 				window.location.replace(redirectUrl); // `replace` prevents back navigation 
 			} catch (error) { 
 				console.error("Error fetching location data:", error); 
-				window.location.replace("https://ixdtm.com/projects/everta/"); // Default to Poland 
+				window.location.replace("https://ixdtm.com/projects/everta/"); 
 			} 
-			
 		})(); 
 	</script>
 	<?php wp_head(); ?>
