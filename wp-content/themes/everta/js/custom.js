@@ -163,46 +163,22 @@ $(document).ready(function () {
 });
 //-------------------Header Dropdown JS----------------------//
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Elements
-    const overlay = document.getElementById("overlay");
-    const percentage = document.getElementById("percentage");
-    let progress = 1; // Start progress at 1%
-    const total = 100;
-    // Update the progress bar and percentage on page load events
-    function updateProgress() {
-        if (progress <= total) { // Fixed issue
-            percentage.textContent = `${progress}%`; // Correct syntax
+if($("#overlay").length){
+    let count = 0;
+    const countText = document.getElementById("percentage");
+    function startLoader() {
+        countText.innerHTML = count + "%";  
+        if (count < 100) {
+            count += 2;
+            setTimeout(startLoader, 50); 
+        } else {
+            setTimeout(() => {
+            document.getElementById("overlay").style.display = "none";
+            }, 300);
         }
     }
-    function startLoader() {
-        // When the page is fully loaded
-        window.onload = function () {
-            // Ensure the loader reaches 100% when the page fully loads
-            const completeProgress = setInterval(() => {
-                if (progress < 100) {
-                    progress++;
-                    updateProgress();
-                } else {
-                    clearInterval(completeProgress);
-                    // Remove loader after reaching 100%
-                    setTimeout(() => {
-                        overlay.style.display = "none";
-                    }, 300); // Small delay to show 100% before hiding the loader
-                }
-            }, 30); // Fast increments to reach 100% on page load
-        };
-    }
-    if (!localStorage.getItem('visited')) {
-        // First-time visitor, show loader
-        startLoader();
-        // Set localStorage flag to indicate the user has visited
-        localStorage.setItem('visited', 'true');
-    } else {
-        // Not the first time, hide the loader immediately
-        overlay.style.display = "none";
-    }
-});
+    startLoader();
+}
 
 if ($(".partnersSection").length) {
     $(".logoSlider").slick({
