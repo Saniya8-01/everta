@@ -25,6 +25,33 @@ $current_url = home_url(add_query_arg([], $wp->request));
 	<script type="text/javascript">
 		var site_url = "<?php echo get_site_url(); ?>";
 	</script>
+	<script>
+		(async function redirectBasedOnLocation() {
+            try {
+                if (localStorage.getItem("geo_redirected") === "1") {
+                    return; // Prevent further redirects
+                }
+
+                const response = await fetch('https://freeipapi.com/api/json/');
+                const data = await response.json();
+
+                const redirectUrl = data.countryCode === "PL"
+                    ? "https://ixdtm.com/projects/everta-poland/"
+                    : "https://ixdtm.com/projects/everta/";
+
+                if (window.location.href !== redirectUrl) {
+                    localStorage.setItem("geo_redirected", "1"); // Mark redirect done
+                    window.location.replace(redirectUrl);
+                }
+                
+            } catch (error) {
+                console.error("Error fetching location data:", error);
+                if (window.location.href !== "https://ixdtm.com/projects/everta/") {
+                    window.location.replace("https://ixdtm.com/projects/everta/");
+                }
+            }
+        })();
+	</script>
 	<?php wp_head(); ?>
 </head>
 
