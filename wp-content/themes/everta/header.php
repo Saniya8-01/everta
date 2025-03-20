@@ -40,11 +40,13 @@ $current_url = home_url(add_query_arg([], $wp->request));
 				? "https://ixdtm.com/projects/everta-poland/"
 				: "https://ixdtm.com/projects/everta/";
 				
-				sessionStorage.setItem("geo_redirected", "1"); 
+				sessionStorage.setItem("geo_redirected", "1");
+
 				
 				if (window.location.href !== redirectUrl) {
 					window.location.replace(redirectUrl);
 				}
+				
 
 			} catch (error) {
 				console.error("Error fetching location data:", error);
