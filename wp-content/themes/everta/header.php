@@ -122,7 +122,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 												}
 												echo '</li>';
 											} ?>
-								<li class="mainNavList dropdown languageTranslator">
+								<!-- <li class="mainNavList dropdown languageTranslator">
 									<img src="<?php bloginfo('template_directory'); ?>/images/language-svg.svg" alt="">
 									<img src="<?php bloginfo('template_directory'); ?>/images/chevron-down.svg" alt=""
 										class="arrowImage">
@@ -133,7 +133,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 											</li>
 										</ul>
 									</div>
-								</li>
+								</li> -->
 								<li class="mainNavList ctaContact">
 									<a href="javascript:void(0);" class="mainManu" onClick="openForm()">Contact us</a>
 								</li>
@@ -152,7 +152,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 							</div>
 						</div>
 					</div>
-					<li class="languageTranslatorMbl">
+					<!-- <li class="languageTranslatorMbl">
 						<i class="icon-globe fonelloGlobeIconMbl"></i>
 						<div class="languageMenuMbl">
 							<ul>
@@ -161,7 +161,7 @@ $current_url = home_url(add_query_arg([], $wp->request));
 								</li>
 							</ul>
 						</div>
-					</li>
+					</li> -->
 					<div class="hamburger-menu">
 						<div class="button_toggle" id="toggle">
 							<span class="spanParent">
