@@ -37,8 +37,8 @@ $current_url = home_url(add_query_arg([], $wp->request));
 				console.log(data);
 
 				const redirectUrl = data.country_code === "PL"
-				? "https://ixdtm.com/projects/everta-poland/"
-				: "https://ixdtm.com/projects/everta/";
+				? "https://everta.com/pl/"
+				: "https://everta.com/in/";
 				
 				sessionStorage.setItem("geo_redirected", "1");
 
@@ -51,8 +51,8 @@ $current_url = home_url(add_query_arg([], $wp->request));
 			} catch (error) {
 				console.error("Error fetching location data:", error);
 				sessionStorage.setItem("geo_redirected", "1");
-				if (window.location.href !== "https://ixdtm.com/projects/everta/") {
-					window.location.replace("https://ixdtm.com/projects/everta/");
+				if (window.location.href !== "https://everta.com/in/") {
+					window.location.replace("https://everta.com/in/");
 				}
 			}
 		})();
