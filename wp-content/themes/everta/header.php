@@ -57,6 +57,15 @@ $current_url = home_url(add_query_arg([], $wp->request));
 			}
 		})();
 	</script>
+	<!-- Google tag (gtag.js) --> 
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G 6NQ781T6RQ"></script> 
+	<script> 
+	 window.dataLayer = window.dataLayer || []; 
+	 function gtag(){dataLayer.push(arguments);} 
+	 gtag('js', new Date()); 
+	 gtag('config', 'G-6NQ781T6RQ'); 
+	</script>
+	
 	<?php wp_head(); ?>
 </head>
 
